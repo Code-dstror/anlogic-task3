@@ -14,6 +14,7 @@ from .errors import (
     ValidationError,
 )
 from .interfaces import FrameSource, InferenceBackend, OutputSink
+from .mock_file_source import MockFileFrameSource
 from .models import (
     DecodedFrame,
     Detection,
@@ -39,6 +40,7 @@ __all__ = [
     "FrameSource",
     "InferenceBackend",
     "InferenceError",
+    "MockFileFrameSource",
     "OutputError",
     "OutputSink",
     "PipelineError",
