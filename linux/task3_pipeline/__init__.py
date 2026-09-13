@@ -1,7 +1,7 @@
 """Hardware-agnostic user-space foundations for task 3.
 
-Only shared types and abstract contracts live here.  Protocol parsing, SGDMA,
-JPEG decoding, and RKNN integration deliberately belong to later stages.
+Only shared types and abstract contracts live here. Protocol parsing, SGDMA,
+and RKNN integration deliberately belong to later stages.
 """
 
 from .errors import (
@@ -16,6 +16,7 @@ from .errors import (
 from .interfaces import FrameSource, InferenceBackend, OutputSink
 from .jpeg_payload_validator import JpegPayloadValidator
 from .mock_file_source import MockFileFrameSource
+from .opencv_jpeg_decoder import OpenCvJpegDecoder
 from .models import (
     DecodedFrame,
     Detection,
@@ -45,6 +46,7 @@ __all__ = [
     "MockFileFrameSource",
     "OutputError",
     "OutputSink",
+    "OpenCvJpegDecoder",
     "PipelineError",
     "RuntimeMetrics",
     "SourceError",

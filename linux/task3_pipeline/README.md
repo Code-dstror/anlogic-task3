@@ -1,10 +1,9 @@
 # Task 3 Python pipeline foundation
 
-This package is the standard-library-only foundation shared by the Ubuntu host
-and the future RK3576 target.  It contains shared data types, contracts,
-exceptions, metrics, the Stage-B `MockFileFrameSource`, and the Stage-C
-`JpegPayloadValidator`.  It does not parse PCIe records, access SGDMA devices,
-decode JPEG, or invoke RKNN.
+This package is the Python foundation shared by the Ubuntu host and the future
+RK3576 target. It contains shared data types, contracts, exceptions, metrics,
+the Stage-B `MockFileFrameSource`, and Stage-C JPEG validation and decoding.
+It does not parse PCIe records, access SGDMA devices, or invoke RKNN.
 
 Run from the repository root with Python 3.10 or newer:
 
@@ -16,6 +15,9 @@ python3 -m unittest discover
 The package is imported as `linux.task3_pipeline` when commands are run from
 the repository root.  Target deployment packaging is deliberately deferred
 until the board runtime and deployment contract are available.
+
+The `OpenCvJpegDecoder` runtime dependency is `cv2` (OpenCV) plus `numpy`.
+They are environment-provided dependencies; this package does not install them.
 
 ## JPEG payload boundary validation
 
@@ -31,6 +33,21 @@ that the bytes form a decodable image, inspect image contents, or parse/require
 a PCIe protocol record, magic, version, or header.  In particular, the
 four-byte `FF D8 FF D9` payload passes this stage; a later JPEG decoder decides
 whether it is decodable.
+
+## OpenCV JPEG decoding
+
+`OpenCvJpegDecoder.decode(frame)` decodes an `EncodedFrame` that the caller has
+already passed through `JpegPayloadValidator`. It uses OpenCV's `IMREAD_COLOR`
+mode, so successful output is always C-contiguous BGR24, including for
+grayscale JPEG input. `DecodedFrame.pixel_format` is `"bgr24"`; `row_stride`
+is the byte count of one row in the final contiguous pixel buffer
+(`width * 3`). The decoder preserves the source metadata, including `ingest_id`
+and optional `wire_sequence`.
+
+The decoder does not repeat SOI/EOI or maximum-payload checks, parse PCIe
+records, or treat successful boundary validation as proof that JPEG decoding
+will succeed. A future `Preprocessor` owns color conversion, resize, and
+normalization.
 
 ## Bare-JPEG mock input
 
