@@ -2,8 +2,9 @@
 
 This package is the standard-library-only foundation shared by the Ubuntu host
 and the future RK3576 target.  It contains shared data types, contracts,
-exceptions, metrics, and the Stage-B `MockFileFrameSource`.  It does not parse
-PCIe records, access SGDMA devices, validate or decode JPEG, or invoke RKNN.
+exceptions, metrics, the Stage-B `MockFileFrameSource`, and the Stage-C
+`JpegPayloadValidator`.  It does not parse PCIe records, access SGDMA devices,
+decode JPEG, or invoke RKNN.
 
 Run from the repository root with Python 3.10 or newer:
 
@@ -15,6 +16,21 @@ python3 -m unittest discover
 The package is imported as `linux.task3_pipeline` when commands are run from
 the repository root.  Target deployment packaging is deliberately deferred
 until the board runtime and deployment contract are available.
+
+## JPEG payload boundary validation
+
+`JpegPayloadValidator(max_payload_length)` accepts an `EncodedFrame` and
+returns that same object when its non-empty payload is at least four bytes,
+starts with JPEG SOI (`FF D8`), ends with JPEG EOI (`FF D9`), and does not
+exceed the inclusive caller-configured byte limit.  The limit must be a
+non-boolean integer no smaller than four; it is deliberately not derived from
+an FPGA slot, image resolution, or an unconfirmed project threshold.
+
+This is a lightweight boundary check only.  It does not decode JPEG, establish
+that the bytes form a decodable image, inspect image contents, or parse/require
+a PCIe protocol record, magic, version, or header.  In particular, the
+four-byte `FF D8 FF D9` payload passes this stage; a later JPEG decoder decides
+whether it is decodable.
 
 ## Bare-JPEG mock input
 

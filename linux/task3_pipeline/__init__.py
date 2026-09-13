@@ -14,6 +14,7 @@ from .errors import (
     ValidationError,
 )
 from .interfaces import FrameSource, InferenceBackend, OutputSink
+from .jpeg_payload_validator import JpegPayloadValidator
 from .mock_file_source import MockFileFrameSource
 from .models import (
     DecodedFrame,
@@ -40,6 +41,7 @@ __all__ = [
     "FrameSource",
     "InferenceBackend",
     "InferenceError",
+    "JpegPayloadValidator",
     "MockFileFrameSource",
     "OutputError",
     "OutputSink",
