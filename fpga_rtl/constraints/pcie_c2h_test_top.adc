@@ -1,0 +1,6 @@
+# PH1A90SEG324-2 AFC03 board-level fabric pins.
+# PCIe reference clock and serial lanes are dedicated Bank83 resources in the
+# PH1_LOGIC_PCIE IP and are intentionally absent from this fabric pin file.
+
+set_pin_assignment { sys_clk }       { LOCATION = T16; IOSTANDARD = LVCMOS18; }
+set_pin_assignment { pcie_mperst }   { LOCATION = U14; IOSTANDARD = LVCMOS18; PULLTYPE = PULLUP; }

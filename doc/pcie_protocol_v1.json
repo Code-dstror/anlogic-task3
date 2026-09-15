@@ -1,0 +1,56 @@
+{
+  "device_magic": "0x33434641",
+  "frame_magic": "0x47504A41",
+  "protocol_version": 1,
+  "header_length": 64,
+  "max_payload": 16777216,
+  "slot_count": 1,
+  "user_bar_base": "0x00080000",
+  "registers": {
+    "DEVICE_MAGIC": "0x00",
+    "PROTOCOL_VERSION": "0x04",
+    "CAPABILITIES": "0x08",
+    "SLOT_COUNT": "0x0C",
+    "MAX_PAYLOAD": "0x10",
+    "HEADER_LENGTH": "0x14",
+    "CONTROL": "0x18",
+    "STATUS": "0x1C",
+    "READY_MASK": "0x20",
+    "SENDING_MASK": "0x24",
+    "PRODUCER_SEQUENCE": "0x28",
+    "CONSUMED_SEQUENCE": "0x2C",
+    "DROP_COUNT": "0x30",
+    "OVERFLOW_COUNT": "0x34",
+    "DMA_ERROR_COUNT": "0x38",
+    "LAST_ERROR": "0x3C",
+    "TEST_LENGTH": "0x40",
+    "TEST_PATTERN": "0x44",
+    "TEST_TRIGGER": "0x48",
+    "H2C_BYTE_COUNT": "0x50",
+    "H2C_FRAME_COUNT": "0x54",
+    "H2C_ERROR_COUNT": "0x58",
+    "H2C_FIRST_ERROR": "0x5C"
+  },
+  "control_bits": {
+    "APP_ENABLE": 0,
+    "SOFT_RESET": 1
+  },
+  "status_bits": {
+    "LINK_UP": 0,
+    "USER_RESET_RELEASED": 1,
+    "C2H_RUNNING": 2,
+    "TX_BUSY": 3,
+    "SOURCE_BUSY": 4,
+    "FRAME_ERROR": 5
+  },
+  "error_codes": {
+    "NONE": 0,
+    "PAYLOAD_LENGTH": 1,
+    "PAYLOAD_KEEP": 2,
+    "PAYLOAD_LAST": 3,
+    "LINK_DOWN": 4,
+    "C2H_STOPPED": 5,
+    "HEADER_FORMAT": 6,
+    "RECOVERY_REQUIRED": 7
+  }
+}
