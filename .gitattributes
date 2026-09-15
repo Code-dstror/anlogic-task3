@@ -1,0 +1,2 @@
+# Hash-verified FPGA vendor snapshots must not undergo text/EOL conversion.
+fpga_rtl/vendor/** -text !eol

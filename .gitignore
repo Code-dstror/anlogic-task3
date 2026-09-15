@@ -16,3 +16,47 @@ __pycache__/
 venv/
 env/
 ENV/
+
+# FPGA TD and ModelSim generated state.  These paths are anchored so FPGA
+# source, project/TCL inputs, protocol documents, and tools remain versioned.
+/tmp/
+/work/
+/sim/work/
+/*_Runs/
+/fpga_prj/log/
+/fpga_prj/reports/
+/fpga_prj/*_out.v
+/fpga_prj/*_route.*
+/fpga_prj/*.sdf
+/fpga_prj/*.bit
+/fpga_prj/*.bin
+/fpga_prj/*.mcs
+/fpga_prj/*.sof
+/fpga_prj/*.bas
+/fpga_prj/*.db
+/fpga_prj/*.rpt
+/fpga_prj/*.qor
+/fpga_prj/*.timing
+/fpga_prj/*.area
+/fpga_prj/*.ts
+/fpga_prj/.recent_user_depot.ini
+
+# TD transient files, scoped to the FPGA project and its generated subtrees.
+/fpga_prj/**/*.logw
+/fpga_prj/**/*.str
+/fpga_prj/**/*.tmp
+/fpga_prj/**/*.bak
+/fpga_prj/**/*.swp
+/fpga_prj/**/*.swo
+/fpga_prj/**/.lock.*
+/fpga_prj/**/*.error.*
+
+# These extensions and simulator files are generated waveform or tool state.
+*.dmp
+*.jou
+*.wlf
+*.vcd
+/transcript
+/modelsim.ini
+/vsim.wlf
+/wave.vcd
