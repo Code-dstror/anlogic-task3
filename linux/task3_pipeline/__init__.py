@@ -17,6 +17,7 @@ from .interfaces import FrameSource, InferenceBackend, OutputSink
 from .jpeg_payload_validator import JpegPayloadValidator
 from .mock_file_source import MockFileFrameSource
 from .opencv_jpeg_decoder import OpenCvJpegDecoder
+from .pcie_v1_record_parser import PcieV1Record, PcieV1RecordParser
 from .models import (
     DecodedFrame,
     Detection,
@@ -48,6 +49,8 @@ __all__ = [
     "OutputSink",
     "OpenCvJpegDecoder",
     "PipelineError",
+    "PcieV1Record",
+    "PcieV1RecordParser",
     "RuntimeMetrics",
     "SourceError",
     "SourceHealth",

@@ -2,8 +2,9 @@
 
 This package is the Python foundation shared by the Ubuntu host and the future
 RK3576 target. It contains shared data types, contracts, exceptions, metrics,
-the Stage-B `MockFileFrameSource`, and Stage-C JPEG validation and decoding.
-It does not parse PCIe records, access SGDMA devices, or invoke RKNN.
+the Stage-B `MockFileFrameSource`, Stage-C JPEG validation and decoding, and a
+pure-memory PCIe v1 record parser. It does not access SGDMA devices or invoke
+RKNN.
 
 Run from the repository root with Python 3.10 or newer:
 
@@ -18,6 +19,18 @@ until the board runtime and deployment contract are available.
 
 The `OpenCvJpegDecoder` runtime dependency is `cv2` (OpenCV) plus `numpy`.
 They are environment-provided dependencies; this package does not install them.
+
+## PCIe v1 record parsing
+
+`PcieV1RecordParser.parse(record)` validates and parses one caller-assembled,
+complete v1 `[64-byte header][payload]` buffer and returns an immutable
+`PcieV1Record`. It snapshots bytes supplied through `bytes`, `bytearray`, or
+`memoryview`; payload CRC, timestamp, compression, pixel format, quality,
+status, error code, and slot ID remain opaque wire values.
+
+The parser still does not access SGDMA, assume one `read()` or completion is
+one frame, or manage slot/DMA ownership. It also does not create or map an
+`EncodedFrame`; that transport-to-common-frame boundary remains unimplemented.
 
 ## JPEG payload boundary validation
 
