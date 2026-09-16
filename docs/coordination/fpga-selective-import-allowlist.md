@@ -240,7 +240,10 @@ The following are future steps only; none are performed by this document task.
 - No board is available, and RK3576 is not Tested.
 - Real camera input, all three preprocessing stages, and the JPEG encoder are
   not complete.
-- The current test payload is not a standard JPEG.
+- At fixed source commit `457439ed79e4d21a213fcfbda4c493b01f88326b`, the
+  test payload was not a standard JPEG.
+- Post-import commit `418bf4d` on `feature/linux-transport` introduced mode 3:
+  a fixed 331-byte, 1×1 grayscale JPEG fixture.
 - SGDMA/PCIe simulation does not establish board enumeration, DMA, or
   completion-length verification.
 - DDR slot, IRQ, reset/epoch, and automatic recovery remain TBD/Deferred.

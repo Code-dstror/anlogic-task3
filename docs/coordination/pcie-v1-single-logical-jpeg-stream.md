@@ -16,7 +16,7 @@
 | 3. Linux v1 是否不识别物理摄像头、不加 camera_id/stream_id？ | **是。** v1 不提供物理摄像头身份或独立子流语义，保持当前 64-byte header，不增加这两个字段。 | 当前 header 确实没有这些字段。不得把 `slot_id`、sequence 高位或 reserved 字段暗中用作 camera_id；`slot_id` 是存储/诊断概念，不是图像来源。 |
 | 4. record 是否禁止交错？ | **是。** 输出顺序只能是 `header(A) → payload(A) → header(B) → payload(B)`。A 最后一拍完成输出握手前，不得输出 B 的 header/payload。 | 已有帧发送器及带内头部封装的行为仿真覆盖串行记录和反压；这不是板级 `Tested`。上游可在缓冲空间允许时预取下一条头部，但不能在 C2H 输出线上交错。 |
 | 5. 是否全局 frame_sequence，只随最终输出 record 递增？ | **是，作为逻辑流序号的设计方向。** 多摄像头不能各自把独立计数器混入同一输出；正常连续输出的下一条 record 使用逻辑流的下一序号。 | `Proposed`。字段现为 header offset `0x08` 的 little-endian u32。通用封装透传上游提供的 sequence，不生成、纠正或校验单调性。真实前端的分配时点、丢弃/失败是否消耗号码、复位/会话规则仍 `TBD`，见第 3 节。 |
-| 6. payload 是否保证是标准 JPEG，而非原始像素/中间数据/测试字节？ | **生产合同要求是。** Linux 发布为 JPEG 图像的数据必须是一张完整、标准可解码的 JPEG，包含其 SOI/EOI；64-byte 传输头在 JPEG 文件之外。 | 当前不能作运行时保证：camera/JPEG RTL 未完成，现有测试源是确定性字节。PCIe 封装只检查传输格式/长度/握手，不验证 JPEG 语法或可解码性。此项保持 `Proposed/TBD`，绝不是 `Tested`。 |
+| 6. payload 是否保证是标准 JPEG，而非原始像素/中间数据/测试字节？ | **生产合同要求是。** Linux 发布为 JPEG 图像的数据必须是一张完整、标准可解码的 JPEG，包含其 SOI/EOI；64-byte 传输头在 JPEG 文件之外。 | 当前板级测试源默认可产生固定的 331-byte、1×1 grayscale、OpenCV 可解码 JPEG fixture。这只关闭“测试 payload 不是 JPEG”的缺口，不表示 camera、三项预处理或生产 JPEG encoder 已实现。PCIe 封装仍只负责传输格式/长度/握手，不验证 JPEG 语法或可解码性。该 fixture 的验证范围仅为 Python 静态/OpenCV；ModelSim、TD、板卡 PCIe/DMA 和 RK3576 仍未验证。生产合同保持 `Proposed/TBD`，绝不是 `Tested`。 |
 
 ## 2. 该结论对 Linux 的含义
 
