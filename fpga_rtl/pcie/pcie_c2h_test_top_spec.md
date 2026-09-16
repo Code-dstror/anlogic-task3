@@ -24,6 +24,16 @@ state. Completion increments the consumed sequence. Abort increments the DMA
 error count; oversize payload errors also increment overflow count. A trigger
 while the fixed source is busy increments drop count.
 
+## Test-trigger length gate
+
+For TEST_PATTERN values 0, 1, and 2, the board-level source starts only when
+TEST_LENGTH is nonzero and no greater than `PCIE_MAX_PAYLOAD`; this preserves
+the existing invalid-length test coverage. For TEST_PATTERN 3 (the fixed JPEG
+fixture), the top bypasses that programmed-length gate and starts using the
+fixture's real `C2H_TEST_JPEG_FIXTURE_LENGTH` (331 bytes). Thus a stale zero or
+oversize TEST_LENGTH cannot prevent a mode-3 fixture trigger, and cannot alter
+the emitted fixture length.
+
 ## Verification
 
 Behavioral submodules are self-checked in ModelSim. The full top is verified by

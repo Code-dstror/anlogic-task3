@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+`include "c2h_test_fixture.vh"
+
 ////////////////////////////////////English///////////////////////////////////////
 // Company:         Anlogic 2026 FPGA Team
 // Engineer:        Codex
@@ -50,6 +52,15 @@ module c2h_test_source (
     localparam [1:0] STATE_IDLE = 2'd0;
     localparam [1:0] STATE_META = 2'd1;
     localparam [1:0] STATE_DATA = 2'd2;
+    localparam [1:0] PATTERN_INCREMENTING = 2'd0;
+    localparam [1:0] PATTERN_FIXED_A5 = 2'd1;
+    localparam [1:0] PATTERN_XOR = 2'd2;
+    localparam [1:0] PATTERN_JPEG_FIXTURE = `C2H_TEST_PATTERN_JPEG_FIXTURE;
+
+    // This is a complete, baseline 1x1 grayscale JPEG.  The MSB is byte zero,
+    // so the variable indexed part-select below returns the wire-byte order.
+    localparam [(`C2H_TEST_JPEG_FIXTURE_LENGTH * 8) - 1:0]
+        C2H_TEST_JPEG_FIXTURE = `C2H_TEST_JPEG_FIXTURE_DATA;
 
     reg [1:0] state_current;
     reg [1:0] state_next;
@@ -67,12 +78,26 @@ module c2h_test_source (
     wire final_beat;
     wire [31:0] bytes_remaining;
 
+    function [7:0] c2h_test_jpeg_fixture_byte;
+        input [31:0] fixture_offset;
+        begin
+            if (fixture_offset < `C2H_TEST_JPEG_FIXTURE_LENGTH) begin
+                c2h_test_jpeg_fixture_byte = C2H_TEST_JPEG_FIXTURE[
+                    ((`C2H_TEST_JPEG_FIXTURE_LENGTH - fixture_offset) * 8) - 1 -: 8];
+            end else begin
+                c2h_test_jpeg_fixture_byte = 8'd0;
+            end
+        end
+    endfunction
+
     assign o_busy = state_current != STATE_IDLE;
     assign o_meta_valid = state_current == STATE_META;
     assign o_meta_frame_sequence = frame_sequence;
     assign o_meta_payload_length = payload_length;
-    assign o_meta_width = 16'd1920;
-    assign o_meta_height = 16'd1080;
+    assign o_meta_width = (pattern_select == PATTERN_JPEG_FIXTURE) ?
+                          `C2H_TEST_JPEG_FIXTURE_WIDTH : 16'd1920;
+    assign o_meta_height = (pattern_select == PATTERN_JPEG_FIXTURE) ?
+                           `C2H_TEST_JPEG_FIXTURE_HEIGHT : 16'd1080;
     assign o_meta_pixel_format = 8'd1;
     assign o_meta_compression = 8'd1;
     assign o_meta_quality = 8'd75;
@@ -95,10 +120,17 @@ module c2h_test_source (
         for (byte_lane = 0; byte_lane < 16; byte_lane = byte_lane + 1) begin
             byte_position = byte_offset + byte_lane;
             case (pattern_select)
-                2'd0: source_data[(byte_lane * 8) +: 8] = byte_position[7:0];
-                2'd1: source_data[(byte_lane * 8) +: 8] = 8'ha5;
-                default: source_data[(byte_lane * 8) +: 8] =
+                PATTERN_INCREMENTING:
+                    source_data[(byte_lane * 8) +: 8] = byte_position[7:0];
+                PATTERN_FIXED_A5:
+                    source_data[(byte_lane * 8) +: 8] = 8'ha5;
+                PATTERN_XOR:
+                    source_data[(byte_lane * 8) +: 8] =
                     byte_position[7:0] ^ byte_position[15:8] ^ 8'h5a;
+                PATTERN_JPEG_FIXTURE:
+                    source_data[(byte_lane * 8) +: 8] =
+                    c2h_test_jpeg_fixture_byte(byte_position);
+                default: source_data[(byte_lane * 8) +: 8] = 8'd0;
             endcase
         end
 
@@ -163,7 +195,14 @@ module c2h_test_source (
             pattern_select <= 2'd0;
         end else begin
             if ((state_current == STATE_IDLE) && i_start) begin
-                payload_length <= i_payload_length;
+                // JPEG fixture mode ignores the programmed length.  Its
+                // metadata and AXI payload always use the real fixture length,
+                // preventing a truncated or padded pseudo-JPEG.
+                if (i_pattern_select == PATTERN_JPEG_FIXTURE) begin
+                    payload_length <= `C2H_TEST_JPEG_FIXTURE_LENGTH;
+                end else begin
+                    payload_length <= i_payload_length;
+                end
                 pattern_select <= i_pattern_select;
                 byte_offset <= 32'd0;
             end

@@ -18,6 +18,7 @@
 // 依赖文件:        PCIe SGDMA端点与应用传输模块
 
 `include "pcie_protocol_v1.vh"
+`include "c2h_test_fixture.vh"
 
 module pcie_c2h_test_top (
     input  wire       sys_clk,
@@ -232,7 +233,9 @@ module pcie_c2h_test_top (
         .i_clk(user_clk),
         .i_rst_n(app_rst_n),
         .i_start(test_trigger && app_enable && !source_busy &&
-                 (test_length != 32'd0) && (test_length <= `PCIE_MAX_PAYLOAD)),
+                 ((test_pattern == `C2H_TEST_PATTERN_JPEG_FIXTURE) ||
+                  ((test_length != 32'd0) &&
+                   (test_length <= `PCIE_MAX_PAYLOAD))),
         .i_payload_length(test_length),
         .i_pattern_select(test_pattern),
         .o_busy(source_busy),

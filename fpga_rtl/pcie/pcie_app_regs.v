@@ -18,6 +18,7 @@
 // 依赖文件:        pcie_protocol_v1.vh
 
 `include "pcie_protocol_v1.vh"
+`include "c2h_test_fixture.vh"
 
 module pcie_app_regs (
     input  wire        i_clk,
@@ -142,8 +143,8 @@ module pcie_app_regs (
             axil_bvalid_o <= 1'b0;
             app_enable_o <= 1'b0;
             soft_reset_o <= 1'b0;
-            test_length_o <= 32'd4096;
-            test_pattern_o <= 2'd0;
+            test_length_o <= `C2H_TEST_JPEG_FIXTURE_LENGTH;
+            test_pattern_o <= `C2H_TEST_PATTERN_JPEG_FIXTURE;
             test_trigger_o <= 1'b0;
             merged_write_data <= 32'd0;
         end else begin
