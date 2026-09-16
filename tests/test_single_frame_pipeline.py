@@ -28,7 +28,7 @@ from tests._helpers import make_metadata
 class ScriptedFrameSource(FrameSource):
     """A minimal source double that returns scripted events or raises errors."""
 
-    def __init__(self, outcomes: list[FrameEvent | SourceError], calls: list[str] | None = None) -> None:
+    def __init__(self, outcomes: list[FrameEvent | BaseException], calls: list[str] | None = None) -> None:
         self._outcomes = outcomes
         self._calls = calls
         self.received_stop_event: Event | None = None
@@ -41,7 +41,7 @@ class ScriptedFrameSource(FrameSource):
         if self._calls is not None:
             self._calls.append("source")
         outcome = self._outcomes.pop(0)
-        if isinstance(outcome, SourceError):
+        if isinstance(outcome, BaseException):
             raise outcome
         return outcome
 
@@ -146,7 +146,7 @@ def make_frame(payload: bytes, wire_sequence: int | None = None) -> EncodedFrame
 class SingleFramePipelineTests(unittest.TestCase):
     @staticmethod
     def _pipeline(
-        outcomes: list[FrameEvent | SourceError],
+        outcomes: list[FrameEvent | BaseException],
         calls: list[str] | None = None,
         decoder_error: DecodeError | None = None,
     ) -> tuple[SingleFramePipeline, RecordingMetrics, RecordingSequenceTracker, RecordingValidator, RecordingDecoder]:
@@ -270,6 +270,60 @@ class SingleFramePipelineTests(unittest.TestCase):
         self.assertEqual(snapshot["frames_received"], 0)
         self.assertEqual(snapshot["frames_delivered"], 0)
         self.assertEqual(snapshot["frames_dropped"], 0)
+
+    def test_allowlisted_transport_source_error_is_counted_once_without_received(self) -> None:
+        error = ValidationError(
+            "truncated complete record",
+            stage="transport_record_validation",
+            code="record_payload_truncated",
+        )
+        pipeline, metrics, _tracker, _validator, _decoder = self._pipeline([error])
+
+        with self.assertRaises(ValidationError) as raised:
+            pipeline.process_next(Event())
+
+        self.assertIs(raised.exception, error)
+        self.assertEqual(
+            metrics.snapshot(),
+            {
+                "frames_received": 0,
+                "frames_delivered": 0,
+                "frames_dropped": 1,
+                "transport_records_invalid": 1,
+                "jpeg_payloads_invalid": 0,
+                "sequence_duplicate": 0,
+                "sequence_gap": 0,
+                "sequence_out_of_order": 0,
+                "source_reconnects": 0,
+                "source_errors": 0,
+                "drop_reasons": {"transport_validation:record_payload_truncated": 1},
+                "transport_invalid_reasons": {"record_payload_truncated": 1},
+                "jpeg_invalid_reasons": {},
+                "queue_depth": {},
+                "queue_high_watermark": {},
+            },
+        )
+
+    def test_non_allowlisted_transport_source_errors_propagate_without_metrics(self) -> None:
+        errors = (
+            ValidationError(
+                "buffer unavailable",
+                stage="transport_record_validation",
+                code="transport_record_buffer_access",
+            ),
+            ValidationError(
+                "invalid mapper argument",
+                stage="transport_record_mapping",
+                code="invalid_ingest_id",
+            ),
+        )
+        for error in errors:
+            with self.subTest(code=error.code):
+                pipeline, metrics, _tracker, _validator, _decoder = self._pipeline([error])
+                with self.assertRaises(ValidationError) as raised:
+                    pipeline.process_next(Event())
+                self.assertIs(raised.exception, error)
+                self.assertEqual(metrics.snapshot(), RuntimeMetrics().snapshot())
 
     def test_sequence_validation_error_is_dropped_without_reaching_jpeg_stages(self) -> None:
         calls: list[str] = []

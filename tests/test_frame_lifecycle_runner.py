@@ -432,6 +432,61 @@ class FrameLifecycleRunnerTests(unittest.TestCase):
                     )
                 self.assertEqual(source.next_calls, 2)
 
+    def test_allowlisted_transport_source_error_drops_once_and_next_frame_delivers(self) -> None:
+        error = ValidationError(
+            "truncated complete record",
+            stage="transport_record_validation",
+            code="record_payload_truncated",
+        )
+        runner, source, _tracker, metrics, decoder = self._runner(
+            [error, FrameEvent(FrameEventKind.FRAME, make_frame())]
+        )
+        self._start(runner)
+
+        dropped = runner.step(Event())
+        self.assertEqual(dropped.kind, FrameStepOutcomeKind.DROPPED_FRAME)
+        self.assertIs(dropped.error, error)
+        self._assert_snapshot(
+            metrics,
+            frames_dropped=1,
+            transport_records_invalid=1,
+            drop_reasons={"transport_validation:record_payload_truncated": 1},
+            transport_invalid_reasons={"record_payload_truncated": 1},
+        )
+
+        delivered = runner.step(Event())
+        self.assertEqual(delivered.kind, FrameStepOutcomeKind.DELIVERED)
+        self.assertIs(delivered.decoded_frame, decoder.returned)
+        self._assert_snapshot(
+            metrics,
+            frames_received=1,
+            frames_delivered=1,
+            frames_dropped=1,
+            transport_records_invalid=1,
+            drop_reasons={"transport_validation:record_payload_truncated": 1},
+            transport_invalid_reasons={"record_payload_truncated": 1},
+        )
+        self.assertEqual(source.next_calls, 2)
+
+    def test_non_allowlisted_transport_source_error_terminates_without_transport_metrics(self) -> None:
+        error = ValidationError(
+            "buffer unavailable",
+            stage="transport_record_validation",
+            code="transport_record_buffer_access",
+        )
+        runner, source, _tracker, metrics, _decoder = self._runner([error])
+        self._start(runner)
+
+        with self.assertRaises(ValidationError) as raised:
+            runner.step(Event())
+
+        self.assertIs(raised.exception, error)
+        self._assert_snapshot(metrics)
+        with self.assertRaises(ConfigurationError) as not_running:
+            runner.step(Event())
+        self.assertEqual(not_running.exception.code, "runner_not_running")
+        self.assertEqual(source.next_calls, 1)
+
     def test_non_allowlisted_sequence_error_propagates_from_tracker_and_terminates(self) -> None:
         error = ValidationError(
             "invalid sequence", stage="sequence_tracking", code="invalid_wire_sequence"

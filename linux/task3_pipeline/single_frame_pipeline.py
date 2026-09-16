@@ -5,6 +5,7 @@ from __future__ import annotations
 from threading import Event
 
 from .errors import DecodeError, SourceError, ValidationError
+from .frame_error_policy import is_transport_record_invalid_error
 from .interfaces import FrameSource
 from .jpeg_payload_validator import JpegPayloadValidator
 from .models import DecodedFrame, FrameEvent, FrameEventKind, RuntimeMetrics
@@ -17,7 +18,10 @@ class SingleFramePipeline:
 
     The pipeline owns received, delivered, and dropped-frame metric updates for
     one ``FRAME`` event.  Non-frame events pass through unchanged, while source,
-    validation, and decode errors retain their existing exception types.
+    validation, and decode errors retain their existing exception types. A
+    source may report an allowlisted PCIe v1 record error only after it has
+    assembled exactly one record candidate; those errors are counted here and
+    still re-raised for the lifecycle runner to classify.
     """
 
     def __init__(
@@ -39,6 +43,11 @@ class SingleFramePipeline:
 
         try:
             event = self._source.next_frame(stop_event)
+        except ValidationError as error:
+            if is_transport_record_invalid_error(error):
+                self._metrics.record_transport_invalid(error.code)
+                self._metrics.record_drop(f"transport_validation:{error.code}")
+            raise
         except SourceError:
             self._metrics.record_source_error()
             raise

@@ -24,6 +24,39 @@ _JPEG_PAYLOAD_CONTINUE_CODES = frozenset(
     }
 )
 
+_TRANSPORT_RECORD_CONTINUE_ERRORS = frozenset(
+    {
+        ("transport_record_validation", "record_header_truncated"),
+        ("transport_record_validation", "record_too_large"),
+        ("transport_record_validation", "record_invalid_frame_magic"),
+        ("transport_record_validation", "record_invalid_protocol_version"),
+        ("transport_record_validation", "record_invalid_header_length"),
+        ("transport_record_validation", "record_invalid_flags"),
+        ("transport_record_validation", "record_invalid_reserved0"),
+        ("transport_record_validation", "record_invalid_reserved1"),
+        ("transport_record_validation", "record_payload_length_zero"),
+        ("transport_record_validation", "record_payload_length_exceeds_max"),
+        ("transport_record_validation", "record_payload_truncated"),
+        ("transport_record_validation", "record_trailing_bytes"),
+        ("transport_record_mapping", "record_error_code_nonzero"),
+    }
+)
+
+
+def is_transport_record_invalid_error(error: PipelineError) -> bool:
+    """Return whether one assembled record has an allowlisted wire failure.
+
+    Callers may use this only after they have already supplied exactly one
+    record candidate boundary.  This deliberately excludes buffer access and
+    mapper call-contract failures, which remain fail-closed programming or
+    resource errors.
+    """
+
+    return (
+        type(error) is ValidationError
+        and (error.stage, error.code) in _TRANSPORT_RECORD_CONTINUE_ERRORS
+    )
+
 
 def classify_frame_error(error: PipelineError) -> FrameErrorDisposition:
     """Classify a known local frame error without changing it or its metrics.
@@ -37,6 +70,8 @@ def classify_frame_error(error: PipelineError) -> FrameErrorDisposition:
         and error.stage == "jpeg_payload_validation"
         and error.code in _JPEG_PAYLOAD_CONTINUE_CODES
     ):
+        return FrameErrorDisposition.CONTINUE_NEXT_FRAME
+    if is_transport_record_invalid_error(error):
         return FrameErrorDisposition.CONTINUE_NEXT_FRAME
     if (
         type(error) is DecodeError

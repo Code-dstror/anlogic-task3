@@ -14,6 +14,7 @@ from linux.task3_pipeline.errors import (
 from linux.task3_pipeline.frame_error_policy import (
     FrameErrorDisposition,
     classify_frame_error,
+    is_transport_record_invalid_error,
 )
 from linux.task3_pipeline.jpeg_payload_validator import JpegPayloadValidator
 from linux.task3_pipeline.models import EncodedFrame
@@ -38,6 +39,85 @@ class _DerivedValidationError(ValidationError):
 
 
 class FrameErrorPolicyTests(unittest.TestCase):
+    def test_each_allowlisted_transport_record_error_continues_with_exact_match(self) -> None:
+        cases = (
+            ("transport_record_validation", "record_header_truncated"),
+            ("transport_record_validation", "record_too_large"),
+            ("transport_record_validation", "record_invalid_frame_magic"),
+            ("transport_record_validation", "record_invalid_protocol_version"),
+            ("transport_record_validation", "record_invalid_header_length"),
+            ("transport_record_validation", "record_invalid_flags"),
+            ("transport_record_validation", "record_invalid_reserved0"),
+            ("transport_record_validation", "record_invalid_reserved1"),
+            ("transport_record_validation", "record_payload_length_zero"),
+            ("transport_record_validation", "record_payload_length_exceeds_max"),
+            ("transport_record_validation", "record_payload_truncated"),
+            ("transport_record_validation", "record_trailing_bytes"),
+            ("transport_record_mapping", "record_error_code_nonzero"),
+        )
+        for stage, code in cases:
+            with self.subTest(stage=stage, code=code):
+                error = ValidationError("invalid record", stage=stage, code=code)
+                self.assertTrue(is_transport_record_invalid_error(error))
+                self.assertEqual(
+                    classify_frame_error(error),
+                    FrameErrorDisposition.CONTINUE_NEXT_FRAME,
+                )
+
+    def test_transport_record_allowlist_rejects_wrong_class_stage_or_code(self) -> None:
+        cases = (
+            ("transport_record_validation", "record_header_truncated"),
+            ("transport_record_mapping", "record_error_code_nonzero"),
+        )
+        for stage, code in cases:
+            errors = (
+                _DerivedValidationError("derived", stage=stage, code=code),
+                DecodeError("wrong class", stage=stage, code=code),
+                ValidationError("wrong stage", stage="other_stage", code=code),
+                ValidationError("wrong code", stage=stage, code="future_record_error"),
+            )
+            for error in errors:
+                with self.subTest(expected_stage=stage, expected_code=code, error=error):
+                    self.assertFalse(is_transport_record_invalid_error(error))
+                    self.assertEqual(
+                        classify_frame_error(error), FrameErrorDisposition.PROPAGATE
+                    )
+
+    def test_transport_buffer_access_and_mapper_contract_errors_propagate(self) -> None:
+        errors = (
+            ValidationError(
+                "buffer unavailable",
+                stage="transport_record_validation",
+                code="transport_record_buffer_access",
+            ),
+            ValidationError(
+                "wrong record",
+                stage="transport_record_mapping",
+                code="invalid_record",
+            ),
+            ValidationError(
+                "wrong ingest id",
+                stage="transport_record_mapping",
+                code="invalid_ingest_id",
+            ),
+            ValidationError(
+                "wrong timestamp",
+                stage="transport_record_mapping",
+                code="invalid_received_monotonic_ns",
+            ),
+            ValidationError(
+                "wrong source name",
+                stage="transport_record_mapping",
+                code="invalid_source_name",
+            ),
+        )
+        for error in errors:
+            with self.subTest(code=error.code):
+                self.assertFalse(is_transport_record_invalid_error(error))
+                self.assertEqual(
+                    classify_frame_error(error), FrameErrorDisposition.PROPAGATE
+                )
+
     def test_all_known_jpeg_payload_errors_continue(self) -> None:
         for code in (
             "jpeg_payload_empty",
