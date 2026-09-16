@@ -6,6 +6,126 @@
   "max_payload": 16777216,
   "slot_count": 1,
   "user_bar_base": "0x00080000",
+  "frame_header": {
+    "byte_order": "little",
+    "size": 64,
+    "fields": [
+      {
+        "name": "frame_magic",
+        "offset": 0,
+        "size": 4,
+        "type": "u32",
+        "expected": "0x47504A41"
+      },
+      {
+        "name": "protocol_version",
+        "offset": 4,
+        "size": 2,
+        "type": "u16",
+        "expected": 1
+      },
+      {
+        "name": "header_length",
+        "offset": 6,
+        "size": 2,
+        "type": "u16",
+        "expected": 64
+      },
+      {
+        "name": "frame_sequence",
+        "offset": 8,
+        "size": 4,
+        "type": "u32"
+      },
+      {
+        "name": "payload_length",
+        "offset": 12,
+        "size": 4,
+        "type": "u32"
+      },
+      {
+        "name": "width",
+        "offset": 16,
+        "size": 2,
+        "type": "u16"
+      },
+      {
+        "name": "height",
+        "offset": 18,
+        "size": 2,
+        "type": "u16"
+      },
+      {
+        "name": "pixel_format",
+        "offset": 20,
+        "size": 1,
+        "type": "u8"
+      },
+      {
+        "name": "compression",
+        "offset": 21,
+        "size": 1,
+        "type": "u8"
+      },
+      {
+        "name": "quality",
+        "offset": 22,
+        "size": 1,
+        "type": "u8"
+      },
+      {
+        "name": "flags",
+        "offset": 23,
+        "size": 1,
+        "type": "u8",
+        "expected": 1
+      },
+      {
+        "name": "timestamp_ns",
+        "offset": 24,
+        "size": 8,
+        "type": "u64"
+      },
+      {
+        "name": "status",
+        "offset": 32,
+        "size": 4,
+        "type": "u32"
+      },
+      {
+        "name": "error_code",
+        "offset": 36,
+        "size": 4,
+        "type": "u32"
+      },
+      {
+        "name": "slot_id",
+        "offset": 40,
+        "size": 2,
+        "type": "u16"
+      },
+      {
+        "name": "reserved0",
+        "offset": 42,
+        "size": 2,
+        "type": "u16",
+        "expected": 0
+      },
+      {
+        "name": "payload_crc32",
+        "offset": 44,
+        "size": 4,
+        "type": "u32"
+      },
+      {
+        "name": "reserved1",
+        "offset": 48,
+        "size": 16,
+        "type": "bytes",
+        "expected": "00000000000000000000000000000000"
+      }
+    ]
+  },
   "registers": {
     "DEVICE_MAGIC": "0x00",
     "PROTOCOL_VERSION": "0x04",
