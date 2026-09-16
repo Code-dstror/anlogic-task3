@@ -16,6 +16,7 @@ from .errors import (
 from .interfaces import FrameSource, InferenceBackend, OutputSink
 from .jpeg_payload_validator import JpegPayloadValidator
 from .mock_file_source import MockFileFrameSource
+from .mock_protocol_record_source import MockProtocolRecordSource
 from .opencv_jpeg_decoder import OpenCvJpegDecoder
 from .pcie_v1_record_parser import PcieV1Record, PcieV1RecordParser
 from .pcie_v1_record_mapper import map_pcie_v1_record_to_encoded_frame
@@ -46,6 +47,7 @@ __all__ = [
     "InferenceError",
     "JpegPayloadValidator",
     "MockFileFrameSource",
+    "MockProtocolRecordSource",
     "OutputError",
     "OutputSink",
     "OpenCvJpegDecoder",

@@ -2,9 +2,9 @@
 
 This package is the Python foundation shared by the Ubuntu host and the future
 RK3576 target. It contains shared data types, contracts, exceptions, metrics,
-the Stage-B `MockFileFrameSource`, Stage-C JPEG validation and decoding, and
-pure-memory PCIe v1 record parsing and `EncodedFrame` mapping. It does not
-access SGDMA devices or invoke RKNN.
+the Stage-B `MockFileFrameSource` and `MockProtocolRecordSource`, Stage-C JPEG
+validation and decoding, and pure-memory PCIe v1 record parsing and
+`EncodedFrame` mapping. It does not access SGDMA devices or invoke RKNN.
 
 Run from the repository root with Python 3.10 or newer:
 
@@ -43,6 +43,25 @@ Neither parsing nor mapping accesses SGDMA, assumes one `read()` or completion
 is one frame, or manages slot/DMA ownership. In particular, slot ID remains in
 the private `PcieV1Record` and is not public frame metadata. JPEG validation
 and decoding remain later stages.
+
+## In-memory protocol-record mock input
+
+`MockProtocolRecordSource(records, *, clock=...)` is a deterministic
+`FrameSource` for transport tests. Each item must already be exactly one
+complete PCIe v1 `[64-byte header][payload]` record; it does not accept chunks,
+perform cross-read assembly, or access a device. On each `next_frame()` call it
+consumes one item, uses `PcieV1RecordParser` and
+`map_pcie_v1_record_to_encoded_frame`, and publishes the resulting `FRAME`
+event. The optional monotonic clock is injectable for deterministic tests.
+
+The source preserves parser bytes-like behavior for `bytes`, `bytearray`, and
+`memoryview`. Parser or mapper `ValidationError`s escape unchanged after that
+one input is consumed. The existing pipeline and lifecycle runner therefore
+remain the only place that classifies allowlisted invalid transport records and
+records their metrics. Successful frames receive local, monotonically
+increasing `ingest_id` values independently of wire `frame_sequence`; restarts
+replay records while continuing the local ID sequence. EOF, stop, restart, and
+close behavior matches `MockFileFrameSource`.
 
 ## JPEG payload boundary validation
 
