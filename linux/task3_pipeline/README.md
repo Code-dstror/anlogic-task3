@@ -2,9 +2,9 @@
 
 This package is the Python foundation shared by the Ubuntu host and the future
 RK3576 target. It contains shared data types, contracts, exceptions, metrics,
-the Stage-B `MockFileFrameSource`, Stage-C JPEG validation and decoding, and a
-pure-memory PCIe v1 record parser. It does not access SGDMA devices or invoke
-RKNN.
+the Stage-B `MockFileFrameSource`, Stage-C JPEG validation and decoding, and
+pure-memory PCIe v1 record parsing and `EncodedFrame` mapping. It does not
+access SGDMA devices or invoke RKNN.
 
 Run from the repository root with Python 3.10 or newer:
 
@@ -28,9 +28,21 @@ complete v1 `[64-byte header][payload]` buffer and returns an immutable
 `memoryview`; payload CRC, timestamp, compression, pixel format, quality,
 status, error code, and slot ID remain opaque wire values.
 
-The parser still does not access SGDMA, assume one `read()` or completion is
-one frame, or manage slot/DMA ownership. It also does not create or map an
-`EncodedFrame`; that transport-to-common-frame boundary remains unimplemented.
+`map_pcie_v1_record_to_encoded_frame(record, *, ingest_id,
+received_monotonic_ns, source_name)` is the separate, pure-memory bridge to
+an `EncodedFrame`. The caller provides the local ID and monotonic receive time;
+the wire sequence remains separate metadata. Zero wire width or height maps to
+an absent declared dimension (`None`). Wire `timestamp_ns`, including zero, is
+preserved as `source_timestamp`, but its `timestamp_domain` is `None`. The
+declared CRC is retained with an explicit unverified integrity marker, while
+compression, pixel format, quality, and status remain raw `pcie_v1_*`
+extension values. `encoding` remains `None`: this mapping does not establish
+that the payload is JPEG.
+
+Neither parsing nor mapping accesses SGDMA, assumes one `read()` or completion
+is one frame, or manages slot/DMA ownership. In particular, slot ID remains in
+the private `PcieV1Record` and is not public frame metadata. JPEG validation
+and decoding remain later stages.
 
 ## JPEG payload boundary validation
 
