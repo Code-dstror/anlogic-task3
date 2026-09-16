@@ -10,56 +10,19 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+from tests._c2h_jpeg_fixture_helpers import (
+    canonical_jpeg_fixture_bytes as _fixture_bytes,
+    fixture_macro_value as _macro_value,
+    fixture_pattern as _fixture_pattern,
+)
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PCIE_DIR = ROOT / "fpga_rtl" / "pcie"
-FIXTURE_CONSTANTS = ROOT / "fpga_rtl" / "include" / "c2h_test_fixture.vh"
 SOURCE = PCIE_DIR / "c2h_test_source.v"
 REGISTERS = PCIE_DIR / "pcie_app_regs.v"
 TOP = PCIE_DIR / "pcie_c2h_test_top.v"
 TRANSPORT_TB = ROOT / "fpga_rtl" / "tb" / "tb_c2h_transport.v"
-
-
-def _macro_value(name: str) -> int:
-    match = re.search(
-        rf"^`define {name} (?:32|16)'d(\d+)$",
-        FIXTURE_CONSTANTS.read_text(encoding="utf-8"),
-        re.MULTILINE,
-    )
-    if match is None:
-        raise AssertionError(f"missing numeric macro {name}")
-    return int(match.group(1))
-
-
-def _fixture_bytes() -> bytes:
-    fixture_constants = FIXTURE_CONSTANTS.read_text(encoding="utf-8")
-    match = re.search(
-        r"C2H_TEST_JPEG_FIXTURE_DATA\s+2648'h([0-9a-fA-F\s]+)$",
-        fixture_constants,
-        re.MULTILINE,
-    )
-    if match is None:
-        raise AssertionError("embedded JPEG fixture literal is missing")
-    return bytes.fromhex("".join(match.group(1).split()))
-
-
-def _fixture_pattern() -> int:
-    definitions = re.findall(
-        r"^`define\s+C2H_TEST_PATTERN_JPEG_FIXTURE\s+(.+?)\s*$",
-        FIXTURE_CONSTANTS.read_text(encoding="utf-8"),
-        re.MULTILINE,
-    )
-    if not definitions:
-        raise AssertionError("missing C2H_TEST_PATTERN_JPEG_FIXTURE macro")
-    if len(definitions) != 1:
-        raise AssertionError("duplicate C2H_TEST_PATTERN_JPEG_FIXTURE macros")
-    match = re.fullmatch(r"2'd(\d+)", definitions[0])
-    if match is None:
-        raise AssertionError("C2H_TEST_PATTERN_JPEG_FIXTURE must be a 2-bit decimal macro")
-    pattern = int(match.group(1))
-    if pattern > 0b11:
-        raise AssertionError("C2H_TEST_PATTERN_JPEG_FIXTURE exceeds the 2-bit range")
-    return pattern
 
 
 def _transport_oracle_bytes() -> bytes:
