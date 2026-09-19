@@ -1,0 +1,1 @@
+{"signal":[{"name":"clk","wave":"p....."},{"name":"wr_en","wave":"010..."},{"name":"wr_addr","wave":"x=x...","data":["A"]},{"name":"rd_en","wave":"0.10.."},{"name":"rd_addr","wave":"x.=x..","data":["A"]},{"name":"rd_data","wave":"x..=..","data":["D"]}],"head":{"text":"Synchronous PH1 line-memory write and read"}}

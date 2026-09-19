@@ -1,0 +1,15 @@
+# Camera, clock and UART assignments match the local IMX415 example.
+# Cross-checked with original 02_peripheral_demo.zip camera demo ADC.
+set_pin_assignment { sys_clk } { LOCATION = T16; IOSTANDARD = LVCMOS18; }
+set_pin_assignment { mipi_ref_clk_p } { LOCATION = T13; IOSTANDARD = LVDS18; PULLTYPE = NONE; }
+set_pin_assignment { mipi_clk_hs_rx_p } { LOCATION = E13; IOSTANDARD = LVDS18; PULLTYPE = NONE; }
+set_pin_assignment { mipi_data_hs_p[0] } { LOCATION = C14; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi_data_hs_p[1] } { LOCATION = D14; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi_data_hs_p[2] } { LOCATION = A15; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi_data_hs_p[3] } { LOCATION = G17; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { cam_scl } { LOCATION = B14; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { cam_sda } { LOCATION = A14; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { cam_mclk } { LOCATION = A18; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam_xclr } { LOCATION = B18; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { uart_rx } { LOCATION = V11; IOSTANDARD = LVCMOS18; PULLTYPE = PULLUP; }
+set_pin_assignment { uart_tx } { LOCATION = U11; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; }

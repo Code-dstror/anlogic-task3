@@ -1,0 +1,1 @@
+{"signal":[{"name":"clk","wave":"p....."},{"name":"s_valid","wave":"01.0.."},{"name":"s_ready","wave":"1....."},{"name":"s_user","wave":"010..."},{"name":"m_valid","wave":"0...1."},{"name":"m_user","wave":"0...10"}],"head":{"text":"Accepted RAW frame-start beat later emerges as RGB frame-start beat"}}
