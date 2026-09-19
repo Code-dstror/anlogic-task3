@@ -10,9 +10,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
+from math import isfinite
 from threading import Lock
 from types import MappingProxyType
 from typing import Any, Mapping
+
+import numpy as np
 
 
 class FrameEventKind(str, Enum):
@@ -33,6 +36,123 @@ class SourceHealth(str, Enum):
     READY = "ready"
     DEGRADED = "degraded"
     FAILED = "failed"
+
+
+@dataclass(frozen=True, slots=True)
+class ModelInputSpec:
+    """Explicit, configurable image-tensor contract for one model input.
+
+    The currently verified YOLOv5 profile is selected by a caller explicitly
+    providing ``width=640`` and ``height=640``.  Width and height deliberately
+    have no constructor defaults, so 640x640 is not a system-wide fixed
+    resolution.  A future model can provide a distinct specification without
+    changing frame ownership or transform contracts.
+    """
+    width: int
+    height: int
+    batch_size: int = 1
+    channels: int = 3
+    color_format: str = "RGB"
+    layout: str = "NHWC"
+    dtype: np.dtype | str = np.dtype("uint8")
+    padding_value: int = 0
+
+    def __post_init__(self) -> None:
+        if min(self.width, self.height, self.batch_size, self.channels) <= 0:
+            raise ValueError("model input dimensions, batch_size, and channels must be positive")
+        if not self.color_format:
+            raise ValueError("color_format must not be empty")
+        if self.layout not in {"NHWC", "NCHW"}:
+            raise ValueError("layout must be NHWC or NCHW")
+        try:
+            dtype = np.dtype(self.dtype)
+        except TypeError as error:
+            raise ValueError("dtype must be a NumPy-compatible dtype") from error
+        if dtype.hasobject:
+            raise ValueError("dtype must not contain Python objects")
+        if not isinstance(self.padding_value, int) or isinstance(self.padding_value, bool):
+            raise TypeError("padding_value must be an integer")
+        object.__setattr__(self, "dtype", dtype)
+
+    @property
+    def shape(self) -> tuple[int, int, int, int]:
+        """Tensor shape required by this specification, including its batch."""
+        if self.layout == "NHWC":
+            return (self.batch_size, self.height, self.width, self.channels)
+        return (self.batch_size, self.channels, self.height, self.width)
+
+
+@dataclass(frozen=True, slots=True)
+class PreprocessTransform:
+    """Source-to-model geometry recorded by a future preprocessor.
+
+    This is descriptive data only.  Resize, letterbox, and coordinate mapping
+    algorithms remain outside this shared-contract change.
+    """
+    source_width: int
+    source_height: int
+    model_width: int
+    model_height: int
+    scale: float
+    pad_left: int
+    pad_top: int
+    pad_right: int
+    pad_bottom: int
+
+    def __post_init__(self) -> None:
+        if (
+            min(
+                self.source_width,
+                self.source_height,
+                self.model_width,
+                self.model_height,
+            )
+            <= 0
+            or not isfinite(self.scale)
+            or self.scale <= 0
+        ):
+            raise ValueError("transform dimensions and scale must be positive")
+        if min(self.pad_left, self.pad_top, self.pad_right, self.pad_bottom) < 0:
+            raise ValueError("transform padding must be non-negative")
+
+    @property
+    def ratio(self) -> float:
+        """Uniform source-to-model scale ratio."""
+        return self.scale
+
+
+@dataclass(frozen=True, slots=True)
+class ModelInput:
+    """Owned, immutable tensor plus its complete source-frame association.
+
+    Construction always makes a private C-contiguous copy, then publishes it
+    read-only.  The ``ModelInput`` instance owns that array and keeps it alive;
+    an inference backend must retain this instance (or its ``data`` reference)
+    until its synchronous inference call returns.
+    """
+    metadata: "FrameMetadata"
+    data: np.ndarray
+    spec: ModelInputSpec
+    transform: PreprocessTransform
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.metadata, FrameMetadata):
+            raise TypeError("metadata must be FrameMetadata")
+        if not isinstance(self.data, np.ndarray):
+            raise TypeError("data must be a NumPy array")
+        if not isinstance(self.spec, ModelInputSpec):
+            raise TypeError("spec must be ModelInputSpec")
+        if not isinstance(self.transform, PreprocessTransform):
+            raise TypeError("transform must be PreprocessTransform")
+        if self.transform.model_width != self.spec.width or self.transform.model_height != self.spec.height:
+            raise ValueError("transform target dimensions must match spec")
+        if self.data.shape != self.spec.shape:
+            raise ValueError("data shape must match spec.shape")
+        if self.data.dtype != self.spec.dtype:
+            raise ValueError("data dtype must match spec.dtype")
+        data = np.array(self.data, copy=True, order="C")
+        data.setflags(write=False)
+        object.__setattr__(self, "data", data)
 
 
 @dataclass(frozen=True, slots=True)
