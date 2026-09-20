@@ -1,0 +1,7 @@
+2025.4
+* Version:3.0(rev 0)
+* Modified behavior of SHOW AHEAD mode
+* Added read/write handshake port
+* Added synchronized reset and no reset modes
+* Increased output port reset initial value
+* Increase the ratio of read/write or write/read bitwidth from 8:1 to 16:1

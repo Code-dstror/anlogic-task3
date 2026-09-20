@@ -2,8 +2,9 @@
 
 This package is the Python foundation shared by the Ubuntu host and the future
 RK3576 target. It contains shared data types, contracts, exceptions, metrics,
-the Stage-B `MockFileFrameSource`, and Stage-C JPEG validation and decoding.
-It does not parse PCIe records, access SGDMA devices, or invoke RKNN.
+the Stage-B `MockFileFrameSource` and `MockProtocolRecordSource`, Stage-C JPEG
+validation and decoding, and pure-memory PCIe v1 record parsing and
+`EncodedFrame` mapping. It does not access SGDMA devices or invoke RKNN.
 
 Run from the repository root with Python 3.10 or newer:
 
@@ -18,6 +19,49 @@ until the board runtime and deployment contract are available.
 
 The `OpenCvJpegDecoder` runtime dependency is `cv2` (OpenCV) plus `numpy`.
 They are environment-provided dependencies; this package does not install them.
+
+## PCIe v1 record parsing
+
+`PcieV1RecordParser.parse(record)` validates and parses one caller-assembled,
+complete v1 `[64-byte header][payload]` buffer and returns an immutable
+`PcieV1Record`. It snapshots bytes supplied through `bytes`, `bytearray`, or
+`memoryview`; payload CRC, timestamp, compression, pixel format, quality,
+status, error code, and slot ID remain opaque wire values.
+
+`map_pcie_v1_record_to_encoded_frame(record, *, ingest_id,
+received_monotonic_ns, source_name)` is the separate, pure-memory bridge to
+an `EncodedFrame`. The caller provides the local ID and monotonic receive time;
+the wire sequence remains separate metadata. Zero wire width or height maps to
+an absent declared dimension (`None`). Wire `timestamp_ns`, including zero, is
+preserved as `source_timestamp`, but its `timestamp_domain` is `None`. The
+declared CRC is retained with an explicit unverified integrity marker, while
+compression, pixel format, quality, and status remain raw `pcie_v1_*`
+extension values. `encoding` remains `None`: this mapping does not establish
+that the payload is JPEG.
+
+Neither parsing nor mapping accesses SGDMA, assumes one `read()` or completion
+is one frame, or manages slot/DMA ownership. In particular, slot ID remains in
+the private `PcieV1Record` and is not public frame metadata. JPEG validation
+and decoding remain later stages.
+
+## In-memory protocol-record mock input
+
+`MockProtocolRecordSource(records, *, clock=...)` is a deterministic
+`FrameSource` for transport tests. Each item must already be exactly one
+complete PCIe v1 `[64-byte header][payload]` record; it does not accept chunks,
+perform cross-read assembly, or access a device. On each `next_frame()` call it
+consumes one item, uses `PcieV1RecordParser` and
+`map_pcie_v1_record_to_encoded_frame`, and publishes the resulting `FRAME`
+event. The optional monotonic clock is injectable for deterministic tests.
+
+The source preserves parser bytes-like behavior for `bytes`, `bytearray`, and
+`memoryview`. Parser or mapper `ValidationError`s escape unchanged after that
+one input is consumed. The existing pipeline and lifecycle runner therefore
+remain the only place that classifies allowlisted invalid transport records and
+records their metrics. Successful frames receive local, monotonically
+increasing `ingest_id` values independently of wire `frame_sequence`; restarts
+replay records while continuing the local ID sequence. EOF, stop, restart, and
+close behavior matches `MockFileFrameSource`.
 
 ## JPEG payload boundary validation
 

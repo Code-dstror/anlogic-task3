@@ -1,0 +1,1 @@
+{"signal":[{"name":"clk","wave":"p......."},{"name":"s_user","wave":"010....."},{"name":"s_valid","wave":"01..0..."},{"name":"m_user","wave":"0.....10"},{"name":"m_valid","wave":"0.....1."}],"head":{"text":"RAW frame start after line-buffer fill"}}
