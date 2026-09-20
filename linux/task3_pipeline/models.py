@@ -78,6 +78,9 @@ class ImmutableTensor:
         dtype: np.dtype,
         strides: tuple[int, ...],
     ) -> None:
+        dtype = np.dtype(dtype)
+        if dtype.hasobject:
+            raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
         object.__setattr__(self, "_backing", backing)
         object.__setattr__(self, "_shape", shape)
         object.__setattr__(self, "_dtype", dtype)
@@ -90,6 +93,8 @@ class ImmutableTensor:
     @classmethod
     def from_array(cls, source: np.ndarray) -> "ImmutableTensor":
         """Copy ``source`` into C-contiguous immutable bytes."""
+        if np.dtype(source.dtype).hasobject:
+            raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
         contiguous = np.array(source, copy=True, order="C")
         backing = contiguous.tobytes(order="C")
         return cls(backing, contiguous.shape, contiguous.dtype, contiguous.strides)

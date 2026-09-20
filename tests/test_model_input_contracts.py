@@ -151,6 +151,35 @@ class ModelInputContractTests(unittest.TestCase):
         mutable_copy[0, 0] = 42
         self.assertEqual(result.data[0, 0, 0, 0], 0)
 
+    def test_immutable_tensor_rejects_object_containing_array_dtypes(self) -> None:
+        object_structured = np.zeros(1, dtype=np.dtype([("number", "u1"), ("value", object)]))
+        nested_object_structured = np.zeros(
+            1, dtype=np.dtype([("nested", [("value", object)])])
+        )
+        for array in (
+            np.array([object()], dtype=object),
+            object_structured,
+            nested_object_structured,
+        ):
+            with self.subTest(dtype=array.dtype), self.assertRaisesRegex(
+                TypeError, "object-containing dtypes"
+            ):
+                ImmutableTensor.from_array(array)
+
+    def test_immutable_tensor_constructor_enforces_object_dtype_invariant(self) -> None:
+        with self.assertRaisesRegex(TypeError, "object-containing dtypes"):
+            ImmutableTensor(b"\x00" * np.dtype(object).itemsize, (1,), np.dtype(object), (8,))
+
+    def test_immutable_tensor_uint8_round_trip_remains_supported(self) -> None:
+        source = np.array([[1, 2], [3, 4]], dtype=np.uint8)
+        tensor = ImmutableTensor.from_array(source)
+        np.testing.assert_array_equal(tensor.to_numpy(), source)
+
+    def test_immutable_tensor_fixed_width_structured_dtype_remains_supported(self) -> None:
+        source = np.array([(1, 2), (3, 4)], dtype=np.dtype([("first", "u1"), ("second", "u2")]))
+        tensor = ImmutableTensor.from_array(source)
+        np.testing.assert_array_equal(tensor.to_numpy(), source)
+
     def test_input_preserves_complete_metadata_object(self) -> None:
         metadata = self._metadata()
         spec = ModelInputSpec(width=640, height=640)
