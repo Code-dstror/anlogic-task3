@@ -232,6 +232,20 @@ class ModelInputContractTests(unittest.TestCase):
         copied[0] = 42
         self.assertEqual(tensor[0], 1)
 
+    def test_immutable_tensor_normalizes_bytes_subclasses_before_sizing(self) -> None:
+        class LyingBytes(bytes):
+            def __len__(self) -> int:
+                return 3
+
+        backing = LyingBytes(b"\x01")
+        with self.assertRaisesRegex(ValueError, "backing length"):
+            ImmutableTensor(backing, (3,), np.uint8, (1,))
+
+        tensor = ImmutableTensor(backing, (1,), np.uint8, (1,))
+        self.assertIs(type(tensor._backing), bytes)
+        self.assertIsNot(tensor._backing, backing)
+        np.testing.assert_array_equal(tensor.to_numpy(), np.array([1], dtype=np.uint8))
+
     def test_immutable_tensor_fixed_width_structured_dtype_remains_supported(self) -> None:
         source = np.array([(1, 2), (3, 4)], dtype=np.dtype([("first", "u1"), ("second", "u2")]))
         tensor = ImmutableTensor.from_array(source)
@@ -264,6 +278,43 @@ class ModelInputContractTests(unittest.TestCase):
         del tensor
         gc.collect()
         np.testing.assert_array_equal(result.data.to_numpy(), np.array([[[[1, 2, 3]]]], dtype=np.uint8))
+
+    def test_input_requires_an_exact_model_input_spec_before_reading_it(self) -> None:
+        exact_spec = ModelInputSpec(width=1, height=1)
+        exact_transform = PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        exact_tensor = ImmutableTensor(b"\x01\x02\x03", (1, 1, 1, 3), np.uint8, (3, 3, 3, 1))
+        self.assertIs(
+            ModelInput(self._metadata(), exact_tensor, exact_spec, exact_transform).spec,
+            exact_spec,
+        )
+
+        class MisleadingShapeSpec(ModelInputSpec):
+            @property
+            def shape(self) -> tuple[int, int, int, int]:
+                return (1, 1, 1, 3)
+
+        class ExplosiveSpec(ModelInputSpec):
+            _reject_member_reads = False
+
+            def __getattribute__(self, name: str) -> object:
+                if type(self)._reject_member_reads and name in {
+                    "shape", "width", "height", "channels", "batch_size", "layout", "dtype"
+                }:
+                    raise AssertionError(f"ModelInput must not read subclass.spec.{name}")
+                return super().__getattribute__(name)
+
+        transform = PreprocessTransform(1, 1, 2, 2, 1.0, 0, 0, 1, 1)
+        undersized = ImmutableTensor(b"\x01\x02\x03", (1, 1, 1, 3), np.uint8, (3, 3, 3, 1))
+        with self.assertRaisesRegex(TypeError, "spec must be an exact ModelInputSpec"):
+            ModelInput(self._metadata(), undersized, MisleadingShapeSpec(2, 2), transform)
+
+        explosive_spec = ExplosiveSpec(2, 2)
+        ExplosiveSpec._reject_member_reads = True
+        try:
+            with self.assertRaisesRegex(TypeError, "spec must be an exact ModelInputSpec"):
+                ModelInput(self._metadata(), undersized, explosive_spec, transform)
+        finally:
+            ExplosiveSpec._reject_member_reads = False
 
     def test_input_rejects_immutable_tensor_subclasses_before_reading_them(self) -> None:
         spec = ModelInputSpec(width=1, height=1)

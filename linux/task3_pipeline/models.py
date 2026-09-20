@@ -133,7 +133,7 @@ class ImmutableTensor:
             normalized_shape, dtype.itemsize
         )
         normalized_strides = _normalize_c_strides(strides, expected_strides)
-        if isinstance(backing, bytes):
+        if type(backing) is bytes:
             frozen_backing = backing
         else:
             try:
@@ -389,7 +389,9 @@ class ModelInput:
     synchronous inference call. ImmutableTensor subclasses are rejected before
     their overridable members are read, because they cannot inherit the base
     class's immutability guarantee. Neither accepted path exposes a mutable
-    ndarray header.
+    ndarray header. The specification must be an exact
+    :class:`ModelInputSpec`; subclasses are rejected before their overridable
+    shape or dimension members are read.
     """
     metadata: "FrameMetadata"
     data: np.ndarray | ImmutableTensor
@@ -399,8 +401,8 @@ class ModelInput:
     def __post_init__(self) -> None:
         if not isinstance(self.metadata, FrameMetadata):
             raise TypeError("metadata must be FrameMetadata")
-        if not isinstance(self.spec, ModelInputSpec):
-            raise TypeError("spec must be ModelInputSpec")
+        if type(self.spec) is not ModelInputSpec:
+            raise TypeError("spec must be an exact ModelInputSpec")
         if not isinstance(self.transform, PreprocessTransform):
             raise TypeError("transform must be PreprocessTransform")
         data_type = type(self.data)
