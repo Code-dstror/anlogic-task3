@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from math import floor, isfinite
+from math import floor, gcd, isfinite
 from numbers import Integral, Real
 from sys import maxsize
 from threading import Lock
@@ -40,9 +40,85 @@ def _require_non_negative_integer(value: object, name: str) -> int:
     return value
 
 
-def _round_scaled_dimension(original_dimension: int, scale: float) -> int:
-    """Round a scaled size to nearest integer, with exact .5 values rounded up."""
-    return floor(original_dimension * scale + 0.5)
+def _round_scaled_dimension(original_dimension: int, scale: float, axis: str) -> int:
+    """Safely round one scaled size to nearest integer, with .5 rounded up."""
+    error_message = f"scaled {axis} must be finite and roundable"
+    try:
+        scaled_dimension = original_dimension * scale
+    except OverflowError:
+        raise ValueError(error_message) from None
+    if not isfinite(scaled_dimension):
+        raise ValueError(error_message)
+    try:
+        rounded_input = scaled_dimension + 0.5
+    except OverflowError:
+        raise ValueError(error_message) from None
+    if not isfinite(rounded_input):
+        raise ValueError(error_message)
+    try:
+        return floor(rounded_input)
+    except (OverflowError, ValueError):
+        raise ValueError(error_message) from None
+
+
+def _finite_real_as_integer_ratio(value: Real, name: str) -> tuple[int, int]:
+    """Return an exact ratio for supported Python or NumPy scalar input only."""
+    if isinstance(value, Integral):
+        return int(value), 1
+    if isinstance(value, np.floating):
+        if not bool(np.isfinite(value)):
+            raise ValueError(f"{name} must be finite")
+        scalar_type = np.dtype(value.dtype).type
+        as_integer_ratio = getattr(scalar_type, "as_integer_ratio", None)
+        if not callable(as_integer_ratio):
+            raise TypeError(f"{name} NumPy dtype lacks exact binary-ratio support")
+        # Dispatch through the concrete NumPy scalar dtype, retaining e.g.
+        # longdouble precision and avoiding any Python-float conversion.
+        numerator, denominator = as_integer_ratio(value)
+    elif isinstance(value, float):
+        if not isfinite(value):
+            raise ValueError(f"{name} must be finite")
+        # Call the built-in implementation directly: a float subclass may
+        # replace its instance attribute but cannot change its stored binary64 value.
+        numerator, denominator = float.as_integer_ratio(value)
+    else:
+        raise TypeError(f"{name} must be a Python or NumPy real scalar")
+    numerator, denominator = int(numerator), int(denominator)
+    if denominator <= 0:
+        raise ValueError(f"{name} has an invalid exact ratio")
+    divisor = gcd(numerator, denominator)
+    return numerator // divisor, denominator // divisor
+
+
+def _compare_integer_ratios(
+    left: tuple[int, int], right: tuple[int, int]
+) -> int:
+    """Compare exact rational values represented by positive-denominator ratios."""
+    left_cross = left[0] * right[1]
+    right_cross = right[0] * left[1]
+    return (left_cross > right_cross) - (left_cross < right_cross)
+
+
+def _validate_exact_floating_padding_value(value: Real, dtype: np.dtype) -> object:
+    """Validate finite range and exact representability before storing a float padding value."""
+    value_ratio = _finite_real_as_integer_ratio(value, "padding_value")
+    limits = np.finfo(dtype)
+    minimum_ratio = _finite_real_as_integer_ratio(limits.min, "dtype minimum")
+    maximum_ratio = _finite_real_as_integer_ratio(limits.max, "dtype maximum")
+    if (
+        _compare_integer_ratios(value_ratio, minimum_ratio) < 0
+        or _compare_integer_ratios(value_ratio, maximum_ratio) > 0
+    ):
+        raise ValueError("padding_value is outside the dtype range")
+    try:
+        with np.errstate(over="ignore", invalid="ignore"):
+            converted = np.asarray(value, dtype=dtype)[()]
+    except (OverflowError, TypeError, ValueError) as error:
+        raise ValueError("padding_value is outside the dtype range") from error
+    converted_ratio = _finite_real_as_integer_ratio(converted, "padding_value")
+    if value_ratio != converted_ratio:
+        raise ValueError("padding_value must be exactly representable by the dtype")
+    return dtype.type(converted).item()
 
 
 def _normalize_tensor_shape(shape: object) -> tuple[int, ...]:
@@ -91,6 +167,16 @@ def _normalize_c_strides(strides: object, expected: tuple[int, ...]) -> tuple[in
     return normalized_strides
 
 
+def _validate_immutable_tensor_dtype(dtype: object) -> np.dtype:
+    """Return a non-object, non-subarray dtype with stable tensor metadata."""
+    normalized_dtype = np.dtype(dtype)
+    if normalized_dtype.subdtype is not None:
+        raise TypeError("top-level subarray dtypes are not supported by ImmutableTensor")
+    if normalized_dtype.hasobject:
+        raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
+    return normalized_dtype
+
+
 class _ImmutableTensorFlags:
     """The immutable subset of ndarray flags exposed by :class:`ImmutableTensor`."""
 
@@ -125,9 +211,7 @@ class ImmutableTensor:
         dtype: np.dtype,
         strides: tuple[int, ...],
     ) -> None:
-        dtype = np.dtype(dtype)
-        if dtype.hasobject:
-            raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
+        dtype = _validate_immutable_tensor_dtype(dtype)
         normalized_shape = _normalize_tensor_shape(shape)
         expected_strides, expected_nbytes = _derive_c_tensor_layout(
             normalized_shape, dtype.itemsize
@@ -156,8 +240,7 @@ class ImmutableTensor:
         """Copy ``source`` into C-contiguous immutable bytes."""
         if not isinstance(source, np.ndarray):
             raise TypeError("source must be a NumPy array")
-        if np.dtype(source.dtype).hasobject:
-            raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
+        _validate_immutable_tensor_dtype(source.dtype)
         contiguous = np.array(source, copy=True, order="C")
         backing = contiguous.tobytes(order="C")
         return cls(backing, contiguous.shape, contiguous.dtype, contiguous.strides)
@@ -296,24 +379,7 @@ class ModelInputSpec:
                 self.padding_value, Real
             ):
                 raise TypeError("padding_value must be a real number for a floating-point dtype")
-            raw_value = np.asarray(self.padding_value)
-            comparison_dtype = np.result_type(raw_value.dtype, dtype)
-            try:
-                candidate = np.asarray(self.padding_value, dtype=comparison_dtype)[()]
-            except (OverflowError, TypeError, ValueError) as error:
-                raise ValueError("padding_value is outside the dtype range") from error
-            if not np.isfinite(candidate):
-                raise ValueError("padding_value must be finite and within the dtype range")
-            limits = np.finfo(dtype)
-            if candidate < np.asarray(limits.min, dtype=comparison_dtype)[()] or candidate > np.asarray(
-                limits.max, dtype=comparison_dtype
-            )[()]:
-                raise ValueError("padding_value is outside the dtype range")
-            with np.errstate(over="ignore", invalid="ignore"):
-                padding_value = np.asarray(self.padding_value, dtype=dtype)[()]
-            if not np.isfinite(padding_value):
-                raise ValueError("padding_value must be finite and within the dtype range")
-            padding_value = dtype.type(padding_value).item()
+            padding_value = _validate_exact_floating_padding_value(self.padding_value, dtype)
         object.__setattr__(self, "dtype", dtype)
         object.__setattr__(self, "padding_value", padding_value)
 
@@ -354,8 +420,8 @@ class PreprocessTransform:
             raise ValueError("scale must be finite and positive")
         object.__setattr__(self, "scale", scale)
 
-        scaled_width = _round_scaled_dimension(self.source_width, scale)
-        scaled_height = _round_scaled_dimension(self.source_height, scale)
+        scaled_width = _round_scaled_dimension(self.source_width, scale, "width")
+        scaled_height = _round_scaled_dimension(self.source_height, scale, "height")
         if scaled_width < 1 or scaled_height < 1:
             raise ValueError("scaled dimensions must round to at least 1")
         if scaled_width + self.pad_left + self.pad_right != self.model_width:
@@ -371,12 +437,12 @@ class PreprocessTransform:
     @property
     def scaled_width(self) -> int:
         """Width after applying the documented nearest, half-up rounding rule."""
-        return _round_scaled_dimension(self.source_width, self.scale)
+        return _round_scaled_dimension(self.source_width, self.scale, "width")
 
     @property
     def scaled_height(self) -> int:
         """Height after applying the documented nearest, half-up rounding rule."""
-        return _round_scaled_dimension(self.source_height, self.scale)
+        return _round_scaled_dimension(self.source_height, self.scale, "height")
 
 
 @dataclass(frozen=True, slots=True)

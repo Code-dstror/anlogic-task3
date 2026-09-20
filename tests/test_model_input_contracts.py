@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import gc
+from fractions import Fraction
+import sys
 from sys import maxsize
 import unittest
 
@@ -128,6 +130,21 @@ class ModelInputContractTests(unittest.TestCase):
         transform = PreprocessTransform(1, 1, 1, 1, 0.5, 0, 0, 0, 0)
         self.assertEqual((transform.scaled_width, transform.scaled_height), (1, 1))
 
+    def test_transform_normalizes_unroundable_scaled_dimensions_to_value_error(self) -> None:
+        cases = (
+            (2, 1, sys.float_info.max, "width"),
+            (1, 2, sys.float_info.max, "height"),
+            (10**10000, 1, 1.0, "width"),
+            (1, 10**10000, 1.0, "height"),
+        )
+        for source_width, source_height, scale, axis in cases:
+            with self.subTest(axis=axis, scale=scale), self.assertRaisesRegex(
+                ValueError, f"scaled {axis} must be finite and roundable"
+            ):
+                PreprocessTransform(
+                    source_width, source_height, 1, 1, scale, 0, 0, 0, 0
+                )
+
     def test_input_owns_contiguous_read_only_tensor_for_its_lifetime(self) -> None:
         spec = ModelInputSpec(width=640, height=640)
         source = np.zeros((1, 640, 1280, 3), dtype=np.uint8)[:, :, :640, :]
@@ -185,6 +202,31 @@ class ModelInputContractTests(unittest.TestCase):
     def test_immutable_tensor_constructor_enforces_object_dtype_invariant(self) -> None:
         with self.assertRaisesRegex(TypeError, "object-containing dtypes"):
             ImmutableTensor(b"\x00" * np.dtype(object).itemsize, (1,), np.dtype(object), (8,))
+
+    def test_immutable_tensor_rejects_top_level_subarray_dtypes(self) -> None:
+        subarray_dtypes = (
+            np.dtype((np.uint8, (2,))),
+            np.dtype((np.int16, (2, 3))),
+        )
+        for dtype in subarray_dtypes:
+            with self.subTest(dtype=dtype), self.assertRaisesRegex(
+                TypeError, "top-level subarray dtypes are not supported"
+            ):
+                ImmutableTensor(b"\x00" * dtype.itemsize, (1,), dtype, (dtype.itemsize,))
+
+        # NumPy normalizes an ndarray made with a subarray dtype into its
+        # scalar base dtype plus expanded shape. That normalized layout remains
+        # safe and accurately reflected by ImmutableTensor's public metadata.
+        source = np.empty((1,), dtype=np.dtype((np.uint8, (2,))))
+        source[0] = (1, 2)
+        self.assertEqual(source.dtype, np.dtype(np.uint8))
+        self.assertEqual(source.shape, (1, 2))
+        tensor = ImmutableTensor.from_array(source)
+        self.assertEqual(tensor.dtype, source.dtype)
+        self.assertEqual(tensor.shape, source.shape)
+        self.assertEqual(tensor.ndim, source.ndim)
+        self.assertEqual(tensor.size, source.size)
+        np.testing.assert_array_equal(tensor.to_numpy(), source)
 
     def test_immutable_tensor_uint8_round_trip_remains_supported(self) -> None:
         source = np.array([[1, 2], [3, 4]], dtype=np.uint8)
@@ -472,7 +514,13 @@ class ModelInputContractTests(unittest.TestCase):
                     ModelInputSpec(**({"width": 640, "height": 640} | {name: value}))
 
     def test_spec_validates_image_dtype_and_padding_value_range(self) -> None:
-        for dtype in (np.dtype("bool"), np.dtype("complex64"), np.dtype("O"), np.dtype("U8")):
+        for dtype in (
+            np.dtype("bool"),
+            np.dtype("complex64"),
+            np.dtype("O"),
+            np.dtype("U8"),
+            np.dtype((np.uint8, (2,))),
+        ):
             with self.subTest(dtype=dtype), self.assertRaises(ValueError):
                 ModelInputSpec(width=640, height=640, dtype=dtype)
         for value in (300, -1, 1.5, float("nan"), float("inf")):
@@ -503,6 +551,74 @@ class ModelInputContractTests(unittest.TestCase):
         for value in (65505, -65505, float("nan"), float("inf"), float("-inf")):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 ModelInputSpec(1, 1, dtype=np.float16, padding_value=value)
+
+    def test_floating_padding_must_be_exactly_representable_by_target_dtype(self) -> None:
+        # Decimal mathematical 0.1 is a float64 value here, not an already
+        # quantized float16/float32 scalar, so neither target can retain it exactly.
+        for dtype in (np.float16, np.float32):
+            with self.subTest(source="python float 0.1", dtype=dtype), self.assertRaisesRegex(
+                ValueError, "exactly representable"
+            ):
+                ModelInputSpec(1, 1, dtype=dtype, padding_value=0.1)
+            with self.subTest(source="np.float64(0.1)", dtype=dtype), self.assertRaisesRegex(
+                ValueError, "exactly representable"
+            ):
+                ModelInputSpec(1, 1, dtype=dtype, padding_value=np.float64(0.1))
+
+        # These values have already been quantized to the target binary format.
+        self.assertEqual(
+            ModelInputSpec(1, 1, dtype=np.float32, padding_value=np.float32(0.1)).padding_value,
+            np.float32(0.1),
+        )
+        self.assertEqual(
+            ModelInputSpec(1, 1, dtype=np.float16, padding_value=np.float16(0.1)).padding_value,
+            np.float16(0.1),
+        )
+
+        for dtype in (np.float16, np.float32):
+            limits = np.finfo(dtype)
+            accepted = (
+                0,
+                1,
+                1.5,
+                limits.min,
+                limits.max,
+                np.nextafter(limits.min, dtype(0)),
+                np.nextafter(limits.max, dtype(0)),
+            )
+            for value in accepted:
+                with self.subTest(dtype=dtype, accepted=value):
+                    ModelInputSpec(1, 1, dtype=dtype, padding_value=value)
+
+        for value in (65505, -65505, float("nan"), float("inf"), float("-inf")):
+            with self.subTest(float16_rejected=value), self.assertRaises(ValueError):
+                ModelInputSpec(1, 1, dtype=np.float16, padding_value=value)
+
+        for value in (0, 1, -2, np.int64(17), np.int64(-17)):
+            with self.subTest(exact_integer=value):
+                ModelInputSpec(1, 1, dtype=np.float64, padding_value=value)
+        with self.assertRaisesRegex(ValueError, "exactly representable"):
+            ModelInputSpec(1, 1, dtype=np.float64, padding_value=(1 << 53) + 1)
+
+    def test_floating_padding_uses_binary_values_and_rejects_unsupported_reals(self) -> None:
+        class FloatWithoutRatio(float):
+            # A float subclass cannot alter its stored binary64 value, but it
+            # can hide the instance method used by a naïve fallback.
+            as_integer_ratio = None
+
+        value = FloatWithoutRatio(0.1)
+        accepted = ModelInputSpec(1, 1, dtype=np.float64, padding_value=value)
+        self.assertEqual(accepted.padding_value, 0.1)
+        for dtype in (np.float16, np.float32):
+            with self.subTest(dtype=dtype), self.assertRaisesRegex(
+                ValueError, "exactly representable"
+            ):
+                ModelInputSpec(1, 1, dtype=dtype, padding_value=value)
+
+        # Third-party Real instances have no declared binary-scalar contract;
+        # reject them rather than approximating them through formatted text.
+        with self.assertRaisesRegex(TypeError, "Python or NumPy real scalar"):
+            ModelInputSpec(1, 1, dtype=np.float64, padding_value=Fraction(1, 2))
 
     def test_structured_transform_flows_from_model_input_to_detection_result(self) -> None:
         spec = ModelInputSpec(width=640, height=640)
