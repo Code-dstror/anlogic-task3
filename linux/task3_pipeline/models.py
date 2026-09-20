@@ -383,10 +383,13 @@ class PreprocessTransform:
 class ModelInput:
     """Owned, immutable tensor plus its complete source-frame association.
 
-    An ndarray input is copied into immutable ``bytes`` at this boundary. An
-    already-validated :class:`ImmutableTensor` is safe to share directly; this
-    instance holds a strong reference for the complete synchronous inference
-    call. Neither path exposes a mutable ndarray header.
+    An ndarray input, including an ndarray subclass, is copied into immutable
+    ``bytes`` at this boundary. Only an exact :class:`ImmutableTensor` may be
+    shared directly; this instance holds a strong reference for the complete
+    synchronous inference call. ImmutableTensor subclasses are rejected before
+    their overridable members are read, because they cannot inherit the base
+    class's immutability guarantee. Neither accepted path exposes a mutable
+    ndarray header.
     """
     metadata: "FrameMetadata"
     data: np.ndarray | ImmutableTensor
@@ -396,24 +399,27 @@ class ModelInput:
     def __post_init__(self) -> None:
         if not isinstance(self.metadata, FrameMetadata):
             raise TypeError("metadata must be FrameMetadata")
-        if not isinstance(self.data, (np.ndarray, ImmutableTensor)):
-            raise TypeError("data must be a NumPy array or ImmutableTensor")
         if not isinstance(self.spec, ModelInputSpec):
             raise TypeError("spec must be ModelInputSpec")
         if not isinstance(self.transform, PreprocessTransform):
             raise TypeError("transform must be PreprocessTransform")
+        data_type = type(self.data)
+        if data_type is ImmutableTensor:
+            tensor = self.data
+        elif issubclass(data_type, ImmutableTensor):
+            raise TypeError("ImmutableTensor subclasses are not supported by ModelInput")
+        elif isinstance(self.data, np.ndarray):
+            tensor = ImmutableTensor.from_array(self.data)
+        else:
+            raise TypeError("data must be a NumPy array or an exact ImmutableTensor")
         if self.spec.batch_size != 1:
             raise ValueError("ModelInput supports only batch_size=1")
         if self.transform.model_width != self.spec.width or self.transform.model_height != self.spec.height:
             raise ValueError("transform target dimensions must match spec")
-        if self.data.shape != self.spec.shape:
+        if tensor.shape != self.spec.shape:
             raise ValueError("data shape must match spec.shape")
-        if self.data.dtype != self.spec.dtype:
+        if tensor.dtype != self.spec.dtype:
             raise ValueError("data dtype must match spec.dtype")
-        if isinstance(self.data, np.ndarray):
-            tensor = ImmutableTensor.from_array(self.data)
-        else:
-            tensor = self.data
         object.__setattr__(self, "data", tensor)
 
 

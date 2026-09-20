@@ -265,6 +265,61 @@ class ModelInputContractTests(unittest.TestCase):
         gc.collect()
         np.testing.assert_array_equal(result.data.to_numpy(), np.array([[[[1, 2, 3]]]], dtype=np.uint8))
 
+    def test_input_rejects_immutable_tensor_subclasses_before_reading_them(self) -> None:
+        spec = ModelInputSpec(width=1, height=1)
+        transform = PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+
+        class PlainSubclass(ImmutableTensor):
+            pass
+
+        class WritableToNumpySubclass(ImmutableTensor):
+            def to_numpy(self, *, copy: bool = False) -> np.ndarray:
+                return np.zeros((1, 1, 1, 3), dtype=np.uint8)
+
+        class ExplosivePropertySubclass(ImmutableTensor):
+            @property
+            def shape(self) -> tuple[int, ...]:
+                raise AssertionError("ModelInput must not read subclass.shape")
+
+            @property
+            def dtype(self) -> np.dtype:
+                raise AssertionError("ModelInput must not read subclass.dtype")
+
+            @property
+            def strides(self) -> tuple[int, ...]:
+                raise AssertionError("ModelInput must not read subclass.strides")
+
+            @property
+            def flags(self) -> object:
+                raise AssertionError("ModelInput must not read subclass.flags")
+
+            def to_numpy(self, *, copy: bool = False) -> np.ndarray:
+                raise AssertionError("ModelInput must not call subclass.to_numpy")
+
+        for subclass in (PlainSubclass, WritableToNumpySubclass, ExplosivePropertySubclass):
+            with self.subTest(subclass=subclass.__name__), self.assertRaisesRegex(
+                TypeError, "ImmutableTensor subclasses are not supported"
+            ):
+                ModelInput(
+                    self._metadata(),
+                    subclass(b"\x01\x02\x03", spec.shape, spec.dtype, (3, 3, 3, 1)),
+                    spec,
+                    transform,
+                )
+
+    def test_input_snapshots_ndarray_subclasses_to_an_exact_immutable_tensor(self) -> None:
+        class ArraySubclass(np.ndarray):
+            pass
+
+        spec = ModelInputSpec(width=1, height=1)
+        transform = PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        source = np.array([[[[1, 2, 3]]]], dtype=np.uint8).view(ArraySubclass)
+        result = ModelInput(self._metadata(), source, spec, transform)
+        source[:] = 99
+
+        self.assertIs(type(result.data), ImmutableTensor)
+        np.testing.assert_array_equal(result.data.to_numpy(), np.array([[[[1, 2, 3]]]], dtype=np.uint8))
+
     def test_input_validates_immutable_tensor_against_its_spec(self) -> None:
         spec = ModelInputSpec(width=1, height=1)
         transform = PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
@@ -289,7 +344,7 @@ class ModelInputContractTests(unittest.TestCase):
                 spec,
                 transform,
             )
-        with self.assertRaisesRegex(TypeError, "NumPy array or ImmutableTensor"):
+        with self.assertRaisesRegex(TypeError, "NumPy array or an exact ImmutableTensor"):
             ModelInput(self._metadata(), b"\x00" * 3, spec, transform)  # type: ignore[arg-type]
         with self.assertRaisesRegex(ValueError, "dense C-contiguous"):
             ImmutableTensor(b"\x00" * 3, spec.shape, spec.dtype, (0, 0, 0, 1))
