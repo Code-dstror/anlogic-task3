@@ -268,6 +268,45 @@ class ModelInputContractTests(unittest.TestCase):
         self.assertEqual(result.metadata.timestamp_domain, "sensor_clock")
         self.assertEqual(result.metadata.wire_sequence, 303)
 
+    def test_input_rejects_contract_subclasses_before_reading_them(self) -> None:
+        class ExplosiveMetadata(FrameMetadata):
+            _reject_member_reads = False
+
+            def __getattribute__(self, name: str) -> object:
+                if type(self)._reject_member_reads and name in {"ingest_id", "source_name"}:
+                    raise AssertionError(f"ModelInput must not read subclass.metadata.{name}")
+                return super().__getattribute__(name)
+
+        class ExplosiveTransform(PreprocessTransform):
+            _reject_member_reads = False
+
+            def __getattribute__(self, name: str) -> object:
+                if type(self)._reject_member_reads and name in {
+                    "source_width", "source_height", "model_width", "model_height", "scale",
+                    "pad_left", "pad_top", "pad_right", "pad_bottom",
+                }:
+                    raise AssertionError(f"ModelInput must not read subclass.transform.{name}")
+                return super().__getattribute__(name)
+
+        spec = ModelInputSpec(width=1, height=1)
+        tensor = ImmutableTensor(b"\x01\x02\x03", spec.shape, spec.dtype, (3, 3, 3, 1))
+        exact_metadata = FrameMetadata(0, "test", 0, 0)
+        exact_transform = PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        self.assertIs(ModelInput(exact_metadata, tensor, spec, exact_transform).transform, exact_transform)
+
+        metadata = ExplosiveMetadata(0, "test", 0, 0)
+        transform = ExplosiveTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        ExplosiveMetadata._reject_member_reads = True
+        ExplosiveTransform._reject_member_reads = True
+        try:
+            with self.assertRaisesRegex(TypeError, "metadata must be an exact FrameMetadata"):
+                ModelInput(metadata, tensor, spec, exact_transform)
+            with self.assertRaisesRegex(TypeError, "transform must be an exact PreprocessTransform"):
+                ModelInput(exact_metadata, tensor, spec, transform)
+        finally:
+            ExplosiveMetadata._reject_member_reads = False
+            ExplosiveTransform._reject_member_reads = False
+
     def test_input_accepts_and_retains_a_valid_immutable_tensor(self) -> None:
         spec = ModelInputSpec(width=1, height=1)
         tensor = ImmutableTensor(b"\x01\x02\x03", spec.shape, spec.dtype, (3, 3, 3, 1))
@@ -509,8 +548,30 @@ class ModelInputContractTests(unittest.TestCase):
                     expected,
                 )
         converted = DetectionResult(0, 1, 2, preprocess_transform=valid_mapping)
-        self.assertIsInstance(converted.preprocess_transform, PreprocessTransform)
+        self.assertIs(type(converted.preprocess_transform), PreprocessTransform)
         self.assertEqual(converted.preprocess_transform, transform)
+        valid_mapping["model_width"] = 1
+        self.assertEqual(converted.preprocess_transform.model_width, 640)
+
+    def test_detection_result_rejects_transform_subclasses_before_reading_them(self) -> None:
+        class ExplosiveTransform(PreprocessTransform):
+            _reject_member_reads = False
+
+            def __getattribute__(self, name: str) -> object:
+                if type(self)._reject_member_reads and name in {
+                    "source_width", "source_height", "model_width", "model_height", "scale",
+                    "pad_left", "pad_top", "pad_right", "pad_bottom",
+                }:
+                    raise AssertionError(f"DetectionResult must not read subclass.transform.{name}")
+                return super().__getattribute__(name)
+
+        transform = ExplosiveTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        ExplosiveTransform._reject_member_reads = True
+        try:
+            with self.assertRaisesRegex(TypeError, "PreprocessTransform subclasses are not supported"):
+                DetectionResult(0, 1, 2, preprocess_transform=transform)
+        finally:
+            ExplosiveTransform._reject_member_reads = False
 
     def test_detection_result_rejects_invalid_transform_representations(self) -> None:
         valid_mapping = {

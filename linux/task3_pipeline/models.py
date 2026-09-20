@@ -389,7 +389,9 @@ class ModelInput:
     synchronous inference call. ImmutableTensor subclasses are rejected before
     their overridable members are read, because they cannot inherit the base
     class's immutability guarantee. Neither accepted path exposes a mutable
-    ndarray header. The specification must be an exact
+    ndarray header. Metadata, transform, and specification inputs must be
+    their exact base types; subclasses are rejected before their overridable
+    members are read. The specification must be an exact
     :class:`ModelInputSpec`; subclasses are rejected before their overridable
     shape or dimension members are read.
     """
@@ -399,12 +401,12 @@ class ModelInput:
     transform: PreprocessTransform
 
     def __post_init__(self) -> None:
-        if not isinstance(self.metadata, FrameMetadata):
-            raise TypeError("metadata must be FrameMetadata")
+        if type(self.metadata) is not FrameMetadata:
+            raise TypeError("metadata must be an exact FrameMetadata")
         if type(self.spec) is not ModelInputSpec:
             raise TypeError("spec must be an exact ModelInputSpec")
-        if not isinstance(self.transform, PreprocessTransform):
-            raise TypeError("transform must be PreprocessTransform")
+        if type(self.transform) is not PreprocessTransform:
+            raise TypeError("transform must be an exact PreprocessTransform")
         data_type = type(self.data)
         if data_type is ImmutableTensor:
             tensor = self.data
@@ -545,10 +547,11 @@ class Detection:
 class DetectionResult:
     """Inference result associated with a local ingest and optional wire ID.
 
-    ``preprocess_transform`` accepts ``None``, a validated
+    ``preprocess_transform`` accepts ``None``, an exact validated
     :class:`PreprocessTransform`, an empty mapping (normalized to ``None``),
     or a mapping containing exactly the fields of ``PreprocessTransform``.
-    The stored value is always ``None`` or a validated structured transform.
+    Mapping inputs are snapshotted before validation. The stored value is
+    always ``None`` or an exact validated structured transform.
     """
 
     ingest_id: int
@@ -596,15 +599,20 @@ _PREPROCESS_TRANSFORM_FIELDS = (
 def _normalize_preprocess_transform(
     value: PreprocessTransform | Mapping[str, Any] | None,
 ) -> PreprocessTransform | None:
-    """Normalize the supported legacy mapping representation at the boundary."""
-    if value is None or isinstance(value, PreprocessTransform):
+    """Normalize a transform without retaining mutable subclass or mapping state."""
+    if value is None:
         return value
+    if type(value) is PreprocessTransform:
+        return value
+    if isinstance(value, PreprocessTransform):
+        raise TypeError("PreprocessTransform subclasses are not supported by DetectionResult")
     if not isinstance(value, Mapping):
         raise TypeError("preprocess_transform must be None, PreprocessTransform, or a mapping")
-    if not value:
+    mapping = dict(value)
+    if not mapping:
         return None
 
-    actual_fields = set(value)
+    actual_fields = set(mapping)
     expected_fields = set(_PREPROCESS_TRANSFORM_FIELDS)
     unknown_fields = actual_fields - expected_fields
     if unknown_fields:
@@ -612,7 +620,7 @@ def _normalize_preprocess_transform(
     missing_fields = expected_fields - actual_fields
     if missing_fields:
         raise ValueError(f"preprocess_transform is missing fields: {sorted(missing_fields)!r}")
-    return PreprocessTransform(**{name: value[name] for name in _PREPROCESS_TRANSFORM_FIELDS})
+    return PreprocessTransform(**{name: mapping[name] for name in _PREPROCESS_TRANSFORM_FIELDS})
 
 
 @dataclass(frozen=True, slots=True)
