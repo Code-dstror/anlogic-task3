@@ -88,6 +88,13 @@ class ModelInputContractTests(unittest.TestCase):
                 with self.subTest(name=name, value=value), self.assertRaises(TypeError):
                     PreprocessTransform(**(valid | {name: value}))
 
+    def test_transform_rejects_zero_source_dimensions_directly(self) -> None:
+        for source_width, source_height, field_name in ((0, 0, "source_width"), (0, 1, "source_width"), (1, 0, "source_height")):
+            with self.subTest(source_width=source_width, source_height=source_height), self.assertRaisesRegex(
+                ValueError, f"{field_name} must be positive"
+            ):
+                PreprocessTransform(source_width, source_height, 1, 1, 1.0, 0, 0, 0, 0)
+
     def test_transform_uses_nearest_half_up_scaled_dimension_rounding(self) -> None:
         transform = PreprocessTransform(3, 2, 2, 1, 0.5, 0, 0, 0, 0)
 
@@ -175,6 +182,23 @@ class ModelInputContractTests(unittest.TestCase):
         tensor = ImmutableTensor.from_array(source)
         np.testing.assert_array_equal(tensor.to_numpy(), source)
 
+    def test_immutable_tensor_freezes_mutable_backing_buffers(self) -> None:
+        backing = bytearray([1, 2, 3, 4])
+        tensor = ImmutableTensor(backing, (4,), np.uint8, (1,))
+        backing[0] = 99
+        self.assertEqual(tensor[0], 1)
+        view_backing = bytearray([5, 6, 7, 8])
+        viewed = ImmutableTensor(memoryview(view_backing), (4,), np.uint8, (1,))
+        view_backing[0] = 99
+        self.assertEqual(viewed[0], 5)
+        readonly = tensor.to_numpy()
+        self.assertFalse(readonly.flags.writeable)
+        with self.assertRaises(ValueError):
+            readonly.setflags(write=True)
+        copied = tensor.to_numpy(copy=True)
+        copied[0] = 42
+        self.assertEqual(tensor[0], 1)
+
     def test_immutable_tensor_fixed_width_structured_dtype_remains_supported(self) -> None:
         source = np.array([(1, 2), (3, 4)], dtype=np.dtype([("first", "u1"), ("second", "u2")]))
         tensor = ImmutableTensor.from_array(source)
@@ -244,12 +268,23 @@ class ModelInputContractTests(unittest.TestCase):
 
     def test_spec_validates_longdouble_padding_without_python_float_narrowing(self) -> None:
         large_value = np.longdouble("1e400")
-        longdouble_spec = ModelInputSpec(
-            width=640, height=640, dtype=np.longdouble, padding_value=large_value
-        )
-        self.assertEqual(longdouble_spec.padding_value, large_value)
-        with self.assertRaises(ValueError):
-            ModelInputSpec(width=640, height=640, dtype=np.float64, padding_value=large_value)
+        if np.isfinite(large_value):
+            longdouble_spec = ModelInputSpec(
+                width=640, height=640, dtype=np.longdouble, padding_value=large_value
+            )
+            self.assertEqual(longdouble_spec.padding_value, large_value)
+            if large_value > np.finfo(np.float64).max:
+                with self.assertRaises(ValueError):
+                    ModelInputSpec(width=640, height=640, dtype=np.float64, padding_value=large_value)
+        else:
+            with self.assertRaises(ValueError):
+                ModelInputSpec(width=640, height=640, dtype=np.longdouble, padding_value=large_value)
+
+    def test_float16_padding_range_is_checked_before_conversion(self) -> None:
+        self.assertEqual(ModelInputSpec(1, 1, dtype=np.float16, padding_value=65504).padding_value, 65504)
+        for value in (65505, -65505, float("nan"), float("inf"), float("-inf")):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                ModelInputSpec(1, 1, dtype=np.float16, padding_value=value)
 
     def test_structured_transform_flows_from_model_input_to_detection_result(self) -> None:
         spec = ModelInputSpec(width=640, height=640)

@@ -73,15 +73,22 @@ class ImmutableTensor:
 
     def __init__(
         self,
-        backing: bytes,
+        backing: object,
         shape: tuple[int, ...],
         dtype: np.dtype,
         strides: tuple[int, ...],
     ) -> None:
+        if isinstance(backing, bytes):
+            frozen_backing = backing
+        else:
+            try:
+                frozen_backing = memoryview(backing).tobytes()
+            except TypeError as error:
+                raise TypeError("backing must be a bytes-like buffer") from error
         dtype = np.dtype(dtype)
         if dtype.hasobject:
             raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
-        object.__setattr__(self, "_backing", backing)
+        object.__setattr__(self, "_backing", frozen_backing)
         object.__setattr__(self, "_shape", shape)
         object.__setattr__(self, "_dtype", dtype)
         object.__setattr__(self, "_strides", strides)
@@ -233,11 +240,21 @@ class ModelInputSpec:
                 self.padding_value, Real
             ):
                 raise TypeError("padding_value must be a real number for a floating-point dtype")
+            raw_value = np.asarray(self.padding_value)
+            comparison_dtype = np.result_type(raw_value.dtype, dtype)
             try:
-                with np.errstate(over="ignore", invalid="ignore"):
-                    padding_value = np.asarray(self.padding_value, dtype=dtype)[()]
+                candidate = np.asarray(self.padding_value, dtype=comparison_dtype)[()]
             except (OverflowError, TypeError, ValueError) as error:
                 raise ValueError("padding_value is outside the dtype range") from error
+            if not np.isfinite(candidate):
+                raise ValueError("padding_value must be finite and within the dtype range")
+            limits = np.finfo(dtype)
+            if candidate < np.asarray(limits.min, dtype=comparison_dtype)[()] or candidate > np.asarray(
+                limits.max, dtype=comparison_dtype
+            )[()]:
+                raise ValueError("padding_value is outside the dtype range")
+            with np.errstate(over="ignore", invalid="ignore"):
+                padding_value = np.asarray(self.padding_value, dtype=dtype)[()]
             if not np.isfinite(padding_value):
                 raise ValueError("padding_value must be finite and within the dtype range")
             padding_value = dtype.type(padding_value).item()
