@@ -12,6 +12,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from math import floor, isfinite
 from numbers import Integral, Real
+from sys import maxsize
 from threading import Lock
 from types import MappingProxyType
 from typing import Any, Mapping
@@ -42,6 +43,52 @@ def _require_non_negative_integer(value: object, name: str) -> int:
 def _round_scaled_dimension(original_dimension: int, scale: float) -> int:
     """Round a scaled size to nearest integer, with exact .5 values rounded up."""
     return floor(original_dimension * scale + 0.5)
+
+
+def _normalize_tensor_shape(shape: object) -> tuple[int, ...]:
+    """Validate the non-empty dimensions used by an immutable tensor."""
+    try:
+        dimensions = tuple(shape)  # type: ignore[arg-type]
+    except TypeError as error:
+        raise TypeError("shape must be a sequence of positive integers") from error
+    normalized: list[int] = []
+    for index, dimension in enumerate(dimensions):
+        normalized.append(_require_positive_integer(dimension, f"shape[{index}]"))
+    return tuple(normalized)
+
+
+def _derive_c_tensor_layout(shape: tuple[int, ...], itemsize: int) -> tuple[tuple[int, ...], int]:
+    """Derive C strides and exact bytes without allocating a tensor buffer."""
+    if itemsize <= 0:
+        raise ValueError("dtype must have a positive itemsize")
+
+    stride = itemsize
+    strides = [0] * len(shape)
+    for index in range(len(shape) - 1, -1, -1):
+        strides[index] = stride
+        if shape[index] > maxsize // stride:
+            raise ValueError("tensor shape is too large")
+        stride *= shape[index]
+    return tuple(strides), stride
+
+
+def _normalize_c_strides(strides: object, expected: tuple[int, ...]) -> tuple[int, ...]:
+    """Accept only the exact dense C-contiguous strides for a tensor."""
+    try:
+        supplied = tuple(strides)  # type: ignore[arg-type]
+    except TypeError as error:
+        raise TypeError("strides must be a sequence of integers") from error
+    if len(supplied) != len(expected):
+        raise ValueError("strides must have one entry per shape dimension")
+    normalized: list[int] = []
+    for index, stride in enumerate(supplied):
+        if isinstance(stride, (bool, np.bool_)) or not isinstance(stride, Integral):
+            raise TypeError(f"strides[{index}] must be an integer")
+        normalized.append(int(stride))
+    normalized_strides = tuple(normalized)
+    if normalized_strides != expected:
+        raise ValueError("strides must be the dense C-contiguous strides for shape and dtype")
+    return normalized_strides
 
 
 class _ImmutableTensorFlags:
@@ -78,6 +125,14 @@ class ImmutableTensor:
         dtype: np.dtype,
         strides: tuple[int, ...],
     ) -> None:
+        dtype = np.dtype(dtype)
+        if dtype.hasobject:
+            raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
+        normalized_shape = _normalize_tensor_shape(shape)
+        expected_strides, expected_nbytes = _derive_c_tensor_layout(
+            normalized_shape, dtype.itemsize
+        )
+        normalized_strides = _normalize_c_strides(strides, expected_strides)
         if isinstance(backing, bytes):
             frozen_backing = backing
         else:
@@ -85,13 +140,12 @@ class ImmutableTensor:
                 frozen_backing = memoryview(backing).tobytes()
             except TypeError as error:
                 raise TypeError("backing must be a bytes-like buffer") from error
-        dtype = np.dtype(dtype)
-        if dtype.hasobject:
-            raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
+        if len(frozen_backing) != expected_nbytes:
+            raise ValueError("backing length must exactly match the tensor layout")
         object.__setattr__(self, "_backing", frozen_backing)
-        object.__setattr__(self, "_shape", shape)
+        object.__setattr__(self, "_shape", normalized_shape)
         object.__setattr__(self, "_dtype", dtype)
-        object.__setattr__(self, "_strides", strides)
+        object.__setattr__(self, "_strides", normalized_strides)
         object.__setattr__(self, "_flags", _ImmutableTensorFlags())
 
     def __setattr__(self, name: str, value: object) -> None:
@@ -100,6 +154,8 @@ class ImmutableTensor:
     @classmethod
     def from_array(cls, source: np.ndarray) -> "ImmutableTensor":
         """Copy ``source`` into C-contiguous immutable bytes."""
+        if not isinstance(source, np.ndarray):
+            raise TypeError("source must be a NumPy array")
         if np.dtype(source.dtype).hasobject:
             raise TypeError("object-containing dtypes are not supported by ImmutableTensor")
         contiguous = np.array(source, copy=True, order="C")
@@ -215,8 +271,8 @@ class ModelInputSpec:
             object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
         if self.batch_size != 1:
             raise ValueError("only batch_size=1 is supported by the ModelInput contract")
-        if not self.color_format:
-            raise ValueError("color_format must not be empty")
+        if not isinstance(self.color_format, str) or not self.color_format.strip():
+            raise ValueError("color_format must be a non-empty string")
         if self.layout not in {"NHWC", "NCHW"}:
             raise ValueError("layout must be NHWC or NCHW")
         try:
@@ -327,9 +383,10 @@ class PreprocessTransform:
 class ModelInput:
     """Owned, immutable tensor plus its complete source-frame association.
 
-    Construction copies the input into immutable ``bytes`` and exposes an
-    :class:`ImmutableTensor`, rather than a mutable ndarray header. Its bytes
-    backing remains referenced for the complete synchronous inference call.
+    An ndarray input is copied into immutable ``bytes`` at this boundary. An
+    already-validated :class:`ImmutableTensor` is safe to share directly; this
+    instance holds a strong reference for the complete synchronous inference
+    call. Neither path exposes a mutable ndarray header.
     """
     metadata: "FrameMetadata"
     data: np.ndarray | ImmutableTensor
@@ -339,8 +396,8 @@ class ModelInput:
     def __post_init__(self) -> None:
         if not isinstance(self.metadata, FrameMetadata):
             raise TypeError("metadata must be FrameMetadata")
-        if not isinstance(self.data, np.ndarray):
-            raise TypeError("data must be a NumPy array")
+        if not isinstance(self.data, (np.ndarray, ImmutableTensor)):
+            raise TypeError("data must be a NumPy array or ImmutableTensor")
         if not isinstance(self.spec, ModelInputSpec):
             raise TypeError("spec must be ModelInputSpec")
         if not isinstance(self.transform, PreprocessTransform):
@@ -353,7 +410,11 @@ class ModelInput:
             raise ValueError("data shape must match spec.shape")
         if self.data.dtype != self.spec.dtype:
             raise ValueError("data dtype must match spec.dtype")
-        object.__setattr__(self, "data", ImmutableTensor.from_array(self.data))
+        if isinstance(self.data, np.ndarray):
+            tensor = ImmutableTensor.from_array(self.data)
+        else:
+            tensor = self.data
+        object.__setattr__(self, "data", tensor)
 
 
 @dataclass(frozen=True, slots=True)

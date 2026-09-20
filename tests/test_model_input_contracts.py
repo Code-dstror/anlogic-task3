@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import gc
+from sys import maxsize
 import unittest
 
 import numpy as np
@@ -30,6 +31,14 @@ class ModelInputContractTests(unittest.TestCase):
         alternate = ModelInputSpec(width=320, height=512, padding_value=114)
         self.assertEqual(alternate.shape, (1, 512, 320, 3))
         self.assertEqual(alternate.padding_value, 114)
+
+    def test_spec_requires_a_non_empty_string_color_format(self) -> None:
+        self.assertEqual(ModelInputSpec(1, 1, color_format="RGB").color_format, "RGB")
+        for value in ("", "   ", 3, None, True):
+            with self.subTest(value=value), self.assertRaisesRegex(
+                ValueError, "color_format must be a non-empty string"
+            ):
+                ModelInputSpec(1, 1, color_format=value)  # type: ignore[arg-type]
 
     def test_transform_records_source_target_scale_and_each_padding_side(self) -> None:
         transform = PreprocessTransform(
@@ -182,6 +191,30 @@ class ModelInputContractTests(unittest.TestCase):
         tensor = ImmutableTensor.from_array(source)
         np.testing.assert_array_equal(tensor.to_numpy(), source)
 
+    def test_immutable_tensor_requires_an_exact_dense_c_layout(self) -> None:
+        with self.assertRaisesRegex(ValueError, "dense C-contiguous"):
+            ImmutableTensor(b"\x01\x02", (2,), np.uint8, (0,))
+        with self.assertRaisesRegex(ValueError, "dense C-contiguous"):
+            ImmutableTensor(b"\x01\x02\x03\x04", (2, 2), np.uint8, (3, 1))
+        with self.assertRaisesRegex(ValueError, "dense C-contiguous"):
+            ImmutableTensor(b"\x01\x02", (2,), np.uint8, (-1,))
+        with self.assertRaisesRegex(ValueError, "backing length"):
+            ImmutableTensor(b"\x01", (2,), np.uint8, (1,))
+        with self.assertRaisesRegex(ValueError, "backing length"):
+            ImmutableTensor(b"\x01\x02\x03", (2,), np.uint8, (1,))
+
+        tensor = ImmutableTensor(b"\x01\x02\x03\x04", (2, 2), np.uint8, (2, 1))
+        self.assertEqual(tensor.strides, (2, 1))
+        self.assertTrue(tensor.flags.c_contiguous)
+        self.assertTrue(tensor.to_numpy().flags.c_contiguous)
+
+    def test_immutable_tensor_rejects_invalid_shape_dimensions(self) -> None:
+        for shape in ((0,), (-1,), (True,), (1.0,), ("1",)):
+            with self.subTest(shape=shape), self.assertRaises((TypeError, ValueError)):
+                ImmutableTensor(b"\x01", shape, np.uint8, (1,))  # type: ignore[arg-type]
+        with self.assertRaisesRegex(ValueError, "tensor shape is too large"):
+            ImmutableTensor(b"", (maxsize, 2), np.uint8, (2, 1))
+
     def test_immutable_tensor_freezes_mutable_backing_buffers(self) -> None:
         backing = bytearray([1, 2, 3, 4])
         tensor = ImmutableTensor(backing, (4,), np.uint8, (1,))
@@ -220,6 +253,46 @@ class ModelInputContractTests(unittest.TestCase):
         self.assertEqual(result.metadata.source_timestamp, 202)
         self.assertEqual(result.metadata.timestamp_domain, "sensor_clock")
         self.assertEqual(result.metadata.wire_sequence, 303)
+
+    def test_input_accepts_and_retains_a_valid_immutable_tensor(self) -> None:
+        spec = ModelInputSpec(width=1, height=1)
+        tensor = ImmutableTensor(b"\x01\x02\x03", spec.shape, spec.dtype, (3, 3, 3, 1))
+        result = ModelInput(
+            self._metadata(), tensor, spec, PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        )
+        self.assertIs(result.data, tensor)
+        del tensor
+        gc.collect()
+        np.testing.assert_array_equal(result.data.to_numpy(), np.array([[[[1, 2, 3]]]], dtype=np.uint8))
+
+    def test_input_validates_immutable_tensor_against_its_spec(self) -> None:
+        spec = ModelInputSpec(width=1, height=1)
+        transform = PreprocessTransform(1, 1, 1, 1, 1.0, 0, 0, 0, 0)
+        with self.assertRaisesRegex(ValueError, "data shape"):
+            ModelInput(
+                self._metadata(),
+                ImmutableTensor(b"\x00" * 6, (1, 1, 2, 3), np.uint8, (6, 6, 3, 1)),
+                spec,
+                transform,
+            )
+        with self.assertRaisesRegex(ValueError, "data dtype"):
+            ModelInput(
+                self._metadata(),
+                ImmutableTensor(b"\x00" * 12, spec.shape, np.float32, (12, 12, 12, 4)),
+                spec,
+                transform,
+            )
+        with self.assertRaisesRegex(ValueError, "data shape"):
+            ModelInput(
+                self._metadata(),
+                ImmutableTensor(b"\x00" * 6, (2, 1, 1, 3), np.uint8, (3, 3, 3, 1)),
+                spec,
+                transform,
+            )
+        with self.assertRaisesRegex(TypeError, "NumPy array or ImmutableTensor"):
+            ModelInput(self._metadata(), b"\x00" * 3, spec, transform)  # type: ignore[arg-type]
+        with self.assertRaisesRegex(ValueError, "dense C-contiguous"):
+            ImmutableTensor(b"\x00" * 3, spec.shape, spec.dtype, (0, 0, 0, 1))
 
     def test_input_rejects_wrong_shape_dtype_or_target(self) -> None:
         spec = ModelInputSpec(width=640, height=640)
