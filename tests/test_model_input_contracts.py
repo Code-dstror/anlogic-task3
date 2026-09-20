@@ -7,6 +7,7 @@ import numpy as np
 
 from linux.task3_pipeline import (
     DetectionResult,
+    ImmutableTensor,
     InferenceBackend,
     ModelInput,
     ModelInputSpec,
@@ -99,6 +100,18 @@ class ModelInputContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             PreprocessTransform(1280, 720, 640, 641, 0.5, 0, 140, 0, 140)
 
+    def test_transform_rejects_scaled_dimensions_that_round_to_zero(self) -> None:
+        for source_width, source_height in ((1, 1), (1, 10), (10, 1)):
+            with self.subTest(source_width=source_width, source_height=source_height):
+                with self.assertRaisesRegex(ValueError, "round to at least 1"):
+                    PreprocessTransform(
+                        source_width, source_height, 1, 1, 0.01, 0, 0, 0, 0
+                    )
+
+    def test_transform_accepts_smallest_one_by_one_resize(self) -> None:
+        transform = PreprocessTransform(1, 1, 1, 1, 0.5, 0, 0, 0, 0)
+        self.assertEqual((transform.scaled_width, transform.scaled_height), (1, 1))
+
     def test_input_owns_contiguous_read_only_tensor_for_its_lifetime(self) -> None:
         spec = ModelInputSpec(width=640, height=640)
         source = np.zeros((1, 640, 1280, 3), dtype=np.uint8)[:, :, :640, :]
@@ -112,14 +125,31 @@ class ModelInputContractTests(unittest.TestCase):
         gc.collect()
 
         self.assertEqual(result.data[0, 0, 0, 0], 0)
+        self.assertIsInstance(result.data, ImmutableTensor)
         self.assertTrue(result.data.flags.c_contiguous)
         self.assertFalse(result.data.flags.writeable)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             result.data[0, 0, 0, 0] = 1
-        with self.assertRaises(ValueError):
+        with self.assertRaises(AttributeError):
             result.data.flags.writeable = True
         with self.assertRaises(ValueError):
             result.data.setflags(write=True)
+        for attribute, value in (
+            ("shape", (1, 640 * 640 * 3)),
+            ("dtype", np.dtype("float32")),
+            ("strides", (1, 1, 1, 1)),
+        ):
+            with self.subTest(attribute=attribute), self.assertRaises(AttributeError):
+                setattr(result.data, attribute, value)
+
+        temporary = result.data.to_numpy()
+        temporary.shape = (1, -1)
+        self.assertEqual(result.data.shape, spec.shape)
+        self.assertEqual(result.data.dtype, spec.dtype)
+        self.assertEqual(result.data.strides, (640 * 640 * 3, 640 * 3, 3, 1))
+        mutable_copy = result.data.to_numpy(copy=True)
+        mutable_copy[0, 0] = 42
+        self.assertEqual(result.data[0, 0, 0, 0], 0)
 
     def test_input_preserves_complete_metadata_object(self) -> None:
         metadata = self._metadata()
@@ -183,6 +213,15 @@ class ModelInputContractTests(unittest.TestCase):
         floating = ModelInputSpec(width=640, height=640, dtype=np.float32, padding_value=1.5)
         self.assertEqual(floating.padding_value, 1.5)
 
+    def test_spec_validates_longdouble_padding_without_python_float_narrowing(self) -> None:
+        large_value = np.longdouble("1e400")
+        longdouble_spec = ModelInputSpec(
+            width=640, height=640, dtype=np.longdouble, padding_value=large_value
+        )
+        self.assertEqual(longdouble_spec.padding_value, large_value)
+        with self.assertRaises(ValueError):
+            ModelInputSpec(width=640, height=640, dtype=np.float64, padding_value=large_value)
+
     def test_structured_transform_flows_from_model_input_to_detection_result(self) -> None:
         spec = ModelInputSpec(width=640, height=640)
         model_input = ModelInput(
@@ -206,8 +245,52 @@ class ModelInputContractTests(unittest.TestCase):
 
         result = ContractBackend().infer(model_input)
         self.assertIs(result.preprocess_transform, model_input.transform)
-        with self.assertRaises(TypeError):
-            DetectionResult(0, 1, 2, preprocess_transform={})  # type: ignore[arg-type]
+
+    def test_detection_result_normalizes_supported_transform_representations(self) -> None:
+        transform = self._transform_for(ModelInputSpec(width=640, height=640))
+        valid_mapping = {
+            "source_width": transform.source_width,
+            "source_height": transform.source_height,
+            "model_width": transform.model_width,
+            "model_height": transform.model_height,
+            "scale": transform.scale,
+            "pad_left": transform.pad_left,
+            "pad_top": transform.pad_top,
+            "pad_right": transform.pad_right,
+            "pad_bottom": transform.pad_bottom,
+        }
+        for value, expected in ((None, None), ({}, None), (transform, transform)):
+            with self.subTest(value=value):
+                self.assertIs(
+                    DetectionResult(0, 1, 2, preprocess_transform=value).preprocess_transform,
+                    expected,
+                )
+        converted = DetectionResult(0, 1, 2, preprocess_transform=valid_mapping)
+        self.assertIsInstance(converted.preprocess_transform, PreprocessTransform)
+        self.assertEqual(converted.preprocess_transform, transform)
+
+    def test_detection_result_rejects_invalid_transform_representations(self) -> None:
+        valid_mapping = {
+            "source_width": 1280,
+            "source_height": 720,
+            "model_width": 640,
+            "model_height": 640,
+            "scale": 0.5,
+            "pad_left": 0,
+            "pad_top": 140,
+            "pad_right": 0,
+            "pad_bottom": 140,
+        }
+        with self.assertRaisesRegex(ValueError, "missing fields"):
+            DetectionResult(0, 1, 2, preprocess_transform={"source_width": 1280})
+        with self.assertRaisesRegex(ValueError, "unknown fields"):
+            DetectionResult(0, 1, 2, preprocess_transform=valid_mapping | {"extra": 1})
+        with self.assertRaisesRegex(TypeError, "must be None"):
+            DetectionResult(0, 1, 2, preprocess_transform=[valid_mapping])  # type: ignore[arg-type]
+        with self.assertRaisesRegex(ValueError, "horizontal padding"):
+            DetectionResult(
+                0, 1, 2, preprocess_transform=valid_mapping | {"model_width": 641}
+            )
 
     @staticmethod
     def _transform_for(spec: ModelInputSpec) -> PreprocessTransform:

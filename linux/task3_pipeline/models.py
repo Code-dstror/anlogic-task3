@@ -44,6 +44,121 @@ def _round_scaled_dimension(original_dimension: int, scale: float) -> int:
     return floor(original_dimension * scale + 0.5)
 
 
+class _ImmutableTensorFlags:
+    """The immutable subset of ndarray flags exposed by :class:`ImmutableTensor`."""
+
+    __slots__ = ()
+
+    @property
+    def c_contiguous(self) -> bool:
+        return True
+
+    @property
+    def writeable(self) -> bool:
+        return False
+
+    def __setattr__(self, name: str, value: object) -> None:
+        raise AttributeError("ImmutableTensor flags cannot be changed")
+
+
+class ImmutableTensor:
+    """A bytes-backed tensor whose content and public header cannot be changed.
+
+    ``to_numpy()`` creates a temporary ndarray view for a synchronous backend.
+    Its header may be changed independently, but its immutable bytes backing
+    and any temporary header changes cannot alter this tensor's contract.
+    """
+
+    __slots__ = ("_backing", "_shape", "_dtype", "_strides", "_flags")
+
+    def __init__(
+        self,
+        backing: bytes,
+        shape: tuple[int, ...],
+        dtype: np.dtype,
+        strides: tuple[int, ...],
+    ) -> None:
+        object.__setattr__(self, "_backing", backing)
+        object.__setattr__(self, "_shape", shape)
+        object.__setattr__(self, "_dtype", dtype)
+        object.__setattr__(self, "_strides", strides)
+        object.__setattr__(self, "_flags", _ImmutableTensorFlags())
+
+    def __setattr__(self, name: str, value: object) -> None:
+        raise AttributeError("ImmutableTensor header cannot be changed")
+
+    @classmethod
+    def from_array(cls, source: np.ndarray) -> "ImmutableTensor":
+        """Copy ``source`` into C-contiguous immutable bytes."""
+        contiguous = np.array(source, copy=True, order="C")
+        backing = contiguous.tobytes(order="C")
+        return cls(backing, contiguous.shape, contiguous.dtype, contiguous.strides)
+
+    @property
+    def shape(self) -> tuple[int, ...]:
+        """The fixed tensor shape."""
+        return self._shape
+
+    @property
+    def dtype(self) -> np.dtype:
+        """The fixed tensor dtype."""
+        return self._dtype
+
+    @property
+    def strides(self) -> tuple[int, ...]:
+        """The fixed C-contiguous byte strides."""
+        return self._strides
+
+    @property
+    def flags(self) -> _ImmutableTensorFlags:
+        """Immutable flags; the tensor is always C-contiguous and read-only."""
+        return self._flags
+
+    @property
+    def ndim(self) -> int:
+        """The fixed number of dimensions."""
+        return len(self._shape)
+
+    @property
+    def size(self) -> int:
+        """The fixed number of elements."""
+        return int(np.prod(self._shape, dtype=np.intp))
+
+    def to_numpy(self, *, copy: bool = False) -> np.ndarray:
+        """Return a temporary ndarray view, or an independent mutable copy.
+
+        Header changes to the returned ndarray never change this immutable
+        wrapper. The default view remains element-read-only because it is
+        backed by ``bytes``; callers needing a mutable ndarray must request a
+        copy explicitly.
+        """
+        view = np.ndarray(
+            shape=self._shape,
+            dtype=self._dtype,
+            buffer=self._backing,
+            strides=self._strides,
+        )
+        return view.copy() if copy else view
+
+    def __array__(self, dtype: np.dtype | None = None, copy: bool | None = None) -> np.ndarray:
+        """Allow NumPy conversion without exposing this wrapper's header."""
+        view = self.to_numpy()
+        if dtype is not None:
+            view = view.astype(dtype, copy=False)
+        return view.copy() if copy else view
+
+    def __getitem__(self, key: object) -> Any:
+        """Read an element or temporary read-only slice."""
+        return self.to_numpy()[key]
+
+    def __setitem__(self, key: object, value: object) -> None:
+        raise TypeError("ImmutableTensor does not support item assignment")
+
+    def setflags(self, *, write: bool | None = None, **_: object) -> None:
+        """Reject ndarray-style attempts to make the tensor writeable."""
+        raise ValueError("ImmutableTensor flags cannot be changed")
+
+
 class FrameEventKind(str, Enum):
     """Kinds of events a :class:`FrameSource` can publish."""
 
@@ -113,9 +228,12 @@ class ModelInputSpec:
                 self.padding_value, Real
             ):
                 raise TypeError("padding_value must be a real number for a floating-point dtype")
-            padding_value = float(self.padding_value)
-            limits = np.finfo(dtype)
-            if not isfinite(padding_value) or not limits.min <= padding_value <= limits.max:
+            try:
+                with np.errstate(over="ignore", invalid="ignore"):
+                    padding_value = np.asarray(self.padding_value, dtype=dtype)[()]
+            except (OverflowError, TypeError, ValueError) as error:
+                raise ValueError("padding_value is outside the dtype range") from error
+            if not np.isfinite(padding_value):
                 raise ValueError("padding_value must be finite and within the dtype range")
             padding_value = dtype.type(padding_value).item()
         object.__setattr__(self, "dtype", dtype)
@@ -160,6 +278,8 @@ class PreprocessTransform:
 
         scaled_width = _round_scaled_dimension(self.source_width, scale)
         scaled_height = _round_scaled_dimension(self.source_height, scale)
+        if scaled_width < 1 or scaled_height < 1:
+            raise ValueError("scaled dimensions must round to at least 1")
         if scaled_width + self.pad_left + self.pad_right != self.model_width:
             raise ValueError("scaled width and horizontal padding must equal model_width")
         if scaled_height + self.pad_top + self.pad_bottom != self.model_height:
@@ -185,14 +305,12 @@ class PreprocessTransform:
 class ModelInput:
     """Owned, immutable tensor plus its complete source-frame association.
 
-    Construction copies the input into immutable ``bytes`` and exposes a
-    C-contiguous ndarray view of those bytes.  Unlike a writeable ndarray with
-    its flag cleared, the public view cannot be made writeable again.  Its
-    bytes backing remains referenced by ``data`` for the complete synchronous
-    inference call.
+    Construction copies the input into immutable ``bytes`` and exposes an
+    :class:`ImmutableTensor`, rather than a mutable ndarray header. Its bytes
+    backing remains referenced for the complete synchronous inference call.
     """
     metadata: "FrameMetadata"
-    data: np.ndarray
+    data: np.ndarray | ImmutableTensor
     spec: ModelInputSpec
     transform: PreprocessTransform
 
@@ -213,10 +331,7 @@ class ModelInput:
             raise ValueError("data shape must match spec.shape")
         if self.data.dtype != self.spec.dtype:
             raise ValueError("data dtype must match spec.dtype")
-        contiguous = np.array(self.data, copy=True, order="C")
-        backing = contiguous.tobytes(order="C")
-        data = np.frombuffer(backing, dtype=self.spec.dtype).reshape(self.spec.shape)
-        object.__setattr__(self, "data", data)
+        object.__setattr__(self, "data", ImmutableTensor.from_array(self.data))
 
 
 @dataclass(frozen=True, slots=True)
@@ -337,7 +452,13 @@ class Detection:
 
 @dataclass(frozen=True, slots=True)
 class DetectionResult:
-    """Inference result associated with a local ingest and optional wire ID."""
+    """Inference result associated with a local ingest and optional wire ID.
+
+    ``preprocess_transform`` accepts ``None``, a validated
+    :class:`PreprocessTransform`, an empty mapping (normalized to ``None``),
+    or a mapping containing exactly the fields of ``PreprocessTransform``.
+    The stored value is always ``None`` or a validated structured transform.
+    """
 
     ingest_id: int
     inference_started_monotonic_ns: int
@@ -348,7 +469,7 @@ class DetectionResult:
     frame_id: str | None = None
     wire_sequence: int | None = None
     source_timestamp: int | None = None
-    preprocess_transform: PreprocessTransform | None = None
+    preprocess_transform: PreprocessTransform | Mapping[str, Any] | None = None
     status: str = "ok"
     error: str | None = None
 
@@ -361,10 +482,46 @@ class DetectionResult:
             raise ValueError("inference_finished_monotonic_ns precedes start")
         if self.wire_sequence is not None and self.wire_sequence < 0:
             raise ValueError("wire_sequence must be non-negative when present")
-        if self.preprocess_transform is not None and not isinstance(
-            self.preprocess_transform, PreprocessTransform
-        ):
-            raise TypeError("preprocess_transform must be PreprocessTransform or None")
+        object.__setattr__(
+            self,
+            "preprocess_transform",
+            _normalize_preprocess_transform(self.preprocess_transform),
+        )
+
+
+_PREPROCESS_TRANSFORM_FIELDS = (
+    "source_width",
+    "source_height",
+    "model_width",
+    "model_height",
+    "scale",
+    "pad_left",
+    "pad_top",
+    "pad_right",
+    "pad_bottom",
+)
+
+
+def _normalize_preprocess_transform(
+    value: PreprocessTransform | Mapping[str, Any] | None,
+) -> PreprocessTransform | None:
+    """Normalize the supported legacy mapping representation at the boundary."""
+    if value is None or isinstance(value, PreprocessTransform):
+        return value
+    if not isinstance(value, Mapping):
+        raise TypeError("preprocess_transform must be None, PreprocessTransform, or a mapping")
+    if not value:
+        return None
+
+    actual_fields = set(value)
+    expected_fields = set(_PREPROCESS_TRANSFORM_FIELDS)
+    unknown_fields = actual_fields - expected_fields
+    if unknown_fields:
+        raise ValueError(f"preprocess_transform contains unknown fields: {sorted(unknown_fields)!r}")
+    missing_fields = expected_fields - actual_fields
+    if missing_fields:
+        raise ValueError(f"preprocess_transform is missing fields: {sorted(missing_fields)!r}")
+    return PreprocessTransform(**{name: value[name] for name in _PREPROCESS_TRANSFORM_FIELDS})
 
 
 @dataclass(frozen=True, slots=True)
