@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 from threading import Event
 from typing import Any, Mapping
 
-from .models import DetectionResult, FrameEvent, SourceHealth
+from .models import DetectionResult, FrameEvent, ModelInput, SourceHealth
 
 
 class FrameSource(ABC):
@@ -40,8 +40,8 @@ class InferenceBackend(ABC):
         """Load or initialize a model backend."""
 
     @abstractmethod
-    def infer(self, preprocessed_frame: Any) -> Any:
-        """Run inference on a future preprocessed-frame representation."""
+    def infer(self, model_input: ModelInput) -> DetectionResult:
+        """Run inference on a single structured model input."""
 
     @abstractmethod
     def close(self) -> None:

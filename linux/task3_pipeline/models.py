@@ -10,12 +10,38 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from math import isfinite
+from math import floor, isfinite
+from numbers import Integral, Real
 from threading import Lock
 from types import MappingProxyType
 from typing import Any, Mapping
 
 import numpy as np
+
+
+def _require_positive_integer(value: object, name: str) -> int:
+    """Return a positive integer while rejecting bool and lossy coercions."""
+    if isinstance(value, (bool, np.bool_)) or not isinstance(value, Integral):
+        raise TypeError(f"{name} must be an integer")
+    value = int(value)
+    if value <= 0:
+        raise ValueError(f"{name} must be positive")
+    return value
+
+
+def _require_non_negative_integer(value: object, name: str) -> int:
+    """Return a non-negative integer while rejecting bool and lossy coercions."""
+    if isinstance(value, (bool, np.bool_)) or not isinstance(value, Integral):
+        raise TypeError(f"{name} must be an integer")
+    value = int(value)
+    if value < 0:
+        raise ValueError(f"{name} must be non-negative")
+    return value
+
+
+def _round_scaled_dimension(original_dimension: int, scale: float) -> int:
+    """Round a scaled size to nearest integer, with exact .5 values rounded up."""
+    return floor(original_dimension * scale + 0.5)
 
 
 class FrameEventKind(str, Enum):
@@ -55,11 +81,13 @@ class ModelInputSpec:
     color_format: str = "RGB"
     layout: str = "NHWC"
     dtype: np.dtype | str = np.dtype("uint8")
-    padding_value: int = 0
+    padding_value: int | float = 0
 
     def __post_init__(self) -> None:
-        if min(self.width, self.height, self.batch_size, self.channels) <= 0:
-            raise ValueError("model input dimensions, batch_size, and channels must be positive")
+        for name in ("width", "height", "batch_size", "channels"):
+            object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
+        if self.batch_size != 1:
+            raise ValueError("only batch_size=1 is supported by the ModelInput contract")
         if not self.color_format:
             raise ValueError("color_format must not be empty")
         if self.layout not in {"NHWC", "NCHW"}:
@@ -68,11 +96,30 @@ class ModelInputSpec:
             dtype = np.dtype(self.dtype)
         except TypeError as error:
             raise ValueError("dtype must be a NumPy-compatible dtype") from error
-        if dtype.hasobject:
-            raise ValueError("dtype must not contain Python objects")
-        if not isinstance(self.padding_value, int) or isinstance(self.padding_value, bool):
-            raise TypeError("padding_value must be an integer")
+        if dtype.kind not in {"u", "i", "f"}:
+            raise ValueError("dtype must be an integer or floating-point image tensor dtype")
+        if dtype.kind in {"u", "i"}:
+            if isinstance(self.padding_value, (bool, np.bool_)) or not isinstance(
+                self.padding_value, Integral
+            ):
+                raise TypeError("padding_value must be an integer for an integer dtype")
+            padding_value = int(self.padding_value)
+            limits = np.iinfo(dtype)
+            if not limits.min <= padding_value <= limits.max:
+                raise ValueError("padding_value is outside the dtype range")
+            padding_value = dtype.type(padding_value).item()
+        else:
+            if isinstance(self.padding_value, (bool, np.bool_)) or not isinstance(
+                self.padding_value, Real
+            ):
+                raise TypeError("padding_value must be a real number for a floating-point dtype")
+            padding_value = float(self.padding_value)
+            limits = np.finfo(dtype)
+            if not isfinite(padding_value) or not limits.min <= padding_value <= limits.max:
+                raise ValueError("padding_value must be finite and within the dtype range")
+            padding_value = dtype.type(padding_value).item()
         object.__setattr__(self, "dtype", dtype)
+        object.__setattr__(self, "padding_value", padding_value)
 
     @property
     def shape(self) -> tuple[int, int, int, int]:
@@ -100,35 +147,49 @@ class PreprocessTransform:
     pad_bottom: int
 
     def __post_init__(self) -> None:
-        if (
-            min(
-                self.source_width,
-                self.source_height,
-                self.model_width,
-                self.model_height,
-            )
-            <= 0
-            or not isfinite(self.scale)
-            or self.scale <= 0
-        ):
-            raise ValueError("transform dimensions and scale must be positive")
-        if min(self.pad_left, self.pad_top, self.pad_right, self.pad_bottom) < 0:
-            raise ValueError("transform padding must be non-negative")
+        for name in ("source_width", "source_height", "model_width", "model_height"):
+            object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
+        for name in ("pad_left", "pad_top", "pad_right", "pad_bottom"):
+            object.__setattr__(self, name, _require_non_negative_integer(getattr(self, name), name))
+        if isinstance(self.scale, (bool, np.bool_)) or not isinstance(self.scale, Real):
+            raise TypeError("scale must be a real number")
+        scale = float(self.scale)
+        if not isfinite(scale) or scale <= 0:
+            raise ValueError("scale must be finite and positive")
+        object.__setattr__(self, "scale", scale)
+
+        scaled_width = _round_scaled_dimension(self.source_width, scale)
+        scaled_height = _round_scaled_dimension(self.source_height, scale)
+        if scaled_width + self.pad_left + self.pad_right != self.model_width:
+            raise ValueError("scaled width and horizontal padding must equal model_width")
+        if scaled_height + self.pad_top + self.pad_bottom != self.model_height:
+            raise ValueError("scaled height and vertical padding must equal model_height")
 
     @property
     def ratio(self) -> float:
         """Uniform source-to-model scale ratio."""
         return self.scale
 
+    @property
+    def scaled_width(self) -> int:
+        """Width after applying the documented nearest, half-up rounding rule."""
+        return _round_scaled_dimension(self.source_width, self.scale)
+
+    @property
+    def scaled_height(self) -> int:
+        """Height after applying the documented nearest, half-up rounding rule."""
+        return _round_scaled_dimension(self.source_height, self.scale)
+
 
 @dataclass(frozen=True, slots=True)
 class ModelInput:
     """Owned, immutable tensor plus its complete source-frame association.
 
-    Construction always makes a private C-contiguous copy, then publishes it
-    read-only.  The ``ModelInput`` instance owns that array and keeps it alive;
-    an inference backend must retain this instance (or its ``data`` reference)
-    until its synchronous inference call returns.
+    Construction copies the input into immutable ``bytes`` and exposes a
+    C-contiguous ndarray view of those bytes.  Unlike a writeable ndarray with
+    its flag cleared, the public view cannot be made writeable again.  Its
+    bytes backing remains referenced by ``data`` for the complete synchronous
+    inference call.
     """
     metadata: "FrameMetadata"
     data: np.ndarray
@@ -144,14 +205,17 @@ class ModelInput:
             raise TypeError("spec must be ModelInputSpec")
         if not isinstance(self.transform, PreprocessTransform):
             raise TypeError("transform must be PreprocessTransform")
+        if self.spec.batch_size != 1:
+            raise ValueError("ModelInput supports only batch_size=1")
         if self.transform.model_width != self.spec.width or self.transform.model_height != self.spec.height:
             raise ValueError("transform target dimensions must match spec")
         if self.data.shape != self.spec.shape:
             raise ValueError("data shape must match spec.shape")
         if self.data.dtype != self.spec.dtype:
             raise ValueError("data dtype must match spec.dtype")
-        data = np.array(self.data, copy=True, order="C")
-        data.setflags(write=False)
+        contiguous = np.array(self.data, copy=True, order="C")
+        backing = contiguous.tobytes(order="C")
+        data = np.frombuffer(backing, dtype=self.spec.dtype).reshape(self.spec.shape)
         object.__setattr__(self, "data", data)
 
 
@@ -284,7 +348,7 @@ class DetectionResult:
     frame_id: str | None = None
     wire_sequence: int | None = None
     source_timestamp: int | None = None
-    preprocess_transform: Mapping[str, Any] = field(default_factory=dict)
+    preprocess_transform: PreprocessTransform | None = None
     status: str = "ok"
     error: str | None = None
 
@@ -297,9 +361,10 @@ class DetectionResult:
             raise ValueError("inference_finished_monotonic_ns precedes start")
         if self.wire_sequence is not None and self.wire_sequence < 0:
             raise ValueError("wire_sequence must be non-negative when present")
-        object.__setattr__(
-            self, "preprocess_transform", MappingProxyType(dict(self.preprocess_transform))
-        )
+        if self.preprocess_transform is not None and not isinstance(
+            self.preprocess_transform, PreprocessTransform
+        ):
+            raise TypeError("preprocess_transform must be PreprocessTransform or None")
 
 
 @dataclass(frozen=True, slots=True)
