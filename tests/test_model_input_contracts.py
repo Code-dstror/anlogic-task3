@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Mapping
 import gc
 from fractions import Fraction
 import sys
@@ -41,6 +42,35 @@ class ModelInputContractTests(unittest.TestCase):
                 ValueError, "color_format must be a non-empty string"
             ):
                 ModelInputSpec(1, 1, color_format=value)  # type: ignore[arg-type]
+
+    def test_spec_normalizes_string_subclasses_before_validation_and_storage(self) -> None:
+        class FakeLayout(str):
+            def __hash__(self) -> int:
+                return hash("NHWC")
+
+            def __eq__(self, other: object) -> bool:
+                return other == "NHWC"
+
+        class FakeColorFormat(str):
+            def strip(self) -> str:
+                return "RGB"
+
+        class ExplosiveString(str):
+            def strip(self) -> str:
+                raise AssertionError("validation must use the normalized base string")
+
+        with self.assertRaisesRegex(ValueError, "layout must be NHWC or NCHW"):
+            ModelInputSpec(1, 1, layout=FakeLayout("not-a-layout"))
+        with self.assertRaisesRegex(ValueError, "color_format must be a non-empty string"):
+            ModelInputSpec(1, 1, color_format=FakeColorFormat("   "))
+
+        spec = ModelInputSpec(
+            1, 1, color_format=ExplosiveString("RGB"), layout=ExplosiveString("NHWC")
+        )
+        self.assertIs(type(spec.color_format), str)
+        self.assertIs(type(spec.layout), str)
+        self.assertEqual(spec.color_format, "RGB")
+        self.assertEqual(spec.layout, "NHWC")
 
     def test_transform_records_source_target_scale_and_each_padding_side(self) -> None:
         transform = PreprocessTransform(
@@ -98,6 +128,42 @@ class ModelInputContractTests(unittest.TestCase):
             for value in (True, np.bool_(True), 1.0, "1"):
                 with self.subTest(name=name, value=value), self.assertRaises(TypeError):
                     PreprocessTransform(**(valid | {name: value}))
+
+    def test_transform_normalizes_only_exact_binary64_scales(self) -> None:
+        class ChangedFloat(float):
+            def __float__(self) -> float:
+                return 0.5
+
+        accepted = PreprocessTransform(2, 2, 1, 1, np.float32(0.5), 0, 0, 0, 0)
+        self.assertIs(type(accepted.scale), float)
+        self.assertEqual(accepted.scale, 0.5)
+
+        changed_one = PreprocessTransform(1, 1, 1, 1, ChangedFloat(1.0), 0, 0, 0, 0)
+        self.assertIs(type(changed_one.scale), float)
+        self.assertEqual(changed_one.scale, 1.0)
+        changed_tenth = PreprocessTransform(10, 10, 1, 1, ChangedFloat(0.1), 0, 0, 0, 0)
+        self.assertEqual(changed_tenth.scale, 0.1)
+        self.assertEqual(
+            changed_tenth.scale.as_integer_ratio(), float(0.1).as_integer_ratio()
+        )
+
+        longdouble_candidate = np.longdouble("1.00000000000000000001")
+        if np.isfinite(longdouble_candidate) and longdouble_candidate != np.longdouble(
+            np.float64(longdouble_candidate)
+        ):
+            with self.assertRaisesRegex(ValueError, "exactly representable"):
+                PreprocessTransform(1, 1, 1, 1, longdouble_candidate, 0, 0, 0, 0)
+        else:
+            transform = PreprocessTransform(1, 1, 1, 1, longdouble_candidate, 0, 0, 0, 0)
+            self.assertIs(type(transform.scale), float)
+
+        for scale in (10**10000, np.uint64(np.iinfo(np.uint64).max)):
+            with self.subTest(scale_type=type(scale)), self.assertRaisesRegex(
+                ValueError, "exactly representable"
+            ):
+                PreprocessTransform(1, 1, 1, 1, scale, 0, 0, 0, 0)
+        with self.assertRaisesRegex(TypeError, "Python or NumPy real scalar"):
+            PreprocessTransform(1, 1, 1, 1, Fraction(1, 2), 0, 0, 0, 0)
 
     def test_transform_rejects_zero_source_dimensions_directly(self) -> None:
         for source_width, source_height, field_name in ((0, 0, "source_width"), (0, 1, "source_width"), (1, 0, "source_height")):
@@ -185,6 +251,11 @@ class ModelInputContractTests(unittest.TestCase):
         self.assertEqual(result.data[0, 0, 0, 0], 0)
 
     def test_immutable_tensor_rejects_object_containing_array_dtypes(self) -> None:
+        class MisleadingObjectArray(np.ndarray):
+            @property
+            def dtype(self) -> np.dtype:
+                return np.dtype(np.uint8)
+
         object_structured = np.zeros(1, dtype=np.dtype([("number", "u1"), ("value", object)]))
         nested_object_structured = np.zeros(
             1, dtype=np.dtype([("nested", [("value", object)])])
@@ -193,6 +264,7 @@ class ModelInputContractTests(unittest.TestCase):
             np.array([object()], dtype=object),
             object_structured,
             nested_object_structured,
+            np.array([object()], dtype=object).view(MisleadingObjectArray),
         ):
             with self.subTest(dtype=array.dtype), self.assertRaisesRegex(
                 TypeError, "object-containing dtypes"
@@ -231,6 +303,17 @@ class ModelInputContractTests(unittest.TestCase):
     def test_immutable_tensor_uint8_round_trip_remains_supported(self) -> None:
         source = np.array([[1, 2], [3, 4]], dtype=np.uint8)
         tensor = ImmutableTensor.from_array(source)
+        self.assertIs(type(tensor), ImmutableTensor)
+        np.testing.assert_array_equal(tensor.to_numpy(), source)
+
+    def test_immutable_tensor_from_array_always_returns_the_exact_base_type(self) -> None:
+        class EvilTensor(ImmutableTensor):
+            def to_numpy(self, *, copy: bool = False) -> np.ndarray:
+                raise AssertionError("from_array must not return an ImmutableTensor subclass")
+
+        source = np.array([1, 2], dtype=np.uint8)
+        tensor = EvilTensor.from_array(source)
+        self.assertIs(type(tensor), ImmutableTensor)
         np.testing.assert_array_equal(tensor.to_numpy(), source)
 
     def test_immutable_tensor_requires_an_exact_dense_c_layout(self) -> None:
@@ -309,6 +392,14 @@ class ModelInputContractTests(unittest.TestCase):
         self.assertEqual(result.metadata.source_timestamp, 202)
         self.assertEqual(result.metadata.timestamp_domain, "sensor_clock")
         self.assertEqual(result.metadata.wire_sequence, 303)
+
+    def test_input_rejects_its_own_subclasses_before_reading_any_member(self) -> None:
+        with self.assertRaisesRegex(TypeError, "ModelInput subclasses are not supported"):
+            class ExplosiveModelInput(ModelInput):
+                def __getattribute__(self, name: str) -> object:
+                    if name in {"data", "metadata", "spec", "transform"}:
+                        raise AssertionError(f"ModelInput must not read subclass.{name}")
+                    return super().__getattribute__(name)
 
     def test_input_rejects_contract_subclasses_before_reading_them(self) -> None:
         class ExplosiveMetadata(FrameMetadata):
@@ -705,6 +796,54 @@ class ModelInputContractTests(unittest.TestCase):
             DetectionResult(0, 1, 2, preprocess_transform={"source_width": 1280})
         with self.assertRaisesRegex(ValueError, "unknown fields"):
             DetectionResult(0, 1, 2, preprocess_transform=valid_mapping | {"extra": 1})
+        with self.assertRaisesRegex(ValueError, "unknown fields"):
+            DetectionResult(0, 1, 2, preprocess_transform={"extra": 1, 7: 1})
+
+        class DeceptiveKey(str):
+            def __hash__(self) -> int:
+                return hash("source_width")
+
+            def __eq__(self, other: object) -> bool:
+                return other == "source_width"
+
+        with self.assertRaisesRegex(ValueError, "unknown fields"):
+            DetectionResult(0, 1, 2, preprocess_transform={DeceptiveKey("extra"): 1})
+
+        class RawKeyMapping(Mapping[str, object]):
+            def __init__(self, *extra_keys: object) -> None:
+                self._keys = tuple(valid_mapping) + extra_keys
+                self.getitem_calls = 0
+
+            def __iter__(self):
+                return iter(self._keys)
+
+            def __len__(self) -> int:
+                return len(self._keys)
+
+            def __getitem__(self, key: str) -> object:
+                self.getitem_calls += 1
+                return valid_mapping[str.__str__(key)]
+
+        legal_custom_mapping = RawKeyMapping()
+        converted = DetectionResult(0, 1, 2, preprocess_transform=legal_custom_mapping)
+        self.assertIs(type(converted.preprocess_transform), PreprocessTransform)
+        self.assertEqual(legal_custom_mapping.getitem_calls, len(valid_mapping))
+
+        # The raw key's stored text is "junk", but its hostile equality and
+        # hash collide with source_width. Validation must reject it before a
+        # dict snapshot could silently erase it.
+        deceptive_mapping = RawKeyMapping(DeceptiveKey("junk"))
+        with self.assertRaisesRegex(ValueError, "unknown field"):
+            DetectionResult(0, 1, 2, preprocess_transform=deceptive_mapping)
+        self.assertEqual(deceptive_mapping.getitem_calls, 0)
+
+        class DuplicateKey(str):
+            pass
+
+        duplicate_mapping = RawKeyMapping(DuplicateKey("source_width"))
+        with self.assertRaisesRegex(ValueError, "duplicate fields"):
+            DetectionResult(0, 1, 2, preprocess_transform=duplicate_mapping)
+        self.assertEqual(duplicate_mapping.getitem_calls, 0)
         with self.assertRaisesRegex(TypeError, "must be None"):
             DetectionResult(0, 1, 2, preprocess_transform=[valid_mapping])  # type: ignore[arg-type]
         with self.assertRaisesRegex(ValueError, "horizontal padding"):

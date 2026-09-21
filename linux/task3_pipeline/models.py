@@ -76,11 +76,13 @@ def _finite_real_as_integer_ratio(value: Real, name: str) -> tuple[int, int]:
         # longdouble precision and avoiding any Python-float conversion.
         numerator, denominator = as_integer_ratio(value)
     elif isinstance(value, float):
-        if not isfinite(value):
+        try:
+            # Call the built-in implementation directly: a float subclass may
+            # replace its instance attribute but cannot change its stored
+            # binary64 payload.
+            numerator, denominator = float.as_integer_ratio(value)
+        except OverflowError:
             raise ValueError(f"{name} must be finite")
-        # Call the built-in implementation directly: a float subclass may
-        # replace its instance attribute but cannot change its stored binary64 value.
-        numerator, denominator = float.as_integer_ratio(value)
     else:
         raise TypeError(f"{name} must be a Python or NumPy real scalar")
     numerator, denominator = int(numerator), int(denominator)
@@ -119,6 +121,42 @@ def _validate_exact_floating_padding_value(value: Real, dtype: np.dtype) -> obje
     if value_ratio != converted_ratio:
         raise ValueError("padding_value must be exactly representable by the dtype")
     return dtype.type(converted).item()
+
+
+def _normalize_exact_binary64_scale(value: object) -> float:
+    """Return a finite scale only when its exact value survives binary64 storage."""
+    if isinstance(value, (bool, np.bool_)) or not isinstance(value, Real):
+        raise TypeError("scale must be a Python or NumPy real scalar")
+    value_ratio = _finite_real_as_integer_ratio(value, "scale")
+    minimum_ratio = _finite_real_as_integer_ratio(np.finfo(np.float64).min, "scale minimum")
+    maximum_ratio = _finite_real_as_integer_ratio(np.finfo(np.float64).max, "scale maximum")
+    if (
+        _compare_integer_ratios(value_ratio, minimum_ratio) < 0
+        or _compare_integer_ratios(value_ratio, maximum_ratio) > 0
+    ):
+        raise ValueError("scale must be finite and exactly representable as a Python float")
+    if isinstance(value, float) and not isinstance(value, np.floating):
+        # ``np.asarray`` and ``float(value)`` dispatch a subclass's
+        # ``__float__``. Calling these built-in descriptors directly instead
+        # reconstructs an exact base float from the already-validated payload.
+        return float.fromhex(float.hex(value))
+    try:
+        with np.errstate(over="ignore", invalid="ignore"):
+            converted = np.asarray(value, dtype=np.float64)[()]
+    except (OverflowError, TypeError, ValueError):
+        raise ValueError("scale must be finite and exactly representable as a Python float") from None
+    converted_ratio = _finite_real_as_integer_ratio(converted, "scale")
+    if value_ratio != converted_ratio:
+        raise ValueError("scale must be exactly representable as a Python float")
+    return float(converted)
+
+
+def _normalize_contract_string(value: object, name: str) -> str:
+    """Copy a string subclass into an exact base string before validation."""
+    if not isinstance(value, str):
+        raise ValueError(f"{name} must be a string")
+    normalized = str.__str__(value)
+    return normalized if type(normalized) is str else str.__new__(str, normalized)
 
 
 def _normalize_tensor_shape(shape: object) -> tuple[int, ...]:
@@ -235,15 +273,24 @@ class ImmutableTensor:
     def __setattr__(self, name: str, value: object) -> None:
         raise AttributeError("ImmutableTensor header cannot be changed")
 
-    @classmethod
-    def from_array(cls, source: np.ndarray) -> "ImmutableTensor":
-        """Copy ``source`` into C-contiguous immutable bytes."""
+    @staticmethod
+    def from_array(source: np.ndarray) -> "ImmutableTensor":
+        """Copy ``source`` into an exact, C-contiguous ImmutableTensor.
+
+        This deliberately constructs the base type even when invoked through
+        an ``ImmutableTensor`` subclass.  A subclass can override conversion
+        or metadata accessors and therefore cannot inherit this API's
+        immutable-wrapper guarantee.
+        """
         if not isinstance(source, np.ndarray):
             raise TypeError("source must be a NumPy array")
-        _validate_immutable_tensor_dtype(source.dtype)
         contiguous = np.array(source, copy=True, order="C")
+        # Validate the newly materialized base ndarray immediately before
+        # serialization. An ndarray subclass can override metadata accessors,
+        # so checking the caller object alone cannot guard ``tobytes()``.
+        _validate_immutable_tensor_dtype(contiguous.dtype)
         backing = contiguous.tobytes(order="C")
-        return cls(backing, contiguous.shape, contiguous.dtype, contiguous.strides)
+        return ImmutableTensor(backing, contiguous.shape, contiguous.dtype, contiguous.strides)
 
     @property
     def shape(self) -> tuple[int, ...]:
@@ -354,9 +401,15 @@ class ModelInputSpec:
             object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
         if self.batch_size != 1:
             raise ValueError("only batch_size=1 is supported by the ModelInput contract")
-        if not isinstance(self.color_format, str) or not self.color_format.strip():
+        if not isinstance(self.color_format, str):
             raise ValueError("color_format must be a non-empty string")
-        if self.layout not in {"NHWC", "NCHW"}:
+        color_format = _normalize_contract_string(self.color_format, "color_format")
+        if not color_format.strip():
+            raise ValueError("color_format must be a non-empty string")
+        if not isinstance(self.layout, str):
+            raise ValueError("layout must be NHWC or NCHW")
+        layout = _normalize_contract_string(self.layout, "layout")
+        if layout not in {"NHWC", "NCHW"}:
             raise ValueError("layout must be NHWC or NCHW")
         try:
             dtype = np.dtype(self.dtype)
@@ -380,6 +433,8 @@ class ModelInputSpec:
             ):
                 raise TypeError("padding_value must be a real number for a floating-point dtype")
             padding_value = _validate_exact_floating_padding_value(self.padding_value, dtype)
+        object.__setattr__(self, "color_format", color_format)
+        object.__setattr__(self, "layout", layout)
         object.__setattr__(self, "dtype", dtype)
         object.__setattr__(self, "padding_value", padding_value)
 
@@ -396,7 +451,9 @@ class PreprocessTransform:
     """Source-to-model geometry recorded by a future preprocessor.
 
     This is descriptive data only.  Resize, letterbox, and coordinate mapping
-    algorithms remain outside this shared-contract change.
+    algorithms remain outside this shared-contract change.  ``scale`` is
+    stored as an exact Python binary64 float, so callers must supply a
+    supported Python or NumPy scalar whose exact value is representable there.
     """
     source_width: int
     source_height: int
@@ -413,10 +470,8 @@ class PreprocessTransform:
             object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
         for name in ("pad_left", "pad_top", "pad_right", "pad_bottom"):
             object.__setattr__(self, name, _require_non_negative_integer(getattr(self, name), name))
-        if isinstance(self.scale, (bool, np.bool_)) or not isinstance(self.scale, Real):
-            raise TypeError("scale must be a real number")
-        scale = float(self.scale)
-        if not isfinite(scale) or scale <= 0:
+        scale = _normalize_exact_binary64_scale(self.scale)
+        if scale <= 0:
             raise ValueError("scale must be finite and positive")
         object.__setattr__(self, "scale", scale)
 
@@ -449,15 +504,17 @@ class PreprocessTransform:
 class ModelInput:
     """Owned, immutable tensor plus its complete source-frame association.
 
-    An ndarray input, including an ndarray subclass, is copied into immutable
-    ``bytes`` at this boundary. Only an exact :class:`ImmutableTensor` may be
-    shared directly; this instance holds a strong reference for the complete
-    synchronous inference call. ImmutableTensor subclasses are rejected before
-    their overridable members are read, because they cannot inherit the base
-    class's immutability guarantee. Neither accepted path exposes a mutable
-    ndarray header. Metadata, transform, and specification inputs must be
-    their exact base types; subclasses are rejected before their overridable
-    members are read. The specification must be an exact
+    This object itself must be an exact :class:`ModelInput`; subclasses are
+    rejected before any input member is read. An ndarray input, including an
+    ndarray subclass, is copied into immutable ``bytes`` at this boundary.
+    Only an exact :class:`ImmutableTensor` may be shared directly; this
+    instance holds a strong reference for the complete synchronous inference
+    call. ImmutableTensor subclasses are rejected before their overridable
+    members are read, because they cannot inherit the base class's immutability
+    guarantee. Neither accepted path exposes a mutable ndarray header.
+    Metadata, transform, and specification inputs must be their exact base
+    types; subclasses are rejected before their overridable members are read.
+    The specification must be an exact
     :class:`ModelInputSpec`; subclasses are rejected before their overridable
     shape or dimension members are read.
     """
@@ -466,7 +523,13 @@ class ModelInput:
     spec: ModelInputSpec
     transform: PreprocessTransform
 
+    def __init_subclass__(cls, **kwargs: object) -> None:
+        """Seal this inference-boundary value from validation-bypassing subclasses."""
+        raise TypeError("ModelInput subclasses are not supported")
+
     def __post_init__(self) -> None:
+        if type(self) is not ModelInput:
+            raise TypeError("ModelInput must be an exact ModelInput")
         if type(self.metadata) is not FrameMetadata:
             raise TypeError("metadata must be an exact FrameMetadata")
         if type(self.spec) is not ModelInputSpec:
@@ -674,16 +737,32 @@ def _normalize_preprocess_transform(
         raise TypeError("PreprocessTransform subclasses are not supported by DetectionResult")
     if not isinstance(value, Mapping):
         raise TypeError("preprocess_transform must be None, PreprocessTransform, or a mapping")
-    mapping = dict(value)
-    if not mapping:
+    expected_fields = set(_PREPROCESS_TRANSFORM_FIELDS)
+    normalized_keys: list[tuple[object, str]] = []
+    seen_fields: set[str] = set()
+    for raw_key in value:
+        # Phase one never reads a mapping value. A str subclass can collide
+        # with a legal key through hostile hash/equality overrides and would
+        # otherwise be silently discarded by ``dict(value)``.
+        if not isinstance(raw_key, str):
+            raise ValueError("preprocess_transform contains a non-string field")
+        key = _normalize_contract_string(raw_key, "preprocess_transform field")
+        if key not in expected_fields:
+            raise ValueError("preprocess_transform contains unknown fields")
+        if key in seen_fields:
+            raise ValueError("preprocess_transform contains duplicate fields")
+        seen_fields.add(key)
+        normalized_keys.append((raw_key, key))
+    if not normalized_keys:
         return None
 
-    actual_fields = set(mapping)
-    expected_fields = set(_PREPROCESS_TRANSFORM_FIELDS)
-    unknown_fields = actual_fields - expected_fields
-    if unknown_fields:
-        raise ValueError(f"preprocess_transform contains unknown fields: {sorted(unknown_fields)!r}")
-    missing_fields = expected_fields - actual_fields
+    # Phase two starts only after every raw key has passed phase-one checks.
+    # The snapshot is indexed by exact base strings and never retains key state.
+    mapping: dict[str, Any] = {}
+    for raw_key, key in normalized_keys:
+        mapping[key] = value[raw_key]
+
+    missing_fields = expected_fields - seen_fields
     if missing_fields:
         raise ValueError(f"preprocess_transform is missing fields: {sorted(missing_fields)!r}")
     return PreprocessTransform(**{name: mapping[name] for name in _PREPROCESS_TRANSFORM_FIELDS})
