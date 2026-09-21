@@ -3,8 +3,7 @@
 This module deliberately stops at constructing a :class:`ModelInput`: it does
 not load a model, access an RKNN runtime, or interact with a device.  The
 first profile supports the explicit YOLOv5-style RGB, NHWC, uint8, three
-channel, batch-one specification.  Target dimensions remain caller supplied
-rather than being fixed to 640 by this implementation.
+channel, batch-one specification at its verified 640x640 target size.
 """
 
 from __future__ import annotations
@@ -27,6 +26,8 @@ from .models import (
 
 
 _BGR24_PIXEL_FORMAT = "bgr24"
+_YOLOV5_TARGET_WIDTH = 640
+_YOLOV5_TARGET_HEIGHT = 640
 
 
 def _require_frame_dimension(value: object, name: str) -> int:
@@ -65,25 +66,29 @@ def _round_half_up(dimension: int, scale: float) -> int:
 class LetterboxPreprocessor:
     """Build immutable RGB/NHWC/uint8 batch-one inputs from BGR24 frames.
 
-    ``cv2.INTER_LINEAR`` is used for every non-identity resize, including
-    upscaling.  The frame buffer must provide at least ``height * row_stride``
-    bytes; any trailing bytes are ignored.  Each row contributes exactly
-    ``width * 3`` BGR24 bytes, so row padding never enters the image.
+    The initial verified YOLOv5 profile requires 640x640.  ``cv2.INTER_LINEAR``
+    is used for every non-identity resize, including upscaling.  The frame
+    buffer must provide at least ``height * row_stride`` bytes; any trailing
+    bytes are ignored.  Each row contributes exactly ``width * 3`` BGR24
+    bytes, so row padding never enters the image.
+
     """
 
     def __init__(self, spec: ModelInputSpec) -> None:
         if type(spec) is not ModelInputSpec:
             raise TypeError("spec must be an exact ModelInputSpec")
         if (
-            spec.color_format != "RGB"
+            spec.width != _YOLOV5_TARGET_WIDTH
+            or spec.height != _YOLOV5_TARGET_HEIGHT
+            or spec.color_format != "RGB"
             or spec.layout != "NHWC"
             or spec.dtype != np.dtype("uint8")
             or spec.channels != 3
             or spec.batch_size != 1
         ):
             raise ValueError(
-                "LetterboxPreprocessor supports only RGB, NHWC, uint8, "
-                "three-channel, batch_size=1 specs"
+                "the initial verified YOLOv5 profile requires 640x640 RGB, "
+                "NHWC, uint8, three-channel, batch_size=1 specs"
             )
         self._spec = spec
 
