@@ -7,7 +7,7 @@ derive_clocks
 # deliberately in the same group. Data crosses through official async FIFO;
 # stable enable/reset/status cross through explicit synchronizers.
 set_clock_groups -asynchronous \
-    -group [get_clocks {sys_clk u_pixel_pll/pll_inst.clkc[0] u_pixel_pll/pll_inst.clkc[1]}] \
+    -group [get_clocks {sys_clk u_pixel_pll/pll_inst.clkc[0]}] \
     -group [get_clocks {mipi_ref_clk u_camera_pll/pll_inst.clkc[0] u_camera_pll/pll_inst.clkc[1] u_camera_pll/pll_inst.clkc[2]}] \
     -group [get_clocks {mipi_hs_clk u_camera/u_receiver/u_phy/u_rx_clk_gen/U_io_clk_div_1.clkdivout u_camera/u_receiver/u_phy/u_rx_clk_gen/U_io_clk_div_0.clkdivout u_camera/u_receiver/u_phy/u_rx_clk_gen/U_io_clk_div_0.clkout}]
 # Board data-eye constraints and automatic delay-window margin require real

@@ -69,10 +69,10 @@ module csi2_raw10_rx_stream (
     );
 
     csi2_async_event_fifo u_event_fifo (
-        .i_write_clk(i_word_clk), .i_write_reset_n(word_reset_n),
+        .i_write_clk(i_word_clk), .i_reset_n(i_reset_n),
         .i_write_data({source_error, source_abort, source_eol, source_sof, source_data}),
         .i_write_valid(source_valid), .o_write_ready(fifo_source_ready),
-        .i_read_clk(i_pixel_clk), .i_read_reset_n(pixel_reset_n),
+        .i_read_clk(i_pixel_clk),
         .o_read_data(fifo_read_data), .o_read_valid(fifo_read_valid),
         .i_read_ready(i_raw_ready ||
                       (drain_frame && !fifo_read_data[42] && !fifo_read_data[40]))

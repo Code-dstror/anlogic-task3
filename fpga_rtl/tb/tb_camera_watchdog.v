@@ -99,7 +99,10 @@ module tb_camera_watchdog;
 
         wait_pixel_cycles(3);
         reset_n = 1'b1;
-        wait_pixel_cycles(4);
+        // Configuration can take longer than the silence threshold. The
+        // watchdog must stay disarmed until done has crossed to pixel_clk.
+        wait_pixel_cycles(SILENCE_CYCLES * 3);
+        expect_fault_count(0, "delayed configuration must not time out");
         config_done_drive = 1'b1;
         wait (dut.done_sync[1] === 1'b1);
 
@@ -137,6 +140,31 @@ module tb_camera_watchdog;
         wait_for_next_fault(expected_count, "PHY-ready falling edge");
         wait_pixel_cycles(SILENCE_CYCLES * 2);
         expect_fault_count(expected_count + 1, "low PHY level must not repeat");
+
+        // Reset during active input, then delay configuration again. The old
+        // watchdog episode must be forgotten before a new capture starts.
+        @(negedge pixel_clk);
+        raw_valid_drive = 1'b1;
+        config_done_drive = 1'b0;
+        reset_n = 1'b0;
+        wait_pixel_cycles(3);
+        if (dut.receive_fault !== 1'b0 || dut.done_sync !== 2'b00) begin
+            $display("[TB] ERROR reset retained watchdog/configuration state");
+            $display("[TB] RESULT: FAIL");
+            $finish;
+        end
+        @(negedge pixel_clk);
+        raw_valid_drive = 1'b0;
+        phy_ready_drive = 1'b1;
+        reset_n = 1'b1;
+        wait_pixel_cycles(SILENCE_CYCLES * 3);
+        expect_fault_count(expected_count + 1, "post-reset configuration delay");
+        @(negedge pixel_clk);
+        config_done_drive = 1'b1;
+        wait (dut.done_sync[1] === 1'b1);
+        wait_for_next_fault(expected_count + 1, "post-reset silent-source timeout");
+        wait_pixel_cycles(SILENCE_CYCLES * 2);
+        expect_fault_count(expected_count + 2, "post-reset episode must not repeat");
 
         $display("[TB] watchdog abort pulses=%0d", fault_count);
         $display("[TB] RESULT: PASS");

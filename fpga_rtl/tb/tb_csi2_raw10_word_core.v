@@ -15,6 +15,9 @@ module tb_csi2_raw10_word_core;
     integer pixel_groups = 0;
     integer aborts = 0;
     integer eols = 0;
+    reg boundary_check = 1'b0;
+    integer boundary_sof_group = -1;
+    integer boundary_eol_group = -1;
     reg [3:0] last_abort_code = 4'd0;
     reg [15:0] payload_crc;
     integer index;
@@ -152,6 +155,14 @@ module tb_csi2_raw10_word_core;
             end else begin
                 pixel_groups = pixel_groups + 1;
                 if (eol_out) eols = eols + 1;
+                if (boundary_check &&
+                    (sof_out !== (pixel_groups == boundary_sof_group) ||
+                     eol_out !== (pixel_groups == boundary_eol_group))) begin
+                    $display("[TB] RESULT: FAIL boundary group=%0d SOF=%b EOL=%b expected SOF=%0d EOL=%0d",
+                             pixel_groups, sof_out, eol_out,
+                             boundary_sof_group, boundary_eol_group);
+                    $finish;
+                end
                 if ((pixel_groups == 1) && !sof_out) begin
                     $display("[TB] RESULT: FAIL missing SOF"); $finish;
                 end
@@ -238,6 +249,60 @@ module tb_csi2_raw10_word_core;
         repeat (2) @(posedge clk);
         if (last_abort_code != 4'd3) begin
             $display("[TB] RESULT: FAIL blocked final group did not report overflow"); $finish; end
+
+        // The final RAW10 group and CRC occupy every byte lane across these
+        // lengths. Verify the EOL group exactly, then recover after bad CRC.
+        @(negedge clk);
+        reset_n = 1'b0;
+        sink_ready = 1'b1;
+        repeat (3) @(posedge clk);
+        @(negedge clk);
+        reset_n = 1'b1;
+        pixel_groups = 0;
+        eols = 0;
+        aborts = 0;
+        boundary_check = 1'b1;
+        send_header(8'h00, 16'd0);
+
+        boundary_sof_group = 1; boundary_eol_group = 1;
+        send_raw_packet(5, 1'b0);
+        repeat (3) @(posedge clk);
+        if (pixel_groups != 1 || eols != 1 || aborts != 0) begin
+            $display("[TB] RESULT: FAIL 5-byte CRC boundary"); $finish; end
+
+        boundary_sof_group = -1; boundary_eol_group = 3;
+        send_raw_packet(10, 1'b0);
+        repeat (3) @(posedge clk);
+        if (pixel_groups != 3 || eols != 2 || aborts != 0) begin
+            $display("[TB] RESULT: FAIL 10-byte CRC boundary"); $finish; end
+
+        boundary_eol_group = 6;
+        send_raw_packet(15, 1'b0);
+        repeat (3) @(posedge clk);
+        if (pixel_groups != 6 || eols != 3 || aborts != 0) begin
+            $display("[TB] RESULT: FAIL 15-byte CRC boundary"); $finish; end
+
+        boundary_eol_group = 10;
+        send_raw_packet(20, 1'b0);
+        repeat (3) @(posedge clk);
+        if (pixel_groups != 10 || eols != 4 || aborts != 0) begin
+            $display("[TB] RESULT: FAIL 20-byte CRC boundary"); $finish; end
+
+        boundary_eol_group = -1;
+        send_raw_packet(15, 1'b1);
+        repeat (3) @(posedge clk);
+        if (pixel_groups != 12 || eols != 4 ||
+            aborts != 1 || last_abort_code != 4'd2) begin
+            $display("[TB] RESULT: FAIL bad CRC boundary groups=%0d eols=%0d aborts=%0d code=%0d",
+                     pixel_groups, eols, aborts, last_abort_code); $finish; end
+
+        send_header(8'h00, 16'd0);
+        boundary_sof_group = 13; boundary_eol_group = 16;
+        send_raw_packet(20, 1'b0);
+        repeat (3) @(posedge clk);
+        if (pixel_groups != 16 || eols != 5 || aborts != 1) begin
+            $display("[TB] RESULT: FAIL recovery after bad CRC groups=%0d eols=%0d aborts=%0d",
+                     pixel_groups, eols, aborts); $finish; end
         $display("[TB] RESULT: PASS");
         $finish;
     end

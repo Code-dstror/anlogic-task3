@@ -32,6 +32,8 @@ reg [5:0] syn, col;
 reg found, good;
 reg [7:0] dt, b;
 reg [15:0] wc, nleft, ncrc;
+reg [15:0] crc1, crc2, crc3, crc4;
+reg [2:0] payload_count;
 reg [2:0] nbcnt;
 reg [31:0] nbytes;
 reg nseen, emit, finish, bad, eol;
@@ -164,8 +166,23 @@ o_abort<=1;
 o_error_code<=4;
 end end
      else o_packet_done<=1;
-end else begin nleft=left;
-ncrc=crc;
+end else begin
+// Select the payload/CRC split once per word. CRC candidates are
+// independent of the remaining-byte counter's decrement chain.
+crc1=cb(crc,i_word[7:0]);
+crc2=cb(crc1,i_word[15:8]);
+crc3=cb(crc2,i_word[23:16]);
+crc4=cb(crc3,i_word[31:24]);
+if(left>=16'd4)payload_count=3'd4;
+else payload_count=left[2:0];
+nleft=left-{13'd0,payload_count};
+case(payload_count)
+ 3'd0:ncrc=crc;
+ 3'd1:ncrc=crc1;
+ 3'd2:ncrc=crc2;
+ 3'd3:ncrc=crc3;
+ default:ncrc=crc4;
+endcase
 nbcnt=bcnt;
 nbytes=bytes;
 nseen=crc_lo_seen;
@@ -175,23 +192,29 @@ finish=0;
 bad=0;
 eol=0;
 edata=0;
+case(left)
+ 16'd0:begin
+  finish=1;
+  if(crc_lo_seen)bad=({i_word[7:0],crc_lo}!=ncrc);
+  else begin nlo=i_word[7:0];nseen=1;bad=({i_word[15:8],i_word[7:0]}!=ncrc);end
+ end
+ 16'd1:begin nlo=i_word[15:8];nseen=1;finish=1;bad=({i_word[23:16],i_word[15:8]}!=ncrc);end
+ 16'd2:begin nlo=i_word[23:16];nseen=1;finish=1;bad=({i_word[31:24],i_word[23:16]}!=ncrc);end
+ 16'd3:begin nlo=i_word[31:24];nseen=1;end
+ default:begin end
+endcase
 for(j=0;
 j<4;
 j=j+1)begin b=i_word[j*8+:8];
-if(nleft!=0)begin ncrc=cb(ncrc,b);
-nleft=nleft-1'b1;
+if(j<payload_count)begin
 if(raw_packet)begin if(nbcnt==4)begin edata=up({b,nbytes});
 emit=1;
-eol=(nleft==0);
+eol=(left==(j+1));
 nbcnt=0;
 nbytes=0;
 end else begin nbytes[nbcnt*8+:8]=b;
 nbcnt=nbcnt+1'b1;
-end end end else if(!nseen)begin nlo=b;
-nseen=1;
-end else if(!finish)begin finish=1;
-bad=({b,nlo}!=ncrc);
-end end
+end end end end
      left<=nleft;
 crc<=ncrc;
 bcnt<=nbcnt;

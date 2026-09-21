@@ -30,7 +30,8 @@ try {
         (Join-Path $repo "fpga_rtl/camera/csi/csi2_async_event_fifo.v") `
         (Join-Path $repo "fpga_rtl/camera/csi/csi2_raw10_word_core.v") `
         (Join-Path $repo "fpga_rtl/camera/csi/csi2_raw10_rx_stream.v") `
-        (Join-Path $repo "fpga_rtl/tb/tb_csi2_receiver_fifo.v")
+        (Join-Path $repo "fpga_rtl/tb/tb_csi2_receiver_fifo.v") `
+        (Join-Path $repo "fpga_rtl/tb/tb_csi2_async_event_fifo_reset.v")
     if ($LASTEXITCODE -ne 0) { throw "CSI-2 FIFO receiver compilation failed" }
 
     & "$ModelSimBin/vsim.exe" -c -L ph1 work.tb_csi2_receiver_fifo `
@@ -39,6 +40,13 @@ try {
     $log = Get-Content -LiteralPath "csi2_fifo.log" -Raw
     if ($log -notmatch "\[TB\] RESULT: PASS" -or $log -match "\[TB\] RESULT: FAIL") {
         throw "CSI-2 FIFO receiver self-check failed; inspect $runDir/csi2_fifo.log"
+    }
+    & "$ModelSimBin/vsim.exe" -c -L ph1 work.tb_csi2_async_event_fifo_reset `
+        -l csi2_fifo_reset.log -do "run -all; quit -f"
+    if ($LASTEXITCODE -ne 0) { throw "CSI-2 FIFO reset simulation failed" }
+    $resetLog = Get-Content -LiteralPath "csi2_fifo_reset.log" -Raw
+    if ($resetLog -notmatch "\[TB\] RESULT: PASS" -or $resetLog -match "\[TB\] RESULT: FAIL") {
+        throw "CSI-2 FIFO reset self-check failed; inspect $runDir/csi2_fifo_reset.log"
     }
     Write-Output "[ModelSim CSI-2 receiver with TD PH1 Soft FIFO] RESULT: PASS"
 } finally {
