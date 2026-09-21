@@ -15,6 +15,7 @@ from linux.task3_pipeline import (
     InferenceBackend,
     ModelInput,
     ModelInputSpec,
+    PREPROCESS_MAX_IMAGE_DIMENSION,
     PreprocessTransform,
 )
 from linux.task3_pipeline.models import FrameMetadata
@@ -34,6 +35,53 @@ class ModelInputContractTests(unittest.TestCase):
         alternate = ModelInputSpec(width=320, height=512, padding_value=114)
         self.assertEqual(alternate.shape, (1, 512, 320, 3))
         self.assertEqual(alternate.padding_value, 114)
+
+    def test_preprocess_image_dimension_contract_is_bounded_and_exported(self) -> None:
+        self.assertEqual(PREPROCESS_MAX_IMAGE_DIMENSION, 0xFFFF)
+        for field_name in ("width", "height"):
+            for value in (1, PREPROCESS_MAX_IMAGE_DIMENSION):
+                with self.subTest(field=field_name, accepted=value):
+                    spec = ModelInputSpec(**{field_name: value, "width" if field_name == "height" else "height": 1})
+                    self.assertEqual(getattr(spec, field_name), value)
+            for value in (0, PREPROCESS_MAX_IMAGE_DIMENSION + 1, 2**53 - 1, 10**10000):
+                with self.subTest(field=field_name, rejected=value), self.assertRaisesRegex(
+                    ValueError, f"{field_name} must be between 1 and"
+                ):
+                    ModelInputSpec(**{field_name: value, "width" if field_name == "height" else "height": 1})
+            for value in (True, np.bool_(True), 1.0):
+                with self.subTest(field=field_name, invalid_type=value), self.assertRaisesRegex(
+                    TypeError, f"{field_name} must be an integer"
+                ):
+                    ModelInputSpec(**{field_name: value, "width" if field_name == "height" else "height": 1})
+
+    def test_transform_uses_the_same_bounded_image_dimension_contract(self) -> None:
+        field_names = ("source_width", "source_height", "model_width", "model_height")
+        valid = {
+            "source_width": 1,
+            "source_height": 1,
+            "model_width": 1,
+            "model_height": 1,
+            "scale": 1.0,
+            "pad_left": 0,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_bottom": 0,
+        }
+        for field_name in field_names:
+            for value in (0, PREPROCESS_MAX_IMAGE_DIMENSION + 1, 2**53 - 1, 10**10000):
+                with self.subTest(field=field_name, rejected=value), self.assertRaisesRegex(
+                    ValueError, f"{field_name} must be between 1 and"
+                ):
+                    PreprocessTransform(**(valid | {field_name: value}))
+
+        for size in (1, PREPROCESS_MAX_IMAGE_DIMENSION):
+            with self.subTest(accepted=size):
+                transform = PreprocessTransform(size, size, size, size, 1.0, 0, 0, 0, 0)
+                self.assertEqual((transform.scaled_width, transform.scaled_height), (size, size))
+        for width, height in ((1920, 1080), (3840, 2160)):
+            with self.subTest(width=width, height=height):
+                transform = PreprocessTransform(width, height, width, height, 1.0, 0, 0, 0, 0)
+                self.assertEqual((transform.scaled_width, transform.scaled_height), (width, height))
 
     def test_spec_requires_a_non_empty_string_color_format(self) -> None:
         self.assertEqual(ModelInputSpec(1, 1, color_format="RGB").color_format, "RGB")
@@ -168,7 +216,7 @@ class ModelInputContractTests(unittest.TestCase):
     def test_transform_rejects_zero_source_dimensions_directly(self) -> None:
         for source_width, source_height, field_name in ((0, 0, "source_width"), (0, 1, "source_width"), (1, 0, "source_height")):
             with self.subTest(source_width=source_width, source_height=source_height), self.assertRaisesRegex(
-                ValueError, f"{field_name} must be positive"
+                ValueError, f"{field_name} must be between 1 and"
             ):
                 PreprocessTransform(source_width, source_height, 1, 1, 1.0, 0, 0, 0, 0)
 
@@ -200,8 +248,6 @@ class ModelInputContractTests(unittest.TestCase):
         cases = (
             (2, 1, sys.float_info.max, "width"),
             (1, 2, sys.float_info.max, "height"),
-            (10**10000, 1, 1.0, "width"),
-            (1, 10**10000, 1.0, "height"),
         )
         for source_width, source_height, scale, axis in cases:
             with self.subTest(axis=axis, scale=scale), self.assertRaisesRegex(

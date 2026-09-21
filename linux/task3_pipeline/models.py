@@ -20,6 +20,10 @@ from typing import Any, Mapping
 import numpy as np
 
 
+# Shared model/preprocessing contract, independent from any PCIe ABI limit.
+PREPROCESS_MAX_IMAGE_DIMENSION = 0xFFFF
+
+
 def _require_positive_integer(value: object, name: str) -> int:
     """Return a positive integer while rejecting bool and lossy coercions."""
     if isinstance(value, (bool, np.bool_)) or not isinstance(value, Integral):
@@ -28,6 +32,18 @@ def _require_positive_integer(value: object, name: str) -> int:
     if value <= 0:
         raise ValueError(f"{name} must be positive")
     return value
+
+
+def _require_preprocess_image_dimension(value: object, name: str) -> int:
+    """Normalize one bounded preprocessing image dimension to an exact int."""
+    if isinstance(value, (bool, np.bool_)) or not isinstance(value, (Integral, np.integer)):
+        raise TypeError(f"{name} must be an integer")
+    normalized = int(value)
+    if not 1 <= normalized <= PREPROCESS_MAX_IMAGE_DIMENSION:
+        raise ValueError(
+            f"{name} must be between 1 and {PREPROCESS_MAX_IMAGE_DIMENSION}"
+        )
+    return normalized
 
 
 def _require_non_negative_integer(value: object, name: str) -> int:
@@ -397,7 +413,11 @@ class ModelInputSpec:
     padding_value: int | float = 0
 
     def __post_init__(self) -> None:
-        for name in ("width", "height", "batch_size", "channels"):
+        for name in ("width", "height"):
+            object.__setattr__(
+                self, name, _require_preprocess_image_dimension(getattr(self, name), name)
+            )
+        for name in ("batch_size", "channels"):
             object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
         if self.batch_size != 1:
             raise ValueError("only batch_size=1 is supported by the ModelInput contract")
@@ -467,7 +487,9 @@ class PreprocessTransform:
 
     def __post_init__(self) -> None:
         for name in ("source_width", "source_height", "model_width", "model_height"):
-            object.__setattr__(self, name, _require_positive_integer(getattr(self, name), name))
+            object.__setattr__(
+                self, name, _require_preprocess_image_dimension(getattr(self, name), name)
+            )
         for name in ("pad_left", "pad_top", "pad_right", "pad_bottom"):
             object.__setattr__(self, name, _require_non_negative_integer(getattr(self, name), name))
         scale = _normalize_exact_binary64_scale(self.scale)
