@@ -24,6 +24,19 @@ import numpy as np
 PREPROCESS_MAX_IMAGE_DIMENSION = 0xFFFF
 
 
+class ResizeRoundingStrategy(str, Enum):
+    """Stable resize-dimension rounding rules for preprocessing geometry."""
+
+    HALF_UP = "half_up"
+    TRUNCATE_TOWARD_ZERO = "truncate_toward_zero"
+
+
+class PreprocessProfile(str, Enum):
+    """Named preprocessing profiles with explicitly versioned geometry."""
+
+    RK3576_YOLOV5S_RELU_PCIE_V1 = "rk3576_yolov5s_relu_pcie_v1"
+
+
 def _require_positive_integer(value: object, name: str) -> int:
     """Return a positive integer while rejecting bool and lossy coercions."""
     if isinstance(value, (bool, np.bool_)) or not isinstance(value, Integral):
@@ -75,6 +88,33 @@ def _round_scaled_dimension(original_dimension: int, scale: float, axis: str) ->
         return floor(rounded_input)
     except (OverflowError, ValueError):
         raise ValueError(error_message) from None
+
+
+def _truncate_scaled_dimension(original_dimension: int, scale: float, axis: str) -> int:
+    """Safely truncate one positive scaled dimension toward zero."""
+    error_message = f"scaled {axis} must be finite and roundable"
+    try:
+        scaled_dimension = original_dimension * scale
+    except OverflowError:
+        raise ValueError(error_message) from None
+    if not isfinite(scaled_dimension):
+        raise ValueError(error_message)
+    try:
+        return int(scaled_dimension)
+    except (OverflowError, ValueError):
+        raise ValueError(error_message) from None
+
+
+def _scaled_dimension(
+    original_dimension: int,
+    scale: float,
+    axis: str,
+    strategy: ResizeRoundingStrategy,
+) -> int:
+    """Derive one size using the transform's validated rounding strategy."""
+    if strategy is ResizeRoundingStrategy.HALF_UP:
+        return _round_scaled_dimension(original_dimension, scale, axis)
+    return _truncate_scaled_dimension(original_dimension, scale, axis)
 
 
 def _finite_real_as_integer_ratio(value: Real, name: str) -> tuple[int, int]:
@@ -173,6 +213,26 @@ def _normalize_contract_string(value: object, name: str) -> str:
         raise ValueError(f"{name} must be a string")
     normalized = str.__str__(value)
     return normalized if type(normalized) is str else str.__new__(str, normalized)
+
+
+def _normalize_contract_enum(
+    value: object,
+    enum_type: type[Enum],
+    name: str,
+) -> Enum:
+    """Accept only an exact enum or exact base-string representation.
+
+    Contract enums must not retain string subclasses, other enums, or values
+    whose equality/hash behaviour can change validation semantics.
+    """
+    if type(value) is enum_type:
+        return value
+    if type(value) is not str:
+        raise TypeError(f"{name} must be an exact {enum_type.__name__} or string value")
+    try:
+        return enum_type(value)
+    except ValueError:
+        raise ValueError(f"{name} has an unsupported value") from None
 
 
 def _normalize_tensor_shape(shape: object) -> tuple[int, ...]:
@@ -484,6 +544,8 @@ class PreprocessTransform:
     pad_top: int
     pad_right: int
     pad_bottom: int
+    rounding_strategy: ResizeRoundingStrategy | str = ResizeRoundingStrategy.HALF_UP
+    profile: PreprocessProfile | str | None = None
 
     def __post_init__(self) -> None:
         for name in ("source_width", "source_height", "model_width", "model_height"):
@@ -497,8 +559,26 @@ class PreprocessTransform:
             raise ValueError("scale must be finite and positive")
         object.__setattr__(self, "scale", scale)
 
-        scaled_width = _round_scaled_dimension(self.source_width, scale, "width")
-        scaled_height = _round_scaled_dimension(self.source_height, scale, "height")
+        strategy = _normalize_contract_enum(
+            self.rounding_strategy, ResizeRoundingStrategy, "rounding_strategy"
+        )
+        profile = (
+            None
+            if self.profile is None
+            else _normalize_contract_enum(self.profile, PreprocessProfile, "profile")
+        )
+        if (
+            profile is PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1
+            and strategy is not ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO
+        ):
+            raise ValueError(
+                "RK3576_YOLOV5S_RELU_PCIE_V1 requires truncate_toward_zero rounding_strategy"
+            )
+        object.__setattr__(self, "rounding_strategy", strategy)
+        object.__setattr__(self, "profile", profile)
+
+        scaled_width = _scaled_dimension(self.source_width, scale, "width", strategy)
+        scaled_height = _scaled_dimension(self.source_height, scale, "height", strategy)
         if scaled_width < 1 or scaled_height < 1:
             raise ValueError("scaled dimensions must round to at least 1")
         if scaled_width + self.pad_left + self.pad_right != self.model_width:
@@ -513,13 +593,13 @@ class PreprocessTransform:
 
     @property
     def scaled_width(self) -> int:
-        """Width after applying the documented nearest, half-up rounding rule."""
-        return _round_scaled_dimension(self.source_width, self.scale, "width")
+        """Width after applying this transform's documented rounding strategy."""
+        return _scaled_dimension(self.source_width, self.scale, "width", self.rounding_strategy)
 
     @property
     def scaled_height(self) -> int:
-        """Height after applying the documented nearest, half-up rounding rule."""
-        return _round_scaled_dimension(self.source_height, self.scale, "height")
+        """Height after applying this transform's documented rounding strategy."""
+        return _scaled_dimension(self.source_height, self.scale, "height", self.rounding_strategy)
 
 
 @dataclass(frozen=True, slots=True)
@@ -745,6 +825,13 @@ _PREPROCESS_TRANSFORM_FIELDS = (
     "pad_right",
     "pad_bottom",
 )
+_PREPROCESS_TRANSFORM_ROUNDING_FIELD = "rounding_strategy"
+_PREPROCESS_TRANSFORM_PROFILE_FIELD = "profile"
+_PREPROCESS_TRANSFORM_V2_FIELDS = (
+    *_PREPROCESS_TRANSFORM_FIELDS,
+    _PREPROCESS_TRANSFORM_ROUNDING_FIELD,
+    _PREPROCESS_TRANSFORM_PROFILE_FIELD,
+)
 
 
 def _normalize_preprocess_transform(
@@ -759,7 +846,7 @@ def _normalize_preprocess_transform(
         raise TypeError("PreprocessTransform subclasses are not supported by DetectionResult")
     if not isinstance(value, Mapping):
         raise TypeError("preprocess_transform must be None, PreprocessTransform, or a mapping")
-    expected_fields = set(_PREPROCESS_TRANSFORM_FIELDS)
+    expected_fields = set(_PREPROCESS_TRANSFORM_V2_FIELDS)
     normalized_keys: list[tuple[object, str]] = []
     seen_fields: set[str] = set()
     for raw_key in value:
@@ -778,16 +865,31 @@ def _normalize_preprocess_transform(
     if not normalized_keys:
         return None
 
+    missing_fields = set(_PREPROCESS_TRANSFORM_FIELDS) - seen_fields
+    if missing_fields:
+        raise ValueError(f"preprocess_transform is missing fields: {sorted(missing_fields)!r}")
+    if (
+        _PREPROCESS_TRANSFORM_PROFILE_FIELD in seen_fields
+        and _PREPROCESS_TRANSFORM_ROUNDING_FIELD not in seen_fields
+    ):
+        raise ValueError("preprocess_transform with profile requires rounding_strategy")
+
     # Phase two starts only after every raw key has passed phase-one checks.
     # The snapshot is indexed by exact base strings and never retains key state.
     mapping: dict[str, Any] = {}
     for raw_key, key in normalized_keys:
         mapping[key] = value[raw_key]
 
-    missing_fields = expected_fields - seen_fields
-    if missing_fields:
-        raise ValueError(f"preprocess_transform is missing fields: {sorted(missing_fields)!r}")
-    return PreprocessTransform(**{name: mapping[name] for name in _PREPROCESS_TRANSFORM_FIELDS})
+    transform_values = {name: mapping[name] for name in _PREPROCESS_TRANSFORM_FIELDS}
+    if _PREPROCESS_TRANSFORM_ROUNDING_FIELD in mapping:
+        transform_values[_PREPROCESS_TRANSFORM_ROUNDING_FIELD] = mapping[
+            _PREPROCESS_TRANSFORM_ROUNDING_FIELD
+        ]
+    if _PREPROCESS_TRANSFORM_PROFILE_FIELD in mapping:
+        transform_values[_PREPROCESS_TRANSFORM_PROFILE_FIELD] = mapping[
+            _PREPROCESS_TRANSFORM_PROFILE_FIELD
+        ]
+    return PreprocessTransform(**transform_values)
 
 
 @dataclass(frozen=True, slots=True)

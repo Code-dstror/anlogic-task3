@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
+from enum import Enum
 import gc
 from fractions import Fraction
 import sys
@@ -16,7 +17,9 @@ from linux.task3_pipeline import (
     ModelInput,
     ModelInputSpec,
     PREPROCESS_MAX_IMAGE_DIMENSION,
+    PreprocessProfile,
     PreprocessTransform,
+    ResizeRoundingStrategy,
 )
 from linux.task3_pipeline.models import FrameMetadata
 
@@ -225,6 +228,91 @@ class ModelInputContractTests(unittest.TestCase):
 
         self.assertEqual(transform.scaled_width, 2)
         self.assertEqual(transform.scaled_height, 1)
+
+    def test_transform_rounding_strategy_and_profile_normalize_to_exact_enums(self) -> None:
+        legacy = PreprocessTransform(3, 2, 2, 1, 0.5, 0, 0, 0, 0)
+        self.assertIs(legacy.rounding_strategy, ResizeRoundingStrategy.HALF_UP)
+        self.assertIsNone(legacy.profile)
+
+        truncated = PreprocessTransform(
+            3,
+            2,
+            1,
+            1,
+            0.5,
+            0,
+            0,
+            0,
+            0,
+            "truncate_toward_zero",
+            "rk3576_yolov5s_relu_pcie_v1",
+        )
+        self.assertEqual((truncated.scaled_width, truncated.scaled_height), (1, 1))
+        self.assertIs(type(truncated.rounding_strategy), ResizeRoundingStrategy)
+        self.assertIs(type(truncated.profile), PreprocessProfile)
+        self.assertIs(
+            truncated.rounding_strategy, ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO
+        )
+        self.assertIs(
+            truncated.profile, PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1
+        )
+
+    def test_transform_rejects_non_exact_rounding_and_profile_representations(self) -> None:
+        class StringSubclass(str):
+            pass
+
+        class OtherEnum(Enum):
+            VALUE = "half_up"
+
+        valid = dict(
+            source_width=1,
+            source_height=1,
+            model_width=1,
+            model_height=1,
+            scale=1.0,
+            pad_left=0,
+            pad_top=0,
+            pad_right=0,
+            pad_bottom=0,
+        )
+        for name, value in (
+            ("rounding_strategy", True),
+            ("rounding_strategy", "unknown"),
+            ("rounding_strategy", StringSubclass("half_up")),
+            ("rounding_strategy", OtherEnum.VALUE),
+            ("profile", True),
+            ("profile", "unknown"),
+            ("profile", StringSubclass("rk3576_yolov5s_relu_pcie_v1")),
+            ("profile", OtherEnum.VALUE),
+        ):
+            with self.subTest(name=name, value=value), self.assertRaises((TypeError, ValueError)):
+                PreprocessTransform(**(valid | {name: value}))
+
+    def test_transform_profile_requires_truncate_toward_zero(self) -> None:
+        valid = dict(
+            source_width=1,
+            source_height=1,
+            model_width=1,
+            model_height=1,
+            scale=1.0,
+            pad_left=0,
+            pad_top=0,
+            pad_right=0,
+            pad_bottom=0,
+            profile=PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1,
+        )
+        with self.assertRaisesRegex(ValueError, "requires truncate_toward_zero"):
+            PreprocessTransform(**valid)
+        with self.assertRaisesRegex(ValueError, "requires truncate_toward_zero"):
+            PreprocessTransform(
+                **(valid | {"rounding_strategy": ResizeRoundingStrategy.HALF_UP})
+            )
+        accepted = PreprocessTransform(
+            **(valid | {"rounding_strategy": ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO})
+        )
+        self.assertIs(
+            accepted.rounding_strategy, ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO
+        )
 
     def test_transform_rejects_inconsistent_horizontal_or_vertical_geometry(self) -> None:
         with self.assertRaises(ValueError):
@@ -781,6 +869,28 @@ class ModelInputContractTests(unittest.TestCase):
         result = ContractBackend().infer(model_input)
         self.assertIs(result.preprocess_transform, model_input.transform)
 
+    def test_model_input_retains_the_exact_validated_profile_transform(self) -> None:
+        spec = ModelInputSpec(width=1, height=1)
+        transform = PreprocessTransform(
+            1,
+            1,
+            1,
+            1,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO,
+            PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1,
+        )
+        model_input = ModelInput(
+            self._metadata(), np.zeros(spec.shape, dtype=spec.dtype), spec, transform
+        )
+        self.assertIs(model_input.transform, transform)
+        self.assertIs(type(model_input.transform.rounding_strategy), ResizeRoundingStrategy)
+        self.assertIs(type(model_input.transform.profile), PreprocessProfile)
+
     def test_detection_result_normalizes_supported_transform_representations(self) -> None:
         transform = self._transform_for(ModelInputSpec(width=640, height=640))
         valid_mapping = {
@@ -805,6 +915,98 @@ class ModelInputContractTests(unittest.TestCase):
         self.assertEqual(converted.preprocess_transform, transform)
         valid_mapping["model_width"] = 1
         self.assertEqual(converted.preprocess_transform.model_width, 640)
+
+    def test_detection_result_normalizes_rounding_profile_mapping_and_preserves_legacy(self) -> None:
+        legacy_mapping = {
+            "source_width": 3,
+            "source_height": 2,
+            "model_width": 2,
+            "model_height": 1,
+            "scale": 0.5,
+            "pad_left": 0,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_bottom": 0,
+        }
+        legacy = DetectionResult(0, 1, 2, preprocess_transform=legacy_mapping)
+        self.assertIs(legacy.preprocess_transform.rounding_strategy, ResizeRoundingStrategy.HALF_UP)
+        self.assertIsNone(legacy.preprocess_transform.profile)
+
+        v2_mapping = legacy_mapping | {
+            "model_width": 1,
+            "rounding_strategy": "truncate_toward_zero",
+            "profile": "rk3576_yolov5s_relu_pcie_v1",
+        }
+        converted = DetectionResult(0, 1, 2, preprocess_transform=v2_mapping)
+        self.assertIs(type(converted.preprocess_transform), PreprocessTransform)
+        self.assertIs(
+            converted.preprocess_transform.rounding_strategy,
+            ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO,
+        )
+        self.assertIs(
+            converted.preprocess_transform.profile,
+            PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1,
+        )
+
+    def test_detection_result_requires_strategy_when_mapping_has_profile_before_value_reads(self) -> None:
+        fields = (
+            "source_width",
+            "source_height",
+            "model_width",
+            "model_height",
+            "scale",
+            "pad_left",
+            "pad_top",
+            "pad_right",
+            "pad_bottom",
+            "profile",
+        )
+
+        class ProfileWithoutStrategyMapping(Mapping[str, object]):
+            getitem_calls = 0
+
+            def __iter__(self):
+                return iter(fields)
+
+            def __len__(self) -> int:
+                return len(fields)
+
+            def __getitem__(self, key: str) -> object:
+                type(self).getitem_calls += 1
+                raise AssertionError("schema validation must precede mapping value reads")
+
+        mapping = ProfileWithoutStrategyMapping()
+        with self.assertRaisesRegex(ValueError, "profile requires rounding_strategy"):
+            DetectionResult(0, 1, 2, preprocess_transform=mapping)
+        self.assertEqual(mapping.getitem_calls, 0)
+
+    def test_detection_result_rejects_untrusted_rounding_profile_mapping_values(self) -> None:
+        class StringSubclass(str):
+            pass
+
+        base_mapping = {
+            "source_width": 3,
+            "source_height": 2,
+            "model_width": 1,
+            "model_height": 1,
+            "scale": 0.5,
+            "pad_left": 0,
+            "pad_top": 0,
+            "pad_right": 0,
+            "pad_bottom": 0,
+            "rounding_strategy": "truncate_toward_zero",
+            "profile": "rk3576_yolov5s_relu_pcie_v1",
+        }
+        for name, value in (
+            ("rounding_strategy", True),
+            ("rounding_strategy", "unknown"),
+            ("rounding_strategy", StringSubclass("truncate_toward_zero")),
+            ("profile", True),
+            ("profile", "unknown"),
+            ("profile", StringSubclass("rk3576_yolov5s_relu_pcie_v1")),
+        ):
+            with self.subTest(name=name, value=value), self.assertRaises((TypeError, ValueError)):
+                DetectionResult(0, 1, 2, preprocess_transform=base_mapping | {name: value})
 
     def test_detection_result_rejects_transform_subclasses_before_reading_them(self) -> None:
         class ExplosiveTransform(PreprocessTransform):
