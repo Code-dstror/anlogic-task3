@@ -23,6 +23,25 @@ import numpy as np
 # Shared model/preprocessing contract, independent from any PCIe ABI limit.
 PREPROCESS_MAX_IMAGE_DIMENSION = 0xFFFF
 
+# Configured IMX415 camera-pipeline bounds. These constrain preprocessing
+# allocation, unlike PREPROCESS_MAX_IMAGE_DIMENSION, which is only a field
+# representation range. Packed RGB24/BGR24 at 3840x2160 is 24,883,200 bytes;
+# the remaining 256 bytes per row are a safety budget, not a hardware stride
+# guarantee.
+PREPROCESS_MAX_INPUT_WIDTH = 3840
+PREPROCESS_MAX_INPUT_HEIGHT = 2160
+PREPROCESS_MAX_INPUT_PIXELS = 8_294_400
+PREPROCESS_MAX_ROW_PADDING_BYTES = 256
+PREPROCESS_MAX_INPUT_BYTES = 25_436_160
+
+# Do not use ``isinstance(value, np.integer)`` at the resource boundary: a
+# caller-controlled NumPy scalar subclass may override instance attributes or
+# conversions.  These exact built-in scalar classes are the supported set.
+_EXACT_NUMPY_RESOURCE_INTEGER_TYPES = tuple(
+    np.dtype(name).type
+    for name in ("int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64")
+)
+
 
 class ResizeRoundingStrategy(str, Enum):
     """Stable resize-dimension rounding rules for preprocessing geometry."""
@@ -67,6 +86,69 @@ def _require_non_negative_integer(value: object, name: str) -> int:
     if value < 0:
         raise ValueError(f"{name} must be non-negative")
     return value
+
+
+def _require_exact_resource_integer(value: object, name: str, *, positive: bool) -> int:
+    """Normalize only trusted Python/NumPy integer scalars for resource checks."""
+    value_type = type(value)
+    if value_type is int:
+        normalized = value
+    elif any(value_type is allowed_type for allowed_type in _EXACT_NUMPY_RESOURCE_INTEGER_TYPES):
+        # ``value_type`` is a trusted exact built-in class, so invoking its
+        # class-level conversion cannot dispatch through a subclass instance.
+        normalized = value_type.__int__(value)
+    else:
+        raise TypeError(f"{name} must be an exact Python or NumPy integer")
+    if positive and normalized <= 0:
+        raise ValueError(f"{name} must be positive")
+    if not positive and normalized < 0:
+        raise ValueError(f"{name} must be non-negative")
+    return normalized
+
+
+def validate_preprocess_input_resources(
+    width: object,
+    height: object,
+    row_stride: object,
+    buffer_nbytes: object,
+) -> None:
+    """Validate a bounded BGR24/RGB24 layout without inspecting its pixels.
+
+    3840x2160 is the configured IMX415 camera-pipeline maximum.  The byte
+    budget covers packed RGB24/BGR24 plus at most 256 extra bytes per row; it
+    is a defensive allocation budget, not a statement about hardware stride.
+    This pure helper neither creates buffers/views/arrays nor imports OpenCV.
+    """
+    normalized_width = _require_exact_resource_integer(width, "width", positive=True)
+    normalized_height = _require_exact_resource_integer(height, "height", positive=True)
+    if normalized_width > PREPROCESS_MAX_INPUT_WIDTH:
+        raise ValueError("width exceeds PREPROCESS_MAX_INPUT_WIDTH")
+    if normalized_height > PREPROCESS_MAX_INPUT_HEIGHT:
+        raise ValueError("height exceeds PREPROCESS_MAX_INPUT_HEIGHT")
+    if normalized_width * normalized_height > PREPROCESS_MAX_INPUT_PIXELS:
+        raise ValueError("width * height exceeds PREPROCESS_MAX_INPUT_PIXELS")
+
+    normalized_row_stride = _require_exact_resource_integer(
+        row_stride, "row_stride", positive=True
+    )
+    packed_row_bytes = normalized_width * 3
+    if normalized_row_stride < packed_row_bytes:
+        raise ValueError("row_stride must be at least packed_row_bytes")
+    if normalized_row_stride > packed_row_bytes + PREPROCESS_MAX_ROW_PADDING_BYTES:
+        raise ValueError("row_stride exceeds packed_row_bytes + PREPROCESS_MAX_ROW_PADDING_BYTES")
+    if normalized_row_stride * normalized_height > PREPROCESS_MAX_INPUT_BYTES:
+        raise ValueError("row_stride * height exceeds PREPROCESS_MAX_INPUT_BYTES")
+
+    normalized_buffer_nbytes = _require_exact_resource_integer(
+        buffer_nbytes, "buffer_nbytes", positive=False
+    )
+    if normalized_buffer_nbytes > PREPROCESS_MAX_INPUT_BYTES:
+        raise ValueError("buffer_nbytes exceeds PREPROCESS_MAX_INPUT_BYTES")
+    minimum_required = (
+        (normalized_height - 1) * normalized_row_stride + packed_row_bytes
+    )
+    if normalized_buffer_nbytes < minimum_required:
+        raise ValueError("buffer_nbytes is smaller than minimum_required")
 
 
 def _round_scaled_dimension(original_dimension: int, scale: float, axis: str) -> int:

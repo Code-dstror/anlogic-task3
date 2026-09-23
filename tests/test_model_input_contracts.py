@@ -16,15 +16,134 @@ from linux.task3_pipeline import (
     InferenceBackend,
     ModelInput,
     ModelInputSpec,
+    PREPROCESS_MAX_INPUT_BYTES,
+    PREPROCESS_MAX_INPUT_HEIGHT,
+    PREPROCESS_MAX_INPUT_PIXELS,
+    PREPROCESS_MAX_INPUT_WIDTH,
     PREPROCESS_MAX_IMAGE_DIMENSION,
+    PREPROCESS_MAX_ROW_PADDING_BYTES,
     PreprocessProfile,
     PreprocessTransform,
     ResizeRoundingStrategy,
+    validate_preprocess_input_resources,
 )
 from linux.task3_pipeline.models import FrameMetadata
 
 
 class ModelInputContractTests(unittest.TestCase):
+    def test_preprocess_input_resource_constants_are_public_and_consistent(self) -> None:
+        self.assertEqual(PREPROCESS_MAX_INPUT_WIDTH, 3840)
+        self.assertEqual(PREPROCESS_MAX_INPUT_HEIGHT, 2160)
+        self.assertEqual(PREPROCESS_MAX_INPUT_PIXELS, 8_294_400)
+        self.assertEqual(PREPROCESS_MAX_ROW_PADDING_BYTES, 256)
+        self.assertEqual(PREPROCESS_MAX_INPUT_BYTES, 25_436_160)
+        self.assertEqual(PREPROCESS_MAX_INPUT_WIDTH * PREPROCESS_MAX_INPUT_HEIGHT, 8_294_400)
+        self.assertEqual(3840 * 2160 * 3, 24_883_200)
+        self.assertEqual(24_883_200 + 2160 * 256, 25_436_160)
+        self.assertEqual(PREPROCESS_MAX_IMAGE_DIMENSION, 0xFFFF)
+
+    def test_preprocess_input_resource_validation_accepts_boundary_layouts(self) -> None:
+        validate_preprocess_input_resources(1, 1, 3, 3)
+        validate_preprocess_input_resources(np.int64(1), np.uint16(1), np.int32(3), np.uint64(3))
+        validate_preprocess_input_resources(7, 1, 21, 21)
+        validate_preprocess_input_resources(3840, 2160, 11_520, 24_883_200)
+        validate_preprocess_input_resources(3840, 2160, 11_776, 25_436_160)
+
+        # The final scanline has no consumer after its 11,520 pixel bytes, so
+        # its 256 alignment bytes may be absent.
+        validate_preprocess_input_resources(3840, 2160, 11_776, 25_435_904)
+
+        # Trailing bytes within the independent budget are permitted.
+        validate_preprocess_input_resources(1, 1, 3, 4)
+
+    def test_preprocess_input_resource_validation_rejects_stride_and_buffer_boundaries(self) -> None:
+        with self.assertRaisesRegex(ValueError, "at least packed_row_bytes"):
+            validate_preprocess_input_resources(7, 1, 20, 21)
+        with self.assertRaisesRegex(ValueError, "MAX_ROW_PADDING_BYTES"):
+            validate_preprocess_input_resources(7, 1, 278, 278)
+        with self.assertRaisesRegex(ValueError, "smaller than minimum_required"):
+            validate_preprocess_input_resources(1, 2, 3, 5)
+        with self.assertRaisesRegex(ValueError, "buffer_nbytes exceeds"):
+            validate_preprocess_input_resources(1, 1, 3, 25_436_161)
+
+    def test_preprocess_input_resource_validation_rejects_invalid_integer_boundaries(self) -> None:
+        for name, value in (
+            ("width", 0),
+            ("width", -1),
+            ("width", True),
+            ("width", 1.0),
+            ("width", 3841),
+            ("height", 0),
+            ("height", -1),
+            ("height", np.bool_(True)),
+            ("height", 1.0),
+            ("height", 2161),
+            ("row_stride", 0),
+            ("row_stride", -1),
+            ("row_stride", True),
+            ("row_stride", 3.0),
+            ("buffer_nbytes", -1),
+            ("buffer_nbytes", True),
+            ("buffer_nbytes", 3.0),
+        ):
+            values = {"width": 1, "height": 1, "row_stride": 3, "buffer_nbytes": 3}
+            values[name] = value
+            with self.subTest(name=name, value=value), self.assertRaises((TypeError, ValueError)):
+                validate_preprocess_input_resources(**values)
+
+    def test_preprocess_input_resource_validation_rejects_integer_subclasses_and_huge_values(self) -> None:
+        class ExplosiveInt(int):
+            def __int__(self) -> int:
+                raise AssertionError("resource validation must reject int subclasses first")
+
+        class ExplosiveNumpyMeta(type):
+            hash_calls = 0
+            eq_calls = 0
+
+            def __hash__(cls) -> int:
+                ExplosiveNumpyMeta.hash_calls += 1
+                raise RuntimeError("resource validation must not hash a subclass type")
+
+            def __eq__(cls, other: object) -> bool:
+                ExplosiveNumpyMeta.eq_calls += 1
+                raise RuntimeError("resource validation must not compare a subclass type")
+
+        class ExplosiveNumpyInt(np.int64, metaclass=ExplosiveNumpyMeta):
+            dtype_reads = 0
+            int_calls = 0
+
+            @property
+            def dtype(self) -> np.dtype:
+                type(self).dtype_reads += 1
+                raise RuntimeError("resource validation must not read subclass.dtype")
+
+            def __int__(self) -> int:
+                type(self).int_calls += 1
+                raise RuntimeError("resource validation must not call subclass.__int__")
+
+        with self.assertRaisesRegex(TypeError, "width must be an exact"):
+            validate_preprocess_input_resources(ExplosiveInt(1), 1, 3, 3)
+        with self.assertRaisesRegex(ValueError, "width exceeds"):
+            validate_preprocess_input_resources(10**10000, 1, 3, 3)
+        with self.assertRaisesRegex(ValueError, "height exceeds"):
+            validate_preprocess_input_resources(1, 10**10000, 3, 3)
+        with self.assertRaisesRegex(ValueError, "row_stride exceeds"):
+            validate_preprocess_input_resources(1, 1, 10**10000, 3)
+        with self.assertRaisesRegex(ValueError, "buffer_nbytes exceeds"):
+            validate_preprocess_input_resources(1, 1, 3, 10**10000)
+
+        for name in ("width", "height", "row_stride", "buffer_nbytes"):
+            values = {"width": 1, "height": 1, "row_stride": 3, "buffer_nbytes": 3}
+            values[name] = ExplosiveNumpyInt(1)
+            with self.subTest(numpy_subclass_field=name), self.assertRaisesRegex(
+                TypeError, f"{name} must be an exact Python or NumPy integer"
+            ):
+                validate_preprocess_input_resources(**values)
+        self.assertEqual(ExplosiveNumpyInt.dtype_reads, 0)
+        self.assertEqual(ExplosiveNumpyInt.int_calls, 0)
+        self.assertEqual(ExplosiveNumpyMeta.hash_calls, 0)
+        self.assertEqual(ExplosiveNumpyMeta.eq_calls, 0)
+
     def test_yolov5_baseline_is_explicit_and_size_is_configurable(self) -> None:
         baseline = ModelInputSpec(width=640, height=640)
 

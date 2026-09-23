@@ -31,12 +31,18 @@ from .models import (
     ImmutableTensor,
     ModelInput,
     ModelInputSpec,
+    PREPROCESS_MAX_INPUT_BYTES,
+    PREPROCESS_MAX_INPUT_HEIGHT,
+    PREPROCESS_MAX_INPUT_PIXELS,
+    PREPROCESS_MAX_INPUT_WIDTH,
     PREPROCESS_MAX_IMAGE_DIMENSION,
+    PREPROCESS_MAX_ROW_PADDING_BYTES,
     PreprocessProfile,
     PreprocessTransform,
     ResizeRoundingStrategy,
     RuntimeMetrics,
     SourceHealth,
+    validate_preprocess_input_resources,
 )
 
 __all__ = [
@@ -62,7 +68,12 @@ __all__ = [
     "OutputSink",
     "OpenCvJpegDecoder",
     "PipelineError",
+    "PREPROCESS_MAX_INPUT_BYTES",
+    "PREPROCESS_MAX_INPUT_HEIGHT",
+    "PREPROCESS_MAX_INPUT_PIXELS",
+    "PREPROCESS_MAX_INPUT_WIDTH",
     "PREPROCESS_MAX_IMAGE_DIMENSION",
+    "PREPROCESS_MAX_ROW_PADDING_BYTES",
     "PreprocessProfile",
     "PreprocessTransform",
     "PcieV1Record",
@@ -73,4 +84,5 @@ __all__ = [
     "SourceError",
     "SourceHealth",
     "ValidationError",
+    "validate_preprocess_input_resources",
 ]
