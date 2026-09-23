@@ -10,6 +10,7 @@ from .errors import (
     InferenceError,
     OutputError,
     PipelineError,
+    PreprocessError,
     SourceError,
     ValidationError,
 )
@@ -68,6 +69,7 @@ __all__ = [
     "OutputSink",
     "OpenCvJpegDecoder",
     "PipelineError",
+    "PreprocessError",
     "PREPROCESS_MAX_INPUT_BYTES",
     "PREPROCESS_MAX_INPUT_HEIGHT",
     "PREPROCESS_MAX_INPUT_PIXELS",
