@@ -1,0 +1,2 @@
+# Preserve byte-exact serial evidence, including CR and terminal escapes.
+**/serial.raw -text -diff

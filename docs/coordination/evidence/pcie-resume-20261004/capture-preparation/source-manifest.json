@@ -1,0 +1,16 @@
+{
+  "commit": "581148cd41404a47925d2c2a3697723a181e1230",
+  "files": {
+    "linux/task3_pipeline/capture_v1_record.py": "a263a64c9275db37e5f5accd5dc4f2a9cf00ca28372be2ec7f0591e752e55a59",
+    "linux/task3_pipeline/session_rearm.py": "2cf1768e9c637266bc50850e619369445f376b7b2670ddc5872a45b4ca84e74b",
+    "linux/task3_pipeline/pcie_protocol_v1.py": "2d5dd5d7a18196b24c8888b5e3fa6f50489c9fb374d94c1bda0d64107f4c7e73",
+    "tests/test_capture_v1_record.py": "08f6154feccc6add75b1237f44b0a3c5e9e88b6d396b2dadd8486290a79949f0",
+    "tests/test_session_rearm.py": "08b9c23e941b6aa7846a6221436437a65eca1d36bfc5c888e1a822c2fdb48e4d",
+    "docs/pcie_protocol_v1.json": "7e337af3d41467ede724d8d0685ac230358203dabca78255404e15900829f449",
+    "fpga_debug/20260930/host_tools/fixtures/c2h_fixture_395.record": "949e5784bdc0101421596c3e93b39d5fa51dfaf20bedba1e1119e737f7d7eab7",
+    "linux/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux/task3_pipeline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Pinned receiver plus offline mocks; fixture is synthetic reference, not FDI4 capture"
+}

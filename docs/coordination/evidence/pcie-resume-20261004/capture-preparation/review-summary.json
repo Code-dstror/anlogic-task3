@@ -1,0 +1,38 @@
+{
+  "source": "Assistant ran offline mocked tests on RK in this turn, not DMA tests",
+  "recorded_at": "2026-10-04T17:24:18.993972+08:00",
+  "package_root": "/tmp/task3-fdi4-capture-vc4vuuhy",
+  "source_commit": "581148cd41404a47925d2c2a3697723a181e1230",
+  "hashes_match": true,
+  "offline_tests": {
+    "count": 15,
+    "exit_code": 0
+  },
+  "current_app_control": 0,
+  "current_app_status": "0x43",
+  "c2h_alignment_raw": "0x00010101",
+  "driver_decoded_buffer_alignment_bytes": 1,
+  "driver_decoded_length_granularity_bytes": 1,
+  "proposed_capacity": 16777280,
+  "capacity_basis": "64 header plus currently reported16777216 maxpayload; not fixed transfer length",
+  "timeout_semantics": "Receiver10 seconds per ready/running/armed/record/cleanup phase; kernel c2h_timeout10 per transfer; real cancellation not yet verified",
+  "board_decoders": {
+    "cv2": false,
+    "PIL": false,
+    "numpy": false
+  },
+  "host_decoders_available": {
+    "cv2": true,
+    "PIL": true,
+    "numpy": true
+  },
+  "limitations": [
+    "Unit tests use mocks and do not prove EOP short completion or DMA cancellation",
+    "Receiver only saves output after valid parse; malformed returned payload would not be preserved by its current CLI",
+    "FDI4 source/launch semantics still pending teammate commit; user coordinating submission",
+    "Do not assume FDI4 supports P fixed JPEG mode"
+  ],
+  "next_step": "Fetch teammate FDI4 commit, audit launch/session behavior and adjust preparation if necessary before seeking concrete DMA authorization",
+  "dma_started": false,
+  "application_writes": false
+}

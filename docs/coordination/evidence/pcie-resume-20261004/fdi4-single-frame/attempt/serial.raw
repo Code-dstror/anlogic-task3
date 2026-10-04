@@ -1,0 +1,91 @@
+
+[?2004l[?2004hroot@linaro-alip:/# python3 - <<'TASK3_READONLY_EOF'
+[?2004lpeline/capture_v1_record[?2004h> expected_files={'linux/task3_pipeline/capture_v1_record.py': 'a263a64c9275db37e5f5accd5dc4f2a9cf00ca28372be2ec7f0591e752e55a59', 'linux/task3_pipeline/session_rearm.py': '2cf1768e9c637266bc50850e619369445f376b7b2670ddc5872a45b4ca84e74b', 'linux/task3_pipeline/pcie_protocol_v1.py': '2d5dd5d7a18196b24c8888b5e3fa6f50489c9fb374d94c1bda0d64107f4c7e73', 'tests/test_capture_v1_record.py': '08f6154feccc6add75b1237f44b0a3c5e9e88b6d396b2dadd8486290a79949f0', 'tests/test_session_rearm.py': '08b9c23e941b6aa7846a6221436437a65eca1d36bfc5c888e1a822c2fdb48e4d', 'docs/pcie_protocol_v1.json': '7e337af3d41467ede724d8d0685ac230358203dabca78255404e15900829f449', 'fpga_debug/20260930/host_tools/fixtures/c2h_fixture_395.record': '949e5784bdc0101421596c3e93b39d5fa51dfaf20bedba1e1119e737f7d7eab7', 'linux/__init__.py': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'linux/task3_pipeline/__init__.py': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'tests/__init__.py': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}
+[?2004l[?2004h> import os,json,time,hashlib,subprocess,traceback,sys,tempfile,stat
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> r={'operation':'authorized FDI4 single C2H record','boot_id':Path('/proc/sys/kernel/random/boot_id').read_text().strip(),'uptime_before':Path('/proc/uptime').read_text().strip()}
+[?2004l[?2004h> def run(args):
+[?2004l,text=True,ti[?2004h>  p=subprocess.run(args,capture_output=True,text=True,timeout=15)
+[?2004l'stdout':p.stdout,'s[?2004h>  return {'code':p.returncode,'stdout':p.stdout,'stderr':p.stderr}
+[?2004l[?2004h> def snapshot(bar):
+[?2004l[?2004h>  return {hex(off):hex(bar.read32(off)) for off in range(0,64,4)}
+[?2004l[?2004h> try:
+[?2004l['boot_id']=='ef75[?2004h>  assert r['boot_id']=='ef755806-6941-41d6-8d43-d109ed7ead89','Boot changed'
+[?2004l('/tmp/task3-fdi4[?2004h>  pkg=Path('/tmp/task3-fdi4-capture-vc4vuuhy')
+[?2004l[?2004h>  for name,h in expected_files.items():assert hashlib.sha256((pkg/name).read_bytes()).hexdigest()==h,name
+[?2004l[?2004h>  assert Path('/sys/module/anlogic_pci').exists(),'Driver absent'
+[?2004l[?2004h>  r['parameters']={p.name:p.read_text().strip() for p in Path('/sys/module/anlogic_pci/parameters').glob('*')}
+[?2004lert r[?2004h>  assert r['parameters']['poll_mode']=='1' and r['parameters']['enable_st_c2h_credit']=='1'
+[?2004l[?2004h>  eps=[p for p in Path('/sys/bus/pci/devices').iterdir() if (p/'vendor').read_text().strip()=='0x1edb' and (p/'device').read_text().strip()=='0xabcd']
+[?2004l[?2004h>  assert len(eps)==1
+[?2004l[?2004h>  ep=eps[0];r['endpoint']=ep.name
+[?2004l[?2004h>  assert (ep/'driver').resolve().name=='Anlogic-pcie'
+[?2004l[?2004h>  r['root_link_before']=run(['lspci','-Dnnvv','-s',ep.resolve().parent.name])
+[?2004l[?2004h>  assert 'DLActive+' in r['root_link_before']['stdout'],'Root link inactive'
+[?2004lob('ANLOGIC*'):
+ [?2004h>  nodes={}
+[?2004lsp=[?2004h>  for n in Path('/dev').glob('ANLOGIC*'):
+[?2004l[?2004h>   st=n.stat();sp=(Path('/sys/dev/char')/(str(os.major(st.st_rdev))+':'+str(os.minor(st.st_rdev)))).resolve()
+[?2004lSCHR(st.[?2004h>   if stat.S_ISCHR(st.st_mode) and str(ep.resolve())+'/' in str(sp):nodes[n.name]=str(n)
+[?2004lv for k,v in nodes.it[?2004h>  users=[v for k,v in nodes.items() if k.endswith('_user')];c2hs=[v for k,v in nodes.items() if k.endswith('_c2h_0')]
+[?2004l[?2004h>  assert len(users)==len(c2hs)==1
+[?2004l':user[?2004h>  r['nodes']={'user':users[0],'c2h':c2hs[0]}
+[?2004l);sys.[?2004h>  os.chdir(pkg);sys.path.insert(0,str(pkg))
+[?2004lpel[?2004h>  from linux.task3_pipeline.capture_v1_record import UserBar,ProcessReader,capture_one,validate_device
+[?2004l[?2004h>  out=Path(tempfile.mkdtemp(prefix='task3-fdi4-single-'));r['output_directory']=str(out);r['trace']=[]
+[?2004l(UserBar):
+  def[?2004h>  class TracedBar(UserBar):
+[?2004l[?2004h>   def write32(self,off,value):
+[?2004l[?2004h>    assert off==0x18 and value in (0,1),'Unexpected reset/control write refused'
+[?2004ld({'ti[?2004h>    r['trace'].append({'time':time.monotonic(),'write':hex(off),'value':value}) [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K)
+[?2004l[?2004h>    return super().write32(off,value)
+[?2004l[?2004h>  class SavedReader(ProcessReader):
+[?2004l[?2004h>   def receive(self):
+[?2004l[?2004h>    kind,value=super().receive()
+[?2004l[?2004h>    if kind=='ok' and isinstance(value,bytes):
+[?2004l[?2004h>     (out/'received.raw').write_bytes(value)
+[?2004l[?2004h>     r['raw_bytes']=len(value);r['raw_sha256']=hashlib.sha256(value).hexdigest()
+[?2004l[?2004h>    return kind,value
+[?2004l[?2004h>  with TracedBar(users[0]) as bar:
+[?2004l);[?2004h>   validate_device(bar.read32);r['registers_before']=snapshot(bar)
+[?2004l[?2004h>   assert bar.read32(0x18)==0 and bar.read32(0x1c)==0x43,'Session not idle/rearm ready'
+[?2004l[?2004h>   assert bar.read32(0x10)==16777216 and bar.read32(0x14)==64
+[?2004l[?2004h>   try:
+[?2004l(bar,c2hs[0],1677728[?2004h>    data,header=capture_one(bar,c2hs[0],16777280,10,worker_factory=SavedReader) [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K)
+[?2004l[?2004h>    (out/'frame.record').write_bytes(data);(out/'frame.jpg').write_bytes(data[64:])
+[?2004l[?2004h>    r['capture']='PASS';r['header']=header
+[?2004lc:
+   r['cap[?2004h>   except Exception as exc:
+[?2004l[?2004h>    r['capture']='FAIL';r['capture_exception']=str(exc);r['capture_traceback']=traceback.format_exc()
+[?2004l[?2004h>   finally:r['registers_after']=snapshot(bar)
+[?2004l[?2004h>  r['root_link_after']=run(['lspci','-Dnnvv','-s',ep.resolve().parent.name])
+[?2004lxc:r['exception']=s[?2004h> except Exception as exc:r['exception']=str(exc);r['traceback']=traceback.format_exc()
+[?2004l[?2004h> r['uptime_after']=Path('/proc/uptime').read_text().strip()
+[?2004l[?2004h> d=run(['dmesg']);d['stdout']='\n'.join(d['stdout'].splitlines()[-100:]);r['dmesg']=d
+[?2004l[?2004h> if 'output_directory' in r:Path(r['output_directory'],'result.json').write_text(json.dumps(r,indent=2))
+[?2004lt('TASK3_RESULT[?2004h> print('TASK3_RESULT_BEGIN',flush=True)
+[?2004l[?2004h> print(json.dumps(r),flush=True)
+[?2004l[?2004h> print('TASK3_RESULT_END',flush=True)
+[?2004l[?2004h> 
+[?2004l[?2004h> TASK3_READONLY_EOF
+[?2004lTraceback (most recent call last):
+  File "<stdin>", line 60, in <module>
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+[?2004hroot@linaro-alip:/# 

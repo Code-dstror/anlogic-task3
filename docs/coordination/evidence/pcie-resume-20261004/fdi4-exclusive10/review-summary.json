@@ -1,0 +1,43 @@
+{
+  "source": "Assistant executed RK serial tests and Ubuntu full JPEG decodes; exclusivity based on user report that FPGA teammate paused",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "result": "PERSISTENT_STOP_STATE_BUSY_REPRODUCED",
+  "requested": 10,
+  "attempted": 5,
+  "capture_and_end_state_pass": 4,
+  "valid_decoded_records": 5,
+  "not_run": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "old_busy_recovery": "Application soft reset followed by REARM_READY and successful first capture. No board reboot or FPGA reprogramming.",
+  "end_state": {
+    "CONTROL": 0,
+    "STATUS": "0x8b",
+    "TX_BUSY": 1,
+    "C2H_RUNNING": 0,
+    "SENDING_MASK": 1,
+    "PRODUCER_SEQUENCE": 14,
+    "CONSUMED_SEQUENCE": 14,
+    "DMA_ERROR_COUNT": 0,
+    "LAST_ERROR": 0,
+    "open_device_fds": [],
+    "serial": "released"
+  },
+  "persistence": "10 subsequent readonly samples all0x8b",
+  "diagnosis": "Prior concurrent UART activity alone is insufficient to explain reproduction after application reset during reported exclusive window. Exact internal busy source remains unknown. Buffered next-record header remains a hypothesis. The test expects idle after host single-read stop; that expectation needs alignment with FDI4 stop/rearm contract.",
+  "next_readonly_request_for_fpga_owner": [
+    "Identify frame_tx_busy, adapter_busy and recovery_required separately if existing diagnostics expose them.",
+    "If available read adapter state/header_index, meta_valid/meta_ready, metadata_accepted, FIFO occupancy or source valid, APP_ENABLE and C2H_RUNNING.",
+    "Do not reset or switch modes just to inspect; preserve current state until observations saved."
+  ],
+  "not_claimed": [
+    "No definitive RTL bug finding",
+    "No10-session acceptance",
+    "No proof of no drops from hardwired DROP/OVERFLOW0",
+    "No continuous throughput or timeout-cancel validation"
+  ]
+}

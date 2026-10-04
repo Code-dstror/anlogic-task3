@@ -1,0 +1,40 @@
+{
+  "record_bytes": 106850,
+  "jpeg_bytes": 106786,
+  "record_sha256": "457ffeba782860988d65a363c8c0d9f9154759220dcef7d9f00daa7537a248a0",
+  "jpeg_sha256": "72fcc356fc38a93458176c41833adad05feca9531ea2550409f79d6ec5e0cbb5",
+  "header": {
+    "frame_magic": 1196444225,
+    "protocol_version": 1,
+    "header_length": 64,
+    "frame_sequence": 0,
+    "payload_length": 106786,
+    "width": 1920,
+    "height": 1080,
+    "pixel_format": 1,
+    "compression": 1,
+    "quality": 75,
+    "flags": 1,
+    "timestamp_ns": 145041400,
+    "status": 0,
+    "error_code": 0,
+    "slot_id": 0,
+    "reserved0": 0,
+    "payload_crc32": 0,
+    "reserved1": "00000000000000000000000000000000"
+  },
+  "pillow": {
+    "mode": "RGB",
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  "opencv_shape": [
+    1080,
+    1920,
+    3
+  ],
+  "same_jpeg_as_first": false,
+  "mean_absolute_pixel_difference": 43.67038258744856
+}

@@ -1,0 +1,57 @@
+{
+  "record_bytes": 102104,
+  "jpeg_bytes": 102040,
+  "record_sha256": "f97a9fbeae7af92ccbee5a805e9774a3bb9feb54785081441139d46f6b3a89e9",
+  "header": {
+    "frame_magic": 1196444225,
+    "protocol_version": 1,
+    "header_length": 64,
+    "frame_sequence": 0,
+    "payload_length": 102040,
+    "width": 1920,
+    "height": 1080,
+    "pixel_format": 1,
+    "compression": 1,
+    "quality": 75,
+    "flags": 1,
+    "timestamp_ns": 1629576010152,
+    "status": 0,
+    "error_code": 0,
+    "slot_id": 0,
+    "reserved0": 0,
+    "payload_crc32": 0,
+    "reserved1": "00000000000000000000000000000000"
+  },
+  "pillow": {
+    "format": "JPEG",
+    "mode": "RGB",
+    "size": [
+      1920,
+      1080
+    ],
+    "extrema": [
+      [
+        24,
+        255
+      ],
+      [
+        14,
+        255
+      ],
+      [
+        22,
+        255
+      ]
+    ]
+  },
+  "opencv_shape": [
+    1080,
+    1920,
+    3
+  ],
+  "opencv_channel_mean": [
+    95.40889130015432,
+    67.1295669367284,
+    95.34227864583333
+  ]
+}

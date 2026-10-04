@@ -1,0 +1,132 @@
+[
+  {
+    "frame": "frame-01",
+    "record_bytes": 81830,
+    "payload_bytes": 81766,
+    "record_sha256": "33efa842d44293533f13ceda08245226f57b24662e7552181c716b3ee6f25fa7",
+    "jpeg_sha256": "8cd1446a3afabba2d7836038f6a564d7967e975f815c09b9751572e15cfcbb0f",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-02",
+    "record_bytes": 81942,
+    "payload_bytes": 81878,
+    "record_sha256": "61ada65805e41cdff5ea2ed05c1f098834793c5bfff555699faeeee0d7a4fb6d",
+    "jpeg_sha256": "2d60a787a07d5c30c3b065fb7c68a0f72cdb8b82ebbe6a8826b6559a5ad157ce",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-03",
+    "record_bytes": 81845,
+    "payload_bytes": 81781,
+    "record_sha256": "e2c263ecbb135164dc5245b41506461229c2e93a23fb964c214498f820fbfd25",
+    "jpeg_sha256": "b7574b75a80b39be460427582fe72e652efc8f74877f1fa4821c5bdd57698147",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-04",
+    "record_bytes": 82064,
+    "payload_bytes": 82000,
+    "record_sha256": "ee18e6baa6c9405037ae4ee193edb7a754f79aaf123d9cbc6e3ec01457d8d1a6",
+    "jpeg_sha256": "6ba692bc39f87c8d58e0adac62236102efb374fe94e86aa4b7bc308d2c3302f0",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-05",
+    "record_bytes": 82015,
+    "payload_bytes": 81951,
+    "record_sha256": "24843d847a10ef7f2457d6e8d4dd749cbf8806951f642cabfb2a2f4b6f31bd47",
+    "jpeg_sha256": "53a537a8ee166cddbc8aa6163ba364bc52f1177e3bb130a2cd1eec67d80e69e8",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-06",
+    "record_bytes": 81871,
+    "payload_bytes": 81807,
+    "record_sha256": "61cf41b0a1f2d41a55cfb20b615a1c1f409fe66c44bdae2216fd9b3fd056f7ee",
+    "jpeg_sha256": "86ec09be9b175ccafcbe22ef1b9be0894703598a6f230136bc3345da336c2cea",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-07",
+    "record_bytes": 81942,
+    "payload_bytes": 81878,
+    "record_sha256": "90090f0f4d40a259d85e40598fd01208a9bf786cd1d08adf281f14e46f9c42c4",
+    "jpeg_sha256": "8b21fc01a57777cd3ec642464427d93d36cadeca8312afa9941aefad945e481c",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-08",
+    "record_bytes": 82119,
+    "payload_bytes": 82055,
+    "record_sha256": "cad0debae47b87445c256e54a94182b572fcfedd0009e828e434d644b1dfcdcf",
+    "jpeg_sha256": "29cd5af0580806e5002ce7d6aca8d2759332b1991cd8282810cd65e79974db2b",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-09",
+    "record_bytes": 82003,
+    "payload_bytes": 81939,
+    "record_sha256": "61f62b5f914cd89aa3749c2fd13fb0ba4fb1f09dfc046bcd49849fa40ac3e294",
+    "jpeg_sha256": "0bb78b6e1cc1c3229aa630862055cde8ad5e87e6d298f8afc3272aaa1da99da5",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  },
+  {
+    "frame": "frame-10",
+    "record_bytes": 81917,
+    "payload_bytes": 81853,
+    "record_sha256": "e76270ea9146610a0e7461a5cc3f14a4f77332a950883be46e2e23553de661e1",
+    "jpeg_sha256": "2b5b5ee03e0759ac457566e44da4e4cfbffd5fadde2104fcc3b0ebdb63276c8c",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  }
+]
