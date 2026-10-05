@@ -433,6 +433,36 @@ class ModelInputContractTests(unittest.TestCase):
             accepted.rounding_strategy, ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO
         )
 
+    def test_23class_profile_is_distinct_and_requires_truncation(self) -> None:
+        scale = min(640 / 1273, 640 / 731)
+        fields = dict(
+            source_width=1273,
+            source_height=731,
+            model_width=640,
+            model_height=640,
+            scale=scale,
+            pad_left=0,
+            pad_top=136,
+            pad_right=0,
+            pad_bottom=137,
+            profile=PreprocessProfile.NUIMAGES_CAM_FRONT_23CLASS_V1,
+        )
+        with self.assertRaisesRegex(ValueError, "requires truncate_toward_zero"):
+            PreprocessTransform(**fields)
+        transform = PreprocessTransform(
+            **fields,
+            rounding_strategy=ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO,
+        )
+        self.assertEqual((transform.scaled_width, transform.scaled_height), (640, 367))
+        self.assertIs(transform.profile, PreprocessProfile.NUIMAGES_CAM_FRONT_23CLASS_V1)
+        self.assertIsNot(
+            transform.profile, PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1
+        )
+        self.assertEqual(
+            PreprocessProfile.NUIMAGES_CAM_FRONT_23CLASS_V1.value,
+            "nuimages_cam_front_23class_v1",
+        )
+
     def test_transform_rejects_inconsistent_horizontal_or_vertical_geometry(self) -> None:
         with self.assertRaises(ValueError):
             PreprocessTransform(1280, 720, 641, 640, 0.5, 0, 140, 0, 140)

@@ -54,6 +54,7 @@ class PreprocessProfile(str, Enum):
     """Named preprocessing profiles with explicitly versioned geometry."""
 
     RK3576_YOLOV5S_RELU_PCIE_V1 = "rk3576_yolov5s_relu_pcie_v1"
+    NUIMAGES_CAM_FRONT_23CLASS_V1 = "nuimages_cam_front_23class_v1"
 
 
 def _require_positive_integer(value: object, name: str) -> int:
@@ -651,10 +652,10 @@ class PreprocessTransform:
         )
         if (
             profile is PreprocessProfile.RK3576_YOLOV5S_RELU_PCIE_V1
-            and strategy is not ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO
-        ):
+            or profile is PreprocessProfile.NUIMAGES_CAM_FRONT_23CLASS_V1
+        ) and strategy is not ResizeRoundingStrategy.TRUNCATE_TOWARD_ZERO:
             raise ValueError(
-                "RK3576_YOLOV5S_RELU_PCIE_V1 requires truncate_toward_zero rounding_strategy"
+                f"{profile.name} requires truncate_toward_zero rounding_strategy"
             )
         object.__setattr__(self, "rounding_strategy", strategy)
         object.__setattr__(self, "profile", profile)
