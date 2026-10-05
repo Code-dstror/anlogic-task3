@@ -1,0 +1,9 @@
+{
+  "source": "User report after prior batch",
+  "prior_batch": "fdi4-repeat10",
+  "confound": "FPGA teammate used FPGA UART during prior batch; commands and timestamps unknown.",
+  "retained_facts": "7 valid records received; TX_BUSY persisted after stop.",
+  "root_cause": "Unknown. Prior prefetch explanation is a hypothesis, not isolated causality.",
+  "exclusive_window": "User now reports FPGA teammate operations paused; not independently monitored.",
+  "preflight": "Same RK boot, no open ANLOGIC device fds, STATUS0x8b, CONTROL0, C2H_RUNNING0, producer/consumer9."
+}

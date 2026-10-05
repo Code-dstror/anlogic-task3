@@ -1,0 +1,235 @@
+{
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "samples": [
+    {
+      "time": 5407.046153813,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5407.246393404,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5407.446652423,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5407.646888231,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5407.847099664,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5408.047315394,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5408.247515038,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5408.447752377,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5408.648025806,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 5408.848250803,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x18",
+        "0x2c": "0x18",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    }
+  ],
+  "open_device_fds": [],
+  "files": [
+    {
+      "key": "frame-01",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-01/frame.record",
+      "bytes": 81830,
+      "sha256": "33efa842d44293533f13ceda08245226f57b24662e7552181c716b3ee6f25fa7"
+    },
+    {
+      "key": "frame-02",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-02/frame.record",
+      "bytes": 81942,
+      "sha256": "61ada65805e41cdff5ea2ed05c1f098834793c5bfff555699faeeee0d7a4fb6d"
+    },
+    {
+      "key": "frame-03",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-03/frame.record",
+      "bytes": 81845,
+      "sha256": "e2c263ecbb135164dc5245b41506461229c2e93a23fb964c214498f820fbfd25"
+    },
+    {
+      "key": "frame-04",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-04/frame.record",
+      "bytes": 82064,
+      "sha256": "ee18e6baa6c9405037ae4ee193edb7a754f79aaf123d9cbc6e3ec01457d8d1a6"
+    },
+    {
+      "key": "frame-05",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-05/frame.record",
+      "bytes": 82015,
+      "sha256": "24843d847a10ef7f2457d6e8d4dd749cbf8806951f642cabfb2a2f4b6f31bd47"
+    },
+    {
+      "key": "frame-06",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-06/frame.record",
+      "bytes": 81871,
+      "sha256": "61cf41b0a1f2d41a55cfb20b615a1c1f409fe66c44bdae2216fd9b3fd056f7ee"
+    },
+    {
+      "key": "frame-07",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-07/frame.record",
+      "bytes": 81942,
+      "sha256": "90090f0f4d40a259d85e40598fd01208a9bf786cd1d08adf281f14e46f9c42c4"
+    },
+    {
+      "key": "frame-08",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-08/frame.record",
+      "bytes": 82119,
+      "sha256": "cad0debae47b87445c256e54a94182b572fcfedd0009e828e434d644b1dfcdcf"
+    },
+    {
+      "key": "frame-09",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-09/frame.record",
+      "bytes": 82003,
+      "sha256": "61f62b5f914cd89aa3749c2fd13fb0ba4fb1f09dfc046bcd49849fa40ac3e294"
+    },
+    {
+      "key": "frame-10",
+      "path": "/tmp/task3-stop-v2-repeat10-s3pgvdj8/frame-10/frame.record",
+      "bytes": 81917,
+      "sha256": "e76270ea9146610a0e7461a5cc3f14a4f77332a950883be46e2e23553de661e1"
+    }
+  ],
+  "dmesg_tail": [
+    "[ 1612.007241] BAR #5 is not present - skipping",
+    "[ 1612.007248] BAR5 len:0",
+    "[ 1612.007254] 2 BARs: config 1, user 0, bypass -1.",
+    "[ 1612.008724] anlogic_pci:sgdma_thread_add_work: 0-H2C0-ST 0x00000000275f403c assigned to cmpl status thread sgdma_poll_th1,1.",
+    "[ 1612.008782] 0-C2H0-ST init: st_c2h credit=1 force_wb=0 desc_max=1023.",
+    "[ 1612.009120] 0-C2H0-ST enable credit mode.",
+    "[ 1612.009134] anlogic_pci:sgdma_thread_add_work: 0-C2H0-ST 0x0000000062cb5f72 assigned to cmpl status thread sgdma_poll_th2,1.",
+    "[ 1612.009148] 0000:21:00.0: poll_mode=1, probed engines h2c=1 c2h=1.",
+    "[ 1612.009156] 0000:21:00.0: poll mode active, skip MSI/MSI-X and IRQ setup.",
+    "[ 1612.009168] xpdev_create_interfaces config bar:1",
+    "[ 1612.009180] allocate cdev region OK",
+    "[ 1612.009186]  cdev region MAJOR: 511, MINOR:0",
+    "[ 1612.009452] xpdev_create_interfaces ctrl_cdev OK",
+    "[ 1612.009628] xpdev_create_interfaces user bar:0",
+    "[ 1612.009709] xpdev_create_interfaces user_cdev OK"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "source": "Assistant RK serial execution plus full local Pillow/OpenCV decodes, not simulation",
+  "result": "PASS_10_SINGLE_RECORDS_AND_NO_DATA_DRIVER_TIMEOUT_RECOVERY",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "candidate_board_path": "/tmp/task3-stop-v2-4b0kcmgz",
+  "repeat10": {
+    "records": 10,
+    "full_decodes": 10,
+    "capacity": 16777280,
+    "record_byte_range": [
+      81830,
+      82119
+    ],
+    "soft_resets": 10,
+    "rearm_ready_and_not_busy_checked_before_dma": 10,
+    "raw_saves_after_APP_ENABLE0": 10,
+    "end_statuses": [
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83",
+      "0x83"
+    ],
+    "producer_consumed": [
+      14,
+      24
+    ]
+  },
+  "no_data": {
+    "APP_ENABLE": 0,
+    "observed_C2H_RUNNING": true,
+    "elapsed_seconds": 10.062941248000243,
+    "reader_error": "OSError: [Errno 512] Unknown error 512",
+    "completion_before_host_fallback": true,
+    "after_status": "0x63",
+    "C2H_RUNNING_after": 0,
+    "TX_BUSY_after": 0,
+    "source_explanation": "anlogic_pci_lib.c timeout default path logs timed out, aborts/stops engine and returns -ERESTARTSYS; userspace observed errno512, not standard ETIMEDOUT",
+    "recovery": "One following read returned81689 bytes and fully decoded1920x1080 without reboot, driver reload or extra session reset after the already-ready timeout state."
+  },
+  "final_state": {
+    "CONTROL": 0,
+    "STATUS": "0x83",
+    "TX_BUSY": 0,
+    "C2H_RUNNING": 0,
+    "producer": 25,
+    "consumed": 25,
+    "DMA_ERROR_COUNT": 0,
+    "LAST_ERROR": 0,
+    "open_device_fds": [],
+    "serial": "released"
+  },
+  "limitations": [
+    "One no-data driver-timeout recovery test only",
+    "Host-forced cancellation before driver timeout not tested",
+    "Continuous DMA/buffer reuse/throughput not validated",
+    "No claim stop is always immediately idle; next rearm is decisive",
+    "Errno512 presentation remains a driver/API limitation",
+    "Candidate is isolated; production source integration not completed",
+    "No commit or push"
+  ]
+}

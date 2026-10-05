@@ -1,0 +1,31 @@
+{
+  "source": "Assistant executed user-authorized module load and read-only FDI4 checks this turn",
+  "host_recorded_at": "2026-10-04T17:20:49.316445+08:00",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "module_sha256": "359f99f28d05fc9d6da2d881cabdad76a250b014fc16bbfdfcf5f9500cc71bed",
+  "load_returncode": 0,
+  "endpoint": "0000:21:00.0",
+  "driver": "/sys/bus/pci/drivers/Anlogic-pcie",
+  "node_mapping_verified": true,
+  "magic": "0x33434641",
+  "version": 1,
+  "capabilities": "0x2f",
+  "slot_count": 1,
+  "max_payload": 16777216,
+  "header_length": 64,
+  "control": 0,
+  "status": "0x43",
+  "status_decoded": {
+    "LINK_UP": true,
+    "USER_RESET_RELEASED": true,
+    "SESSION_REARM_READY": true,
+    "SESSION_ARMED": false,
+    "C2H_RUNNING": false
+  },
+  "error_counters": "DROP/OVERFLOW/DMA_ERROR/LAST_ERROR all0",
+  "link_checks": "Before load, after load and after application reads: Gen2x1, Root DLActive+, EP config readable. AER UESta/CESta listed flags clear.",
+  "dma_started": false,
+  "application_register_writes": false,
+  "remaining": "Real DMA completion, record integrity and complete JPEG decode not tested. FDI4 must not be assumed to emit P395-byte fixture. Actual FDI4 source overlay/launch requirements still to review before DMA.",
+  "end_state": "Module remains loaded; APP_ENABLE0; session unarmed; serial released"
+}

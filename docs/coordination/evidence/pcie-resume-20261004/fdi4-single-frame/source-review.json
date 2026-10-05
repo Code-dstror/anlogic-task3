@@ -1,0 +1,785 @@
+{
+  "commit": "53d7b1c26c7e1babcffc927c80d0e632770ee0b1",
+  "scope": "Linux transport source review; no board operations this turn",
+  "bitstream_sha256": "d469bdd370ab65232db2437f4a7ffaf10e52d15173c4cb219c918947bbf37e1c",
+  "bitstream_bytes": 4850311,
+  "inputs": [
+    {
+      "path": "src_fpga/constraints/anlogic2026.adc",
+      "expected": "d0cdd17a292b417d4ec77742c352d591d676b00331047e746069662a3472af82",
+      "git_blob_sha256": "c772d413850e61679ccdd2afdf5a568dfc4ee7daa5d228d7d014e106085c5e61",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/constraints/anlogic2026.sdc",
+      "expected": "8d28a6ca01f8b0df6846758d67e618e95b22ebc8f94a04ed0b89d33ec333321a",
+      "git_blob_sha256": "adbde8d884a4e1e48550696cbd54871145294440d202d2f82dcf20abadd99af2",
+      "result": "unresolved"
+    },
+    {
+      "path": "src_fpga/constraints/pcie_integration.sdc",
+      "expected": "fdfce83c1bbbbb0552c56a67e2c931f2b7fa766ffdc19bfcf1736cd920fba500",
+      "git_blob_sha256": "91d9d553ba632794f54a40583233c04edd7312452d9349e725f3dac8ccf85190",
+      "result": "unresolved"
+    },
+    {
+      "path": "src_fpga/ip/camera_ref_pll_25m/PLL_0.ipc",
+      "expected": "8319b6b28c30075a5c1f80681556702b159a69cf27864a61f062e263f89d4caa",
+      "git_blob_sha256": "8319b6b28c30075a5c1f80681556702b159a69cf27864a61f062e263f89d4caa",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/camera_ref_pll_25m/PLL_0.v",
+      "expected": "1614e23a20cb9a27ca06d29d26295a099a2391909b6274ce5e93bdd8a340b49e",
+      "git_blob_sha256": "3f210c480eb296857913727a3f765d248185970ed9341d671360037e75ee6228",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/camera_ref_pll_25m/PLL_0.vhd",
+      "expected": "8dce2a551995b2e29cfdf465d70a7e098610d06838742283da31abfb3bf8f8e3",
+      "git_blob_sha256": "9b7709799d0376867ab0fcb68a3e7093ee3f113a8f6c8b914ef7046611643aef",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/csi_event_fifo_47x512.tcl",
+      "expected": "d8f7c88f4d9020f09ea94c6e9413a0bbec9535429dc7ef936884ed83775d1748",
+      "git_blob_sha256": "7968ffdc025f4e6b6359912e0368b6c86d5768c4f7f73826b1df47dcf93c966f",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/csi_event_fifo_47x512.v",
+      "expected": "d694eb1f3ceb9b547cf52a181caf2c50f23547f9b0e6a839b5c276e4a1e47ecc",
+      "git_blob_sha256": "dfe95d40ce1dfdb48feb934399d7b2c0b7e77150f9849601729d88cc0db01ef8",
+      "result": "unresolved"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/csi_event_fifo_47x512.xml",
+      "expected": "b4b61f4f4e0481bc9bafd92d0532d34294de39d7a10f5bebaf9afaf6e4b85a7d",
+      "git_blob_sha256": "b4b61f4f4e0481bc9bafd92d0532d34294de39d7a10f5bebaf9afaf6e4b85a7d",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/Design.xml",
+      "expected": "1749c297907850ac5c5632bdef370d97cf030baef4e1eedf873bdf2ea68ebbf3",
+      "git_blob_sha256": "266d7d83afc65cd24507bd5d144a70a65aeb5efdc03ba65359c2c83b57245bef",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/DesignConfiguration.xml",
+      "expected": "295ae5100c68a6fb0f391122ce57dcebd5cb276d72e208456295d0221029d78e",
+      "git_blob_sha256": "6272c276db6ed20863818cf129ed964bdcefb6e3ddd5f3ac7d26893b01cdaa33",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/RTL/include/define.v",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/csi_event_fifo_47x512/RTL/soft_fifo_9124e95879d2.v",
+      "expected": "3b46843e69baf49f9777515b7dbdfef8a9aac9ca0fdc09b0d272eba368a4bfe5",
+      "git_blob_sha256": "4de7a21601ba632a69d66a16575fca038f91e10c98c937077fdecc3b8ee45045",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/debug_uart/uart.enc.v",
+      "expected": "b25fda073e34ddd60db58b2e22af426ae104a4ebe4a1c67ccf20b0561ff9e148",
+      "git_blob_sha256": "3bf5b5465149652b9bf262a996899948ba84469c1e6bf1cded80747aac20c9af",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.ipc",
+      "expected": "9e84dbd983bf15db6372f9ada9c0ef5e17ceed523ab36d612acd62ef076f0c27",
+      "git_blob_sha256": "9e84dbd983bf15db6372f9ada9c0ef5e17ceed523ab36d612acd62ef076f0c27",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.v",
+      "expected": "32a6ac8c1e2df7071c75657459688d8539632a3d7b584b1d1990087a4e5b4ef2",
+      "git_blob_sha256": "73f52a9007eec343943ef5510c1c7e79dcbc31476caa7428ad236bbc2e7e0c7d",
+      "result": "unresolved"
+    },
+    {
+      "path": "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.vhd",
+      "expected": "be16e9f9c24d13d3fa3f313ba779050288c33d0f81b6c05f258fefa720d18dbb",
+      "git_blob_sha256": "0e43ce1244226ff0a9b54daa7ac7eb3cfe5267f5c79738a60f154d66eb676462",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.ipc",
+      "expected": "06e3d23fe1232c9c0e257000753460a58d564dfd44dccc837877445ed4bd0db4",
+      "git_blob_sha256": "06e3d23fe1232c9c0e257000753460a58d564dfd44dccc837877445ed4bd0db4",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.v",
+      "expected": "bb7027c10a82a1af5a16e76252914f3698de2e5b81a1a49fccda60602eaba17f",
+      "git_blob_sha256": "7b2edfe2c8e173d717938d26e607c66c5923d426120a171021b8ccb68d315b83",
+      "result": "unresolved"
+    },
+    {
+      "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.vhd",
+      "expected": "dba7d7096b76cb62a749fc1bb3ba26f7cc1c5595748433aca7e2b4d9b00b2666",
+      "git_blob_sha256": "b8e77a7950210df59bbe1526a5b44f91a883113b2a662e0bb12a0d3e7bb07a78",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/Design.xml",
+      "expected": "9dcad410c89f57332996d634bfb2079c3e607009cc872bf815b7aa879aa65054",
+      "git_blob_sha256": "1916018d90ede58aca8c43b101200c6a6aaf94ee6d3e7c69d7245f5a3fb87701",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/DesignConfiguration.xml",
+      "expected": "2ffc62e5db4c161cbe5051865d564cc0987ac2cca64046ea2e11a2fe54b2f64d",
+      "git_blob_sha256": "5225bf1d8ba0717bbeb22d62808572560ab90fe3fd278679aa7e243350bf3f2b",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/pcie_frame_fifo_147x512.tcl",
+      "expected": "d8f7c88f4d9020f09ea94c6e9413a0bbec9535429dc7ef936884ed83775d1748",
+      "git_blob_sha256": "7968ffdc025f4e6b6359912e0368b6c86d5768c4f7f73826b1df47dcf93c966f",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/pcie_frame_fifo_147x512.v",
+      "expected": "d6dc3b9341081ca0941b290ad64cf2926859c8854d9eb12cc4cc3185ccbd897c",
+      "git_blob_sha256": "afb2a5cb5b03dd0852f835c488dd1fe993543b0b7c2312e1817a0bf7ed4aff67",
+      "result": "unresolved"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/pcie_frame_fifo_147x512.xml",
+      "expected": "b4a8f6277f9bf46f88ca6427774431e60416e7ba735b85f2086c8bc703de314f",
+      "git_blob_sha256": "b4a8f6277f9bf46f88ca6427774431e60416e7ba735b85f2086c8bc703de314f",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/RTL/include/define.v",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/pcie_frame_fifo_147x512/RTL/soft_fifo_74aac0f9d766.v",
+      "expected": "4e9225f7516b837e7a22fa507cf19e7917b357c982d974eafbe5f2c14093c44e",
+      "git_blob_sha256": "0a9b4c98a41f1fd870e9d4b32de59ac20e170ad3153f4f62da5ff5d2087e6f48",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.ipc",
+      "expected": "7c04f808a1081a2e09f9d900df6d1bbfca1e2cc8095db3a10784ec5d41d7ed72",
+      "git_blob_sha256": "7c04f808a1081a2e09f9d900df6d1bbfca1e2cc8095db3a10784ec5d41d7ed72",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.v",
+      "expected": "d294473d3fb5c12153848dcfae02079ac8dc738c05233719408ad2aecc6f6bf0",
+      "git_blob_sha256": "7ec4970e14533d3385346a95bf1572e3c3a91e8acad3c72c1b7f855c17b14bea",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.vhd",
+      "expected": "bdc169e5b9c5da555e464ae5b10363ef891f70361f70a8a8ef34ef78fc0ff96b",
+      "git_blob_sha256": "b589d6fa90e55acd445da5a06b656b55c2bb94beb54811b3a51d0a1b39a93c7b",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.adc",
+      "expected": "1d5d2886f07b0744f7505a8e77cdf25db04d9da0d7ee0103a6165b24eec7f5dd",
+      "git_blob_sha256": "1d5d2886f07b0744f7505a8e77cdf25db04d9da0d7ee0103a6165b24eec7f5dd",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.ipc",
+      "expected": "fabf71d133a4aab4000e670a9dcc9a2d2924947e90e8f63e77c40d9ea7edc14b",
+      "git_blob_sha256": "fabf71d133a4aab4000e670a9dcc9a2d2924947e90e8f63e77c40d9ea7edc14b",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.sdc",
+      "expected": "3b0689e56fb78f9bf8bf57ec941864fd75b058f269bc7b15304c946442251342",
+      "git_blob_sha256": "3b0689e56fb78f9bf8bf57ec941864fd75b058f269bc7b15304c946442251342",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.sv",
+      "expected": "4fc55966f49cd8af746f8202d1c0fb4ddf608eb11990f19a2f9c081581cf2d68",
+      "git_blob_sha256": "4fc55966f49cd8af746f8202d1c0fb4ddf608eb11990f19a2f9c081581cf2d68",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr_cfg_rom.mif",
+      "expected": "a95ad6d63736e6f283e1241bccbae9fe2db2c34d956ff85977a9fd98184f36c1",
+      "git_blob_sha256": "a95ad6d63736e6f283e1241bccbae9fe2db2c34d956ff85977a9fd98184f36c1",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/auto_delay_ctl.v",
+      "expected": "1cb7a1dbb11250cf60797ea4b73b6b09ec9f5382b81043afcc21d00e7b1643f9",
+      "git_blob_sha256": "1cb7a1dbb11250cf60797ea4b73b6b09ec9f5382b81043afcc21d00e7b1643f9",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_byte_align.v",
+      "expected": "419e5b763400db97812dd81c58c8c64179350a842379a19e9cc77e4b62f0c7ec",
+      "git_blob_sha256": "419e5b763400db97812dd81c58c8c64179350a842379a19e9cc77e4b62f0c7ec",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_hs_data_phy.v",
+      "expected": "ae3e15af71213a38b186a56f4f89592d4b895e08ddf8199492e3eddb138c47aa",
+      "git_blob_sha256": "ae3e15af71213a38b186a56f4f89592d4b895e08ddf8199492e3eddb138c47aa",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_align.v",
+      "expected": "1f4e3b3b136f8fbb14de703ae7623a15c6f8ff78394418449b0d532091ca1b9d",
+      "git_blob_sha256": "1f4e3b3b136f8fbb14de703ae7623a15c6f8ff78394418449b0d532091ca1b9d",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_gear_box.v",
+      "expected": "aa88fbade5ca2e29e245c7ba2f615a28587aea6d7d5e44fd545638dd63607d5e",
+      "git_blob_sha256": "aa88fbade5ca2e29e245c7ba2f615a28587aea6d7d5e44fd545638dd63607d5e",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/rx_clk_gen.v",
+      "expected": "86de5ed01d390c84839699519c652326d013ed041137889cf01518ff5a3fab28",
+      "git_blob_sha256": "86de5ed01d390c84839699519c652326d013ed041137889cf01518ff5a3fab28",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/sensor/ui_imx415_reg.v",
+      "expected": "4a058e988125a68a129fd00645fd641dd991443ded1d2a840090ec2bdc028af3",
+      "git_blob_sha256": "4a058e988125a68a129fd00645fd641dd991443ded1d2a840090ec2bdc028af3",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/al_pcie_ip.dat",
+      "expected": "b43b2af4574d1d23f1efe956d2edb113efbd1ae491bebcde3e2ba3cbfe4a988b",
+      "git_blob_sha256": "b43b2af4574d1d23f1efe956d2edb113efbd1ae491bebcde3e2ba3cbfe4a988b",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE.adc",
+      "expected": "06c253ebe2f178c20c0d559eccc010481188bde982ec18bb36825ea647359959",
+      "git_blob_sha256": "06c253ebe2f178c20c0d559eccc010481188bde982ec18bb36825ea647359959",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE.dat",
+      "expected": "b43b2af4574d1d23f1efe956d2edb113efbd1ae491bebcde3e2ba3cbfe4a988b",
+      "git_blob_sha256": "b43b2af4574d1d23f1efe956d2edb113efbd1ae491bebcde3e2ba3cbfe4a988b",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE.ipc",
+      "expected": "f7f4889e5c12340950278ab72d3d8156c0df615e5efa43ebad38d071eb59a5df",
+      "git_blob_sha256": "f7f4889e5c12340950278ab72d3d8156c0df615e5efa43ebad38d071eb59a5df",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE.sdc",
+      "expected": "99869e4a1de9d93b6e172a928541cb2961892071771d284d876b32267f0887f9",
+      "git_blob_sha256": "99869e4a1de9d93b6e172a928541cb2961892071771d284d876b32267f0887f9",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE.v",
+      "expected": "a605ad64a09afee51836ae3b38a2482cd1db82f3e1761d41f57544ac8533f5c0",
+      "git_blob_sha256": "a605ad64a09afee51836ae3b38a2482cd1db82f3e1761d41f57544ac8533f5c0",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE_ph1_dbi_init_mux.v",
+      "expected": "5cef8bbbb200f6bc90857d420ed9f280daada1f37b9782f09f540157ce7fca59",
+      "git_blob_sha256": "5cef8bbbb200f6bc90857d420ed9f280daada1f37b9782f09f540157ce7fca59",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE_ph1_pcie_basic_top.v",
+      "expected": "d30630d474acc5ec13642b7bb65193aa42c6e6f9de24cf007c694e7e9e1b407e",
+      "git_blob_sha256": "d30630d474acc5ec13642b7bb65193aa42c6e6f9de24cf007c694e7e9e1b407e",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE_ph1_pcie_cfg_rom.v",
+      "expected": "74cc2ef38e4747863885e1e3a7bca584f2a705c6be045153353e795c525aa6ce",
+      "git_blob_sha256": "74cc2ef38e4747863885e1e3a7bca584f2a705c6be045153353e795c525aa6ce",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE_ph1_pcie_clock_ctrl.v",
+      "expected": "662aa47906baea4a23d61f9889164bdb2d45c2ce0064aceb1222c9e2153069df",
+      "git_blob_sha256": "662aa47906baea4a23d61f9889164bdb2d45c2ce0064aceb1222c9e2153069df",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/PH1_LOGIC_PCIE_ph1_pcie_core_pll.v",
+      "expected": "3d83fb17695ba6f8154e53c3df4789c61dd802d9f08bccbacd334fc200fe9a35",
+      "git_blob_sha256": "3d83fb17695ba6f8154e53c3df4789c61dd802d9f08bccbacd334fc200fe9a35",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/sgdma_pll.ipc",
+      "expected": "0b7d77541c5e049a8005658f6152cd5087443d63c6044c1a2b482439ca16ede0",
+      "git_blob_sha256": "0b7d77541c5e049a8005658f6152cd5087443d63c6044c1a2b482439ca16ede0",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/al_ip/sgdma_pll.v",
+      "expected": "bd9500591adb2689fe3fb47d0f5a4c25384cfc18d8c449fe4ec7170a4bbea451",
+      "git_blob_sha256": "bd9500591adb2689fe3fb47d0f5a4c25384cfc18d8c449fe4ec7170a4bbea451",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/case_ep/al_pcie_if_ep.v",
+      "expected": "3ef18bde3b61b217785b40ae8131b2595fc2286d59d2044d957ca67fbd389add",
+      "git_blob_sha256": "3ef18bde3b61b217785b40ae8131b2595fc2286d59d2044d957ca67fbd389add",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/rx_if/pcie_rx_bypass2rc.v",
+      "expected": "1421f59848656a3be920207603e02720384750a7ad1aa25ea42d69d46e4e3376",
+      "git_blob_sha256": "1421f59848656a3be920207603e02720384750a7ad1aa25ea42d69d46e4e3376",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/rx_if/pcie_rx_trgt2cq.v",
+      "expected": "48ae9d7c715e05dc7e8880b7916a6070506aa7cb25e78fd4c8814a3701957f85",
+      "git_blob_sha256": "48ae9d7c715e05dc7e8880b7916a6070506aa7cb25e78fd4c8814a3701957f85",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/sideband_if/pcie_sideband_dbi2mgmt.v",
+      "expected": "d0c87720a4322465431984775e6287307b2b7c6efdf6ebdbf520b7a157148f97",
+      "git_blob_sha256": "d0c87720a4322465431984775e6287307b2b7c6efdf6ebdbf520b7a157148f97",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/sideband_if/pcie_sideband_msi.v",
+      "expected": "5752f8d920a8ee87cba0ce4ec53608d90699580d0cc6302a37a0394e46523550",
+      "git_blob_sha256": "5752f8d920a8ee87cba0ce4ec53608d90699580d0cc6302a37a0394e46523550",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/tx_if/axi4_st_mux.v",
+      "expected": "5c5fff643ac509e045d2f29380c31b40f4bf59868ec399ddbab9aafe415bcb72",
+      "git_blob_sha256": "5c5fff643ac509e045d2f29380c31b40f4bf59868ec399ddbab9aafe415bcb72",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/tx_if/pcie_tx_client02rq_new.v",
+      "expected": "f6771280e0a4d2eb15625401e8386f628f770d6b995fa5e79b561e96bd531dd5",
+      "git_blob_sha256": "f6771280e0a4d2eb15625401e8386f628f770d6b995fa5e79b561e96bd531dd5",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/bridge/tx_if/pcie_tx_client12cc.v",
+      "expected": "2d12fc6abaa4ac73040cef16ca31972ab628a762cbda91153cb2463aa6df9002",
+      "git_blob_sha256": "2d12fc6abaa4ac73040cef16ca31972ab628a762cbda91153cb2463aa6df9002",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/sgdma_subsys.v",
+      "expected": "b44a9df3affa213abe636dea670faba2d4b3168482c69a8104e042f2ee59ad4c",
+      "git_blob_sha256": "b44a9df3affa213abe636dea670faba2d4b3168482c69a8104e042f2ee59ad4c",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_pcie_sgdma/sgdma/src_enc/sgdma_ip_all.enc.v",
+      "expected": "7e445b6d09c5b6b8a5b4712dce476d6ec77230d44d51584e15aa1d2ad8d354a7",
+      "git_blob_sha256": "7e445b6d09c5b6b8a5b4712dce476d6ec77230d44d51584e15aa1d2ad8d354a7",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/anlogic2026.v",
+      "expected": "d2ce144a3de05110197127832e48998e23ad82103e156d95abbd495698fb1915",
+      "git_blob_sha256": "d2ce144a3de05110197127832e48998e23ad82103e156d95abbd495698fb1915",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/camera_raw_crop.v",
+      "expected": "be79b9c94ce3ad4a9a92f8528d2a526760be3e4ffdfa2297dcf20db38e50f3e3",
+      "git_blob_sha256": "be79b9c94ce3ad4a9a92f8528d2a526760be3e4ffdfa2297dcf20db38e50f3e3",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/camera_ref_pll_25m.v",
+      "expected": "0580f1ee2aa56b8b4d1ebb98b973cdd991bd929c7c16ecca04200da34c61dd19",
+      "git_blob_sha256": "0580f1ee2aa56b8b4d1ebb98b973cdd991bd929c7c16ecca04200da34c61dd19",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/camera_rgb_pipeline.v",
+      "expected": "2db58d6e9e471c7b6024869e8a06e428c4afb94338b064d69a90b460ba6bc38a",
+      "git_blob_sha256": "2db58d6e9e471c7b6024869e8a06e428c4afb94338b064d69a90b460ba6bc38a",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/camera_uart_status.v",
+      "expected": "e1f4c009165c04144f7ca5027171e2e023c2e6ed223d849e4960545295101ce0",
+      "git_blob_sha256": "e1f4c009165c04144f7ca5027171e2e023c2e6ed223d849e4960545295101ce0",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/csi/csi2_async_event_fifo.v",
+      "expected": "c7f0f24c96f96965d9f4c8778c11cd08dac836a2862f7f783657266bc9440f50",
+      "git_blob_sha256": "c7f0f24c96f96965d9f4c8778c11cd08dac836a2862f7f783657266bc9440f50",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/csi/csi2_ph1_phy_wrapper.v",
+      "expected": "1d64c99bc35fea9e3c28a845ba869fabd5008f004123718fc9d0d39f22464aea",
+      "git_blob_sha256": "1d64c99bc35fea9e3c28a845ba869fabd5008f004123718fc9d0d39f22464aea",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/csi/csi2_raw10_rx.v",
+      "expected": "c7252d2b23ae5f2e12cda8544753ab322d858f4ee8a85658a376ed3ac49939a1",
+      "git_blob_sha256": "c7252d2b23ae5f2e12cda8544753ab322d858f4ee8a85658a376ed3ac49939a1",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/csi/csi2_raw10_rx_stream.v",
+      "expected": "a269fe171b1d8e7bf5ec4d908ee7d09c11f5aadf1a61795a362ae178f0cc2629",
+      "git_blob_sha256": "a269fe171b1d8e7bf5ec4d908ee7d09c11f5aadf1a61795a362ae178f0cc2629",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/csi/csi2_raw10_word_core.v",
+      "expected": "379e526f38982f67f66e164b6bf053324b76fb26758f7f7e0c5b7c1902193ac5",
+      "git_blob_sha256": "379e526f38982f67f66e164b6bf053324b76fb26758f7f7e0c5b7c1902193ac5",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/csi/csi_clock_watchdog.v",
+      "expected": "01640da86eb99e9b498913dd32e59218386b1ad541da194cbfc5e8329f37f0f7",
+      "git_blob_sha256": "01640da86eb99e9b498913dd32e59218386b1ad541da194cbfc5e8329f37f0f7",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/imx415_camera_axis.v",
+      "expected": "69adc2bc8570a221b53afd69c53e60fb95e3b2360c20795cb36a60c77bd58732",
+      "git_blob_sha256": "69adc2bc8570a221b53afd69c53e60fb95e3b2360c20795cb36a60c77bd58732",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/imx415_camera_observe_axis.v",
+      "expected": "25ea34cfd194d4d9d03ff677951882e4e8938d115358e4ae6831f7a7f32d422b",
+      "git_blob_sha256": "a661ceae47cf4236445ab8e436cd2473a3a76e189988bbdcbef24c3d50aa0513",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/rtl/camera/rgb_axis_packer.v",
+      "expected": "54510b3ad13673fe921b9aaf8c0373df371459f38d17c6e4f8874b7491edf8e2",
+      "git_blob_sha256": "54510b3ad13673fe921b9aaf8c0373df371459f38d17c6e4f8874b7491edf8e2",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/sensor/camera_i2c_write.v",
+      "expected": "7d8d640d680c6c894e427a6d3809b5c021878a3ef2869e4c772c2d6be2e8c357",
+      "git_blob_sha256": "7d8d640d680c6c894e427a6d3809b5c021878a3ef2869e4c772c2d6be2e8c357",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/sensor/imx415_config.v",
+      "expected": "1790a10819d5571f3febb1eabf09975715c90c5c9a1aa40af235b90de5b171a6",
+      "git_blob_sha256": "1790a10819d5571f3febb1eabf09975715c90c5c9a1aa40af235b90de5b171a6",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/camera/sensor/imx415_mode_table.v",
+      "expected": "cc577a9856c2580322a469ca8fa0be40495ab8d13cadf6929b4839bf93ac1287",
+      "git_blob_sha256": "cc577a9856c2580322a469ca8fa0be40495ab8d13cadf6929b4839bf93ac1287",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/ddr3_jpeg_store.v",
+      "expected": "cb0150ae1e3ad8e6ebef55921c8a9f3ab253ee6303f0c3034c2987bb3322f5c2",
+      "git_blob_sha256": "cb0150ae1e3ad8e6ebef55921c8a9f3ab253ee6303f0c3034c2987bb3322f5c2",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/ddr_axi_two_client_arbiter.v",
+      "expected": "b42f3dc3e596757effb76b4ef0941f30dedd460f0d0e045f8b9a1ffe8d013f84",
+      "git_blob_sha256": "b42f3dc3e596757effb76b4ef0941f30dedd460f0d0e045f8b9a1ffe8d013f84",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/jpeg_ddr_frame_store.v",
+      "expected": "10cbfb7bf30d9fd5cb4a7f9b578b5470c7ad07503ef395576bf9340d3d4eb3c7",
+      "git_blob_sha256": "10cbfb7bf30d9fd5cb4a7f9b578b5470c7ad07503ef395576bf9340d3d4eb3c7",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/ordered_frame_cdc.v",
+      "expected": "d328f52a8baef163d404616dee1be65cb7878400a03541b5d4aa2d8cb2d7c9ca",
+      "git_blob_sha256": "d328f52a8baef163d404616dee1be65cb7878400a03541b5d4aa2d8cb2d7c9ca",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/ordered_frame_egress.v",
+      "expected": "368cb0d73573554c650901b5697d0f45ffa813f57bb9517d34b366012662d89d",
+      "git_blob_sha256": "368cb0d73573554c650901b5697d0f45ffa813f57bb9517d34b366012662d89d",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/ordered_frame_ingress.v",
+      "expected": "aa05cdfef69cc90569bbda19374acb9ad3865d2a372bacf5034d9d15071ae74e",
+      "git_blob_sha256": "aa05cdfef69cc90569bbda19374acb9ad3865d2a372bacf5034d9d15071ae74e",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/ddr/reset_release_sync.v",
+      "expected": "7a3abf58e827ad500ca48075532c7616033ca85eb2ddb57e4613876f65fe05ec",
+      "git_blob_sha256": "7a3abf58e827ad500ca48075532c7616033ca85eb2ddb57e4613876f65fe05ec",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/debug/fpga_debug_clocks.v",
+      "expected": "70ba9283094794065e640317f9d81f21ebb18bd4047ec44b6d5d364260212e68",
+      "git_blob_sha256": "70ba9283094794065e640317f9d81f21ebb18bd4047ec44b6d5d364260212e68",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/debug/fpga_debug_control.v",
+      "expected": "ddd58c94a13cdada67b4bf755d339db8272a64f88b6eb3a66326ce214f6452fc",
+      "git_blob_sha256": "ddd58c94a13cdada67b4bf755d339db8272a64f88b6eb3a66326ce214f6452fc",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/debug/fpga_debug_geometry_probe.v",
+      "expected": "3914c85482e20e5d4b96f12313f29813a0ac0cc4368108b7da849d0d5ac2ae4b",
+      "git_blob_sha256": "d5177bbf7e47649bb975994526467783dba8603494fd7452748a5f01b21e84b6",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/rtl/debug/fpga_debug_isolation.v",
+      "expected": "31ee9c7e86afb500e03511cffb5c3e4c8752b8868a98a7164802b2c900a1d63a",
+      "git_blob_sha256": "31ee9c7e86afb500e03511cffb5c3e4c8752b8868a98a7164802b2c900a1d63a",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/debug/fpga_debug_probe.v",
+      "expected": "501a175a481ff1694b8577088cef628a85fc6fed6fd365acbfd3736e2e4976c0",
+      "git_blob_sha256": "501a175a481ff1694b8577088cef628a85fc6fed6fd365acbfd3736e2e4976c0",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/debug/fpga_debug_stream_monitor.v",
+      "expected": "48a9bea5659ac4e4d0989308478bd1da7e84a50a6ef2beb2b6eaa41093fb6eb1",
+      "git_blob_sha256": "48a9bea5659ac4e4d0989308478bd1da7e84a50a6ef2beb2b6eaa41093fb6eb1",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/diagnostics/f_camera_geometry_monitor.v",
+      "expected": "252b544bf2dcb6d29c5b707f5752a39237991ebad40692ac5d5be6e7690a4089",
+      "git_blob_sha256": "252b544bf2dcb6d29c5b707f5752a39237991ebad40692ac5d5be6e7690a4089",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/include/c2h_test_fixture.vh",
+      "expected": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10",
+      "git_blob_sha256": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/include/pcie_feature_defines.vh",
+      "expected": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20",
+      "git_blob_sha256": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/include/pcie_protocol_v1.vh",
+      "expected": "7a6eb41d46f7a7b6e7a47f092c71191607e71333b8a717bdd686db7697146ea6",
+      "git_blob_sha256": "7a6eb41d46f7a7b6e7a47f092c71191607e71333b8a717bdd686db7697146ea6",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/color/color_pipeline_axis.v",
+      "expected": "9f9f108853c6aa1f2d87cf1c0660938b580736abb7e965176bafcdddd96b929a",
+      "git_blob_sha256": "9f9f108853c6aa1f2d87cf1c0660938b580736abb7e965176bafcdddd96b929a",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/color/gamma22_10to8.mif",
+      "expected": "e63e58bcafbfbd5f6e0a8b54a82a9ffce2e26e56e4617c722b3326e75d1d231b",
+      "git_blob_sha256": "d7f1c308c2c2fb822275e4a6689dee3ad837e9b41e08133b8aaea59d812cba5a",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/rtl/isp/color/gamma_lut_10to8.v",
+      "expected": "edd745518592b6c4c6259f8741a2d829feeec827b20ccc0c2a34152c0173d464",
+      "git_blob_sha256": "edd745518592b6c4c6259f8741a2d829feeec827b20ccc0c2a34152c0173d464",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/isp_core_top.v",
+      "expected": "668e56ee9139bd773e2fc053c3f3ae04ae1d4ca0c8aec07910e38ca74ab84849",
+      "git_blob_sha256": "668e56ee9139bd773e2fc053c3f3ae04ae1d4ca0c8aec07910e38ca74ab84849",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/isp_line_ram_40x1024.v",
+      "expected": "e1baa3e4bf7a08103cd7111f87f63308cbb9c870db5f366f2ca90df8081dad2a",
+      "git_blob_sha256": "e1baa3e4bf7a08103cd7111f87f63308cbb9c870db5f366f2ca90df8081dad2a",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/raw/raw_blc.v",
+      "expected": "23081a8eb1012c084d5ab74bb24038e7da0676adbf8bc0fa66055fca1057ad41",
+      "git_blob_sha256": "23081a8eb1012c084d5ab74bb24038e7da0676adbf8bc0fa66055fca1057ad41",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/raw/raw_demosaic.v",
+      "expected": "6907089a6264ef5b9d15f062683e8eaa9be48f93d10993018f5c30aaa4776a2c",
+      "git_blob_sha256": "6907089a6264ef5b9d15f062683e8eaa9be48f93d10993018f5c30aaa4776a2c",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/raw/raw_isp_top.v",
+      "expected": "516e099319cde0598ecd2fc4b455f9af8400e07a476eac0c05e6a934ae30779e",
+      "git_blob_sha256": "516e099319cde0598ecd2fc4b455f9af8400e07a476eac0c05e6a934ae30779e",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/isp/raw/raw_row_window.v",
+      "expected": "eabbc24964766324b93941abea1c4c2572220fb0257d1d3e2046908e19b006f3",
+      "git_blob_sha256": "eabbc24964766324b93941abea1c4c2572220fb0257d1d3e2046908e19b006f3",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_byte_packer.v",
+      "expected": "2a39a241c6ed1c722a4ccfaa96287789898ae6da54736614b7064e697a95446f",
+      "git_blob_sha256": "2a39a241c6ed1c722a4ccfaa96287789898ae6da54736614b7064e697a95446f",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_dct8x8.v",
+      "expected": "fa94613fef028f765a2941378c39a5b659e9ceaf78b1045a68e57473b710648a",
+      "git_blob_sha256": "fa94613fef028f765a2941378c39a5b659e9ceaf78b1045a68e57473b710648a",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_encoder_top.v",
+      "expected": "2f0a3e8367c4dc4dcb91258047429e4dfbc43273aad8196ea2172eef206f4424",
+      "git_blob_sha256": "2f0a3e8367c4dc4dcb91258047429e4dfbc43273aad8196ea2172eef206f4424",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_entropy.v",
+      "expected": "c5627e3b17d09246969256931941c0af9da8a634677c255b47fbb88bb6dc5942",
+      "git_blob_sha256": "c5627e3b17d09246969256931941c0af9da8a634677c255b47fbb88bb6dc5942",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_file_formatter.v",
+      "expected": "5168dbb4bcaafb6064c48401f32e38b6da92a5f042d6dcf8a071952167a9f3ab",
+      "git_blob_sha256": "5168dbb4bcaafb6064c48401f32e38b6da92a5f042d6dcf8a071952167a9f3ab",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_frame_admission.v",
+      "expected": "0cf14e4a5680fd9f6dd60c81f51a9bd243b04fe9c1e7180ae4b3c45335bae475",
+      "git_blob_sha256": "0cf14e4a5680fd9f6dd60c81f51a9bd243b04fe9c1e7180ae4b3c45335bae475",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_header_rom.vh",
+      "expected": "b53894ee31f14744f4592ba96c6990bea4ddab0388ee309f3f0bfb248cba5248",
+      "git_blob_sha256": "bff8a5bdbb7760a17089042d9ecdfa969701b23c5d7305f1cd93fd1ee9aade23",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_huff_rom.vh",
+      "expected": "542d28e0d6f8d6c14da5fc730673fb45d302f452e837cda2836839867afcada6",
+      "git_blob_sha256": "7424bd2c51a157c2c3284ca002ca440a43a3d4ec53488cc89e6950c1de18ed9e",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_mcu_422.v",
+      "expected": "d81e28ffa5f15496539d47f94caf0dc534ab91a55105efe400a9f9ebab1d4953",
+      "git_blob_sha256": "d81e28ffa5f15496539d47f94caf0dc534ab91a55105efe400a9f9ebab1d4953",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_quant_tables.vh",
+      "expected": "497f3d7ba0a783bf9f1691576b97ca82f6541feea999ce9dc33ba51facf550b9",
+      "git_blob_sha256": "497f3d7ba0a783bf9f1691576b97ca82f6541feea999ce9dc33ba51facf550b9",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_quant_zigzag.v",
+      "expected": "4a65508dc5c4708220a9676443d865c07b5477b9565eae0ce03ff107c9937503",
+      "git_blob_sha256": "4a65508dc5c4708220a9676443d865c07b5477b9565eae0ce03ff107c9937503",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_rgb_to_ycbcr_422.v",
+      "expected": "fee4afa7dcd013abeb88a9c96b6237ae05af0611623f4b24d329a92affa8634c",
+      "git_blob_sha256": "fee4afa7dcd013abeb88a9c96b6237ae05af0611623f4b24d329a92affa8634c",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/axis_frame_fifo_ip.v",
+      "expected": "d2b0dfd936bcd8b7d694469b73f3c1b2f4cb11e6a48fe27a56cf740829b5a6da",
+      "git_blob_sha256": "d2b0dfd936bcd8b7d694469b73f3c1b2f4cb11e6a48fe27a56cf740829b5a6da",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/c2h_frame_tx.v",
+      "expected": "b93d91fd2b75225bad0e4751dec17ddabcf9bb8c9476bd3822e3ab7e0b4db5d1",
+      "git_blob_sha256": "b93d91fd2b75225bad0e4751dec17ddabcf9bb8c9476bd3822e3ab7e0b4db5d1",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/h2c_stream_checker.v",
+      "expected": "f9397acc1ca604ea7d62b576de88147405e2c935a8c1a33946d37a77f342e39c",
+      "git_blob_sha256": "f9397acc1ca604ea7d62b576de88147405e2c935a8c1a33946d37a77f342e39c",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/pcie_app_regs.v",
+      "expected": "5577a7ed4d2e1f068de3911dc5913d5637a9a5bf463a575ed390b4af16c1a026",
+      "git_blob_sha256": "5577a7ed4d2e1f068de3911dc5913d5637a9a5bf463a575ed390b4af16c1a026",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/pcie_inband_header_adapter.v",
+      "expected": "e007121577e21fde14854f0775e2cab01aa557a6ac6cacc5f670d4ff7a41baf3",
+      "git_blob_sha256": "e007121577e21fde14854f0775e2cab01aa557a6ac6cacc5f670d4ff7a41baf3",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/pcie_sgdma_endpoint.v",
+      "expected": "05db9f011d1a15642b85b3322db6c0b9d011ef574a0e2cbbf0af52730b0fa5b9",
+      "git_blob_sha256": "1fddfa31d08f9ad5a60db5ceebb23de8cc11c36c820d28fef209ebddb77c2730",
+      "result": "crlf_checkout"
+    },
+    {
+      "path": "src_fpga/rtl/pcie/pcie_video_transport.v",
+      "expected": "c0488ff8f0a8fb3a09bfcba169c30cc6fc145c76580ed6cbc0c8b4f021c19473",
+      "git_blob_sha256": "c0488ff8f0a8fb3a09bfcba169c30cc6fc145c76580ed6cbc0c8b4f021c19473",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/session/frame_session_controller.v",
+      "expected": "d4d13e7ad6852b93354339ddd497e96f371532bc8cfb0c7200c9dc85f00cc436",
+      "git_blob_sha256": "d4d13e7ad6852b93354339ddd497e96f371532bc8cfb0c7200c9dc85f00cc436",
+      "result": "exact"
+    },
+    {
+      "path": "src_fpga/rtl/session/single_slot_credit_cdc.v",
+      "expected": "e96cc17cf821ca1d92e466e8f55507df8576748bc0344f14dd07a032c3a6c4e8",
+      "git_blob_sha256": "e96cc17cf821ca1d92e466e8f55507df8576748bc0344f14dd07a032c3a6c4e8",
+      "result": "exact"
+    }
+  ],
+  "conclusion": "PCIe mode o_enable=i_host_enable; i_run gates LOCAL only. Top connects app_enable to i_host_enable. RUN UART command rejected outside LOCAL.",
+  "historical_evidence": "Teammate BAR simulation PASS reviewed, not rerun. Previous RK 15 mocked tests PASS, not rerun. Real DMA and JPEG decode remain pending.",
+  "receiver_diff": "capture_v1_record.py, session_rearm.py and docs/pcie_protocol_v1.json unchanged since 581148cd41404a47925d2c2a3697723a181e1230"
+}

@@ -1,0 +1,278 @@
+{
+  "workstream": "Linux transport / system integration",
+  "proposed_title": "docs: record FDI4 PCIe capture success and repeated-session stop-state finding",
+  "git_actions_performed": [],
+  "scope": "Evidence checkpoint only; no branch merge, shared-contract edit, driver-source import or application implementation",
+  "include": [
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/review-summary.json",
+      "bytes": 1918,
+      "sha256": "266e71c1c6266bc1914484b968740e61c453327b5ebe13a1fa8d88c66b7ffa0e"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/decode-result.json",
+      "bytes": 1001,
+      "sha256": "9986ce9247a29dc88994f8b13db62a980c79f1bdaa2ed547028bbefe694f200f"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/source-review.json",
+      "bytes": 37385,
+      "sha256": "982b62710623658fc49cd0c1b1c49f53f55cde1e4a6d1996eff31a571a32cb33"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/recovered/result.json",
+      "bytes": 4381,
+      "sha256": "38838dd8bc72f13c9268ecedce7f303f9ca9baae5af95469d0582706defdf54e"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/final-state/result.json",
+      "bytes": 4693,
+      "sha256": "c39443c2ae894727bcc4f58549cb28bb68b742631363e95bee30bceaf8f11986"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/attempt/query.py",
+      "bytes": 4846,
+      "sha256": "31056338d00369244f9a66f2a860192000cab9a3e6181bbdfafe8b47916e6aed"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-single-frame/attempt/serial.raw",
+      "bytes": 7966,
+      "sha256": "7f7b87c96220cdeacad14c1d1f392131d1dbdda5f65499922cf1025985f8eeaa"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-driver-load/review-summary.json",
+      "bytes": 1361,
+      "sha256": "b5a7e1da9672e219b95327bf15cfa37b56eb784b3c49bfe02cd4c1f5f94728ba"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/capture-preparation/review-summary.json",
+      "bytes": 1590,
+      "sha256": "6fd2c270d9e14c53ab1105d8e94062448c2d218f0c5de2a91a56abb3c5565ff1"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/capture-preparation/source-manifest.json",
+      "bytes": 1264,
+      "sha256": "a8f0f7810e7cf48f183fc0527c57fc34b40224292efc6660aec8e2715d649124"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-second-frame/review-summary.json",
+      "bytes": 2326,
+      "sha256": "150cf5b4142cc847b1e6cccf45fc512f37ac0300da121cd0644f8012eb847716"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-second-frame/decode-result.json",
+      "bytes": 901,
+      "sha256": "2d152972cf8fc58183e9be4a9e73b119fae1cd3579d9f32d57ca250ae9595a52"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-second-frame/attempt/query.py",
+      "bytes": 5528,
+      "sha256": "8a8a871c63e10116e4fdfef259c3ca125e9ea049d4b82ce89908ac3da047a988"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-second-frame/attempt/serial.py",
+      "bytes": 2391,
+      "sha256": "a2a1451964e747fde60b7a79e83c9b282a47326ae37fce655b8b032e8d141690"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-second-frame/attempt/result.json",
+      "bytes": 18747,
+      "sha256": "375d714f1b548994704c06f6fdd5c7497e21a0ab63dc9da8c1dbab668a3b1df5"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-second-frame/attempt/serial.raw",
+      "bytes": 26353,
+      "sha256": "874745335e0c79340874dcfc62a55e3f342c157c3b2035a5be1ee8b21c00df7f"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/review-summary.json",
+      "bytes": 2405,
+      "sha256": "0aa5afd2589553f26cb0301e3b53bdbb4f00fe4a14342bf47a01e9b5f13a5e2e"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/readonly-status.json",
+      "bytes": 5673,
+      "sha256": "cb85c156883b3fd526f5ac9e8fef4b5c8cf709ec75a4b46d4118d61bbc4a7cc1"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/decode-results.json",
+      "bytes": 6162,
+      "sha256": "4b0363ec9595d9df7d5b99c947d5417a018caf0ce853b28d2a1d57448bf99138"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/attempt/query.py",
+      "bytes": 6665,
+      "sha256": "e9a0c92f74f8fe4909518c90e0e6bb118a044755ff66a69fd528c98af2e583f3"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/attempt/serial.py",
+      "bytes": 2562,
+      "sha256": "74e7099536e8b990a288303ea0d0216f01a516a98b07f66f5df981e689d0ba84"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/attempt/result.json",
+      "bytes": 30630,
+      "sha256": "8e0d663e0dd8eb7954b6ce6e0c310c8444ad5b0616c9e2a44043b1fe3636c960"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/attempt/serial.raw",
+      "bytes": 36053,
+      "sha256": "5a7d11c47f0887bee40c5391c59737f9c5ad622789a46004c236d57522340ab9"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/source-review/pcie_video_transport.v",
+      "bytes": 9236,
+      "sha256": "c0488ff8f0a8fb3a09bfcba169c30cc6fc145c76580ed6cbc0c8b4f021c19473"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/source-review/pcie_inband_header_adapter.v",
+      "bytes": 6864,
+      "sha256": "e007121577e21fde14854f0775e2cab01aa557a6ac6cacc5f670d4ff7a41baf3"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-repeat10/source-review/c2h_frame_tx.v",
+      "bytes": 13006,
+      "sha256": "b93d91fd2b75225bad0e4751dec17ddabcf9bb8c9476bd3822e3ab7e0b4db5d1"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/context-correction.json",
+      "bytes": 576,
+      "sha256": "c37609dd08e89c5b3cea8fe067a2f0f202f6bcbf16a165be5d9290f201c58aed"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/review-summary.json",
+      "bytes": 1879,
+      "sha256": "70f6f4eeb390d42dc7dd89fb148b87eef6524404e2ca62143ea18f0309e5b655"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/decode-results.json",
+      "bytes": 4268,
+      "sha256": "d1e429de7e212c9b36381378d26beb9af053520000ee4a29433466b24a2e28ae"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/readonly-status.json",
+      "bytes": 5245,
+      "sha256": "df21f596ef5cbcc832a747f1c95eed177ceb906cff9d7a9c402f77bd08a729ad"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/preflight/result.json",
+      "bytes": 6069,
+      "sha256": "8d86d607eb569089b4884555779a7c969db0c9959f84418afda4449aecd0c0cf"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/attempt/query.py",
+      "bytes": 6713,
+      "sha256": "f607608bccb75a96a96c8de6dceb7ef28d21e432b57a221acf783d4238d096d9"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/attempt/serial.py",
+      "bytes": 2562,
+      "sha256": "74e7099536e8b990a288303ea0d0216f01a516a98b07f66f5df981e689d0ba84"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/attempt/result.json",
+      "bytes": 27012,
+      "sha256": "2d27ac15fad878b8c9023537b0e454204a901ce9edbc3592274513e8dfd76507"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/fdi4-exclusive10/attempt/serial.raw",
+      "bytes": 33659,
+      "sha256": "5f815fa96e743132294b5fdffe5a85e312f712ad7035ffe4f0615553bb6ca1a5"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/review-summary.json",
+      "bytes": 2111,
+      "sha256": "f1cfbe0499e5b76633f29cef71b48c66835f851e96d2f2be55d66650b2a1d171"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/stage/result.json",
+      "bytes": 1364,
+      "sha256": "b6c140a7b52befde9c469fd22ef45c440598729a6614a3a1dc69cb87a71b97d6"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/repeat10/query.py",
+      "bytes": 7098,
+      "sha256": "ee55b322864d16f140e1667412c08f881ebff22a882979c8695c63df2a2c16ea"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/repeat10/result.json",
+      "bytes": 37677,
+      "sha256": "6857112eda630efc68bc30a42a2b850dbe3aceeb5b9a1236833fc176deb01b1f"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/repeat10/serial.raw",
+      "bytes": 41502,
+      "sha256": "1317cc0b5dc77a87f7f1842b538585e7711315d3d2f150f8dbb8ef27c19f9f36"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/repeat10-transfer/decode-results.json",
+      "bytes": 3582,
+      "sha256": "08a4b5e6b70fb65a18f0c5b60013c00c472ace3b9d5acf8ad0611d9489067e4e"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/repeat10-transfer/metadata.json",
+      "bytes": 6364,
+      "sha256": "8f2db66266fbda92f05f1365c766fab85c670e6d950d2df3ef6ab5c30be1d952"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/timeout-recovery/query.py",
+      "bytes": 8421,
+      "sha256": "f9d2c7101c8bba839a47ed523b00d9e725e24ecea6b36810e7fec1ab99fc5169"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/timeout-recovery/result.json",
+      "bytes": 20747,
+      "sha256": "a7dce4ba60f5bdc3512943f15699a50cdb588caca17ef9507a18d1d5153e873b"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/timeout-recovery/serial.raw",
+      "bytes": 33064,
+      "sha256": "bd739cb17f3142c1239139ee96c94dc1d58fb477e49e576e5e0a6a1acae57805"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/timeout-transfer/decode-results.json",
+      "bytes": 358,
+      "sha256": "8bb1ed2513d087874e8f8c8f582b9c917a175036cbeb87effa5769a6672a4e8d"
+    },
+    {
+      "path": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation/timeout-transfer/metadata.json",
+      "bytes": 4576,
+      "sha256": "384adc28a44d8acc7797432f12a14768d3b69595a256b343ab3ce9f08df10a6e"
+    }
+  ],
+  "local_artifacts_excluded_from_proposed_commit": [
+    "frame.record",
+    "frame.jpg",
+    "decoded.png",
+    "transfer/result.json (base64 duplicate)",
+    "transfer/serial.raw (base64 duplicate)",
+    "all .ko / boot images / bitstreams / caches"
+  ],
+  "excluded_workstreams": [
+    "FPGA private code",
+    "AI/NPU/HDMI",
+    "existing unrelated tracked or untracked work"
+  ],
+  "receiver_dependency": {
+    "commit": "581148cd41404a47925d2c2a3697723a181e1230",
+    "files": [
+      "linux/task3_pipeline/capture_v1_record.py",
+      "linux/task3_pipeline/session_rearm.py",
+      "linux/task3_pipeline/pcie_protocol_v1.py",
+      "docs/pcie_protocol_v1.json"
+    ],
+    "note": "Executed from pinned temporary package; not imported into main Linux workspace. Source integration and driver packaging require a separate reviewed change."
+  },
+  "second_frame": "Completed second single-record capture and full decode; independent evidence preserved in fdi4-second-frame.",
+  "authorization": "Only submission scope organized. No git add, commit or push.",
+  "important_review_notes": [
+    "FDI4 DROP/OVERFLOW values are constants, not measured loss counters.",
+    "Record sequence and pixel timestamp reset per application session.",
+    "FRAME_ERROR aggregate includes rearm_required.",
+    "Evidence-only checkpoint does not integrate receiver into main Linux source tree."
+  ],
+  "repeat10": "Stopped at iteration7: seven valid JPEGs, six passed end-state checks, iteration7 persistent TX_BUSY; iterations8-10 not run.",
+  "exclusive_retest": "User-reported exclusive window:4 passed stop-state checks, fifth valid JPEG with persistent0x8b; remaining5 not run. Prior concurrent UART confound documented.",
+  "latest_validation": "Revised single-stop candidate:10/10 independent records fully decoded; one no-data driver timeout (errno512) followed by successful full recovery decode. Earlier strict stop assertion results remain historical.",
+  "candidate_integration": "Candidate snapshot preserved with evidence; not a merged main pipeline implementation. Review separately before functional commit."
+}

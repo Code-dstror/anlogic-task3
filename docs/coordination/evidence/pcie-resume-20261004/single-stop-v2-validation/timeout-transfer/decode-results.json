@@ -1,0 +1,15 @@
+[
+  {
+    "frame": "frame-01",
+    "record_bytes": 81689,
+    "jpeg_bytes": 81625,
+    "record_sha256": "1ef0a45f61bb2ee6c2adfe6d6f6fadc93b0239cc5bce04d4ab6e5698fe238490",
+    "jpeg_sha256": "fbfda2eacb7f81a6c758213f20a51a53df038b89cf186932dc7ced7c4522cdfa",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "Pillow": "PASS",
+    "OpenCV": "PASS"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "source": "Assistant executed second single-record DMA after explicit user request, not simulation",
+  "result": "PASS_ONE_APPLICATION_SESSION_REARM_AND_SECOND_RECORD",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "board_output_directory": "/tmp/task3-fdi4-second-czw24awx",
+  "capacity": 16777280,
+  "read_calls": 1,
+  "record_bytes": 106850,
+  "jpeg_bytes": 106786,
+  "record_sha256": "457ffeba782860988d65a363c8c0d9f9154759220dcef7d9f00daa7537a248a0",
+  "jpeg_sha256": "72fcc356fc38a93458176c41833adad05feca9531ea2550409f79d6ec5e0cbb5",
+  "decoded_dimensions": [
+    1920,
+    1080
+  ],
+  "decoders": [
+    "Pillow full load",
+    "OpenCV imdecode"
+  ],
+  "control_write_sequence": [
+    2,
+    1,
+    0
+  ],
+  "observed_status_sequence": [
+    "0x83",
+    "0x23",
+    "0x63",
+    "0x67",
+    "0x87",
+    "0x83"
+  ],
+  "producer_consumed_before": [
+    1,
+    1
+  ],
+  "producer_consumed_after": [
+    2,
+    2
+  ],
+  "cleanup": {
+    "APP_ENABLE": 0,
+    "C2H_RUNNING": 0,
+    "SESSION_ARMED": 1,
+    "DMA_ERROR_COUNT": 0,
+    "LAST_ERROR": 0,
+    "open_anlogic_device_fds": [],
+    "serial": "released"
+  },
+  "link_after": "Gen2 x1 DLActive+, AER UESta/CESta flags clear",
+  "image": "New scene content, upright in this capture, purple cast persists; no host rotation or color correction",
+  "source_interpretation": {
+    "commit": "53d7b1c26c7e1babcffc927c80d0e632770ee0b1",
+    "sequence_timestamp": "jpeg_frame_admission capture_id and anlogic2026 pixel_ticks reset with pixel_rst_n; both captures sequence0 is not itself stale-frame evidence",
+    "transient_frame_error": "STATUS bit5 includes session_rearm_required via fault_user, not only data-path errors. 0x23/0x63/0x67 during rearm is consistent with this aggregate; it clears after arming. Exact individual transient cause not isolated.",
+    "counter_limit": "DROP_COUNT and OVERFLOW_COUNT wired to constant0 in FDI4 top. Their zero readings do not demonstrate absence of drops or overflow."
+  },
+  "limits": [
+    "Only two single-record sessions tested; no repeated batch or continuous service",
+    "No timeout/cancel recovery validation",
+    "Color quality not accepted",
+    "No SRAM bitstream hash readback"
+  ],
+  "no_additional_operations": [
+    "No reprogramming",
+    "No reboot",
+    "No driver reload",
+    "No third DMA"
+  ]
+}

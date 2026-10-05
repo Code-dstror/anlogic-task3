@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-04",
+  "scope": "Linux transport; authorized one DMA capture",
+  "result": "PASS_SINGLE_RECORD_AND_FULL_JPEG_DECODE",
+  "source": "Assistant executed on RK over serial; host independently decoded retrieved bytes. Not teammate simulation evidence.",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "fpga_commit": "53d7b1c26c7e1babcffc927c80d0e632770ee0b1",
+  "reported_loaded_bit_sha256": "d469bdd370ab65232db2437f4a7ffaf10e52d15173c4cb219c918947bbf37e1c",
+  "bit_identity_scope": "Local delivered bit verified; SRAM content not independently read back.",
+  "board_output_directory": "/tmp/task3-fdi4-single-1e6t_ke9",
+  "capacity": 16777280,
+  "read_calls": 1,
+  "record_bytes": 102104,
+  "jpeg_bytes": 102040,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "record_sha256": "f97a9fbeae7af92ccbee5a805e9774a3bb9feb54785081441139d46f6b3a89e9",
+  "cleanup": {
+    "APP_ENABLE": 0,
+    "STATUS": "0x83",
+    "C2H_RUNNING": 0,
+    "SESSION_ARMED": 1,
+    "PRODUCER_SEQUENCE": 1,
+    "CONSUMED_SEQUENCE": 1,
+    "DROP_COUNT": 0,
+    "OVERFLOW_COUNT": 0,
+    "DMA_ERROR_COUNT": 0,
+    "LAST_ERROR": 0,
+    "open_anlogic_device_fds": [],
+    "serial": "released"
+  },
+  "link_after": "Gen2 x1 DLActive+, AER status clear",
+  "tooling_issue": "Capture finished and files saved, but final JSON serialization failed on bytes-valued header reserved1. Original result/trace was not recovered. Read-only file recovery and register checks confirmed successful saved record and cleanup. No repeated DMA.",
+  "image_observation": "Recognizable room scene; purple cast and inverted orientation. Color correctness not accepted.",
+  "not_tested": [
+    "Repeated sessions",
+    "Timeout/cancel/restart",
+    "Continuous throughput",
+    "MSI/IRQ mode",
+    "NPU/HDMI"
+  ],
+  "next_session": "SESSION_ARMED remains set. A subsequent fresh session needs reviewed/authorized rearm; no additional reset executed."
+}

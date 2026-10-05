@@ -1,0 +1,17 @@
+{
+  "package": "/tmp/task3-stop-v2-4b0kcmgz",
+  "sha256": {
+    "candidate-origin.json": "fff8cc3cd851c09855c21bf6bbc685ab72a1d3ca74b86dfc1f201ea7bf52e9bc",
+    "docs/pcie_protocol_v1.json": "7e337af3d41467ede724d8d0685ac230358203dabca78255404e15900829f449",
+    "linux/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux/task3_pipeline/pcie_protocol_v1.py": "2d5dd5d7a18196b24c8888b5e3fa6f50489c9fb374d94c1bda0d64107f4c7e73",
+    "linux/task3_pipeline/capture_v1_record.py": "8ba54580eeea25a8ead8c5e9b448e25821f85f8a89016e6b01d7038bf75865ac",
+    "linux/task3_pipeline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "linux/task3_pipeline/session_rearm.py": "615e0df8bc7dfa6ecb34881561e139f3d12bda5b699b2f1ee5c6b435ec3df4f9",
+    "tests/test_single_frame_stop_order.py": "e08ffb8fbb549667b2949ea39c36852ef73632dfa60714a0bec8c2f67309f3fa",
+    "tests/test_session_rearm.py": "08b9c23e941b6aa7846a6221436437a65eca1d36bfc5c888e1a822c2fdb48e4d",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_capture_v1_record.py": "08f6154feccc6add75b1237f44b0a3c5e9e88b6d396b2dadd8486290a79949f0",
+    "fpga_debug/20260930/host_tools/fixtures/c2h_fixture_395.record": "949e5784bdc0101421596c3e93b39d5fa51dfaf20bedba1e1119e737f7d7eab7"
+  }
+}

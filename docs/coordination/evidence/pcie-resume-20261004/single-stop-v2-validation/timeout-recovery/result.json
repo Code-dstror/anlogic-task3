@@ -1,0 +1,227 @@
+{
+  "operation": "FDI4 no-data timeout and one recovery capture",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "uptime_before": "5462.84 43559.69",
+  "parameters": {
+    "c2h_timeout": "10",
+    "enable_st_h2c_credit": "0",
+    "h2c_timeout": "10",
+    "enable_st_c2h_credit": "1",
+    "poll_mode": "1",
+    "desc_blen_max": "1048576",
+    "interrupt_mode": "1",
+    "force_st_c2h_wb": "0"
+  },
+  "endpoint": "0000:21:00.0",
+  "root_link_before": {
+    "code": 0,
+    "stdout": "0000:20:00.0 PCI bridge [0604]: Rockchip Electronics Co., Ltd Device [1d87:3576] (rev 01) (prog-if 00 [Normal decode])\n\tControl: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B- DisINTx+\n\tStatus: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-\n\tLatency: 0\n\tInterrupt: pin A routed to IRQ 120\n\tBus: primary=20, secondary=21, subordinate=21, sec-latency=0\n\tI/O behind bridge: [disabled] [16-bit]\n\tMemory behind bridge: 21200000-213fffff [size=2M] [32-bit]\n\tPrefetchable memory behind bridge: [disabled] [64-bit]\n\tSecondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-\n\tBridgeCtl: Parity- SERR+ NoISA- VGA- VGA16- MAbort- >Reset- FastB2B-\n\t\tPriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-\n\tCapabilities: [40] Power Management version 3\n\t\tFlags: PMEClk- DSI- D1+ D2+ AuxCurrent=375mA PME(D0+,D1+,D2-,D3hot+,D3cold-)\n\t\tStatus: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-\n\tCapabilities: [50] MSI: Enable+ Count=1/32 Maskable- 64bit+\n\t\tAddress: 000000004df7c000  Data: 0000\n\tCapabilities: [70] Express (v2) Root Port (Slot-), MSI 00\n\t\tDevCap:\tMaxPayload 128 bytes, PhantFunc 0\n\t\t\tExtTag- RBE+\n\t\tDevCtl:\tCorrErr- NonFatalErr- FatalErr- UnsupReq-\n\t\t\tRlxdOrd+ ExtTag- PhantFunc- AuxPwr- NoSnoop-\n\t\t\tMaxPayload 128 bytes, MaxReadReq 512 bytes\n\t\tDevSta:\tCorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend-\n\t\tLnkCap:\tPort #0, Speed 5GT/s, Width x1, ASPM L0s L1, Exit Latency L0s <256ns, L1 <32us\n\t\t\tClockPM- Surprise- LLActRep+ BwNot+ ASPMOptComp+\n\t\tLnkCtl:\tASPM Disabled; RCB 64 bytes, Disabled- CommClk-\n\t\t\tExtSynch- ClockPM- AutWidDis- BWInt- AutBWInt-\n\t\tLnkSta:\tSpeed 5GT/s, Width x1\n\t\t\tTrErr- Train- SlotClk+ DLActive+ BWMgmt- ABWMgmt+\n\t\tRootCap: CRSVisible+\n\t\tRootCtl: ErrCorrectable- ErrNon-Fatal- ErrFatal- PMEIntEna+ CRSVisible+\n\t\tRootSta: PME ReqID 0000, PMEStatus- PMEPending-\n\t\tDevCap2: Completion Timeout: Not Supported, TimeoutDis+ NROPrPrP+ LTR+\n\t\t\t 10BitTagComp- 10BitTagReq- OBFF Via message/WAKE#, ExtFmt- EETLPPrefix-\n\t\t\t EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-\n\t\t\t FRS- LN System CLS Not Supported, TPHComp- ExtTPHComp- ARIFwd-\n\t\t\t AtomicOpsCap: Routing- 32bit- 64bit- 128bitCAS-\n\t\tDevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled, ARIFwd-\n\t\t\t AtomicOpsCtl: ReqEn- EgressBlck-\n\t\tLnkCap2: Supported Link Speeds: 2.5-5GT/s, Crosslink- Retimer- 2Retimers- DRS-\n\t\tLnkCtl2: Target Link Speed: 5GT/s, EnterCompliance- SpeedDis-\n\t\t\t Transmit Margin: Normal Operating Range, EnterModifiedCompliance- ComplianceSOS-\n\t\t\t Compliance Preset/De-emphasis: -6dB de-emphasis, 0dB preshoot\n\t\tLnkSta2: Current De-emphasis Level: -6dB, EqualizationComplete- EqualizationPhase1-\n\t\t\t EqualizationPhase2- EqualizationPhase3- LinkEqualizationRequest-\n\t\t\t Retimer- 2Retimers- CrosslinkRes: unsupported\n\tCapabilities: [b0] MSI-X: Enable- Count=1 Masked-\n\t\tVector table: BAR=0 offset=00000000\n\t\tPBA: BAR=0 offset=00000010\n\tCapabilities: [100 v2] Advanced Error Reporting\n\t\tUESta:\tDLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-\n\t\tUEMsk:\tDLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-\n\t\tUESvrt:\tDLP+ SDES+ TLP- FCP+ CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-\n\t\tCESta:\tRxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-\n\t\tCEMsk:\tRxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+\n\t\tAERCap:\tFirst Error Pointer: 00, ECRCGenCap+ ECRCGenEn- ECRCChkCap+ ECRCChkEn-\n\t\t\tMultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-\n\t\tHeaderLog: 00000000 00000000 00000000 00000000\n\t\tRootCmd: CERptEn- NFERptEn- FERptEn-\n\t\tRootSta: CERcvd- MultCERcvd- UERcvd- MultUERcvd-\n\t\t\t FirstFatal- NonFatalMsg- FatalMsg- IntMsg 9\n\t\tErrorSrc: ERR_COR: 0000 ERR_FATAL/NONFATAL: 0000\n\tCapabilities: [148 v1] Secondary PCI Express\n\t\tLnkCtl3: LnkEquIntrruptEn- PerformEqu-\n\t\tLaneErrStat: 0\n\tCapabilities: [160 v1] L1 PM Substates\n\t\tL1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2- ASPM_L1.1- L1_PM_Substates-\n\t\t\t  PortCommonModeRestoreTime=10us PortTPowerOnTime=10us\n\t\tL1SubCtl1: PCI-PM_L1.2- PCI-PM_L1.1- ASPM_L1.2- ASPM_L1.1-\n\t\t\t   T_CommonMode=10us\n\t\tL1SubCtl2: T_PwrOn=10us\n\tCapabilities: [170 v1] Vendor Specific Information: ID=0002 Rev=4 Len=100 <?>\n\tKernel driver in use: pcieport\n\n",
+    "stderr": "lspci: Unable to load libkmod resources: error -2\n"
+  },
+  "nodes": {
+    "user": "/dev/ANLOGIC-PCI0_user",
+    "c2h": "/dev/ANLOGIC-PCI0_c2h_0"
+  },
+  "output_directory": "/tmp/task3-stop-v2-timeout-jt1opqa6",
+  "trace": [
+    {
+      "time": 5462.975358945,
+      "status": "0x83"
+    },
+    {
+      "time": 5462.975478353,
+      "write": "0x18",
+      "value": 2
+    },
+    {
+      "time": 5462.975513372,
+      "status": "0x23"
+    },
+    {
+      "time": 5463.455665547,
+      "status": "0x63"
+    },
+    {
+      "time": 5463.460729962,
+      "event": "start_dma_after_rearm",
+      "status": "0x63"
+    },
+    {
+      "time": 5463.480558209,
+      "status": "0x67"
+    },
+    {
+      "time": 5473.523383117,
+      "write": "0x18",
+      "value": 0
+    },
+    {
+      "time": 5473.523713317,
+      "status": "0x63"
+    },
+    {
+      "frame": 1,
+      "start": 5473.527500567
+    },
+    {
+      "time": 5473.527607592,
+      "write": "0x18",
+      "value": 0
+    },
+    {
+      "time": 5473.527833417,
+      "event": "start_dma_after_rearm",
+      "status": "0x63"
+    },
+    {
+      "time": 5473.541196164,
+      "status": "0x67"
+    },
+    {
+      "time": 5473.541333114,
+      "write": "0x18",
+      "value": 1
+    },
+    {
+      "time": 5473.541484264,
+      "status": "0x87"
+    },
+    {
+      "time": 5473.564925743,
+      "write": "0x18",
+      "value": 0
+    },
+    {
+      "time": 5473.564989157,
+      "event": "raw_save_after_disable"
+    },
+    {
+      "time": 5473.580782222,
+      "status": "0x83"
+    }
+  ],
+  "frames": [
+    {
+      "index": 1,
+      "start": 5473.527482792,
+      "capture": "PASS",
+      "bytes": 81689,
+      "sha256": "1ef0a45f61bb2ee6c2adfe6d6f6fadc93b0239cc5bce04d4ab6e5698fe238490",
+      "header": {
+        "frame_magic": 1196444225,
+        "protocol_version": 1,
+        "header_length": 64,
+        "frame_sequence": 0,
+        "payload_length": 81625,
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": 1,
+        "compression": 1,
+        "quality": 75,
+        "flags": 1,
+        "timestamp_ns": 10088822656,
+        "status": 0,
+        "error_code": 0,
+        "slot_id": 0,
+        "reserved0": 0,
+        "payload_crc32": 0,
+        "reserved1": "00000000000000000000000000000000"
+      },
+      "registers_after": {
+        "0x0": "0x33434641",
+        "0x4": "0x1",
+        "0x8": "0x2f",
+        "0xc": "0x1",
+        "0x10": "0x1000000",
+        "0x14": "0x40",
+        "0x18": "0x0",
+        "0x1c": "0x83",
+        "0x20": "0x0",
+        "0x24": "0x0",
+        "0x28": "0x19",
+        "0x2c": "0x19",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      },
+      "end": 5473.580884317
+    }
+  ],
+  "registers_before": {
+    "0x0": "0x33434641",
+    "0x4": "0x1",
+    "0x8": "0x2f",
+    "0xc": "0x1",
+    "0x10": "0x1000000",
+    "0x14": "0x40",
+    "0x18": "0x0",
+    "0x1c": "0x83",
+    "0x20": "0x0",
+    "0x24": "0x0",
+    "0x28": "0x18",
+    "0x2c": "0x18",
+    "0x30": "0x0",
+    "0x34": "0x0",
+    "0x38": "0x0",
+    "0x3c": "0x0"
+  },
+  "no_data_test": {
+    "start": 5463.460691019,
+    "running_observed": true,
+    "reader_result": {
+      "kind": "error",
+      "value": "OSError: [Errno 512] Unknown error 512"
+    },
+    "natural_completion": true,
+    "end": 5473.523632267,
+    "registers_after": {
+      "0x0": "0x33434641",
+      "0x4": "0x1",
+      "0x8": "0x2f",
+      "0xc": "0x1",
+      "0x10": "0x1000000",
+      "0x14": "0x40",
+      "0x18": "0x0",
+      "0x1c": "0x63",
+      "0x20": "0x0",
+      "0x24": "0x0",
+      "0x28": "0x18",
+      "0x2c": "0x18",
+      "0x30": "0x0",
+      "0x34": "0x0",
+      "0x38": "0x0",
+      "0x3c": "0x0"
+    }
+  },
+  "registers_after": {
+    "0x0": "0x33434641",
+    "0x4": "0x1",
+    "0x8": "0x2f",
+    "0xc": "0x1",
+    "0x10": "0x1000000",
+    "0x14": "0x40",
+    "0x18": "0x0",
+    "0x1c": "0x83",
+    "0x20": "0x0",
+    "0x24": "0x0",
+    "0x28": "0x19",
+    "0x2c": "0x19",
+    "0x30": "0x0",
+    "0x34": "0x0",
+    "0x38": "0x0",
+    "0x3c": "0x0"
+  },
+  "capture": "PASS",
+  "root_link_after": {
+    "code": 0,
+    "stdout": "0000:20:00.0 PCI bridge [0604]: Rockchip Electronics Co., Ltd Device [1d87:3576] (rev 01) (prog-if 00 [Normal decode])\n\tControl: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B- DisINTx+\n\tStatus: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-\n\tLatency: 0\n\tInterrupt: pin A routed to IRQ 120\n\tBus: primary=20, secondary=21, subordinate=21, sec-latency=0\n\tI/O behind bridge: [disabled] [16-bit]\n\tMemory behind bridge: 21200000-213fffff [size=2M] [32-bit]\n\tPrefetchable memory behind bridge: [disabled] [64-bit]\n\tSecondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-\n\tBridgeCtl: Parity- SERR+ NoISA- VGA- VGA16- MAbort- >Reset- FastB2B-\n\t\tPriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-\n\tCapabilities: [40] Power Management version 3\n\t\tFlags: PMEClk- DSI- D1+ D2+ AuxCurrent=375mA PME(D0+,D1+,D2-,D3hot+,D3cold-)\n\t\tStatus: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-\n\tCapabilities: [50] MSI: Enable+ Count=1/32 Maskable- 64bit+\n\t\tAddress: 000000004df7c000  Data: 0000\n\tCapabilities: [70] Express (v2) Root Port (Slot-), MSI 00\n\t\tDevCap:\tMaxPayload 128 bytes, PhantFunc 0\n\t\t\tExtTag- RBE+\n\t\tDevCtl:\tCorrErr- NonFatalErr- FatalErr- UnsupReq-\n\t\t\tRlxdOrd+ ExtTag- PhantFunc- AuxPwr- NoSnoop-\n\t\t\tMaxPayload 128 bytes, MaxReadReq 512 bytes\n\t\tDevSta:\tCorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend-\n\t\tLnkCap:\tPort #0, Speed 5GT/s, Width x1, ASPM L0s L1, Exit Latency L0s <256ns, L1 <32us\n\t\t\tClockPM- Surprise- LLActRep+ BwNot+ ASPMOptComp+\n\t\tLnkCtl:\tASPM Disabled; RCB 64 bytes, Disabled- CommClk-\n\t\t\tExtSynch- ClockPM- AutWidDis- BWInt- AutBWInt-\n\t\tLnkSta:\tSpeed 5GT/s, Width x1\n\t\t\tTrErr- Train- SlotClk+ DLActive+ BWMgmt- ABWMgmt+\n\t\tRootCap: CRSVisible+\n\t\tRootCtl: ErrCorrectable- ErrNon-Fatal- ErrFatal- PMEIntEna+ CRSVisible+\n\t\tRootSta: PME ReqID 0000, PMEStatus- PMEPending-\n\t\tDevCap2: Completion Timeout: Not Supported, TimeoutDis+ NROPrPrP+ LTR+\n\t\t\t 10BitTagComp- 10BitTagReq- OBFF Via message/WAKE#, ExtFmt- EETLPPrefix-\n\t\t\t EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-\n\t\t\t FRS- LN System CLS Not Supported, TPHComp- ExtTPHComp- ARIFwd-\n\t\t\t AtomicOpsCap: Routing- 32bit- 64bit- 128bitCAS-\n\t\tDevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled, ARIFwd-\n\t\t\t AtomicOpsCtl: ReqEn- EgressBlck-\n\t\tLnkCap2: Supported Link Speeds: 2.5-5GT/s, Crosslink- Retimer- 2Retimers- DRS-\n\t\tLnkCtl2: Target Link Speed: 5GT/s, EnterCompliance- SpeedDis-\n\t\t\t Transmit Margin: Normal Operating Range, EnterModifiedCompliance- ComplianceSOS-\n\t\t\t Compliance Preset/De-emphasis: -6dB de-emphasis, 0dB preshoot\n\t\tLnkSta2: Current De-emphasis Level: -6dB, EqualizationComplete- EqualizationPhase1-\n\t\t\t EqualizationPhase2- EqualizationPhase3- LinkEqualizationRequest-\n\t\t\t Retimer- 2Retimers- CrosslinkRes: unsupported\n\tCapabilities: [b0] MSI-X: Enable- Count=1 Masked-\n\t\tVector table: BAR=0 offset=00000000\n\t\tPBA: BAR=0 offset=00000010\n\tCapabilities: [100 v2] Advanced Error Reporting\n\t\tUESta:\tDLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-\n\t\tUEMsk:\tDLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-\n\t\tUESvrt:\tDLP+ SDES+ TLP- FCP+ CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-\n\t\tCESta:\tRxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-\n\t\tCEMsk:\tRxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+\n\t\tAERCap:\tFirst Error Pointer: 00, ECRCGenCap+ ECRCGenEn- ECRCChkCap+ ECRCChkEn-\n\t\t\tMultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-\n\t\tHeaderLog: 00000000 00000000 00000000 00000000\n\t\tRootCmd: CERptEn- NFERptEn- FERptEn-\n\t\tRootSta: CERcvd- MultCERcvd- UERcvd- MultUERcvd-\n\t\t\t FirstFatal- NonFatalMsg- FatalMsg- IntMsg 9\n\t\tErrorSrc: ERR_COR: 0000 ERR_FATAL/NONFATAL: 0000\n\tCapabilities: [148 v1] Secondary PCI Express\n\t\tLnkCtl3: LnkEquIntrruptEn- PerformEqu-\n\t\tLaneErrStat: 0\n\tCapabilities: [160 v1] L1 PM Substates\n\t\tL1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2- ASPM_L1.1- L1_PM_Substates-\n\t\t\t  PortCommonModeRestoreTime=10us PortTPowerOnTime=10us\n\t\tL1SubCtl1: PCI-PM_L1.2- PCI-PM_L1.1- ASPM_L1.2- ASPM_L1.1-\n\t\t\t   T_CommonMode=10us\n\t\tL1SubCtl2: T_PwrOn=10us\n\tCapabilities: [170 v1] Vendor Specific Information: ID=0002 Rev=4 Len=100 <?>\n\tKernel driver in use: pcieport\n\n",
+    "stderr": "lspci: Unable to load libkmod resources: error -2\n"
+  },
+  "uptime_after": "5473.63 43635.48",
+  "dmesg": {
+    "code": 0,
+    "stdout": "[  320.361461] rk_pcie_establish_link: 170 callbacks suppressed\n[  320.361487] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.382633] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.403759] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.424880] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.446015] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.467135] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.488257] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.509392] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.530534] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.551664] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  320.783631] rk-pcie 2a210000.pcie: PCIe Link Fail, LTSSM is 0x3, hw_retries=1\n[  321.803419] rk-pcie 2a210000.pcie: failed to initialize host\n[  751.080857] rk-pcie 2a210000.pcie: invalid prsnt-gpios property in node\n[  751.081020] rk-pcie 2a210000.pcie: no vpcie3v3 regulator found\n[  751.081782] rk-pcie 2a210000.pcie: max MSI vector is 32\n[  751.081867] rk-pcie 2a210000.pcie: host bridge /pcie@2a210000 ranges:\n[  751.081897] rk-pcie 2a210000.pcie:      err 0x0021000000..0x00210fffff -> 0x0021000000\n[  751.081911] rk-pcie 2a210000.pcie:       IO 0x0021100000..0x00211fffff -> 0x0021100000\n[  751.081925] rk-pcie 2a210000.pcie:      MEM 0x0021200000..0x0021ffffff -> 0x0021200000\n[  751.081935] rk-pcie 2a210000.pcie:      MEM 0x0980000000..0x09ffffffff -> 0x0980000000\n[  751.082052] rk-pcie 2a210000.pcie: iATU unroll: enabled\n[  751.082059] rk-pcie 2a210000.pcie: iATU regions: 8 ob, 8 ib, align 64K, limit 8G\n[  751.284359] rk_pcie_establish_link: 10 callbacks suppressed\n[  751.284372] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  751.305498] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  751.326614] rk-pcie 2a210000.pcie: PCIe Linking... LTSSM is 0x3\n[  751.407379] rk-pcie 2a210000.pcie: PCIe Link up, LTSSM is 0x130011\n[  751.407411] rk-pcie 2a210000.pcie: PCIe Gen.2 x1 link up\n[  751.407575] rk-pcie 2a210000.pcie: PCI host bridge to bus 0000:20\n[  751.407586] pci_bus 0000:20: root bus resource [bus 20-2f]\n[  751.407595] pci_bus 0000:20: root bus resource [??? 0x21000000-0x210fffff flags 0x0]\n[  751.407605] pci_bus 0000:20: root bus resource [io  0x0000-0xfffff] (bus address [0x21100000-0x211fffff])\n[  751.407613] pci_bus 0000:20: root bus resource [mem 0x21200000-0x21ffffff]\n[  751.407619] pci_bus 0000:20: root bus resource [mem 0x980000000-0x9ffffffff]\n[  751.407649] pci 0000:20:00.0: [1d87:3576] type 01 class 0x060400\n[  751.407711] pci 0000:20:00.0: supports D1 D2\n[  751.407718] pci 0000:20:00.0: PME# supported from D0 D1 D3hot\n[  751.426356] pci 0000:20:00.0: Primary bus is hard wired to 0\n[  751.426381] pci 0000:20:00.0: bridge configuration invalid ([bus 01-ff]), reconfiguring\n[  751.426573] pci 0000:21:00.0: [1edb:abcd] type 00 class 0x050000\n[  751.426620] pci 0000:21:00.0: reg 0x10: [mem 0x00000000-0x000fffff]\n[  751.426647] pci 0000:21:00.0: reg 0x14: [mem 0x00000000-0x0000ffff]\n[  751.426961] pci 0000:21:00.0: supports D1\n[  751.426967] pci 0000:21:00.0: PME# supported from D3cold\n[  751.427594] pci_bus 0000:21: busn_res: [bus 21-2f] end is updated to 21\n[  751.427642] pci 0000:20:00.0: BAR 8: assigned [mem 0x21200000-0x213fffff]\n[  751.427653] pci 0000:21:00.0: BAR 0: assigned [mem 0x21200000-0x212fffff]\n[  751.427672] pci 0000:21:00.0: BAR 1: assigned [mem 0x21300000-0x2130ffff]\n[  751.427688] pci 0000:20:00.0: PCI bridge to [bus 21]\n[  751.427697] pci 0000:20:00.0:   bridge window [mem 0x21200000-0x213fffff]\n[  751.430815] pcieport 0000:20:00.0: PME: Signaling with IRQ 120\n[ 1002.565091] pci 0000:21:00.0: enabling device (0000 -> 0002)\n[ 1612.003219] anlogic_pci: loading out-of-tree module taints kernel.\n[ 1612.005748] Hello,Anlogic-pcie\n[ 1612.006064] Anlogic-pcie device 0000:21:00.0, 0x00000000bb772bab.\n[ 1612.006085] sgdev->h2c_channel_max4.\n[ 1612.006092] sgdev->c2h_channel_max4.\n[ 1612.007051] Anlogic-pcie 0000:21:00.0: enabling device (0000 -> 0002)\n[ 1612.007154] BAR0 at 0x21200000 mapped at 0x0000000071c14aaa, length=1048576(/1048576)\n[ 1612.007166] BAR0 len:1048576\n[ 1612.007182] BAR1 at 0x21300000 mapped at 0x0000000078cb91f8, length=65536(/65536)\n[ 1612.007191] BAR1 len:65536\n[ 1612.007200] config bar 1, pos 1.\n[ 1612.007206] BAR #2 is not present - skipping\n[ 1612.007212] BAR2 len:0\n[ 1612.007218] BAR #3 is not present - skipping\n[ 1612.007223] BAR3 len:0\n[ 1612.007229] BAR #4 is not present - skipping\n[ 1612.007235] BAR4 len:0\n[ 1612.007241] BAR #5 is not present - skipping\n[ 1612.007248] BAR5 len:0\n[ 1612.007254] 2 BARs: config 1, user 0, bypass -1.\n[ 1612.008724] anlogic_pci:sgdma_thread_add_work: 0-H2C0-ST 0x00000000275f403c assigned to cmpl status thread sgdma_poll_th1,1.\n[ 1612.008782] 0-C2H0-ST init: st_c2h credit=1 force_wb=0 desc_max=1023.\n[ 1612.009120] 0-C2H0-ST enable credit mode.\n[ 1612.009134] anlogic_pci:sgdma_thread_add_work: 0-C2H0-ST 0x0000000062cb5f72 assigned to cmpl status thread sgdma_poll_th2,1.\n[ 1612.009148] 0000:21:00.0: poll_mode=1, probed engines h2c=1 c2h=1.\n[ 1612.009156] 0000:21:00.0: poll mode active, skip MSI/MSI-X and IRQ setup.\n[ 1612.009168] xpdev_create_interfaces config bar:1\n[ 1612.009180] allocate cdev region OK\n[ 1612.009186]  cdev region MAJOR: 511, MINOR:0\n[ 1612.009452] xpdev_create_interfaces ctrl_cdev OK\n[ 1612.009628] xpdev_create_interfaces user bar:0\n[ 1612.009709] xpdev_create_interfaces user_cdev OK\n[ 5475.511295] Polling timeout occurred\n[ 5475.511315] desc_wb = 0x00000000, expected 0x00000001\n[ 5475.511353] 0-C2H0-ST not get comp desc at this poll work.\n[ 5475.531385] 0-C2H0-ST xfer 0x000000000599568d,16777280, s 0x1 timed out, ep 0x1000040.\n[ 5475.531414] 0-C2H0-ST: ioread32(0x00000000309c591e) = 0x1fc18001 (id).\n[ 5475.531423] 0-C2H0-ST: ioread32(0x00000000ef1ab8d9) = 0x00000001 (status).\n[ 5475.531431] 0-C2H0-ST: ioread32(0x000000000fd6566a) = 0x04f83e19 (control)\n[ 5475.531439] 0-C2H0-ST: ioread32(0x000000006427356a) = 0xbe8e4600 (first_desc_lo)\n[ 5475.531446] 0-C2H0-ST: ioread32(0x000000004763c868) = 0x00000000 (first_desc_hi)\n[ 5475.531454] 0-C2H0-ST: ioread32(0x00000000a7abe081) = 0x0000003f (first_desc_adjacent).\n[ 5475.531462] 0-C2H0-ST: ioread32(0x00000000a7935158) = 0x00000000 (completed_desc_count).\n[ 5475.531470] 0-C2H0-ST: ioread32(0x00000000c326ee27) = 0x00f83e18 (interrupt_enable_mask)\n[ 5475.531479] SG engine 0-C2H0-ST status: 0x00000001: BUSY\n[ 5475.531485] SG engine 0-C2H0-ST status: 0x00000001: BUSY\n[ 5475.531490] abort transfer 0x000000000599568d, desc 104, engine desc queued 0.",
+    "stderr": ""
+  }
+}

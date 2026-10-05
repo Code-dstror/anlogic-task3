@@ -1,0 +1,54 @@
+{
+  "workstream": "Linux transport",
+  "source": "Assistant executed on RK then verified all retrieved record hashes and fully decoded all seven JPEGs on Ubuntu",
+  "requested_sessions": 10,
+  "attempted_sessions": 7,
+  "passed_capture_and_end_state": 6,
+  "records_received_and_fully_decoded": 7,
+  "not_run": [
+    8,
+    9,
+    10
+  ],
+  "result": "STOPPED_ON_PERSISTENT_END_STATE_BUSY",
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "board_directory": "/tmp/task3-fdi4-repeat10-00wsuup4",
+  "failure": {
+    "iteration": 7,
+    "record_bytes": 104487,
+    "record_valid": true,
+    "error": "Unexpected end state",
+    "status": "0x8b",
+    "CONTROL": 0,
+    "C2H_RUNNING": 0,
+    "TX_BUSY": 1,
+    "SENDING_MASK": 1,
+    "SESSION_ARMED": 1,
+    "PRODUCER_SEQUENCE": 9,
+    "CONSUMED_SEQUENCE": 9,
+    "DMA_ERROR_COUNT": 0,
+    "LAST_ERROR": 0,
+    "late_samples": "10 read-only samples, 0.2s apart, about40s after stop; all same status",
+    "open_anlogic_device_fds": []
+  },
+  "cleanup": "APP_ENABLE0; DMA reader exited; serial released. FPGA TX_BUSY remains1. No automatic retry/reset after stop.",
+  "limits": [
+    "10-session test NOT PASS",
+    "7 records valid does not prove entire FPGA stream drained",
+    "DROP/OVERFLOW hardwired0",
+    "Color correction not validated",
+    "No timeout/cancel or continuous throughput validation"
+  ],
+  "source_hypothesis": {
+    "commit": "53d7b1c26c7e1babcffc927c80d0e632770ee0b1",
+    "facts": [
+      "TX_BUSY = frame_tx_busy OR adapter_busy OR recovery_required",
+      "source_admit permits intake before metadata_accepted without unconditional C2H_RUNNING gate",
+      "Header adapter reports busy for partial header or META/PAYLOAD state",
+      "Header adapter state resets on transport_rst_n; APP_ENABLE0 alone does not clear partial header"
+    ],
+    "inference": "Possible next-record header prefetch while APP_ENABLE remains1 after first completion, followed by stopped intake when APP_ENABLE0. Not confirmed without internal adapter state.",
+    "review_question": "Clarify whether post-single-read TX_BUSY from buffered next frame is expected until application rearm, or a stop/drain defect. Do not equate it with corrupt DMA payload or blindly require idle forever."
+  },
+  "next_step": "Review single-frame stop/rearm semantics with FPGA owner before resuming remaining tests; preserve busy state for read-only diagnostic."
+}

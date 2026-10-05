@@ -1,0 +1,205 @@
+{
+  "boot_id": "ef755806-6941-41d6-8d43-d109ed7ead89",
+  "samples": [
+    {
+      "time": 4176.68680769,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4176.887063333,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4177.08734589,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4177.287578041,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4177.487821986,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4177.688080211,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4177.88829834,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4178.08854583,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4178.288762523,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    },
+    {
+      "time": 4178.488993824,
+      "regs": {
+        "0x18": "0x0",
+        "0x1c": "0x8b",
+        "0x20": "0x0",
+        "0x24": "0x1",
+        "0x28": "0xe",
+        "0x2c": "0xe",
+        "0x30": "0x0",
+        "0x34": "0x0",
+        "0x38": "0x0",
+        "0x3c": "0x0"
+      }
+    }
+  ],
+  "open_device_fds": [],
+  "files": [
+    {
+      "key": "frame-01",
+      "path": "/tmp/task3-fdi4-exclusive10-ejpxlj69/frame-01/frame.record",
+      "bytes": 63183,
+      "sha256": "e72179e8996dda8e99afab21eebb759c2199040dd641c2adfbdb97c2395c1fcb"
+    },
+    {
+      "key": "frame-02",
+      "path": "/tmp/task3-fdi4-exclusive10-ejpxlj69/frame-02/frame.record",
+      "bytes": 62933,
+      "sha256": "23e8f108038b0320e8668be5088fa13e93314a51039d6663fd3676568e250d59"
+    },
+    {
+      "key": "frame-03",
+      "path": "/tmp/task3-fdi4-exclusive10-ejpxlj69/frame-03/frame.record",
+      "bytes": 63200,
+      "sha256": "cf4edea77344a956279be8a189ccd8ae2b0fc0935606eb93e381793b8a057668"
+    },
+    {
+      "key": "frame-04",
+      "path": "/tmp/task3-fdi4-exclusive10-ejpxlj69/frame-04/frame.record",
+      "bytes": 63054,
+      "sha256": "fbb48f32c4acd8f4c9d56b085cbe37b9b0b3bd4c989bd87a30e9b0d6572b36b7"
+    },
+    {
+      "key": "frame-05",
+      "path": "/tmp/task3-fdi4-exclusive10-ejpxlj69/frame-05/frame.record",
+      "bytes": 63062,
+      "sha256": "a3a8e89c22106eff51e1f54b96308d7cb29b6e2188e97f2f41095ce704e2604e"
+    }
+  ],
+  "dmesg_tail": [
+    "[ 1612.007241] BAR #5 is not present - skipping",
+    "[ 1612.007248] BAR5 len:0",
+    "[ 1612.007254] 2 BARs: config 1, user 0, bypass -1.",
+    "[ 1612.008724] anlogic_pci:sgdma_thread_add_work: 0-H2C0-ST 0x00000000275f403c assigned to cmpl status thread sgdma_poll_th1,1.",
+    "[ 1612.008782] 0-C2H0-ST init: st_c2h credit=1 force_wb=0 desc_max=1023.",
+    "[ 1612.009120] 0-C2H0-ST enable credit mode.",
+    "[ 1612.009134] anlogic_pci:sgdma_thread_add_work: 0-C2H0-ST 0x0000000062cb5f72 assigned to cmpl status thread sgdma_poll_th2,1.",
+    "[ 1612.009148] 0000:21:00.0: poll_mode=1, probed engines h2c=1 c2h=1.",
+    "[ 1612.009156] 0000:21:00.0: poll mode active, skip MSI/MSI-X and IRQ setup.",
+    "[ 1612.009168] xpdev_create_interfaces config bar:1",
+    "[ 1612.009180] allocate cdev region OK",
+    "[ 1612.009186]  cdev region MAJOR: 511, MINOR:0",
+    "[ 1612.009452] xpdev_create_interfaces ctrl_cdev OK",
+    "[ 1612.009628] xpdev_create_interfaces user bar:0",
+    "[ 1612.009709] xpdev_create_interfaces user_cdev OK"
+  ]
+}

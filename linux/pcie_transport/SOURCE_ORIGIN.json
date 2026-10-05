@@ -1,0 +1,21 @@
+{
+  "upstream_commit": "581148cd41404a47925d2c2a3697723a181e1230",
+  "upstream_paths": [
+    "linux/task3_pipeline/capture_v1_record.py",
+    "linux/task3_pipeline/session_rearm.py",
+    "linux/task3_pipeline/pcie_protocol_v1.py"
+  ],
+  "protocol_snapshot_sha256": "2d5dd5d7a18196b24c8888b5e3fa6f50489c9fb374d94c1bda0d64107f4c7e73",
+  "board_validated_overlay": "docs/coordination/evidence/pcie-resume-20261004/single-stop-v2-validation",
+  "local_changes": [
+    "Add optional record_sink after APP_ENABLE0 for raw preservation",
+    "Wait for REARM_READY and TX_BUSY clear before next DMA",
+    "Move to stdlib-only linux.pcie_transport to avoid OpenCV/NumPy package initialization"
+  ],
+  "integration_limit": "Package relocation tested locally; board evidence used isolated package under linux.task3_pipeline with empty init. Protocol/receiver/session module bytes retained.",
+  "deferred": [
+    "Driver errno512 normalization",
+    "Host forced-cancel recovery changes",
+    "Continuous DMA requests and buffer reuse"
+  ]
+}
