@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "each-platform-dry-run",
+      "selector": "each_catalog_platform",
+      "operation": "dry_run",
+      "expected_status": "DRY_RUN",
+      "expected_exit_code": 0,
+      "cli_flags": ["--dry-run"]
+    },
+    {
+      "id": "each-platform-install",
+      "selector": "each_catalog_platform",
+      "operation": "install",
+      "expected_status": "INSTALLED",
+      "expected_exit_code": 0,
+      "cli_flags": ["--replace", "--yes"]
+    },
+    {
+      "id": "unknown-platform",
+      "selector": "unknown_platform_token",
+      "token": "unknown-platform-token",
+      "operation": "select",
+      "expected_status": "INPUT_ERROR",
+      "expected_exit_code": 2,
+      "cli_flags": ["--dry-run"]
+    },
+    {
+      "id": "preserve-unlisted-target-file",
+      "selector": "each_catalog_platform",
+      "operation": "install_preserve",
+      "preserve_relative_path": "user-data.txt",
+      "expected_status": "INSTALLED",
+      "expected_exit_code": 0,
+      "cli_flags": ["--replace", "--yes"],
+      "precondition_files": [
+        {
+          "path": "user-data.txt",
+          "content": "preserved-by-case"
+        }
+      ]
+    },
+    {
+      "id": "invalid-release-receipt",
+      "selector": "each_catalog_platform",
+      "operation": "receipt_fault",
+      "expected_status": "INTEGRITY_ERROR",
+      "expected_exit_code": 3,
+      "cli_flags": ["--dry-run"],
+      "source_mutations": [
+        {
+          "path": "VERSION",
+          "content": "tampered-release-source"
+        }
+      ]
+    },
+    {
+      "id": "source-target-overlap",
+      "selector": "each_catalog_platform",
+      "operation": "path_fault",
+      "target_mode": "source_root",
+      "expected_status": "INPUT_ERROR",
+      "expected_exit_code": 2,
+      "cli_flags": ["--dry-run"]
+    },
+    {
+      "id": "existing-target-without-replace",
+      "selector": "each_catalog_platform",
+      "operation": "overwrite_guard",
+      "expected_status": "INPUT_ERROR",
+      "expected_exit_code": 2,
+      "precondition_files": [
+        {
+          "path": "existing-user-file.txt",
+          "content": "existing-target"
+        }
+      ],
+      "cli_flags": []
+    }
+  ]
+}

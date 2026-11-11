@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "compile": "PASS",
+  "cases": {
+    "normal": {
+      "hdl": "FAIL",
+      "numerical": "NOT_RUN",
+      "rom_unchanged": true,
+      "reason": "normal: simulation diagnostic; inspect <PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_product_a10_all_b\\normal\\simulate.log"
+    }
+  },
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "python_exe": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "td_root": "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+  "td_model_release": "2026.2.210.850",
+  "wall_seconds": 180,
+  "case_wall_seconds": 60,
+  "case_pixel_cycles": 200000,
+  "inputs_unchanged": true,
+  "elapsed_seconds": 16.23399999999856
+}

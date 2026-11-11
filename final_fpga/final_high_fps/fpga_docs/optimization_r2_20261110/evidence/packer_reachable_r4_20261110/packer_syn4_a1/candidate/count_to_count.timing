@@ -1,0 +1,250 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 22:31:05 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 97.94%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     2.494ns
+Fmax           :     400.962MHz
+
+Statistics:
+Max            : SWNS      5.506ns, STNS      0.000ns,         0 Viol Endpoints,         4 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 5.506ns
+Begin Point         : dut/byte_count_reg[1].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_count_reg[4].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.424ns (cell 0.809ns (33%), net 1.615ns (67%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT3=2 )
+Max Fanout          : 122
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[1].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/byte_count_reg[1].q
+net (fo=24)                             0.397          0.548          net: dut/byte_count[1],  ../../jpeg_byte_packer.v(35)
+                                                                      pin: dut/mux49_syn_82.b
+LUT6                                    0.141    r     0.689       1  pin: dut/mux49_syn_82.o
+net (fo=3)                              0.232          0.921          net: dut/o_axis_tlast,  ../../jpeg_byte_packer.v(26)
+                                                                      pin: dut/mux49_syn_83.c
+LUT3                                    0.150    f     1.071       2  pin: dut/mux49_syn_83.o
+net (fo=10)                             0.323          1.394          net: dut/o_axis_tvalid,  ../../jpeg_byte_packer.v(24)
+                                                                      pin: dut/mux47_syn_396.d
+LUT6                                    0.141    r     1.535       3  pin: dut/mux47_syn_396.o
+net (fo=122)                            0.514          2.049          net: dut/mux47_syn_394,  ../../jpeg_byte_packer.v(116)
+                                                                      pin: dut/byte_count_reg[4]_syn_5.c
+LUT3                                    0.150    f     2.199       4  pin: dut/byte_count_reg[4]_syn_5.o
+net (fo=1)                              0.149          2.348          net: dut/byte_count_reg[4]_syn_4,  ../../jpeg_byte_packer.v(115)
+                                                                      pin: dut/byte_count_reg[4].d
+SEQ (reg)                               0.076    f     2.424               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.424               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[4].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.506               
+
+Slack               : 6.003ns
+Begin Point         : dut/byte_count_reg[4].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_count_reg[2].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.927ns (cell 0.668ns (34%), net 1.259ns (66%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=1  LUT5=1  LUT3=1 )
+Max Fanout          : 42
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[4].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/byte_count_reg[4].q
+net (fo=22)                             0.392          0.543          net: dut/byte_count[4],  ../../jpeg_byte_packer.v(35)
+                                                                      pin: dut/mux47_syn_395.a
+LUT6                                    0.141    r     0.684       1  pin: dut/mux47_syn_395.o
+net (fo=42)                             0.433          1.117          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux4_syn_726.c
+LUT3                                    0.150    f     1.267       2  pin: dut/mux4_syn_726.o
+net (fo=6)                              0.285          1.552          net: dut/mux4_syn_727,  ../../jpeg_byte_packer.v(107)
+                                                                      pin: dut/byte_count_b3[2]_syn_1.e
+LUT5                                    0.150    f     1.702       3  pin: dut/byte_count_b3[2]_syn_1.o
+net (fo=1)                              0.149          1.851          net: dut/byte_count_b3[2],  NOFILE(0)
+                                                                      pin: dut/byte_count_reg[2].d
+SEQ (reg)                               0.076    f     1.927               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.927               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[2].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.003               
+
+Slack               : 6.012ns
+Begin Point         : dut/byte_count_reg[4].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_count_reg[3].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.918ns (cell 0.659ns (34%), net 1.259ns (66%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=2  LUT3=1 )
+Max Fanout          : 42
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[4].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/byte_count_reg[4].q
+net (fo=22)                             0.392          0.543          net: dut/byte_count[4],  ../../jpeg_byte_packer.v(35)
+                                                                      pin: dut/mux47_syn_395.a
+LUT6                                    0.141    r     0.684       1  pin: dut/mux47_syn_395.o
+net (fo=42)                             0.433          1.117          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux4_syn_726.c
+LUT3                                    0.150    f     1.267       2  pin: dut/mux4_syn_726.o
+net (fo=6)                              0.285          1.552          net: dut/mux4_syn_727,  ../../jpeg_byte_packer.v(107)
+                                                                      pin: dut/byte_count_b3[3]_syn_1.f
+LUT6                                    0.141    r     1.693       3  pin: dut/byte_count_b3[3]_syn_1.o
+net (fo=1)                              0.149          1.842          net: dut/byte_count_b3[3],  NOFILE(0)
+                                                                      pin: dut/byte_count_reg[3].d
+SEQ (reg)                               0.076    f     1.918               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.918               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[3].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.012               
+
+Slack               : 6.161ns
+Begin Point         : dut/byte_count_reg[1].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_count_reg[0].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.769ns (cell 0.668ns (37%), net 1.101ns (63%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=1  LUT5=1  LUT3=1 )
+Max Fanout          : 24
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[1].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/byte_count_reg[1].q
+net (fo=24)                             0.397          0.548          net: dut/byte_count[1],  ../../jpeg_byte_packer.v(35)
+                                                                      pin: dut/mux49_syn_82.b
+LUT6                                    0.141    r     0.689       1  pin: dut/mux49_syn_82.o
+net (fo=3)                              0.232          0.921          net: dut/o_axis_tlast,  ../../jpeg_byte_packer.v(26)
+                                                                      pin: dut/mux49_syn_83.c
+LUT3                                    0.150    f     1.071       2  pin: dut/mux49_syn_83.o
+net (fo=10)                             0.323          1.394          net: dut/o_axis_tvalid,  ../../jpeg_byte_packer.v(24)
+                                                                      pin: dut/byte_count_b3[0]_syn_1.d
+LUT5                                    0.150    f     1.544       3  pin: dut/byte_count_b3[0]_syn_1.o
+net (fo=1)                              0.149          1.693          net: dut/byte_count_b3[0],  NOFILE(0)
+                                                                      pin: dut/byte_count_reg[0].d
+SEQ (reg)                               0.076    f     1.769               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.769               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/byte_count_reg[0].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.161               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

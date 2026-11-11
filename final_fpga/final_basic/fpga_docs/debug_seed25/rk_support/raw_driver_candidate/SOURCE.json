@@ -1,0 +1,48 @@
+{
+  "status": "RAW_SOURCE_CANDIDATE",
+  "module_build": "NOT_RUN",
+  "board": "NOT_RUN",
+  "base_commit": "e081883222a7cd342d6d1ffcc5836a443334fe11",
+  "n2_matched_source": "deliverables/DUAL_SDR_seed51_\u9996\u8f6e\u6545\u969c\u5206\u6790\u4e0e\u4fee\u590d\u89c4\u5212_20261101/field_originals/matched_driver_sources",
+  "published_n2_ko": {
+    "sha256": "61e2aa53f3c4a574744793c633292fcfd5ac83c1e372761e7372acd7c78766ec",
+    "bytes": 172920,
+    "build_id": "db2c5b1de225ec72596863cd70de845e3e6d59c7"
+  },
+  "published_kernel": {
+    "release": "6.1.99",
+    "build_id": "3029de626e5b93ec060106f70b361766bd9a7132",
+    "config_sha256": "86900cf569565d74a2b6d5ca32a35d2ca68c25ea71ef9fc4e2816a0acb4e8956"
+  },
+  "kernel_sources": {
+    "ph1a_c2h.c": {
+      "n2_sha256": "41e75255d67803a54d97d46972eb1108f85e6b0b9f2d0f6b6a78037764f4d45e",
+      "raw_sha256": "ec9952dd9c1633400a8225975aeb8968fcdae6331866541314ff642f3738a98b"
+    },
+    "c2h_legacy_policy.h": {
+      "n2_sha256": "db887f2c5b81398d1eb2d88c8c88aa7a8d2febe59bb264333c0f4a98471412f5",
+      "raw_sha256": "ed452d7cb56f51518743727f9c25d64dde99a6caeedccb8077ddb3d6c54d60c1"
+    },
+    "c2h_hw_abi.h": {
+      "n2_sha256": "94c1ec43870c8afede09e66c391a2f447c3eb09060b8ba4ac746e63052a33267",
+      "raw_sha256": "94c1ec43870c8afede09e66c391a2f447c3eb09060b8ba4ac746e63052a33267"
+    },
+    "c2h_uapi.h": {
+      "n2_sha256": "163479e9b6832f303da6be288891bf424a48d0435c493c8588162de4b9b670fe",
+      "raw_sha256": "163479e9b6832f303da6be288891bf424a48d0435c493c8588162de4b9b670fe"
+    },
+    "c2h_lifecycle.h": {
+      "n2_sha256": "20ba8a963e5942d640ef221b263ee6044901088ed2d42c412350c122c30ced8f",
+      "raw_sha256": "20ba8a963e5942d640ef221b263ee6044901088ed2d42c412350c122c30ced8f"
+    },
+    "Makefile": {
+      "n2_sha256": "26d41a41a97c6caa8c14b83501d1e5c72dde60a6dc6dc8e4f73218186c9d9a9c",
+      "raw_sha256": "26d41a41a97c6caa8c14b83501d1e5c72dde60a6dc6dc8e4f73218186c9d9a9c"
+    }
+  },
+  "python_policy": {
+    "n2_sha256": "c561609a270bd57e4be341b1e7425544002e5e4ef162f600f5743ddcb8b83779",
+    "raw_sha256": "396edb6ea0011af93eae075381facccf966d7078fec152545d15f092a614a094"
+  },
+  "patch_sha256": "2f7d9332d34b5ba5f9391a03df944a1d309a73864a381f7c8f64c97e086f5695"
+}

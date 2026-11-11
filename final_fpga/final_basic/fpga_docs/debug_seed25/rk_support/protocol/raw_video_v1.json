@@ -1,0 +1,34 @@
+{
+  "name": "ARAW",
+  "magic": 1463898689,
+  "version": 1,
+  "header_bytes": 64,
+  "payload_max_bytes": 16777216,
+  "format_raw10": 1,
+  "flag_timestamp_valid": 1,
+  "byte_order": "little",
+  "bayer_phases": {
+    "RGGB": 0,
+    "GRBG": 1,
+    "GBRG": 2,
+    "BGGR": 3
+  },
+  "fields": [
+    {"name": "magic", "offset": 0, "bytes": 4},
+    {"name": "version", "offset": 4, "bytes": 2},
+    {"name": "header_bytes", "offset": 6, "bytes": 2},
+    {"name": "payload_bytes", "offset": 8, "bytes": 4},
+    {"name": "width", "offset": 12, "bytes": 2},
+    {"name": "height", "offset": 14, "bytes": 2},
+    {"name": "source_sequence", "offset": 16, "bytes": 4},
+    {"name": "source_session", "offset": 20, "bytes": 4},
+    {"name": "mode_epoch", "offset": 24, "bytes": 4},
+    {"name": "camera", "offset": 28, "bytes": 1},
+    {"name": "format", "offset": 29, "bytes": 1},
+    {"name": "bayer_phase", "offset": 30, "bytes": 1},
+    {"name": "flags", "offset": 31, "bytes": 1},
+    {"name": "capture_time_ns", "offset": 32, "bytes": 8},
+    {"name": "job_id", "offset": 40, "bytes": 8},
+    {"name": "reserved", "offset": 48, "bytes": 16}
+  ]
+}

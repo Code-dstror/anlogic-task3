@@ -1,0 +1,298 @@
+--- b68/anlogic2026.v
++++ b260/anlogic2026.v
+@@ -189,6 +189,8 @@
+     wire [31:0] physical_event_sequence,cropped_raw_sequence;
+     wire physical_event_identity_valid,cropped_raw_identity_valid;
+     wire camera_source_identity_fault,physical_identity_quarantine;
++    wire source_recovery_quiet,physical_recovery_history_reset;
++    reg source_recovery_history_pending;
+     wire [1:0] physical_live_source_valid,physical_live_source_cancel;
+     wire physical_live_source_frame_begin,physical_live_observation_abort,physical_live_authenticated_negative;
+     wire physical_lane_owner_begin,physical_lane_source_fire,physical_lane_source_ok;
+@@ -1701,7 +1703,9 @@
+         .clk(pixel_clk),.rst_n(pixel_rst_n&&camera_mode_running&&!camera_hdr_mode),.phy_ready(camera_phy_ready),
+         .receive_fault(camera_receive_fault),.parser_identity_fault(camera_source_identity_fault),
+         .event_valid(physical_event_valid),.event_kind(physical_event_kind),
+-        .event_identity_valid(physical_event_identity_valid),.quarantine(physical_identity_quarantine));
++        .event_identity_valid(physical_event_identity_valid),
++        .i_recovery_quiet(source_recovery_quiet&&physical_event_ready),
++        .quarantine(physical_identity_quarantine));
+     // 统计相机帧与错误，仅在 RGB 握手时更新诊断摘要
+     reg [31:0] camera_frames, camera_errors, camera_digest;
+     always @(posedge pixel_clk or negedge pixel_rst_n) begin
+@@ -1847,6 +1851,18 @@
+             if(camera_rgb_valid && camera_rgb_ready && camera_sof) previous_preprocess_epoch<=job_epoch;
+         end
+     end
++    // Unknown input loss invalidates history, but never interrupts the failed
++    // old frame's SOURCE/record drain. Keep the request through the recovered
++    // frame's descriptor and input-SOF sampling; output SOF is safely later.
++    assign physical_recovery_history_reset=source_recovery_history_pending&&
++        !job_is_replay&&!private_processing_selected;
++    always @(posedge pixel_clk or negedge pixel_rst_n)begin
++        if(!pixel_rst_n)source_recovery_history_pending<=0;
++        else if(physical_identity_quarantine&&source_recovery_quiet)
++            source_recovery_history_pending<=1;
++        else if(physical_recovery_history_reset&&processed_valid&&processed_ready&&processed_sof)
++            source_recovery_history_pending<=0;
++    end
+     wire native_pipeline_idle_now=native_job_idle && !job_pending && !frame_active_pixel && jpeg_idle &&
+         raw_processing_idle_pixel && preprocess_records_quiet && mask_source_quiet && live_f21_frame_quiet;
+     wire private_context_request=PRIVATE_PROCESSING_ENABLE!=0&&
+@@ -1914,8 +1930,8 @@
+             .cfg_context(neutral_record_context),.cfg_width(FRAME_WIDTH[12:0]),.cfg_height(FRAME_HEIGHT[12:0]),
+             .cfg_pp_enable(requested_features[0] ? extension[`PCIE_CFG_EXT_OFFSET_PP_ENABLE+:3] : enables),
+             .cfg_camera_id(private_processing_selected ? processing_frame[4] : 1'b0),
+-            .cfg_history_reset((job_epoch!=previous_preprocess_epoch)&&
+-                (!requested_features[0]||extension[`PCIE_CFG_EXT_OFFSET_PP_HISTORY_RESET])),
++            .cfg_history_reset(physical_recovery_history_reset||((job_epoch!=previous_preprocess_epoch)&&
++                (!requested_features[0]||extension[`PCIE_CFG_EXT_OFFSET_PP_HISTORY_RESET]))),
+             .cfg_features(requested_features),
+             .cfg_threshold(extension[`PCIE_CFG_EXT_OFFSET_THRESHOLD+:11]),
+             .cfg_gx_min(extension[`PCIE_CFG_EXT_OFFSET_GX_MIN+:11]),
+@@ -2069,7 +2085,7 @@
+         preprocess_live_f21_service4 #(.HE_FIXED_CONFIG_SESSION_ENABLE(R8_HE_FIXED_CONFIG_SESSION_ENABLE),
+             .F21_FIXED_CONFIG_SESSION_ENABLE(R8_F21_FIXED_CONFIG_SESSION_ENABLE),.LANE_TAP_ENABLE(LIVE_LANE_ENABLE)) u_live(
+             .clk(pixel_clk),.rst_n(f21_core_reset_n),.i_processing_rst_n(processing_run),
+-            .cfg_enable(enables),.cfg_history_reset(job_epoch!=previous_preprocess_epoch),
++            .cfg_enable(enables),.cfg_history_reset(physical_recovery_history_reset||job_epoch!=previous_preprocess_epoch),
+             .cfg_schema2(capture0_schema2),.cfg_filter_gray(capture0_filter_gray),.cfg_filter_legacy_gaussian(capture0_filter_legacy),
+             .cfg_filter_color(capture0_schema2&&capture0_active_config[172]),
+             .cfg_multiscale(capture0_algorithm_extension[`PCIE_CFG_EXT_OFFSET_ENABLE+`PCIE_CFG_EXT_FEATURE_F22]),
+@@ -2122,7 +2138,7 @@
+             .clk(pixel_clk),.rst_n(private_processing_selected ? private_pp_reset_n : physical_processing_rst_n),
+             .cfg_width(FRAME_WIDTH[12:0]),.cfg_height(FRAME_HEIGHT[12:0]),
+             .cfg_enable(enables),.cfg_camera_id(private_processing_selected ? processing_frame[4] : 1'b0),
+-            .cfg_history_reset(job_epoch!=previous_preprocess_epoch),
++            .cfg_history_reset(physical_recovery_history_reset||job_epoch!=previous_preprocess_epoch),
+             .s_valid(preprocess_input_valid),.s_ready(preprocess_input_ready),.s_data(preprocess_input_rgb),
+             .s_sof(preprocess_input_sof),.s_eol(preprocess_input_eol),
+             .s_frame_done(private_processing_selected ? private_notice_valid&&private_notice_ok : camera_done),
+@@ -2575,9 +2591,51 @@
+             end
+         end else begin : g_regular_cleanup
+         assign physical_advanced_abort_request=1'b0;
++        wire local_cleanup_pending,local_cleanup_complete,cleanup_source_fire;
++        wire cleanup_status_ready;
++        if(LIVE_F21_ENABLE)begin:g_live_record_drain
++            reg failed_pending,source_closed,source_retired,clear_started;
++            reg previous_pixels_quiet;
++            // Cancel already stops unpublished LIVE pixels. Its real failed
++            // F22/F23 records outlive those pixels and still belong to JOIN.
++            // Close SOURCE before waiting for the records that need SOURCE;
++            // clear ISP/preprocess only after their actual extension/result.
++            wire pixels_quiet=native_tail_closed&&crop_quiet&&all_presented_clear;
++            wire record_tail_quiet=preprocess_records_quiet&&all_presented_clear&&crop_quiet&&
++                jpeg_idle&&!frame_active_pixel&&!start_valid&&!status_valid&&
++                !jpeg_result_valid&&!record_source_extension_valid;
++            assign cleanup_complete=source_closed;
++            assign cleanup_pending=failed_pending||local_cleanup_pending;
++            assign cleanup_source_fire=failed_pending&&source_retired&&!clear_started&&record_tail_quiet;
++            // The original local-clear helper's STATUS acknowledges the SOURCE
++            // already consumed by this exact context, never a new completion.
++            assign cleanup_status_ready=source_retired;
++            always @(posedge pixel_clk or negedge pixel_rst_n)begin
++                if(!pixel_rst_n)begin
++                    failed_pending<=0;source_closed<=0;source_retired<=0;clear_started<=0;
++                    previous_pixels_quiet<=0;
++                end else begin
++                    previous_pixels_quiet<=pixels_quiet;
++                    if((early_negative||late_negative)&&native_owned)failed_pending<=1;
++                    if(failed_pending&&pixels_quiet&&previous_pixels_quiet)source_closed<=1;
++                    if(physical_source_failed)source_retired<=1;
++                    if(cleanup_source_fire)clear_started<=1;
++                    if(local_cleanup_complete&&source_retired)failed_pending<=0;
++                    if(context_fire)begin
++                        failed_pending<=0;source_closed<=0;source_retired<=0;clear_started<=0;
++                        previous_pixels_quiet<=0;
++                    end
++                end
++            end
++        end else begin:g_direct_clear
++            assign cleanup_complete=local_cleanup_complete;
++            assign cleanup_pending=local_cleanup_pending;
++            assign cleanup_source_fire=early_negative||late_negative;
++            assign cleanup_status_ready=source_fire&&source_exact&&!physical_native_source_ok;
++        end
+         hdr_pair_product_abort_drain4 #(.SYNC_CLEAR_ENABLE(1),.SEPARATE_DATA_RESET(1)) u_cleanup(
+             .clk(pixel_clk),.rst_n(pixel_rst_n),.i_context_fire(context_fire),.i_context_tag(next_tag),
+-            .i_source_fire(early_negative||late_negative),.i_source_tag(source_tag),
++            .i_source_fire(cleanup_source_fire),.i_source_tag(source_tag),
+             .i_source_ok(1'b0),.i_source_read_quiescent(crop_quiet),
+             .i_native_job_start(native_job_start&&!native_job_replay&&physical_frame_enable&&!physical_capture_private),
+             .i_native_valid(!native_tail_closed),.i_isp_valid(camera_rgb_valid),
+@@ -2585,9 +2643,9 @@
+             .i_admission_valid(admission_rgb_buffered||jpeg_rgb_valid),
+             .o_local_rst_n(physical_processing_rst_n),
+             .i_data_reset_n(pixel_reset_local_n),.o_local_data_rst_n(physical_processing_data_rst_n),
+-            .o_drain_pending(cleanup_pending),
+-            .o_failed_status_valid(cleanup_complete),
+-            .i_failed_status_ready(LIVE_F21_ENABLE ? physical_source_failed : source_fire&&source_exact&&!physical_native_source_ok),
++            .o_drain_pending(local_cleanup_pending),
++            .o_failed_status_valid(local_cleanup_complete),
++            .i_failed_status_ready(cleanup_status_ready),
+             .o_protocol_fault(cleanup_fault),.o_stale_source_count(),.o_cleanup_pulse(physical_cleanup_pulse));
+         end
+         // Keep an already queued next FS while the previous LIVE JPEG retires.
+@@ -2595,6 +2653,12 @@
+         wire fence_event_ready;
+         reg deferred_fs,fs_qualification_seen;
+         wire physical_admission_credit;
++        // Release only the camera isolation, never a product/DMA owner. All
++        // old SOURCE handshakes and presented pixels must have drained first.
++        assign source_recovery_quiet=physical_sdr_source_idle&&native_pipeline_idle&&
++            native_pipeline_idle_now&&raw_capture0_idle&&raw_capture1_idle&&
++            crop_quiet&&all_presented_clear&&!cleanup_pending&&!cleanup_fault&&
++            !binding_fault&&!capture_frontend_fault&&!host_replay_context_owned&&!processing_context_owned;
+         wire physical_admission_inhibit=physical_hdr_requested||!cfg_source_ready||cfg_pause||capture_config_valid||
+             local_stop_pause||reset_pause_pixel||live_source_block||!enable_pixel[1]||!armed_pixel[1]||
+             recovery_pixel[1]||fault_pixel[1]||replay_active||pixel_context_request||
+@@ -2666,6 +2730,7 @@
+             .o_drop_count(),.o_stale_event_count());
+         wire unused_geometry=crop_geometry_seen^admission_state_idle;
+     end else begin : g_geometry_source
++        assign source_recovery_quiet=1'b0;
+         assign cfg_diag_source_fs=1'b0;assign cfg_diag_source_gates=16'd0;
+         assign cfg_diag_admission_faults=5'd0;
+         assign physical_fs_take=0;
+--- b68/ph1a_rx_delay_scan.v
++++ b260/ph1a_rx_delay_scan.v
+@@ -121,7 +121,8 @@
+                     // settling. A held old packet cannot score a new code.
+                     seen_low<=seen_low | ~I_byte_align_done;
+                     if ((&seen_low) && all_aligned) begin
+-                        cnt<=0; align_cnt<=0;
++                        // Acquisition is the first of TEST_LEN scoring edges.
++                        cnt<=1; align_cnt<=1;
+                         state<=ST_TEST;
+                     end else if (wait_cnt==WAIT_CYCLES-1) begin
+                         pass_flag<=0;
+--- b68/physical_csi_rx_stream.v
++++ b260/physical_csi_rx_stream.v
+@@ -2,7 +2,8 @@
+ 
+ // 跨时钟传递 CSI 字事件并统计接收错误
+ module physical_csi_rx_stream #(parameter integer RX_DIAG_ENABLE=0, parameter integer FRAME_EVENTS_ENABLE = 1,
+-    parameter [31:0] SEQUENCE_INITIAL=32'd0) (
++    parameter [31:0] SEQUENCE_INITIAL=32'd0,
++    parameter integer FRAME_RESYNC_ENABLE=0) (
+     // 时钟与复位
+     input  wire        i_word_clk,
+     input  wire        i_pixel_clk,
+@@ -120,7 +121,8 @@
+     end
+ 
+     // 在字时钟域解析包头并将像素与异常封装为同一事件
+-    physical_csi_word_core #(.RX_DIAG_ENABLE(RX_DIAG_ENABLE),.FRAME_EVENTS_ENABLE(FRAME_EVENTS_ENABLE),.SEQUENCE_INITIAL(SEQUENCE_INITIAL)) u_word_core (
++    physical_csi_word_core #(.RX_DIAG_ENABLE(RX_DIAG_ENABLE),.FRAME_EVENTS_ENABLE(FRAME_EVENTS_ENABLE),
++        .SEQUENCE_INITIAL(SEQUENCE_INITIAL),.FRAME_RESYNC_ENABLE(FRAME_RESYNC_ENABLE)) u_word_core (
+         .i_clk(i_word_clk), .i_reset_n(word_reset_n),.i_identity_rst_n(identity_word_reset_n),
+         .o_source_sequence_count(),.o_identity_fault(word_identity_fault),.o_identity_diag(o_identity_diag),
+         .o_trace_parser(o_trace_parser),.o_trace_trigger(o_trace_trigger),
+--- b68/physical_csi_word_core.v
++++ b260/physical_csi_word_core.v
+@@ -2,7 +2,8 @@
+ 
+ // 解析 CSI 字流并组装 RAW10 像素与帧事件
+ module physical_csi_word_core #(parameter integer RX_DIAG_ENABLE=0,parameter integer FRAME_EVENTS_ENABLE = 1,
+- parameter [31:0] SEQUENCE_INITIAL = 32'd0) (
++ parameter [31:0] SEQUENCE_INITIAL = 32'd0,
++ parameter integer FRAME_RESYNC_ENABLE = 0) (
+     // 时钟与复位
+  input wire i_clk,
+  input wire i_reset_n,
+@@ -129,7 +130,8 @@
+ wire uncertain_header=i_reset_n && i_word_valid && state==HDR && !good;
+ // Before the first target-VC FS no sequence has been published. Reject bad
+ // startup packets without poisoning that future first identity. After FS the
+-// same ambiguity can hide a frame boundary and must remain sticky until reset.
++// same ambiguity can hide a frame boundary. Strict callers stay untrusted;
++// SDR recovery may establish a new unique identity at a later recognized FS.
+ wire identity_header_loss=uncertain_header && sequence_started;
+ wire identity_decoder_loss=!i_reset_n && sequence_started;
+ assign o_trace_trigger=i_identity_rst_n && sequence_trusted &&
+@@ -137,7 +139,9 @@
+      (recognized_fs && sequence_counter==32'hffffffff));
+ assign o_trace_parser={frame_open,dropping,crc_lo_seen,o_packet_done,
+     sequence_trusted,sequence_started,raw_packet,good,syn,left,state,sequence_counter};
+-wire [32:0] next_fs_identity={i_identity_rst_n && sequence_trusted && sequence_counter!=32'hffffffff,
++// Recovery never relabels the old frame or its queued FS/terminal controls.
++wire [32:0] next_fs_identity={i_identity_rst_n &&
++    (sequence_trusted || FRAME_RESYNC_ENABLE != 0) && sequence_counter!=32'hffffffff,
+     sequence_counter==32'hffffffff ? 32'hffffffff : sequence_counter+32'd1};
+ assign o_source_sequence_count=sequence_counter;
+ assign o_identity_fault=!sequence_trusted;
+@@ -148,7 +152,10 @@
+         if(recognized_fs)begin
+             sequence_started<=1;
+             if(sequence_counter==32'hffffffff)sequence_trusted<=0;
+-            else sequence_counter<=sequence_counter+32'd1;
++            else begin
++                sequence_counter<=sequence_counter+32'd1;
++                if(FRAME_RESYNC_ENABLE != 0)sequence_trusted<=1;
++            end
+         end
+     end
+ end
+@@ -158,7 +165,9 @@
+      identity_decoder_loss,identity_header_loss};
+  always @(posedge i_clk or negedge i_identity_rst_n)begin
+   if(!i_identity_rst_n)begin first_reason<=0;first_header<=0;end
+-  else if(sequence_trusted&&|loss_cause)begin
++  // Schema zero means no first loss has been recorded in this cohort. A
++  // recovered later loss must not replace RX while RT still holds the first.
++  else if(first_reason[3:0]==4'd0 && sequence_trusted&&|loss_cause)begin
+    first_reason<={sequence_counter[15:0],syn,i_reset_n,i_word_valid,(state==HDR),loss_cause,4'd1};
+    first_header<=uncertain_header?i_word:32'd0;
+   end
+--- b68/production_source_identity_guard.v
++++ b260/production_source_identity_guard.v
+@@ -1,10 +1,12 @@
+ `timescale 1ns/1ps
+ // PIX-domain continuity quarantine. A healthy, identity-bearing FS establishes
+ // continuity; PHY training before that point has no published SOURCE to protect.
+-// Once established, only the coordinated source/product cohort reset clears it.
++// After a fault, a consumed healthy FS may rearm only when the actual old
++// source/product owners are quiet. The caller supplies consumed FS events.
+ module production_source_identity_guard (
+     input wire clk,rst_n,
+     input wire phy_ready,receive_fault,parser_identity_fault,
++    input wire i_recovery_quiet,
+     input wire event_valid,input wire [1:0] event_kind,input wire event_identity_valid,
+     output reg quarantine
+ );
+@@ -20,6 +22,7 @@
+             // Invalid identities never establish a recoverable new cohort.
+             if(parser_identity_fault || (fs_present&&!event_identity_valid) ||
+                ((cohort_started||fs_present)&&(!phy_ready||receive_fault)))quarantine<=1;
++            else if(i_recovery_quiet && healthy_fs)quarantine<=0;
+         end
+     end
+ endmodule
+--- b68/real_hdr_camera_observe_axis.v
++++ b260/real_hdr_camera_observe_axis.v
+@@ -219,7 +219,9 @@
+         end else begin
+             phy_previous <= phy_ready;
+             receive_fault <= 0;
+-            if(o_source_identity_fault)identity_fault_seen<=1;
++            // Ordinary frame resynchronization can clear parser loss without
++            // a cohort reset. Rearm its edge detector for the next failure.
++            identity_fault_seen<=o_source_identity_fault;
+             if(o_source_identity_fault&&!identity_fault_seen)receive_fault<=1;
+             if (!done_sync[1] || !delay_sync[1] || raw_valid || m_hdr0_valid || m_hdr1_valid) begin
+                 silence_count <= 0;
+--- b68/real_hdr_physical_csi_rx.v
++++ b260/real_hdr_physical_csi_rx.v
+@@ -242,7 +242,10 @@
+     wire [63:0] sdr_identity_diag;
+     wire [31:0] hdr_fs0_count,hdr_fs1_count;
+     assign o_rx_diag_word={hdr_fs1_count,hdr_fs0_count,sdr_identity_diag};
+-    physical_csi_rx_stream #(.RX_DIAG_ENABLE(RX_DIAG_ENABLE),.FRAME_EVENTS_ENABLE(FRAME_EVENTS_ENABLE)) u_stream (
++    // Only SDR may reestablish a frame identity after a receive failure.
++    // HDR keeps its independent dual-VC continuity and packet-boundary logic.
++    physical_csi_rx_stream #(.RX_DIAG_ENABLE(RX_DIAG_ENABLE),.FRAME_EVENTS_ENABLE(FRAME_EVENTS_ENABLE),
++        .FRAME_RESYNC_ENABLE(1)) u_stream (
+         .i_word_clk(o_hs_word_clk), .i_pixel_clk(i_pixel_clk),
+         .i_reset_n(phy_reset_n&&!hdr_mode_word[1]), .i_decoder_reset_n(decoder_reset_n),
+         // Initial calibration starts the first published source cohort. Normal

@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:19:44 on Nov 10,2026
+vlog -sv -work work <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_datapath\tb_raw_ingress.sv 
+-- Compiling module raw_ingress_case
+-- Compiling module tb_raw_ingress
+
+Top level modules:
+	tb_raw_ingress
+End time: 18:19:44 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

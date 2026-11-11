@@ -1,0 +1,55 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -onfinish stop work.tb_dehaze_transition -do "onerror {quit -code 1}; run -all; quit -code 0" 
+# Start time: 18:42:53 on Nov 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_dehaze_transition(fast)
+# onerror {quit -code 1}
+#  Warning: onerror command for use within macro
+#  run -all
+# CASE_DEHAZE_TRANSITION disabled identity
+# DONE_DEHAZE_TRANSITION disabled identity in=8192 out=8192 stalls=1589 history=0
+# CASE_DEHAZE_TRANSITION first enabled eye zero with SOURCE at SOF
+# DONE_DEHAZE_TRANSITION first enabled eye zero with SOURCE at SOF in=8192 out=8192 stalls=0 history=0
+# CASE_DEHAZE_TRANSITION first enabled eye one with late SOURCE
+# DONE_DEHAZE_TRANSITION first enabled eye one with late SOURCE in=8192 out=8192 stalls=0 history=0
+# CASE_DEHAZE_TRANSITION disabled again with existing history
+# DONE_DEHAZE_TRANSITION disabled again with existing history in=8192 out=8192 stalls=0 history=0
+# CASE_DEHAZE_TRANSITION re-enabled eye zero with distance four
+# DONE_DEHAZE_TRANSITION re-enabled eye zero with distance four in=8192 out=8192 stalls=1596 history=1
+# CASE_DEHAZE_TRANSITION eye one with new epoch
+# DONE_DEHAZE_TRANSITION eye one with new epoch in=8192 out=8192 stalls=0 history=0
+# CASE_DEHAZE_TRANSITION eye one with new session
+# DONE_DEHAZE_TRANSITION eye one with new session in=8192 out=8192 stalls=0 history=0
+# CASE_DEHAZE_TRANSITION warm history reset and negative SOURCE with clear
+# ABORT_DEHAZE_TRANSITION warm history reset and negative SOURCE with clear in=96 out=89 stalls=2
+# CASE_DEHAZE_TRANSITION complete first owner after clear
+# DONE_DEHAZE_TRANSITION complete first owner after clear in=8192 out=8192 stalls=0 history=0
+# CASE_DEHAZE_TRANSITION asynchronous reset on stopped clock
+# ABORT_DEHAZE_TRANSITION asynchronous reset on stopped clock in=96 out=89 stalls=1
+# CASE_DEHAZE_TRANSITION complete first owner after reset
+# DONE_DEHAZE_TRANSITION complete first owner after reset in=8192 out=8192 stalls=0 history=0
+# PASS_DEHAZE_TRANSITION full_frames=9 aborted_frames=2 groups_per_frame=8192
+# ** Note: $finish    : C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_dehaze_transition_20261109/tb_dehaze_transition.sv(374)
+#    Time: 783400 ns  Iteration: 1  Instance: /tb_dehaze_transition
+# Break at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_dehaze_transition_20261109/tb_dehaze_transition.sv line 374
+# Stopped at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_dehaze_transition_20261109/tb_dehaze_transition.sv line 374
+#  quit -code 0
+# End time: 18:42:55 on Nov 09,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

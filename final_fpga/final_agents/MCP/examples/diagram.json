@@ -1,0 +1,16 @@
+{
+  "width": 8.2,
+  "height": 2.1,
+  "nodes": [
+    {"id":"title","kind":"text","text":"图像处理链路示意（工具链测试）","x":1.3,"y":1.55,"w":5.6,"h":0.35},
+    {"id":"camera","text":"IMX415\n图像采集","x":0.25,"y":0.55,"w":1.45,"h":0.7},
+    {"id":"fpga","text":"FPGA\n预处理与压缩","x":2.3,"y":0.55,"w":1.65,"h":0.7},
+    {"id":"pcie","text":"PCIe\n帧传输","x":4.55,"y":0.55,"w":1.4,"h":0.7},
+    {"id":"rk","text":"RK3576\n接收与推理","x":6.55,"y":0.55,"w":1.4,"h":0.7}
+  ],
+  "edges": [
+    {"from":"camera","to":"fpga"},
+    {"from":"fpga","to":"pcie"},
+    {"from":"pcie","to":"rk"}
+  ]
+}

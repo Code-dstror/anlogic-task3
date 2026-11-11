@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:anlogic="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    <ipxact:vendor>anlogic.com</ipxact:vendor>
+    <ipxact:library>customized</ipxact:library>
+    <ipxact:name>design_mult_25u16u_p1</ipxact:name>
+    <ipxact:version>1.1</ipxact:version>
+    <ipxact:componentInstances>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>multiplier_top_mult_25u16u_p1_Inst</ipxact:instanceName>
+            <ipxact:componentRef vendor="anlogic.com" library="ip" name="Multiplier" version="1.1"/>
+            <ipxact:configurableElementValues>
+                <ipxact:configurableElementValue referenceId="View_Multiplier_Architecture">&quot;Dual Multiplier&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_A_Data_Signed">&quot;Unsigned&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_A_Data_Width">25</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_B_Data_Signed">&quot;Unsigned&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_B_Data_Width">16</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Constant_Value">255</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Implement_Method">&quot;DSP&quot;</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Truncation">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_MSB">40</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_LSB">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Pipeline">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Optimum_Pipeline">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Symmetric_Round_isPresent">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Clock_Enable">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Rst_Enable">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_CE_OVER_RST">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="View_Control">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="A_WIDTH">25</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="B_WIDTH">16</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="A_SIGNED">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="B_SIGNED">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="HAS_CE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="HAS_SCLR">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="CE_OVER_SCLR">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="MODEL_TYPE">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="B_VALUE_WIDTH">8</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="B_VALUE_NEGE">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="B_VALUE">69'd255</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="MULT_TYPE">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="DELAY">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="OUT_HIGH">40</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="OUT_LOW">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="P_WIDTH">41</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="ROUND_OUTPUT">0</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="CE_EN">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="RST_EN">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="CLK_EN">1</ipxact:configurableElementValue>
+                <ipxact:configurableElementValue referenceId="B_EN">1</ipxact:configurableElementValue>
+            </ipxact:configurableElementValues>
+        </ipxact:componentInstance>
+    </ipxact:componentInstances>
+    <ipxact:adHocConnections>
+        <ipxact:adHocConnection>
+            <ipxact:name>ce</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="multiplier_top_mult_25u16u_p1_Inst" portRef="ce"/>
+                <ipxact:externalPortReference portRef="ce"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>rst</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="multiplier_top_mult_25u16u_p1_Inst" portRef="rst"/>
+                <ipxact:externalPortReference portRef="rst"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>clk</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="multiplier_top_mult_25u16u_p1_Inst" portRef="clk"/>
+                <ipxact:externalPortReference portRef="clk"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>a</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="multiplier_top_mult_25u16u_p1_Inst" portRef="a"/>
+                <ipxact:externalPortReference portRef="a"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>b</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="multiplier_top_mult_25u16u_p1_Inst" portRef="b"/>
+                <ipxact:externalPortReference portRef="b"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>p</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="multiplier_top_mult_25u16u_p1_Inst" portRef="p"/>
+                <ipxact:externalPortReference portRef="p"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+    </ipxact:adHocConnections>
+    <ipxact:vendorExtensions>
+        <anlogic:device>PH1A90SEG324</anlogic:device>
+        <anlogic:displayname>Multiplier</anlogic:displayname>
+        <anlogic:ipGenVersion value="208212 2026/08/14">1.0</anlogic:ipGenVersion>
+    </ipxact:vendorExtensions>
+</ipxact:design>

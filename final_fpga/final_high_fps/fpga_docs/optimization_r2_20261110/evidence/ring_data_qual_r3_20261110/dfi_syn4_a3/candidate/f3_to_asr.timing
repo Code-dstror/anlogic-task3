@@ -1,0 +1,301 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 22:10:10 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 91.14%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     DFI -> DFI
+Type           :     Self
+From Clock     :     DFI
+To Clock       :     DFI
+Min Period     :     1.614ns
+Fmax           :     619.579MHz
+
+Statistics:
+Max            : SWNS      2.944ns, STNS      0.000ns,         0 Viol Endpoints,         6 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 2.944ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/wa_reg[15].sr (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 0.871ns (cell 0.255ns (29%), net 0.616ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 977
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=977)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(19)
+                                                                      pin: u_ring/u_store/wa_reg[15].sr
+SEQ (reg)                               0.104    r     4.851               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.851               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/wa_reg[15].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          7.795               
+clock uncertainty                       0.000          7.795               
+clock pessimism                         0.000          7.795               
+--------------------------------------------------------------------  ---------------
+Required                                               7.795               
+--------------------------------------------------------------------  ---------------
+Slack                                                  2.944               
+
+Slack               : 2.944ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/ready_id_reg[7].sr (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 0.871ns (cell 0.255ns (29%), net 0.616ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 977
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=977)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(19)
+                                                                      pin: u_ring/u_store/ready_id_reg[7].sr
+SEQ (reg)                               0.104    r     4.851               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.851               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/ready_id_reg[7].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          7.795               
+clock uncertainty                       0.000          7.795               
+clock pessimism                         0.000          7.795               
+--------------------------------------------------------------------  ---------------
+Required                                               7.795               
+--------------------------------------------------------------------  ---------------
+Slack                                                  2.944               
+
+Slack               : 2.944ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/wa_reg[16].sr (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 0.871ns (cell 0.255ns (29%), net 0.616ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 977
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=977)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(19)
+                                                                      pin: u_ring/u_store/wa_reg[16].sr
+SEQ (reg)                               0.104    r     4.851               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.851               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/wa_reg[16].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          7.795               
+clock uncertainty                       0.000          7.795               
+clock pessimism                         0.000          7.795               
+--------------------------------------------------------------------  ---------------
+Required                                               7.795               
+--------------------------------------------------------------------  ---------------
+Slack                                                  2.944               
+
+Slack               : 2.944ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/ready_id_reg[8].sr (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 0.871ns (cell 0.255ns (29%), net 0.616ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 977
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=977)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(19)
+                                                                      pin: u_ring/u_store/ready_id_reg[8].sr
+SEQ (reg)                               0.104    r     4.851               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.851               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/ready_id_reg[8].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          7.795               
+clock uncertainty                       0.000          7.795               
+clock pessimism                         0.000          7.795               
+--------------------------------------------------------------------  ---------------
+Required                                               7.795               
+--------------------------------------------------------------------  ---------------
+Slack                                                  2.944               
+
+Slack               : 2.944ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/wa_reg[17].sr (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 0.871ns (cell 0.255ns (29%), net 0.616ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 977
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=977)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(19)
+                                                                      pin: u_ring/u_store/wa_reg[17].sr
+SEQ (reg)                               0.104    r     4.851               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.851               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/wa_reg[17].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          7.795               
+clock uncertainty                       0.000          7.795               
+clock pessimism                         0.000          7.795               
+--------------------------------------------------------------------  ---------------
+Required                                               7.795               
+--------------------------------------------------------------------  ---------------
+Slack                                                  2.944               
+
+Slack               : 2.944ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/ready_id_reg[9].sr (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 0.871ns (cell 0.255ns (29%), net 0.616ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 977
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=977)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(19)
+                                                                      pin: u_ring/u_store/ready_id_reg[9].sr
+SEQ (reg)                               0.104    r     4.851               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.851               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/ready_id_reg[9].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          7.795               
+clock uncertainty                       0.000          7.795               
+clock pessimism                         0.000          7.795               
+--------------------------------------------------------------------  ---------------
+Required                                               7.795               
+--------------------------------------------------------------------  ---------------
+Slack                                                  2.944               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

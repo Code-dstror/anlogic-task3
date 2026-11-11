@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-11",
+  "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+  "documentation_snapshot_commit": "23da3ff9c5c0cd34f58ba3805a5e4f294f88350b",
+  "scope": "Source, project and documentation organization; read-only download of one existing same-source bitstream",
+  "original_project_changed": false,
+  "new_top_level_directories": [
+    "fpga_docs",
+    "fpga_prj",
+    "fpga_src"
+  ],
+  "local_simulation": "NOT_RUN",
+  "local_TD": "NOT_RUN",
+  "new_server_build": "NOT_RUN",
+  "board": "NOT_RUN",
+  "checks": {
+    "delivery": "PASS; see DELIVERY_CHECK.json",
+    "new_document_links": 60,
+    "geometry_generator": "PASS --check",
+    "rate_generator": "PASS --check",
+    "raw_generator": "PASS --check",
+    "quality_generator": "PASS --check"
+  },
+  "preserved": "Original engineering sources/Runs, historical bits, existing server jobs and unrelated worktree edits",
+  "notes": "Historical tests preserve original path semantics and external peer/tool requirements; see BUILD_AND_VERIFY.md",
+  "production_functional_content_changed": false,
+  "historical_evidence": "Original and current file hashes are distinguished in source and report indexes.",
+  "production_comment_adjustments": 40
+}

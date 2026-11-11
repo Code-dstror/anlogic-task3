@@ -1,0 +1,153 @@
+{
+  "source_kind": "LOCAL_SEALED_TREE_NOT_PUSHED",
+  "source_seal_sha256": "9f1be00097a6ab21889720cf6cfb8ee353cb34fffaab366df4369a63b93af03d",
+  "donor_qualification_inherited": false,
+  "original_failed_campaign": "tmp/extended_20261101/hdr_merge_r1_full",
+  "old_test_lock_sha256": "7054c8be8b3c7744164f1f53ae917444ef2fa6180516ea233b1e4ac9bbeb61d2",
+  "files": [
+    {
+      "path": "binding.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/binding.py",
+      "donor_sha256": "b89256d88859d0ac47c51286120530a71d01811cd249ffdf6a750e4ca8a5a9a0",
+      "sha256": "d97fd7913612836beaf1ec4547748aca4712d318acede5f9117ab6503f5a0580"
+    },
+    {
+      "path": "freeze.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/freeze.py",
+      "donor_sha256": "ef1f969e2c1b3efe263910e541c1b4bde2658e5a40b7514a6b771753d0d32833",
+      "sha256": "7182cf74b91cb1b0e638920e9bff617bf2ea6aa88cb365286b83015252cc2a96"
+    },
+    {
+      "path": "supervise.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/supervise.py",
+      "donor_sha256": "bbfe4663afaef9d822e4fe830bc52e116ccd26aac26e0563e2a67086c164e826",
+      "sha256": "3d7aba2de4868026b2fc42929297c873ed865f60a8c4de425dd2ee7e14dae83d"
+    },
+    {
+      "path": "launch.ps1",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/launch.ps1",
+      "donor_sha256": "28cb746db4c7acbe883af797316fba00674682c5af10bdd999a89c827eaa8dbf",
+      "sha256": "7398e60edf7c83ae41ec323bfaa69dbd6de4f46205306e77144decb12529b377"
+    },
+    {
+      "path": "test_controller.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/test_controller.py",
+      "donor_sha256": "f5b1db0d9767234d3cba5e7b0b17c850dced3f2891a3875dc1ddb89bfbfe2cd2",
+      "sha256": "f5b1db0d9767234d3cba5e7b0b17c850dced3f2891a3875dc1ddb89bfbfe2cd2"
+    },
+    {
+      "path": "c1_reference_frozen.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/c1_reference_frozen.py",
+      "donor_sha256": "3c1ba8ddd968f0f28209a6e1338e0d0888c59ac70574aa05f856d23c012ab8df",
+      "sha256": "3c1ba8ddd968f0f28209a6e1338e0d0888c59ac70574aa05f856d23c012ab8df"
+    },
+    {
+      "path": "PROTOCOL_REFERENCE.json",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/PROTOCOL_REFERENCE.json",
+      "donor_sha256": "3cc9369b266eebd75f64a673c99e4b06fb8ff54940a30eb0794cd65a166b166f",
+      "sha256": "3cc9369b266eebd75f64a673c99e4b06fb8ff54940a30eb0794cd65a166b166f"
+    },
+    {
+      "path": "HDR_INPUT_PLAN.json",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/HDR_INPUT_PLAN.json",
+      "donor_sha256": "d041b7304880962778ba779669935276454761b51a4487094dcf44005ef3e14a",
+      "sha256": "d041b7304880962778ba779669935276454761b51a4487094dcf44005ef3e14a"
+    },
+    {
+      "path": "word_phy_extended.sv",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/word_phy_extended.sv",
+      "donor_sha256": "a189102c07abd87a20f4727512a86ccaa50701da58ad23fef32ab00ad7d26407",
+      "sha256": "a189102c07abd87a20f4727512a86ccaa50701da58ad23fef32ab00ad7d26407"
+    },
+    {
+      "path": "hdr_startup/run.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/hdr_startup/run.py",
+      "donor_sha256": "adf460c9b1e57dbcaa2b74c3b528b9773ccbf213abca5bbece0376d24beef47d",
+      "sha256": "43784c82acaf3eb44d8ef626ebfc91f7cc263e1f79d51ac6fbf4ac12be133666"
+    },
+    {
+      "path": "hdr_startup/tb.sv",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/hdr_startup/tb.sv",
+      "donor_sha256": "48d81696184b892cb186a062f238c3e66baab5a5752c40f9028309ea3b95b9d3",
+      "sha256": "a8239fb5803ea38072b7b37f265c2c6c96d5d33cf55c3bcc2c24ae3ef19acf11"
+    },
+    {
+      "path": "hdr_startup/oracle.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/hdr_startup/oracle.py",
+      "donor_sha256": "9a4ff729697aff9f4b9bcef14dfab32f89ee033b2f1a320f65735cc865a3800d",
+      "sha256": "7fc83a3a4942bf3cd66dab289ed03efa7d7594b81d4fd9c6defd9dd78f4aac10"
+    },
+    {
+      "path": "hdr_startup/extended_uart_decode.vh",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/hdr_startup/extended_uart_decode.vh",
+      "donor_sha256": "39b2855c9efa730105c7640ff5149ba5fd35c805ca8565457a9694928d70a446",
+      "sha256": "39b2855c9efa730105c7640ff5149ba5fd35c805ca8565457a9694928d70a446"
+    },
+    {
+      "path": "hdr_startup/runtime_recovery/top_runtime.vh",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/hdr_startup/runtime_recovery/top_runtime.vh",
+      "donor_sha256": "0dd71a903db01fc0ad080f29c161cd815b146723c07459feb773596a381a1fd9",
+      "sha256": "0dd71a903db01fc0ad080f29c161cd815b146723c07459feb773596a381a1fd9"
+    },
+    {
+      "path": "protocol_reference/linux/__init__.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/__init__.py",
+      "donor_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocol_reference/linux/stream_diag/__init__.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/stream_diag/__init__.py",
+      "donor_sha256": "6d47c60393a431e5b43be07dcc03dfb43ff268722dedddb8822d466da90f69d1",
+      "sha256": "6d47c60393a431e5b43be07dcc03dfb43ff268722dedddb8822d466da90f69d1"
+    },
+    {
+      "path": "protocol_reference/linux/stream_diag/records.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/stream_diag/records.py",
+      "donor_sha256": "2f964c49ef6cadb81be9e566462d502be1cef5388d485223132a0c813d5ec7c7",
+      "sha256": "2f964c49ef6cadb81be9e566462d502be1cef5388d485223132a0c813d5ec7c7"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/__init__.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/task3_pipeline/__init__.py",
+      "donor_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/pcie_protocol_v1.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/task3_pipeline/pcie_protocol_v1.py",
+      "donor_sha256": "4acdfa4b18adf8b27bf7f94e96e50e8dc450170473c3acbb9990194e9b56967e",
+      "sha256": "4acdfa4b18adf8b27bf7f94e96e50e8dc450170473c3acbb9990194e9b56967e"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_selection.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/task3_pipeline/record_selection.py",
+      "donor_sha256": "039fcc03c97bffd902c182e3f438354c0aac25b47a514e7afc23769c0eca9492",
+      "sha256": "039fcc03c97bffd902c182e3f438354c0aac25b47a514e7afc23769c0eca9492"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_v2.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/task3_pipeline/record_v2.py",
+      "donor_sha256": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f",
+      "sha256": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_v3.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/task3_pipeline/record_v3.py",
+      "donor_sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04",
+      "sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_v4.py",
+      "donor_path": "refactor/dual_hdr_merge_r1/src_fpga/simulation/merge_integration_20261101/protocol_reference/linux/task3_pipeline/record_v4.py",
+      "donor_sha256": "bdc3736b1ae9a7a4b21c7fc7d4a3f6172807f9d9b71c8f38f06203a2dae058bb",
+      "sha256": "bdc3736b1ae9a7a4b21c7fc7d4a3f6172807f9d9b71c8f38f06203a2dae058bb"
+    }
+  ],
+  "adaptations": [
+    "New HDR-only campaign; old FAIL, lock7054, original STATE and SDR PASS retained unchanged",
+    "Count each real DDR member finish handshake and verify both descriptors; legacy commit observes LONG only",
+    "One complete R3 cross-VC overlap, eight retained-good warmups and first product SOURCE10 remain unchanged",
+    "Original six-hour deadline1793534251.7473004 retained; one10800-second HDR case maximum"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "production_merge": {
+    "status": "BLOCKED",
+    "reason": "missing terminal PASS or simulator startup failed, see <PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\production\\merge.log"
+  },
+  "production_tone": {
+    "status": "PASS",
+    "markers": [
+      "TONE_PASS gray_codes=65536 pages=4 hdr_accept_spacing=2 mixed_groups=768 stall_cycles=466 recovery_groups=128"
+    ]
+  },
+  "production_color": {
+    "status": "PASS",
+    "markers": [
+      "COLOR_PASS groups=336 frames=7 saturated=108 stalls=304 overlaps=6 recovery_groups=48"
+    ]
+  },
+  "production_isp": {
+    "status": "PASS",
+    "markers": [
+      "ISP_FRAME_PASS width=8 height=3 hdr=0 page=3 groups=6 tail_hold=6",
+      "ISP_FRAME_PASS width=20 height=3 hdr=1 page=0 groups=15 tail_hold=6",
+      "ISP_FRAME_PASS width=32 height=4 hdr=1 page=1 groups=32 tail_hold=6",
+      "ISP_FRAME_PASS width=16 height=5 hdr=1 page=2 groups=20 tail_hold=6",
+      "ISP_FRAME_PASS width=12 height=4 hdr=1 page=3 groups=12 tail_hold=6",
+      "ISP_FRAME_PASS width=3840 height=4 hdr=0 page=1 groups=3840 tail_hold=6",
+      "ISP_FRAME_PASS width=20 height=3 hdr=1 page=0 groups=15 tail_hold=6",
+      "ISP_PASS groups=3925 frames=6 saturated=3818 stalls=458 recovery_groups=15"
+    ]
+  },
+  "color_candidate_color": {
+    "status": "PASS",
+    "markers": [
+      "COLOR_PASS groups=336 frames=7 saturated=108 stalls=304 overlaps=6 recovery_groups=48"
+    ]
+  },
+  "color_candidate_isp": {
+    "status": "PASS",
+    "markers": [
+      "ISP_FRAME_PASS width=8 height=3 hdr=0 page=3 groups=6 tail_hold=6",
+      "ISP_FRAME_PASS width=20 height=3 hdr=1 page=0 groups=15 tail_hold=6",
+      "ISP_FRAME_PASS width=32 height=4 hdr=1 page=1 groups=32 tail_hold=6",
+      "ISP_FRAME_PASS width=16 height=5 hdr=1 page=2 groups=20 tail_hold=6",
+      "ISP_FRAME_PASS width=12 height=4 hdr=1 page=3 groups=12 tail_hold=6",
+      "ISP_FRAME_PASS width=3840 height=4 hdr=0 page=1 groups=3840 tail_hold=6",
+      "ISP_FRAME_PASS width=20 height=3 hdr=1 page=0 groups=15 tail_hold=6",
+      "ISP_PASS groups=3925 frames=6 saturated=3818 stalls=458 recovery_groups=15"
+    ]
+  },
+  "input_identity": {
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,122 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/td_commands_prompt.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 20:58:01 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  7.860363s wall, 6.281250s user + 0.359375s system = 6.640625s CPU (84.5%)
+
+RUN-1004 : used memory is 1255 MB, reserved memory is 1284 MB, peak memory is 1288 MB
+RUN-1002 : start command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2"
+PRJ-1005 : Command create_project success.
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324" in  11.750825s wall, 10.703125s user + 0.859375s system = 11.562500s CPU (98.4%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "open_project uhd_probe.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-1401 : Successfully analyzed 0 source files.
+RUN-1003 : finish command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2" in  11.765915s wall, 10.718750s user + 0.859375s system = 11.578125s CPU (98.4%)
+
+RUN-1004 : used memory is 1260 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "add_files rtl/jpeg_huff_ac_rom.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/jpeg_quant_rom20x1024.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/td_sdp_ram.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_entropy.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files uhd_probe.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files clock.sdc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_include_dir ./rtl/include/02_jpeg"
+RUN-1002 : start command "top_module uhd_probe"
+PRJ-1501 : Current top model is uhd_probe.
+RUN-1002 : start command "set_param -run syn_1 flow thread 16"
+PRJ-1105 : Update param syn_1 flow::thread::16 succeed.
+RUN-1002 : start command "set_param -run syn_1 rtl min_control_set 2"
+PRJ-1105 : Update param syn_1 rtl::min_control_set::2 succeed.
+RUN-1002 : start command "set_param -run syn_1 gate map_mode area_prior"
+PRJ-1105 : Update param syn_1 gate::map_mode::area_prior succeed.
+RUN-1002 : start command "set_param -run syn_1 gate multi_thread_mapping partition"
+PRJ-1105 : Update param syn_1 gate::multi_thread_mapping::partition succeed.
+RUN-1002 : start command "set_param -run syn_1 gate add_map_lut_struct on"
+PRJ-1105 : Update param syn_1 gate::add_map_lut_struct::on succeed.
+RUN-1002 : start command "launch_runs -step opt_gate syn_1"
+PRJ-1403 : syn_1 is launched.
+PRJ-1404 : Run log file is <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_20261110/ready_syn16_a1/baseline/uhd_probe_Runs/syn_1/run.log.
+RUN-1002 : start command "wait_run syn_1"
+PRJ-1405 : Waiting for run syn_1 to finish.
+PRJ-1411 : launch_runs syn_1 -step opt_gate.
+PRJ-1412 : reset_run phy_1.

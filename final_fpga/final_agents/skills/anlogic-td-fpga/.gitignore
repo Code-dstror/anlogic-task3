@@ -1,0 +1,7 @@
+# Scratch output from scripts/selfcheck_example.tcl - regenerate, never commit.
+.selfcheck/
+
+# TD tool scratch that may land here if a script is run with the skill as cwd.
+*.log
+*.logw
+minidump-*.dmp

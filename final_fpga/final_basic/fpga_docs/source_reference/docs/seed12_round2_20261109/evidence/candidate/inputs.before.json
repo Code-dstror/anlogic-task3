@@ -1,0 +1,62 @@
+[
+  {
+    "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+    "sha256": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff"
+  },
+  {
+    "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v",
+    "sha256": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8"
+  },
+  {
+    "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v",
+    "sha256": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c"
+  },
+  {
+    "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v",
+    "sha256": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\hdr_pair_read_cursor.v",
+    "sha256": "af790e6e66602350cfcde32df2ad8cd9622fa13f5cbbedacfc7cdd1051197f4f"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\hdr_pair_pixel_reader.v",
+    "sha256": "ae28469c708bbc4b8feae711f49901ca8d75756f50ee1cb443c22a0d3434fecf"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\shared_raw10_decode_service.v",
+    "sha256": "f9f84584377cecd52e0eaacb3ffcb0d8f745a398060b3a690c88dab92ef12981"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\shared_raw10_decoder_masked.v",
+    "sha256": "ddc64ffb36cbccfac271c2d1d968ac069eb516002aeaf47c9840a3b6f37a4a82"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\hdr_merge4.v",
+    "sha256": "dbb12cec640156b8d3881479a32392aee7bac6dbc9af78d31343e787965ce8b8"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\td_sdp_ram40.v",
+    "sha256": "f120c365061daac7b401201a5b3661dd01d794ff77622de24686f3c58d0a3e58"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\ram40_sdp_fixed\\ram40_sdp_fixed\\ram40_sdp_fixed.v",
+    "sha256": "53854efce3b3a1d47749d0aa10627750fa9ac8927aa0dcf6e066a9358b7cd108"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_reader_round2_20261109\\hdr_reader_carrier.v",
+    "sha256": "3aa7f2a1d1b382ca369a43aefcc467bc4582b9bb2b6b31708d28e896e6c5b233"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_reader_round2_20261109\\hdr_reader_bb.sv",
+    "sha256": "382f6f7600389cbc6662a72b7e88f3a43e769a453facea618bbabbf96c6e271e"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_reader_round2_20261109\\run_hdr_reader_bb.ps1",
+    "sha256": "19ef280c84da02643b1d068cc6ff96639952a28f855f96e2f719bab4d6cb1b0a"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\seed12_round2_20261109\\HDR_READER_PUBLIC.md",
+    "sha256": "96c8b1a658da69e7331decf20839aed5ccec95d79ff86c621b3a9158d3890498"
+  }
+]

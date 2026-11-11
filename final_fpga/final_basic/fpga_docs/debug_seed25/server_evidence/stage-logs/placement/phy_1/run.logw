@@ -1,0 +1,36 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = /home/fpga_user/TD_Release_2026.2_NL/bin/td
+   Build number = 6.2.3.210850
+   Built by =   FPGA_USER
+   Built at =   14:30, 9月 9
+   Run by =     FPGA_USER
+   Run Date =   Tue Nov 10 16:15:56 2026
+
+   Run on =     FPGA_BUILD_HOST
+============================================================
+PHY-5054 WARNING: Imbalanced clock structure of clock net sys_clk_dup_1; a mixture of clock buffer and general clock pins.
+                GCLK instance sys_clk_dup_1_created_structual_gclkinst is auto-created for better clock performance.
+PHY-5060 CRITICAL-WARNING: Clock net candidate "cam_mclk_dup_1" in ../../../src_fpga/rtl/anlogic2026.v(59) has mixed fanouts of 0 clock pins; 1 data/ctrl pins. Example data/ctrl pins: 
+           "cam_mclk_syn_2.doq[0]" in ../../../src_fpga/rtl/anlogic2026.v(59). Please check connection of the net in design.
+PHY-5060 CRITICAL-WARNING: Clock net candidate "cam1_mclk_dup_1" in ../../../src_fpga/rtl/anlogic2026.v(62) has mixed fanouts of 0 clock pins; 1 data/ctrl pins. Example data/ctrl pins: 
+           "cam1_mclk_syn_2.doq[0]" in ../../../src_fpga/rtl/anlogic2026.v(62). Please check connection of the net in design.
+DRC CLKST-5093 WARNING: GCLK cascading detected in ../../../src_fpga/ip/ui_ddr/ui_ddr.sv(9813).
+1st GCLK instance: u_ddr_store/u_ddr/u_ddrmc_top/u_ddr_phy/u_ddrphy_clk_gen/u_ddrphy_pll1/bufg_feedback
+2nd GCLK instance: u_ddr_store/u_ddr/u_ddrmc_top/u_ddr_phy/u_ddrphy_clk_gen/u_dfi_clk_bufg
+This may cause large clock skew or redundent clock resources. Please double check if the GCLK cascading is reasonable and remove unnecessary GCLK instances.
+PHY-7022 WARNING: Design's estimated slice utilization = 96%, exceeds the limit 95%, which probably leads to long P&R runtime and bad QoR.
+PHY-7022 WARNING: Design's estimated slice utilization = 95%, exceeds the limit 95%, which probably leads to long P&R runtime and bad QoR.
+PHY-7022 WARNING: Design's estimated slice utilization = 95%, exceeds the limit 95%, which probably leads to long P&R runtime and bad QoR.
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_19 is skipped due to 0 input or output
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_20 is skipped due to 0 input or output
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_21 is skipped due to 0 input or output
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_22 is skipped due to 0 input or output
+PHY-7022 WARNING: Design's estimated slice utilization = 95%, exceeds the limit 95%, which probably leads to long P&R runtime and bad QoR.
+PHY-7022 WARNING: Design's estimated slice utilization = 95%, exceeds the limit 95%, which probably leads to long P&R runtime and bad QoR.
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_19 is skipped due to 0 input or output
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_20 is skipped due to 0 input or output
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_21 is skipped due to 0 input or output
+PHY-5010 WARNING: Net g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/pack_bytes_reg[0]_syn_22 is skipped due to 0 input or output
+DRC TMST-7700 CRITICAL-WARNING: 3 SEVERE timing constraint issue(s) detected. Please refer to check_timing report for details and resolve the issue(s).

@@ -1,0 +1,955 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 18:24:43 2026
+
+Top Model           : hdr_quality_color_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 99.57%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     3.412ns
+Fmax           :     293.083MHz
+
+Statistics:
+Max            : SWNS      4.588ns, STNS      0.000ns,         0 Viol Endpoints,        16 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 4.588ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/hdr_reg.ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.353ns (cell 0.892ns (26%), net 2.461ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT3=2  LUT6=1  LUT4=1  LUT2=1 )
+Max Fanout          : 576
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/gains_b1_n_syn_8.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/gains_b1_n_syn_8.o
+net (fo=576)                            0.632          2.651          net: u_color/pre_advance,  ../../rtl/wide_color_pipeline.v(31)
+                                                                      pin: u_color/gains_b1_n_syn_9.a
+LUT2                                    0.150    f     2.801       4  pin: u_color/gains_b1_n_syn_9.o
+net (fo=2)                              0.201          3.002          net: u_color/s_ready,  ../../rtl/wide_color_pipeline.v(14)
+                                                                      pin: u_color/gains_b1_n_syn_10.a
+LUT3                                    0.150    f     3.152       5  pin: u_color/gains_b1_n_syn_10.o
+net (fo=2)                              0.201          3.353          net: u_color/gains_b1_n,  NOFILE(0)
+                                                                      pin: u_color/hdr_reg.ce
+SEQ (reg)                               0.000    f     3.353               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.353               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/hdr_reg.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.588               
+
+Slack               : 4.850ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/hdr_reg.ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.091ns (cell 0.892ns (28%), net 2.199ns (72%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT3=2  LUT6=1  LUT4=1  LUT2=1 )
+Max Fanout          : 576
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/gains_b1_n_syn_8.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/gains_b1_n_syn_8.o
+net (fo=576)                            0.632          2.389          net: u_color/pre_advance,  ../../rtl/wide_color_pipeline.v(31)
+                                                                      pin: u_color/gains_b1_n_syn_9.a
+LUT2                                    0.150    f     2.539       4  pin: u_color/gains_b1_n_syn_9.o
+net (fo=2)                              0.201          2.740          net: u_color/s_ready,  ../../rtl/wide_color_pipeline.v(14)
+                                                                      pin: u_color/gains_b1_n_syn_10.a
+LUT3                                    0.150    f     2.890       5  pin: u_color/gains_b1_n_syn_10.o
+net (fo=2)                              0.201          3.091          net: u_color/gains_b1_n,  NOFILE(0)
+                                                                      pin: u_color/hdr_reg.ce
+SEQ (reg)                               0.000    f     3.091               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.091               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/hdr_reg.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.850               
+
+Slack               : 4.588ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/gains_reg[0].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.353ns (cell 0.892ns (26%), net 2.461ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT3=2  LUT6=1  LUT4=1  LUT2=1 )
+Max Fanout          : 576
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/gains_b1_n_syn_8.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/gains_b1_n_syn_8.o
+net (fo=576)                            0.632          2.651          net: u_color/pre_advance,  ../../rtl/wide_color_pipeline.v(31)
+                                                                      pin: u_color/gains_b1_n_syn_9.a
+LUT2                                    0.150    f     2.801       4  pin: u_color/gains_b1_n_syn_9.o
+net (fo=2)                              0.201          3.002          net: u_color/s_ready,  ../../rtl/wide_color_pipeline.v(14)
+                                                                      pin: u_color/gains_b1_n_syn_10.a
+LUT3                                    0.150    f     3.152       5  pin: u_color/gains_b1_n_syn_10.o
+net (fo=2)                              0.201          3.353          net: u_color/gains_b1_n,  NOFILE(0)
+                                                                      pin: u_color/gains_reg[0].ce
+SEQ (reg)                               0.000    f     3.353               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.353               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/gains_reg[0].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.588               
+
+Slack               : 4.850ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/gains_reg[0].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.091ns (cell 0.892ns (28%), net 2.199ns (72%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT3=2  LUT6=1  LUT4=1  LUT2=1 )
+Max Fanout          : 576
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/gains_b1_n_syn_8.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/gains_b1_n_syn_8.o
+net (fo=576)                            0.632          2.389          net: u_color/pre_advance,  ../../rtl/wide_color_pipeline.v(31)
+                                                                      pin: u_color/gains_b1_n_syn_9.a
+LUT2                                    0.150    f     2.539       4  pin: u_color/gains_b1_n_syn_9.o
+net (fo=2)                              0.201          2.740          net: u_color/s_ready,  ../../rtl/wide_color_pipeline.v(14)
+                                                                      pin: u_color/gains_b1_n_syn_10.a
+LUT3                                    0.150    f     2.890       5  pin: u_color/gains_b1_n_syn_10.o
+net (fo=2)                              0.201          3.091          net: u_color/gains_b1_n,  NOFILE(0)
+                                                                      pin: u_color/gains_reg[0].ce
+SEQ (reg)                               0.000    f     3.091               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.091               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/gains_reg[0].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.850               
+
+Slack               : 4.693ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[9].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.248ns (cell 0.742ns (22%), net 2.506ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.560          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.710       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          3.248          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[9].ce
+SEQ (reg)                               0.000    f     3.248               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.248               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[9].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.693               
+
+Slack               : 4.955ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[9].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.986ns (cell 0.742ns (24%), net 2.244ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.298          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.448       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          2.986          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[9].ce
+SEQ (reg)                               0.000    f     2.986               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.986               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[9].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.955               
+
+Slack               : 4.693ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[10].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.248ns (cell 0.742ns (22%), net 2.506ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.560          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.710       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          3.248          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[10].ce
+SEQ (reg)                               0.000    f     3.248               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.248               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[10].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.693               
+
+Slack               : 4.955ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[10].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.986ns (cell 0.742ns (24%), net 2.244ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.298          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.448       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          2.986          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[10].ce
+SEQ (reg)                               0.000    f     2.986               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.986               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[10].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.955               
+
+Slack               : 4.693ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[11].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.248ns (cell 0.742ns (22%), net 2.506ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.560          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.710       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          3.248          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[11].ce
+SEQ (reg)                               0.000    f     3.248               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.248               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[11].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.693               
+
+Slack               : 4.955ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[11].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.986ns (cell 0.742ns (24%), net 2.244ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.298          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.448       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          2.986          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[11].ce
+SEQ (reg)                               0.000    f     2.986               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.986               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[11].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.955               
+
+Slack               : 4.693ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[12].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.248ns (cell 0.742ns (22%), net 2.506ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.560          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.710       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          3.248          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[12].ce
+SEQ (reg)                               0.000    f     3.248               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.248               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[12].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.693               
+
+Slack               : 4.955ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[12].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.986ns (cell 0.742ns (24%), net 2.244ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.298          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.448       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          2.986          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[12].ce
+SEQ (reg)                               0.000    f     2.986               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.986               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[12].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.955               
+
+Slack               : 4.693ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[13].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.248ns (cell 0.742ns (22%), net 2.506ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.560          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.710       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          3.248          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[13].ce
+SEQ (reg)                               0.000    f     3.248               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.248               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[13].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.693               
+
+Slack               : 4.955ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[13].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.986ns (cell 0.742ns (24%), net 2.244ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.298          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.448       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          2.986          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[13].ce
+SEQ (reg)                               0.000    f     2.986               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.986               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[13].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.955               
+
+Slack               : 4.693ns
+Begin Point         : color_rst_n_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[14].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.248ns (cell 0.742ns (22%), net 2.506ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: color_rst_n_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: color_rst_n_reg.q
+net (fo=421)                            0.566          0.717          net: u_color/rst_n,  ../../rtl/wide_color_pipeline.v(11)
+                                                                      pin: u_color/gains_b1_n_syn_5.a
+LUT4                                    0.150    f     0.867       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.496          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.637       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.869          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     2.019       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.560          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.710       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          3.248          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[14].ce
+SEQ (reg)                               0.000    f     3.248               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.248               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[14].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.693               
+
+Slack               : 4.955ns
+Begin Point         : stimulus_reg[172].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/group_data_reg[14].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.986ns (cell 0.742ns (24%), net 2.244ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=1  LUT4=1  LUT3=1  LUT2=1 )
+Max Fanout          : 560
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: stimulus_reg[172].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: stimulus_reg[172].q
+net (fo=5)                              0.304          0.455          net: u_color/m_ready,  ../../rtl/wide_color_pipeline.v(16)
+                                                                      pin: u_color/gains_b1_n_syn_5.d
+LUT4                                    0.150    f     0.605       1  pin: u_color/gains_b1_n_syn_5.o
+net (fo=560)                            0.629          1.234          net: u_color/u_tone96/advance,  ../../rtl/hdr_tone96_shared4.v(18)
+                                                                      pin: u_color/gains_b1_n_syn_6.b
+LUT6                                    0.141    r     1.375       2  pin: u_color/gains_b1_n_syn_6.o
+net (fo=3)                              0.232          1.607          net: u_color/gains_b1_n_syn_7,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/group_data_b2[165]_syn_1.a
+LUT3                                    0.150    f     1.757       3  pin: u_color/u_tone96/group_data_b2[165]_syn_1.o
+net (fo=174)                            0.541          2.298          net: u_color/u_tone96/group_clipped_n4,  NOFILE(0)
+                                                                      pin: u_color/u_tone96/mux83_syn_1352.a
+LUT2                                    0.150    f     2.448       4  pin: u_color/u_tone96/mux83_syn_1352.o
+net (fo=168)                            0.538          2.986          net: u_color/u_tone96/mux83_syn_2[167],  ../../rtl/hdr_tone96_shared4.v(104)
+                                                                      pin: u_color/u_tone96/group_data_reg[14].ce
+SEQ (reg)                               0.000    f     2.986               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.986               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/group_data_reg[14].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.955               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

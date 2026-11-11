@@ -1,0 +1,1687 @@
+{
+  "results_commit": "425edaaaf327235a64349c7149b568bb3de651f4",
+  "generated_at": 1794371544.4868095,
+  "snapshot_time_beijing": "2026-11-11T12:32:24.486809+08:00",
+  "seeds": [
+    {
+      "seed": 1,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.694,
+        "HWNS": -0.569,
+        "STNS": -1203.818,
+        "SWNS": -2.083,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 2,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.007,
+        "HWNS": -0.007,
+        "STNS": -176.525,
+        "SWNS": -0.804,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 3,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.042,
+        "HWNS": -0.029,
+        "STNS": -647.5,
+        "SWNS": -1.646,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 4,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.078,
+        "HWNS": -0.383,
+        "STNS": -600.993,
+        "SWNS": -1.34,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 5,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.85,
+        "HWNS": -0.483,
+        "STNS": -186.694,
+        "SWNS": -0.54,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 6,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.26,
+        "HWNS": -0.189,
+        "STNS": -54.455,
+        "SWNS": -1.929,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 7,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.08,
+        "HWNS": -0.02,
+        "STNS": -82.647,
+        "SWNS": -1.882,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 8,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.028,
+        "HWNS": -0.007,
+        "STNS": -57.417,
+        "SWNS": -1.904,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 9,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -2.239,
+        "HWNS": -0.438,
+        "STNS": -570.584,
+        "SWNS": -0.919,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 10,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.239,
+        "HWNS": -0.095,
+        "STNS": -144.093,
+        "SWNS": -1.445,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 11,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.164,
+        "HWNS": -0.024,
+        "STNS": -207.516,
+        "SWNS": -1.691,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 12,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.48,
+        "HWNS": -0.428,
+        "STNS": -411.351,
+        "SWNS": -1.282,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 13,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.466,
+        "HWNS": -0.466,
+        "STNS": -36.097,
+        "SWNS": -1.572,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 14,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.218,
+        "HWNS": -0.052,
+        "STNS": -78.817,
+        "SWNS": -1.593,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 15,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.104,
+        "HWNS": -0.083,
+        "STNS": -85.883,
+        "SWNS": -1.623,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 16,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.423,
+        "HWNS": -0.447,
+        "STNS": -237.371,
+        "SWNS": -1.419,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 17,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.442,
+        "HWNS": -0.442,
+        "STNS": -247.772,
+        "SWNS": -0.914,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 18,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.59,
+        "HWNS": -0.263,
+        "STNS": -425.593,
+        "SWNS": -1.841,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 19,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.627,
+        "HWNS": -0.402,
+        "STNS": -61.843,
+        "SWNS": -1.744,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 20,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.337,
+        "HWNS": -0.337,
+        "STNS": -370.281,
+        "SWNS": -1.38,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 21,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.054,
+        "HWNS": -0.054,
+        "STNS": -53.192,
+        "SWNS": -1.545,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 22,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.743,
+        "HWNS": -0.367,
+        "STNS": -176.403,
+        "SWNS": -1.518,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 23,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.726,
+        "HWNS": -0.369,
+        "STNS": -119.429,
+        "SWNS": -1.252,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 24,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.38,
+        "HWNS": -0.075,
+        "STNS": -609.259,
+        "SWNS": -1.386,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 25,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.214,
+        "HWNS": -0.112,
+        "STNS": -73.623,
+        "SWNS": -1.325,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 26,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.328,
+        "HWNS": -0.324,
+        "STNS": -410.114,
+        "SWNS": -1.522,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 27,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.072,
+        "HWNS": -0.024,
+        "STNS": -171.086,
+        "SWNS": -0.553,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 28,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.101,
+        "HWNS": -0.503,
+        "STNS": -623.467,
+        "SWNS": -1.722,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 29,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -4.146,
+        "HWNS": -0.536,
+        "STNS": -752.482,
+        "SWNS": -1.771,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 30,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.431,
+        "HWNS": -0.579,
+        "STNS": -296.178,
+        "SWNS": -1.22,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 31,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.528,
+        "HWNS": -0.559,
+        "STNS": -276.087,
+        "SWNS": -0.994,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 32,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.215,
+        "HWNS": -0.137,
+        "STNS": -35.642,
+        "SWNS": -1.55,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 33,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.558,
+        "HWNS": -0.548,
+        "STNS": -151.815,
+        "SWNS": -1.799,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 34,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.007,
+        "STNS": -97.981,
+        "SWNS": -1.954,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 35,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.009,
+        "STNS": -35.077,
+        "SWNS": -1.592,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 36,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.003,
+        "STNS": -170.782,
+        "SWNS": -1.567,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 37,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.03,
+        "HWNS": -0.01,
+        "STNS": -41.264,
+        "SWNS": -0.287,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 38,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.001,
+        "STNS": -113.163,
+        "SWNS": -1.475,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 39,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.51,
+        "HWNS": -0.339,
+        "STNS": -809.526,
+        "SWNS": -1.77,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 40,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.477,
+        "HWNS": -0.409,
+        "STNS": -113.431,
+        "SWNS": -2.143,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 41,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -2.379,
+        "HWNS": -0.484,
+        "STNS": -763.348,
+        "SWNS": -1.266,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 42,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.036,
+        "HWNS": -0.036,
+        "STNS": -134.762,
+        "SWNS": -0.466,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 43,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -3.196,
+        "HWNS": -0.542,
+        "STNS": -469.13,
+        "SWNS": -1.192,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 44,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.035,
+        "HWNS": -0.007,
+        "STNS": -158.222,
+        "SWNS": -0.62,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 45,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.554,
+        "HWNS": -0.525,
+        "STNS": -19.57,
+        "SWNS": -1.892,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 46,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.768,
+        "HWNS": -0.303,
+        "STNS": -487.61,
+        "SWNS": -1.162,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 47,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.519,
+        "HWNS": -0.086,
+        "STNS": -394.123,
+        "SWNS": -0.858,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 48,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.582,
+        "HWNS": -0.734,
+        "STNS": -1277.891,
+        "SWNS": -1.948,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 49,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.003,
+        "STNS": -52.762,
+        "SWNS": -0.308,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 50,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.762,
+        "HWNS": -0.526,
+        "STNS": -516.521,
+        "SWNS": -1.998,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 51,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.005,
+        "STNS": -91.619,
+        "SWNS": -0.408,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 52,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.23,
+        "HWNS": -0.21,
+        "STNS": -140.83,
+        "SWNS": -1.183,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 53,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.335,
+        "HWNS": -0.247,
+        "STNS": -399.288,
+        "SWNS": -1.821,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 54,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.006,
+        "STNS": -25.675,
+        "SWNS": -0.214,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 55,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.012,
+        "HWNS": -0.009,
+        "STNS": -70.342,
+        "SWNS": -1.427,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 56,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.003,
+        "STNS": -223.976,
+        "SWNS": -1.593,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 57,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.551,
+        "HWNS": -0.339,
+        "STNS": -9.497,
+        "SWNS": -1.47,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 58,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.31,
+        "HWNS": -0.032,
+        "STNS": -59.125,
+        "SWNS": -1.731,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 59,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.464,
+        "HWNS": -0.057,
+        "STNS": -143.153,
+        "SWNS": -0.613,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 60,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.578,
+        "HWNS": -0.552,
+        "STNS": -89.852,
+        "SWNS": -1.626,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 61,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.223,
+        "HWNS": -0.203,
+        "STNS": -64.334,
+        "SWNS": -1.674,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 62,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.381,
+        "HWNS": -0.265,
+        "STNS": -365.095,
+        "SWNS": -1.61,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 63,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.043,
+        "HWNS": -0.013,
+        "STNS": -1195.837,
+        "SWNS": -1.872,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 64,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.222,
+        "HWNS": -0.166,
+        "STNS": -132.12,
+        "SWNS": -1.684,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 65,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.221,
+        "HWNS": -0.127,
+        "STNS": -46.738,
+        "SWNS": -0.37,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 66,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.165,
+        "HWNS": -0.06,
+        "STNS": -1264.356,
+        "SWNS": -1.713,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 67,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.005,
+        "STNS": -131.162,
+        "SWNS": -1.862,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 68,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.257,
+        "HWNS": -0.187,
+        "STNS": -131.416,
+        "SWNS": -1.681,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 69,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.019,
+        "HWNS": -0.019,
+        "STNS": -640.172,
+        "SWNS": -1.573,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 70,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.231,
+        "HWNS": -0.202,
+        "STNS": -433.658,
+        "SWNS": -1.435,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 71,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.01,
+        "STNS": -28.575,
+        "SWNS": -0.31,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 72,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.0,
+        "STNS": -368.317,
+        "SWNS": -1.651,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 73,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.264,
+        "HWNS": -0.064,
+        "STNS": -164.013,
+        "SWNS": -1.719,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 74,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.076,
+        "HWNS": -0.076,
+        "STNS": -91.208,
+        "SWNS": -1.917,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 75,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.34,
+        "HWNS": -0.058,
+        "STNS": -406.369,
+        "SWNS": -1.74,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 76,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.14,
+        "HWNS": -0.058,
+        "STNS": -239.583,
+        "SWNS": -1.977,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 77,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -1.762,
+        "HWNS": -0.58,
+        "STNS": -487.34,
+        "SWNS": -1.549,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 78,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": 0.0,
+        "HWNS": 0.012,
+        "STNS": -48.731,
+        "SWNS": -0.323,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 79,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -2.161,
+        "HWNS": -0.582,
+        "STNS": -530.731,
+        "SWNS": -1.492,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    },
+    {
+      "seed": 80,
+      "state": "DONE",
+      "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+      "stages": {
+        "bitgen": "DONE",
+        "placement": "DONE",
+        "reopen": "DONE",
+        "reports": "DONE",
+        "routing": "DONE",
+        "synthesis": "REUSED"
+      },
+      "timing": {
+        "HTNS": -0.397,
+        "HWNS": -0.397,
+        "STNS": -402.597,
+        "SWNS": -0.967,
+        "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+        "state": "NEGATIVE"
+      }
+    }
+  ]
+}

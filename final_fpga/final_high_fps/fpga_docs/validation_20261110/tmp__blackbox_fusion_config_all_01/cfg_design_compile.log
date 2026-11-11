@@ -1,0 +1,37 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:20:56 on Nov 10,2026
+vlog -work work "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\00_rtl" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\01_include" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\03_mono_config_v2_20261015" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\04_include" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\camera_control_fifo_40x512\RTL\include" <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\common\al_phy_glbl.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_gsr.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_fifo.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_ramfifo.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\ram40_sdp_fixed\ram40_sdp_fixed\ram40_sdp_fixed.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\camera_control_fifo_40x512\RTL\camera_control_fifo_40x512_soft_fifo_core.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\camera_control_fifo_40x512\RTL\camera_control_fifo_40x512_soft_fifo.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\camera_control_fifo_40x512\camera_control_fifo_40x512.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\reset_release_sync.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\control_fifo_40x512.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\control_message_fifo_ip.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\td_sdp_ram40.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\frame_config_extension_validate.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_config_legacy_scan_v1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_config_scan_v2.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_config_byte_store_v2.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_config_bar_v2.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_config_engine_v2.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_config_service_v2.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\frame_config_preset_owner.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\paired_raw_capture_drain_cdc.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\physical_pair_config_owner.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\frame_job_config_cdc.v <PROJECT_ROOT>\refactor\camera_fusion_r1\verification_reference\quality_config_carrier.v 
+-- Compiling module glbl
+-- Compiling module PH1_PHY_GSR
+-- Compiling module PH1_LOGIC_ERAM
+-- Compiling module PH1_LOGIC_RAMFIFO
+-- Compiling module gray2bin
+-- Compiling module gray_count
+-- Compiling module showahead_buffer
+-- Compiling module ram40_sdp_fixed
+-- Compiling module camera_control_fifo_40x512_soft_fifo
+-- Compiling module camera_control_fifo_40x512
+-- Compiling module reset_release_sync
+-- Compiling module control_fifo_40x512
+-- Compiling module control_message_fifo_ip
+-- Compiling module td_sdp_ram40
+-- Compiling module frame_config_extension_validate
+-- Compiling module mono_config_legacy_scan_v1
+-- Compiling module mono_config_scan_v2
+-- Compiling module mono_config_byte_store_v2
+-- Compiling module mono_config_bar_v2
+-- Compiling module mono_config_engine_v2
+-- Compiling module mono_config_service_v2
+-- Compiling module frame_config_preset_owner
+-- Compiling module paired_raw_capture_drain_cdc
+-- Compiling module physical_pair_config_owner
+-- Compiling module frame_job_config_cdc
+-- Compiling module quality_config_carrier
+
+Top level modules:
+	glbl
+	PH1_PHY_GSR
+	PH1_LOGIC_RAMFIFO
+	quality_config_carrier
+End time: 18:20:57 on Nov 10,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

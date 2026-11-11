@@ -1,0 +1,62 @@
+{
+  "files": [
+    {
+      "file": "anlogic2026.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "f0d54479ef9807cbb1ad20f7844fd7e633cc0880ac0d292f7208a8cc22280c69",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "bd458a93aaa4518e51966d75246113c0fb042735f56b1676db287cb32854a7e8",
+      "current_sha256": "bd458a93aaa4518e51966d75246113c0fb042735f56b1676db287cb32854a7e8"
+    },
+    {
+      "file": "ph1a_rx_delay_scan.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "60004fed3180b5f941d892913c3b0c651da678b2305bb46ea7a00cd7a45c6e56",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "c2c10d56465e074be32ebeac5aec08e402986037670771aa7be92424364f20cb",
+      "current_sha256": "c2c10d56465e074be32ebeac5aec08e402986037670771aa7be92424364f20cb"
+    },
+    {
+      "file": "physical_csi_rx_stream.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "35a941225578a975469cb27f5f71895bb042ad59f5d10c0a1ebea03250f02639",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "9f4a2e42ae570d7da78b3a264955a3a1fd7143fb8888dde84b7e15f53805b964",
+      "current_sha256": "9f4a2e42ae570d7da78b3a264955a3a1fd7143fb8888dde84b7e15f53805b964"
+    },
+    {
+      "file": "physical_csi_word_core.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "c5d9f573daeb19af62a05a749fbe976be993833dae7af059142b76b8a920ec9e",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "f1c96fb3d124acbf1163d3f1e07f47db168ae0fadc878de9fc01c15352aa609a",
+      "current_sha256": "f1c96fb3d124acbf1163d3f1e07f47db168ae0fadc878de9fc01c15352aa609a"
+    },
+    {
+      "file": "production_source_identity_guard.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "9ade26ecc22aade9f8f9c93f48e0eb55574869e7efbfaded1dc1fc412060594e",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "931f27ecc4e6630cd5e94e25c8b594d2ab38b5ecd0f9f84dd9242d74352ac60f",
+      "current_sha256": "931f27ecc4e6630cd5e94e25c8b594d2ab38b5ecd0f9f84dd9242d74352ac60f"
+    },
+    {
+      "file": "real_hdr_camera_observe_axis.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "716463ca3aeff16d23db8bf065068c4d7f995f326c6b5da62937a8baa8142070",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "f2465d8a5c31d4cad4add401511453f42634095d4299ee3fb99fdf57b091e0ad",
+      "current_sha256": "f2465d8a5c31d4cad4add401511453f42634095d4299ee3fb99fdf57b091e0ad"
+    },
+    {
+      "file": "real_hdr_physical_csi_rx.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "cb1afaf304bd201c43c15ca4c3d12a5bb91c6b587a4aab986c2bcd943780b7b2",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "2139a375b38243978fcaeec615fbf756e458c1d4f60abf4042ba8a0d878c902a",
+      "current_sha256": "2139a375b38243978fcaeec615fbf756e458c1d4f60abf4042ba8a0d878c902a"
+    }
+  ],
+  "patch": "PORT_DELTA.patch",
+  "scope": "ONLY_SEVEN_REVIEWED_RECOVERY_DELTAS"
+}

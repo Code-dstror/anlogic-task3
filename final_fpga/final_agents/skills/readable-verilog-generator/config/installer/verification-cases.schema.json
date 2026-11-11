@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "required": [
+    "schema_version",
+    "cases"
+  ],
+  "case_required": [
+    "id",
+    "selector",
+    "operation",
+    "expected_status"
+  ],
+  "case_optional": [
+    "expected_exit_code",
+    "cli_flags",
+    "precondition_files",
+    "preserve_relative_path",
+    "source_mutations",
+    "target_mode"
+  ]
+}

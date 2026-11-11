@@ -1,0 +1,20 @@
+import dual_host.debug_modes <PROJECT_ROOT>\refactor\camera_fusion_r1\rk_sdk\dual_host\debug_modes.py
+import linux.task3_pipeline.config_transaction <PROJECT_ROOT>\refactor\camera_fusion_r1\rk_sdk\linux\task3_pipeline\config_transaction.py
+import linux.task3_pipeline.mono_config_v2 <PROJECT_ROOT>\refactor\camera_fusion_r1\rk_sdk\linux\task3_pipeline\mono_config_v2.py
+caps profile=1 features=0x3f modes=0x05 enables=0x3f quality_version=0
+caps profile=1 features=0x7f modes=0x05 enables=0x3f quality_version=1
+caps profile=2 features=0x3f modes=0x05 enables=0x0f quality_version=0
+caps profile=2 features=0x7f modes=0x05 enables=0x0f quality_version=1
+caps profile=3 features=0x0f modes=0x01 enables=0x00 quality_version=0
+caps profile=3 features=0x3f modes=0x01 enables=0x0d quality_version=0
+caps profile=3 features=0x7f modes=0x01 enables=0x0d quality_version=1
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\check_sdk.py", line 371, in <module>
+    main()
+  File "<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\check_sdk.py", line 362, in main
+    check_legacy_on_new(args.sdk)
+  File "<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\check_sdk.py", line 297, in check_legacy_on_new
+    expect_rejection(lambda: controls(tx).propose({"extension": patch}), bar, f"invalid quality {patch}")
+  File "<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\check_sdk.py", line 212, in expect_rejection
+    raise AssertionError(f"{reason} unexpectedly accepted")
+AssertionError: invalid quality {'isp_wb_r': '315'} unexpectedly accepted

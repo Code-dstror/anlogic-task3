@@ -1,0 +1,9 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:07:13 on Nov 10,2026
+vlog -work work -sv -L ph1 "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3" <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv 
+-- Compiling module tb_jpeg_ring_reset
+
+Top level modules:
+	tb_jpeg_ring_reset
+End time: 22:07:13 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,62 @@
+{
+  "first": {
+    "width": 480,
+    "height": 32,
+    "sampling_factors": [
+      33,
+      17,
+      17
+    ],
+    "mcu_grid": [
+      30,
+      4
+    ],
+    "mcu_count": 120,
+    "frame_sequence": 11,
+    "source_camera": 0,
+    "source_session": 1,
+    "source_epoch": 1,
+    "processing_mode": 128,
+    "jpeg_session": 1,
+    "jpeg_generation": 1,
+    "jpeg_slot": 0,
+    "quality": 73,
+    "raw_rgb10": [
+      172,
+      440,
+      858
+    ],
+    "manual_wb_q8": [
+      333,
+      178,
+      226
+    ],
+    "expected_rgb8": [
+      109,
+      139,
+      216
+    ],
+    "max_abs_error_rgb8": [
+      1,
+      0,
+      1
+    ],
+    "mean_abs_error_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "rmse_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "pixel_count": 15360,
+    "tolerance_rgb8": 4,
+    "raw_input_sha256": "507fce025e4942bd3ac3396054ec5c9a89b09e8f476fb05a96a81c8d777b060c",
+    "record_bytes": 3024,
+    "jpeg_bytes": 912,
+    "record_sha256": "8a9e27c17cb30175dbc484cbc87897dfb8b2997c564b684efc8ae3824d2d9033",
+    "jpeg_sha256": "8e2256f481b473a3c6e52a227cb2a03223f0e2be664f4048fc518eff3f6cd8e6"
+  }
+}

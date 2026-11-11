@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:anlogic="http" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    <ipxact:vendor>anlogic.com</ipxact:vendor>
+    <ipxact:library>customized</ipxact:library>
+    <ipxact:name>designConfig_camera_event_fifo_47x512</ipxact:name>
+    <ipxact:version>3.0</ipxact:version>
+    <ipxact:viewConfiguration>
+        <ipxact:instanceName>soft_fifo_camera_event_fifo_47x512_Inst</ipxact:instanceName>
+        <ipxact:view viewRef="Soft_FIFO"/>
+    </ipxact:viewConfiguration>
+    <ipxact:vendorExtensions>
+        <anlogic:displayname>Soft FIFO</anlogic:displayname>
+        <anlogic:ipGenVersion value="208212 2026/08/14">1.0</anlogic:ipGenVersion>
+    </ipxact:vendorExtensions>
+</ipxact:designConfiguration>

@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "projects": [
+    {
+      "id": "hdr_jpeg",
+      "root": "refactor/hdr_jpeg",
+      "al": "fpga_prj/rfhdr_jpeg.al",
+      "watch": ["src_fpga/rtl", "src_fpga/ip", "fpga_prj"],
+      "enabled": true,
+      "target": "full",
+      "threads": 8,
+      "seeds": [1]
+    }
+  ]
+}

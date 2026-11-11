@@ -1,0 +1,280 @@
+{
+  "baseline": "5bdca7029b4aa9c6005ca67d89d045a92d4fc4a5",
+  "simulation": "PASS",
+  "test_groups": 27,
+  "records": [
+    {
+      "case": "config",
+      "path": "refactor/camera_raw_r2/tmp/blackbox_dfi_timing_20261109/config-20261109T011014056528Z/result.json",
+      "sha256": "5dfa6f163289af57e6163d73107832811b9244a50b49361d95dcb1acceef9c03",
+      "inputs_checked": 22
+    },
+    {
+      "case": "arbiter",
+      "path": "refactor/camera_raw_r2/tmp/blackbox_dfi_timing_20261109/arbiter-20261109T011408946076Z/result.json",
+      "sha256": "efdc82aa7b3363c9fb247851a6a0d2435b8b6754d24c26803d7f2896c69e64ce",
+      "inputs_checked": 2
+    },
+    {
+      "case": "formatter",
+      "path": "refactor/camera_raw_r2/tmp/blackbox_dfi_timing_20261109/formatter-20261109T011942756768Z/result.json",
+      "sha256": "06c1eec2ee9d49a64efdd6d3adc693f9cc4af5df9729e457c02e88a10601616d",
+      "inputs_checked": 11
+    },
+    {
+      "case": "product",
+      "path": "refactor/camera_raw_r2/tmp/blackbox_dfi_timing_20261109/product-20261109T011910494469Z/result.json",
+      "sha256": "b21dfdedf0a046b8fa3020a631356479355150915c3e25262cbcd5b482fcb4f6",
+      "inputs_checked": 24
+    },
+    {
+      "suite": "jpeg",
+      "case": "malformed_prefix_flit1",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014745Z_jpeg_c6618a/results.json",
+      "sha256": "680ff84ef6a5615bff4fe79544b121c53e8aba69cfce3391edb483507a3c05db",
+      "inputs_sha256": "cce8bfc548ee43baf6c6f67e529481a11f33beb42f30cc5252dd61d14e348133",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "malformed_stream_flit7",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014321Z_jpeg_769fb0/results.json",
+      "sha256": "190416b86198a0d8adeca063d9b3bd89785ce07f62fa2978acb0d20e28df8f71",
+      "inputs_sha256": "14e80e6886c7937e1df6d3a7b21d5c2d8641e04695dd44fa83f6ca2325687600",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "negative",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_context",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_data",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_ext_final",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_ext_head",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_ext_mid",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_fence",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "reset_start",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "two_frames",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "wrong_cohort",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "wrong_identity",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "jpeg",
+      "case": "wrong_length",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T013955Z_jpeg_75eb22/results.json",
+      "sha256": "ae4ba5696e5e2e89890554ec6df1a2d96ae603f21f5b2e515f8e657c7bcbf3ea",
+      "inputs_sha256": "dd4d6adfd9c5df0089d3ec29e8a474ec5b7528ca2b6b658175a4ba174ab45ce5",
+      "inputs_checked": 29
+    },
+    {
+      "suite": "pix",
+      "case": "cohort",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "deadline",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "dual_cancel",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "first_overlap",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "old_short_fault",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "peer_faults",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014550Z_pix_f783d5/results.json",
+      "sha256": "761b438a05d5dfffd54c3d985d6b9cdb3b338739c9027a1739890b4a0e614a3d",
+      "inputs_sha256": "4d310a1fada7288f108cf187faee660011164be137c49a6bded8ce712ed1a48d",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "stop_wrap",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "stopped_reset",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "suite": "pix",
+      "case": "terminal_priority",
+      "path": "work/exp/blackbox_pix_jpeg_20261109/20261109T014319Z_pix_5e4587/results.json",
+      "sha256": "d1ea9dd7c77e4f8e485e5100cae6ee1d84dfe782968749d42038b01949c0e6e4",
+      "inputs_sha256": "9baa38dbf5a2c19ea4ed2a6dea84e1ee427cabd6805947fa6e96b5e08ba9082b",
+      "inputs_checked": 2
+    },
+    {
+      "kind": "native",
+      "path": "refactor/camera_raw_r2/tmp/native_read_design_20261109.log",
+      "sha256": "af820d176d1e6f6fee87e2f5090639ab983b12ba6458976b8bddd3beb40a149b",
+      "marker": "CAMERA_SHARED_READ_DESIGN_DONE"
+    },
+    {
+      "kind": "native",
+      "path": "refactor/camera_raw_r2/tmp/native_hierarchy_20261109.log",
+      "sha256": "89be8e3ea6aec1d9e354359cb2ae20fc4e73b156cc50891a2b7890e81d90fc5c",
+      "marker": "CAMERA_RAW_HDR_HIERARCHY_PASS"
+    }
+  ],
+  "verified_inputs": {
+    "D:/App/TD_Release_2026.2.210.850/sim_release/common/al_phy_glbl.v": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff",
+    "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8",
+    "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_fifo.v": "0cea967091d4f3fd27e07289d3a19a0064e65c8abefc0427749ef61b2ce00160",
+    "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_ramfifo.v": "98fab0ec4a952cc2d384b77f7a55c3a6e912741fc33c21cd748f6d9fd214e774",
+    "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_phy_eram.v": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c",
+    "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_phy_fifoctrl.v": "fea30a6a038abec73c4e4e56b9986ad1242f043a06a7c39619979744202adddf",
+    "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_phy_gsr.v": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v": "abdc8c7a0db30b9fd1188adea12cdeb446a679295335c753a3646c2861470768",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v": "26a5a934d62487bf44a9b56eaab6c30f86d794c4049cde76679878840ff4928d",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v": "bc5f2b65c88855891c086647df9a2a8d1d155c3b8deb48cf402a7b0235e8346a",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/control_fifo_40x512.v": "f03e2bd2b794592b45a298c8a9724831cfc766ceb1ba97aafd697679bb60f291",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/control_message_fifo_ip.v": "ed45556e04d39fa3148ce015c90a74a32774016073129d2e4ec4511beaf51c29",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/frame_config_extension_validate.v": "f05eff5ad828682f6d69ad10c42341efd71eac7ebd1a0197e667eba61039284d",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/frame_job_config_cdc.v": "dd5002212f9579a3db34db527bab346a540477fb4b8a046a2977db3deb43793d",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh": "5555cc4297277b88def3e274d640cc8408ab45481d535013883c4baca6a5d4dc",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/00_rtl/raw_video_v1.vh": "b6a8048ddbe5e0d8c9db216dea8ceb45f2b2612f304a74a49bc1d9b1c3b65d12",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/00_rtl/stereo_control_v1.vh": "571573b50b2ad3f7d3eefda2657fcb4bc168d092c24456f126f4e5caef957023",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/03_mono_config_v2_20261015/legacy_stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/04_include/analysis_config_transport.vh": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/04_include/camera_physical_capture.vh": "63d0c535d68f333232c9d0b36f6f931e1285abd2a322d2fdbf4263e16809b3d8",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/04_include/pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/reset_release_sync.v": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/dol2_axi_write_arbiter.v": "7b12bc780aeb58509f41c3d2cd699449f892d656b944a808721f0ecc9caacfa2",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/reset_release_sync_data.v": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include/c2h_test_fixture.vh": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include/c2h_transport_limits.vh": "242ae42c7fc63b7fdc1710263f8aa49a35533f411e27956c6df2d3e3882acb8c",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include/f21_config_transport.vh": "4f7cb45f459afeb0a0b8af9daf1a0d985d57fa566d4fbf5ce2f63b85a0151605",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include/pcie_feature_defines.vh": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include/pcie_record_v3_validate.vh": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include/stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/raw_video_record_formatter.v": "1de88a584c5e8c5b7031eefcffd419433472e48eaaa11b94e3a0c5fbd84d0510",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v": "6a9664a59e17ad4706d278a91e56408960dafca733f66b059de75404656b797b",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v": "c4558d63ca346ce0b590f39896037c58f71968b6609c1249ca2b6fe0c48c93f6",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v": "b727885ef819323d9e64e82a990890f3664be52d80f621eaaad41035fc81b40f",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/axis_frame_fifo_ip.v": "b820c964bb7d358ca99bb190df230af4a9eb93ac15aa3a7c3b8d72ca7260e848",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/product_record_cdc.v": "8047288aef68975c280ad2b9d800cbd3c3bcd1e36440d9179c176f2cc6afd474",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/ordered_frame_egress.v": "eb5312ed137935d5081d7470d5973f61ae3d3ac0735559bb77cf072b34c7a81d",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/ddr_extension_staging_ram.v": "d8941a24498d7ed8334f8fbb98fc334f64b44bcb3c3e04d1c0829a83fbdd33c0",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/lane_sparse_extension_checker.v": "153ce596ab3fee9247202aeb457adf05926212be6926021390d74680d3795d31",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/td_sdp_ram40.v": "f120c365061daac7b401201a5b3661dd01d794ff77622de24686f3c58d0a3e58",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v": "53854efce3b3a1d47749d0aa10627750fa9ac8927aa0dcf6e066a9358b7cd108",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/ordered_frame_cdc.v": "976c55d96763f8e69e9b686fc84719fc4609ccba7423778c2c8481b80ce46455",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/ordered_frame_ingress.v": "8d8b0336b84c3c98118585c4e7f3e43b6fe77e0c99fcfb4f118fbe683df305b1",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/ordered_frame_fifo_fence.v": "d48955b8c0e3d9c87bf1389cef7c2dbef6c3354396dde5c7c4e0c1491f20a867",
+    "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/real_hdr_pair_cycle_gate.v": "68e0b67235a1d0b765e31f4adc48a3765980a627ce84f69f529d523b460c2b59"
+  },
+  "native_read_design": "PASS",
+  "native_hierarchy": "PASS",
+  "whole_synthesis": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "timing": "NOT_RUN",
+  "board": "NOT_RUN"
+}

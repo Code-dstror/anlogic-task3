@@ -1,0 +1,10 @@
+{
+  "generator_commit": "8258220fdb54d8db8d9f9fd8b77b8185f0c7546d",
+  "generator_sha256": "ea941927789f8ac430d35b461981e82c3bf8dffdc7d14d5f0b2953ef59b026a4",
+  "reused_from": "deliverables\\CAMERA_RAW_81404aec_seed92_20261108\\rk_support\\raw_driver_candidate",
+  "source_hashes_verified": true,
+  "kernel_module_build": "NOT_RUN",
+  "board": "NOT_RUN",
+  "current_generator_commit": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+  "current_generator_byte_identical_to_prior": true
+}

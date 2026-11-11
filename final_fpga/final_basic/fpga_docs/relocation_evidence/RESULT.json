@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-11",
+  "project": "fpga_prj/al/rfcamera_raw_r2.al",
+  "tool": "TD2026.2 build6.2.3.210850",
+  "source": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "static": {
+    "status": "PASS",
+    "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "production_inputs": 405,
+    "all_source_copies": 1353,
+    "native_paths": 258,
+    "bit_sha256": "eee7eff50323a8a5c7ddc850d3873e1dda13473debbfe8a690bcb6bab17ac362"
+  },
+  "read_design": "PASS",
+  "same_project_reopen": "PASS",
+  "fresh_error_markers": 0,
+  "native_db": {
+    "bytes": 68488812,
+    "sha256": "e35d3af8d528c5831b5f3b52cc2e8152a0cab521b8866397e1c6428fe121eb94"
+  },
+  "command": "python tools/run_td.py final_basic/fpga_prj/al/scripts/check_read_design.tcl --td-root D:/App/TD_Release_2026.2.210.850 --workdir final_basic/fpga_prj/al --log tmp/final_basic_20261111/read_design.log",
+  "relocated_full_synthesis": "NOT_RUN",
+  "relocated_physical": "NOT_RUN",
+  "new_simulation": "NOT_RUN_NO_FUNCTIONAL_CHANGE",
+  "bit": "EXISTING_1a5603c1_SEED25_HASH_VERIFIED",
+  "board": "NOT_RUN"
+}

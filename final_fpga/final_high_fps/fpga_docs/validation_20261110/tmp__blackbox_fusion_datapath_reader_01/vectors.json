@@ -1,0 +1,92 @@
+{
+  "files": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_reader_01\\reader\\reader_jobs.mem": "52a916a9fd46936b869f39e8811696a1401eb82f6d1a2cbd27ebe9eb1fb5c864",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_reader_01\\reader\\reader_ddr.mem": "224fb16c8bc8d0389559ea3cd24f2cb9b2efde60a7d2462346d7f76970fec695",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_reader_01\\reader\\reader_raw.mem": "611396fca262708fbc86d45aceed29b643bda193b9f2a1cb525bb7f6221fc4d1",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_reader_01\\reader\\reader_sizes.vh": "00d0b0fcf954560a49167ee0422be115132b11997387ab106ff8f6b52961fc21"
+  },
+  "jobs": [
+    [
+      0,
+      0,
+      0,
+      0,
+      15,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      15,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      64,
+      7,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      96,
+      9,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      27,
+      6,
+      2
+    ],
+    [
+      0,
+      1,
+      0,
+      17,
+      8,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      63,
+      3,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      128,
+      15,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      14,
+      10,
+      4
+    ],
+    [
+      1,
+      1,
+      0,
+      16383,
+      0,
+      0
+    ]
+  ],
+  "groups_per_frame": 1071,
+  "words_per_member": 335
+}

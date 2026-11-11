@@ -1,0 +1,28 @@
+{
+  "schema": 2,
+  "base": {
+    "mode": "COLOR",
+    "quality": 88,
+    "flags": [
+      "ADAPTIVE_QUALITY"
+    ],
+    "min_quality": 35,
+    "frame_budget": 2000000,
+    "restart_mcus": 128
+  },
+  "extension": {
+    "schema": 2,
+    "product_mode": 0,
+    "processing_enables": 0,
+    "hdr_ratio": 0,
+    "hdr_black_long": 0,
+    "hdr_black_short": 0,
+    "hdr_motion_base": 0,
+    "hdr_motion_shift": 0,
+    "hdr_qualification": 0,
+    "hdr_max_delta_ns": 0,
+    "hdr_max_wait_ns": 0,
+    "hdr_max_age_ns": 0,
+    "dehaze_lut_generation": 0
+  }
+}

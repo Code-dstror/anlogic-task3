@@ -1,0 +1,263 @@
+[
+  {
+    "name": "extrema",
+    "start_cycle": 18,
+    "idle_cycle": 4285,
+    "tokens": 756,
+    "bytes": 4097,
+    "sha256": "dd56fe1708b3a1cdbdd34f8455600153504107a707c9d9d2e25badc71afb5779",
+    "first_input": 19,
+    "last_input": 4259,
+    "first_byte": 40,
+    "last_byte": [
+      4284
+    ],
+    "done": [
+      [
+        "4285"
+      ]
+    ],
+    "errors": [],
+    "held_cycles": 21,
+    "held_ordinals": {
+      "0": 7,
+      "402": 7,
+      "4096": 7
+    }
+  },
+  {
+    "name": "dc_pos_invalid",
+    "start_cycle": 4293,
+    "idle_cycle": 4448,
+    "tokens": 18,
+    "bytes": 134,
+    "sha256": "284e594be42babec8c9409208a1b807196a14d4f24f86c8a6951a56479cf296f",
+    "first_input": 4294,
+    "last_input": 4311,
+    "first_byte": 4315,
+    "last_byte": [],
+    "done": [],
+    "errors": [
+      [
+        "4448",
+        "02",
+        "80010021"
+      ]
+    ],
+    "held_cycles": 7,
+    "held_ordinals": {
+      "0": 7
+    }
+  },
+  {
+    "name": "recover_pos",
+    "start_cycle": 4456,
+    "idle_cycle": 4526,
+    "tokens": 36,
+    "bytes": 15,
+    "sha256": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+    "first_input": 4457,
+    "last_input": 4499,
+    "first_byte": 4482,
+    "last_byte": [
+      4525
+    ],
+    "done": [
+      [
+        "4526"
+      ]
+    ],
+    "errors": [],
+    "held_cycles": 14,
+    "held_ordinals": {
+      "0": 7,
+      "14": 7
+    }
+  },
+  {
+    "name": "dc_neg_invalid",
+    "start_cycle": 4534,
+    "idle_cycle": 4690,
+    "tokens": 18,
+    "bytes": 135,
+    "sha256": "b4f375dfd5e019ea49f649c98cb15c0b1cce3dfda386842dc15aa80fd2e6ca7c",
+    "first_input": 4535,
+    "last_input": 4552,
+    "first_byte": 4556,
+    "last_byte": [],
+    "done": [],
+    "errors": [
+      [
+        "4690",
+        "02",
+        "80010023"
+      ]
+    ],
+    "held_cycles": 7,
+    "held_ordinals": {
+      "0": 7
+    }
+  },
+  {
+    "name": "recover_neg",
+    "start_cycle": 4698,
+    "idle_cycle": 4755,
+    "tokens": 36,
+    "bytes": 12,
+    "sha256": "b38518fca3136f2ddf5e7b24bf50ca72730d5d9a4d737cab845b1abb46764af7",
+    "first_input": 4699,
+    "last_input": 4734,
+    "first_byte": 4725,
+    "last_byte": [
+      4754
+    ],
+    "done": [
+      [
+        "4755"
+      ]
+    ],
+    "errors": [],
+    "held_cycles": 14,
+    "held_ordinals": {
+      "0": 7,
+      "11": 7
+    }
+  },
+  {
+    "name": "identity_invalid",
+    "start_cycle": 4763,
+    "idle_cycle": 4926,
+    "tokens": 37,
+    "bytes": 127,
+    "sha256": "9585393e3aca18bfd2843aeb79ee4475393ec3e3bc74b8cd352ac9dd3f46b516",
+    "first_input": 4764,
+    "last_input": 4925,
+    "first_byte": 4790,
+    "last_byte": [],
+    "done": [],
+    "errors": [
+      [
+        "4926",
+        "04",
+        "80010025"
+      ]
+    ],
+    "held_cycles": 7,
+    "held_ordinals": {
+      "0": 7
+    }
+  },
+  {
+    "name": "recover_identity",
+    "start_cycle": 4934,
+    "idle_cycle": 5004,
+    "tokens": 36,
+    "bytes": 15,
+    "sha256": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+    "first_input": 4935,
+    "last_input": 4977,
+    "first_byte": 4960,
+    "last_byte": [
+      5003
+    ],
+    "done": [
+      [
+        "5004"
+      ]
+    ],
+    "errors": [],
+    "held_cycles": 14,
+    "held_ordinals": {
+      "0": 7,
+      "14": 7
+    }
+  },
+  {
+    "name": "cancel",
+    "start_cycle": 5012,
+    "idle_cycle": 5050,
+    "tokens": 9,
+    "bytes": 4,
+    "sha256": "340082f3513c926f1339ea18c12610994494957498b0532eb8d0f86cd3790c36",
+    "first_input": 5013,
+    "last_input": 5021,
+    "first_byte": 5038,
+    "last_byte": [],
+    "done": [],
+    "errors": [],
+    "held_cycles": 16,
+    "held_ordinals": {
+      "0": 7,
+      "3": 9
+    }
+  },
+  {
+    "name": "recover_cancel",
+    "start_cycle": 5058,
+    "idle_cycle": 5115,
+    "tokens": 36,
+    "bytes": 12,
+    "sha256": "b38518fca3136f2ddf5e7b24bf50ca72730d5d9a4d737cab845b1abb46764af7",
+    "first_input": 5059,
+    "last_input": 5094,
+    "first_byte": 5085,
+    "last_byte": [
+      5114
+    ],
+    "done": [
+      [
+        "5115"
+      ]
+    ],
+    "errors": [],
+    "held_cycles": 14,
+    "held_ordinals": {
+      "0": 7,
+      "11": 7
+    }
+  },
+  {
+    "name": "reset",
+    "start_cycle": 5123,
+    "idle_cycle": 5174,
+    "tokens": 9,
+    "bytes": 3,
+    "sha256": "c264cec8ae65ef3ef9f954e40ff75917a868ccb845d6307fc45aa3ae177e6dab",
+    "first_input": 5124,
+    "last_input": 5132,
+    "first_byte": 5149,
+    "last_byte": [],
+    "done": [],
+    "errors": [],
+    "held_cycles": 12,
+    "held_ordinals": {
+      "0": 7,
+      "3": 5
+    }
+  },
+  {
+    "name": "recover_reset",
+    "start_cycle": 5182,
+    "idle_cycle": 5252,
+    "tokens": 36,
+    "bytes": 15,
+    "sha256": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+    "first_input": 5183,
+    "last_input": 5225,
+    "first_byte": 5208,
+    "last_byte": [
+      5251
+    ],
+    "done": [
+      [
+        "5252"
+      ]
+    ],
+    "errors": [],
+    "held_cycles": 14,
+    "held_ordinals": {
+      "0": 7,
+      "14": 7
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "MERGE": 2284,
+    "TONE": 17152,
+    "COLOR": 336,
+    "ISP": 3925
+  },
+  "files": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\merge.mem": "4bcaf35a477cb12bd3c702320f9207ebb4e77bf751f9b03aa83e9ee571788aca",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\tone.mem": "10156822bb72a851efbca8e5242dad6c03f2d66d5662a8d7f22268216aa1933a",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\color.mem": "35a0ce99ff644b1e9cd84a31bd300823af6d4471d32fe01f01ba1a7f9422b9ff",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\isp.mem": "80c283f2f335465163fdfa26bae1a74d5812c86088d8c988af026b6fbb3375cf",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\rom_init\\gamma22_10to8.mif.dath": "aa5e43d18ec3b97b060d70e28f5c92995a08e7f98274ee4e26c57b96a9333813",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\rom_init\\tone96_0.mif.dath": "e52a864421c723bdd279c325621d6ed1287d4768d48335c6ea6e7c74c6f87f9f",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\rom_init\\tone96_1.mif.dath": "1947d56b6677180c29cb169f9fdb0a8687d124953d4213998d049504d120d4d5",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_isp_02\\vectors_sizes.vh": "659cd5ea7cf1c29199f64db4b5c2a970e3126775de00354ccd864bd31de093c5"
+  }
+}

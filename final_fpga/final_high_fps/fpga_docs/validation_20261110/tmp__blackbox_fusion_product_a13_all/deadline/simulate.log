@@ -1,0 +1,265 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -L ph1 work.tb_fusion_product work.PH1_PHY_GSR ph1.glbl "+CASE=deadline" -onfinish stop -do "run -all; quit -f" 
+# Start time: 19:17:31 on Nov 10,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_fusion_product(fast)
+# Loading work.uhd_integration_fixture(fast)
+# Loading work.raw_capture_fifo_eram_safe(fast)
+# Loading work.isp_line_ram_native4(fast)
+# Loading work.fdct_mac19s14s_z33s_p34_m1p1(fast)
+# Loading ph1.PH1_PHY_DSPSIOU(fast)
+# Loading ph1.PH1_PHY_DSPADD_V2(fast)
+# Loading ph1.PH1_PHY_DSPMULT_V2(fast)
+# Loading ph1.PH1_PHY_DSPLOGIC_V2(fast)
+# Loading work.gamma_lut_10to8(fast)
+# Loading work.ram40_sdp_fixed(fast__2)
+# Loading work.td_sdp_ram(fast__1)
+# Loading work.jpeg_quant_recip_rom40x512(fast)
+# Loading work.td_sdp_ram40(fast__12)
+# Loading work.ddr_response_bank16(fast)
+# Loading work.PH1_PHY_GSR(fast)
+# Loading ph1.glbl(fast)
+# run -all
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# BB_BEGIN case=deadline geometry=1
+# BB_RESETS_RELEASED time_ns=82248.000
+# BB_CFG_ACK session=00000001 epoch=0 time_ns=84260.000
+# BB_BOOT session=00000001 geometry=1 time_ns=84753.000
+# BB_GEOMETRY code=1 profile=5 time_ns=86073.000
+# BB_CFG_ACK session=00000001 epoch=1 time_ns=92460.000
+# BB_FRAME_INPUT seq=10 raw_rgb=172,440,858 time_ns=92513.000
+# BB_CFG_APPLIED session=00000001 epoch=1 first_sequence=10 wb=4e22c94d time_ns=123993.000
+# BB_BUFFER_ARM generation=1 identity=6b33f81733b2ba410000000100000000 time_ns=125297.000
+# BB_APP_ARM time_ns=125476.000
+# BB_FRAME_INPUT seq=11 raw_rgb=172,440,858 time_ns=125480.000
+# BB_JPEG_START seq=11 time_ns=158416.000
+# BB_B_SERVICE seq=11 wlast_cycle=10724 valid_cycle=14820 accept_cycle=14820 delta=4096 time_ns=193420.000
+# BB_SOURCE seq=11 ok=1 job=8000000000000001 raw_read_beats=1200 time_ns=203108.000
+# BB_JPEG_SOURCE seq=11 done=1 failed=0 time_ns=204428.000
+# BB_B_SERVICE seq=11 wlast_cycle=14855 valid_cycle=18951 accept_cycle=18951 delta=4096 time_ns=224411.000
+# BB_JPEG_RESULT seq=11 ok=1 length=912 time_ns=243404.000
+# BB_B_SERVICE seq=11 wlast_cycle=18986 valid_cycle=23082 accept_cycle=23082 delta=4096 time_ns=255402.000
+# BB_LAST_B_BLOCK seq=11 result_available=1 result_ns=243404.000 wbytes=912 ready_mask=00000000 pending_b=1 time_ns=255617.000
+# BB_LAST_B_BLOCK seq=11 result_available=1 result_ns=243404.000 wbytes=912 ready_mask=00000000 pending_b=1 time_ns=255665.000
+# BB_B_SERVICE seq=11 wlast_cycle=23104 valid_cycle=27200 accept_cycle=27200 delta=4096 time_ns=286295.000
+# BB_WRITER_ACK seq=11 ok=1 wbytes=912 last_b_ns=286295.000 time_ns=286310.000
+# BB_TICKET seq=11 error=0 job=8000000000000001 time_ns=286520.000
+# BB_RAW_RETIRE seq=11 time_ns=286573.000
+# BB_RECORD_OFFER seq=11 time_ns=292522.000
+# BB_FENCE seq=11 bytes=3024 time_ns=319549.000
+# BB_RC seq=11 cookie=dec417aa time_ns=319613.000
+# BB_SAFE seq=11 sent=3024 record=3024 bound=4a50000000010000000100000000000b time_ns=319641.000
+# BB_HOST_ACK seq=11 time_ns=320469.000
+# BB_RECORD_RETIRE seq=11 time_ns=320519.000
+# BB_RING_RETIRE_RESPONSE seq=11 code=0 time_ns=320527.000
+# BB_DEADLINE_PASS seq=11 jpeg_b=4 latency_cycles=4096
+# BB_PRODUCT_PASS file=first seq=11 session=00000001 epoch=1 wlast_ns=255567.000 last_b_ns=286295.000 offer_ns=292522.000 safe_ns=319641.000 ack_ns=320469.000 retire_ns=320519.000 response_ns=320527.000 raw_bytes=19200 raw_read_beats=1200 jpeg_aw=4 tlp_packets=24 fence=1 axistalls=171 tlpstalls=51
+# BB_BUFFER_ARM generation=2 identity=6b33f81733b2ba410000000200000000 time_ns=321337.000
+# BB_FRAME_INPUT seq=12 raw_rgb=321,280,580 time_ns=321344.000
+# BB_JPEG_START seq=12 time_ns=354286.000
+# BB_RAW_SLVERR seq=12 ar_addr=3000500 ar_id=1 beat=0 time_ns=354616.000
+# BB_SOURCE seq=12 ok=0 job=8000000000000002 raw_read_beats=96 time_ns=354956.000
+# BB_JPEG_SOURCE seq=12 done=0 failed=1 time_ns=359404.000
+# BB_JPEG_RESULT seq=12 ok=0 length=0 time_ns=374948.000
+# BB_B_SERVICE seq=12 wlast_cycle=36832 valid_cycle=40928 accept_cycle=40928 delta=4096 time_ns=389283.000
+# BB_WRITER_ACK seq=12 ok=0 wbytes=256 last_b_ns=389283.000 time_ns=392523.000
+# BB_TICKET seq=12 error=1 job=8000000000000002 time_ns=392733.000
+# BB_RAW_RETIRE seq=12 time_ns=392786.000
+# BB_FAILURE_TERMINAL_PASS seq=12 session=00000001 start_ns=354286.000 slverr_ns=354616.000 raw_bytes=19200 raw_read_beats=96 jpeg_aw=1
+# BB_FRAME_INPUT seq=13 raw_rgb=613,328,234 time_ns=393464.000
+# BB_JPEG_START seq=13 time_ns=426402.000
+# BB_B_SERVICE seq=13 wlast_cycle=46445 valid_cycle=50541 accept_cycle=50541 delta=4096 time_ns=461399.000
+# BB_SOURCE seq=13 ok=1 job=8000000000000003 raw_read_beats=1200 time_ns=471092.000
+# BB_JPEG_SOURCE seq=13 done=1 failed=0 time_ns=472412.000
+# BB_B_SERVICE seq=13 wlast_cycle=50576 valid_cycle=54672 accept_cycle=54672 delta=4096 time_ns=492390.000
+# BB_JPEG_RESULT seq=13 ok=1 length=912 time_ns=511380.000
+# BB_B_SERVICE seq=13 wlast_cycle=54707 valid_cycle=58803 accept_cycle=58803 delta=4096 time_ns=523381.000
+# BB_LAST_B_BLOCK seq=13 result_available=1 result_ns=511380.000 wbytes=912 ready_mask=00000000 pending_b=1 time_ns=523585.000
+# BB_LAST_B_BLOCK seq=13 result_available=1 result_ns=511380.000 wbytes=912 ready_mask=00000000 pending_b=1 time_ns=523633.000
+# BB_B_SERVICE seq=13 wlast_cycle=58824 valid_cycle=62920 accept_cycle=62920 delta=4096 time_ns=554267.000
+# BB_WRITER_ACK seq=13 ok=1 wbytes=912 last_b_ns=554267.000 time_ns=554282.000
+# BB_TICKET seq=13 error=0 job=8000000000000003 time_ns=554492.000
+# BB_RAW_RETIRE seq=13 time_ns=554544.000
+# BB_RECORD_OFFER seq=13 time_ns=560493.000
+# BB_FENCE seq=13 bytes=3024 time_ns=587509.000
+# BB_RC seq=13 cookie=dec417aa time_ns=587573.000
+# BB_SAFE seq=13 sent=3024 record=3024 bound=4a50000000010000000100020000000d time_ns=587601.000
+# BB_HOST_ACK seq=13 time_ns=588429.000
+# BB_RECORD_RETIRE seq=13 time_ns=588476.000
+# BB_RING_RETIRE_RESPONSE seq=13 code=0 time_ns=588483.000
+# BB_DEADLINE_PASS seq=13 jpeg_b=4 latency_cycles=4096
+# BB_PRODUCT_PASS file=recovery seq=13 session=00000001 epoch=1 wlast_ns=523538.000 last_b_ns=554267.000 offer_ns=560493.000 safe_ns=587601.000 ack_ns=588429.000 retire_ns=588476.000 response_ns=588483.000 raw_bytes=19200 raw_read_beats=1200 jpeg_aw=4 tlp_packets=24 fence=1 axistalls=172 tlpstalls=54
+# BB_SIM_PASS case=deadline geometry=1 pixel_cycles=73608
+# ** Note: $finish    : <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_product/tb_fusion_product.sv(664)
+#    Time: 588865301 ps  Iteration: 1  Instance: /tb_fusion_product
+# Break at <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_product/tb_fusion_product.sv line 664
+# Stopped at <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_product/tb_fusion_product.sv line 664
+#  quit -f
+# End time: 19:17:35 on Nov 10,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0

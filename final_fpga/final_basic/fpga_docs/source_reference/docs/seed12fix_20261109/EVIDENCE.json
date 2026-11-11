@@ -1,0 +1,1389 @@
+{
+  "schema": 1,
+  "scope": "HISTORICAL_COLD_DUAL_JPEG_SEED12_FIRST_COLOR_TO_HDR_READ_ONLY_AUDIT",
+  "evidence_root": "deliverables/CAMERA_RAW_R2_seed12_本轮切换试验与故障证据_20261109/CAMERA_RAW_R2_seed12_试验与故障证据",
+  "identity": {
+    "source_commit": "4a08ae35391e7b7ea6767260d7d1b4b182ef4bb9",
+    "seed": 12,
+    "bitstream": "deliverables/CAMERA_RAW_R2_4a08ae35_seed12_Linux_Debug_20261109/bitstream/camera_raw_r2_4a08ae35_seed12.bit",
+    "bitstream_bytes": 4850315,
+    "bitstream_sha256": "ee344e8084e2485c76ba523ccbc224a04c4b2d8fe6f6c14ba734937327f32727",
+    "board_binding": "OPERATOR_COLD_PROGRAMMING_ATTESTATION_NO_INDEPENDENT_SRAM_READBACK",
+    "rk_boot": "01ba5cef-7a61-4ff2-80a6-04ca62ce77f1",
+    "rk_run_id": "6dc44ae8d56935b54b89adf15107e53a",
+    "rk_owner_pid": 2470,
+    "rk_bdf": "0000:21:00.0",
+    "rk_cold_session": "dual-jpeg",
+    "control_index_sha256": "f9e9a6687ee7839b230d530cc2d817247c7f8acb49105a400b02fcf998cc7db6",
+    "runtime_index_sha256": "fb5e6e8a3d44d86ccac6c87fb4bec8512534f45ea3668a84c3fd84d04f4a7038"
+  },
+  "integrity": {
+    "bundle_manifest_sha256": "1f71dd30ae295341d140f3a745951519b6d10e5c5f541efa329b4c9aeb0d9e2b",
+    "bundle_manifest_entries_verified": 122,
+    "fault_index_entries_bytes_and_sha256_verified": 32,
+    "progress_index_entries_bytes_and_sha256_verified": 9,
+    "indexed_owner_log_scope": "TAIL",
+    "key_file_sha256": {
+      "CAMERA_RAW_R2_seed12_彩色切HDR超时报告_20261109.md": "daba09e7ed7e0373036795f717a0f94b8016c309885c76e4554652b9ecb5f61a",
+      "MODE_REQUEST_RESULTS.csv": "175f72eeab6727fdeb43017bc37800bdfdda26219a595c52a080024364489985",
+      "programming-original.json": "107a84dcd61f25e558c4e927fd2e5ff2e93fee1c7e1546f3f1e452603627b7db",
+      "user-feedback-correction.json": "6ec7c8d5d90c01e3fee86bd911e4bc359406dc1d8f43207c1e55d87e66a98276",
+      "user-color-to-HDR-failure.json": "2d48b1fce3ff5f664ef6e637dc655a2012859b086636263c9309b21ccc43d6d8",
+      "fpga-startup-window/fpga.bin": "9498fa019a609314756935b311baf9d1e7f25885a963afa2f97cd4ed1863fdb6",
+      "fpga-startup-window/reads.jsonl": "3a253ad25791b51196b6181927b0d4c383c6d74441ea54986aace6bb4142920b",
+      "fpga-startup-window/decoded.jsonl": "9090b218ca2b37f53773ecf388eb6642cb1c6d4a16eff7c996fdaedfb6f8730b",
+      "reference/uart_observer.py": "926a896f94f1bbd55077e23cb37aedd1f2a86634b570efba8c748b4cb9257b22",
+      "fault-verified-files/capture/owner-events.jsonl": "72d67f2e11a000dbf208c691c6099f8cd3f6d2ce71ab9e299c1ff68ace155b90",
+      "fault-verified-files/capture/result.json": "1a7d5a653fec9dd42b877a0705ef1f692236091965d46c6553201e5dcc1d3946",
+      "fault-verified-files/capture/preview/recording-final.json": "c4eb79eb521ae09a64156ca05376d5bc37e11ad378d2d895bbcc38458b3868a3",
+      "fault-verified-files/diagnostic-cfg-readonly/result.json": "6ef0720fbe1d476483957d484afe15f3bde1d21372a1f3a1168a73cb3d94800c"
+    },
+    "raw_wire_vs_retained_decode": "ALL_PACKET_PRIMITIVES_AND_READ_CHUNK_ASSOCIATIONS_MATCH",
+    "uart_raw_bytes": 75847,
+    "uart_read_chunks": 3991,
+    "uart_decoded_frames": 1563,
+    "uart_ob_v2_frames": 781,
+    "uart_dj_v3_frames": 782,
+    "uart_discarded_bytes": 22,
+    "uart_crc_errors": 0,
+    "uart_invalid_headers": 0,
+    "uart_trailing_bytes": 0,
+    "other_observer_pages": {
+      "cg": 0,
+      "rx": 0,
+      "rt": 0
+    }
+  },
+  "rk_timeline": {
+    "basis": "RK_OWNER_MONOTONIC_NS",
+    "owner_event_file": "fault-verified-files/capture/owner-events.jsonl",
+    "csv_vs_owner_events": "ALL_19_REQUESTS_AND_18_APPLIED_VIDEO_CONFIRMED_EVENTS_MATCH",
+    "start_call_host_ns": 409115901838,
+    "previous_confirmed_requests": 18,
+    "confirmed_histogram_dehaze_color_cycles": 6,
+    "request_18_host_ns": 638793463705,
+    "applied_18_host_ns": 638852478177,
+    "applied_18_first_actual_frame_sequence": 6964,
+    "confirmed_18_host_ns": 638961472659,
+    "request_19_host_ns": 738441189832,
+    "request_19_id": "6dc44ae8d56935b54b89adf15107e53a-19-4d63086e01ee67a9aa44fe1d",
+    "stop_call_host_ns": 748447128223,
+    "stop_return_host_ns": 748447365086,
+    "request_to_stop_ns": 10005938391,
+    "stop_call_to_return_ns": 236863,
+    "failure": "RuntimeError: TimeoutError: CFG transaction timeout; pending hardware state retained",
+    "user_correction": {
+      "at_utc": "2026-11-09T13:42:18.065880+00:00",
+      "user_feedback": "尚未实际切换，现在开始",
+      "supersedes": "user-switch-regression-feedback.json",
+      "interpretation": "PREVIOUS_POSITIVE_ANSWER_WAS_NOT_AN_EXECUTED_MODE_TEST",
+      "mode_switch_acceptance": "NOT_YET_TESTED_BY_USER"
+    },
+    "final_user_feedback": {
+      "at_utc": "2026-11-09T13:44:35.261846+00:00",
+      "user_feedback": "彩色切HDR失败",
+      "policy": "PRESERVE_EXISTING_FAULT_STOP_AND_STATE_NO_RETRY"
+    }
+  },
+  "csr_post_stop": {
+    "source": "fault-verified-files/diagnostic-cfg-readonly/result.json",
+    "boot": "01ba5cef-7a61-4ff2-80a6-04ca62ce77f1",
+    "method": "SYSFS_RESOURCE0_O_RDONLY_PROT_READ_VOLATILE_ALIGNED_U32",
+    "native_receiver_opened": false,
+    "native_ioctl_calls": 0,
+    "mmio_writes": 0,
+    "snapshot_host_ns": [
+      849648608681,
+      849669140387
+    ],
+    "identical_fields": 90,
+    "cfg_status_hex": "0x11",
+    "cfg_error": 0,
+    "request_sequence": 19,
+    "response_sequence": 19,
+    "cfg_session": 1,
+    "public_mode_epoch": 18,
+    "applied_first_sequence": 6964,
+    "applied_camera": 0,
+    "public_active_ext_0_hex": "0x00000002",
+    "shadow_ext_0_hex": "0x00000202"
+  },
+  "uart_window": {
+    "timing_basis": "HOST_UART_ARRIVAL; UNIX_NS_STRINGS_PRESERVE_EXACT_CAPTURE_VALUES",
+    "cohort": "INDEPENDENT_DFI_PIX_USER_SNAPSHOTS_SYS_AT_FREEZE",
+    "sequence_window": [
+      625,
+      642
+    ],
+    "last_epoch19_sample_sequence": 836,
+    "last_sdr_epoch18_sequence": 628,
+    "first_hdr_target19_sequence": 629,
+    "cam0_stable_cam1_warmup_zero_first_sequence": 630,
+    "last_run_true_sequence": 638,
+    "first_run_false_sequence": 639,
+    "run_false_equal_dj_state_sequences": [
+      639,
+      836
+    ],
+    "run_false_equal_dj_state_count": 198,
+    "valid_ob_pix_receive_or_identity_sticky_transitions": [
+      {
+        "sequence": 160,
+        "read_index": 485,
+        "sticky_faults_hex": "0x0",
+        "receive_or_identity_sticky": false
+      },
+      {
+        "sequence": 629,
+        "read_index": 2913,
+        "sticky_faults_hex": "0xE",
+        "receive_or_identity_sticky": true
+      }
+    ],
+    "capture_admit_lanes": {
+      "sdr": [
+        "CAM0",
+        "CAM1",
+        null,
+        null
+      ],
+      "hdr": [
+        "CAM0 LONG",
+        "CAM0 SHORT",
+        "CAM1 LONG",
+        "CAM1 SHORT"
+      ]
+    },
+    "states": {
+      "sdr_epoch18": {
+        "dj_fresh_mask": 3,
+        "dj_reset_n_mask": 3,
+        "ob_fresh_mask": 7,
+        "ob_reset_n_mask": 7,
+        "dfi_run": true,
+        "dfi_epoch": 18,
+        "dfi_session": 1,
+        "dfi_flags_hex": "0x44",
+        "dfi_hdr": false,
+        "dfi_begin_reject_mod256": [
+          0,
+          0
+        ],
+        "dfi_pair_expire_mod256": [
+          0,
+          0
+        ],
+        "dfi_bad_finish_mod256": [
+          18,
+          18
+        ],
+        "dfi_bank_states": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pix_target_epoch": 18,
+        "pix_cfg_applied_epoch": 18,
+        "pix_cfg_state": 0,
+        "pix_cfg_flags_hex": "0x406A",
+        "pix_cfg_gates": {
+          "frame_accept": false,
+          "source_ready": true,
+          "response_active": false,
+          "response_space": true,
+          "remote_fault": false,
+          "remote_applied": true,
+          "remote_sent": true,
+          "remote_pending": false,
+          "frame_apply_eligible": false
+        },
+        "pix_quiet": {
+          "cfg_pipeline": false,
+          "physical_source": false,
+          "maintenance": true,
+          "native_pipeline": false
+        },
+        "pix_flags_hex": "0x0332",
+        "pix_hdr_stable": [
+          false,
+          false
+        ],
+        "pix_identity_fault": [
+          false,
+          false
+        ],
+        "pix_receive_fault": [
+          false,
+          false
+        ],
+        "sensor_sys_cam0_cam1": [
+          {
+            "raw_hex": "0x00CA7864",
+            "warmup": 0,
+            "index": 202,
+            "phase": 7,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": false,
+            "written": true,
+            "stable": true,
+            "error": false,
+            "write_valid": false,
+            "write_ready": true,
+            "write_done": false,
+            "i2c_error": false
+          },
+          {
+            "raw_hex": "0x00CA7864",
+            "warmup": 0,
+            "index": 202,
+            "phase": 7,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": false,
+            "written": true,
+            "stable": true,
+            "error": false,
+            "write_valid": false,
+            "write_ready": true,
+            "write_done": false,
+            "i2c_error": false
+          }
+        ],
+        "ob_pix_levels_hex": "0x16F",
+        "ob_pix_sticky_hex": "0xC",
+        "ob_pix_receive_or_identity_sticky": false,
+        "ob_pix_phy_ready_cam0_cam1": [
+          true,
+          true
+        ],
+        "ob_pix_config_done_cam0_cam1": [
+          true,
+          true
+        ],
+        "ob_dfi_levels_hex": "0x30F",
+        "ob_dfi_sticky_hex": "0xC",
+        "ob_user_levels_hex": "0x47F",
+        "ob_user_sticky_hex": "0x0",
+        "ob_user_transport_phase": "WAIT_RECORD"
+      },
+      "hdr_register_writes": {
+        "dj_fresh_mask": 3,
+        "dj_reset_n_mask": 3,
+        "ob_fresh_mask": 7,
+        "ob_reset_n_mask": 7,
+        "dfi_run": true,
+        "dfi_epoch": 19,
+        "dfi_session": 1,
+        "dfi_flags_hex": "0xC6",
+        "dfi_hdr": true,
+        "dfi_begin_reject_mod256": [
+          0,
+          0
+        ],
+        "dfi_pair_expire_mod256": [
+          0,
+          0
+        ],
+        "dfi_bad_finish_mod256": [
+          18,
+          18
+        ],
+        "dfi_bank_states": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pix_target_epoch": 19,
+        "pix_cfg_applied_epoch": 18,
+        "pix_cfg_state": 3,
+        "pix_cfg_flags_hex": "0xF7EA",
+        "pix_cfg_gates": {
+          "frame_accept": false,
+          "source_ready": true,
+          "response_active": false,
+          "response_space": true,
+          "remote_fault": false,
+          "remote_applied": true,
+          "remote_sent": true,
+          "remote_pending": true,
+          "frame_apply_eligible": true
+        },
+        "pix_quiet": {
+          "cfg_pipeline": true,
+          "physical_source": true,
+          "maintenance": true,
+          "native_pipeline": true
+        },
+        "pix_flags_hex": "0x0033",
+        "pix_hdr_stable": [
+          false,
+          false
+        ],
+        "pix_identity_fault": [
+          false,
+          false
+        ],
+        "pix_receive_fault": [
+          false,
+          false
+        ],
+        "sensor_sys_cam0_cam1": [
+          {
+            "raw_hex": "0x00394800",
+            "warmup": 0,
+            "index": 57,
+            "phase": 4,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": false,
+            "written": false,
+            "stable": false,
+            "error": false,
+            "write_valid": false,
+            "write_ready": false,
+            "write_done": false,
+            "i2c_error": false
+          },
+          {
+            "raw_hex": "0x00394800",
+            "warmup": 0,
+            "index": 57,
+            "phase": 4,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": false,
+            "written": false,
+            "stable": false,
+            "error": false,
+            "write_valid": false,
+            "write_ready": false,
+            "write_done": false,
+            "i2c_error": false
+          }
+        ],
+        "ob_pix_levels_hex": "0x703",
+        "ob_pix_sticky_hex": "0xE",
+        "ob_pix_receive_or_identity_sticky": true,
+        "ob_pix_phy_ready_cam0_cam1": [
+          false,
+          false
+        ],
+        "ob_pix_config_done_cam0_cam1": [
+          false,
+          false
+        ],
+        "ob_dfi_levels_hex": "0x70F",
+        "ob_dfi_sticky_hex": "0xC",
+        "ob_user_levels_hex": "0x47F",
+        "ob_user_sticky_hex": "0x0",
+        "ob_user_transport_phase": "WAIT_RECORD"
+      },
+      "hdr_waiting_run": {
+        "dj_fresh_mask": 3,
+        "dj_reset_n_mask": 3,
+        "ob_fresh_mask": 7,
+        "ob_reset_n_mask": 7,
+        "dfi_run": true,
+        "dfi_epoch": 19,
+        "dfi_session": 1,
+        "dfi_flags_hex": "0xC6",
+        "dfi_hdr": true,
+        "dfi_begin_reject_mod256": [
+          0,
+          0
+        ],
+        "dfi_pair_expire_mod256": [
+          0,
+          0
+        ],
+        "dfi_bad_finish_mod256": [
+          18,
+          18
+        ],
+        "dfi_bank_states": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pix_target_epoch": 19,
+        "pix_cfg_applied_epoch": 18,
+        "pix_cfg_state": 3,
+        "pix_cfg_flags_hex": "0xC7EA",
+        "pix_cfg_gates": {
+          "frame_accept": false,
+          "source_ready": true,
+          "response_active": false,
+          "response_space": true,
+          "remote_fault": false,
+          "remote_applied": true,
+          "remote_sent": true,
+          "remote_pending": true,
+          "frame_apply_eligible": true
+        },
+        "pix_quiet": {
+          "cfg_pipeline": false,
+          "physical_source": false,
+          "maintenance": true,
+          "native_pipeline": true
+        },
+        "pix_flags_hex": "0x0373",
+        "pix_hdr_stable": [
+          true,
+          false
+        ],
+        "pix_identity_fault": [
+          false,
+          false
+        ],
+        "pix_receive_fault": [
+          false,
+          false
+        ],
+        "sensor_sys_cam0_cam1": [
+          {
+            "raw_hex": "0x078A78E4",
+            "warmup": 7,
+            "index": 138,
+            "phase": 7,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": true,
+            "written": true,
+            "stable": true,
+            "error": false,
+            "write_valid": false,
+            "write_ready": true,
+            "write_done": false,
+            "i2c_error": false
+          },
+          {
+            "raw_hex": "0x008A6844",
+            "warmup": 0,
+            "index": 138,
+            "phase": 6,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": false,
+            "written": true,
+            "stable": false,
+            "error": false,
+            "write_valid": false,
+            "write_ready": true,
+            "write_done": false,
+            "i2c_error": false
+          }
+        ],
+        "ob_pix_levels_hex": "0x76F",
+        "ob_pix_sticky_hex": "0xE",
+        "ob_pix_receive_or_identity_sticky": true,
+        "ob_pix_phy_ready_cam0_cam1": [
+          true,
+          true
+        ],
+        "ob_pix_config_done_cam0_cam1": [
+          true,
+          true
+        ],
+        "ob_dfi_levels_hex": "0x70F",
+        "ob_dfi_sticky_hex": "0xC",
+        "ob_user_levels_hex": "0x47F",
+        "ob_user_sticky_hex": "0x0",
+        "ob_user_transport_phase": "WAIT_RECORD"
+      },
+      "hdr_waiting_stopped": {
+        "dj_fresh_mask": 3,
+        "dj_reset_n_mask": 3,
+        "ob_fresh_mask": 7,
+        "ob_reset_n_mask": 7,
+        "dfi_run": false,
+        "dfi_epoch": 19,
+        "dfi_session": 1,
+        "dfi_flags_hex": "0xC2",
+        "dfi_hdr": true,
+        "dfi_begin_reject_mod256": [
+          0,
+          0
+        ],
+        "dfi_pair_expire_mod256": [
+          0,
+          0
+        ],
+        "dfi_bad_finish_mod256": [
+          18,
+          18
+        ],
+        "dfi_bank_states": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pix_target_epoch": 19,
+        "pix_cfg_applied_epoch": 18,
+        "pix_cfg_state": 3,
+        "pix_cfg_flags_hex": "0xF7EA",
+        "pix_cfg_gates": {
+          "frame_accept": false,
+          "source_ready": true,
+          "response_active": false,
+          "response_space": true,
+          "remote_fault": false,
+          "remote_applied": true,
+          "remote_sent": true,
+          "remote_pending": true,
+          "frame_apply_eligible": true
+        },
+        "pix_quiet": {
+          "cfg_pipeline": true,
+          "physical_source": true,
+          "maintenance": true,
+          "native_pipeline": true
+        },
+        "pix_flags_hex": "0x0373",
+        "pix_hdr_stable": [
+          true,
+          false
+        ],
+        "pix_identity_fault": [
+          false,
+          false
+        ],
+        "pix_receive_fault": [
+          false,
+          false
+        ],
+        "sensor_sys_cam0_cam1": [
+          {
+            "raw_hex": "0x078A78E4",
+            "warmup": 7,
+            "index": 138,
+            "phase": 7,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": true,
+            "written": true,
+            "stable": true,
+            "error": false,
+            "write_valid": false,
+            "write_ready": true,
+            "write_done": false,
+            "i2c_error": false
+          },
+          {
+            "raw_hex": "0x008A6844",
+            "warmup": 0,
+            "index": 138,
+            "phase": 6,
+            "clock_locked": true,
+            "abort": false,
+            "source_fault": false,
+            "pair_event": false,
+            "pair_ok": false,
+            "written": true,
+            "stable": false,
+            "error": false,
+            "write_valid": false,
+            "write_ready": true,
+            "write_done": false,
+            "i2c_error": false
+          }
+        ],
+        "ob_pix_levels_hex": "0x76F",
+        "ob_pix_sticky_hex": "0xE",
+        "ob_pix_receive_or_identity_sticky": true,
+        "ob_pix_phy_ready_cam0_cam1": [
+          true,
+          true
+        ],
+        "ob_pix_config_done_cam0_cam1": [
+          true,
+          true
+        ],
+        "ob_dfi_levels_hex": "0x70F",
+        "ob_dfi_sticky_hex": "0xC",
+        "ob_user_levels_hex": "0x41F",
+        "ob_user_sticky_hex": "0x0",
+        "ob_user_transport_phase": "IDLE"
+      }
+    },
+    "samples": [
+      {
+        "sequence": 625,
+        "state": "sdr_epoch18",
+        "dj_arrival": {
+          "read_index": 2896,
+          "host_read_end_unix_ns": "1794231823994641508"
+        },
+        "ob_arrival": {
+          "read_index": 2893,
+          "host_read_end_unix_ns": "1794231823988659524"
+        },
+        "dj_capture_admit_mod65536": [
+          9750,
+          9750,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9731,
+          9728
+        ],
+        "dj_dfi_last_source": [
+          9834,
+          9834
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19459,
+          19459
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19459,
+          19452
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19453,
+          19452
+        ]
+      },
+      {
+        "sequence": 626,
+        "state": "sdr_epoch18",
+        "dj_arrival": {
+          "read_index": 2901,
+          "host_read_end_unix_ns": "1794231824995357895"
+        },
+        "ob_arrival": {
+          "read_index": 2898,
+          "host_read_end_unix_ns": "1794231824989365011"
+        },
+        "dj_capture_admit_mod65536": [
+          9780,
+          9780,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9761,
+          9758
+        ],
+        "dj_dfi_last_source": [
+          9864,
+          9864
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19519,
+          19519
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19519,
+          19512
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19513,
+          19512
+        ]
+      },
+      {
+        "sequence": 627,
+        "state": "sdr_epoch18",
+        "dj_arrival": {
+          "read_index": 2906,
+          "host_read_end_unix_ns": "1794231825994050971"
+        },
+        "ob_arrival": {
+          "read_index": 2903,
+          "host_read_end_unix_ns": "1794231825988111929"
+        },
+        "dj_capture_admit_mod65536": [
+          9810,
+          9810,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9791,
+          9788
+        ],
+        "dj_dfi_last_source": [
+          9894,
+          9894
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19579,
+          19579
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19579,
+          19572
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19573,
+          19572
+        ]
+      },
+      {
+        "sequence": 628,
+        "state": "sdr_epoch18",
+        "dj_arrival": {
+          "read_index": 2911,
+          "host_read_end_unix_ns": "1794231826994798270"
+        },
+        "ob_arrival": {
+          "read_index": 2908,
+          "host_read_end_unix_ns": "1794231826988916227"
+        },
+        "dj_capture_admit_mod65536": [
+          9840,
+          9840,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9821,
+          9818
+        ],
+        "dj_dfi_last_source": [
+          9924,
+          9924
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19639,
+          19639
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19639,
+          19632
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19633,
+          19632
+        ]
+      },
+      {
+        "sequence": 629,
+        "state": "hdr_register_writes",
+        "dj_arrival": {
+          "read_index": 2916,
+          "host_read_end_unix_ns": "1794231827995444427"
+        },
+        "ob_arrival": {
+          "read_index": 2913,
+          "host_read_end_unix_ns": "1794231827989457535"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 630,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2921,
+          "host_read_end_unix_ns": "1794231828994254354"
+        },
+        "ob_arrival": {
+          "read_index": 2918,
+          "host_read_end_unix_ns": "1794231828988187130"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 631,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2926,
+          "host_read_end_unix_ns": "1794231829994984181"
+        },
+        "ob_arrival": {
+          "read_index": 2923,
+          "host_read_end_unix_ns": "1794231829989053676"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 632,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2932,
+          "host_read_end_unix_ns": "1794231830995689352"
+        },
+        "ob_arrival": {
+          "read_index": 2929,
+          "host_read_end_unix_ns": "1794231830989697561"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 633,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2937,
+          "host_read_end_unix_ns": "1794231831994377343"
+        },
+        "ob_arrival": {
+          "read_index": 2934,
+          "host_read_end_unix_ns": "1794231831988402955"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 634,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2942,
+          "host_read_end_unix_ns": "1794231832995028394"
+        },
+        "ob_arrival": {
+          "read_index": 2939,
+          "host_read_end_unix_ns": "1794231832989059176"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 635,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2948,
+          "host_read_end_unix_ns": "1794231833995914194"
+        },
+        "ob_arrival": {
+          "read_index": 2945,
+          "host_read_end_unix_ns": "1794231833989906604"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 636,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2953,
+          "host_read_end_unix_ns": "1794231834994568756"
+        },
+        "ob_arrival": {
+          "read_index": 2950,
+          "host_read_end_unix_ns": "1794231834988726941"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 637,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2958,
+          "host_read_end_unix_ns": "1794231835995265767"
+        },
+        "ob_arrival": {
+          "read_index": 2955,
+          "host_read_end_unix_ns": "1794231835989178196"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 638,
+        "state": "hdr_waiting_run",
+        "dj_arrival": {
+          "read_index": 2964,
+          "host_read_end_unix_ns": "1794231836994367971"
+        },
+        "ob_arrival": {
+          "read_index": 2961,
+          "host_read_end_unix_ns": "1794231836988458117"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 639,
+        "state": "hdr_waiting_stopped",
+        "dj_arrival": {
+          "read_index": 2969,
+          "host_read_end_unix_ns": "1794231837995079359"
+        },
+        "ob_arrival": {
+          "read_index": 2966,
+          "host_read_end_unix_ns": "1794231837989193302"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 640,
+        "state": "hdr_waiting_stopped",
+        "dj_arrival": {
+          "read_index": 2975,
+          "host_read_end_unix_ns": "1794231838995809509"
+        },
+        "ob_arrival": {
+          "read_index": 2972,
+          "host_read_end_unix_ns": "1794231838989822049"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 641,
+        "state": "hdr_waiting_stopped",
+        "dj_arrival": {
+          "read_index": 2980,
+          "host_read_end_unix_ns": "1794231839994594816"
+        },
+        "ob_arrival": {
+          "read_index": 2977,
+          "host_read_end_unix_ns": "1794231839988572759"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 642,
+        "state": "hdr_waiting_stopped",
+        "dj_arrival": {
+          "read_index": 2985,
+          "host_read_end_unix_ns": "1794231840995373881"
+        },
+        "ob_arrival": {
+          "read_index": 2982,
+          "host_read_end_unix_ns": "1794231840989357255"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      },
+      {
+        "sequence": 836,
+        "state": "hdr_waiting_stopped",
+        "dj_arrival": {
+          "read_index": 3990,
+          "host_read_end_unix_ns": "1794232034994556837"
+        },
+        "ob_arrival": {
+          "read_index": 3987,
+          "host_read_end_unix_ns": "1794232034988249167"
+        },
+        "dj_capture_admit_mod65536": [
+          9868,
+          9868,
+          0,
+          0
+        ],
+        "dj_dfi_jobs_mod65536": [
+          9850,
+          9846
+        ],
+        "dj_dfi_last_source": [
+          9953,
+          9952
+        ],
+        "ob_pix_admission_jpeg_result_mod65536": [
+          19696,
+          19696
+        ],
+        "ob_dfi_writer_ack_store_claim_mod65536": [
+          19696,
+          19688
+        ],
+        "ob_user_descriptor_retire_mod65536": [
+          19689,
+          19688
+        ]
+      }
+    ]
+  },
+  "retained_host": {
+    "state": "FAULTED_RETAINED",
+    "host_transport_drained": true,
+    "held_records": 0,
+    "mode_io_inflight": false,
+    "driver_leased": 0,
+    "driver_quarantined": 0,
+    "global_quiet_proven": false,
+    "native_closed": false,
+    "safe_reopen": false,
+    "recording": {
+      "status": "SEALED_RETAINED",
+      "segments": 95,
+      "frames": 9889,
+      "all_common_frames_encoded_and_sealed": true
+    }
+  },
+  "boundaries": {
+    "demonstrated": [
+      "HDR_TARGET_EPOCH19_IN_DFI_AND_PIX_WITH_WHOLE_REMOTE_APPLIED_SAMPLED",
+      "PIX_WAIT_FRAME_AND_PUBLIC_APPLIED_EPOCH18_RETAINED",
+      "CAM1_RECIPE_WRITTEN_AND_PHY_READY_SAMPLED_WITH_SYS_PHASE6_WARMUP0_PAIR_OK0",
+      "CAM0_SYS_STABLE_SAMPLED_WITHOUT_ANY_CAPTURE_ADMIT_COUNTER_DELTA_DURING_OBSERVED_HDR_WAIT",
+      "OB_STICKY_RECEIVE_OR_IDENTITY_SET_ACROSS_TRANSITION_WITH_PER_EYE_DJ_CURRENT_FLAGS_CLEAR_AT_SAMPLE_TIMES"
+    ],
+    "unresolved": [
+      "PER_EYE_RECEIVE_OR_IDENTITY_CAUSE_AND_EXACT_EVENT_TIME",
+      "INDIVIDUAL_FRAME_ACCEPT_PAIR_EVENT_AND_BAD_PAIR_HISTORY",
+      "EXACT_SDK_READY_COMMIT_CALL_TRACE_AND_CANCEL_DELIVERY",
+      "EXACT_RTL_OR_PHYSICAL_CAUSE"
+    ],
+    "board_not_run": [
+      "HDR_TO_DEHAZE_TO_HDR",
+      "TWO_FIVE_MINUTE_HDR_WINDOWS",
+      "HDR_FPS_AND_IMAGE_QUALITY"
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+      "-version"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\version.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.1720000000004802
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "-c"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline\\vmap_copy.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.046000000000276486
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+      "work"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline\\vlib.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.06300000000010186
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "work",
+      "work"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline\\vmap_work.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.04700000000048021
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-work",
+      "work",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\baseline\\shared_raw10_frame_ingress.v"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline\\vlog_dut.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.07799999999951979
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-sv",
+      "-work",
+      "work",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\tb_raw_ingress.sv"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline\\vlog_tb.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.07799999999951979
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+      "-c",
+      "-onfinish",
+      "stop",
+      "work.tb_raw_ingress",
+      "-do",
+      "onerror {quit -code 2 -f}; run -all; quit -f"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\baseline\\simulation.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 2.5159999999996217
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "-c"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate\\vmap_copy.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.04700000000048021
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+      "work"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate\\vlib.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.046000000000276486
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "work",
+      "work"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate\\vmap_work.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.06300000000010186
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-work",
+      "work",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\candidate\\shared_raw10_frame_ingress.v"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate\\vlog_dut.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.07799999999951979
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-sv",
+      "-work",
+      "work",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\tb_raw_ingress.sv"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate\\vlog_tb.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.09400000000096043
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+      "-c",
+      "-onfinish",
+      "stop",
+      "work.tb_raw_ingress",
+      "-do",
+      "onerror {quit -code 2 -f}; run -all; quit -f"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_raw_02\\candidate\\simulation.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 2.5309999999990396
+  }
+]

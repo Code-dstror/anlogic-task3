@@ -1,0 +1,284 @@
+{
+  "status": "PASS_ASSUMED_PHYSICAL_BURSTS",
+  "project": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1",
+  "scope": "Actual candidate-owned byte/word align, frozen gearbox, HDR parsers, crop, official FIFOs, pair gate and 139-I2C owner",
+  "mode": "physical",
+  "sensor_contract": "ASSUMPTION_NOT_BOARD_CONFIRMED",
+  "inputs": [
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+      "sha256": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff"
+    },
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v",
+      "sha256": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8"
+    },
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_fifo.v",
+      "sha256": "0cea967091d4f3fd27e07289d3a19a0064e65c8abefc0427749ef61b2ce00160"
+    },
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_ramfifo.v",
+      "sha256": "98fab0ec4a952cc2d384b77f7a55c3a6e912741fc33c21cd748f6d9fd214e774"
+    },
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v",
+      "sha256": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c"
+    },
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_fifoctrl.v",
+      "sha256": "fea30a6a038abec73c4e4e56b9986ad1242f043a06a7c39619979744202adddf"
+    },
+    {
+      "path": "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v",
+      "sha256": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\reset_release_sync.v",
+      "sha256": "62ea194851aa0d98817875f81a2aea20cfed58a38152fa2f4376b5efa56a3557"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi_clock_watchdog.v",
+      "sha256": "01640da86eb99e9b498913dd32e59218386b1ad541da194cbfc5e8329f37f0f7"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi_rx_byte_align_observed.v",
+      "sha256": "932cb8f33ce2b276e573ad714065b80d08722cda87b8109d681ba2c997964ec4"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi_rx_word_align_observed.v",
+      "sha256": "1c79fbd1e082b71d0da0d4eff4b11278b2482d4d58f1c2439f11cf2db0d5df22"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_csi_capture_stream.v",
+      "sha256": "afbd679132f9061415a8a73731e4a85d62808f3a10a360a2e4a2993cc29c80c3"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_csi_dual_word_rx.v",
+      "sha256": "4694177712a0ead31585204fd40fbec16ce36fe88d7093470bea8ab066cd2e00"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_csi_word_core.v",
+      "sha256": "d652b2288d7f3906699fbc9cae9e879e87412e777797d26722129ec891b2a3fc"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_member_crop10.v",
+      "sha256": "d053c1fc99012f696d20de9b90e26cc7ec760f00dd8a742bded280c7f5ac2473"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\raw_capture_fifo_eram_safe.v",
+      "sha256": "576d7fa52f1da0b579bd8bc24bf5d49221f9b80e432ad7a2d17842b54d1cbc77"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v",
+      "sha256": "95d981900ab8c81abcd1401892838915a4174021c0ff546356660a10192ce981"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_event_cdc.v",
+      "sha256": "15504e2334b0d74f3d758578bee9494ed888dd1707e00cf98254ab8d30d97cd1"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_sensor_config.v",
+      "sha256": "2403fbe75a913d156004526e6c409faf07aeaf163c751fc1e8453aa32ca2af89"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\imx415_hdr2_config_owner.v",
+      "sha256": "fb33804e49a696085545cb9e01333e4c3d68e36148ee8e1d23859a09abfdc44a"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\imx415_hdr2_recipe_rom.v",
+      "sha256": "653eb04d33a17a4dedfad6a4bd7bf7d9668a4b8eec03d22132e673bbde9846e4"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\camera_i2c_write.v",
+      "sha256": "7d8d640d680c6c894e427a6d3809b5c021878a3ef2869e4c772c2d6be2e8c357"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\ip\\vendor\\anlogic_camera\\phy\\csi_rx_word_gear_box.v",
+      "sha256": "aa88fbade5ca2e29e245c7ba2f615a28587aea6d7d5e44fd545638dd63607d5e"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\ip\\pcie_frame_fifo_147x512\\RTL\\soft_fifo_74aac0f9d766.v",
+      "sha256": "0a9b4c98a41f1fd870e9d4b32de59ac20e170ad3153f4f62da5ff5d2087e6f48"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\ip\\pcie_frame_fifo_147x512\\pcie_frame_fifo_147x512.v",
+      "sha256": "afb2a5cb5b03dd0852f835c488dd1fe993543b0b7c2312e1817a0bf7ed4aff67"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_physical_csi_rx.v",
+      "sha256": "34f74e6771094046b588fb3517119216e079e66d10463212edb72a2b7fff0780"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_camera_observe_axis.v",
+      "sha256": "49d35e11257d700db751ec6563d3844a27a3658694f43a095ea2cdee8fb66a12"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi2_ph1_phy_wrapper.v",
+      "sha256": "f7c9db1e7dd48d2e7b0c46b88cdd2944b4ca0ea8d69c691fb2cd85c9b36bef0e"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\tb_hdr_boundary.sv",
+      "sha256": "f449a655484a910a4e6dcf6cbd87da6857ffbcc6059d77feaff5b3957b193346"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\tb_hdr_boundary.sv",
+      "sha256": "f449a655484a910a4e6dcf6cbd87da6857ffbcc6059d77feaff5b3957b193346"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\tools\\run_hdr_boundary_fix.py",
+      "sha256": "4a376611638e82c55bfde1e0fef20f61116dbac87eb69eab621e383bf170c8b8"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\include\\04_include\\analysis_config_transport.vh",
+      "sha256": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\include\\04_include\\pcie_protocol_v1.vh",
+      "sha256": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vmap.exe",
+        "-c"
+      ],
+      "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final",
+      "returncode": 0,
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\vmap.console.log"
+    },
+    {
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final",
+      "returncode": 0,
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\work.console.log"
+    },
+    {
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlib.exe",
+        "ph1"
+      ],
+      "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final",
+      "returncode": 0,
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\ph1.console.log"
+    },
+    {
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlog.exe",
+        "-quiet",
+        "-work",
+        "ph1",
+        "-l",
+        "models.log",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_fifo.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_ramfifo.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_fifoctrl.v"
+      ],
+      "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final",
+      "returncode": 0,
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\models.console.log"
+    },
+    {
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlog.exe",
+        "-quiet",
+        "-sv",
+        "-l",
+        "compile.log",
+        "+define+PH1",
+        "+define+R8_STAGE1",
+        "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\include\\04_include",
+        "+define+PHYSICAL_BURST_MODE",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\reset_release_sync.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi_clock_watchdog.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi_rx_byte_align_observed.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\csi_rx_word_align_observed.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_csi_capture_stream.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_csi_dual_word_rx.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_csi_word_core.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_member_crop10.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\raw_capture_fifo_eram_safe.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_event_cdc.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\real_hdr_sensor_config.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\imx415_hdr2_config_owner.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\imx415_hdr2_recipe_rom.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\rtl\\camera_i2c_write.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\ip\\vendor\\anlogic_camera\\phy\\csi_rx_word_gear_box.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\ip\\pcie_frame_fifo_147x512\\RTL\\soft_fifo_74aac0f9d766.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\ip\\pcie_frame_fifo_147x512\\pcie_frame_fifo_147x512.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\tb_hdr_boundary.sv"
+      ],
+      "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final",
+      "returncode": 0,
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\compile.console.log"
+    },
+    {
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vsim.exe",
+        "-c",
+        "-voptargs=+acc",
+        "-L",
+        "ph1",
+        "work.PH1_PHY_GSR",
+        "ph1.glbl",
+        "work.tb_hdr_boundary",
+        "-l",
+        "simulation.log",
+        "-do",
+        "onerror {quit -code 1}; run -all; quit -f"
+      ],
+      "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final",
+      "returncode": 0,
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\dual_hdr_stereo_fix_r1\\src_fpga\\simulation\\hdr_boundary_fix_r1\\physical_final\\sim.console.log"
+    }
+  ],
+  "td_root": "D:\\App\\TD_Release_2026.2.210.850",
+  "modelsim_bin": "D:\\App\\modelsim\\win64",
+  "synthesis": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "board": "NOT_RUN",
+  "observations": [
+    "CASE physical_short_trail_00000000 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_000000ff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_0000ff00 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_0000ffff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_00ff0000 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_00ff00ff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_00ffff00 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_00ffffff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ff000000 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ff0000ff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ff00ff00 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ff00ffff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ffff0000 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ffff00ff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ffffff00 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_short_trail_ffffffff fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_natural_RAW12_seed1 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_natural_RAW12_seed5 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_natural_RAW12_seed33 fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_fresh_SoT_FS0_VC1_embedded_mod4_pair fs=1/1 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=1 xclr=1 bad=0 not_admitted=1 reason=0 good=1",
+    "CASE physical_reacquisition_trail_cycles8 fs=1/1 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_reacquisition_trail_cycles12 fs=1/1 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_reacquisition_trail_cycles16 fs=1/1 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_reacquisition_trail_cycles20 fs=1/1 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE parser_single_valid_low_cycle_FS0_VC1 fs=1/1 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=0 not_admitted=0 reason=0 good=0",
+    "CASE physical_bad_header_negative fs=1/0 fs_token0=1 uncertain=1 first_uncertain=0c000143 identity=1 cfg_state=8 index=138 writes=139 i2c_errors=0 warmup=0 xclr=0 bad=1 not_admitted=1 reason=9 good=0",
+    "CASE physical_bad_CRC_negative fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=1 not_admitted=1 reason=2 good=0",
+    "CASE physical_FIFO_overflow_negative fs=3/3 fs_token0=2 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=6 index=138 writes=139 i2c_errors=0 warmup=0 xclr=1 bad=2 not_admitted=2 reason=3 good=0",
+    "CASE physical_post_FS_clock_loss_negative fs=1/0 fs_token0=1 uncertain=0 first_uncertain=00000000 identity=1 cfg_state=8 index=138 writes=139 i2c_errors=0 warmup=0 xclr=0 bad=1 not_admitted=1 reason=9 good=0",
+    "CASE physical_eight_pair_warmup_ninth_SOURCE fs=9/9 fs_token0=9 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=7 index=138 writes=139 i2c_errors=0 warmup=7 xclr=1 bad=0 not_admitted=8 reason=0 good=9",
+    "CASE physical_CRC_negative_eight_pair_recovery_SOURCE fs=19/19 fs_token0=19 uncertain=0 first_uncertain=00000000 identity=0 cfg_state=7 index=138 writes=139 i2c_errors=0 warmup=7 xclr=1 bad=1 not_admitted=16 reason=2 good=18",
+    "RESULT: PASS HDR_PHYSICAL_BURST_CANDIDATE cases=31 checks=65 ASSUMPTION_NOT_BOARD_CONFIRMED no_force"
+  ],
+  "elapsed_seconds": 12.5
+}

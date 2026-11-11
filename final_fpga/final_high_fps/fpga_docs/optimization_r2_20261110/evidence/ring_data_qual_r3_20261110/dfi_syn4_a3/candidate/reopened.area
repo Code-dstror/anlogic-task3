@@ -1,0 +1,87 @@
+standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                       118   out of    148   79.73%
+  #input                   82
+  #output                  36
+  #inout                    0
+#lut                     3415
+  #lut1                     6
+  #lut2                   570
+  #lut3                   606
+  #lut4                   679
+  #lut5                   352
+  #lut6                  1202
+#reg                     3188
+  #slice reg             3188   out of 128640    2.48%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  2747   out of  64320    4.27%
+  #used ram               328
+    #dram lut             328
+    #shifter lut            0
+  #used logic            2419
+    #with luts*          2037
+    #with adder           128
+    #reg only*            254
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       5   out of    272    1.84%
+  #eram20k                  5
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                      118   out of    148   79.73%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                            |Module                                           |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                                 |uhd_probe                                        |2037      |128     |3188    |5       |0       |328      |0           |0       |0       |0       |0        |0       |0       |
+|  u_egress                          |ordered_frame_egress                             |433       |27      |803     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    g_staging$u_staging             |ddr_extension_staging_ram                        |235       |1       |334     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_sparse_v4_check$u_check     |lane_sparse_extension_checker                    |32        |1       |69      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      u_staging_ram                 |td_sdp_ram40                                     |2         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        u_configured_ip             |ram40_sdp_fixed                                  |2         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_fifo_fence                      |ordered_frame_fifo_fence                         |259       |0       |459     |4       |0       |80       |0           |0       |0       |0       |0        |0       |0       |
+|    fifo                            |axis_frame_fifo_ip                               |140       |0       |444     |4       |0       |80       |0           |0       |0       |0       |0        |0       |0       |
+|      u_pcie_axis_async_fifo        |camera_packet_fifo_147x512                       |56        |0       |278     |4       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        soft_fifo_Inst              |camera_packet_fifo_147x512_soft_fifo             |56        |0       |278     |4       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          soft_fifo_core_inst       |camera_packet_fifo_147x512_soft_fifo_core        |56        |0       |278     |4       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_soft_fifo_ELyPIOfr   |camera_packet_fifo_147x512_al_soft_fifo_J5Dq79mN |21        |0       |22      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_NSebDz1w |camera_packet_fifo_147x512_al_soft_fifo_Y9On7zYm |2         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_soft_fifo_Z4TViUmh   |camera_packet_fifo_147x512_al_soft_fifo_pXuL5aOr |17        |0       |37      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_dq_Clcs1 |camera_packet_fifo_147x512_al_soft_fifo_OpkF4eWF |7         |0       |36      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_paTBcRda |camera_packet_fifo_147x512_al_soft_fifo_skRjTPEo |1         |0       |0       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_soft_fifo_ktZv2ExW   |camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH |2         |0       |147     |4       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_S8GQVwdk |camera_packet_fifo_147x512_al_soft_fifo_4aZDqQTX |1         |0       |0       |4       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            cdc$cross_inst          |camera_packet_fifo_147x512_al_soft_fifo_zlzAoo5o |16        |0       |72      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_ring                            |jpeg_ring_reset_boundary                         |891       |101     |1231    |0       |0       |248      |0           |0       |0       |0       |0        |0       |0       |
+|    u_record_owner_reset            |reset_release_sync_data                          |0         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    u_store                         |jpeg_frame_ring                                  |891       |101     |1227    |0       |0       |248      |0           |0       |0       |0       |0        |0       |0       |
+|      cold_bank                     |jpeg_ring_cold_bank                              |22        |0       |130     |0       |0       |72       |0           |0       |0       |0       |0        |0       |0       |
+|        words[0]$lanes[0]$ram       |td_sdp_ram                                       |18        |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[0]$lanes[1]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[1]$lanes[0]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[1]$lanes[1]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[2]$lanes[0]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[2]$lanes[1]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[3]$lanes[0]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[3]$lanes[1]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|        words[3]$lanes[2]$ram       |td_sdp_ram                                       |0         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|  u_egress_reset                    |reset_release_sync                               |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_metadata_reset                  |reset_release_sync                               |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

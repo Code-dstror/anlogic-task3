@@ -1,0 +1,2 @@
+set_pin_assignment { clk } { LOCATION = T16; IOSTANDARD = LVCMOS18; }
+set_pin_assignment { led } { LOCATION = U11; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; }

@@ -1,0 +1,136 @@
+{
+  "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "status": "PASS",
+  "error": null,
+  "source_bindings": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_packer_r4\\tb_packer.sv": {
+      "before": "65d105d876b346fec53c5ff3604ef2ac31993fae808b70be5ee6a755a9fd5661",
+      "after": "65d105d876b346fec53c5ff3604ef2ac31993fae808b70be5ee6a755a9fd5661"
+    },
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\packer_reachable_r4_20261110\\OPAQUE_SOURCES.json": {
+      "before": "d4ac7a5995afc61eac35b1319498f361a45abc976b0f77cf031880fde6088fd5",
+      "after": "d4ac7a5995afc61eac35b1319498f361a45abc976b0f77cf031880fde6088fd5"
+    },
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\packer_reachable_r4_20261110\\PORTS.vh": {
+      "before": "a50a37e066116cc56299abc7a3cf2fb37dd2fb54e4a56605aa4bee470b4ac6b6",
+      "after": "a50a37e066116cc56299abc7a3cf2fb37dd2fb54e4a56605aa4bee470b4ac6b6"
+    },
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\packer_reachable_r4_20261110\\PUBLIC_CONTRACT.md": {
+      "before": "a82c427b1d360532ee888528968f3f09c51a8eb86e17d1c85c3fe1ae7a6bcbc6",
+      "after": "a82c427b1d360532ee888528968f3f09c51a8eb86e17d1c85c3fe1ae7a6bcbc6"
+    },
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_packer_r4\\run_packer.py": {
+      "before": "bf4bdc5f8b739a4cd31a69456a090fa3fb02e78939e8015d9bfb96ce1158b014",
+      "after": "bf4bdc5f8b739a4cd31a69456a090fa3fb02e78939e8015d9bfb96ce1158b014"
+    },
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\inputs\\baseline\\jpeg_byte_packer.v": {
+      "before": "2a39a241c6ed1c722a4ccfaa96287789898ae6da54736614b7064e697a95446f",
+      "after": "2a39a241c6ed1c722a4ccfaa96287789898ae6da54736614b7064e697a95446f"
+    },
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\inputs\\candidate\\jpeg_byte_packer.v": {
+      "before": "8b27772b4455d2107a2fbdfeb0cac9a17ce853f003ca469e64f638094cb59354",
+      "after": "8b27772b4455d2107a2fbdfeb0cac9a17ce853f003ca469e64f638094cb59354"
+    }
+  },
+  "commands": [
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe -version",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\tool_version.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.125
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe work",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline\\vlib.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe -work work <PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\inputs\\baseline\\jpeg_byte_packer.v",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline\\vlog_dut.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.094
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe -sv -work work <PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_packer_r4\\tb_packer.sv",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline\\vlog_bench.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.093
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe -c -onfinish exit -gMAX_BYTES=17 -l MAX17.transcript work.tb_packer -do \"onerror {quit -code 1}; onbreak {quit -code 1}; run -all; quit -code 0\"",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline\\MAX17.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.094
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe -c -onfinish exit -gMAX_BYTES=31 -l MAX31.transcript work.tb_packer -do \"onerror {quit -code 1}; onbreak {quit -code 1}; run -all; quit -code 0\"",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\baseline\\MAX31.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.094
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe work",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate\\vlib.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe -work work <PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\inputs\\candidate\\jpeg_byte_packer.v",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate\\vlog_dut.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.109
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe -sv -work work <PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_packer_r4\\tb_packer.sv",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate\\vlog_bench.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.11
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe -c -onfinish exit -gMAX_BYTES=17 -l MAX17.transcript work.tb_packer -do \"onerror {quit -code 1}; onbreak {quit -code 1}; run -all; quit -code 0\"",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate\\MAX17.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.093
+    },
+    {
+      "command": "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe -c -onfinish exit -gMAX_BYTES=31 -l MAX31.transcript work.tb_packer -do \"onerror {quit -code 1}; onbreak {quit -code 1}; run -all; quit -code 0\"",
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_r4_blackbox_20261110_223146_747874\\candidate\\MAX31.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.297
+    }
+  ],
+  "results": [
+    {
+      "arm": "baseline",
+      "max": 17,
+      "result": "PACKER PASS MAX=17 cycles=518 frames=26 in=324 out=35 tails=ffff same_edge=7 in_stall=4 out_stall=19 tail_stall=11 errors=2 abort_drains=2 abort_tails=1"
+    },
+    {
+      "arm": "baseline",
+      "max": 31,
+      "result": "PACKER PASS MAX=31 cycles=1065 frames=40 in=737 out=63 tails=ffff same_edge=21 in_stall=4 out_stall=19 tail_stall=11 errors=2 abort_drains=2 abort_tails=1"
+    },
+    {
+      "arm": "candidate",
+      "max": 17,
+      "result": "PACKER PASS MAX=17 cycles=518 frames=26 in=324 out=35 tails=ffff same_edge=7 in_stall=4 out_stall=19 tail_stall=11 errors=2 abort_drains=2 abort_tails=1"
+    },
+    {
+      "arm": "candidate",
+      "max": 31,
+      "result": "PACKER PASS MAX=31 cycles=1065 frames=40 in=737 out=63 tails=ffff same_edge=21 in_stall=4 out_stall=19 tail_stall=11 errors=2 abort_drains=2 abort_tails=1"
+    }
+  ]
+}

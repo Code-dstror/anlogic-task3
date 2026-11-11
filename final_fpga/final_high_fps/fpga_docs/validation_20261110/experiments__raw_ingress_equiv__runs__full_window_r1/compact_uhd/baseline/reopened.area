@@ -1,0 +1,55 @@
+standard
+***Report Model: raw_pack_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        70   out of    148   47.30%
+  #input                   38
+  #output                  32
+  #inout                    0
+#lut                     1122
+  #lut1                     0
+  #lut2                    56
+  #lut3                   365
+  #lut4                   107
+  #lut5                   346
+  #lut6                   248
+#reg                     1062
+  #slice reg             1062   out of 128640    0.83%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                   782   out of  64320    1.22%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic             782
+    #with luts*           696
+    #with adder            12
+    #reg only*             74
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       0   out of    272    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       70   out of    148   47.30%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance |Module                     |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top      |raw_pack_probe             |696       |12      |1062    |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_leaf |shared_raw10_frame_ingress |637       |12      |610     |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+

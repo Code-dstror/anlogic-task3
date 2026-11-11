@@ -1,0 +1,13 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:20:57 on Nov 10,2026
+vlog -work work -sv <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\tb_fusion_config.sv 
+-- Compiling module tb_fusion_config
+** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\tb_fusion_config.sv(392): (vlog-2244) Variable 'base' is implicitly static. You must either explicitly declare it as static or automatic
+or remove the initialization in the declaration of variable.
+** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\tb_fusion_config.sv(393): (vlog-2244) Variable 'scalar_gaussian' is implicitly static. You must either explicitly declare it as static or automatic
+or remove the initialization in the declaration of variable.
+
+Top level modules:
+	tb_fusion_config
+End time: 18:20:57 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2

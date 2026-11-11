@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 19:17:10 on Nov 10,2026
+vlog -work work -mfcu "+incdir+<PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/rtl/include/00_rtl" "+incdir+<PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/rtl/include/01_include" "+incdir+<PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/rtl/include/02_jpeg" "+incdir+<PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/rtl/include/03_mono_config_v2_20261015" "+incdir+<PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/rtl/include/04_include" "+define+AXI4ST_BUS_EN=1" "+define+AXI4L_MBUS_EN=1" "+define+USR_IRQ_EN=1" "+define+MSI_EN=1'b1" "+define+PH1=1" "+define+R8_STAGE1=1" "+define+R8_BASIC_PREPROCESS=1" "+define+R8_HE_FIXED_CONFIG_SESSION=1" "+define+R8_LIVE_F21=1" "+define+R8_STAGE2_COMPACT_TRANSPORT=1" "+define+S08_CONFIGURED_CAPTURE=1" "+define+S04_RAW_FRAME_STORE=1" "+define+ANLOGIC_COMPILED_PROFILE=1" "+define+ANLOGIC_SOURCE_SELECT=0" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_A=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_CE=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_RST=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Y=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Z=1" "+define+F21_AUTO_FIXED_LUT_PROFILE=0" <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\fdct_mac19s14s_z33s_p34_m1p1.v 
+-- Compiling module fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0
+-- Compiling module fdct_mac19s14s_z33s_p34_m1p1
+
+Top level modules:
+	fdct_mac19s14s_z33s_p34_m1p1
+End time: 19:17:10 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

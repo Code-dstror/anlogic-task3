@@ -1,0 +1,11 @@
+{
+  "state": "NOT_SUBMITTED_USER_REQUEST",
+  "reason": "User changed this round to local repair and validation only; do not publish the originally requested 32-seed server compilation.",
+  "previous_board_source": "4a08ae35391e7b7ea6767260d7d1b4b182ef4bb9",
+  "request_id": null,
+  "synthesis": "NOT_RUN",
+  "placement_routing": "NOT_RUN",
+  "timing": "NOT_RUN",
+  "bitgen": "NOT_RUN",
+  "board": "NOT_RUN"
+}

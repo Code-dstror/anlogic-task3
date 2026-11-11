@@ -1,0 +1,15 @@
+{
+  "rollback_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "remote": "origin",
+  "verified_remote_branch": "refs/heads/feature/fpga-pipeline",
+  "verified_remote_head": "de1efb72c172f0d4666ebbe43f4efed0ace02438",
+  "is_ancestor": true,
+  "production_matches_rollback_before_changes": true,
+  "design_sha256": "ef8a2c66d1f14d6a39b4cc2fde76a5ce4d3a97e5c2ca8d85f63eb9187ab70628",
+  "commands": [
+    "git ls-remote origin refs/heads/feature/fpga-pipeline",
+    "git merge-base --is-ancestor eade457d7477110605f90eb5abc08420d8936642 de1efb72c172f0d4666ebbe43f4efed0ace02438",
+    "git diff --quiet eade457d de1efb72 -- refactor/camera_fusion_r1/src_fpga refactor/camera_fusion_r1/fpga_prj refactor/camera_fusion_r1/SOURCE_MANIFEST.json"
+  ],
+  "scope": "Read-only baseline verification completed before optimization; no reset/force-push or board action."
+}

@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "donor_path": "C:/fpga_workspace/anlogic-task3/refactor/dual_hdr_merge_r1/src_fpga/simulation/run_main.py",
+      "donor_sha256": "f6efb218d2e94317de22ed108b8ed9a5d39c157361ac45ced91f318cc4fe95dd",
+      "path": "short/run.py",
+      "sha256": "60185d41881d16180855bec459590f4b97f10abadf70cfcdea2bd6578aaf8791"
+    },
+    {
+      "donor_path": "C:/fpga_workspace/anlogic-task3/refactor/dual_hdr_merge_r1/src_fpga/simulation/tb_dual_imx415.sv",
+      "donor_sha256": "87737a9736043eb11233db623adb8507fcfdefcf0454e9efc034a7225261a6db",
+      "path": "short/tb_dual_imx415.sv",
+      "sha256": "d39de49b7ea40085d0335ea57376d139cec5ae0b3c707d689b65fcb7bf55108b"
+    }
+  ],
+  "changes": [
+    "Explicit new HDR adapter source",
+    "Run-local TB and accelerated SDR wake delay only",
+    "Hidden ModelSim children",
+    "Externally pinned production seal381 inputs checked before and after TOP short"
+  ]
+}

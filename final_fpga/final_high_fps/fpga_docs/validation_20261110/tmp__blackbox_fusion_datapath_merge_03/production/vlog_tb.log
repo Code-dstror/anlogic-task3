@@ -1,0 +1,14 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:31:49 on Nov 10,2026
+vlog -sv -work work "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\blackbox_fusion_datapath_merge_03" <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_datapath\stream_checker.sv <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_datapath\tb_hdr_merge.sv <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_datapath\tb_hdr_tone.sv <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_datapath\tb_color_path.sv 
+-- Compiling module stream_checker
+-- Compiling module tb_hdr_merge
+-- Compiling module tb_hdr_tone
+-- Compiling module tb_color_path
+
+Top level modules:
+	tb_hdr_merge
+	tb_hdr_tone
+	tb_color_path
+End time: 18:31:49 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

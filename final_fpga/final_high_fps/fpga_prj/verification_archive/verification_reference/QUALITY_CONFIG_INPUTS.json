@@ -1,0 +1,370 @@
+{
+  "scope": "Opaque source and include inputs for the fused CFG carrier",
+  "td_version": "6.2.3.210850",
+  "sources": [
+    {
+      "root": "td_root",
+      "path": "sim_release/common/al_phy_glbl.v"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_phy_gsr.v"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_logic_eram.v"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_logic_fifo.v"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_logic_ramfifo.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/reset_release_sync.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/control_fifo_40x512.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/control_message_fifo_ip.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/td_sdp_ram40.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/frame_config_extension_validate.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_legacy_scan_v1.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_scan_v2.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_byte_store_v2.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_bar_v2.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_engine_v2.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_service_v2.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/frame_config_preset_owner.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/paired_raw_capture_drain_cdc.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/physical_pair_config_owner.v"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/frame_job_config_cdc.v"
+    },
+    {
+      "root": "project",
+      "path": "verification_reference/quality_config_carrier.v"
+    }
+  ],
+  "include_headers": [
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/quality_control_v1.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/raw_video_v1.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/stereo_control_v1.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/c2h_test_fixture.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/c2h_transport_limits.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/f21_config_transport.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/pcie_feature_defines.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/pcie_record_v3_validate.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/stage2_config_transport.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/03_mono_config_v2_20261015/legacy_stage2_config_transport.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/04_include/analysis_config_transport.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/04_include/camera_physical_capture.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/04_include/pcie_protocol_v1.vh"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/include/define.v"
+    }
+  ],
+  "files": [
+    {
+      "root": "td_root",
+      "path": "sim_release/common/al_phy_glbl.v",
+      "sha256": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_phy_gsr.v",
+      "sha256": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_logic_eram.v",
+      "sha256": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_logic_fifo.v",
+      "sha256": "0cea967091d4f3fd27e07289d3a19a0064e65c8abefc0427749ef61b2ce00160"
+    },
+    {
+      "root": "td_root",
+      "path": "sim_release/ph1/ph1_logic_ramfifo.v",
+      "sha256": "98fab0ec4a952cc2d384b77f7a55c3a6e912741fc33c21cd748f6d9fd214e774"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v",
+      "sha256": "53854efce3b3a1d47749d0aa10627750fa9ac8927aa0dcf6e066a9358b7cd108"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v",
+      "sha256": "bc5f2b65c88855891c086647df9a2a8d1d155c3b8deb48cf402a7b0235e8346a"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v",
+      "sha256": "26a5a934d62487bf44a9b56eaab6c30f86d794c4049cde76679878840ff4928d"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v",
+      "sha256": "abdc8c7a0db30b9fd1188adea12cdeb446a679295335c753a3646c2861470768"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/reset_release_sync.v",
+      "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/control_fifo_40x512.v",
+      "sha256": "f03e2bd2b794592b45a298c8a9724831cfc766ceb1ba97aafd697679bb60f291"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/control_message_fifo_ip.v",
+      "sha256": "ed45556e04d39fa3148ce015c90a74a32774016073129d2e4ec4511beaf51c29"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/td_sdp_ram40.v",
+      "sha256": "f120c365061daac7b401201a5b3661dd01d794ff77622de24686f3c58d0a3e58"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/frame_config_extension_validate.v",
+      "sha256": "f05eff5ad828682f6d69ad10c42341efd71eac7ebd1a0197e667eba61039284d"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_legacy_scan_v1.v",
+      "sha256": "bea045662d149229b52050f2dcc4718d7f4bbc9294f2d3b5584212dc313327c7"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_scan_v2.v",
+      "sha256": "ba70b294bf20f1450519e4ba01a1e1395d13e8397c1d0c39767aa5bca8e89546"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_byte_store_v2.v",
+      "sha256": "af652c8c78ef2663e3974cdb60d470ff440499337f6298cb14b808261f2107d7"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_bar_v2.v",
+      "sha256": "4ffee748b6a7abfac9043cd06db7d3d2932e31c5b47b73aaa7a4b5ccb13d4308"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_engine_v2.v",
+      "sha256": "8041e8d50a50715ef64e2284b86f0874f81f0abf4f7f206f9205cbcec8315159"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/mono_config_service_v2.v",
+      "sha256": "8af292514a5601a26127456a1dd3f3e71deb9356e81126d348eac97f58b2da85"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/frame_config_preset_owner.v",
+      "sha256": "153dfb73e5db7d2b8c63d55f37f4396a6d01c3cce237731b4a8cb48c1e843d0f"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/paired_raw_capture_drain_cdc.v",
+      "sha256": "65e6613a7a1ed242e79846a47270ce3fc3f554a0787c125e94dff91bcca30c63"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/physical_pair_config_owner.v",
+      "sha256": "dc68ce2cdd3776583acd47a047cda1e710c045d7e36b3abcb16ab51d2f989b18"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/frame_job_config_cdc.v",
+      "sha256": "dd5002212f9579a3db34db527bab346a540477fb4b8a046a2977db3deb43793d"
+    },
+    {
+      "root": "project",
+      "path": "verification_reference/quality_config_carrier.v",
+      "sha256": "aaab7fa0156c16fb315e81b51a43fc455145b1e8afec52c38c85a4a1fc6ce245"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh",
+      "sha256": "af9a0c94a0e6402d93504f6216f87d21f37ac3bf029218298722f2d52c6e604c"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/quality_control_v1.vh",
+      "sha256": "2b08e2053700e9b621401ef3c02e688e2fb10d24825532bffc138c97e375b8c4"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/raw_video_v1.vh",
+      "sha256": "b6a8048ddbe5e0d8c9db216dea8ceb45f2b2612f304a74a49bc1d9b1c3b65d12"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/00_rtl/stereo_control_v1.vh",
+      "sha256": "571573b50b2ad3f7d3eefda2657fcb4bc168d092c24456f126f4e5caef957023"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/c2h_test_fixture.vh",
+      "sha256": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/c2h_transport_limits.vh",
+      "sha256": "242ae42c7fc63b7fdc1710263f8aa49a35533f411e27956c6df2d3e3882acb8c"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/f21_config_transport.vh",
+      "sha256": "4f7cb45f459afeb0a0b8af9daf1a0d985d57fa566d4fbf5ce2f63b85a0151605"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/pcie_feature_defines.vh",
+      "sha256": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/pcie_record_v3_validate.vh",
+      "sha256": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/01_include/stage2_config_transport.vh",
+      "sha256": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/03_mono_config_v2_20261015/legacy_stage2_config_transport.vh",
+      "sha256": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/04_include/analysis_config_transport.vh",
+      "sha256": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/04_include/camera_physical_capture.vh",
+      "sha256": "dd17ac0d48f7bec1c4f85a8840917e576128719ebdfb6ed30630636c3790f1db"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/rtl/include/04_include/pcie_protocol_v1.vh",
+      "sha256": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3"
+    },
+    {
+      "root": "project",
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/include/define.v",
+      "sha256": "89eb5e07e6f2e6bde745a19834c61950ba588501df9aaaf531fa8b8b94f3cc11"
+    }
+  ]
+}

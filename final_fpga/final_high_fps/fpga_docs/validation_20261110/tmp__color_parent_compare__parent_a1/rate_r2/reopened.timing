@@ -1,0 +1,1650 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 18:24:42 2026
+
+Top Model           : hdr_quality_color_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 99.57%
+Constraint File     : <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/color_parent_compare/parent_a1/rate_r2/probe.sdc;
+Confidence          : Synthesized
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 16 end point(s) per path group, 2 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+
+Timing Status
+--------------------
+	SWNS: 4.090ns, STNS: 0.000ns
+	HWNS: 0.000ns, HTNS: 0.000ns
+	Period Check WNS: 0.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:      125.000         2212   PIX
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0           local            0.000      4.000                 8.000         125.000                 3.910         255.754            4.090      0.000            0.000      0.000            0.000             2212                6             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.
+
+Intra clock domain timing
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     3.910ns
+Fmax           :     255.754MHz
+
+Statistics:
+Max            : SWNS      4.090ns, STNS      0.000ns,         0 Viol Endpoints,      6042 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 4.090ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.815ns (cell 2.271ns (59%), net 1.544ns (41%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_79.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_91,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_80.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_92,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_81.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_93,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_82.fco_f
+net (fo=1)                              0.082          1.420          net: u_color/u_tone96/add3_syn_94,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_83.fci_f
+ADDER                                   0.065    f     1.485          pin: u_color/u_tone96/add3_syn_83.fco
+net (fo=1)                              0.000          1.485          net: u_color/u_tone96/add3_syn_71,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_84.fci
+ADDER                                   0.065    f     1.550          pin: u_color/u_tone96/add3_syn_84.fco
+net (fo=1)                              0.000          1.550          net: u_color/u_tone96/add3_syn_72,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_85.fci
+ADDER                                   0.065    f     1.615          pin: u_color/u_tone96/add3_syn_85.fco
+net (fo=1)                              0.000          1.615          net: u_color/u_tone96/add3_syn_73,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_86.fci
+ADDER                                   0.203    r     1.818       2  pin: u_color/u_tone96/add3_syn_86.ofb
+net (fo=1)                              0.149          1.967          net: u_color/u_tone96/gain5_b7[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_374.e
+LUT6                                    0.141    r     2.108       3  pin: u_color/u_tone96/sel0_syn_374.o
+net (fo=1)                              0.149          2.257          net: u_color/u_tone96/sel0_syn_375,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_376.a
+LUT6                                    0.141    r     2.398       4  pin: u_color/u_tone96/sel0_syn_376.o
+net (fo=1)                              0.149          2.547          net: u_color/u_tone96/sel0_syn_2[11],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.ic
+ADDER                                   0.331    r     2.878       5  pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.065    f     3.155          pin: u_color/u_tone96/sub0_syn_107.fco
+net (fo=1)                              0.000          3.155          net: u_color/u_tone96/sub0_syn_90,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_108.fci
+ADDER                                   0.203    r     3.358       6  pin: u_color/u_tone96/sub0_syn_108.ofb
+net (fo=3)                              0.457          3.815          net: u_color/u_tone96/gain5_b1[15],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15]
+DSPSIOU (reg)                           0.000    f     3.815               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.815               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.095          7.905               
+clock uncertainty                       0.000          7.905               
+clock pessimism                         0.000          7.905               
+--------------------------------------------------------------------  ---------------
+Required                                               7.905               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.090               
+
+Slack               : 4.090ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.815ns (cell 2.271ns (59%), net 1.544ns (41%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_101.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_118,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_102.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_119,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_103.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_120,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.065    f     3.155          pin: u_color/u_tone96/sub0_syn_107.fco
+net (fo=1)                              0.000          3.155          net: u_color/u_tone96/sub0_syn_90,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_108.fci
+ADDER                                   0.203    r     3.358       6  pin: u_color/u_tone96/sub0_syn_108.ofb
+net (fo=3)                              0.457          3.815          net: u_color/u_tone96/gain5_b1[15],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15]
+DSPSIOU (reg)                           0.000    f     3.815               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.815               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.095          7.905               
+clock uncertainty                       0.000          7.905               
+clock pessimism                         0.000          7.905               
+--------------------------------------------------------------------  ---------------
+Required                                               7.905               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.090               
+
+Slack               : 4.090ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.815ns (cell 2.271ns (59%), net 1.544ns (41%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_79.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_91,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_80.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_92,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_81.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_93,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_82.fco_f
+net (fo=1)                              0.082          1.420          net: u_color/u_tone96/add3_syn_94,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_83.fci_f
+ADDER                                   0.065    f     1.485          pin: u_color/u_tone96/add3_syn_83.fco
+net (fo=1)                              0.000          1.485          net: u_color/u_tone96/add3_syn_71,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_84.fci
+ADDER                                   0.065    f     1.550          pin: u_color/u_tone96/add3_syn_84.fco
+net (fo=1)                              0.000          1.550          net: u_color/u_tone96/add3_syn_72,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_85.fci
+ADDER                                   0.065    f     1.615          pin: u_color/u_tone96/add3_syn_85.fco
+net (fo=1)                              0.000          1.615          net: u_color/u_tone96/add3_syn_73,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_86.fci
+ADDER                                   0.203    r     1.818       2  pin: u_color/u_tone96/add3_syn_86.ofb
+net (fo=1)                              0.149          1.967          net: u_color/u_tone96/gain5_b7[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_374.e
+LUT6                                    0.141    r     2.108       3  pin: u_color/u_tone96/sel0_syn_374.o
+net (fo=1)                              0.149          2.257          net: u_color/u_tone96/sel0_syn_375,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_376.a
+LUT6                                    0.141    r     2.398       4  pin: u_color/u_tone96/sel0_syn_376.o
+net (fo=1)                              0.149          2.547          net: u_color/u_tone96/sel0_syn_2[11],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.ic
+ADDER                                   0.331    r     2.878       5  pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.065    f     3.155          pin: u_color/u_tone96/sub0_syn_107.fco
+net (fo=1)                              0.000          3.155          net: u_color/u_tone96/sub0_syn_90,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_108.fci
+ADDER                                   0.203    r     3.358       6  pin: u_color/u_tone96/sub0_syn_108.ofb
+net (fo=3)                              0.457          3.815          net: u_color/u_tone96/gain5_b1[15],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15]
+DSPSIOU (reg)                           0.000    f     3.815               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.815               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.095          7.905               
+clock uncertainty                       0.000          7.905               
+clock pessimism                         0.000          7.905               
+--------------------------------------------------------------------  ---------------
+Required                                               7.905               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.090               
+
+Slack               : 4.090ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.815ns (cell 2.271ns (59%), net 1.544ns (41%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_101.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_118,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_102.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_119,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_103.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_120,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.065    f     3.155          pin: u_color/u_tone96/sub0_syn_107.fco
+net (fo=1)                              0.000          3.155          net: u_color/u_tone96/sub0_syn_90,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_108.fci
+ADDER                                   0.203    r     3.358       6  pin: u_color/u_tone96/sub0_syn_108.ofb
+net (fo=3)                              0.457          3.815          net: u_color/u_tone96/gain5_b1[15],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15]
+DSPSIOU (reg)                           0.000    f     3.815               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.815               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.095          7.905               
+clock uncertainty                       0.000          7.905               
+clock pessimism                         0.000          7.905               
+--------------------------------------------------------------------  ---------------
+Required                                               7.905               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.090               
+
+Slack               : 4.090ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.815ns (cell 2.271ns (59%), net 1.544ns (41%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_79.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_91,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_80.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_92,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_81.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_93,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_82.fco_f
+net (fo=1)                              0.082          1.420          net: u_color/u_tone96/add3_syn_94,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_83.fci_f
+ADDER                                   0.065    f     1.485          pin: u_color/u_tone96/add3_syn_83.fco
+net (fo=1)                              0.000          1.485          net: u_color/u_tone96/add3_syn_71,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_84.fci
+ADDER                                   0.065    f     1.550          pin: u_color/u_tone96/add3_syn_84.fco
+net (fo=1)                              0.000          1.550          net: u_color/u_tone96/add3_syn_72,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_85.fci
+ADDER                                   0.065    f     1.615          pin: u_color/u_tone96/add3_syn_85.fco
+net (fo=1)                              0.000          1.615          net: u_color/u_tone96/add3_syn_73,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_86.fci
+ADDER                                   0.203    r     1.818       2  pin: u_color/u_tone96/add3_syn_86.ofb
+net (fo=1)                              0.149          1.967          net: u_color/u_tone96/gain5_b7[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_374.e
+LUT6                                    0.141    r     2.108       3  pin: u_color/u_tone96/sel0_syn_374.o
+net (fo=1)                              0.149          2.257          net: u_color/u_tone96/sel0_syn_375,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_376.a
+LUT6                                    0.141    r     2.398       4  pin: u_color/u_tone96/sel0_syn_376.o
+net (fo=1)                              0.149          2.547          net: u_color/u_tone96/sel0_syn_2[11],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.ic
+ADDER                                   0.331    r     2.878       5  pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.065    f     3.155          pin: u_color/u_tone96/sub0_syn_107.fco
+net (fo=1)                              0.000          3.155          net: u_color/u_tone96/sub0_syn_90,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_108.fci
+ADDER                                   0.203    r     3.358       6  pin: u_color/u_tone96/sub0_syn_108.ofb
+net (fo=3)                              0.457          3.815          net: u_color/u_tone96/gain5_b1[15],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15]
+DSPSIOU (reg)                           0.000    f     3.815               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.815               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.095          7.905               
+clock uncertainty                       0.000          7.905               
+clock pessimism                         0.000          7.905               
+--------------------------------------------------------------------  ---------------
+Required                                               7.905               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.090               
+
+Slack               : 4.090ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.815ns (cell 2.271ns (59%), net 1.544ns (41%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_101.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_118,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_102.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_119,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_103.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_120,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.065    f     3.155          pin: u_color/u_tone96/sub0_syn_107.fco
+net (fo=1)                              0.000          3.155          net: u_color/u_tone96/sub0_syn_90,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_108.fci
+ADDER                                   0.203    r     3.358       6  pin: u_color/u_tone96/sub0_syn_108.ofb
+net (fo=3)                              0.457          3.815          net: u_color/u_tone96/gain5_b1[15],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[15]
+DSPSIOU (reg)                           0.000    f     3.815               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.815               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.095          7.905               
+clock uncertainty                       0.000          7.905               
+clock pessimism                         0.000          7.905               
+--------------------------------------------------------------------  ---------------
+Required                                               7.905               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.090               
+
+Slack               : 4.135ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.750ns (cell 2.206ns (58%), net 1.544ns (42%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_79.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_91,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_80.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_92,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_81.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_93,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_82.fco_f
+net (fo=1)                              0.082          1.420          net: u_color/u_tone96/add3_syn_94,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_83.fci_f
+ADDER                                   0.065    f     1.485          pin: u_color/u_tone96/add3_syn_83.fco
+net (fo=1)                              0.000          1.485          net: u_color/u_tone96/add3_syn_71,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_84.fci
+ADDER                                   0.065    f     1.550          pin: u_color/u_tone96/add3_syn_84.fco
+net (fo=1)                              0.000          1.550          net: u_color/u_tone96/add3_syn_72,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_85.fci
+ADDER                                   0.065    f     1.615          pin: u_color/u_tone96/add3_syn_85.fco
+net (fo=1)                              0.000          1.615          net: u_color/u_tone96/add3_syn_73,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_86.fci
+ADDER                                   0.203    r     1.818       2  pin: u_color/u_tone96/add3_syn_86.ofb
+net (fo=1)                              0.149          1.967          net: u_color/u_tone96/gain5_b7[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_374.e
+LUT6                                    0.141    r     2.108       3  pin: u_color/u_tone96/sel0_syn_374.o
+net (fo=1)                              0.149          2.257          net: u_color/u_tone96/sel0_syn_375,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_376.a
+LUT6                                    0.141    r     2.398       4  pin: u_color/u_tone96/sel0_syn_376.o
+net (fo=1)                              0.149          2.547          net: u_color/u_tone96/sel0_syn_2[11],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.ic
+ADDER                                   0.331    r     2.878       5  pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.203    r     3.293       6  pin: u_color/u_tone96/sub0_syn_107.ofb
+net (fo=3)                              0.457          3.750          net: u_color/u_tone96/gain5_b1[14],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14]
+DSPSIOU (reg)                           0.000    f     3.750               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.750               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.115          7.885               
+clock uncertainty                       0.000          7.885               
+clock pessimism                         0.000          7.885               
+--------------------------------------------------------------------  ---------------
+Required                                               7.885               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.135               
+
+Slack               : 4.135ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.750ns (cell 2.206ns (58%), net 1.544ns (42%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_101.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_118,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_102.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_119,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_103.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_120,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.203    r     3.293       6  pin: u_color/u_tone96/sub0_syn_107.ofb
+net (fo=3)                              0.457          3.750          net: u_color/u_tone96/gain5_b1[14],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14]
+DSPSIOU (reg)                           0.000    f     3.750               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.750               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.115          7.885               
+clock uncertainty                       0.000          7.885               
+clock pessimism                         0.000          7.885               
+--------------------------------------------------------------------  ---------------
+Required                                               7.885               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.135               
+
+Slack               : 4.135ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.750ns (cell 2.206ns (58%), net 1.544ns (42%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_79.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_91,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_80.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_92,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_81.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_93,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_82.fco_f
+net (fo=1)                              0.082          1.420          net: u_color/u_tone96/add3_syn_94,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_83.fci_f
+ADDER                                   0.065    f     1.485          pin: u_color/u_tone96/add3_syn_83.fco
+net (fo=1)                              0.000          1.485          net: u_color/u_tone96/add3_syn_71,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_84.fci
+ADDER                                   0.065    f     1.550          pin: u_color/u_tone96/add3_syn_84.fco
+net (fo=1)                              0.000          1.550          net: u_color/u_tone96/add3_syn_72,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_85.fci
+ADDER                                   0.065    f     1.615          pin: u_color/u_tone96/add3_syn_85.fco
+net (fo=1)                              0.000          1.615          net: u_color/u_tone96/add3_syn_73,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_86.fci
+ADDER                                   0.203    r     1.818       2  pin: u_color/u_tone96/add3_syn_86.ofb
+net (fo=1)                              0.149          1.967          net: u_color/u_tone96/gain5_b7[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_374.e
+LUT6                                    0.141    r     2.108       3  pin: u_color/u_tone96/sel0_syn_374.o
+net (fo=1)                              0.149          2.257          net: u_color/u_tone96/sel0_syn_375,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_376.a
+LUT6                                    0.141    r     2.398       4  pin: u_color/u_tone96/sel0_syn_376.o
+net (fo=1)                              0.149          2.547          net: u_color/u_tone96/sel0_syn_2[11],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.ic
+ADDER                                   0.331    r     2.878       5  pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.203    r     3.293       6  pin: u_color/u_tone96/sub0_syn_107.ofb
+net (fo=3)                              0.457          3.750          net: u_color/u_tone96/gain5_b1[14],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14]
+DSPSIOU (reg)                           0.000    f     3.750               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.750               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.115          7.885               
+clock uncertainty                       0.000          7.885               
+clock pessimism                         0.000          7.885               
+--------------------------------------------------------------------  ---------------
+Required                                               7.885               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.135               
+
+Slack               : 4.135ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.750ns (cell 2.206ns (58%), net 1.544ns (42%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_101.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_118,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_102.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_119,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_103.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_120,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.203    r     3.293       6  pin: u_color/u_tone96/sub0_syn_107.ofb
+net (fo=3)                              0.457          3.750          net: u_color/u_tone96/gain5_b1[14],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14]
+DSPSIOU (reg)                           0.000    f     3.750               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.750               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.115          7.885               
+clock uncertainty                       0.000          7.885               
+clock pessimism                         0.000          7.885               
+--------------------------------------------------------------------  ---------------
+Required                                               7.885               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.135               
+
+Slack               : 4.135ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.750ns (cell 2.206ns (58%), net 1.544ns (42%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_79.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_91,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_80.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_92,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_81.fco_f
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_93,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci_f
+ADDER                                   0.000    f     1.338          pin: u_color/u_tone96/add3_syn_82.fco_f
+net (fo=1)                              0.082          1.420          net: u_color/u_tone96/add3_syn_94,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_83.fci_f
+ADDER                                   0.065    f     1.485          pin: u_color/u_tone96/add3_syn_83.fco
+net (fo=1)                              0.000          1.485          net: u_color/u_tone96/add3_syn_71,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_84.fci
+ADDER                                   0.065    f     1.550          pin: u_color/u_tone96/add3_syn_84.fco
+net (fo=1)                              0.000          1.550          net: u_color/u_tone96/add3_syn_72,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_85.fci
+ADDER                                   0.065    f     1.615          pin: u_color/u_tone96/add3_syn_85.fco
+net (fo=1)                              0.000          1.615          net: u_color/u_tone96/add3_syn_73,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_86.fci
+ADDER                                   0.203    r     1.818       2  pin: u_color/u_tone96/add3_syn_86.ofb
+net (fo=1)                              0.149          1.967          net: u_color/u_tone96/gain5_b7[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_374.e
+LUT6                                    0.141    r     2.108       3  pin: u_color/u_tone96/sel0_syn_374.o
+net (fo=1)                              0.149          2.257          net: u_color/u_tone96/sel0_syn_375,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_376.a
+LUT6                                    0.141    r     2.398       4  pin: u_color/u_tone96/sel0_syn_376.o
+net (fo=1)                              0.149          2.547          net: u_color/u_tone96/sel0_syn_2[11],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.ic
+ADDER                                   0.331    r     2.878       5  pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.203    r     3.293       6  pin: u_color/u_tone96/sub0_syn_107.ofb
+net (fo=3)                              0.457          3.750          net: u_color/u_tone96/gain5_b1[14],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14]
+DSPSIOU (reg)                           0.000    f     3.750               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.750               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.115          7.885               
+clock uncertainty                       0.000          7.885               
+clock pessimism                         0.000          7.885               
+--------------------------------------------------------------------  ---------------
+Required                                               7.885               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.135               
+
+Slack               : 4.135ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.750ns (cell 2.206ns (58%), net 1.544ns (42%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_101.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_118,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_102.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_119,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_103.fco_f
+net (fo=1)                              0.000          2.878          net: u_color/u_tone96/sub0_syn_120,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci_f
+ADDER                                   0.000    f     2.878          pin: u_color/u_tone96/sub0_syn_104.fco_f
+net (fo=1)                              0.082          2.960          net: u_color/u_tone96/sub0_syn_121,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_105.fci_f
+ADDER                                   0.065    f     3.025          pin: u_color/u_tone96/sub0_syn_105.fco
+net (fo=1)                              0.000          3.025          net: u_color/u_tone96/sub0_syn_88,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_106.fci
+ADDER                                   0.065    f     3.090          pin: u_color/u_tone96/sub0_syn_106.fco
+net (fo=1)                              0.000          3.090          net: u_color/u_tone96/sub0_syn_89,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_107.fci
+ADDER                                   0.203    r     3.293       6  pin: u_color/u_tone96/sub0_syn_107.ofb
+net (fo=3)                              0.457          3.750          net: u_color/u_tone96/gain5_b1[14],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[14]
+DSPSIOU (reg)                           0.000    f     3.750               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.750               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[2]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.115          7.885               
+clock uncertainty                       0.000          7.885               
+clock pessimism                         0.000          7.885               
+--------------------------------------------------------------------  ---------------
+Required                                               7.885               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.135               
+
+Slack               : 4.170ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.733ns (cell 2.271ns (60%), net 1.462ns (40%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.065    f     2.943          pin: u_color/u_tone96/sub0_syn_101.fco
+net (fo=1)                              0.000          2.943          net: u_color/u_tone96/sub0_syn_84,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci
+ADDER                                   0.065    f     3.008          pin: u_color/u_tone96/sub0_syn_102.fco
+net (fo=1)                              0.000          3.008          net: u_color/u_tone96/sub0_syn_85,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci
+ADDER                                   0.065    f     3.073          pin: u_color/u_tone96/sub0_syn_103.fco
+net (fo=1)                              0.000          3.073          net: u_color/u_tone96/sub0_syn_86,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci
+ADDER                                   0.203    r     3.276       6  pin: u_color/u_tone96/sub0_syn_104.ofb
+net (fo=3)                              0.457          3.733          net: u_color/u_tone96/gain5_b1[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11]
+DSPSIOU (reg)                           0.000    f     3.733               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.733               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.097          7.903               
+clock uncertainty                       0.000          7.903               
+clock pessimism                         0.000          7.903               
+--------------------------------------------------------------------  ---------------
+Required                                               7.903               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.170               
+
+Slack               : 4.214ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.689ns (cell 2.246ns (60%), net 1.443ns (40%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.387    f     0.387          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[6]
+net (fo=3)                              0.457          0.844          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[6],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add2_syn_75.id
+ADDER                                   0.255    f     1.099       1  pin: u_color/u_tone96/add2_syn_75.fco
+net (fo=1)                              0.000          1.099          net: u_color/u_tone96/add2_syn_63,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_76.fci
+ADDER                                   0.065    f     1.164          pin: u_color/u_tone96/add2_syn_76.fco
+net (fo=1)                              0.000          1.164          net: u_color/u_tone96/add2_syn_64,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_77.fci
+ADDER                                   0.065    f     1.229          pin: u_color/u_tone96/add2_syn_77.fco
+net (fo=1)                              0.000          1.229          net: u_color/u_tone96/add2_syn_65,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_78.fci
+ADDER                                   0.065    f     1.294          pin: u_color/u_tone96/add2_syn_78.fco
+net (fo=1)                              0.000          1.294          net: u_color/u_tone96/add2_syn_66,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_79.fci
+ADDER                                   0.065    f     1.359          pin: u_color/u_tone96/add2_syn_79.fco
+net (fo=1)                              0.000          1.359          net: u_color/u_tone96/add2_syn_67,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_80.fci
+ADDER                                   0.065    f     1.424          pin: u_color/u_tone96/add2_syn_80.fco
+net (fo=1)                              0.000          1.424          net: u_color/u_tone96/add2_syn_68,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_81.fci
+ADDER                                   0.065    f     1.489          pin: u_color/u_tone96/add2_syn_81.fco
+net (fo=1)                              0.000          1.489          net: u_color/u_tone96/add2_syn_69,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_82.fci
+ADDER                                   0.203    r     1.692       2  pin: u_color/u_tone96/add2_syn_82.ofb
+net (fo=1)                              0.149          1.841          net: u_color/u_tone96/gain5_b6[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.c
+LUT6                                    0.141    r     1.982       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.131          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.272       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.421          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.752       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.834          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.065    f     2.899          pin: u_color/u_tone96/sub0_syn_101.fco
+net (fo=1)                              0.000          2.899          net: u_color/u_tone96/sub0_syn_84,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci
+ADDER                                   0.065    f     2.964          pin: u_color/u_tone96/sub0_syn_102.fco
+net (fo=1)                              0.000          2.964          net: u_color/u_tone96/sub0_syn_85,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci
+ADDER                                   0.065    f     3.029          pin: u_color/u_tone96/sub0_syn_103.fco
+net (fo=1)                              0.000          3.029          net: u_color/u_tone96/sub0_syn_86,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci
+ADDER                                   0.203    r     3.232       6  pin: u_color/u_tone96/sub0_syn_104.ofb
+net (fo=3)                              0.457          3.689          net: u_color/u_tone96/gain5_b1[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11]
+DSPSIOU (reg)                           0.000    f     3.689               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.689               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[0]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.097          7.903               
+clock uncertainty                       0.000          7.903               
+clock pessimism                         0.000          7.903               
+--------------------------------------------------------------------  ---------------
+Required                                               7.903               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.214               
+
+Slack               : 4.170ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.733ns (cell 2.271ns (60%), net 1.462ns (40%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.412    f     0.412          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[7]
+net (fo=4)                              0.476          0.888          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[7],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add3_syn_75.id
+ADDER                                   0.255    f     1.143       1  pin: u_color/u_tone96/add3_syn_75.fco
+net (fo=1)                              0.000          1.143          net: u_color/u_tone96/add3_syn_63,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_76.fci
+ADDER                                   0.065    f     1.208          pin: u_color/u_tone96/add3_syn_76.fco
+net (fo=1)                              0.000          1.208          net: u_color/u_tone96/add3_syn_64,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_77.fci
+ADDER                                   0.065    f     1.273          pin: u_color/u_tone96/add3_syn_77.fco
+net (fo=1)                              0.000          1.273          net: u_color/u_tone96/add3_syn_65,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_78.fci
+ADDER                                   0.065    f     1.338          pin: u_color/u_tone96/add3_syn_78.fco
+net (fo=1)                              0.000          1.338          net: u_color/u_tone96/add3_syn_66,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_79.fci
+ADDER                                   0.065    f     1.403          pin: u_color/u_tone96/add3_syn_79.fco
+net (fo=1)                              0.000          1.403          net: u_color/u_tone96/add3_syn_67,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_80.fci
+ADDER                                   0.065    f     1.468          pin: u_color/u_tone96/add3_syn_80.fco
+net (fo=1)                              0.000          1.468          net: u_color/u_tone96/add3_syn_68,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_81.fci
+ADDER                                   0.065    f     1.533          pin: u_color/u_tone96/add3_syn_81.fco
+net (fo=1)                              0.000          1.533          net: u_color/u_tone96/add3_syn_69,  ../../rtl/hdr_tone96_shared4.v(55)
+                                                                      pin: u_color/u_tone96/add3_syn_82.fci
+ADDER                                   0.203    r     1.736       2  pin: u_color/u_tone96/add3_syn_82.ofb
+net (fo=1)                              0.149          1.885          net: u_color/u_tone96/gain5_b7[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.e
+LUT6                                    0.141    r     2.026       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.175          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.316       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.465          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.796       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.878          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.065    f     2.943          pin: u_color/u_tone96/sub0_syn_101.fco
+net (fo=1)                              0.000          2.943          net: u_color/u_tone96/sub0_syn_84,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci
+ADDER                                   0.065    f     3.008          pin: u_color/u_tone96/sub0_syn_102.fco
+net (fo=1)                              0.000          3.008          net: u_color/u_tone96/sub0_syn_85,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci
+ADDER                                   0.065    f     3.073          pin: u_color/u_tone96/sub0_syn_103.fco
+net (fo=1)                              0.000          3.073          net: u_color/u_tone96/sub0_syn_86,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci
+ADDER                                   0.203    r     3.276       6  pin: u_color/u_tone96/sub0_syn_104.ofb
+net (fo=3)                              0.457          3.733          net: u_color/u_tone96/gain5_b1[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11]
+DSPSIOU (reg)                           0.000    f     3.733               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.733               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.097          7.903               
+clock uncertainty                       0.000          7.903               
+clock pessimism                         0.000          7.903               
+--------------------------------------------------------------------  ---------------
+Required                                               7.903               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.170               
+
+Slack               : 4.214ns
+Begin Point         : u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.689ns (cell 2.246ns (60%), net 1.443ns (40%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( ADDER=4  LUT6=2 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+DSPSIOU (clk2q)                         0.387    f     0.387          pin: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_169.p[6]
+net (fo=3)                              0.457          0.844          net: u_color/u_tone96/u_gain_delta/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_7[6],  ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(0)
+                                                                      pin: u_color/u_tone96/add2_syn_75.id
+ADDER                                   0.255    f     1.099       1  pin: u_color/u_tone96/add2_syn_75.fco
+net (fo=1)                              0.000          1.099          net: u_color/u_tone96/add2_syn_63,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_76.fci
+ADDER                                   0.065    f     1.164          pin: u_color/u_tone96/add2_syn_76.fco
+net (fo=1)                              0.000          1.164          net: u_color/u_tone96/add2_syn_64,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_77.fci
+ADDER                                   0.065    f     1.229          pin: u_color/u_tone96/add2_syn_77.fco
+net (fo=1)                              0.000          1.229          net: u_color/u_tone96/add2_syn_65,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_78.fci
+ADDER                                   0.065    f     1.294          pin: u_color/u_tone96/add2_syn_78.fco
+net (fo=1)                              0.000          1.294          net: u_color/u_tone96/add2_syn_66,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_79.fci
+ADDER                                   0.065    f     1.359          pin: u_color/u_tone96/add2_syn_79.fco
+net (fo=1)                              0.000          1.359          net: u_color/u_tone96/add2_syn_67,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_80.fci
+ADDER                                   0.065    f     1.424          pin: u_color/u_tone96/add2_syn_80.fco
+net (fo=1)                              0.000          1.424          net: u_color/u_tone96/add2_syn_68,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_81.fci
+ADDER                                   0.065    f     1.489          pin: u_color/u_tone96/add2_syn_81.fco
+net (fo=1)                              0.000          1.489          net: u_color/u_tone96/add2_syn_69,  ../../rtl/hdr_tone96_shared4.v(54)
+                                                                      pin: u_color/u_tone96/add2_syn_82.fci
+ADDER                                   0.203    r     1.692       2  pin: u_color/u_tone96/add2_syn_82.ofb
+net (fo=1)                              0.149          1.841          net: u_color/u_tone96/gain5_b6[7],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/sel0_syn_362.c
+LUT6                                    0.141    r     1.982       3  pin: u_color/u_tone96/sel0_syn_362.o
+net (fo=1)                              0.149          2.131          net: u_color/u_tone96/sel0_syn_363,  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sel0_syn_364.a
+LUT6                                    0.141    r     2.272       4  pin: u_color/u_tone96/sel0_syn_364.o
+net (fo=1)                              0.149          2.421          net: u_color/u_tone96/sel0_syn_2[7],  ../../rtl/hdr_tone96_shared4.v(51)
+                                                                      pin: u_color/u_tone96/sub0_syn_100.ic
+ADDER                                   0.331    r     2.752       5  pin: u_color/u_tone96/sub0_syn_100.fco_f
+net (fo=1)                              0.082          2.834          net: u_color/u_tone96/sub0_syn_117,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_101.fci_f
+ADDER                                   0.065    f     2.899          pin: u_color/u_tone96/sub0_syn_101.fco
+net (fo=1)                              0.000          2.899          net: u_color/u_tone96/sub0_syn_84,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_102.fci
+ADDER                                   0.065    f     2.964          pin: u_color/u_tone96/sub0_syn_102.fco
+net (fo=1)                              0.000          2.964          net: u_color/u_tone96/sub0_syn_85,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_103.fci
+ADDER                                   0.065    f     3.029          pin: u_color/u_tone96/sub0_syn_103.fco
+net (fo=1)                              0.000          3.029          net: u_color/u_tone96/sub0_syn_86,  ../../rtl/hdr_tone96_shared4.v(153)
+                                                                      pin: u_color/u_tone96/sub0_syn_104.fci
+ADDER                                   0.203    r     3.232       6  pin: u_color/u_tone96/sub0_syn_104.ofb
+net (fo=3)                              0.457          3.689          net: u_color/u_tone96/gain5_b1[11],  NOFILE(0)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.xa[11]
+DSPSIOU (reg)                           0.000    f     3.689               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.689               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2213)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/u_tone96/g_component[1]$u_color_gain/multiplier_top_Inst/u_multiplier/al_multiplier_yibQJvTk/mult0_syn_168.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.097          7.903               
+clock uncertainty                       0.000          7.903               
+clock pessimism                         0.000          7.903               
+--------------------------------------------------------------------  ---------------
+Required                                               7.903               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.214               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+Inter clock domain timing
+--------------------------------------------------
+
+IP timing
+--------------------------------------------------

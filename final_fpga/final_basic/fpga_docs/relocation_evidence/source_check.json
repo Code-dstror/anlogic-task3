@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "production_inputs": 405,
+  "all_source_copies": 1353,
+  "native_paths": 258,
+  "bit_sha256": "eee7eff50323a8a5c7ddc850d3873e1dda13473debbfe8a690bcb6bab17ac362"
+}

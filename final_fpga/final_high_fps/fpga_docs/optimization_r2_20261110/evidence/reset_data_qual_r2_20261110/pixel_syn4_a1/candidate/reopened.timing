@@ -1,0 +1,516 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 21:26:30 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 83.03%
+Constraint File     : <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/reset_data_qual_r2_20261110/pixel_syn4_a1/candidate/clock.sdc;
+Confidence          : Synthesized
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 8 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+
+Timing Status
+--------------------
+	SWNS: 1.593ns, STNS: 0.000ns
+	HWNS: 0.000ns, HTNS: 0.000ns
+	Period Check WNS: 0.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:      125.000         1551   PIX
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0           local            0.000      4.000                 8.000         125.000                 4.814         207.727            1.593      0.000            0.000      0.000            0.000             1551                6             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.
+
+Intra clock domain timing
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     4.814ns
+Fmax           :     207.727MHz
+
+Statistics:
+Max            : SWNS      1.593ns, STNS      0.000ns,         0 Viol Endpoints,      2099 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/end_seen_reg.ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/end_seen_reg.ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/end_seen_reg.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[0].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[0].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[0].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[1].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[1].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[1].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[2].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[2].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[2].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[3].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[3].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[3].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[4].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[4].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[4].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[5].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[5].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[5].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+Slack               : 1.593ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/u_adapter/raster_column_reg[6].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 2.348ns (cell 0.574ns (24%), net 1.774ns (76%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT6=3 )
+Max Fanout          : 284
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=284)                            0.543          4.694          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[14]_syn_3.a
+LUT6                                    0.141    r     4.835       1  pin: observe[14]_syn_3.o
+net (fo=15)                             0.354          5.189          net: u_original/u_adapter/source_failure_n1,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/raster_column_b2[8]_syn_5.a
+LUT6                                    0.141    r     5.330       2  pin: u_original/u_adapter/raster_column_b2[8]_syn_5.o
+net (fo=54)                             0.452          5.782          net: u_original/u_adapter/raster_column_b2[8]_syn_6,  NOFILE(0)
+                                                                      pin: u_original/u_adapter/end_seen_i3_syn_9.d
+LUT6                                    0.141    r     5.923       3  pin: u_original/u_adapter/end_seen_i3_syn_9.o
+net (fo=38)                             0.425          6.348          net: u_original/u_adapter/end_seen_i3_syn_2,  ../../camera_rgb_native_fixed1080_borrow4.v(137)
+                                                                      pin: u_original/u_adapter/raster_column_reg[6].ce
+SEQ (reg)                               0.000    f     6.348               
+--------------------------------------------------------------------  ---------------
+Arrival                                                6.348               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_adapter/raster_column_reg[6].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.593               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+Inter clock domain timing
+--------------------------------------------------
+
+IP timing
+--------------------------------------------------

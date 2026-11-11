@@ -1,0 +1,6 @@
+`define fdct_mac19s14s_z33s_p34_m1p1_USE_A
+`define fdct_mac19s14s_z33s_p34_m1p1_USE_CE
+`define fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A
+`define fdct_mac19s14s_z33s_p34_m1p1_USE_RST
+`define fdct_mac19s14s_z33s_p34_m1p1_USE_Y
+`define fdct_mac19s14s_z33s_p34_m1p1_USE_Z

@@ -1,0 +1,55 @@
+standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        43   out of    148   29.05%
+  #input                   14
+  #output                  29
+  #inout                    0
+#lut                      122
+  #lut1                     0
+  #lut2                     7
+  #lut3                    12
+  #lut4                    16
+  #lut5                    33
+  #lut6                    54
+#reg                      204
+  #slice reg              204   out of 128640    0.16%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                   117   out of  64320    0.18%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic             117
+    #with luts*            65
+    #with adder            25
+    #reg only*             27
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       0   out of    272    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       43   out of    148   29.05%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance |Module           |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top      |uhd_probe        |65        |25      |204     |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  dut    |jpeg_byte_packer |39        |25      |162     |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+

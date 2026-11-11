@@ -1,0 +1,61 @@
+{
+  "sources": [
+    "src_fpga/rtl/reset_release_sync.v",
+    "src_fpga/rtl/td_sdp_ram40.v",
+    "src_fpga/rtl/hdr_pair_directory.v",
+    "src_fpga/rtl/raw10_frame_replay.v",
+    "src_fpga/rtl/stereo_raw_owner.v",
+    "src_fpga/rtl/stereo_raw_reader.v",
+    "src_fpga/rtl/stereo_raw_store.v",
+    "src_fpga/rtl/raw_capture_fifo_eram_safe.v",
+    "src_fpga/rtl/shared_raw10_frame_ingress.v",
+    "src_fpga/rtl/shared_raw_capture_writer.v",
+    "src_fpga/rtl/full_raw_capture_frontend.v",
+    "src_fpga/rtl/dual_raw_capture_frontend.v",
+    "src_fpga/rtl/dol2_axi_write_arbiter.v",
+    "src_fpga/rtl/raw10_append5.v",
+    "src_fpga/rtl/hdr_pair_context_cache.v",
+    "src_fpga/rtl/raw_pair_replay_scheduler.v",
+    "src_fpga/rtl/raw_hdr_phase_scheduler4.v",
+    "src_fpga/rtl/raw_pair_job_service.v",
+    "src_fpga/rtl/hdr_pair_bank_owner.v",
+    "src_fpga/rtl/hdr_pair_bank_owner_dual.v",
+    "src_fpga/rtl/hdr_eye_shared.v",
+    "src_fpga/rtl/hdr_pair_bank_owner_serial.v",
+    "src_fpga/rtl/raw_application_stop_dfi.v",
+    "src_fpga/rtl/axis_frame_fifo_ip.v",
+    "src_fpga/rtl/full_raw_store.v",
+    "src_fpga/rtl/control_fifo_40x512.v",
+    "src_fpga/rtl/hdr_pair_read_cursor.v",
+    "src_fpga/rtl/shared_raw10_decoder.v",
+    "src_fpga/rtl/shared_raw10_decoder_masked.v",
+    "src_fpga/rtl/shared_raw10_decode_service.v",
+    "src_fpga/rtl/hdr_merge4.v",
+    "src_fpga/rtl/hdr_pair_pixel_reader.v",
+    "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v",
+    "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v",
+    "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v",
+    "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v",
+    "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v",
+    "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v",
+    "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v"
+  ],
+  "td_root": "D:/App/TD_Release_2026.2.210.850",
+  "td_models": [
+    "sim_release/common/al_phy_glbl.v",
+    "sim_release/ph1/ph1_logic_dram.v",
+    "sim_release/ph1/ph1_logic_eram.v",
+    "sim_release/ph1/ph1_logic_fifo.v",
+    "sim_release/ph1/ph1_logic_ramfifo.v",
+    "sim_release/ph1/ph1_phy_eram.v",
+    "sim_release/ph1/ph1_phy_fifoctrl.v",
+    "sim_release/ph1/ph1_phy_gsr.v"
+  ],
+  "include": [
+    "src_fpga/rtl/include/00_rtl",
+    "src_fpga/rtl/include/04_include"
+  ],
+  "defines": [
+    "PH1"
+  ]
+}

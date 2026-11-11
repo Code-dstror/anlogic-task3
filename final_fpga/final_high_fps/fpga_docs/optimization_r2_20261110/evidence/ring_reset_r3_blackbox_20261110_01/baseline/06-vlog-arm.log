@@ -1,0 +1,17 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:07:13 on Nov 10,2026
+vlog -work work -L ph1 <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_gsr.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\inputs\common\reset_release_sync.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\inputs\common\reset_release_sync_data.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\inputs\common\jpeg_ring_cold_bank.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\inputs\common\td_sdp_ram.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\inputs\baseline\jpeg_frame_ring.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\inputs\baseline\jpeg_ring_reset_boundary.v 
+-- Compiling module PH1_PHY_GSR
+-- Compiling module reset_release_sync
+-- Compiling module reset_release_sync_data
+-- Compiling module jpeg_ring_cold_bank
+-- Compiling module td_sdp_ram
+-- Compiling module jpeg_frame_ring
+-- Compiling module jpeg_ring_reset_boundary
+
+Top level modules:
+	PH1_PHY_GSR
+	reset_release_sync_data
+	jpeg_ring_reset_boundary
+End time: 22:07:13 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

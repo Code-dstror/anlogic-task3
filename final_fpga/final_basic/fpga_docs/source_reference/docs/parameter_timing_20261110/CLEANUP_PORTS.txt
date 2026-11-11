@@ -1,0 +1,18 @@
+module hdr_pair_product_abort_drain4 #(
+    parameter integer SYNC_CLEAR_ENABLE = 0,
+    parameter integer SEPARATE_DATA_RESET = 0,
+    parameter integer FALLING_INPUT_RESET = 0
+)(
+    input wire clk,rst_n,
+    input wire i_context_fire,input wire [63:0] i_context_tag,
+    input wire i_source_fire,input wire [63:0] i_source_tag,
+    input wire i_source_ok,i_source_read_quiescent,
+    input wire i_native_job_start,
+    input wire i_native_valid,i_isp_valid,i_preprocess_valid,i_admission_valid,
+    output wire o_local_rst_n,output wire o_drain_pending,
+    output reg o_failed_status_valid,input wire i_failed_status_ready,
+    output reg o_protocol_fault,output reg [31:0] o_stale_source_count,
+    output reg o_cleanup_pulse,
+    // Optional same-value pre-distribution reset, used only for data masks.
+    input wire i_data_reset_n,output wire o_local_data_rst_n
+);

@@ -1,0 +1,9 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:19:47 on Nov 10,2026
+vlog -work work <PROJECT_ROOT>\refactor\camera_fusion_r1\experiments\raw_ingress_equiv\candidate\shared_raw10_frame_ingress.v 
+-- Compiling module shared_raw10_frame_ingress
+
+Top level modules:
+	shared_raw10_frame_ingress
+End time: 18:19:47 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,62 @@
+{
+  "file": "fpga_prj/bit/camera_fusion_r1_43dbc3f1_seed54.bit",
+  "bytes": 4850315,
+  "sha256": "9dbee9e9aab5b9fc8052639e46745fa59568a0e8d0d2ca5177b8e17ebb897508",
+  "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+  "source_design_sha256": "df8064e9bd11af7c9fcf1e2b76169547d9d61d7b9b5ed8c26204ef864e0fee7e",
+  "seed": 54,
+  "job": "manual-camera-fusion-r1-opt-20261110-syn4-80s4t-50a57474aae852e6-s54",
+  "results_commit": "425edaaaf327235a64349c7149b568bb3de651f4",
+  "synthesis_threads": 4,
+  "physical_threads": 4,
+  "bitgen": "DONE",
+  "timing": "FAIL",
+  "board": "NOT_RUN",
+  "selection": "Maximum reported SWNS among 80 completed same-source seeds; not timing-qualified",
+  "routed_report_check_min_ns": {
+    "setup": -0.214,
+    "hold": 0.006,
+    "removal": 0.014,
+    "recovery": 3.582
+  },
+  "timing_summary": {
+    "HTNS": 0.0,
+    "HWNS": 0.006,
+    "STNS": -25.675,
+    "SWNS": -0.214,
+    "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+    "state": "NEGATIVE"
+  },
+  "resources": {
+    "slice": {
+      "used": 61925,
+      "capacity": 64320,
+      "percent": 96.28
+    },
+    "eram": {
+      "used": 265,
+      "capacity": 272,
+      "percent": 97.43
+    },
+    "dsp": {
+      "used": 149,
+      "capacity": 240,
+      "percent": 62.08
+    },
+    "slice reg": {
+      "used": 71931,
+      "capacity": 128640,
+      "percent": 55.92
+    },
+    "lut6": {
+      "used": 57610,
+      "capacity": 64320,
+      "percent": 89.57
+    }
+  },
+  "sta_coverage_percent": 99.85,
+  "confidence": "Routed",
+  "corner": "Both",
+  "scope": "10 endpoints per path group, 1 path per endpoint; no exhaustive clock/exception audit in this packaging task",
+  "source_bound_report_directory": "fpga_docs/server_seed54_20261111"
+}

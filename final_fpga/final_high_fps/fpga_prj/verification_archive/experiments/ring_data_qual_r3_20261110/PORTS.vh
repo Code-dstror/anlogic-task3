@@ -1,0 +1,187 @@
+// Public declaration only. Compile the opaque boundary instead.
+module jpeg_ring_reset_boundary #(
+    parameter [31:0] SLOT_BYTES = 32'h01000000,
+    parameter [27:0] SLOT0_BASE = 28'h0000000,
+    parameter [27:0] SLOT1_BASE = 28'hA000000,
+    parameter [27:0] SLOT2_BASE = 28'hB000000,
+    parameter [27:0] SLOT3_BASE = 28'hC000000,
+    parameter [27:0] SLOT4_BASE = 28'hD000000,
+    parameter [27:0] SLOT5_BASE = 28'hE000000,
+    parameter integer WRITE_RESULT_ENABLE = 0,
+    parameter integer WRITE_TAG_ENABLE = 0,
+    parameter integer MASK_ENABLE = 0,
+    parameter integer CAMERA_COUNT = 2
+) (
+    // 时钟与就绪
+    input wire i_clk,
+    input wire i_cold_rst_n,
+    input wire i_ddr_ready,
+
+    // 帧启动与元数据
+    input wire i_start_valid,
+    output wire o_start_ready,
+    input wire [31:0] i_capture_id,
+    input wire [15:0] i_width,
+    input wire [15:0] i_height,
+    input wire [63:0] i_timestamp_ns,
+    input wire [31:0] i_write_tag,
+
+    // JPEG输入流
+    input wire [127:0] i_jpeg_tdata,
+    input wire [15:0] i_jpeg_tkeep,
+    input wire i_jpeg_tvalid,
+    output wire o_jpeg_tready,
+    input wire i_jpeg_tlast,
+
+    // 编码结果
+    input wire i_result_valid,
+    output wire o_result_ready,
+    input wire [31:0] i_result_id,
+    input wire i_result_ok,
+    input wire [24:0] i_result_length,
+
+    // DFI-domain writer completion, after all promised AXI writes and drain.
+    // Encoding RESULT acceptance above is only a fence, not this completion.
+    output wire o_write_result_valid,
+    input wire i_write_result_ready,
+    output wire o_write_result_ok,
+    output wire [7:0] o_write_result_error,
+    output wire [31:0] o_write_result_capture_id,
+    output wire [31:0] o_write_result_session,
+    output wire [31:0] o_write_result_epoch,
+    output wire o_write_result_camera,
+    output wire [15:0] o_write_result_slot,
+    output wire [31:0] o_write_result_generation,
+    output wire [24:0] o_write_result_payload_length,
+    output wire [31:0] o_write_result_tag,
+
+    // 待发送帧描述
+    output wire o_ready_valid,
+    input wire i_ready_claim,
+    output wire [31:0] o_capture_id,
+    output wire [24:0] o_payload_length,
+    output wire [15:0] o_width,
+    output wire [15:0] o_height,
+    output wire [63:0] o_timestamp_ns,
+
+    // 载荷输出流
+    output wire [127:0] o_payload_tdata,
+    output wire [15:0] o_payload_tkeep,
+    output wire o_payload_tvalid,
+    input wire i_payload_tready,
+    output wire o_payload_tlast,
+
+    // 错误与统计
+    output wire o_drop_pulse,
+    output wire o_read_done_pulse,
+    output wire [7:0] o_error_code,
+    output wire o_stream_recovery_required, // 读取故障后禁止继续发布帧
+    output wire [3:0] o_state,
+    output wire [15:0] o_wr_burst_count,
+    output wire [15:0] o_rd_burst_count,
+    output wire [15:0] o_berr_count,
+    output wire [15:0] o_rerr_count,
+    output wire [15:0] o_drop_count,
+    output wire [27:0] o_last_error_addr,
+
+    // AXI写地址
+    output wire [3:0] o_axi_awid,
+    output wire [27:0] o_axi_awaddr,
+    output wire [7:0] o_axi_awlen,
+    output wire [2:0] o_axi_awsize,
+    output wire [1:0] o_axi_awburst,
+    output wire o_axi_awvalid,
+    input wire i_axi_awready,
+
+    // AXI写数据
+    output wire [127:0] o_axi_wdata,
+    output wire [15:0] o_axi_wstrb,
+    output wire o_axi_wlast,
+    output wire o_axi_wvalid,
+    input wire i_axi_wready,
+
+    // AXI写响应
+    input wire [3:0] i_axi_bid,
+    input wire [1:0] i_axi_bresp,
+    input wire i_axi_bvalid,
+    output wire o_axi_bready,
+
+    // AXI读地址
+    output wire [3:0] o_axi_arid,
+    output wire [27:0] o_axi_araddr,
+    output wire [7:0] o_axi_arlen,
+    output wire [2:0] o_axi_arsize,
+    output wire [1:0] o_axi_arburst,
+    output wire o_axi_arvalid,
+    input wire i_axi_arready,
+
+    // AXI读数据
+    input wire [3:0] i_axi_rid,
+    input wire [127:0] i_axi_rdata,
+    input wire [1:0] i_axi_rresp,
+    input wire i_axi_rlast,
+    input wire i_axi_rvalid,
+    output wire o_axi_rready,
+    // All identity/control/retirement ports belong to i_clk (DFI), not PCIe.
+    input wire [31:0] i_session_id, i_mode_epoch,
+    input wire i_camera_id,
+    input wire [7:0] i_quality, i_result_quality,
+    input wire [31:0] i_result_epoch,
+    output wire [15:0] o_slot_id,
+    output wire [31:0] o_generation, o_session_id, o_mode_epoch,
+    output wire o_camera_id,
+    output wire [7:0] o_quality,
+    input wire i_retire_valid,
+    output wire o_retire_ready,
+    input wire [31:0] i_retire_session, i_retire_generation,
+    input wire [15:0] i_retire_slot,
+    input wire i_retire_error,
+    output wire o_retire_rsp_valid,
+    input wire i_retire_rsp_ready,
+    output wire [3:0] o_retire_rsp_code,
+    output wire o_read_complete,
+    // True DFI local record ownership/drain proof; READY is not quiet.
+    output wire o_record_quiescent,
+    output wire o_write_quiescent,
+    output wire o_read_error,
+    input wire i_req_valid,
+    output wire o_req_ready,
+    input wire [1:0] i_req_op,
+    input wire i_req_camera,
+    input wire [15:0] i_req_slot,
+    input wire [31:0] i_req_generation, i_req_session,
+    output wire o_rsp_valid,
+    input wire i_rsp_ready,
+    output wire [3:0] o_rsp_code,
+    output wire [15:0] o_rsp_slot,
+    output wire [31:0] o_rsp_generation, o_rsp_session, o_rsp_epoch, o_rsp_capture_id,
+    output wire o_rsp_camera,
+    output wire [7:0] o_rsp_quality,
+    output wire [15:0] o_rsp_width, o_rsp_height,
+    output wire [24:0] o_rsp_payload_length,
+    output wire o_rsp_pinned,
+    output wire [2:0] o_rsp_state,
+    // Optional mask: allocation is an atomic START take, not a second owner.
+    input wire i_start_mask,i_mask_allocation_ready,
+    input wire [2:0] i_start_source_type,
+    output wire o_mask_allocation_valid,
+    output wire [15:0] o_mask_allocation_slot,
+    output wire [31:0] o_mask_allocation_generation,
+    output wire [27:0] o_mask_allocation_base,
+    output wire [24:0] o_mask_allocation_bytes,
+    input wire i_mask_result_valid,
+    output wire o_mask_result_ready,
+    input wire [159:0] i_mask_result_context,
+    input wire [31:0] i_mask_result_tag,i_mask_result_generation,
+    input wire [15:0] i_mask_result_slot,
+    input wire i_mask_result_ok,
+    input wire [7:0] i_mask_result_error,
+    input wire [12:0] i_mask_result_width,i_mask_result_height,
+    input wire [16:0] i_mask_result_written_bytes,
+    input wire [47:0] i_mask_result_terminal_body,
+    input wire i_req_mask,i_req_read_lock,i_mask_read_lease_release,
+    output wire o_mask_read_lease_active,
+    output wire o_rsp_read_authorized,
+    output wire o_rsp_mask_present,o_rsp_mask_pinned,
+    output wire [27:0] o_rsp_mask_tail_base
+);

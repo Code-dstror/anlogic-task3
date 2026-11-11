@@ -1,0 +1,6 @@
+interface:
+  display_name: "TD Technical Document Toolkit"
+  short_description: "Read and verify TD manuals, forms, and result grids"
+  default_prompt: "Use $pdf-doc-toolkit to extract and visually verify this TD or vendor technical document."
+policy:
+  allow_implicit_invocation: true

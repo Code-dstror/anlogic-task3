@@ -1,0 +1,11 @@
+{
+  "production_merge": {
+    "status": "PASS",
+    "markers": [
+      "MERGE_PASS paired_groups=2284 throttled_groups=160 stall_cycles=97 recovery_groups=128"
+    ]
+  },
+  "input_identity": {
+    "status": "PASS"
+  }
+}

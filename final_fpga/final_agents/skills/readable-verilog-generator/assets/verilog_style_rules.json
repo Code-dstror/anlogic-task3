@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "generated_date": "2026-06-16",
+    "scope": "Verilog-2001 project coding/comment/naming convention"
+  },
+  "files": {
+    "extensions": [
+      ".v"
+    ],
+    "indent": "tab",
+    "trailing_comment_column": 49,
+    "include_fragments_formatted_by_default": false,
+    "standard_preamble": "`timescale 1ns / 1ps`"
+  },
+  "profiles": {
+    "formatter-preserve": "preserve structure; no port/param sorting; no prefix autofix; no always split; no inline wire rewrite",
+    "formatter-normalize": "force structural renderer; may rename/reorder/split/add bridges/rebuild header",
+    "formatter-lint": "never rewrite; lint/check only",
+    "vitis-wrapper": "preserve AMD/Vitis ABI top-level ports"
+  },
+  "naming": {
+    "input_prefix": "i_",
+    "output_prefix": "o_",
+    "inout_prefix": "io_",
+    "parameter_prefix": "C_",
+    "state_param_prefix": "ST_",
+    "register_prefix": "reg_",
+    "counter_prefix": "cnt_",
+    "state_signal_prefix": "state_",
+    "encoder_prefix": "enc_",
+    "decoder_prefix": "dec_",
+    "flag_prefix": "flag_",
+    "internal_output_suffix": "_o",
+    "digit_token_allowlist": [
+      "i2c",
+      "axi4",
+      "axi4lite",
+      "crc8",
+      "crc16",
+      "crc32",
+      "crc64",
+      "ddr2",
+      "ddr3",
+      "ddr4",
+      "ddr5",
+      "pcie3",
+      "pcie4",
+      "pcie5",
+      "sfp28",
+      "ad9361",
+      "sha1",
+      "sha2",
+      "sha256",
+      "md5",
+      "10g",
+      "25g",
+      "40g",
+      "100g"
+    ],
+    "semantic_prefixes": [
+      "i_",
+      "o_",
+      "io_",
+      "C_",
+      "ST_",
+      "reg_",
+      "cnt_",
+      "state_",
+      "flag_",
+      "enc_",
+      "dec_"
+    ],
+    "semantic_suffixes": [
+      "_o"
+    ],
+    "meaningless_tokens": [
+      "tmp",
+      "temp",
+      "foo",
+      "bar",
+      "baz",
+      "dummy",
+      "placeholder",
+      "todo",
+      "xxx",
+      "unnamed",
+      "unknown",
+      "misc",
+      "other",
+      "sig",
+      "signal",
+      "var",
+      "variable",
+      "wire",
+      "reg",
+      "register",
+      "logic",
+      "net"
+    ],
+    "forbidden_duplicate_prefixes": [
+      "C_C_",
+      "ST_ST_",
+      "reg_reg_",
+      "cnt_cnt_",
+      "flag_flag_",
+      "enc_enc_",
+      "dec_dec_",
+      "state_state_"
+    ],
+    "default_clock": "i_clk",
+    "default_reset": "i_rstn",
+    "reset_polarity": "active_low",
+    "protocol_clock_reset_recommendations": {
+      "axi": {
+        "clock": "i_axi_aclk",
+        "reset": "i_axi_arstn"
+      },
+      "axis": {
+        "clock": "i_axis_aclk",
+        "reset": "i_axis_arstn"
+      },
+      "ahb": {
+        "clock": "i_ahb_hclk",
+        "reset": "i_ahb_hrstn"
+      },
+      "apb": {
+        "clock": "i_apb_pclk",
+        "reset": "i_apb_prstn"
+      }
+    }
+  },
+  "regions": [
+    "function_block",
+    "task_block",
+    "config_param",
+    "state_param",
+    "instance_signal",
+    "counter_signal",
+    "state_signal",
+    "register_signal",
+    "flag_signal",
+    "encoder_signal",
+    "decoder_signal",
+    "other_signal",
+    "output_internal",
+    "other_assign",
+    "output_assign",
+    "output_always",
+    "state_machine",
+    "state_task",
+    "main_task",
+    "generate_block",
+    "initial_block",
+    "instance_block",
+    "parameter_check"
+  ],
+  "declaration_layout": {
+    "region_priority": [
+      "output_internal",
+      "counter_signal",
+      "state_signal",
+      "flag_signal",
+      "encoder_signal",
+      "decoder_signal",
+      "register_signal",
+      "instance_signal",
+      "other_signal"
+    ],
+    "banner_to_first_group_blank_lines": 0,
+    "group_comment_to_first_statement_blank_lines": 0,
+    "between_definition_groups_blank_lines": 1,
+    "region_trailing_blank_lines": 1,
+    "empty_groups_forbidden": true,
+    "two_pass_byte_idempotence_required": true
+  },
+  "comments": {
+    "line_comments_only": true,
+    "block_comments_allowed": false,
+    "language": "Chinese first; keep identifiers/protocol/timing terms as-is",
+    "forbidden_version_markers": [
+      "vN",
+      "vN.N",
+      "verN",
+      "versionN",
+      "version N",
+      "版本N",
+      "版本 N"
+    ],
+    "version_marker_case_insensitive": true,
+    "version_marker_exemption": "formatter-recognized fixed bilingual header and revision-history range only",
+    "placement_rules": {
+      "forbid_block_comments": "Any /* or */ marker is forbidden in deliverable Verilog.",
+      "same_line_entities": [
+        "parameter",
+        "localparam",
+        "input",
+        "output",
+        "inout",
+        "reg",
+        "wire",
+        "integer",
+        "real",
+        "assign",
+        "procedural_assignment",
+        "instance_parameter_mapping",
+        "instance_port_mapping"
+      ],
+      "same_line_alignment": "Trailing // comments align to the current region banner right-side // display column; when code is longer, // may move right but never left of that anchor.",
+      "block_leading_comments": [
+        "always",
+        "function",
+        "task",
+        "generate",
+        "initial"
+      ],
+      "leading_comment_spacing": "A block, definition-group, or instance-purpose comment is immediately above its target, aligns to the target start column, and has exactly one blank line above unless it directly follows a region banner.",
+      "case_branch_leading_comments": "Inside `case(state_current)`, every `ST_*:begin` and `default:begin` branch uses a pure leading comment immediately above the branch label, aligned with the label column, and follows the same one-blank-line-or-region-banner rule as other leading comments.",
+      "assign_group_spacing": "If a pure comment introduces an assign subgroup, it is optional, but once written it must have exactly one blank line above when preceded by code; stacked pure comments or a directly preceding region banner remain valid exceptions.",
+      "definition_group_comments": "Parameter and signal definition groups require a pure group comment above the group; a region banner does not satisfy this requirement.",
+      "instance_comments": "Each module instance requires a pure function comment above it, and each .formal(actual) mapping requires a same-line semantic comment."
+    },
+    "fallback_comments": [
+      "parameter",
+      "port signal",
+      "signal",
+      "assign",
+      "output bridge",
+      "internal output signal"
+    ],
+    "semantic_reuse": {
+      "diagnostic_code": "VG066",
+      "strict_severity": "error",
+      "non_strict_severity": "warning",
+      "minimum_chinese_chars": 4,
+      "near_duplicate_similarity_threshold": 0.94,
+      "covered_entities": [
+        "parameter",
+        "localparam",
+        "port",
+        "signal",
+        "assign",
+        "procedural_assignment",
+        "instance_parameter_mapping",
+        "instance_port_mapping",
+        "block_leading_comment",
+        "instance_leading_comment"
+      ],
+      "exempt_navigation_comments": [
+        "standard_region_banner",
+        "file_header_field",
+        "definition_group_comment"
+      ],
+      "normalization": [
+        "strip decorative separators",
+        "remove zero-width characters",
+        "normalize unicode width",
+        "drop numbering noise",
+        "drop identifier-only noise"
+      ]
+    },
+    "semantic_integrity": {
+      "diagnostic_code": "VG150",
+      "workflow_evidence_markers": [
+        "图谱审核",
+        "图谱证据",
+        "审核证据",
+        "评审验证",
+        "评审证据",
+        "测试流程",
+        "测试证据",
+        "验证步骤",
+        "验证证据",
+        "回归证据",
+        "流程证据",
+        "证据链",
+        "质量门证据",
+        "验证报告"
+      ],
+      "rotation_tail": {
+        "minimum_family_size": 8,
+        "minimum_distinct_tails": 4,
+        "minimum_chinese_prefix_chars": 4,
+        "tail_minimum_length": 4,
+        "tail_maximum_length": 8,
+        "minimum_variable_positions": 3,
+        "period_minimum": 2,
+        "period_maximum": 4,
+        "minimum_complete_cycles": 2,
+        "short_tail_minimum_length": 2
+      }
+    },
+    "annotation_pipeline": [
+      "format baseline",
+      "comment draft",
+      "verify comment-only",
+      "format final",
+      "verify comment-only"
+    ]
+  },
+  "runtime_messages": {
+    "human_readable_display_prefixes": [
+      " > INFO: [Verilog]",
+      " > WARNING: [Verilog]",
+      " > ERR: [Verilog]"
+    ],
+    "machine_transcript_prefixes": [
+      "VERILOG-GEN-RESULT"
+    ],
+    "parameter_check_final_internal_region": true,
+    "emit_parameter_check_only_with_provable_constraints": true
+  },
+  "generic_repeated_endpoints": {
+    "group_comment_truth_source": true,
+    "require_group_explanation_comment": true,
+    "exactly_one_blank_line_between_groups": true,
+    "low_confidence_classification": "error"
+  },
+  "output_mirror": {
+    "source_of_truth": "module_interface_output_groups",
+    "regions": [
+      "输出信号",
+      "输出信号连线",
+      "输出信号处理区域"
+    ],
+    "require_exact_group_label_match": true,
+    "require_exact_order_match": true
+  },
+  "statements": {
+    "port_kind_keywords_in_header": "forbidden in final style",
+    "inline_wire_assign": "forbidden; split into wire declaration plus assign",
+    "internal_reg_default_init": "module-internal non-array reg declarations must carry an explicit initializer; missing-init normalize path uses exact ` = 0;`",
+    "always_single_target": true,
+    "sequential_reset": "posedge clock or negedge active-low reset",
+    "fsm": "project requires three-segment FSM; formatter enforcement is partial",
+    "fsm_next_state_hold": "Default `state_next <= state_current;` before branch overrides; legacy `state_next = state_current;` remains gate-compatible during migration.",
+    "fsm_next_state_branch_closure": "Every if / else if chain in next-state combinational logic must end with an explicit else branch.",
+    "fsm_next_state_operator_style": "Prefer `state_next <= ...;` for newly generated next-state combinational logic; do not mass-rewrite legacy `=` solely for gate compatibility.",
+    "instances_last": true,
+    "parameter_check_overrides_instances_last": true
+  },
+  "protocols": {
+    "standard_bus_families": [
+      "axi",
+      "axis",
+      "apb",
+      "ahb",
+      "uart",
+      "spi",
+      "i2c"
+    ],
+    "axi_sections": [
+      "clock_reset",
+      "aw",
+      "w",
+      "b",
+      "ar",
+      "r",
+      "other"
+    ],
+    "axis_sections": [
+      "clock_reset",
+      "slave",
+      "master",
+      "control",
+      "data",
+      "other"
+    ],
+    "apb_sections": [
+      "clock_reset",
+      "request",
+      "response"
+    ],
+    "ahb_sections": [
+      "clock_reset",
+      "request",
+      "response"
+    ],
+    "axis_repeated_endpoint_contract": {
+      "global_groups": [
+        "时钟信号",
+        "复位信号"
+      ],
+      "slave_endpoint_pattern": "AXI-Stream Slave接口N",
+      "master_endpoint_pattern": "AXI-Stream Master接口",
+      "endpoint_subgroups": [
+        "控制通道",
+        "数据通道"
+      ]
+    },
+    "known_protocols": [
+      "axi",
+      "axis",
+      "apb",
+      "ahb",
+      "wishbone",
+      "uart",
+      "spi",
+      "i2c",
+      "gmii",
+      "rgmii"
+    ]
+  },
+  "known_differences": [
+    "packed width and identifier may be rendered without a separating space",
+    "flag semantic terms end/req/ack require generator/manual naming; formatter may not infer all",
+    "protocol-specific clock/reset names require generator/user override",
+    "instance naming convention is project-level, not strongly formatter-enforced",
+    "C model/range width inference is outside formatter scope"
+  ]
+}

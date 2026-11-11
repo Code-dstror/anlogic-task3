@@ -1,0 +1,20 @@
+{
+  "sources": [
+    "src_fpga/rtl/td_sdp_ram40.v",
+    "src_fpga/rtl/hdr_pair_directory.v",
+    "src_fpga/rtl/stereo_raw_owner.v",
+    "src_fpga/rtl/stereo_raw_reader.v",
+    "src_fpga/rtl/stereo_raw_store.v",
+    "src_fpga/rtl/raw_video_record_formatter.v",
+    "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v",
+    "src_fpga/rtl/raw10_frame_replay.v"
+  ],
+  "td_models": [
+    "sim_release/common/al_phy_glbl.v",
+    "sim_release/ph1/ph1_logic_eram.v",
+    "sim_release/ph1/ph1_phy_eram.v",
+    "sim_release/ph1/ph1_phy_gsr.v"
+  ],
+  "include": ["src_fpga/rtl/include/00_rtl"],
+  "defines": ["PH1"]
+}

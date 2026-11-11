@@ -1,0 +1,51 @@
+{
+  "status": "CANCELLED_NOT_ADOPTED",
+  "date": "2026-10-31",
+  "reason": "Latest user instruction prioritizes delivery; restore fixed ed50 R6 and stop further optimization.",
+  "production_restored": {
+    "lane_ridge_candidates1_lutram.v": "083ab004ce26268fc712fd33b702b732874ba831271120ae349021c795f70ecc",
+    "lane_sparse_serial4.v": "eb0160f880f729e4c5adf4026f3567aa127f57ede9908e828f5ad721fae61865",
+    "lane_quarter_fifo4_to1.v": "7fadebb9b90e4f846894a48b670d3d550cdd4edcebb146bd3adea71e9974f0e8"
+  },
+  "simulation_completed_before_cancel": [
+    "width2_leaf_r1 PASS: FIFO peak183/256, max303/golden allwords/geometry/SOURCE/LOCAL/cancel/recovery; fixed ed50 AB14frames",
+    "width2_shared_r1 PASS: five complete1080p native frames,648000 scalar samples bitexact plus C1 candidates, SOURCE bad-good recovery"
+  ],
+  "synthesis": "CANCELLED_BY_USER; no area claim",
+  "place_route": "NOT_RUN",
+  "timing": "NOT_RUN",
+  "board": "NOT_RUN",
+  "stopped_processes": [
+    {
+      "pid": 53864,
+      "name": "td_commands_prompt.exe",
+      "role": "old tiny root"
+    },
+    {
+      "pid": 37208,
+      "name": "td_commands_prompt.exe",
+      "role": "new tiny root"
+    },
+    {
+      "pid": 34220,
+      "name": "run.exe",
+      "parent": 53864
+    },
+    {
+      "pid": 6124,
+      "name": "run.exe",
+      "parent": 37208
+    }
+  ],
+  "experiment_source_archive": {
+    "lane_ridge_candidates1_lutram.v.txt": "a9b7392a84b0ff13d96ce280b088806238c3b5e43abea5ba77ffe725c52c62f3",
+    "lane_sparse_serial4.v.txt": "e70f6fe8f4788e009626862e242c3b40e38f9f76ed10c7177a90d342b2627c60"
+  },
+  "evidence_root": "tmp/lane_width2",
+  "first_tiny_fixture": "area_ab_r1 old failed MapIO >148 pins; original failure retained; no production defect",
+  "process_exit_confirmed": "4/4 stopped IDs absent after termination",
+  "tiny_wrapper_exit_codes": {
+    "old": 4294967295,
+    "new": 4294967295
+  }
+}

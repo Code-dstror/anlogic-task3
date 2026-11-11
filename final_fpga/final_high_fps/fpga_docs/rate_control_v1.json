@@ -1,0 +1,15 @@
+{
+  "abi_version": 1,
+  "registers": {
+    "CAPABILITIES": 4016,
+    "REQUEST": 4020,
+    "ACTIVE": 4024
+  },
+  "codes": {
+    "LEGACY": 0,
+    "FPS40": 1,
+    "FPS45": 2,
+    "FPS48": 3
+  },
+  "legacy_30_sensor_profile": 4
+}

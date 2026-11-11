@@ -1,0 +1,31 @@
+{
+  "commit": "7c28d73f275d98c00c21adab6577d6113264472e",
+  "repository": "https://github.com/matlab/matlab-agentic-toolkit",
+  "installed": [
+    "matlab-read-documentation",
+    "matlab-analyze-data",
+    "matlab-import-export-data",
+    "matlab-process-images",
+    "matlab-review-fi-object-code"
+  ],
+  "local_adaptations": [
+    {
+      "skill": "matlab-read-documentation",
+      "change": "Move upstream keywords into metadata for Codex frontmatter compatibility; trim trailing spaces and use LF; instructions unchanged",
+      "before_sha256": "37fec3c7357eac2265ba03567c87f621e798e28c40402615fd3d924f26c76bb3",
+      "after_sha256": "5f221e806a376c888742f96d89168ef42dae5c06f04947272bd864b62b57697c"
+    },
+    {
+      "path": ".agents/skills/matlab-analyze-data/references/array-and-grid-data.md",
+      "change": "Trim upstream trailing spaces; content unchanged",
+      "before_sha256": "559e1baa32f697c304d8d0b7070a47a8e8be7df8aa1a3a5ebe8b0ed64b375da0",
+      "after_sha256": "3db62fa15ec69ca5bf0571f8df8d5bea760f81ac74523db59de2666666487898"
+    },
+    {
+      "path": ".agents/skills/matlab-process-images/references/3d-volume-processing.md",
+      "change": "Trim upstream trailing spaces; content unchanged",
+      "before_sha256": "e92e3b53a9bcc2a9dd55283c0dfd01808c3379ec131f4b6ba8a4a2a6bdc43783",
+      "after_sha256": "e2bc0d98372dfe40ad268c5b6f379862a41f6db1c29998ac71f512f390a59ffd"
+    }
+  ]
+}

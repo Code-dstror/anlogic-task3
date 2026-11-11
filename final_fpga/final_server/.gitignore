@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+dist/
+server/td/local/
+network-auth.json
+github-https.credentials

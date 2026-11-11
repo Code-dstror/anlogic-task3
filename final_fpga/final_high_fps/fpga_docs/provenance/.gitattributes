@@ -1,0 +1,20 @@
+# Preserve the exact bytes bound by the candidate's simulation and IP manifests.
+* -text !eol whitespace=trailing-space,space-before-tab,cr-at-eol
+src_fpga/ip/** -whitespace
+verification_reference/** -whitespace
+src_fpga/simulation/assets/** -whitespace
+docs/validation/** -whitespace
+docs/validation_uhd3/** -whitespace
+docs/validation_20261110/** -whitespace
+docs/optimization_r2_20261110/evidence/** -whitespace
+docs/optimization_r2_20261110/eade_synthesis/** -whitespace
+fpga_prj/constraints/anlogic2026.adc -whitespace
+src_fpga/rtl/c2h_native_rx_ph1a_bridge.v -whitespace
+src_fpga/rtl/c2h_ph1a_bridge.v -whitespace
+src_fpga/rtl/full_filter_multiscale4.v -whitespace
+src_fpga/rtl/imx415_sensor_pll_25m.v -whitespace
+src_fpga/rtl/jpeg_frame_ring.v -whitespace
+src_fpga/rtl/mono_config_engine_v2.v -whitespace
+# Unchanged receiver derivatives retain the fixed parent's whitespace bytes.
+src_fpga/rtl/csi_rx_byte_align_observed.v -whitespace
+src_fpga/rtl/csi_rx_word_align_observed.v -whitespace

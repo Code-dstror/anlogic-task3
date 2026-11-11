@@ -1,0 +1,932 @@
+{
+  "exact_reviews": [
+    {
+      "authoritative_location": "",
+      "decision": "keep",
+      "evidence": {
+        "locations": [
+          {
+            "block_index": "1",
+            "path": "references/integration/configuration.md",
+            "preview": "## Table of Contents"
+          },
+          {
+            "block_index": "1",
+            "path": "references/integration/host-integration.md",
+            "preview": "## Table of Contents"
+          },
+          {
+            "block_index": "1",
+            "path": "references/rules/erie-style.md",
+            "preview": "## Table of Contents"
+          },
+          {
+            "block_index": "1",
+            "path": "references/workflows/workflow-contracts.md",
+            "preview": "## Table of Contents"
+          }
+        ],
+        "sha256": "8f69bcfd17f83a1341b4065d1d216e505044e8d06d131085b9aa1fb2dcebb94d"
+      },
+      "id": "exact.8f69bcfd17f83a13",
+      "rationale": "Table of Contents 是各自权威文档的结构导航，不复制合同正文，跨文档合并会破坏局部可读性。"
+    },
+    {
+      "authoritative_location": "",
+      "decision": "keep",
+      "evidence": {
+        "locations": [
+          {
+            "block_index": "7",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "10",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "20",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "29",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "43",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "66",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "96",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "110",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "124",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "132",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "145",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "155",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "167",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "195",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "198",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "209",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "212",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "216",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          },
+          {
+            "block_index": "228",
+            "path": "references/rules/verilog-code-comment-naming-standard.md",
+            "preview": "---"
+          }
+        ],
+        "sha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b"
+      },
+      "id": "exact.cb3f91d54eee30e5",
+      "rationale": "分隔线用于单一长规则书的章节结构与阅读定位，不承载可独立合并的知识语义。"
+    }
+  ],
+  "fuzzy_reviews": [],
+  "interface_reviews": [
+    {
+      "command_ids": [
+        "toolchain.dependencies-install"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--allow-fpga-agent-fallback"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.audit",
+        "installer.smoke"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "安装验证器从 case 和清单路径读取该参数，不把当前目标目录写入产品逻辑。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--cases"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.projection",
+        "installer.audit"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "平台目录是安装目标解析的唯一适配权威源。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--catalog"
+    },
+    {
+      "command_ids": [
+        "registry.ask"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--category"
+    },
+    {
+      "command_ids": [
+        "registry.document-governance"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/skill/script-guide.md"
+      ],
+      "value": "--confirm-user"
+    },
+    {
+      "command_ids": [
+        "toolchain.dependencies-install"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--dependency-id"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "dry-run 是公开只读事务开关，禁止创建安装副作用。",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--dry-run"
+    },
+    {
+      "command_ids": [
+        "registry.document-governance"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/skill/script-guide.md"
+      ],
+      "value": "--enable"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.projection"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "跨入口启动器只读取清单声明的 env 投影输出位置。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--env-output"
+    },
+    {
+      "command_ids": [
+        "workflow.evaluate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--evals"
+    },
+    {
+      "command_ids": [
+        "validation.generated-deliverable",
+        "quality.verilog"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "外部接口源只补充 VG097 静态接口事实，不替代目标 RTL 或外部工具证据。",
+      "sources": [
+        "SKILL.md",
+        "references/skill/script-guide.md"
+      ],
+      "value": "--external-interface-source"
+    },
+    {
+      "command_ids": [
+        "registry.ask",
+        "registry.document-governance",
+        "validation.generated-deliverable",
+        "quality.verilog",
+        "installer.skill-install"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md",
+        "references/rules/verilog-code-comment-naming-standard.md",
+        "references/skill/script-guide.md"
+      ],
+      "value": "--json"
+    },
+    {
+      "command_ids": [
+        "registry.ask"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--kind"
+    },
+    {
+      "command_ids": [
+        "workflow.write-spec"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "write-spec 以显式语言选项决定 *_spec.md 的文档语言。",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--language"
+    },
+    {
+      "command_ids": [
+        "registry.ask"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--limit"
+    },
+    {
+      "command_ids": [
+        "external.verilator-lint"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/checklists/lint-checklist.md"
+      ],
+      "value": "--lint-only"
+    },
+    {
+      "command_ids": [
+        "quality.external-interface-manifest",
+        "installer.projection",
+        "installer.audit"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "manifest 只由项目 IP 接口渲染子命令读取。",
+      "sources": [
+        "references/skill/installation.md",
+        "references/skill/script-guide.md"
+      ],
+      "value": "--manifest"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.smoke"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "入口后端通过 manifest-env 绑定包内摘要和路径哈希。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--manifest-env"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.projection"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "开发阶段显式生成清单投影，运行时不从外部治理包回退。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--manifest-output"
+    },
+    {
+      "command_ids": [
+        "validation.generated-deliverable",
+        "quality.verilog"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md",
+        "references/rules/verilog-code-comment-naming-standard.md"
+      ],
+      "value": "--markdown"
+    },
+    {
+      "command_ids": [
+        "workflow.run",
+        "workflow.batch"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "command provider 必须通过该选项取得显式外部命令，缺失时 fail closed。",
+      "sources": [
+        "references/workflows/workflow-contracts.md"
+      ],
+      "value": "--model-command"
+    },
+    {
+      "command_ids": [
+        "workflow.run",
+        "workflow.batch"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "两个生成入口共享 mock、manual、command provider 选择合同。",
+      "sources": [
+        "references/workflows/workflow-contracts.md"
+      ],
+      "value": "--model-provider"
+    },
+    {
+      "command_ids": [
+        "workflow.run",
+        "workflow.batch"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "该超时限制 command provider 的单次外部调用。",
+      "sources": [
+        "references/workflows/workflow-contracts.md"
+      ],
+      "value": "--model-timeout"
+    },
+    {
+      "command_ids": [
+        "quality.external-interface-extract"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "module 白名单限制 vendor 源提取范围并使缺失或重复定义 fail closed。",
+      "sources": [
+        "references/skill/script-guide.md"
+      ],
+      "value": "--module"
+    },
+    {
+      "command_ids": [
+        "workflow.validate",
+        "workflow.run",
+        "workflow.batch",
+        "workflow.verify-existing"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md",
+        "references/workflows/workflow-contracts.md"
+      ],
+      "value": "--no-external"
+    },
+    {
+      "command_ids": [
+        "validation.skill"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--no-require-remote"
+    },
+    {
+      "command_ids": [
+        "workflow.run",
+        "workflow.batch"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "该选项显式关闭 provider 流式消费，与 --stream 形成布尔对偶。",
+      "sources": [
+        "references/workflows/workflow-contracts.md"
+      ],
+      "value": "--no-stream"
+    },
+    {
+      "command_ids": [
+        "validation.generated-deliverable",
+        "quality.verilog"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md",
+        "references/workflows/verilog_dispatcher.md"
+      ],
+      "value": "--non-strict"
+    },
+    {
+      "command_ids": [
+        "workflow.route",
+        "workflow.scaffold",
+        "workflow.prompt",
+        "workflow.evaluate",
+        "generation.corpus-analysis"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--out"
+    },
+    {
+      "command_ids": [
+        "workflow.write-spec"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "write-spec 只把规范与 WaveDrom 伴随包写入调用方显式指定的产物根。",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--out-dir"
+    },
+    {
+      "command_ids": [
+        "quality.external-interface-extract",
+        "quality.external-interface-manifest",
+        "installer.projection"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "两个 stub 子命令只写入调用方显式指定的 Verilog 输出文件。",
+      "sources": [
+        "references/skill/installation.md",
+        "references/skill/script-guide.md"
+      ],
+      "value": "--output"
+    },
+    {
+      "command_ids": [
+        "workflow.validate",
+        "toolchain.preflight"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--readiness"
+    },
+    {
+      "command_ids": [
+        "validation.skill"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--remote-server"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.audit",
+        "installer.smoke"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "真实 wrapper 写入自动把该标记传给后端，已有目标在原子切换前进入受管备份。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--replace"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.audit",
+        "installer.smoke"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "验证报告路径必须由调用者提供，避免写入源或安装根。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--report"
+    },
+    {
+      "command_ids": [
+        "workflow.validate",
+        "workflow.review"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/rules/verilog-code-comment-naming-standard.md",
+        "references/workflows/verilog_dispatcher.md"
+      ],
+      "value": "--report-json"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--report-runs"
+    },
+    {
+      "command_ids": [
+        "quality.comment-only"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/rules/verilog-code-comment-naming-standard.md"
+      ],
+      "value": "--require-comment-delta"
+    },
+    {
+      "command_ids": [
+        "validation.skill"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--require-remote"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "精确 outer run 查询属于 remote.validate 的证据绑定接口。",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--run-id"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--server"
+    },
+    {
+      "command_ids": [
+        "validation.skill",
+        "toolchain.dependencies-check",
+        "toolchain.dependencies-prompt",
+        "toolchain.dependencies-skip",
+        "toolchain.dependencies-install",
+        "toolchain.dependencies-adapt",
+        "toolchain.fpga-route",
+        "toolchain.fpga-select-vendor",
+        "toolchain.fpga-cleanup",
+        "toolchain.preflight",
+        "remote.validate",
+        "remote.discover",
+        "remote.choices"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md",
+        "references/integration/configuration.md"
+      ],
+      "value": "--settings"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--simulator-backend"
+    },
+    {
+      "command_ids": [
+        "installer.skill-install",
+        "installer.projection",
+        "installer.audit",
+        "installer.smoke"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "验证和投影命令的 skill-root 是显式 containment 边界。",
+      "sources": [
+        "references/skill/installation.md"
+      ],
+      "value": "--skill-root"
+    },
+    {
+      "command_ids": [
+        "quality.external-interface-extract",
+        "installer.skill-install"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "source 只声明允许扫描的 vendor Verilog/SystemVerilog 文件或目录。",
+      "sources": [
+        "SKILL.md",
+        "references/skill/script-guide.md"
+      ],
+      "value": "--source"
+    },
+    {
+      "command_ids": [
+        "workflow.write-spec"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "write-spec 从调用方显式提供的规范 JSON 读取严格模块合同。",
+      "sources": [
+        "SKILL.md"
+      ],
+      "value": "--spec"
+    },
+    {
+      "command_ids": [
+        "toolchain.dependencies-check",
+        "toolchain.dependencies-prompt",
+        "toolchain.dependencies-skip",
+        "toolchain.dependencies-install",
+        "toolchain.dependencies-adapt",
+        "toolchain.fpga-route",
+        "toolchain.fpga-select-vendor",
+        "toolchain.fpga-cleanup"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "依赖治理的全部子命令通过共享 parser 使用该项目本地状态路径覆盖。",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--state-path"
+    },
+    {
+      "command_ids": [
+        "workflow.run",
+        "workflow.batch"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "该选项显式启用 provider 流式消费，与 --no-stream 形成布尔对偶。",
+      "sources": [
+        "references/workflows/workflow-contracts.md"
+      ],
+      "value": "--stream"
+    },
+    {
+      "command_ids": [
+        "workflow.review"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/rules/verilog-code-comment-naming-standard.md",
+        "references/workflows/verilog_dispatcher.md"
+      ],
+      "value": "--target"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "receipt 只允许绑定 TESTER 提供的 exact tests/** 提交与对应远程 retained run。",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--test-commit-sha"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--vivado-settings"
+    },
+    {
+      "command_ids": [
+        "validation.generated-deliverable",
+        "quality.verilog"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md",
+        "references/workflows/verilog_dispatcher.md"
+      ],
+      "value": "--warn-only"
+    },
+    {
+      "command_ids": [
+        "validation.skill"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--with-external-audit"
+    },
+    {
+      "command_ids": [
+        "validation.skill"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--with-repo-regression"
+    },
+    {
+      "command_ids": [
+        "workflow.evaluate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "显式工作区根只属于 eval-skill，并由该命令的 fail-closed 路径合同负责。",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--workspace-root"
+    },
+    {
+      "command_ids": [
+        "registry.build",
+        "registry.document-governance"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/skill/script-guide.md"
+      ],
+      "value": "--write"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "receipt 写入是受 retained run、source manifest 与测试提交共同约束的显式高风险输出。",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--write-test-evidence"
+    },
+    {
+      "command_ids": [
+        "remote.validate"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "references/integration/configuration.md"
+      ],
+      "value": "--write-toolchain-selection"
+    },
+    {
+      "command_ids": [
+        "toolchain.dependencies-install",
+        "toolchain.fpga-cleanup"
+      ],
+      "decision": "mapped",
+      "kind": "option",
+      "rationale": "",
+      "sources": [
+        "SKILL.md",
+        "references/integration/configuration.md",
+        "references/skill/installation.md"
+      ],
+      "value": "--yes"
+    }
+  ],
+  "schema_version": 2,
+  "status": "current",
+  "user_confirmation": "confirmed"
+}

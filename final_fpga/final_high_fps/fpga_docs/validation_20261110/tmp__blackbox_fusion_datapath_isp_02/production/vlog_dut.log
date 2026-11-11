@@ -1,0 +1,30 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:30:50 on Nov 10,2026
+vlog -L ph1 -work work "+define+PH1=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_A=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_CE=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_RST=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Y=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Z=1" <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\shared_wide_isp.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\raw_isp_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\raw_blc.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\raw_row_window.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\raw_demosaic.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\isp_line_ram_native4.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\wide_color_pipeline.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\hdr_tone96_shared4.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\gamma_lut_10to8.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\td_dsp_mult.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\hdr_merge4.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\tone96_rom0_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\tone96_rom1_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\gamma_rom_8x1024_ip_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\isp_line_ram_20x1024_ip\isp_line_ram_20x1024_ip.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_18s18s_p1\mult_18s18s_p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_18s18s_p1\RTL\mult_18s18s_p1_multiplier.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_18s18s_p1\RTL\mult_18s18s_p1_multiplier_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\fdct_mac19s14s_z33s_p34_m1p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v 
+-- Compiling module shared_wide_isp
+-- Compiling module raw_isp_top
+-- Compiling module raw_blc
+-- Compiling module raw_row_window
+-- Compiling module raw_demosaic
+-- Compiling module isp_line_ram_native4
+-- Compiling module isp_line_ram_20x1024
+-- Compiling module wide_color_pipeline
+-- Compiling module hdr_tone96_shared4
+-- Compiling module gamma_lut_10to8
+-- Compiling module td_dsp_mult
+-- Compiling module hdr_merge4
+-- Compiling module tone96_rom0
+-- Compiling module tone96_rom1
+-- Compiling module gamma_rom_8x1024_ip
+-- Compiling module isp_line_ram_20x1024_ip
+-- Compiling module mult_18s18s_p1
+-- Compiling module mult_18s18s_p1_multiplier
+-- Compiling module mult_18s18s_p1_multiplier_top
+-- Compiling module fdct_mac19s14s_z33s_p34_m1p1
+-- Compiling module fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0
+
+Top level modules:
+	shared_wide_isp
+	hdr_merge4
+End time: 18:30:50 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

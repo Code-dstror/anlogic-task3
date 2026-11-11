@@ -1,0 +1,2321 @@
+{
+  "kind": "local_verified_union_not_server_upload_status",
+  "files": [
+    {
+      "bytes": 9822,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298549.1155589,
+      "parts": [
+        {
+          "bytes": 9822,
+          "path": "chunks/44/44a0a24704f2dfae1fa4d64f1776660eeb806634b505a67cadfea1b6c2275ec0.bin",
+          "sha256": "44a0a24704f2dfae1fa4d64f1776660eeb806634b505a67cadfea1b6c2275ec0"
+        }
+      ],
+      "path": "build.tcl",
+      "sha256": "44a0a24704f2dfae1fa4d64f1776660eeb806634b505a67cadfea1b6c2275ec0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 99349,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304391.6862166,
+      "parts": [
+        {
+          "bytes": 99349,
+          "path": "chunks/99/9910e0677e613a4e2c8300430a118b3695cfeeaa9c447853d686b7fc06539401.bin",
+          "sha256": "9910e0677e613a4e2c8300430a118b3695cfeeaa9c447853d686b7fc06539401"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2.al",
+      "sha256": "9910e0677e613a4e2c8300430a118b3695cfeeaa9c447853d686b7fc06539401",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 147,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304148.4923456,
+      "parts": [
+        {
+          "bytes": 147,
+          "path": "chunks/b6/b683727c2f064e5615ca9796ecac4796a6f99a5f64e4c912d03dac157139f017.bin",
+          "sha256": "b683727c2f064e5615ca9796ecac4796a6f99a5f64e4c912d03dac157139f017"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.bitgen.begin.f",
+      "sha256": "b683727c2f064e5615ca9796ecac4796a6f99a5f64e4c912d03dac157139f017",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304221.606908,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.bitgen.end.f",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 335,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304221.604908,
+      "parts": [
+        {
+          "bytes": 335,
+          "path": "chunks/a8/a88379a5f7a0175974c822f8c2b819a1e3b4aaff2ca339294b62762b4db3adf4.bin",
+          "sha256": "a88379a5f7a0175974c822f8c2b819a1e3b4aaff2ca339294b62762b4db3adf4"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.bitgen_param.f",
+      "sha256": "a88379a5f7a0175974c822f8c2b819a1e3b4aaff2ca339294b62762b4db3adf4",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 146,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298556.0326166,
+      "parts": [
+        {
+          "bytes": 146,
+          "path": "chunks/79/79428d8363a76b6b580dfb5719bc1e6ec36da4bf487d157c32971c892aec8847.bin",
+          "sha256": "79428d8363a76b6b580dfb5719bc1e6ec36da4bf487d157c32971c892aec8847"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.opt_place.begin.f",
+      "sha256": "79428d8363a76b6b580dfb5719bc1e6ec36da4bf487d157c32971c892aec8847",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300053.4109054,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.opt_place.end.f",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 147,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300060.9249647,
+      "parts": [
+        {
+          "bytes": 147,
+          "path": "chunks/1e/1ee03a76f1a5b7cf6b5cf739a5e738efe130640349a90f5f0efcd0ddc09f7776.bin",
+          "sha256": "1ee03a76f1a5b7cf6b5cf739a5e738efe130640349a90f5f0efcd0ddc09f7776"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.opt_route.begin.f",
+      "sha256": "1ee03a76f1a5b7cf6b5cf739a5e738efe130640349a90f5f0efcd0ddc09f7776",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304140.239282,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/.opt_route.end.f",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 34695,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304317.6076467,
+      "parts": [
+        {
+          "bytes": 34695,
+          "path": "chunks/b1/b140f8f50532238349a4bd818a29c4c72606db2d95309e72743f9320efdabb60.bin",
+          "sha256": "b140f8f50532238349a4bd818a29c4c72606db2d95309e72743f9320efdabb60"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/clock_intersection.txt",
+      "sha256": "b140f8f50532238349a4bd818a29c4c72606db2d95309e72743f9320efdabb60",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 17406743,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304321.9066796,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/clock_tree.txt",
+      "sha256": "6873edf064cbe5fe87e5df3f58611cc37dd09e99641be78bfdac77ed5976f48f",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 2451,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4502456,
+      "parts": [
+        {
+          "bytes": 2451,
+          "path": "chunks/df/dffee4ef17135b7c6d7f9078744b08c8230104fd76641d09f390a11976121b14.bin",
+          "sha256": "dffee4ef17135b7c6d7f9078744b08c8230104fd76641d09f390a11976121b14"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/device_settings.json",
+      "sha256": "dffee4ef17135b7c6d7f9078744b08c8230104fd76641d09f390a11976121b14",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 685,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304322.063681,
+      "parts": [
+        {
+          "bytes": 685,
+          "path": "chunks/fb/fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a.bin",
+          "sha256": "fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/device_settings.txt",
+      "sha256": "fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 31880,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304368.0550346,
+      "parts": [
+        {
+          "bytes": 31880,
+          "path": "chunks/bc/bcc233c54869f5eeb2688545bc31ff484221f915d141c02abf14b1b7e3688c3e.bin",
+          "sha256": "bcc233c54869f5eeb2688545bc31ff484221f915d141c02abf14b1b7e3688c3e"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/high_fanout.txt",
+      "sha256": "bcc233c54869f5eeb2688545bc31ff484221f915d141c02abf14b1b7e3688c3e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 687427,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304368.1710355,
+      "parts": [
+        {
+          "bytes": 687427,
+          "path": "chunks/af/af8aff3ff7f0fb631e49ecb514f2e0992a53233c1525c2222e3ab162bfc8ac54.bin",
+          "sha256": "af8aff3ff7f0fb631e49ecb514f2e0992a53233c1525c2222e3ab162bfc8ac54"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/logic_level.rpt",
+      "sha256": "af8aff3ff7f0fb631e49ecb514f2e0992a53233c1525c2222e3ab162bfc8ac54",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 933,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304322.0616808,
+      "parts": [
+        {
+          "bytes": 933,
+          "path": "chunks/21/2192808b4495c04ac87ca70f355579cca23c25a168f304f24c63e139840d9bad.bin",
+          "sha256": "2192808b4495c04ac87ca70f355579cca23c25a168f304f24c63e139840d9bad"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/noise.csv",
+      "sha256": "2192808b4495c04ac87ca70f355579cca23c25a168f304f24c63e139840d9bad",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 2575386,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304322.0606809,
+      "parts": [
+        {
+          "bytes": 2575386,
+          "path": "chunks/dd/dd8c10ee7a3d9b5b6df468ec83348ec650f7bf22a20dcf34f7106d4b70a1a682.bin",
+          "sha256": "dd8c10ee7a3d9b5b6df468ec83348ec650f7bf22a20dcf34f7106d4b70a1a682"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/path_skew.rpt",
+      "sha256": "dd8c10ee7a3d9b5b6df468ec83348ec650f7bf22a20dcf34f7106d4b70a1a682",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 521,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304371.071058,
+      "parts": [
+        {
+          "bytes": 521,
+          "path": "chunks/03/03c63cf1e626baf7797a159b68b04391f4b860d7d6dc9336a5c10cb862ed3db0.bin",
+          "sha256": "03c63cf1e626baf7797a159b68b04391f4b860d7d6dc9336a5c10cb862ed3db0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/run_parameters.txt",
+      "sha256": "03c63cf1e626baf7797a159b68b04391f4b860d7d6dc9336a5c10cb862ed3db0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 43629313,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304313.3976142,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/timing_detail.rpt",
+      "sha256": "0e74ce041555ff181583cf59a515fa4d9d2e7afea2f896541ee27afbc937a361",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 12641498,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304371.0700579,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/timing_exception.rpt",
+      "sha256": "1e4beb46bb7987d1591331ce386f1d5686590d363e1d5ed3bc4d65a61b45dc0c",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 9625999,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304050.6315925,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/final_timing.rpt",
+      "sha256": "07ca2991aa6b94e4365dc3dc62bbe95b8d4fc9dc20e3261148ff55b52b6c2e6d",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 608,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794299979.1873782,
+      "parts": [
+        {
+          "bytes": 608,
+          "path": "chunks/f8/f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0.bin",
+          "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/place.params",
+      "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 4257,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794299979.1873782,
+      "parts": [
+        {
+          "bytes": 4257,
+          "path": "chunks/ee/ee21059b829c2bc3c473bcce01410500cdd030d5004466ce703bee1f321c77d0.bin",
+          "sha256": "ee21059b829c2bc3c473bcce01410500cdd030d5004466ce703bee1f321c77d0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/place.qor",
+      "sha256": "ee21059b829c2bc3c473bcce01410500cdd030d5004466ce703bee1f321c77d0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 95711,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300047.3228574,
+      "parts": [
+        {
+          "bytes": 95711,
+          "path": "chunks/4a/4a81cf4aac43605680101f86bea3c47befb507ba08e6b6746be0cd94ad982927.bin",
+          "sha256": "4a81cf4aac43605680101f86bea3c47befb507ba08e6b6746be0cd94ad982927"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/place_clock_utilization.txt",
+      "sha256": "4a81cf4aac43605680101f86bea3c47befb507ba08e6b6746be0cd94ad982927",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1463,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300047.2278566,
+      "parts": [
+        {
+          "bytes": 1463,
+          "path": "chunks/2d/2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e.bin",
+          "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/place_flow.status",
+      "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 4850315,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304221.4199066,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2.bit",
+      "sha256": "eee7eff50323a8a5c7ddc850d3873e1dda13473debbfe8a690bcb6bab17ac362",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 99253,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304148.032342,
+      "parts": [
+        {
+          "bytes": 99253,
+          "path": "chunks/82/8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e.bin",
+          "sha256": "8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2.prj",
+      "sha256": "8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9452,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304148.033342,
+      "parts": [
+        {
+          "bytes": 9452,
+          "path": "chunks/4f/4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0.bin",
+          "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2.tcl",
+      "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 120449,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304132.823225,
+      "parts": [
+        {
+          "bytes": 120449,
+          "path": "chunks/e3/e338b2c794ce93bd65581d69d9525a7f59f981cdb12d985dd1b2da7100bdfe4d.bin",
+          "sha256": "e338b2c794ce93bd65581d69d9525a7f59f981cdb12d985dd1b2da7100bdfe4d"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_chk.timing",
+      "sha256": "e338b2c794ce93bd65581d69d9525a7f59f981cdb12d985dd1b2da7100bdfe4d",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 5711390,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304125.2191665,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_exception.timing",
+      "sha256": "ed5bd751d6e1cff5a3527bbd12d60fff56ab9391699c98c786e732de2d96d384",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 346515,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304066.011711,
+      "parts": [
+        {
+          "bytes": 346515,
+          "path": "chunks/f9/f9f16007d0a2976ae3636420bf0348446457c0ed12ae3379c55ae56b0f44224b.bin",
+          "sha256": "f9f16007d0a2976ae3636420bf0348446457c0ed12ae3379c55ae56b0f44224b"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_phy.area",
+      "sha256": "f9f16007d0a2976ae3636420bf0348446457c0ed12ae3379c55ae56b0f44224b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 60,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304121.4971378,
+      "parts": [
+        {
+          "bytes": 60,
+          "path": "chunks/ca/caf3611275d4317c1a48facdef2158aecd01031a7e95f0b8f7ae444664750f92.bin",
+          "sha256": "caf3611275d4317c1a48facdef2158aecd01031a7e95f0b8f7ae444664750f92"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_phy.ts",
+      "sha256": "caf3611275d4317c1a48facdef2158aecd01031a7e95f0b8f7ae444664750f92",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 6280136,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300045.8958461,
+      "parts": [
+        {
+          "bytes": 6280136,
+          "path": "chunks/16/16b61151631c4f34ba10f6e24b213864545cdd968d39cabb696a41ee22473b63.bin",
+          "sha256": "16b61151631c4f34ba10f6e24b213864545cdd968d39cabb696a41ee22473b63"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_place.timing",
+      "sha256": "16b61151631c4f34ba10f6e24b213864545cdd968d39cabb696a41ee22473b63",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 60,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300045.5388434,
+      "parts": [
+        {
+          "bytes": 60,
+          "path": "chunks/be/be82baf4e7187eb10dd1db6f488159e4ee7ef6cae0937bf1171b587e4c3b5ef5.bin",
+          "sha256": "be82baf4e7187eb10dd1db6f488159e4ee7ef6cae0937bf1171b587e4c3b5ef5"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_place.ts",
+      "sha256": "be82baf4e7187eb10dd1db6f488159e4ee7ef6cae0937bf1171b587e4c3b5ef5",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9625999,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304122.0141418,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_pr.timing",
+      "sha256": "483c9c530173e24edfff1639e975e1eb4d76c1dd7aa5d6d88a7cb8b7359e16f6",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 12,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794303996.4761758,
+      "parts": [
+        {
+          "bytes": 12,
+          "path": "chunks/9e/9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd.bin",
+          "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/route.params",
+      "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1290,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794303990.4021292,
+      "parts": [
+        {
+          "bytes": 1290,
+          "path": "chunks/77/7706cc89ad314bea2ef7149dbffc5dc58cdc91569272ed7000af19a81f56e9aa.bin",
+          "sha256": "7706cc89ad314bea2ef7149dbffc5dc58cdc91569272ed7000af19a81f56e9aa"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/route.qor",
+      "sha256": "7706cc89ad314bea2ef7149dbffc5dc58cdc91569272ed7000af19a81f56e9aa",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 136834,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304132.973226,
+      "parts": [
+        {
+          "bytes": 136834,
+          "path": "chunks/e9/e954bbf3e2b24622fecc88a33a9ed2547f9eddb67bb4ff0d15514b4fc894ef5f.bin",
+          "sha256": "e954bbf3e2b24622fecc88a33a9ed2547f9eddb67bb4ff0d15514b4fc894ef5f"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/route_clock_utilization.txt",
+      "sha256": "e954bbf3e2b24622fecc88a33a9ed2547f9eddb67bb4ff0d15514b4fc894ef5f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1656,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304132.824225,
+      "parts": [
+        {
+          "bytes": 1656,
+          "path": "chunks/70/709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b.bin",
+          "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/route_flow.status",
+      "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 7009,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304221.606908,
+      "parts": [
+        {
+          "bytes": 7009,
+          "path": "chunks/5b/5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984.bin",
+          "sha256": "5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/run.log",
+      "sha256": "5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304148.4843454,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/d2/d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a.bin",
+          "sha256": "d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/run.logw",
+      "sha256": "d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 411,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304148.033342,
+      "parts": [
+        {
+          "bytes": 411,
+          "path": "chunks/e2/e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc.bin",
+          "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/run.sh",
+      "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1393,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304148.033342,
+      "parts": [
+        {
+          "bytes": 1393,
+          "path": "chunks/d9/d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de.bin",
+          "sha256": "d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/settings.cfg",
+      "sha256": "d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 344488,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304245.7180934,
+      "parts": [
+        {
+          "bytes": 344488,
+          "path": "chunks/ac/ac3fb32c108975689189c61ca885038bde71a36493bc79ef4e1a22d93a2259f6.bin",
+          "sha256": "ac3fb32c108975689189c61ca885038bde71a36493bc79ef4e1a22d93a2259f6"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/simple.area",
+      "sha256": "ac3fb32c108975689189c61ca885038bde71a36493bc79ef4e1a22d93a2259f6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9625999,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304311.8436022,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/simple.timing",
+      "sha256": "24d0a8466cae268f01498273316f6736d651caf4726a878aeefe8e3bd0616275",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 147,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296874.022439,
+      "parts": [
+        {
+          "bytes": 147,
+          "path": "chunks/4e/4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133.bin",
+          "sha256": "4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/.opt_gate.begin.f",
+      "sha256": "4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298195.0806046,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/.opt_gate.end.f",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 147,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296345.5039546,
+      "parts": [
+        {
+          "bytes": 147,
+          "path": "chunks/4e/4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133.bin",
+          "sha256": "4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/.opt_rtl.begin.f",
+      "sha256": "4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296874.021439,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/.opt_rtl.end.f",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 147,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296315.5137124,
+      "parts": [
+        {
+          "bytes": 147,
+          "path": "chunks/4e/4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133.bin",
+          "sha256": "4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/.read_design.begin.f",
+      "sha256": "4e5a2314293478ef875ca32d5d23f01ac59c26da24797dea204250eadc254133",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296345.5029547,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/.read_design.end.f",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 34695,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298261.9341624,
+      "parts": [
+        {
+          "bytes": 34695,
+          "path": "chunks/2e/2e72e0827f3e099c7373b12f205f595f9aad12736ac6e599f61d69889027a52d.bin",
+          "sha256": "2e72e0827f3e099c7373b12f205f595f9aad12736ac6e599f61d69889027a52d"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/clock_intersection.txt",
+      "sha256": "2e72e0827f3e099c7373b12f205f595f9aad12736ac6e599f61d69889027a52d",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 25925914,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298267.3542075,
+      "parts": [
+        {
+          "bytes": 8388608,
+          "path": "chunks/51/512fa4a8af26af066c792aee9d9d6ff3ebeab7f101bcfc488695061d4dc2ce5c.bin",
+          "sha256": "512fa4a8af26af066c792aee9d9d6ff3ebeab7f101bcfc488695061d4dc2ce5c"
+        },
+        {
+          "bytes": 8388608,
+          "path": "chunks/08/080c6bf9deee4b10c69ce76425f9de5f559cd75c348aa9e938001dc9350ef703.bin",
+          "sha256": "080c6bf9deee4b10c69ce76425f9de5f559cd75c348aa9e938001dc9350ef703"
+        },
+        {
+          "bytes": 8388608,
+          "path": "chunks/25/253bd3ba146f7c2610bf6b6296f3ceba4f837f76e338496468287a33b15e79b4.bin",
+          "sha256": "253bd3ba146f7c2610bf6b6296f3ceba4f837f76e338496468287a33b15e79b4"
+        },
+        {
+          "bytes": 760090,
+          "path": "chunks/cb/cb73577da8aa29b00513f510b696436046d7b1d130d25711e31328e32bba5cd0.bin",
+          "sha256": "cb73577da8aa29b00513f510b696436046d7b1d130d25711e31328e32bba5cd0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/clock_tree.txt",
+      "sha256": "97cb62abf15cdbd03cdc6935929bffadae39d685598ed76efdb130492cd9b5a3",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 2450,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298323.2696743,
+      "parts": [
+        {
+          "bytes": 2450,
+          "path": "chunks/37/37d04f9bb2c076b49c8af8a6b6d52f83d072c3532562d1274169b2902eceb67c.bin",
+          "sha256": "37d04f9bb2c076b49c8af8a6b6d52f83d072c3532562d1274169b2902eceb67c"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/device_settings.json",
+      "sha256": "37d04f9bb2c076b49c8af8a6b6d52f83d072c3532562d1274169b2902eceb67c",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 685,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298267.4522085,
+      "parts": [
+        {
+          "bytes": 685,
+          "path": "chunks/fb/fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a.bin",
+          "sha256": "fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/device_settings.txt",
+      "sha256": "fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 24122,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298306.6605356,
+      "parts": [
+        {
+          "bytes": 24122,
+          "path": "chunks/55/558e2c815a27dfba54a441390d6d664da348dff10173d715b6f1673f24292052.bin",
+          "sha256": "558e2c815a27dfba54a441390d6d664da348dff10173d715b6f1673f24292052"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/high_fanout.txt",
+      "sha256": "558e2c815a27dfba54a441390d6d664da348dff10173d715b6f1673f24292052",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 259470,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298306.7355363,
+      "parts": [
+        {
+          "bytes": 259470,
+          "path": "chunks/54/54bb2f7b533c5f6feff4ab8ad2811e929a37450d98ca4235b093a4eb844f12bb.bin",
+          "sha256": "54bb2f7b533c5f6feff4ab8ad2811e929a37450d98ca4235b093a4eb844f12bb"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/logic_level.rpt",
+      "sha256": "54bb2f7b533c5f6feff4ab8ad2811e929a37450d98ca4235b093a4eb844f12bb",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1537,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298267.4512084,
+      "parts": [
+        {
+          "bytes": 1537,
+          "path": "chunks/01/01223f4874e7a13f714b45b55c3f941465169429579d8f99840c5e90e6e76984.bin",
+          "sha256": "01223f4874e7a13f714b45b55c3f941465169429579d8f99840c5e90e6e76984"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/path_skew.rpt",
+      "sha256": "01223f4874e7a13f714b45b55c3f941465169429579d8f99840c5e90e6e76984",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 175,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298308.3625498,
+      "parts": [
+        {
+          "bytes": 175,
+          "path": "chunks/74/74a059f94beff573a45860849ecb4f043c9b05abcc7742eca76b9f26f5ac429b.bin",
+          "sha256": "74a059f94beff573a45860849ecb4f043c9b05abcc7742eca76b9f26f5ac429b"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/run_parameters.txt",
+      "sha256": "74a059f94beff573a45860849ecb4f043c9b05abcc7742eca76b9f26f5ac429b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 21975565,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298261.3731577,
+      "parts": [
+        {
+          "bytes": 8388608,
+          "path": "chunks/9b/9b1646c8d493681201c5d38b04ed65139526c022e563092efa1075ae52fa4f5c.bin",
+          "sha256": "9b1646c8d493681201c5d38b04ed65139526c022e563092efa1075ae52fa4f5c"
+        },
+        {
+          "bytes": 8388608,
+          "path": "chunks/57/57ae8e217ae10961369de5a5c142828d92addebca1d6952c2e756bef38655212.bin",
+          "sha256": "57ae8e217ae10961369de5a5c142828d92addebca1d6952c2e756bef38655212"
+        },
+        {
+          "bytes": 5198349,
+          "path": "chunks/d4/d4f90ef50040f109a8afcb091d98933f96048450d7bac9704729114e4fc646a1.bin",
+          "sha256": "d4f90ef50040f109a8afcb091d98933f96048450d7bac9704729114e4fc646a1"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/timing_detail.rpt",
+      "sha256": "ebe072b0f8b34c0046bb4ae2859ed961d4bcc296035dc339245a9b7b78c9e5dc",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 8108749,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298308.3615499,
+      "parts": [
+        {
+          "bytes": 8108749,
+          "path": "chunks/df/dffed201d340a5a4aef4ee23b6403e36b3d7fef36f6c50b1b61861a7af45cf7f.bin",
+          "sha256": "dffed201d340a5a4aef4ee23b6403e36b3d7fef36f6c50b1b61861a7af45cf7f"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/controller-reports/timing_exception.rpt",
+      "sha256": "dffed201d340a5a4aef4ee23b6403e36b3d7fef36f6c50b1b61861a7af45cf7f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1661,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298190.7365682,
+      "parts": [
+        {
+          "bytes": 1661,
+          "path": "chunks/8d/8df9b3bea22ea060bde35f25dda639b0175272b0985751da4524163b425409f1.bin",
+          "sha256": "8df9b3bea22ea060bde35f25dda639b0175272b0985751da4524163b425409f1"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/flow.status",
+      "sha256": "8df9b3bea22ea060bde35f25dda639b0175272b0985751da4524163b425409f1",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 428,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298146.8272018,
+      "parts": [
+        {
+          "bytes": 428,
+          "path": "chunks/b3/b3045dbbb85ed3e866672c3c38e9168fe40a26a23d0b05c9c56f363ea7368796.bin",
+          "sha256": "b3045dbbb85ed3e866672c3c38e9168fe40a26a23d0b05c9c56f363ea7368796"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/gate.params",
+      "sha256": "b3045dbbb85ed3e866672c3c38e9168fe40a26a23d0b05c9c56f363ea7368796",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 20657,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298146.8252017,
+      "parts": [
+        {
+          "bytes": 20657,
+          "path": "chunks/2b/2b363f6ea154d9e4e5a176a007800b98a319b39f6a9f0eb760e22b3c00fc9818.bin",
+          "sha256": "2b363f6ea154d9e4e5a176a007800b98a319b39f6a9f0eb760e22b3c00fc9818"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/gate.qor",
+      "sha256": "2b363f6ea154d9e4e5a176a007800b98a319b39f6a9f0eb760e22b3c00fc9818",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 139,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298146.8252017,
+      "parts": [
+        {
+          "bytes": 139,
+          "path": "chunks/14/14c0ccd70972a21d975cd24cfb8638c1403a0751dd2a1e267ca2ab2c416d3494.bin",
+          "sha256": "14c0ccd70972a21d975cd24cfb8638c1403a0751dd2a1e267ca2ab2c416d3494"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/gate_qor_suggestion.tcl",
+      "sha256": "14c0ccd70972a21d975cd24cfb8638c1403a0751dd2a1e267ca2ab2c416d3494",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 99055,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296315.2577102,
+      "parts": [
+        {
+          "bytes": 99055,
+          "path": "chunks/3d/3d209fc43f7760d49d5de5bbe2ea3a310479c16c9138eb9b4fcab049468d4218.bin",
+          "sha256": "3d209fc43f7760d49d5de5bbe2ea3a310479c16c9138eb9b4fcab049468d4218"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2.prj",
+      "sha256": "3d209fc43f7760d49d5de5bbe2ea3a310479c16c9138eb9b4fcab049468d4218",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9452,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296315.2617104,
+      "parts": [
+        {
+          "bytes": 9452,
+          "path": "chunks/4f/4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0.bin",
+          "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2.tcl",
+      "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 333693,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298147.2522054,
+      "parts": [
+        {
+          "bytes": 333693,
+          "path": "chunks/34/3498e970b1ba359d462b8b2063a07c9e91181d7868ed3d25e70e7729b313fc77.bin",
+          "sha256": "3498e970b1ba359d462b8b2063a07c9e91181d7868ed3d25e70e7729b313fc77"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2_gate.area",
+      "sha256": "3498e970b1ba359d462b8b2063a07c9e91181d7868ed3d25e70e7729b313fc77",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 6616898,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298190.734568,
+      "parts": [
+        {
+          "bytes": 6616898,
+          "path": "chunks/0f/0f833b4e7c76c798e4312198749a7b59556811d6446d95a635c5a064b3e2327b.bin",
+          "sha256": "0f833b4e7c76c798e4312198749a7b59556811d6446d95a635c5a064b3e2327b"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2_gate.timing",
+      "sha256": "0f833b4e7c76c798e4312198749a7b59556811d6446d95a635c5a064b3e2327b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 60,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298190.4115655,
+      "parts": [
+        {
+          "bytes": 60,
+          "path": "chunks/dc/dc5bc8d00517226394762c63d3cab0d85ff8949f1ab00d0c51c766e19c778b65.bin",
+          "sha256": "dc5bc8d00517226394762c63d3cab0d85ff8949f1ab00d0c51c766e19c778b65"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2_gate.ts",
+      "sha256": "dc5bc8d00517226394762c63d3cab0d85ff8949f1ab00d0c51c766e19c778b65",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 190820,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296870.0474043,
+      "parts": [
+        {
+          "bytes": 190820,
+          "path": "chunks/a8/a81f161fecae84bbcbffda342d6f0d230d9cce969a9d9cf31d56f9c7e0523972.bin",
+          "sha256": "a81f161fecae84bbcbffda342d6f0d230d9cce969a9d9cf31d56f9c7e0523972"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2_rtl.area",
+      "sha256": "a81f161fecae84bbcbffda342d6f0d230d9cce969a9d9cf31d56f9c7e0523972",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 342256,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298195.0806046,
+      "parts": [
+        {
+          "bytes": 342256,
+          "path": "chunks/fb/fb19b29bb6f04015e1044b077f5610b09f80efaa071673aa5f7039552675edf0.bin",
+          "sha256": "fb19b29bb6f04015e1044b077f5610b09f80efaa071673aa5f7039552675edf0"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/run.log",
+      "sha256": "fb19b29bb6f04015e1044b077f5610b09f80efaa071673aa5f7039552675edf0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 17825115,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296875.6524532,
+      "parts": [],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/run.logw",
+      "sha256": "491859156c53db94ce8f7784b8209aba4addb160dcf5a807b92994667b06d34f",
+      "verification_channel": "user_manual_archive_sha256",
+      "github_upload_complete": false
+    },
+    {
+      "bytes": 411,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296315.2617104,
+      "parts": [
+        {
+          "bytes": 411,
+          "path": "chunks/12/12c1d6998ea733d39df196dd0c0461a74d91948e2c51f485685db7dda3e712e4.bin",
+          "sha256": "12c1d6998ea733d39df196dd0c0461a74d91948e2c51f485685db7dda3e712e4"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/run.sh",
+      "sha256": "12c1d6998ea733d39df196dd0c0461a74d91948e2c51f485685db7dda3e712e4",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1177,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794296315.2607102,
+      "parts": [
+        {
+          "bytes": 1177,
+          "path": "chunks/b2/b209ee774813ea5a8dfc46ef1adc647e6a92ae277a589b591886fb31d6430f3a.bin",
+          "sha256": "b209ee774813ea5a8dfc46ef1adc647e6a92ae277a589b591886fb31d6430f3a"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/settings.cfg",
+      "sha256": "b209ee774813ea5a8dfc46ef1adc647e6a92ae277a589b591886fb31d6430f3a",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 333124,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298209.9207284,
+      "parts": [
+        {
+          "bytes": 333124,
+          "path": "chunks/4b/4bba8c3dfd78f8c9ada4da52a76c7be59541639eb8b2b70cf3188b8a446db2e6.bin",
+          "sha256": "4bba8c3dfd78f8c9ada4da52a76c7be59541639eb8b2b70cf3188b8a446db2e6"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/simple.area",
+      "sha256": "4bba8c3dfd78f8c9ada4da52a76c7be59541639eb8b2b70cf3188b8a446db2e6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 6616898,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298260.5371506,
+      "parts": [
+        {
+          "bytes": 6616898,
+          "path": "chunks/34/348468f7549f1d9008847da59286f978b72c4fa6d3701c3f42916ec3ebcff8f5.bin",
+          "sha256": "348468f7549f1d9008847da59286f978b72c4fa6d3701c3f42916ec3ebcff8f5"
+        }
+      ],
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/simple.timing",
+      "sha256": "348468f7549f1d9008847da59286f978b72c4fa6d3701c3f42916ec3ebcff8f5",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 841,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298549.118559,
+      "parts": [
+        {
+          "bytes": 841,
+          "path": "chunks/e1/e17626c1aca08631311f0d2dd1ef3caab163e3b016212d4343aae9e24f38929f.bin",
+          "sha256": "e17626c1aca08631311f0d2dd1ef3caab163e3b016212d4343aae9e24f38929f"
+        }
+      ],
+      "path": "command.json",
+      "sha256": "e17626c1aca08631311f0d2dd1ef3caab163e3b016212d4343aae9e24f38929f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 7467,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4542456,
+      "parts": [
+        {
+          "bytes": 7467,
+          "path": "chunks/82/8296d958253328f188990f5c85a464c42010877db910bb52abff00d631df4f6f.bin",
+          "sha256": "8296d958253328f188990f5c85a464c42010877db910bb52abff00d631df4f6f"
+        }
+      ],
+      "path": "reports.json",
+      "sha256": "8296d958253328f188990f5c85a464c42010877db910bb52abff00d631df4f6f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 22639,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304393.0792272,
+      "parts": [
+        {
+          "bytes": 22639,
+          "path": "chunks/a5/a517c47c2f1990f4535a6ef183c271ad85b842edd3bf03a0717ff4c73f19a0ed.bin",
+          "sha256": "a517c47c2f1990f4535a6ef183c271ad85b842edd3bf03a0717ff4c73f19a0ed"
+        }
+      ],
+      "path": "resources.csv",
+      "sha256": "a517c47c2f1990f4535a6ef183c271ad85b842edd3bf03a0717ff4c73f19a0ed",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1145,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304393.0782273,
+      "parts": [
+        {
+          "bytes": 1145,
+          "path": "chunks/e3/e361d5a531b389da5018f9d4509adfd07e95265f3f7810736a7253feff932ae2.bin",
+          "sha256": "e361d5a531b389da5018f9d4509adfd07e95265f3f7810736a7253feff932ae2"
+        }
+      ],
+      "path": "resources.json",
+      "sha256": "e361d5a531b389da5018f9d4509adfd07e95265f3f7810736a7253feff932ae2",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 2321,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.7372477,
+      "parts": [
+        {
+          "bytes": 2321,
+          "path": "chunks/46/46d6ae3837815eb0b16cdc0b73a4a532ede6c9b34a6e1024550a9ecc2c0aac6f.bin",
+          "sha256": "46d6ae3837815eb0b16cdc0b73a4a532ede6c9b34a6e1024550a9ecc2c0aac6f"
+        }
+      ],
+      "path": "result.json",
+      "sha256": "46d6ae3837815eb0b16cdc0b73a4a532ede6c9b34a6e1024550a9ecc2c0aac6f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 222,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298549.0265582,
+      "parts": [
+        {
+          "bytes": 222,
+          "path": "chunks/31/31e0742a5161843ef6f746e10440fb3fd0fcff4d01ea085595cdeaaa67692cd2.bin",
+          "sha256": "31e0742a5161843ef6f746e10440fb3fd0fcff4d01ea085595cdeaaa67692cd2"
+        }
+      ],
+      "path": "reused-from.json",
+      "sha256": "31e0742a5161843ef6f746e10440fb3fd0fcff4d01ea085595cdeaaa67692cd2",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1286,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298325.7816951,
+      "parts": [
+        {
+          "bytes": 1286,
+          "path": "chunks/3e/3e3dc86161dd7fbea413b676c35c41db40798a9fee3099121725112fe550ee12.bin",
+          "sha256": "3e3dc86161dd7fbea413b676c35c41db40798a9fee3099121725112fe550ee12"
+        }
+      ],
+      "path": "spec.json",
+      "sha256": "3e3dc86161dd7fbea413b676c35c41db40798a9fee3099121725112fe550ee12",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 3964,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6139388,
+      "parts": [
+        {
+          "bytes": 3964,
+          "path": "chunks/49/49232dd6f5e7006964a780c5ef9a842ba8f61f99fa851479e52b6b2c3fe41300.bin",
+          "sha256": "49232dd6f5e7006964a780c5ef9a842ba8f61f99fa851479e52b6b2c3fe41300"
+        }
+      ],
+      "path": "stage-logs/bitgen/capture.json",
+      "sha256": "49232dd6f5e7006964a780c5ef9a842ba8f61f99fa851479e52b6b2c3fe41300",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 608,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.5929387,
+      "parts": [
+        {
+          "bytes": 608,
+          "path": "chunks/f8/f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0.bin",
+          "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/place.params",
+      "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1463,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.5949388,
+      "parts": [
+        {
+          "bytes": 1463,
+          "path": "chunks/2d/2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e.bin",
+          "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/place_flow.status",
+      "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 99253,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.5959387,
+      "parts": [
+        {
+          "bytes": 99253,
+          "path": "chunks/82/8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e.bin",
+          "sha256": "8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/rfcamera_raw_r2.prj",
+      "sha256": "8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9452,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.5969386,
+      "parts": [
+        {
+          "bytes": 9452,
+          "path": "chunks/4f/4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0.bin",
+          "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/rfcamera_raw_r2.tcl",
+      "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 12,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.5989387,
+      "parts": [
+        {
+          "bytes": 12,
+          "path": "chunks/9e/9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd.bin",
+          "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/route.params",
+      "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1656,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.5999386,
+      "parts": [
+        {
+          "bytes": 1656,
+          "path": "chunks/70/709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b.bin",
+          "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/route_flow.status",
+      "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 7009,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6019387,
+      "parts": [
+        {
+          "bytes": 7009,
+          "path": "chunks/5b/5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984.bin",
+          "sha256": "5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/run.log",
+      "sha256": "5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6029387,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/d2/d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a.bin",
+          "sha256": "d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/run.logw",
+      "sha256": "d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 411,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6049387,
+      "parts": [
+        {
+          "bytes": 411,
+          "path": "chunks/e2/e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc.bin",
+          "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/run.sh",
+      "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1393,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6059387,
+      "parts": [
+        {
+          "bytes": 1393,
+          "path": "chunks/d9/d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de.bin",
+          "sha256": "d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de"
+        }
+      ],
+      "path": "stage-logs/bitgen/phy_1/settings.cfg",
+      "sha256": "d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 386382,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6079388,
+      "parts": [
+        {
+          "bytes": 386382,
+          "path": "chunks/45/45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178.bin",
+          "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178"
+        }
+      ],
+      "path": "stage-logs/bitgen/project/td_20261110_153828.log",
+      "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6099389,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/6c/6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6.bin",
+          "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6"
+        }
+      ],
+      "path": "stage-logs/bitgen/project/td_20261110_153828.logw",
+      "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 283172,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.6109388,
+      "parts": [
+        {
+          "bytes": 283172,
+          "path": "chunks/ee/ee095b0e2817a61d94a458158b5ad494ca618ef8245f84b597c9ded13d80b0e0.bin",
+          "sha256": "ee095b0e2817a61d94a458158b5ad494ca618ef8245f84b597c9ded13d80b0e0"
+        }
+      ],
+      "path": "stage-logs/bitgen/project/td_20261110_161549.log",
+      "sha256": "ee095b0e2817a61d94a458158b5ad494ca618ef8245f84b597c9ded13d80b0e0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304225.612939,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/43/435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8.bin",
+          "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8"
+        }
+      ],
+      "path": "stage-logs/bitgen/project/td_20261110_161549.logw",
+      "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 3430,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.4369528,
+      "parts": [
+        {
+          "bytes": 3430,
+          "path": "chunks/ce/ce760ffc43bbe0742bd69414b67fbee23e2a8ef988ca5589203888e25dedaa87.bin",
+          "sha256": "ce760ffc43bbe0742bd69414b67fbee23e2a8ef988ca5589203888e25dedaa87"
+        }
+      ],
+      "path": "stage-logs/placement/capture.json",
+      "sha256": "ce760ffc43bbe0742bd69414b67fbee23e2a8ef988ca5589203888e25dedaa87",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 608,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.4309528,
+      "parts": [
+        {
+          "bytes": 608,
+          "path": "chunks/f8/f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0.bin",
+          "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/place.params",
+      "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1463,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.4309528,
+      "parts": [
+        {
+          "bytes": 1463,
+          "path": "chunks/2d/2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e.bin",
+          "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/place_flow.status",
+      "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 99253,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.431953,
+      "parts": [
+        {
+          "bytes": 99253,
+          "path": "chunks/76/760709a514031dab43858b3f0f4bbd1728b83728e875cab9e07552c6c608fade.bin",
+          "sha256": "760709a514031dab43858b3f0f4bbd1728b83728e875cab9e07552c6c608fade"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/rfcamera_raw_r2.prj",
+      "sha256": "760709a514031dab43858b3f0f4bbd1728b83728e875cab9e07552c6c608fade",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9452,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.431953,
+      "parts": [
+        {
+          "bytes": 9452,
+          "path": "chunks/4f/4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0.bin",
+          "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/rfcamera_raw_r2.tcl",
+      "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 120728,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.432953,
+      "parts": [
+        {
+          "bytes": 120728,
+          "path": "chunks/36/364e46664bac3f0ac6c819b70b11ca32a53a806c46b6ad2d22a5d0ba14495d99.bin",
+          "sha256": "364e46664bac3f0ac6c819b70b11ca32a53a806c46b6ad2d22a5d0ba14495d99"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/run.log",
+      "sha256": "364e46664bac3f0ac6c819b70b11ca32a53a806c46b6ad2d22a5d0ba14495d99",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 3729,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.432953,
+      "parts": [
+        {
+          "bytes": 3729,
+          "path": "chunks/ce/ce1832795eceb01e05b4c5c793ed1ef0bbf7bffc8623c48dfeafa3c752623749.bin",
+          "sha256": "ce1832795eceb01e05b4c5c793ed1ef0bbf7bffc8623c48dfeafa3c752623749"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/run.logw",
+      "sha256": "ce1832795eceb01e05b4c5c793ed1ef0bbf7bffc8623c48dfeafa3c752623749",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 411,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.4339528,
+      "parts": [
+        {
+          "bytes": 411,
+          "path": "chunks/e2/e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc.bin",
+          "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/run.sh",
+      "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1399,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.4339528,
+      "parts": [
+        {
+          "bytes": 1399,
+          "path": "chunks/45/45686b6736c505081c76346f2fffa348d804b0dc405f47e2d77a974b0c859944.bin",
+          "sha256": "45686b6736c505081c76346f2fffa348d804b0dc405f47e2d77a974b0c859944"
+        }
+      ],
+      "path": "stage-logs/placement/phy_1/settings.cfg",
+      "sha256": "45686b6736c505081c76346f2fffa348d804b0dc405f47e2d77a974b0c859944",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 386382,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.434953,
+      "parts": [
+        {
+          "bytes": 386382,
+          "path": "chunks/45/45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178.bin",
+          "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178"
+        }
+      ],
+      "path": "stage-logs/placement/project/td_20261110_153828.log",
+      "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.435953,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/6c/6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6.bin",
+          "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6"
+        }
+      ],
+      "path": "stage-logs/placement/project/td_20261110_153828.logw",
+      "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 123684,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.435953,
+      "parts": [
+        {
+          "bytes": 123684,
+          "path": "chunks/c8/c8b1562483ef8fd4ffb62feddcc9526552529850420394c8fb63e364aa97ff54.bin",
+          "sha256": "c8b1562483ef8fd4ffb62feddcc9526552529850420394c8fb63e364aa97ff54"
+        }
+      ],
+      "path": "stage-logs/placement/project/td_20261110_161549.log",
+      "sha256": "c8b1562483ef8fd4ffb62feddcc9526552529850420394c8fb63e364aa97ff54",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794300059.4369528,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/43/435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8.bin",
+          "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8"
+        }
+      ],
+      "path": "stage-logs/placement/project/td_20261110_161549.logw",
+      "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 3972,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9963338,
+      "parts": [
+        {
+          "bytes": 3972,
+          "path": "chunks/38/38b418aaafffebe9da79e2f6b23df7193ce71240efb4c792c459b6f54ba2740f.bin",
+          "sha256": "38b418aaafffebe9da79e2f6b23df7193ce71240efb4c792c459b6f54ba2740f"
+        }
+      ],
+      "path": "stage-logs/routing/capture.json",
+      "sha256": "38b418aaafffebe9da79e2f6b23df7193ce71240efb4c792c459b6f54ba2740f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 608,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9583337,
+      "parts": [
+        {
+          "bytes": 608,
+          "path": "chunks/f8/f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0.bin",
+          "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/place.params",
+      "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1463,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9653337,
+      "parts": [
+        {
+          "bytes": 1463,
+          "path": "chunks/2d/2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e.bin",
+          "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/place_flow.status",
+      "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 99253,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9713337,
+      "parts": [
+        {
+          "bytes": 99253,
+          "path": "chunks/b4/b4a7424dabac7ed6c58b499b4fe04ff655bf8e48362d83f775be0754d4523187.bin",
+          "sha256": "b4a7424dabac7ed6c58b499b4fe04ff655bf8e48362d83f775be0754d4523187"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/rfcamera_raw_r2.prj",
+      "sha256": "b4a7424dabac7ed6c58b499b4fe04ff655bf8e48362d83f775be0754d4523187",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9452,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9753337,
+      "parts": [
+        {
+          "bytes": 9452,
+          "path": "chunks/4f/4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0.bin",
+          "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/rfcamera_raw_r2.tcl",
+      "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 12,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9813337,
+      "parts": [
+        {
+          "bytes": 12,
+          "path": "chunks/9e/9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd.bin",
+          "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/route.params",
+      "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1656,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9833338,
+      "parts": [
+        {
+          "bytes": 1656,
+          "path": "chunks/70/709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b.bin",
+          "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/route_flow.status",
+      "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 150386,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9843338,
+      "parts": [
+        {
+          "bytes": 150386,
+          "path": "chunks/84/843f03c0a310cd1f4a6e6be4ae288c3ccdcd2364a490b0566c2fd2ebbe40f96c.bin",
+          "sha256": "843f03c0a310cd1f4a6e6be4ae288c3ccdcd2364a490b0566c2fd2ebbe40f96c"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/run.log",
+      "sha256": "843f03c0a310cd1f4a6e6be4ae288c3ccdcd2364a490b0566c2fd2ebbe40f96c",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1503,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.985334,
+      "parts": [
+        {
+          "bytes": 1503,
+          "path": "chunks/cd/cd2b7292a5e32c7f0be31a07120144485210c02363e917cf472974293ca954fd.bin",
+          "sha256": "cd2b7292a5e32c7f0be31a07120144485210c02363e917cf472974293ca954fd"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/run.logw",
+      "sha256": "cd2b7292a5e32c7f0be31a07120144485210c02363e917cf472974293ca954fd",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 411,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9873338,
+      "parts": [
+        {
+          "bytes": 411,
+          "path": "chunks/e2/e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc.bin",
+          "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/run.sh",
+      "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1399,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.988334,
+      "parts": [
+        {
+          "bytes": 1399,
+          "path": "chunks/69/6929875a46fc03ddbe368f60130ee0de859fe3f86cf931978e93fad837ebaaaf.bin",
+          "sha256": "6929875a46fc03ddbe368f60130ee0de859fe3f86cf931978e93fad837ebaaaf"
+        }
+      ],
+      "path": "stage-logs/routing/phy_1/settings.cfg",
+      "sha256": "6929875a46fc03ddbe368f60130ee0de859fe3f86cf931978e93fad837ebaaaf",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 386382,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9903338,
+      "parts": [
+        {
+          "bytes": 386382,
+          "path": "chunks/45/45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178.bin",
+          "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178"
+        }
+      ],
+      "path": "stage-logs/routing/project/td_20261110_153828.log",
+      "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.992334,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/6c/6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6.bin",
+          "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6"
+        }
+      ],
+      "path": "stage-logs/routing/project/td_20261110_153828.logw",
+      "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 275122,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.9933338,
+      "parts": [
+        {
+          "bytes": 275122,
+          "path": "chunks/16/16858c23be1bdacc1820a271df3cf28280494586028a519d898ff762cdb134e6.bin",
+          "sha256": "16858c23be1bdacc1820a271df3cf28280494586028a519d898ff762cdb134e6"
+        }
+      ],
+      "path": "stage-logs/routing/project/td_20261110_161549.log",
+      "sha256": "16858c23be1bdacc1820a271df3cf28280494586028a519d898ff762cdb134e6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304146.994334,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/43/435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8.bin",
+          "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8"
+        }
+      ],
+      "path": "stage-logs/routing/project/td_20261110_161549.logw",
+      "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 4349,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.5062459,
+      "parts": [
+        {
+          "bytes": 4349,
+          "path": "chunks/fb/fb6790e1f80096478f88be7dc2e07ebeed564c3524539c77494996187af828fe.bin",
+          "sha256": "fb6790e1f80096478f88be7dc2e07ebeed564c3524539c77494996187af828fe"
+        }
+      ],
+      "path": "stage-logs/terminal/capture.json",
+      "sha256": "fb6790e1f80096478f88be7dc2e07ebeed564c3524539c77494996187af828fe",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 608,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4682457,
+      "parts": [
+        {
+          "bytes": 608,
+          "path": "chunks/f8/f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0.bin",
+          "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/place.params",
+      "sha256": "f8f4f657b3347cb9e9fe42495373aa43531a3277215f745ed15a6c11b21e59e0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1463,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4752457,
+      "parts": [
+        {
+          "bytes": 1463,
+          "path": "chunks/2d/2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e.bin",
+          "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/place_flow.status",
+      "sha256": "2d0eeffab3fcb2734eb37512ae6b3421e3279b998b1bfd3b0a3aa33934f7ea4e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 99253,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4812458,
+      "parts": [
+        {
+          "bytes": 99253,
+          "path": "chunks/82/8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e.bin",
+          "sha256": "8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/rfcamera_raw_r2.prj",
+      "sha256": "8237b729d3601d3f0a4ceb970ca4e6da3d5b8aabc30cfa5779e959d19f4f071e",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 9452,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4882457,
+      "parts": [
+        {
+          "bytes": 9452,
+          "path": "chunks/4f/4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0.bin",
+          "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/rfcamera_raw_r2.tcl",
+      "sha256": "4fc07e5ead2bfa3f1d9d8a60b1667887ceee8f345f5a20bdf6f1ff7771ee2dc0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 12,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.489246,
+      "parts": [
+        {
+          "bytes": 12,
+          "path": "chunks/9e/9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd.bin",
+          "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/route.params",
+      "sha256": "9eb463526ccd22f933b6d89f2ddd6a8e5685e2da74dc6d0d9b00c210726eecbd",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1656,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4912457,
+      "parts": [
+        {
+          "bytes": 1656,
+          "path": "chunks/70/709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b.bin",
+          "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/route_flow.status",
+      "sha256": "709ee5b377ef68f03ca516b3023f3c5d85b39fa6dd8e21efdbc804486098db6b",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 7009,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.492246,
+      "parts": [
+        {
+          "bytes": 7009,
+          "path": "chunks/5b/5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984.bin",
+          "sha256": "5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/run.log",
+      "sha256": "5baed9987f335453d55c328d0dceb4c33691a81c2d82e10a996b73f9e7f6f984",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4932458,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/d2/d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a.bin",
+          "sha256": "d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/run.logw",
+      "sha256": "d2b35623dc67be621c3a95f4a61a12b1d13323ccf511f01bb25eb7d1b763595a",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 411,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.495246,
+      "parts": [
+        {
+          "bytes": 411,
+          "path": "chunks/e2/e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc.bin",
+          "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/run.sh",
+      "sha256": "e2b50bc66eaddcd6b63177b2abe94396cb429fef57f85863ae494cea4c5671fc",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 1393,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4962459,
+      "parts": [
+        {
+          "bytes": 1393,
+          "path": "chunks/d9/d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de.bin",
+          "sha256": "d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de"
+        }
+      ],
+      "path": "stage-logs/terminal/phy_1/settings.cfg",
+      "sha256": "d9e7a956a6ba6c3cc458ac43ef63c2d34c1266e1776ca21bac1823dbcbfd78de",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 386382,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.4972458,
+      "parts": [
+        {
+          "bytes": 386382,
+          "path": "chunks/45/45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178.bin",
+          "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178"
+        }
+      ],
+      "path": "stage-logs/terminal/project/td_20261110_153828.log",
+      "sha256": "45b4bd9f07717f56966d4ecf8eea1f35ca31c5b6776e0a8590ac41239461e178",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.499246,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/6c/6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6.bin",
+          "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6"
+        }
+      ],
+      "path": "stage-logs/terminal/project/td_20261110_153828.logw",
+      "sha256": "6cb68adbd8cfc82157df513681e7b3277c7669149d37de5322a856da3064ecb6",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 334242,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.5002458,
+      "parts": [
+        {
+          "bytes": 334242,
+          "path": "chunks/2e/2e4b8882bbfcbbf0beef9900a5ee638b6c44c567fd866553862016bd663e02cd.bin",
+          "sha256": "2e4b8882bbfcbbf0beef9900a5ee638b6c44c567fd866553862016bd663e02cd"
+        }
+      ],
+      "path": "stage-logs/terminal/project/td_20261110_161549.log",
+      "sha256": "2e4b8882bbfcbbf0beef9900a5ee638b6c44c567fd866553862016bd663e02cd",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 404,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.502246,
+      "parts": [
+        {
+          "bytes": 404,
+          "path": "chunks/43/435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8.bin",
+          "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8"
+        }
+      ],
+      "path": "stage-logs/terminal/project/td_20261110_161549.logw",
+      "sha256": "435197e20a639b38b8bfe6cd079b0f5432df434604b5c6678eb60946260b97c8",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 393649,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.5032458,
+      "parts": [
+        {
+          "bytes": 393649,
+          "path": "chunks/ff/ff418acd9b383ef520b1589399547dbcab59343345b4f76f12c5f6e2f65d48a7.bin",
+          "sha256": "ff418acd9b383ef520b1589399547dbcab59343345b4f76f12c5f6e2f65d48a7"
+        }
+      ],
+      "path": "stage-logs/terminal/td.log",
+      "sha256": "ff418acd9b383ef520b1589399547dbcab59343345b4f76f12c5f6e2f65d48a7",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.504246,
+      "parts": [],
+      "path": "stage-logs/terminal/worker.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 393649,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304391.6892166,
+      "parts": [
+        {
+          "bytes": 393649,
+          "path": "chunks/ff/ff418acd9b383ef520b1589399547dbcab59343345b4f76f12c5f6e2f65d48a7.bin",
+          "sha256": "ff418acd9b383ef520b1589399547dbcab59343345b4f76f12c5f6e2f65d48a7"
+        }
+      ],
+      "path": "td.log",
+      "sha256": "ff418acd9b383ef520b1589399547dbcab59343345b4f76f12c5f6e2f65d48a7",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 520,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298554.5676045,
+      "parts": [
+        {
+          "bytes": 520,
+          "path": "chunks/11/11831ffa326b287e80737add210d481a72696f29c7326eda81b02d8462abe8b1.bin",
+          "sha256": "11831ffa326b287e80737add210d481a72696f29c7326eda81b02d8462abe8b1"
+        }
+      ],
+      "path": "thread-phy_1.params",
+      "sha256": "11831ffa326b287e80737add210d481a72696f29c7326eda81b02d8462abe8b1",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 8410,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.7232475,
+      "parts": [
+        {
+          "bytes": 8410,
+          "path": "chunks/49/497c73547b715c1167801f5415e0a976a992fd136ecd1538a1f20402f6252df0.bin",
+          "sha256": "497c73547b715c1167801f5415e0a976a992fd136ecd1538a1f20402f6252df0"
+        }
+      ],
+      "path": "warning-summary.json",
+      "sha256": "497c73547b715c1167801f5415e0a976a992fd136ecd1538a1f20402f6252df0",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 180013,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794304395.7212477,
+      "parts": [
+        {
+          "bytes": 180013,
+          "path": "chunks/49/493564d7680e1785eaf3dc8409dac3913d81549f612d1c2ada75b94bb79a3f6f.bin",
+          "sha256": "493564d7680e1785eaf3dc8409dac3913d81549f612d1c2ada75b94bb79a3f6f"
+        }
+      ],
+      "path": "warnings.csv",
+      "sha256": "493564d7680e1785eaf3dc8409dac3913d81549f612d1c2ada75b94bb79a3f6f",
+      "verification_channel": "github_sha256"
+    },
+    {
+      "bytes": 0,
+      "complete": true,
+      "inherited_from": null,
+      "mtime": 1794298548.405553,
+      "parts": [],
+      "path": "worker.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification_channel": "github_sha256"
+    }
+  ]
+}

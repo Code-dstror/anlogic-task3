@@ -1,0 +1,1065 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/td_commands_prompt.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 18:24:43 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  9.387906s wall, 7.687500s user + 0.828125s system = 8.515625s CPU (90.7%)
+
+RUN-1004 : used memory is 1254 MB, reserved memory is 1284 MB, peak memory is 1288 MB
+RUN-1002 : start command "create_project hdr_quality_color_probe . -family ph1 -device PH1A90SEG324 -speed -2"
+PRJ-1005 : Command create_project success.
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324" in  9.720463s wall, 8.421875s user + 0.484375s system = 8.906250s CPU (91.6%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "open_project hdr_quality_color_probe.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-1401 : Successfully analyzed 0 source files.
+RUN-1003 : finish command "create_project hdr_quality_color_probe . -family ph1 -device PH1A90SEG324 -speed -2" in  9.732576s wall, 8.437500s user + 0.484375s system = 8.921875s CPU (91.7%)
+
+RUN-1004 : used memory is 1260 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "add_files ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.xml"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.xml"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/stage3/tone96_rom0/tone96_rom0.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/stage3/tone96_rom1/tone96_rom1.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/wide_color_pipeline.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/hdr_tone96_shared4.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/gamma_lut_10to8.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/td_dsp_mult.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files probe.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files probe.sdc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_define PH1=1"
+RUN-1002 : start command "add_define HDR_QUALITY_PROBE=1"
+RUN-1002 : start command "top_module hdr_quality_color_probe"
+PRJ-1501 : Current top model is hdr_quality_color_probe.
+RUN-1002 : start command "set_param -run syn_1 flow thread 4"
+PRJ-1105 : Update param syn_1 flow::thread::4 succeed.
+RUN-1002 : start command "set_param -run syn_1 rtl min_control_set 2"
+PRJ-1105 : Update param syn_1 rtl::min_control_set::2 succeed.
+RUN-1002 : start command "set_param -run syn_1 gate map_mode area_prior"
+PRJ-1105 : Update param syn_1 gate::map_mode::area_prior succeed.
+RUN-1002 : start command "set_param -run syn_1 gate multi_thread_mapping partition"
+PRJ-1105 : Update param syn_1 gate::multi_thread_mapping::partition succeed.
+RUN-1002 : start command "set_param -run syn_1 gate add_map_lut_struct on"
+PRJ-1105 : Update param syn_1 gate::add_map_lut_struct::on succeed.
+RUN-1002 : start command "launch_runs -step opt_gate syn_1"
+PRJ-1403 : syn_1 is launched.
+PRJ-1404 : Run log file is <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/color_parent_compare/parent_a1/fused_optimized/hdr_quality_color_probe_Runs/syn_1/run.log.
+RUN-1002 : start command "wait_run syn_1"
+PRJ-1405 : Waiting for run syn_1 to finish.
+PRJ-1411 : launch_runs syn_1 -step opt_gate.
+PRJ-1412 : reset_run phy_1.
+PRJ-1009 : If you need the best result of runs copied into "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/color_parent_compare/parent_a1/fused_optimized/hdr_quality_color_probe_Runs/best_result" , please execute "save_best_bits" in the Tcl console after all runs complete, or add "save_best_bits" in tcl script after "wait_run" command.
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/run.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 18:25:04 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "source_tcl ./settings.cfg"
+PRJ-1001 : Finish executing settings.cfg
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  4.272761s wall, 2.968750s user + 0.078125s system = 3.046875s CPU (71.3%)
+
+RUN-1004 : used memory is 1086 MB, reserved memory is 1085 MB, peak memory is 1086 MB
+RUN-1002 : start command "open_project hdr_quality_color_probe.prj"
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier_top.v
+HDL-1007 : analyze verilog file ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : back to file '../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v' in ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(29)
+HDL-1007 : analyze verilog file ../../ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.v
+HDL-1007 : analyze verilog file ../../ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.v
+HDL-1007 : analyze verilog file ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v
+HDL-1007 : analyze verilog file ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.v
+HDL-1007 : analyze verilog file ../../ip/stage3/tone96_rom0/tone96_rom0.v
+HDL-1007 : analyze verilog file ../../ip/stage3/tone96_rom1/tone96_rom1.v
+HDL-1007 : analyze verilog file ../../rtl/wide_color_pipeline.v
+HDL-1007 : analyze verilog file ../../rtl/hdr_tone96_shared4.v
+HDL-1007 : analyze verilog file ../../rtl/gamma_lut_10to8.v
+HDL-1007 : analyze verilog file ../../rtl/td_dsp_mult.v
+HDL-1007 : analyze verilog file ../../probe.v
+PRJ-1401 : Successfully analyzed 13 source files.
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top hdr_quality_color_probe -params "
+HDL-1007 : elaborate module hdr_quality_color_probe in ../../probe.v(3)
+HDL-1007 : elaborate module wide_color_pipeline in ../../rtl/wide_color_pipeline.v(5)
+HDL-1007 : elaborate module hdr_tone96_shared4 in ../../rtl/hdr_tone96_shared4.v(5)
+HDL-1007 : elaborate module tone96_rom0 in ../../ip/stage3/tone96_rom0/tone96_rom0.v(14)
+HDL-1007 : elaborate module PH1_LOGIC_ERAM(DATA_WIDTH_A=40,DATA_WIDTH_B=40,ADDR_WIDTH_A=9,ADDR_WIDTH_B=9,DATA_DEPTH_A=512,DATA_DEPTH_B=512,MODE="PDPW",SSROVERCE="DISABLE",CLKMODE="SYNC",INIT_FILE="../../coefficients/tone96_0.mif") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(22)
+HDL-1007 : elaborate module tone96_rom1 in ../../ip/stage3/tone96_rom1/tone96_rom1.v(14)
+HDL-1007 : elaborate module PH1_LOGIC_ERAM(DATA_WIDTH_A=40,DATA_WIDTH_B=40,ADDR_WIDTH_A=9,ADDR_WIDTH_B=9,DATA_DEPTH_A=512,DATA_DEPTH_B=512,MODE="PDPW",SSROVERCE="DISABLE",CLKMODE="SYNC",INIT_FILE="../../coefficients/tone96_1.mif") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(22)
+HDL-1007 : elaborate module mult_18s18s_p1 in ../../ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.v(11)
+HDL-1007 : elaborate module mult_18s18s_p1_multiplier_top(A_WIDTH=18,B_WIDTH=18,B_VALUE_WIDTH=8,B_VALUE_NEGE=0,B_VALUE=69'b011111111,MULT_TYPE=1,DELAY=1,OUT_HIGH=35,P_WIDTH=36) in ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier_top.v(1)
+HDL-1007 : elaborate module mult_18s18s_p1_multiplier(A_WIDTH=18,B_WIDTH=18,HAS_SCLR=1,B_VALUE_WIDTH=8,B_VALUE_NEGE=0,B_VALUE=69'b011111111,MULT_TYPE=1,DELAY=1,OUT_HIGH=35,P_WIDTH=36) in ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(2)
+HDL-1007 : elaborate module ** in ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(506)
+HDL-5007 WARNING: ** shift count >= width of value in ../../ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v(533)
+HDL-1007 : elaborate module fdct_mac19s14s_z33s_p34_m1p1 in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.v(11)
+HDL-1007 : port 'cxao' remains unconnected for this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(393)
+HDL-1007 : port 'cxbo' remains unconnected for this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(393)
+HDL-1007 : port 'cxabo' remains unconnected for this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(393)
+HDL-1007 : port 'cyo' remains unconnected for this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(393)
+HDL-1007 : port 'cpo' remains unconnected for this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(393)
+HDL-1007 : port 'cco' remains unconnected for this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(393)
+HDL-1007 : elaborate module fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0(REGISTER15=1,A_INPUT_TYPE="SIGNED",Y_INPUT_TYPE="SIGNED",Z_INPUT_TYPE="SIGNED",A_INPUT_WIDTH=19,Y_INPUT_WIDTH=14,Z_INPUT_WIDTH=33,P_OUTPUT_WIDTH=34,USER_CTRL0=30'b100000000000010010010000001110) in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(3)
+HDL-1007 : elaborate module PH1_PHY_DSPSIOU(XAREG="0",XBREG="0",YREG="0",ZREG="0",INCTRLREG="0",MUXCTRLREG="0",OPCTRLREG="0",CINCTRLREG="0",CXAREG="0",CXBREG="0",CYREG="0",XABREG="0",CXABO_OUTPUT="CXAO",RND=54'b010000000000000000000) in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(608)
+HDL-1007 : elaborate module PH1_PHY_DSPADD_V2 in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(581)
+HDL-1007 : elaborate module PH1_PHY_DSPMULT_V2 in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(789)
+HDL-1007 : elaborate module PH1_PHY_DSPTADD_V2 in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(801)
+HDL-1007 : elaborate module PH1_PHY_DSPLOGIC_V2 in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(593)
+HDL-5317 WARNING: input port 'cxai[26]' is not connected on this instance in ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466)
+HDL-1007 : elaborate module gamma_lut_10to8(C_GAMMA_LINEAR_BYPASS=0,C_USE_CE=1) in ../../rtl/gamma_lut_10to8.v(2)
+HDL-1007 : port 'ecc_sbiterr' remains unconnected for this instance in ../../ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.v(23)
+HDL-1007 : port 'ecc_dbiterr' remains unconnected for this instance in ../../ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.v(23)
+HDL-1007 : elaborate module gamma_rom_8x1024_ip in ../../ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.v(14)
+HDL-1007 : elaborate module PH1_LOGIC_ERAM(DATA_WIDTH_A=8,DATA_WIDTH_B=8,ADDR_WIDTH_B=10,DATA_DEPTH_A=1024,DATA_DEPTH_B=1024,MODE="SP",INIT_FILE="../../rtl/isp/color/gamma22_10to8.mif") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(22)
+HDL-1200 : Current top model is hdr_quality_color_probe
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[239]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[238]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[237]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[236]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[235]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[234]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[233]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[232]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[231]" in NOFILE(0) 
+HDL-5106 WARNING: Initial value omitted on non-DFF net "inst[230]" in NOFILE(0) 
+HDL-5106 Similar messages will be suppressed.
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "export_db hdr_quality_color_probe_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step rtl"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1002 : start command "set_param rtl min_control_set 2"
+RUN-1001 : Print Rtl Property
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :         Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :        fix_undriven       |     0      |        0         |        
+RUN-1001 :   gated_clock_conversion  |    off     |       off        |        
+RUN-1001 :         infer_fsm         |    auto    |       auto       |        
+RUN-1001 :         infer_rom         |     on     |        on        |        
+RUN-1001 :       infer_shifter       |     on     |        on        |        
+RUN-1001 :       keep_hierarchy      |    auto    |       auto       |        
+RUN-1001 :        merge_equal        |     on     |        on        |        
+RUN-1001 :      min_control_set      |     2      |        8         |   *    
+RUN-1001 :       min_ripple_len      |    auto    |       auto       |        
+RUN-1001 :          seq_syn          |     on     |        on        |        
+RUN-1001 :       tcl_afterstep       |            |                  |        
+RUN-1001 :       tcl_beforestep      |            |                  |        
+RUN-1001 : -------------------------------------------------------------------
+RUN-1002 : start command "read_sdc ../../probe.sdc"
+RUN-1002 : start command "insert_debugger"
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file <TOOLS_ROOT>/TD_Release_2026.2.210.850/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-5014 WARNING: Port "cfg_tone_shift[3]" in model wide_color_pipeline is either unconnected or has no load.
+SYN-5014 WARNING: Port "cfg_tone_shift[2]" in model wide_color_pipeline is either unconnected or has no load.
+SYN-5014 WARNING: Port "cfg_tone_shift[1]" in model wide_color_pipeline is either unconnected or has no load.
+SYN-5014 WARNING: Port "cfg_tone_shift[0]" in model wide_color_pipeline is either unconnected or has no load.
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.004372s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1116, reserved = 1236, peak = 1116;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 7461, Total nets: 19497.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.034374s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (90.9%); Memory(MB): used = 1116, reserved = 1236, peak = 1116;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 835, Total nets: 11047.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model hdr_quality_color_probe
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.196473s wall, 0.203125s user + 0.000000s system = 0.203125s CPU (103.4%); Memory(MB): used = 1117, reserved = 1236, peak = 1117;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 1135, Total nets: 18833.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.064057s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (97.6%); Memory(MB): used = 1106, reserved = 1107, peak = 1117;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 1132, Total nets: 18830.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1021 : Optimized 1 onehot mux instances.
+SYN-1001 : Optimize 4 less-than instances
+SYN-1016 : Merged 244 instances.
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-1016 : Merged 67 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.965002s wall, 1.046875s user + 0.125000s system = 1.171875s CPU (121.4%); Memory(MB): used = 1190, reserved = 1184, peak = 1190;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 5050, Total nets: 13445.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1014 : Optimize round 1
+SYN-1017 : Remove 1 const input seq instances
+SYN-1020 : Optimized 125 distributor mux.
+SYN-1001 : Optimize 10 less-than instances
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_high/inst" init file "..\..\ip\coefficients\tone96_1.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2593 : bram inst: u_color/u_tone96/g_pixel_lane[0]$u_rom_high/inst will be optimized to a new one with A-width 9 due to unused data out
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_high/inst" init file "..\..\ip\coefficients\tone96_1.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2593 : bram inst: u_color/u_tone96/g_pixel_lane[1]$u_rom_high/inst will be optimized to a new one with A-width 9 due to unused data out
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1016 : Merged 123 instances.
+SYN-1015 : Optimize round 1, 856 better
+SYN-1014 : Optimize round 2
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1015 : Optimize round 2, 0 better
+SYN-5123 WARNING: Register "u_color/gains_reg[8]" in ../../rtl/wide_color_pipeline.v(60) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "u_color/gains_reg[18]" in ../../rtl/wide_color_pipeline.v(60) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "u_color/gains_reg[28]" in ../../rtl/wide_color_pipeline.v(60) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "u_color/u_tone96/g_pixel_lane[0]$shift2_reg[0]" in ../../rtl/hdr_tone96_shared4.v(149) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "u_color/u_tone96/g_pixel_lane[0]$shift2_reg[2]" in ../../rtl/hdr_tone96_shared4.v(149) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "u_color/u_tone96/g_pixel_lane[1]$shift2_reg[0]" in ../../rtl/hdr_tone96_shared4.v(149) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "u_color/u_tone96/g_pixel_lane[1]$shift2_reg[2]" in ../../rtl/hdr_tone96_shared4.v(149) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-3010 : Optimized 4 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1019 : Optimized 8 mux instances.
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1015 : Optimize round 1, 8 better
+SYN-1014 : Optimize round 2
+SYN-1019 : Optimized 8 mux instances.
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1015 : Optimize round 2, 8 better
+SYN-1014 : Optimize round 3
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-1015 : Optimize round 3, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 2.592474s wall, 2.625000s user + 0.062500s system = 2.687500s CPU (103.7%); Memory(MB): used = 1198, reserved = 1195, peak = 1210;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 4922, Total nets: 13317.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000997s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1198, reserved = 1195, peak = 1210;
+
+SYN-1079 : finish stage Check Design. Total instances: 4922, Total nets: 13317.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 3.858527s wall, 3.968750s user + 0.187500s system = 4.156250s CPU (107.7%); Memory(MB): used = 1198, reserved = 1195, peak = 1210;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 4922, Total nets: 13317.
+
+RUN-1003 : finish command "optimize_rtl" in  3.868371s wall, 3.984375s user + 0.187500s system = 4.171875s CPU (107.8%)
+
+RUN-1004 : used memory is 1198 MB, reserved memory is 1195 MB, peak memory is 1210 MB
+RUN-1002 : start command "report_area -file hdr_quality_color_probe_rtl.area"
+RUN-1001 : standard
+***Report Model: hdr_quality_color_probe Device: PH1A90SEG324***
+
+IO Statistics
+#IO                        38
+  #input                   22
+  #output                  16
+  #inout                    0
+
+Gate Statistics
+#Basic gates             3185
+  #and                     43
+  #nand                     0
+  #or                     122
+  #nor                      0
+  #xor                      0
+  #xnor                     0
+  #buf                      0
+  #not                     25
+  #bufif1                   0
+  #MX21                   167
+  #FADD                     0
+  #DFF                   2828
+  #LATCH                    0
+#MACRO_ADD                 57
+#MACRO_EQ                  18
+#MACRO_MULT                12
+#MACRO_MUX               1572
+#MACRO_OTHERS              16
+
+RUN-1002 : start command "export_db hdr_quality_color_probe_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step gate"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1002 : start command "set_param gate add_map_lut_struct on"
+RUN-1002 : start command "set_param gate map_mode area_prior"
+RUN-1002 : start command "set_param gate opt_area high"
+RUN-1002 : start command "set_param gate multi_thread_mapping partition"
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :       Parameters       |   Settings   |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :   eram_cascade_height  |     auto     |       auto       |        
+RUN-1001 :        map_mode        |  area_prior  |       auto       |   *    
+RUN-1001 :      map_strategy      |      1       |        1         |        
+RUN-1001 :       pack_effort      |    medium    |      medium      |        
+RUN-1001 :     pack_seq_in_io     |     auto     |       auto       |        
+RUN-1001 :         report         |   standard   |     standard     |        
+RUN-1001 :      tcl_afterstep     |              |                  |        
+RUN-1001 :     tcl_beforestep     |              |                  |        
+RUN-1001 : ------------------------------------------------------------------
+RUN-1002 : start command "optimize_gate -packarea hdr_quality_color_probe_gate.area"
+RUN-1001 : Open license file <TOOLS_ROOT>/TD_Release_2026.2.210.850/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.018120s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (86.2%); Memory(MB): used = 1223, reserved = 1335, peak = 1223;
+
+SYN-1079 : finish stage Map Reg. Total instances: 4922, Total nets: 13317.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2001 : Map 38 IOs to PADs of model 'hdr_quality_color_probe'
+SYN-6021 CRITICAL-WARNING: 38 out of 38 logical ports has no user assigned specific location constraint.
+                           This may affect performance or in some cases cause damage to the device!
+                           Bitgen will abort. If insist on bitgen with risk, please 'set_param bitgen unconstr_io on' to avoid bitgen error.
+                           No ADC ports: clk, observe_select[3:0], observe_word[15:0], rst_n, stimulus_word[15:0].
+                           No ADC ports will be assigned to random location as below:
+                           clk:T13, observe_select[3]:U16, observe_select[2]:P18, observe_select[1]:P14, observe_select[0]:N10, observe_word[15]:N15, observe_word[14]:M18, observe_word[13]:M14, observe_word[12]:M16, observe_word[11]:K18, 
+                           observe_word[10]:J18, observe_word[9]:J13, observe_word[8]:K15, observe_word[7]:H16, observe_word[6]:J14, observe_word[5]:F15, observe_word[4]:G16, observe_word[3]:F13, observe_word[2]:E15, observe_word[1]:D18, 
+                           observe_word[0]:B14, rst_n:A15, stimulus_word[15]:B18, stimulus_word[14]:D17, stimulus_word[13]:C16, stimulus_word[12]:U8, stimulus_word[11]:T8, stimulus_word[10]:T10, stimulus_word[9]:P10, stimulus_word[8]:U6, 
+                           stimulus_word[7]:V2, stimulus_word[6]:U3, stimulus_word[5]:V5, stimulus_word[4]:P1, stimulus_word[3]:T4, stimulus_word[2]:R2, stimulus_word[1]:P3, stimulus_word[0]:R5.
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.010937s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (142.9%); Memory(MB): used = 1224, reserved = 1335, peak = 1224;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module hdr_quality_color_probe"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[0]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[1]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[2]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[0]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[1]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/lane[3]$g_identity$wb[2]$u_gamma/g_generated_rom$u_gamma_memory/inst" init file "..\..\rtl\isp\color\gamma22_10to8.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[0]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2541 : Reading BRAM "u_color/u_tone96/g_pixel_lane[1]$u_rom_low/inst" init file "..\..\ip\coefficients\tone96_0.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2571 : Map 12 macro multiplier
+SYN-2571 : Optimize during map_dsp, 0 better
+SYN-2601 : All the used dsp number is 24
+SYN-1001 : Throwback 2 control mux instances
+SYN-1001 : Optimize 4 adders
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 18 instances.
+SYN-2501 : Optimize round 1, 65 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-2501 : Optimize round 1, 0 better
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-2501 : Map 57 macro adder(s)
+SYN-1019 : Optimized 12 mux instances.
+SYN-1016 : Merged 217 instances.
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 1.370204s wall, 1.406250s user + 0.031250s system = 1.437500s CPU (104.9%); Memory(MB): used = 1234, reserved = 1331, peak = 1234;
+
+SYN-1079 : finish stage Map Macro. Total instances: 6125, Total nets: 15591.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-3001 : Start LUT mapping ...
+SYN-3001 : Note: currently parameter "cec_check" does not support "multi_thread_mapping partition", and will be ignored.
+SYN-3001 : multi-thread mapping mode: partition
+SYN-3001 : [partition 0 (thread 0)] Collect 1404 PIs, 940 POs (16 timing unconstrained), 2007 logic instances for mapping process
+SYN-3001 : [partition 1 (thread 1)] Collect 460 PIs, 226 POs (0 timing unconstrained), 1144 logic instances for mapping process
+SYN-3001 : [combined] Collect 1864 PIs, 1168 POs (16 timing unconstrained POs), 3131 logic instances for mapping process
+
+SYN-3001 : [thread 0] Start high effort area and logic-level optimization ...
+SYN-3001 : [thread 1] Start high effort area and logic-level optimization ...
+SYN-3001 : [thread 0] End high effort area and logic-level optimization;  2.110567s wall, 4.203125s user + 0.000000s system = 4.203125s CPU (199.1%)
+
+SYN-3001 : [thread 1] End high effort area and logic-level optimization;  4.822939s wall, 6.578125s user + 0.000000s system = 6.578125s CPU (136.4%)
+
+SYN-2581 : [partition 0 (thread 0)] Mapping with K=6, #lut = 1102 (3.59), #lev = 5 (2.21), #crit_level = 0, #edge = 3958 
+SYN-2581 : [partition 1 (thread 1)] Mapping with K=6, #lut = 500 (4.08), #lev = 6 (4.56), #crit_level = 0, #edge = 2039 
+SYN-2581 : [combined] Mapping with K=6, #lut = 1602 (3.74), #lev = 6 (2.66), #crit_level = 0, #edge = 5997 
+SYN-3001 : End LUT mapping;  12.987915s wall, 21.203125s user + 0.046875s system = 21.250000s CPU (163.6%)
+
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 12.991212s wall, 21.203125s user + 0.046875s system = 21.250000s CPU (163.6%); Memory(MB): used = 1428, reserved = 1509, peak = 1428;
+
+SYN-1001 : Start remapping carry-chain in over-quota path...
+OPT-1001 : Start re-synthesis-xmap optimization ...
+OPT-1001 : Run flow with mode 1.
+OPT-1001 : Update timing in basic mode
+RUN-1002 : start command "start_timer"
+OPT-1001 : End timing update;  0.040725s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (268.6%)
+
+OPT-1001 : SWNS 3136 STNS 0 NUM_FEPS 0 Over-Quota 0 (0)
+OPT-1001 : Total improved wns 0 tns 0, area incr 0 final over-quota 0 (0)
+OPT-1001 : End re-synthesis optimization;  0.222706s wall, 0.843750s user + 0.000000s system = 0.843750s CPU (378.9%)
+
+OPT-1001 : End physical optimization;  0.222775s wall, 0.843750s user + 0.000000s system = 0.843750s CPU (378.7%)
+
+SYN-1001 : End remapping carry-chain in over-quota path...
+SYN-1001 : Packing model "hdr_quality_color_probe" ...
+SYN-1001 : Stage 2.5 | Pack Gate
+SYN-4010 : Pack lib has 83 rtl pack models with 53 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 2560 DFF/LATCH to SEQ ...
+SYN-1001 : Remove 15 carry adders
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-4009 : Pack 15 carry chain into lslice
+SYN-1001 : End Stage 2.5 | Pack Gate; Time: 1.180670s wall, 1.656250s user + 0.109375s system = 1.765625s CPU (149.5%); Memory(MB): used = 1427, reserved = 1508, peak = 1428;
+
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |         3995                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         2560                |
+|     #luts                 |         1602                |
+|     #lut1                 |            3                |
+|     #lut1(~A)             |            3                |
+|     #slices               |          280                |
+|     slices percentage     |        0.44%                |
+|     #RAMs                 |           16                |
+|     #DSPs                 |           24                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |           39                |
+|     #insts in MACRO       |          364                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |            0                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 1% datanet fanout#    |        16.79                |
+| dff(single fanout)->dff   |          687                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total Number          |            0                |
+|     Total Level Slack     |            0                |
+|     Worst Level Slack     |            3                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+-----------------------------------------------------------------------------------------
+  Clock  |  Period            |  0     |  1     |  2     |  3    |  4    |  5    |  6
+-----------------------------------------------------------------------------------------
+  PIX    |  8.000ns (125MHz)  |  2015  |  1988  |  1735  |  727  |  586  |  118  |  195
+-----------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(7364 paths analyzed)
+
+Hierarchical Rent Exponent Report
++--------------------------------------------------------------------------+
+|Inst      |Model                   |Rent     |Cell     |Pin     |Term     |
++--------------------------------------------------------------------------+
+|top       |hdr_quality_color_probe |-0.05    |4580     |35965   |5        |
+|  u_color |wide_color_pipeline_1   |0.46     |4039     |34491   |403      |
++--------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+RUN-0008 : Do critical warning check and 0 issue(s) found.
+RUN-0008 : Do timing check and 0 issue(s) found.
+RUN-0008 : Do area check and 0 issue(s) found.
+RUN-1002 : start command "report_area -file hdr_quality_color_probe_gate.area"
+SYN-4034 : The count of slices with lut is 8.
+SYN-4035 : The count of slices with lut+ripple is 272.
+RUN-1001 : standard
+***Report Model: hdr_quality_color_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        38   out of    148   25.68%
+  #input                   22
+  #output                  16
+  #inout                    0
+#lut                     1882
+  #lut1                     3
+  #lut2                   262
+  #lut3                   458
+  #lut4                   445
+  #lut5                   287
+  #lut6                   427
+#reg                     2560
+  #slice reg             2560   out of 128640    1.99%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1450   out of  64320    2.25%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            1450
+    #with luts*           920
+    #with adder           272
+    #reg only*            258
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                      16   out of    272    5.88%
+  #eram20k                 16
+  #fifo20k                  0
+#dsp                       24   out of    240   10.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       38   out of    148   25.68%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 16.850953s wall, 26.312500s user + 0.343750s system = 26.656250s CPU (158.2%); Memory(MB): used = 1428, reserved = 1508, peak = 1428;
+
+RUN-1003 : finish command "optimize_gate -packarea hdr_quality_color_probe_gate.area" in  16.862294s wall, 26.328125s user + 0.343750s system = 26.671875s CPU (158.2%)
+
+RUN-1004 : used memory is 1428 MB, reserved memory is 1508 MB, peak memory is 1428 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model hdr_quality_color_probe
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.020165s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (155.0%); Memory(MB): used = 1428, reserved = 1508, peak = 1428;
+
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1002 : start command "report_timing_status -file hdr_quality_color_probe_gate.ts"
+RUN-1002 : start command "report_timing_summary -file hdr_quality_color_probe_gate.timing"
+RUN-1002 : start command "flow_status -file flow.status"
+Location         : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\color_parent_compare\parent_a1\fused_optimized\hdr_quality_color_probe_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : hdr_quality_color_probe
+Device           : PH1A90SEG324
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  4059ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  16s(69%)   |    26(83%)    |       1428        |       1428        
+RUN-1001 :   import_device  |    1     |   4s(17%)   |     2(6%)     |       1086        |       1086        
+RUN-1001 :   optimize_rtl   |    1     |   3s(13%)   |     3(9%)     |       1198        |       1210        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |       1116        |       1116        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |     23s     |      31       |       1428        |       1428        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1002 : start command "export_db hdr_quality_color_probe_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e opt_gate"
+RUN-1002 : start command "flow_status"
+
+Location         : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\color_parent_compare\parent_a1\fused_optimized\hdr_quality_color_probe_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : hdr_quality_color_probe
+Device           : PH1A90SEG324
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  4059ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  16s(69%)   |    26(83%)    |       1428        |       1428        
+RUN-1001 :   import_device  |    1     |   4s(17%)   |     2(6%)     |       1086        |       1086        
+RUN-1001 :   optimize_rtl   |    1     |   3s(13%)   |     3(9%)     |       1198        |       1210        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |       1116        |       1116        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |     23s     |      31       |       1428        |       1428        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+PRJ-1406 : Run syn_1 finished.
+RUN-1003 : finish command "wait_run syn_1" in  28.212240s wall, 0.046875s user + 0.015625s system = 0.062500s CPU (0.2%)
+
+RUN-1004 : used memory is 1261 MB, reserved memory is 1292 MB, peak memory is 1293 MB
+RUN-1002 : start command "close_project"
+RUN-1002 : start command "open_project hdr_quality_color_probe.al -noanalyze"
+RUN-1002 : start command "open_run syn_1"
+RUN-1002 : start command "import_db <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/color_parent_compare/parent_a1/fused_optimized/hdr_quality_color_probe_Runs/syn_1/hdr_quality_color_probe_gate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.3.210850.
+RUN-1002 : start command "set_param gate opt_area high"
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.2 , DB_VERSION=46207
+PRJ-1408 : Open run syn_1 finished.
+RUN-1002 : start command "report_area -file reopened.area"
+SYN-4034 : The count of slices with lut is 8.
+SYN-4035 : The count of slices with lut+ripple is 272.
+RUN-1001 : standard
+***Report Model: hdr_quality_color_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        38   out of    148   25.68%
+  #input                   22
+  #output                  16
+  #inout                    0
+#lut                     1730
+  #lut1                     3
+  #lut2                   248
+  #lut3                   330
+  #lut4                   439
+  #lut5                   283
+  #lut6                   427
+#reg                     2560
+  #slice reg             2560   out of 128640    1.99%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1394   out of  64320    2.17%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            1394
+    #with luts*           844
+    #with adder           272
+    #reg only*            278
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                      16   out of    272    5.88%
+  #eram20k                 16
+  #fifo20k                  0
+#dsp                       24   out of    240   10.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       38   out of    148   25.68%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+RUN-1002 : start command "report_run_param syn_1 -file effective.params"
+RUN-1002 : start command "read_sdc <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/color_parent_compare/parent_a1/fused_optimized/probe.sdc"
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-2502 : Net delay update with mode: Synthesized
+TMR-1042 : Timing analysis accelerates with 4 threads.
+RUN-1003 : finish command "update_timing" in  1.046325s wall, 1.187500s user + 0.093750s system = 1.281250s CPU (122.5%)
+
+RUN-1004 : used memory is 1439 MB, reserved memory is 1474 MB, peak memory is 1439 MB
+RUN-1002 : start command "check_timing -file reopened_check.timing"
+RUN-1002 : start command "report_timing_summary -ep_num 16 -path_num 2 -file reopened.timing"
+RUN-1002 : start command "get_clocks PIX"
+RUN-1002 : start command "get_regs -nowarn u_color/*"
+RUN-1002 : start command "get_regs -nowarn u_color/u_tone96/*"
+RUN-1002 : start command "report_timing_path -from  -to  -ep_num 16 -path_num 2 -file color.timing"
+RUN-1002 : start command "report_timing_path -from  -to  -ep_num 8 -path_num 2 -file tone.timing"
+RUN-1002 : start command "get_regs -nowarn u_color/normalize0*"
+RUN-1002 : start command "report_timing_path -from  -ep_num 16 -path_num 2 -file wb_normalize.timing"
+RUN-1002 : start command "close_project"

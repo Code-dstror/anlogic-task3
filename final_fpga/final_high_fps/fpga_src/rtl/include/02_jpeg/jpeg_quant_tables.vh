@@ -1,0 +1,371 @@
+// 由 tools/jpeg_ref/table_data.json 生成
+// 规范 JSON SHA256：9d31c1ac24802e101d4fc6ac9ad3e34cfe7227b9da3ff74a9bbeb34c9450357e
+// 原始文件 SHA256：52db7dd4b6a865bc8338e1a6115e570ba8299ce8666d15d075765b3f4a6b493f
+// 自然顺序索引 n=8*row+col，zigzag[z] 给出对应 n
+function [5:0] zigzag;
+    input [5:0] index;
+    begin
+        case (index)
+            6'd0: zigzag = 6'd0;
+            6'd1: zigzag = 6'd1;
+            6'd2: zigzag = 6'd8;
+            6'd3: zigzag = 6'd16;
+            6'd4: zigzag = 6'd9;
+            6'd5: zigzag = 6'd2;
+            6'd6: zigzag = 6'd3;
+            6'd7: zigzag = 6'd10;
+            6'd8: zigzag = 6'd17;
+            6'd9: zigzag = 6'd24;
+            6'd10: zigzag = 6'd32;
+            6'd11: zigzag = 6'd25;
+            6'd12: zigzag = 6'd18;
+            6'd13: zigzag = 6'd11;
+            6'd14: zigzag = 6'd4;
+            6'd15: zigzag = 6'd5;
+            6'd16: zigzag = 6'd12;
+            6'd17: zigzag = 6'd19;
+            6'd18: zigzag = 6'd26;
+            6'd19: zigzag = 6'd33;
+            6'd20: zigzag = 6'd40;
+            6'd21: zigzag = 6'd48;
+            6'd22: zigzag = 6'd41;
+            6'd23: zigzag = 6'd34;
+            6'd24: zigzag = 6'd27;
+            6'd25: zigzag = 6'd20;
+            6'd26: zigzag = 6'd13;
+            6'd27: zigzag = 6'd6;
+            6'd28: zigzag = 6'd7;
+            6'd29: zigzag = 6'd14;
+            6'd30: zigzag = 6'd21;
+            6'd31: zigzag = 6'd28;
+            6'd32: zigzag = 6'd35;
+            6'd33: zigzag = 6'd42;
+            6'd34: zigzag = 6'd49;
+            6'd35: zigzag = 6'd56;
+            6'd36: zigzag = 6'd57;
+            6'd37: zigzag = 6'd50;
+            6'd38: zigzag = 6'd43;
+            6'd39: zigzag = 6'd36;
+            6'd40: zigzag = 6'd29;
+            6'd41: zigzag = 6'd22;
+            6'd42: zigzag = 6'd15;
+            6'd43: zigzag = 6'd23;
+            6'd44: zigzag = 6'd30;
+            6'd45: zigzag = 6'd37;
+            6'd46: zigzag = 6'd44;
+            6'd47: zigzag = 6'd51;
+            6'd48: zigzag = 6'd58;
+            6'd49: zigzag = 6'd59;
+            6'd50: zigzag = 6'd52;
+            6'd51: zigzag = 6'd45;
+            6'd52: zigzag = 6'd38;
+            6'd53: zigzag = 6'd31;
+            6'd54: zigzag = 6'd39;
+            6'd55: zigzag = 6'd46;
+            6'd56: zigzag = 6'd53;
+            6'd57: zigzag = 6'd60;
+            6'd58: zigzag = 6'd61;
+            6'd59: zigzag = 6'd54;
+            6'd60: zigzag = 6'd47;
+            6'd61: zigzag = 6'd55;
+            6'd62: zigzag = 6'd62;
+            6'd63: zigzag = 6'd63;
+            default: zigzag = 6'd0;
+        endcase
+    end
+endfunction
+
+// Q75 倒数表起始
+// R[n] = ceil(2^21 / q75[n])，在自然顺序到之字顺序查表后使用
+function [18:0] q75_recip_luma;
+    input [5:0] index;
+    begin
+        case (index)
+            6'd0: q75_recip_luma = 19'd262144;
+            6'd1: q75_recip_luma = 19'd349526;
+            6'd2: q75_recip_luma = 19'd419431;
+            6'd3: q75_recip_luma = 19'd262144;
+            6'd4: q75_recip_luma = 19'd174763;
+            6'd5: q75_recip_luma = 19'd104858;
+            6'd6: q75_recip_luma = 19'd80660;
+            6'd7: q75_recip_luma = 19'd67651;
+            6'd8: q75_recip_luma = 19'd349526;
+            6'd9: q75_recip_luma = 19'd349526;
+            6'd10: q75_recip_luma = 19'd299594;
+            6'd11: q75_recip_luma = 19'd209716;
+            6'd12: q75_recip_luma = 19'd161320;
+            6'd13: q75_recip_luma = 19'd72316;
+            6'd14: q75_recip_luma = 19'd69906;
+            6'd15: q75_recip_luma = 19'd74899;
+            6'd16: q75_recip_luma = 19'd299594;
+            6'd17: q75_recip_luma = 19'd299594;
+            6'd18: q75_recip_luma = 19'd262144;
+            6'd19: q75_recip_luma = 19'd174763;
+            6'd20: q75_recip_luma = 19'd104858;
+            6'd21: q75_recip_luma = 19'd72316;
+            6'd22: q75_recip_luma = 19'd59919;
+            6'd23: q75_recip_luma = 19'd74899;
+            6'd24: q75_recip_luma = 19'd299594;
+            6'd25: q75_recip_luma = 19'd233017;
+            6'd26: q75_recip_luma = 19'd190651;
+            6'd27: q75_recip_luma = 19'd139811;
+            6'd28: q75_recip_luma = 19'd80660;
+            6'd29: q75_recip_luma = 19'd47663;
+            6'd30: q75_recip_luma = 19'd52429;
+            6'd31: q75_recip_luma = 19'd67651;
+            6'd32: q75_recip_luma = 19'd233017;
+            6'd33: q75_recip_luma = 19'd190651;
+            6'd34: q75_recip_luma = 19'd110377;
+            6'd35: q75_recip_luma = 19'd74899;
+            6'd36: q75_recip_luma = 19'd61681;
+            6'd37: q75_recip_luma = 19'd38131;
+            6'd38: q75_recip_luma = 19'd40330;
+            6'd39: q75_recip_luma = 19'd53774;
+            6'd40: q75_recip_luma = 19'd174763;
+            6'd41: q75_recip_luma = 19'd116509;
+            6'd42: q75_recip_luma = 19'd74899;
+            6'd43: q75_recip_luma = 19'd65536;
+            6'd44: q75_recip_luma = 19'd51151;
+            6'd45: q75_recip_luma = 19'd40330;
+            6'd46: q75_recip_luma = 19'd36793;
+            6'd47: q75_recip_luma = 19'd45591;
+            6'd48: q75_recip_luma = 19'd83887;
+            6'd49: q75_recip_luma = 19'd65536;
+            6'd50: q75_recip_luma = 19'd53774;
+            6'd51: q75_recip_luma = 19'd47663;
+            6'd52: q75_recip_luma = 19'd40330;
+            6'd53: q75_recip_luma = 19'd34380;
+            6'd54: q75_recip_luma = 19'd34953;
+            6'd55: q75_recip_luma = 19'd41121;
+            6'd56: q75_recip_luma = 19'd58255;
+            6'd57: q75_recip_luma = 19'd45591;
+            6'd58: q75_recip_luma = 19'd43691;
+            6'd59: q75_recip_luma = 19'd42800;
+            6'd60: q75_recip_luma = 19'd37450;
+            6'd61: q75_recip_luma = 19'd41944;
+            6'd62: q75_recip_luma = 19'd40330;
+            6'd63: q75_recip_luma = 19'd41944;
+            default: q75_recip_luma = 19'd0;
+        endcase
+    end
+endfunction
+
+function [18:0] q75_recip_chroma;
+    input [5:0] index;
+    begin
+        case (index)
+            6'd0: q75_recip_chroma = 19'd233017;
+            6'd1: q75_recip_chroma = 19'd233017;
+            6'd2: q75_recip_chroma = 19'd174763;
+            6'd3: q75_recip_chroma = 19'd87382;
+            6'd4: q75_recip_chroma = 19'd41944;
+            6'd5: q75_recip_chroma = 19'd41944;
+            6'd6: q75_recip_chroma = 19'd41944;
+            6'd7: q75_recip_chroma = 19'd41944;
+            6'd8: q75_recip_chroma = 19'd233017;
+            6'd9: q75_recip_chroma = 19'd190651;
+            6'd10: q75_recip_chroma = 19'd161320;
+            6'd11: q75_recip_chroma = 19'd63551;
+            6'd12: q75_recip_chroma = 19'd41944;
+            6'd13: q75_recip_chroma = 19'd41944;
+            6'd14: q75_recip_chroma = 19'd41944;
+            6'd15: q75_recip_chroma = 19'd41944;
+            6'd16: q75_recip_chroma = 19'd174763;
+            6'd17: q75_recip_chroma = 19'd161320;
+            6'd18: q75_recip_chroma = 19'd74899;
+            6'd19: q75_recip_chroma = 19'd41944;
+            6'd20: q75_recip_chroma = 19'd41944;
+            6'd21: q75_recip_chroma = 19'd41944;
+            6'd22: q75_recip_chroma = 19'd41944;
+            6'd23: q75_recip_chroma = 19'd41944;
+            6'd24: q75_recip_chroma = 19'd87382;
+            6'd25: q75_recip_chroma = 19'd63551;
+            6'd26: q75_recip_chroma = 19'd41944;
+            6'd27: q75_recip_chroma = 19'd41944;
+            6'd28: q75_recip_chroma = 19'd41944;
+            6'd29: q75_recip_chroma = 19'd41944;
+            6'd30: q75_recip_chroma = 19'd41944;
+            6'd31: q75_recip_chroma = 19'd41944;
+            6'd32: q75_recip_chroma = 19'd41944;
+            6'd33: q75_recip_chroma = 19'd41944;
+            6'd34: q75_recip_chroma = 19'd41944;
+            6'd35: q75_recip_chroma = 19'd41944;
+            6'd36: q75_recip_chroma = 19'd41944;
+            6'd37: q75_recip_chroma = 19'd41944;
+            6'd38: q75_recip_chroma = 19'd41944;
+            6'd39: q75_recip_chroma = 19'd41944;
+            6'd40: q75_recip_chroma = 19'd41944;
+            6'd41: q75_recip_chroma = 19'd41944;
+            6'd42: q75_recip_chroma = 19'd41944;
+            6'd43: q75_recip_chroma = 19'd41944;
+            6'd44: q75_recip_chroma = 19'd41944;
+            6'd45: q75_recip_chroma = 19'd41944;
+            6'd46: q75_recip_chroma = 19'd41944;
+            6'd47: q75_recip_chroma = 19'd41944;
+            6'd48: q75_recip_chroma = 19'd41944;
+            6'd49: q75_recip_chroma = 19'd41944;
+            6'd50: q75_recip_chroma = 19'd41944;
+            6'd51: q75_recip_chroma = 19'd41944;
+            6'd52: q75_recip_chroma = 19'd41944;
+            6'd53: q75_recip_chroma = 19'd41944;
+            6'd54: q75_recip_chroma = 19'd41944;
+            6'd55: q75_recip_chroma = 19'd41944;
+            6'd56: q75_recip_chroma = 19'd41944;
+            6'd57: q75_recip_chroma = 19'd41944;
+            6'd58: q75_recip_chroma = 19'd41944;
+            6'd59: q75_recip_chroma = 19'd41944;
+            6'd60: q75_recip_chroma = 19'd41944;
+            6'd61: q75_recip_chroma = 19'd41944;
+            6'd62: q75_recip_chroma = 19'd41944;
+            6'd63: q75_recip_chroma = 19'd41944;
+            default: q75_recip_chroma = 19'd0;
+        endcase
+    end
+endfunction
+// Q75 倒数表结束
+
+function [7:0] q75_luma;
+    input [5:0] index;
+    begin
+        case (index)
+            6'd0: q75_luma = 8'd8;
+            6'd1: q75_luma = 8'd6;
+            6'd2: q75_luma = 8'd5;
+            6'd3: q75_luma = 8'd8;
+            6'd4: q75_luma = 8'd12;
+            6'd5: q75_luma = 8'd20;
+            6'd6: q75_luma = 8'd26;
+            6'd7: q75_luma = 8'd31;
+            6'd8: q75_luma = 8'd6;
+            6'd9: q75_luma = 8'd6;
+            6'd10: q75_luma = 8'd7;
+            6'd11: q75_luma = 8'd10;
+            6'd12: q75_luma = 8'd13;
+            6'd13: q75_luma = 8'd29;
+            6'd14: q75_luma = 8'd30;
+            6'd15: q75_luma = 8'd28;
+            6'd16: q75_luma = 8'd7;
+            6'd17: q75_luma = 8'd7;
+            6'd18: q75_luma = 8'd8;
+            6'd19: q75_luma = 8'd12;
+            6'd20: q75_luma = 8'd20;
+            6'd21: q75_luma = 8'd29;
+            6'd22: q75_luma = 8'd35;
+            6'd23: q75_luma = 8'd28;
+            6'd24: q75_luma = 8'd7;
+            6'd25: q75_luma = 8'd9;
+            6'd26: q75_luma = 8'd11;
+            6'd27: q75_luma = 8'd15;
+            6'd28: q75_luma = 8'd26;
+            6'd29: q75_luma = 8'd44;
+            6'd30: q75_luma = 8'd40;
+            6'd31: q75_luma = 8'd31;
+            6'd32: q75_luma = 8'd9;
+            6'd33: q75_luma = 8'd11;
+            6'd34: q75_luma = 8'd19;
+            6'd35: q75_luma = 8'd28;
+            6'd36: q75_luma = 8'd34;
+            6'd37: q75_luma = 8'd55;
+            6'd38: q75_luma = 8'd52;
+            6'd39: q75_luma = 8'd39;
+            6'd40: q75_luma = 8'd12;
+            6'd41: q75_luma = 8'd18;
+            6'd42: q75_luma = 8'd28;
+            6'd43: q75_luma = 8'd32;
+            6'd44: q75_luma = 8'd41;
+            6'd45: q75_luma = 8'd52;
+            6'd46: q75_luma = 8'd57;
+            6'd47: q75_luma = 8'd46;
+            6'd48: q75_luma = 8'd25;
+            6'd49: q75_luma = 8'd32;
+            6'd50: q75_luma = 8'd39;
+            6'd51: q75_luma = 8'd44;
+            6'd52: q75_luma = 8'd52;
+            6'd53: q75_luma = 8'd61;
+            6'd54: q75_luma = 8'd60;
+            6'd55: q75_luma = 8'd51;
+            6'd56: q75_luma = 8'd36;
+            6'd57: q75_luma = 8'd46;
+            6'd58: q75_luma = 8'd48;
+            6'd59: q75_luma = 8'd49;
+            6'd60: q75_luma = 8'd56;
+            6'd61: q75_luma = 8'd50;
+            6'd62: q75_luma = 8'd52;
+            6'd63: q75_luma = 8'd50;
+            default: q75_luma = 8'd0;
+        endcase
+    end
+endfunction
+
+function [7:0] q75_chroma;
+    input [5:0] index;
+    begin
+        case (index)
+            6'd0: q75_chroma = 8'd9;
+            6'd1: q75_chroma = 8'd9;
+            6'd2: q75_chroma = 8'd12;
+            6'd3: q75_chroma = 8'd24;
+            6'd4: q75_chroma = 8'd50;
+            6'd5: q75_chroma = 8'd50;
+            6'd6: q75_chroma = 8'd50;
+            6'd7: q75_chroma = 8'd50;
+            6'd8: q75_chroma = 8'd9;
+            6'd9: q75_chroma = 8'd11;
+            6'd10: q75_chroma = 8'd13;
+            6'd11: q75_chroma = 8'd33;
+            6'd12: q75_chroma = 8'd50;
+            6'd13: q75_chroma = 8'd50;
+            6'd14: q75_chroma = 8'd50;
+            6'd15: q75_chroma = 8'd50;
+            6'd16: q75_chroma = 8'd12;
+            6'd17: q75_chroma = 8'd13;
+            6'd18: q75_chroma = 8'd28;
+            6'd19: q75_chroma = 8'd50;
+            6'd20: q75_chroma = 8'd50;
+            6'd21: q75_chroma = 8'd50;
+            6'd22: q75_chroma = 8'd50;
+            6'd23: q75_chroma = 8'd50;
+            6'd24: q75_chroma = 8'd24;
+            6'd25: q75_chroma = 8'd33;
+            6'd26: q75_chroma = 8'd50;
+            6'd27: q75_chroma = 8'd50;
+            6'd28: q75_chroma = 8'd50;
+            6'd29: q75_chroma = 8'd50;
+            6'd30: q75_chroma = 8'd50;
+            6'd31: q75_chroma = 8'd50;
+            6'd32: q75_chroma = 8'd50;
+            6'd33: q75_chroma = 8'd50;
+            6'd34: q75_chroma = 8'd50;
+            6'd35: q75_chroma = 8'd50;
+            6'd36: q75_chroma = 8'd50;
+            6'd37: q75_chroma = 8'd50;
+            6'd38: q75_chroma = 8'd50;
+            6'd39: q75_chroma = 8'd50;
+            6'd40: q75_chroma = 8'd50;
+            6'd41: q75_chroma = 8'd50;
+            6'd42: q75_chroma = 8'd50;
+            6'd43: q75_chroma = 8'd50;
+            6'd44: q75_chroma = 8'd50;
+            6'd45: q75_chroma = 8'd50;
+            6'd46: q75_chroma = 8'd50;
+            6'd47: q75_chroma = 8'd50;
+            6'd48: q75_chroma = 8'd50;
+            6'd49: q75_chroma = 8'd50;
+            6'd50: q75_chroma = 8'd50;
+            6'd51: q75_chroma = 8'd50;
+            6'd52: q75_chroma = 8'd50;
+            6'd53: q75_chroma = 8'd50;
+            6'd54: q75_chroma = 8'd50;
+            6'd55: q75_chroma = 8'd50;
+            6'd56: q75_chroma = 8'd50;
+            6'd57: q75_chroma = 8'd50;
+            6'd58: q75_chroma = 8'd50;
+            6'd59: q75_chroma = 8'd50;
+            6'd60: q75_chroma = 8'd50;
+            6'd61: q75_chroma = 8'd50;
+            6'd62: q75_chroma = 8'd50;
+            6'd63: q75_chroma = 8'd50;
+            default: q75_chroma = 8'd0;
+        endcase
+    end
+endfunction

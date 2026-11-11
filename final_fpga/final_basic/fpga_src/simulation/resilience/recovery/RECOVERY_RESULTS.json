@@ -1,0 +1,185 @@
+{
+  "candidate": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient",
+  "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+  "ported_recovery_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+  "status": "FUNCTIONAL_PASS_WITH_KNOWN_DIGITAL_CONTRACT_EXPOSURE",
+  "production_rtl": [
+    {
+      "file": "anlogic2026.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "f0d54479ef9807cbb1ad20f7844fd7e633cc0880ac0d292f7208a8cc22280c69",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "bd458a93aaa4518e51966d75246113c0fb042735f56b1676db287cb32854a7e8",
+      "current_sha256": "bd458a93aaa4518e51966d75246113c0fb042735f56b1676db287cb32854a7e8"
+    },
+    {
+      "file": "ph1a_rx_delay_scan.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "60004fed3180b5f941d892913c3b0c651da678b2305bb46ea7a00cd7a45c6e56",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "c2c10d56465e074be32ebeac5aec08e402986037670771aa7be92424364f20cb",
+      "current_sha256": "c2c10d56465e074be32ebeac5aec08e402986037670771aa7be92424364f20cb"
+    },
+    {
+      "file": "physical_csi_rx_stream.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "35a941225578a975469cb27f5f71895bb042ad59f5d10c0a1ebea03250f02639",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "9f4a2e42ae570d7da78b3a264955a3a1fd7143fb8888dde84b7e15f53805b964",
+      "current_sha256": "9f4a2e42ae570d7da78b3a264955a3a1fd7143fb8888dde84b7e15f53805b964"
+    },
+    {
+      "file": "physical_csi_word_core.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "c5d9f573daeb19af62a05a749fbe976be993833dae7af059142b76b8a920ec9e",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "f1c96fb3d124acbf1163d3f1e07f47db168ae0fadc878de9fc01c15352aa609a",
+      "current_sha256": "f1c96fb3d124acbf1163d3f1e07f47db168ae0fadc878de9fc01c15352aa609a"
+    },
+    {
+      "file": "production_source_identity_guard.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "9ade26ecc22aade9f8f9c93f48e0eb55574869e7efbfaded1dc1fc412060594e",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "931f27ecc4e6630cd5e94e25c8b594d2ab38b5ecd0f9f84dd9242d74352ac60f",
+      "current_sha256": "931f27ecc4e6630cd5e94e25c8b594d2ab38b5ecd0f9f84dd9242d74352ac60f"
+    },
+    {
+      "file": "real_hdr_camera_observe_axis.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "716463ca3aeff16d23db8bf065068c4d7f995f326c6b5da62937a8baa8142070",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "f2465d8a5c31d4cad4add401511453f42634095d4299ee3fb99fdf57b091e0ad",
+      "current_sha256": "f2465d8a5c31d4cad4add401511453f42634095d4299ee3fb99fdf57b091e0ad"
+    },
+    {
+      "file": "real_hdr_physical_csi_rx.v",
+      "baseline_commit": "b68fdc2d79b9ae3579174366f0fdce89dfc9f389",
+      "baseline_sha256": "cb1afaf304bd201c43c15ca4c3d12a5bb91c6b587a4aab986c2bcd943780b7b2",
+      "ported_commit": "b26058dd436afcf0966f2fe643ccbf7664a2e5de",
+      "ported_sha256": "2139a375b38243978fcaeec615fbf756e458c1d4f60abf4042ba8a0d878c902a",
+      "current_sha256": "2139a375b38243978fcaeec615fbf756e458c1d4f60abf4042ba8a0d878c902a"
+    }
+  ],
+  "runs": [
+    {
+      "name": "word_recovery_r01",
+      "status": "PASS",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\word_recovery_r01\\RESULTS.json",
+      "result_sha256": "290a714ac2ab76d37def2b0554be6c4d5a6060a65e183e715e0e9f3cefd5a75b",
+      "metrics": [
+        "RESULT: PASS word recovery EXPECT_RECOVERY=1 checks=107",
+        "RESULT: PASS word recovery saturation EXPECT_RECOVERY=1 checks=3"
+      ],
+      "warnings": [],
+      "source_and_compiled_inputs_rechecked": 3
+    },
+    {
+      "name": "word_strict_r01",
+      "status": "PASS",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\word_strict_r01\\RESULTS.json",
+      "result_sha256": "f6157e25d85f971f5f964995be1e05f910a59d081b4e28449cf4344a48628658",
+      "metrics": [
+        "RESULT: PASS word recovery EXPECT_RECOVERY=0 checks=107",
+        "RESULT: PASS word recovery saturation EXPECT_RECOVERY=0 checks=3"
+      ],
+      "warnings": [],
+      "source_and_compiled_inputs_rechecked": 3
+    },
+    {
+      "name": "receiver_matrix_r01",
+      "status": "PASS",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\receiver_matrix_r01\\RESULTS.json",
+      "result_sha256": "1df560bc64a5f63c860c79b74c81947dc90ad11f36f70aa60eee1ad891082826",
+      "metrics": [
+        "RESULT: PASS recovery_receiver_tb cases=43 per_sequence_RAW_and_native_exactly_once=1"
+      ],
+      "warnings": [],
+      "source_and_compiled_inputs_rechecked": 27
+    },
+    {
+      "name": "physical_r01",
+      "status": "PASS",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\physical_r01\\RESULTS.json",
+      "result_sha256": "b7505cc4700b16344d361084c470e1b841a2e33174f5847164cecef1f44eb9f4",
+      "metrics": [
+        "RESULT: PASS physical recovery checks=5392 FS=40 RAW_END=14 RAW_ABORT=8 native=22 good=14"
+      ],
+      "warnings": [],
+      "source_and_compiled_inputs_rechecked": 21
+    },
+    {
+      "name": "adversarial_recovery_r01",
+      "status": "PASS_WITH_CONTRACT_EXPOSURE",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\adversarial_recovery_r01\\RESULTS.json",
+      "result_sha256": "dbda39e5556bdbcfc8df840f307078768b99f3c7550aa2caa8ba4cecdd89d3e7",
+      "metrics": [
+        "RESULT|cases=71|checks=13803|failures=0|detected=4",
+        "RESULT|cases=2|checks=16|failures=0|detected=0",
+        "RESULT|cases=22|checks=344|failures=2|detected=6"
+      ],
+      "warnings": [],
+      "known_contract_exposures": [
+        "MISMATCH|packet_done_to_new_SYNC_same_boundary|control count",
+        "MISMATCH|packet_done_to_new_SYNC_same_boundary|announced source still lacks terminal at end"
+      ],
+      "unexpected_mismatches": [],
+      "source_and_compiled_inputs_rechecked": 10
+    },
+    {
+      "name": "adversarial_strict_r01",
+      "status": "PASS_WITH_CONTRACT_EXPOSURE",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\adversarial_strict_r01\\RESULTS.json",
+      "result_sha256": "80950dc376f3ac2d1098317074d1f49809941e8d927b3aae9c033fca098ac8c3",
+      "metrics": [
+        "RESULT|cases=71|checks=13803|failures=0|detected=4",
+        "RESULT|cases=2|checks=16|failures=0|detected=0",
+        "RESULT|cases=22|checks=344|failures=2|detected=6"
+      ],
+      "warnings": [],
+      "known_contract_exposures": [
+        "MISMATCH|packet_done_to_new_SYNC_same_boundary|control count",
+        "MISMATCH|packet_done_to_new_SYNC_same_boundary|announced source still lacks terminal at end"
+      ],
+      "unexpected_mismatches": [],
+      "source_and_compiled_inputs_rechecked": 10
+    },
+    {
+      "name": "short_alias_r01",
+      "status": "PASS",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\short_alias_r01\\RESULTS.json",
+      "result_sha256": "73e1cbfad51e04cc3433f5a4698b24c0ffaf56f0781b85bf37b545f4f796bfe0",
+      "metrics": [
+        "RESULT|cases=16|checks=625|failures=0|detected=0"
+      ],
+      "warnings": [],
+      "source_and_compiled_inputs_rechecked": 6
+    },
+    {
+      "name": "scanner_edges_r01",
+      "status": "PASS",
+      "result_path": "C:/fpga_workspace/anlogic-task3\\refactor\\hdr_rx_resilient\\tmp\\recovery\\scanner_edges_r01\\RESULTS.json",
+      "result_sha256": "7ecaff2777fa83665dda52699f0fbce5ef6f558d3c69f99644118b4446488dfe",
+      "metrics": [],
+      "warnings": [],
+      "case_count": 7,
+      "passed": 7,
+      "failed": 0,
+      "source_and_compiled_inputs_rechecked": 0
+    }
+  ],
+  "critical_observations": [
+    "SDR recognized new FS recovers with monotonic new identity; default strict and saturation remain fail-closed.",
+    "Repeated header/CRC + stalled next FS preserves old terminal identity and first RX latch.",
+    "Actual raw40 rejection yields no invented ECC/CRC; next FS negatively terminates old SOURCE1 before complete SOURCE2.",
+    "All sixteen short lane aliases negatively terminate old SOURCE: thirteen ECC, three CRC; subsequent SOURCE2 golden data succeeds.",
+    "Known PD-boundary immediate raw SYNC probe preserves two FAIL assertions, not a board-reachability proof.",
+    "Old SOURCE/record retirement before local clear is ported in TOP; complete TOP/JOIN/JPEG/STOP validation is owned by MAIN, not these leaf tests."
+  ],
+  "synthesis": "NOT_RUN",
+  "place_route": "NOT_RUN",
+  "timing": "NOT_RUN",
+  "bitgen": "NOT_RUN",
+  "board": "NOT_RUN",
+  "full_main": "NOT_CLAIMED_BY_THIS_REPORT"
+}

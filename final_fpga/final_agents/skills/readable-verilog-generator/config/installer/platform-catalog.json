@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "platforms": [
+    {
+      "id": "codex",
+      "display_name": "Codex",
+      "aliases": [],
+      "root_mode": "environment_or_home_relative",
+      "environment_names": [
+        "CODEX_HOME"
+      ],
+      "fallback_home_relative": ".codex",
+      "skill_install_dir": "skills",
+      "detect": [
+        {
+          "kind": "environment_present",
+          "name": "CODEX_HOME"
+        },
+        {
+          "kind": "home_relative_exists",
+          "path": ".codex"
+        }
+      ],
+      "metadata_files": [
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "id": "claude",
+      "display_name": "Claude",
+      "aliases": [],
+      "root_mode": "home_relative",
+      "environment_names": [],
+      "fallback_home_relative": ".claude",
+      "skill_install_dir": "skills",
+      "detect": [
+        {
+          "kind": "home_relative_exists",
+          "path": ".claude"
+        }
+      ],
+      "metadata_files": [
+        "agents/claude.yaml"
+      ]
+    },
+    {
+      "id": "gemini",
+      "display_name": "Gemini",
+      "aliases": [],
+      "root_mode": "home_relative",
+      "environment_names": [],
+      "fallback_home_relative": ".gemini",
+      "skill_install_dir": "skills",
+      "detect": [
+        {
+          "kind": "home_relative_exists",
+          "path": ".gemini"
+        }
+      ],
+      "metadata_files": [
+        "agents/gemini.yaml"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "display_name": "DeepSeek",
+      "aliases": [],
+      "root_mode": "home_relative",
+      "environment_names": [],
+      "fallback_home_relative": ".dsh",
+      "skill_install_dir": "skills",
+      "detect": [
+        {
+          "kind": "home_relative_exists",
+          "path": ".dsh"
+        }
+      ],
+      "metadata_files": [
+        "agents/deepseek.yaml"
+      ]
+    }
+  ]
+}

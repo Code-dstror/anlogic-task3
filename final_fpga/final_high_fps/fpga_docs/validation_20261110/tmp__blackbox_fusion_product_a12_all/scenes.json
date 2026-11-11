@@ -1,0 +1,128 @@
+{
+  "manual_wb_q8": [
+    333,
+    178,
+    226
+  ],
+  "cases": {
+    "normal": {
+      "first": {
+        "sequence": 11,
+        "raw_rgb10": [
+          172,
+          440,
+          858
+        ],
+        "expected_rgb8": [
+          109,
+          139,
+          216
+        ],
+        "raw_input_sha256": "507fce025e4942bd3ac3396054ec5c9a89b09e8f476fb05a96a81c8d777b060c"
+      },
+      "recovery": {
+        "sequence": 13,
+        "raw_rgb10": [
+          613,
+          328,
+          234
+        ],
+        "expected_rgb8": [
+          219,
+          119,
+          110
+        ],
+        "raw_input_sha256": "804f8dec3869ec6b7486a579239355643c9edab9fbe83cc479eadf65d452d63f"
+      },
+      "slverr": {
+        "sequence": 12,
+        "raw_rgb10": [
+          321,
+          280,
+          580
+        ],
+        "raw_input_sha256": "5161d28b7cf33564e324dd6429289469a23291baf75d93b07233065092a7888a"
+      }
+    },
+    "stopped": {
+      "first": {
+        "sequence": 11,
+        "raw_rgb10": [
+          172,
+          440,
+          858
+        ],
+        "expected_rgb8": [
+          109,
+          139,
+          216
+        ],
+        "raw_input_sha256": "507fce025e4942bd3ac3396054ec5c9a89b09e8f476fb05a96a81c8d777b060c"
+      }
+    },
+    "deadline": {
+      "first": {
+        "sequence": 11,
+        "raw_rgb10": [
+          172,
+          440,
+          858
+        ],
+        "expected_rgb8": [
+          109,
+          139,
+          216
+        ],
+        "raw_input_sha256": "507fce025e4942bd3ac3396054ec5c9a89b09e8f476fb05a96a81c8d777b060c"
+      },
+      "recovery": {
+        "sequence": 13,
+        "raw_rgb10": [
+          613,
+          328,
+          234
+        ],
+        "expected_rgb8": [
+          219,
+          119,
+          110
+        ],
+        "raw_input_sha256": "804f8dec3869ec6b7486a579239355643c9edab9fbe83cc479eadf65d452d63f"
+      },
+      "slverr": {
+        "sequence": 12,
+        "raw_rgb10": [
+          321,
+          280,
+          580
+        ],
+        "raw_input_sha256": "5161d28b7cf33564e324dd6429289469a23291baf75d93b07233065092a7888a"
+      }
+    },
+    "timeout": {
+      "cold_recovery": {
+        "sequence": 21,
+        "raw_rgb10": [
+          613,
+          328,
+          234
+        ],
+        "expected_rgb8": [
+          219,
+          119,
+          110
+        ],
+        "raw_input_sha256": "804f8dec3869ec6b7486a579239355643c9edab9fbe83cc479eadf65d452d63f"
+      },
+      "timed_out": {
+        "sequence": 11,
+        "raw_rgb10": [
+          172,
+          440,
+          858
+        ],
+        "raw_input_sha256": "507fce025e4942bd3ac3396054ec5c9a89b09e8f476fb05a96a81c8d777b060c"
+      }
+    }
+  }
+}

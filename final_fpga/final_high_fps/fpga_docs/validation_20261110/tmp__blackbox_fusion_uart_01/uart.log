@@ -1,0 +1,7 @@
+wire round=1 sequence=0 fresh=0x03 resets=0x03
+wire round=2 sequence=1 fresh=0x01 resets=0x03
+wire round=3 sequence=2 fresh=0x03 resets=0x03
+wire round=4 sequence=3 fresh=0x03 resets=0x03
+wire round=5 sequence=4 fresh=0x03 resets=0x03
+decode mixed=OB/v2,DJ/v2,DJ/v3,DJ/v4 fragmented=1B bad_dj_crc=1 recovered=2
+FUSION_UART_PASS rounds=5 octets=525

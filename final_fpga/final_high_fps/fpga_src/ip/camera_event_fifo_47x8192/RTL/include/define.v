@@ -1,0 +1,2 @@
+`define camera_event_fifo_47x8192_ASYNC_CLK
+`define camera_event_fifo_47x8192_WRST_PIN

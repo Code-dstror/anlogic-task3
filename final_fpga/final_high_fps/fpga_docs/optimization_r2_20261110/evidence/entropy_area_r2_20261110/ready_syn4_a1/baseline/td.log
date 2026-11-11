@@ -1,0 +1,949 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/td_commands_prompt.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 21:03:17 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  6.548350s wall, 4.562500s user + 0.406250s system = 4.968750s CPU (75.9%)
+
+RUN-1004 : used memory is 1255 MB, reserved memory is 1285 MB, peak memory is 1289 MB
+RUN-1002 : start command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2"
+PRJ-1005 : Command create_project success.
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324" in  6.213172s wall, 4.546875s user + 0.328125s system = 4.875000s CPU (78.5%)
+
+RUN-1004 : used memory is 1258 MB, reserved memory is 1290 MB, peak memory is 1292 MB
+RUN-1002 : start command "open_project uhd_probe.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+WARNING: could not find top-level module/unit; aborting hierarchy tree creation (HIER-1013)
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-1401 : Successfully analyzed 0 source files.
+RUN-1003 : finish command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2" in  6.222570s wall, 4.546875s user + 0.328125s system = 4.875000s CPU (78.3%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1290 MB, peak memory is 1292 MB
+RUN-1002 : start command "add_files rtl/jpeg_huff_ac_rom.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/jpeg_quant_rom20x1024.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files rtl/td_sdp_ram.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_entropy.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files uhd_probe.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files clock.sdc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_include_dir ./rtl/include/02_jpeg"
+RUN-1002 : start command "top_module uhd_probe"
+PRJ-1501 : Current top model is uhd_probe.
+RUN-1002 : start command "set_param -run syn_1 flow thread 4"
+PRJ-1105 : Update param syn_1 flow::thread::4 succeed.
+RUN-1002 : start command "set_param -run syn_1 rtl min_control_set 2"
+PRJ-1105 : Update param syn_1 rtl::min_control_set::2 succeed.
+RUN-1002 : start command "set_param -run syn_1 gate map_mode area_prior"
+PRJ-1105 : Update param syn_1 gate::map_mode::area_prior succeed.
+RUN-1002 : start command "set_param -run syn_1 gate multi_thread_mapping partition"
+PRJ-1105 : Update param syn_1 gate::multi_thread_mapping::partition succeed.
+RUN-1002 : start command "set_param -run syn_1 gate add_map_lut_struct on"
+PRJ-1105 : Update param syn_1 gate::add_map_lut_struct::on succeed.
+RUN-1002 : start command "launch_runs -step opt_gate syn_1"
+PRJ-1403 : syn_1 is launched.
+PRJ-1404 : Run log file is <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_20261110/ready_syn4_a1/baseline/uhd_probe_Runs/syn_1/run.log.
+RUN-1002 : start command "wait_run syn_1"
+PRJ-1405 : Waiting for run syn_1 to finish.
+PRJ-1411 : launch_runs syn_1 -step opt_gate.
+PRJ-1412 : reset_run phy_1.
+                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish .........                                                            Waiting for run syn_1 to finish PRJ-1009 : If you need the best result of runs copied into "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_20261110/ready_syn4_a1/baseline/uhd_probe_Runs/best_result" , please execute "save_best_bits" in the Tcl console after all runs complete, or add "save_best_bits" in tcl script after "wait_run" command.
+
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/run.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 21:03:31 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "source_tcl ./settings.cfg"
+PRJ-1001 : Finish executing settings.cfg
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  4.633573s wall, 3.109375s user + 0.093750s system = 3.203125s CPU (69.1%)
+
+RUN-1004 : used memory is 1084 MB, reserved memory is 1085 MB, peak memory is 1084 MB
+RUN-1002 : start command "open_project uhd_probe.prj"
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.v(92)
+HDL-1007 : analyze verilog file ../../ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.v(92)
+HDL-1007 : analyze verilog file ../../rtl/jpeg_huff_ac_rom.v
+HDL-1007 : analyze verilog file ../../rtl/jpeg_quant_rom20x1024.v
+HDL-1007 : analyze verilog file ../../rtl/td_sdp_ram.v
+HDL-1007 : analyze verilog file ../../jpeg_entropy.v
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_20261110/ready_syn4_a1/baseline/rtl/include/02_jpeg/jpeg_quant_config.vh in ../../jpeg_entropy.v(1)
+HDL-1007 : back to file '../../jpeg_entropy.v' in ../../jpeg_entropy.v(1)
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_20261110/ready_syn4_a1/baseline/rtl/include/02_jpeg/jpeg_huff_rom.vh in ../../jpeg_entropy.v(194)
+HDL-1007 : back to file '../../jpeg_entropy.v' in ../../jpeg_entropy.v(194)
+HDL-1007 : analyze verilog file ../../uhd_probe.v
+PRJ-1401 : Successfully analyzed 7 source files.
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top uhd_probe -params "
+HDL-1007 : elaborate module uhd_probe in ../../uhd_probe.v(1)
+HDL-1007 : elaborate module jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) in ../../jpeg_entropy.v(3)
+HDL-1007 : extracting RAM for identifier 'ac1_kind' in ../../jpeg_entropy.v(134)
+HDL-1007 : extracting RAM for identifier 'ac1_magnitude' in ../../jpeg_entropy.v(136)
+HDL-1007 : extracting RAM for identifier 'ac1_amplitude' in ../../jpeg_entropy.v(137)
+HDL-1007 : extracting RAM for identifier 'ac2_amplitude' in ../../jpeg_entropy.v(143)
+HDL-1007 : elaborate module jpeg_huff_ac_rom(INIT_FILE="./quant_data/ac_huffman.mif") in ../../rtl/jpeg_huff_ac_rom.v(2)
+HDL-1007 : elaborate module jpeg_quant_rom20x1024 in ../../rtl/jpeg_quant_rom20x1024.v(3)
+HDL-1007 : elaborate module jpeg_rom_huff in ../../ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.v(14)
+HDL-1007 : elaborate module PH1_LOGIC_ERAM(DATA_WIDTH_B=20,ADDR_WIDTH_B=10,DATA_DEPTH_A=1024,DATA_DEPTH_B=1024,SSROVERCE="DISABLE",CLKMODE="SYNC",INIT_FILE="../../../rtl/jpeg/quant_data/ac_huffman.mif") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(22)
+HDL-1007 : elaborate module td_sdp_ram(WIDTH=16,DEPTH=16,ADDR_WIDTH=4,DISTRIBUTED_ENABLE=1) in ../../rtl/td_sdp_ram.v(4)
+HDL-1007 : elaborate module PH1_LOGIC_DRAM(DATA_WIDTH_W=16,DATA_WIDTH_R=16,ADDR_WIDTH_W=4,ADDR_WIDTH_R=4,DATA_DEPTH_W=16,DATA_DEPTH_R=16,READREG="ENABLE") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(217)
+HDL-1200 : Current top model is uhd_probe
+HDL-1100 : Inferred 4 RAMs.
+RUN-1002 : start command "export_db uhd_probe_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step rtl"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1002 : start command "set_param rtl min_control_set 2"
+RUN-1001 : Print Rtl Property
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :         Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :        fix_undriven       |     0      |        0         |        
+RUN-1001 :   gated_clock_conversion  |    off     |       off        |        
+RUN-1001 :         infer_fsm         |    auto    |       auto       |        
+RUN-1001 :         infer_rom         |     on     |        on        |        
+RUN-1001 :       infer_shifter       |     on     |        on        |        
+RUN-1001 :       keep_hierarchy      |    auto    |       auto       |        
+RUN-1001 :        merge_equal        |     on     |        on        |        
+RUN-1001 :      min_control_set      |     2      |        8         |   *    
+RUN-1001 :       min_ripple_len      |    auto    |       auto       |        
+RUN-1001 :          seq_syn          |     on     |        on        |        
+RUN-1001 :       tcl_afterstep       |            |                  |        
+RUN-1001 :       tcl_beforestep      |            |                  |        
+RUN-1001 : -------------------------------------------------------------------
+RUN-1002 : start command "read_sdc ../../clock.sdc"
+RUN-1002 : start command "insert_debugger"
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file <TOOLS_ROOT>/TD_Release_2026.2.210.850/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-5014 WARNING: Port "i_block_index[1]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_block_index[0]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_block_valid" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[31]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[30]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[29]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[28]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[27]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[26]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 WARNING: Port "i_capture_id[25]" in model jpeg_entropy(STREAM_INPUT_ENABLE=1,RESTART_ENABLE=1,COEFF_BANKED_STORAGE_ENABLE=1) is either unconnected or has no load.
+SYN-5014 Similar messages will be suppressed.
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.009520s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (164.1%); Memory(MB): used = 1120, reserved = 1244, peak = 1120;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 12185, Total nets: 24779.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.039610s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (78.9%); Memory(MB): used = 1120, reserved = 1244, peak = 1120;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 2111, Total nets: 11348.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model uhd_probe
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.048360s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (96.9%); Memory(MB): used = 1121, reserved = 1244, peak = 1121;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 2121, Total nets: 10932.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.014106s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1113, reserved = 1116, peak = 1121;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 2117, Total nets: 10928.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1066 : Inferred FSM for state register 'dut/state_reg' in module 'uhd_probe'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                  0000      00000000001
+                  0110      00000000010
+                  0001      00000000100
+                  0010      00000001000
+                  0011      00000010000
+                  0111      00000100000
+                  1000      00001000000
+                  1001      00010000000
+                  1010      00100000000
+                  0100      01000000000
+                  0101      10000000000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'dut/state_reg' using encoding 'one_hot' in model 'uhd_probe'
+SYN-1057 : Inferred 1 FSM(s)
+SYN-1032 : 11026/4 useful/useless nets, 2111/0 useful/useless insts
+SYN-1021 : Optimized 2 onehot mux instances.
+SYN-1016 : Merged 70 instances.
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-1016 : Merged 18 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 1.040774s wall, 1.046875s user + 0.046875s system = 1.093750s CPU (105.1%); Memory(MB): used = 1156, reserved = 1151, peak = 1156;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 5550, Total nets: 6134.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1019 : Optimized 7 mux instances.
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 1 inv instances.
+SYN-1017 : Remove 1 const input seq instances
+SYN-1020 : Optimized 319 distributor mux.
+SYN-1001 : Optimize 3 less-than instances
+SYN-1019 : Optimized 7 mux instances.
+SYN-2541 : Reading BRAM "dut/g_ac_rom$u_rom/u_rom/u_rom/inst" init file "..\..\rtl\jpeg\quant_data\ac_huffman.mif"
+SYN-2542 : Parsing MIF init file
+SYN-2594 : bram inst: dut/g_ac_rom$u_rom/u_rom/u_rom/inst will be optimized to a new one with A-addr 9 due to const address
+SYN-1016 : Merged 707 instances.
+SYN-1015 : Optimize round 1, 5035 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 9 inv instances.
+SYN-1017 : Remove 2 const input seq instances
+SYN-1019 : Optimized 58 mux instances.
+SYN-1019 : Optimized 52 mux instances.
+SYN-1016 : Merged 24 instances.
+SYN-1015 : Optimize round 2, 303 better
+SYN-5123 WARNING: Register "dut/error_valid_reg_reg" in ../../jpeg_entropy.v(545) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "dut/g_banked_coefficients$working_bank_reg" in ../../jpeg_entropy.v(299) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-5123 WARNING: Register "dut/o_error_code_reg[2]" in ../../jpeg_entropy.v(545) has no initial value. The tool will set its initial value to 1 but this may cause simulation mismatch between RTL and post-synthesis netlist. Please consider setting a valid initial value.
+SYN-3010 : Optimized 43 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1020 : Optimized 1 distributor mux.
+SYN-1016 : Merged 1 instances.
+SYN-1015 : Optimize round 1, 4 better
+SYN-1014 : Optimize round 2
+SYN-1015 : Optimize round 2, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 1.899802s wall, 1.890625s user + 0.125000s system = 2.015625s CPU (106.1%); Memory(MB): used = 1145, reserved = 1145, peak = 1168;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 9786, Total nets: 10319.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000864s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1146, reserved = 1146, peak = 1168;
+
+SYN-1079 : finish stage Check Design. Total instances: 9786, Total nets: 10319.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 3.054988s wall, 3.046875s user + 0.171875s system = 3.218750s CPU (105.4%); Memory(MB): used = 1146, reserved = 1146, peak = 1168;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 9786, Total nets: 10319.
+
+RUN-1003 : finish command "optimize_rtl" in  3.064375s wall, 3.046875s user + 0.171875s system = 3.218750s CPU (105.0%)
+
+RUN-1004 : used memory is 1146 MB, reserved memory is 1146 MB, peak memory is 1168 MB
+RUN-1002 : start command "report_area -file uhd_probe_rtl.area"
+RUN-1001 : standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+IO Statistics
+#IO                       139
+  #input                   84
+  #output                  55
+  #inout                    0
+
+Gate Statistics
+#Basic gates             8185
+  #and                   2891
+  #nand                     0
+  #or                    2477
+  #nor                      0
+  #xor                     23
+  #xnor                     0
+  #buf                      0
+  #not                    184
+  #bufif1                   0
+  #MX21                  1414
+  #FADD                     0
+  #DFF                   1196
+  #LATCH                    0
+#MACRO_ADD                 48
+#MACRO_EQ                 186
+#MACRO_MUX               1347
+#MACRO_OTHERS              17
+
+RUN-1002 : start command "export_db uhd_probe_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step gate"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1002 : start command "set_param gate add_map_lut_struct on"
+RUN-1002 : start command "set_param gate map_mode area_prior"
+RUN-1002 : start command "set_param gate opt_area high"
+RUN-1002 : start command "set_param gate multi_thread_mapping partition"
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :       Parameters       |   Settings   |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :   eram_cascade_height  |     auto     |       auto       |        
+RUN-1001 :        map_mode        |  area_prior  |       auto       |   *    
+RUN-1001 :      map_strategy      |      1       |        1         |        
+RUN-1001 :       pack_effort      |    medium    |      medium      |        
+RUN-1001 :     pack_seq_in_io     |     auto     |       auto       |        
+RUN-1001 :         report         |   standard   |     standard     |        
+RUN-1001 :      tcl_afterstep     |              |                  |        
+RUN-1001 :     tcl_beforestep     |              |                  |        
+RUN-1001 : ------------------------------------------------------------------
+RUN-1002 : start command "optimize_gate -packarea uhd_probe_gate.area"
+RUN-1001 : Open license file <TOOLS_ROOT>/TD_Release_2026.2.210.850/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.008433s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (185.3%); Memory(MB): used = 1163, reserved = 1313, peak = 1168;
+
+SYN-1079 : finish stage Map Reg. Total instances: 9786, Total nets: 10319.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2001 : Map 139 IOs to PADs of model 'uhd_probe'
+SYN-6021 CRITICAL-WARNING: 139 out of 139 logical ports has no user assigned specific location constraint.
+                           This may affect performance or in some cases cause damage to the device!
+                           Bitgen will abort. If insist on bitgen with risk, please 'set_param bitgen unconstr_io on' to avoid bitgen error.
+                           No ADC ports: abort_released, block_ready, buffer_last, buffer_valid, byte_data[7:0], byte_last, byte_valid, clk, done, encoder_state[2:0], (the first 10 of the 139).
+                           No ADC ports will be assigned to random location as below:
+                           abort_released:T14, block_ready:U16, buffer_last:R15, buffer_valid:P18, byte_data[7]:N17, byte_data[6]:M17, byte_data[5]:P14, byte_data[4]:P15, byte_data[3]:N11, byte_data[2]:N10, 
+                           byte_data[1]:P12, byte_data[0]:N12, byte_last:N15, byte_valid:N16, clk:T13, done:L18, encoder_state[2]:M18, encoder_state[1]:M13, encoder_state[0]:L13, error_capture_id[31]:M14, 
+                           error_capture_id[30]:N14, error_capture_id[29]:L16, error_capture_id[28]:M16, error_capture_id[27]:L14, error_capture_id[26]:L15, error_capture_id[25]:K18, error_capture_id[24]:H17, error_capture_id[23]:J17, error_capture_id[22]:J18, error_capture_id[21]:K16, 
+                           error_capture_id[20]:K17, error_capture_id[19]:J13, error_capture_id[18]:K13, error_capture_id[17]:J15, error_capture_id[16]:K15, error_capture_id[15]:F18, error_capture_id[14]:G18, error_capture_id[13]:H16, error_capture_id[12]:H15, error_capture_id[11]:H14, 
+                           error_capture_id[10]:J14, error_capture_id[9]:G14, error_capture_id[8]:G13, error_capture_id[7]:F15, error_capture_id[6]:F14, error_capture_id[5]:G17, error_capture_id[4]:G16, error_capture_id[3]:F16, error_capture_id[2]:F13, error_capture_id[1]:D13, 
+                           error_capture_id[0]:E15, error_code[7]:C15, error_code[6]:D15, error_code[5]:D18, error_code[4]:E18, error_code[3]:A14, error_code[2]:B14, error_code[1]:A13, error_code[0]:B13, error_valid:A15, 
+                           fmt_count[1]:A16, fmt_count[0]:A18, formatter_state[2]:B18, formatter_state[1]:C17, formatter_state[0]:B17, idle:D17, restart_mcus[15]:E17, restart_mcus[14]:B16, restart_mcus[13]:C16, restart_mcus[12]:V7, 
+                           restart_mcus[11]:U8, restart_mcus[10]:U7, restart_mcus[9]:U9, restart_mcus[8]:T8, restart_mcus[7]:V10, restart_mcus[6]:V9, restart_mcus[5]:T10, restart_mcus[4]:T9, restart_mcus[3]:R10, restart_mcus[2]:P10, 
+                           restart_mcus[1]:N9, restart_mcus[0]:P9, rst_n:U6, token_keep[15]:V6, token_keep[14]:U2, token_keep[13]:V2, token_keep[12]:U1, token_keep[11]:V1, token_keep[10]:U3, token_keep[9]:U4, 
+                           token_keep[8]:V5, token_keep[7]:T6, token_keep[6]:P1, token_keep[5]:N4, token_keep[4]:T4, token_keep[3]:T3, token_keep[2]:R3, token_keep[1]:R2, token_keep[0]:T1, token_last:R1, 
+                           token_ready:P3, token_user[1]:P4, token_user[0]:P5, token_valid:R5, word_data[31]:M5, word_data[30]:N5, word_data[29]:M6, word_data[28]:N6, word_data[27]:P7, word_data[26]:N7, 
+                           word_data[25]:R7, word_data[24]:R6, word_data[23]:N8, word_data[22]:P8, word_data[21]:R8, word_data[20]:U18, word_data[19]:V17, word_data[18]:U17, word_data[17]:R16, word_data[16]:R17, 
+                           word_data[15]:U14, word_data[14]:V14, word_data[13]:V15, word_data[12]:V16, word_data[11]:U13, word_data[10]:V12, word_data[9]:P13, word_data[8]:R13, word_data[7]:U11, word_data[6]:V11, 
+                           word_data[5]:T11, word_data[4]:U12, word_data[3]:T18, word_data[2]:R18, word_data[1]:R11, word_data[0]:R12, word_write:T16, write_word[1]:T15, write_word[0]:P17.
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.048055s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (97.5%); Memory(MB): used = 1163, reserved = 1313, peak = 1168;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module uhd_probe"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Optimize during map_dsp, 0 better
+SYN-1001 : Throwback 82 control mux instances
+SYN-1001 : clone 3 adder instances
+SYN-1001 : Generate 4 bigger adders
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-1001 : Optimize 10 adders
+SYN-1001 : Optimize 2 less-than instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 824 instances.
+SYN-2501 : Optimize round 1, 1927 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 2 instances.
+SYN-2501 : Optimize round 1, 4 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-1030 : Map 5 macro adder
+SYN-2501 : Map 39 macro adder(s)
+SYN-3009 : Map 24 FxMUX in MapMacro
+SYN-1016 : Merged 123 instances.
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 1.388595s wall, 1.562500s user + 0.078125s system = 1.640625s CPU (118.1%); Memory(MB): used = 1176, reserved = 1320, peak = 1176;
+
+SYN-1079 : finish stage Map Macro. Total instances: 10878, Total nets: 11402.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-3001 : Start LUT mapping ...
+SYN-3001 : Note: currently parameter "cec_check" does not support "multi_thread_mapping partition", and will be ignored.
+SYN-3001 : multi-thread mapping mode: partition
+SYN-3001 : [partition 0 (thread 0)] Collect 1075 PIs, 601 POs (4 timing unconstrained), 9246 logic instances for mapping process
+SYN-3001 : [partition 1 (thread 1)] Collect 20 PIs, 7 POs (4 timing unconstrained), 28 logic instances for mapping process
+SYN-3001 : [combined] Collect 1095 PIs, 610 POs (8 timing unconstrained POs), 9274 logic instances for mapping process
+
+SYN-3001 : [thread 1] Start high effort area and logic-level optimization ...
+SYN-3001 : [thread 1] End high effort area and logic-level optimization;  0.542896s wall, 1.062500s user + 0.000000s system = 1.062500s CPU (195.7%)
+
+SYN-3001 : [thread 0] Start high effort area and logic-level optimization ...
+SYN-3001 : [thread 0] End high effort area and logic-level optimization;  20.592236s wall, 20.203125s user + 0.046875s system = 20.250000s CPU (98.3%)
+
+SYN-2581 : [partition 0 (thread 0)] Mapping with K=6, #lut = 1929 (4.56), #lev = 10 (5.62), #crit_level = 10, #edge = 8788 
+SYN-2581 : [partition 1 (thread 1)] Mapping with K=6, #lut = 9 (3.67), #lev = 3 (1.67), #crit_level = 0, #edge = 33 
+SYN-2581 : [combined] Mapping with K=6, #lut = 1938 (4.55), #lev = 10 (5.57), #crit_level = 10, #edge = 8821 
+SYN-3001 : End LUT mapping;  75.163507s wall, 76.937500s user + 0.281250s system = 77.218750s CPU (102.7%)
+
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 75.166379s wall, 76.937500s user + 0.281250s system = 77.218750s CPU (102.7%); Memory(MB): used = 1371, reserved = 1392, peak = 1371;
+
+SYN-1001 : Start remapping carry-chain in over-quota path...
+OPT-1001 : Start re-synthesis-xmap optimization ...
+OPT-1001 : Run flow with mode 1.
+OPT-1001 : Update timing in basic mode
+RUN-1002 : start command "start_timer"
+OPT-1001 : End timing update;  0.159259s wall, 0.250000s user + 0.000000s system = 0.250000s CPU (157.0%)
+
+OPT-1001 : SWNS 2073 STNS 0 NUM_FEPS 0 Over-Quota 62 (-104)
+OPT-1001 : Endpoint: dut/reservoir_reg[21].d timing improved: wns 246 tns 0, reduce over-quota 33 (75)
+OPT-1001 : Total improved wns 246 tns 0, area incr 213 final over-quota 29 (-29)
+RUN-1001 : Over-quota Number Statistic
+RUN-1001 : -------------------------------------------------------------------------------------------
+RUN-1001 :   Clock  |  Period            |  Before  |  After  |  Tried EP  |  Succ EP  |  Unfixed EP
+RUN-1001 : -------------------------------------------------------------------------------------------
+RUN-1001 :   PIX    |  8.000ns (125MHz)  |  62      |  29     |  62        |  62       |  0
+RUN-1001 : -------------------------------------------------------------------------------------------
+OPT-1001 : End re-synthesis optimization;  3.429422s wall, 4.234375s user + 0.093750s system = 4.328125s CPU (126.2%)
+
+OPT-1001 : End physical optimization;  3.429506s wall, 4.234375s user + 0.093750s system = 4.328125s CPU (126.2%)
+
+SYN-1001 : End remapping carry-chain in over-quota path...
+SYN-1001 : Packing model "uhd_probe" ...
+SYN-1001 : Stage 2.5 | Pack Gate
+SYN-4010 : Pack lib has 83 rtl pack models with 53 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 1196 DFF/LATCH to SEQ ...
+SYN-1001 : Remove 7 carry adders
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-4009 : Pack 7 carry chain into lslice
+SYN-1001 : End Stage 2.5 | Pack Gate; Time: 1.437467s wall, 1.656250s user + 0.046875s system = 1.703125s CPU (118.5%); Memory(MB): used = 1372, reserved = 1393, peak = 1372;
+
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |         2356                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         1196                |
+|     #luts                 |         2208                |
+|     #lut1                 |            2                |
+|     #lut1(~A)             |            2                |
+|     #slices               |          291                |
+|     slices percentage     |        0.45%                |
+|     #RAMs                 |            1                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.07%                |
+|     #MACROs               |           47                |
+|     #insts in MACRO       |          331                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |            0                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 1% datanet fanout#    |        61.86                |
+| dff(single fanout)->dff   |           21                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     PIX                   |           29                |
+|     Total Number          |           29                |
+|     Total Level Slack     |          -29                |
+|     Worst Level Slack     |           -1                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+-------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock  |  Index  |  Budget(Period)  |  Level(Quota)  |                       Cell Type List                        |     Reason      |  Slack  
+-------------------------------------------------------------------------------------------------------------------------------------------------
+   PIX   |    1    |    7849(8000)    |     10(10)     |  SEQ,LUT2,LUT6,LUT6,LUT5,LUT5,LUT6,LUT3,LUT3,LUT3,LUT6,SEQ  |  uncategorized  |  2729   
+         |    2    |    7849(8000)    |     10(10)     |  SEQ,LUT2,LUT6,LUT6,LUT5,LUT5,LUT6,LUT3,LUT3,LUT3,LUT6,SEQ  |  uncategorized  |  2729   
+         |    3    |    7849(8000)    |     10(10)     |  SEQ,LUT2,LUT6,LUT6,LUT5,LUT5,LUT6,LUT3,LUT3,LUT4,LUT6,SEQ  |  uncategorized  |  2729   
+         |    4    |    7849(8000)    |     10(10)     |  SEQ,LUT2,LUT6,LUT6,LUT5,LUT5,LUT6,LUT3,LUT3,LUT6,LUT5,SEQ  |  uncategorized  |  2729   
+         |    5    |    7849(8000)    |     10(10)     |  SEQ,LUT2,LUT6,LUT6,LUT5,LUT3,LUT4,LUT5,LUT5,LUT4,LUT6,SEQ  |  uncategorized  |  2772   
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+--------------------------------------------------------------------------------------------------------------------
+  Clock  |  Period            |  0    |  1    |  2    |  3   |  4    |  5    |  6    |  7    |  8    |  9    |  10
+--------------------------------------------------------------------------------------------------------------------
+  PIX    |  8.000ns (125MHz)  |  221  |  244  |  158  |  70  |  432  |  394  |  399  |  148  |  145  |  142  |  29
+--------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(2382 paths analyzed)
+
+Hierarchical Rent Exponent Report
++----------------------------------------------------------------+
+|Inst     |Model          |Rent     |Cell     |Pin     |Term     |
++----------------------------------------------------------------+
+|top      |uhd_probe      |0.19     |3875     |20260   |26       |
+|  dut    |jpeg_entropy_1 |0.55     |3512     |19046   |465      |
++----------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+RUN-0008 : Do critical warning check and 0 issue(s) found.
+RUN-0008 : Do timing check and 1 issue(s) found.
+RUN-0008 : Do area check and 0 issue(s) found.
+QoR Evaluation
+-----------------------------------------------------------------------------------------------------------
+  ID        |  Priority  |  Description                  |  Suggestion
+-----------------------------------------------------------------------------------------------------------
+  QOR-1002  |  HIGH      |  - 29 over-quota path exist.  |  - Try following setting to reduce over-quota:
+            |            |                               |      set_param gate map_mode logic_level_prior
+            |            |                               |      set_param gate map_strategy 2
+            |            |                               |      set_param place logic_level_opt on
+-----------------------------------------------------------------------------------------------------------
+Note* (*) means this parameter has been set already.
+      (+) means this parameter has been set, suggest to upgrade higher effort level.
+Note** plesae resolve priority MUST FIX and HIGH issues firstly
+       because these have highly possible to block the timing convergence even stop the flow.
+Note*** some suggested settings are not suitable to use together
+        take care of using them separately if suggestion mentioned.
+RUN-1002 : start command "report_area -file uhd_probe_gate.area"
+SYN-4034 : The count of slices with lut is 48.
+SYN-4035 : The count of slices with lut+ripple is 115.
+RUN-1001 : standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                       139   out of    148   93.92%
+  #input                   84
+  #output                  55
+  #inout                    0
+#lut                     2499
+  #lut1                     2
+  #lut2                   251
+  #lut3                   319
+  #lut4                   436
+  #lut5                   422
+  #lut6                  1069
+#reg                     1196
+  #slice reg             1196   out of 128640    0.93%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1983   out of  64320    3.08%
+  #used ram               128
+    #dram lut             128
+    #shifter lut            0
+  #used logic            1855
+    #with luts*          1621
+    #with adder           115
+    #reg only*            119
+#f7mux                     24   out of  32160    0.07%
+#f8mux                      0   out of  16080    0.00%
+#eram                       1   out of    272    0.37%
+  #eram20k                  1
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                      139   out of    148   93.92%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 82.111804s wall, 85.156250s user + 0.562500s system = 85.718750s CPU (104.4%); Memory(MB): used = 1373, reserved = 1393, peak = 1373;
+
+RUN-1003 : finish command "optimize_gate -packarea uhd_probe_gate.area" in  82.120378s wall, 85.156250s user + 0.562500s system = 85.718750s CPU (104.4%)
+
+RUN-1004 : used memory is 1373 MB, reserved memory is 1393 MB, peak memory is 1373 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model uhd_probe
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.012283s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1373, reserved = 1393, peak = 1373;
+
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1002 : start command "report_timing_status -file uhd_probe_gate.ts"
+RUN-1002 : start command "report_timing_summary -file uhd_probe_gate.timing"
+RUN-1002 : start command "flow_status -file flow.status"
+Location         : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\entropy_area_r2_20261110\ready_syn4_a1\baseline\uhd_probe_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : uhd_probe
+Device           : PH1A90SEG324
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  2356ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+RUN-1001 : Flow Statistics:
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time   |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  1m22s(92%)  |    85(93%)    |       1373        |       1373        
+RUN-1001 :   import_device  |    1     |    4s(4%)    |     3(3%)     |       1084        |       1084        
+RUN-1001 :   optimize_rtl   |    1     |    3s(3%)    |     3(3%)     |       1146        |       1168        
+RUN-1001 :     read_sdc     |    1     |    0s(0%)    |     0(0%)     |       1120        |       1120        
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |    1m29s     |      91       |       1373        |       1373        
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1002 : start command "export_db uhd_probe_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e opt_gate"
+RUN-1002 : start command "flow_status"
+
+Location         : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\entropy_area_r2_20261110\ready_syn4_a1\baseline\uhd_probe_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : uhd_probe
+Device           : PH1A90SEG324
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  2356ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+RUN-1001 : Flow Statistics:
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time   |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  1m22s(92%)  |    85(93%)    |       1373        |       1373        
+RUN-1001 :   import_device  |    1     |    4s(4%)    |     3(3%)     |       1084        |       1084        
+RUN-1001 :   optimize_rtl   |    1     |    3s(3%)    |     3(3%)     |       1146        |       1168        
+RUN-1001 :     read_sdc     |    1     |    0s(0%)    |     0(0%)     |       1120        |       1120        
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |    1m29s     |      91       |       1373        |       1373        
+RUN-1001 : ---------------------------------------------------------------------------------------------------
+PRJ-1406 : Run syn_1 finished.
+RUN-1003 : finish command "wait_run syn_1" in  92.801606s wall, 0.156250s user + 0.062500s system = 0.218750s CPU (0.2%)
+
+RUN-1004 : used memory is 1260 MB, reserved memory is 1290 MB, peak memory is 1292 MB
+RUN-1002 : start command "close_project"
+RUN-1002 : start command "open_project uhd_probe.al -noanalyze"
+RUN-1002 : start command "open_run syn_1"
+RUN-1002 : start command "import_db <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_20261110/ready_syn4_a1/baseline/uhd_probe_Runs/syn_1/uhd_probe_gate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.3.210850.
+RUN-1002 : start command "set_param gate opt_area high"
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.2 , DB_VERSION=46207
+PRJ-1408 : Open run syn_1 finished.
+RUN-1002 : start command "report_area -file reopened.area"
+SYN-4034 : The count of slices with lut is 48.
+SYN-4035 : The count of slices with lut+ripple is 115.
+RUN-1001 : standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                       139   out of    148   93.92%
+  #input                   84
+  #output                  55
+  #inout                    0
+#lut                     2492
+  #lut1                     3
+  #lut2                   251
+  #lut3                   319
+  #lut4                   434
+  #lut5                   416
+  #lut6                  1069
+#reg                     1195
+  #slice reg             1195   out of 128640    0.93%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1980   out of  64320    3.08%
+  #used ram               128
+    #dram lut             128
+    #shifter lut            0
+  #used logic            1852
+    #with luts*          1618
+    #with adder           115
+    #reg only*            119
+#f7mux                     24   out of  32160    0.07%
+#f8mux                      0   out of  16080    0.00%
+#eram                       1   out of    272    0.37%
+  #eram20k                  1
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                      139   out of    148   93.92%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+RUN-1002 : start command "report_run_param syn_1 -file effective.params"
+RUN-1002 : start command "get_clocks PIX"
+USR-6143 WARNING: No clock match the pattern: PIX.
+RUN-1002 : start command "read_sdc clock.sdc"
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-2502 : Net delay update with mode: Synthesized
+TMR-1042 : Timing analysis accelerates with 4 threads.
+RUN-1002 : start command "check_timing -file reopened_check.timing"
+RUN-1002 : start command "report_timing_summary -ep_num 4 -path_num 2 -file reopened.timing"
+RUN-1002 : start command "get_clocks PIX"
+RUN-1002 : start command "get_pins -nowarn dut/reservoir_reg*.d"
+RUN-1002 : start command "get_pins -nowarn dut/reservoir_reg*.ce"
+RUN-1002 : start command "get_regs -nowarn formatter_state_q*"
+RUN-1002 : start command "get_regs -nowarn buffer_valid_q"
+RUN-1002 : start command "get_regs -nowarn buffer_last_q"
+RUN-1002 : start command "get_regs -nowarn fmt_count_q*"
+RUN-1002 : start command "get_regs -nowarn encoder_state_q*"
+RUN-1002 : start command "get_regs -nowarn abort_released_q"
+RUN-1002 : start command "report_timing_path -from {formatter_state_q[2]} {formatter_state_q[1]} {formatter_state_q[0]} -to {dut/reservoir_reg[0].d} {dut/reservoir_reg[1].d} {dut/reservoir_reg[2].d} {dut/reservoir_reg[3].d} {dut/reservoir_reg[4].d} {dut/reservoir_reg[5].d} {dut/reservoir_reg[6].d} {dut/reservoir_reg[7].d} {dut/reservoir_reg[8].d} {dut/reservoir_reg[9].d} {dut/reservoir_reg[10].d} {dut/reservoir_reg[11].d} {dut/reservoir_reg[12].d} {dut/reservoir_reg[13].d} {dut/reservoir_reg[14].d} {dut/reservoir_reg[15].d} {dut/reservoir_reg[16].d} {dut/reservoir_reg[17].d} {dut/reservoir_reg[18].d} {dut/reservoir_reg[19].d} {dut/reservoir_reg[20].d} {dut/reservoir_reg[21].d} {dut/reservoir_reg[22].d} {dut/reservoir_reg[23].d} {dut/reservoir_reg[24].d} {dut/reservoir_reg[25].d} {dut/reservoir_reg[26].d} {dut/reservoir_reg[27].d} {dut/reservoir_reg[28].d} {dut/reservoir_reg[29].d} {dut/reservoir_reg[30].d} {dut/reservoir_reg[31].d} {dut/reservoir_reg[32].d} {dut/reservoir_reg[33].d} {dut/reservoir_reg[34].d} {dut/reservoir_reg[35].d} {dut/reservoir_reg[36].d} {dut/reservoir_reg[37].d} {dut/reservoir_reg[38].d} {dut/reservoir_reg[39].d} {dut/reservoir_reg[40].d} {dut/reservoir_reg[41].d} {dut/reservoir_reg[42].d} {dut/reservoir_reg[43].d} {dut/reservoir_reg[44].d} {dut/reservoir_reg[45].d} {dut/reservoir_reg[46].d} {dut/reservoir_reg[47].d} {dut/reservoir_reg[48].d} {dut/reservoir_reg[49].d} {dut/reservoir_reg[50].d} {dut/reservoir_reg[51].d} {dut/reservoir_reg[52].d} {dut/reservoir_reg[53].d} {dut/reservoir_reg[54].d} {dut/reservoir_reg[55].d} {dut/reservoir_reg[56].d} {dut/reservoir_reg[57].d} {dut/reservoir_reg[58].d} {dut/reservoir_reg[59].d} {dut/reservoir_reg[60].d} {dut/reservoir_reg[61].d} {dut/reservoir_reg[62].d} {dut/reservoir_reg[63].d} -ep_num 4 -path_num 1 -file formatter_to_reservoir_d.timing"
+RUN-1002 : start command "report_timing_path -from {formatter_state_q[2]} {formatter_state_q[1]} {formatter_state_q[0]} -to {dut/reservoir_reg[0].ce} {dut/reservoir_reg[1].ce} {dut/reservoir_reg[2].ce} {dut/reservoir_reg[3].ce} {dut/reservoir_reg[4].ce} {dut/reservoir_reg[5].ce} {dut/reservoir_reg[6].ce} {dut/reservoir_reg[7].ce} {dut/reservoir_reg[8].ce} {dut/reservoir_reg[9].ce} {dut/reservoir_reg[10].ce} {dut/reservoir_reg[11].ce} {dut/reservoir_reg[12].ce} {dut/reservoir_reg[13].ce} {dut/reservoir_reg[14].ce} {dut/reservoir_reg[15].ce} {dut/reservoir_reg[16].ce} {dut/reservoir_reg[17].ce} {dut/reservoir_reg[18].ce} {dut/reservoir_reg[19].ce} {dut/reservoir_reg[20].ce} {dut/reservoir_reg[21].ce} {dut/reservoir_reg[22].ce} {dut/reservoir_reg[23].ce} {dut/reservoir_reg[24].ce} {dut/reservoir_reg[25].ce} {dut/reservoir_reg[26].ce} {dut/reservoir_reg[27].ce} {dut/reservoir_reg[28].ce} {dut/reservoir_reg[29].ce} {dut/reservoir_reg[30].ce} {dut/reservoir_reg[31].ce} {dut/reservoir_reg[32].ce} {dut/reservoir_reg[33].ce} {dut/reservoir_reg[34].ce} {dut/reservoir_reg[35].ce} {dut/reservoir_reg[36].ce} {dut/reservoir_reg[37].ce} {dut/reservoir_reg[38].ce} {dut/reservoir_reg[39].ce} {dut/reservoir_reg[40].ce} {dut/reservoir_reg[41].ce} {dut/reservoir_reg[42].ce} {dut/reservoir_reg[43].ce} {dut/reservoir_reg[44].ce} {dut/reservoir_reg[45].ce} {dut/reservoir_reg[46].ce} {dut/reservoir_reg[47].ce} {dut/reservoir_reg[48].ce} {dut/reservoir_reg[49].ce} {dut/reservoir_reg[50].ce} {dut/reservoir_reg[51].ce} {dut/reservoir_reg[52].ce} {dut/reservoir_reg[53].ce} {dut/reservoir_reg[54].ce} {dut/reservoir_reg[55].ce} {dut/reservoir_reg[56].ce} {dut/reservoir_reg[57].ce} {dut/reservoir_reg[58].ce} {dut/reservoir_reg[59].ce} {dut/reservoir_reg[60].ce} {dut/reservoir_reg[61].ce} {dut/reservoir_reg[62].ce} {dut/reservoir_reg[63].ce} -ep_num 4 -path_num 1 -file formatter_to_reservoir_ce.timing"
+TMR-6526 WARNING: Failed to find any valid -to targets.
+RUN-1002 : start command "report_timing_path -from buffer_valid_q -to {dut/reservoir_reg[0].d} {dut/reservoir_reg[1].d} {dut/reservoir_reg[2].d} {dut/reservoir_reg[3].d} {dut/reservoir_reg[4].d} {dut/reservoir_reg[5].d} {dut/reservoir_reg[6].d} {dut/reservoir_reg[7].d} {dut/reservoir_reg[8].d} {dut/reservoir_reg[9].d} {dut/reservoir_reg[10].d} {dut/reservoir_reg[11].d} {dut/reservoir_reg[12].d} {dut/reservoir_reg[13].d} {dut/reservoir_reg[14].d} {dut/reservoir_reg[15].d} {dut/reservoir_reg[16].d} {dut/reservoir_reg[17].d} {dut/reservoir_reg[18].d} {dut/reservoir_reg[19].d} {dut/reservoir_reg[20].d} {dut/reservoir_reg[21].d} {dut/reservoir_reg[22].d} {dut/reservoir_reg[23].d} {dut/reservoir_reg[24].d} {dut/reservoir_reg[25].d} {dut/reservoir_reg[26].d} {dut/reservoir_reg[27].d} {dut/reservoir_reg[28].d} {dut/reservoir_reg[29].d} {dut/reservoir_reg[30].d} {dut/reservoir_reg[31].d} {dut/reservoir_reg[32].d} {dut/reservoir_reg[33].d} {dut/reservoir_reg[34].d} {dut/reservoir_reg[35].d} {dut/reservoir_reg[36].d} {dut/reservoir_reg[37].d} {dut/reservoir_reg[38].d} {dut/reservoir_reg[39].d} {dut/reservoir_reg[40].d} {dut/reservoir_reg[41].d} {dut/reservoir_reg[42].d} {dut/reservoir_reg[43].d} {dut/reservoir_reg[44].d} {dut/reservoir_reg[45].d} {dut/reservoir_reg[46].d} {dut/reservoir_reg[47].d} {dut/reservoir_reg[48].d} {dut/reservoir_reg[49].d} {dut/reservoir_reg[50].d} {dut/reservoir_reg[51].d} {dut/reservoir_reg[52].d} {dut/reservoir_reg[53].d} {dut/reservoir_reg[54].d} {dut/reservoir_reg[55].d} {dut/reservoir_reg[56].d} {dut/reservoir_reg[57].d} {dut/reservoir_reg[58].d} {dut/reservoir_reg[59].d} {dut/reservoir_reg[60].d} {dut/reservoir_reg[61].d} {dut/reservoir_reg[62].d} {dut/reservoir_reg[63].d} -ep_num 4 -path_num 1 -file buffer_valid_to_reservoir_d.timing"
+RUN-1002 : start command "report_timing_path -from buffer_valid_q -to {dut/reservoir_reg[0].ce} {dut/reservoir_reg[1].ce} {dut/reservoir_reg[2].ce} {dut/reservoir_reg[3].ce} {dut/reservoir_reg[4].ce} {dut/reservoir_reg[5].ce} {dut/reservoir_reg[6].ce} {dut/reservoir_reg[7].ce} {dut/reservoir_reg[8].ce} {dut/reservoir_reg[9].ce} {dut/reservoir_reg[10].ce} {dut/reservoir_reg[11].ce} {dut/reservoir_reg[12].ce} {dut/reservoir_reg[13].ce} {dut/reservoir_reg[14].ce} {dut/reservoir_reg[15].ce} {dut/reservoir_reg[16].ce} {dut/reservoir_reg[17].ce} {dut/reservoir_reg[18].ce} {dut/reservoir_reg[19].ce} {dut/reservoir_reg[20].ce} {dut/reservoir_reg[21].ce} {dut/reservoir_reg[22].ce} {dut/reservoir_reg[23].ce} {dut/reservoir_reg[24].ce} {dut/reservoir_reg[25].ce} {dut/reservoir_reg[26].ce} {dut/reservoir_reg[27].ce} {dut/reservoir_reg[28].ce} {dut/reservoir_reg[29].ce} {dut/reservoir_reg[30].ce} {dut/reservoir_reg[31].ce} {dut/reservoir_reg[32].ce} {dut/reservoir_reg[33].ce} {dut/reservoir_reg[34].ce} {dut/reservoir_reg[35].ce} {dut/reservoir_reg[36].ce} {dut/reservoir_reg[37].ce} {dut/reservoir_reg[38].ce} {dut/reservoir_reg[39].ce} {dut/reservoir_reg[40].ce} {dut/reservoir_reg[41].ce} {dut/reservoir_reg[42].ce} {dut/reservoir_reg[43].ce} {dut/reservoir_reg[44].ce} {dut/reservoir_reg[45].ce} {dut/reservoir_reg[46].ce} {dut/reservoir_reg[47].ce} {dut/reservoir_reg[48].ce} {dut/reservoir_reg[49].ce} {dut/reservoir_reg[50].ce} {dut/reservoir_reg[51].ce} {dut/reservoir_reg[52].ce} {dut/reservoir_reg[53].ce} {dut/reservoir_reg[54].ce} {dut/reservoir_reg[55].ce} {dut/reservoir_reg[56].ce} {dut/reservoir_reg[57].ce} {dut/reservoir_reg[58].ce} {dut/reservoir_reg[59].ce} {dut/reservoir_reg[60].ce} {dut/reservoir_reg[61].ce} {dut/reservoir_reg[62].ce} {dut/reservoir_reg[63].ce} -ep_num 4 -path_num 1 -file buffer_valid_to_reservoir_ce.timing"
+TMR-6526 WARNING: Failed to find any valid -to targets.
+RUN-1002 : start command "report_timing_path -from buffer_last_q -to {dut/reservoir_reg[0].d} {dut/reservoir_reg[1].d} {dut/reservoir_reg[2].d} {dut/reservoir_reg[3].d} {dut/reservoir_reg[4].d} {dut/reservoir_reg[5].d} {dut/reservoir_reg[6].d} {dut/reservoir_reg[7].d} {dut/reservoir_reg[8].d} {dut/reservoir_reg[9].d} {dut/reservoir_reg[10].d} {dut/reservoir_reg[11].d} {dut/reservoir_reg[12].d} {dut/reservoir_reg[13].d} {dut/reservoir_reg[14].d} {dut/reservoir_reg[15].d} {dut/reservoir_reg[16].d} {dut/reservoir_reg[17].d} {dut/reservoir_reg[18].d} {dut/reservoir_reg[19].d} {dut/reservoir_reg[20].d} {dut/reservoir_reg[21].d} {dut/reservoir_reg[22].d} {dut/reservoir_reg[23].d} {dut/reservoir_reg[24].d} {dut/reservoir_reg[25].d} {dut/reservoir_reg[26].d} {dut/reservoir_reg[27].d} {dut/reservoir_reg[28].d} {dut/reservoir_reg[29].d} {dut/reservoir_reg[30].d} {dut/reservoir_reg[31].d} {dut/reservoir_reg[32].d} {dut/reservoir_reg[33].d} {dut/reservoir_reg[34].d} {dut/reservoir_reg[35].d} {dut/reservoir_reg[36].d} {dut/reservoir_reg[37].d} {dut/reservoir_reg[38].d} {dut/reservoir_reg[39].d} {dut/reservoir_reg[40].d} {dut/reservoir_reg[41].d} {dut/reservoir_reg[42].d} {dut/reservoir_reg[43].d} {dut/reservoir_reg[44].d} {dut/reservoir_reg[45].d} {dut/reservoir_reg[46].d} {dut/reservoir_reg[47].d} {dut/reservoir_reg[48].d} {dut/reservoir_reg[49].d} {dut/reservoir_reg[50].d} {dut/reservoir_reg[51].d} {dut/reservoir_reg[52].d} {dut/reservoir_reg[53].d} {dut/reservoir_reg[54].d} {dut/reservoir_reg[55].d} {dut/reservoir_reg[56].d} {dut/reservoir_reg[57].d} {dut/reservoir_reg[58].d} {dut/reservoir_reg[59].d} {dut/reservoir_reg[60].d} {dut/reservoir_reg[61].d} {dut/reservoir_reg[62].d} {dut/reservoir_reg[63].d} -ep_num 4 -path_num 1 -file buffer_last_to_reservoir_d.timing"
+RUN-1002 : start command "report_timing_path -from buffer_last_q -to {dut/reservoir_reg[0].ce} {dut/reservoir_reg[1].ce} {dut/reservoir_reg[2].ce} {dut/reservoir_reg[3].ce} {dut/reservoir_reg[4].ce} {dut/reservoir_reg[5].ce} {dut/reservoir_reg[6].ce} {dut/reservoir_reg[7].ce} {dut/reservoir_reg[8].ce} {dut/reservoir_reg[9].ce} {dut/reservoir_reg[10].ce} {dut/reservoir_reg[11].ce} {dut/reservoir_reg[12].ce} {dut/reservoir_reg[13].ce} {dut/reservoir_reg[14].ce} {dut/reservoir_reg[15].ce} {dut/reservoir_reg[16].ce} {dut/reservoir_reg[17].ce} {dut/reservoir_reg[18].ce} {dut/reservoir_reg[19].ce} {dut/reservoir_reg[20].ce} {dut/reservoir_reg[21].ce} {dut/reservoir_reg[22].ce} {dut/reservoir_reg[23].ce} {dut/reservoir_reg[24].ce} {dut/reservoir_reg[25].ce} {dut/reservoir_reg[26].ce} {dut/reservoir_reg[27].ce} {dut/reservoir_reg[28].ce} {dut/reservoir_reg[29].ce} {dut/reservoir_reg[30].ce} {dut/reservoir_reg[31].ce} {dut/reservoir_reg[32].ce} {dut/reservoir_reg[33].ce} {dut/reservoir_reg[34].ce} {dut/reservoir_reg[35].ce} {dut/reservoir_reg[36].ce} {dut/reservoir_reg[37].ce} {dut/reservoir_reg[38].ce} {dut/reservoir_reg[39].ce} {dut/reservoir_reg[40].ce} {dut/reservoir_reg[41].ce} {dut/reservoir_reg[42].ce} {dut/reservoir_reg[43].ce} {dut/reservoir_reg[44].ce} {dut/reservoir_reg[45].ce} {dut/reservoir_reg[46].ce} {dut/reservoir_reg[47].ce} {dut/reservoir_reg[48].ce} {dut/reservoir_reg[49].ce} {dut/reservoir_reg[50].ce} {dut/reservoir_reg[51].ce} {dut/reservoir_reg[52].ce} {dut/reservoir_reg[53].ce} {dut/reservoir_reg[54].ce} {dut/reservoir_reg[55].ce} {dut/reservoir_reg[56].ce} {dut/reservoir_reg[57].ce} {dut/reservoir_reg[58].ce} {dut/reservoir_reg[59].ce} {dut/reservoir_reg[60].ce} {dut/reservoir_reg[61].ce} {dut/reservoir_reg[62].ce} {dut/reservoir_reg[63].ce} -ep_num 4 -path_num 1 -file buffer_last_to_reservoir_ce.timing"
+TMR-6526 WARNING: Failed to find any valid -to targets.
+RUN-1002 : start command "report_timing_path -from {fmt_count_q[1]} -to {dut/reservoir_reg[0].d} {dut/reservoir_reg[1].d} {dut/reservoir_reg[2].d} {dut/reservoir_reg[3].d} {dut/reservoir_reg[4].d} {dut/reservoir_reg[5].d} {dut/reservoir_reg[6].d} {dut/reservoir_reg[7].d} {dut/reservoir_reg[8].d} {dut/reservoir_reg[9].d} {dut/reservoir_reg[10].d} {dut/reservoir_reg[11].d} {dut/reservoir_reg[12].d} {dut/reservoir_reg[13].d} {dut/reservoir_reg[14].d} {dut/reservoir_reg[15].d} {dut/reservoir_reg[16].d} {dut/reservoir_reg[17].d} {dut/reservoir_reg[18].d} {dut/reservoir_reg[19].d} {dut/reservoir_reg[20].d} {dut/reservoir_reg[21].d} {dut/reservoir_reg[22].d} {dut/reservoir_reg[23].d} {dut/reservoir_reg[24].d} {dut/reservoir_reg[25].d} {dut/reservoir_reg[26].d} {dut/reservoir_reg[27].d} {dut/reservoir_reg[28].d} {dut/reservoir_reg[29].d} {dut/reservoir_reg[30].d} {dut/reservoir_reg[31].d} {dut/reservoir_reg[32].d} {dut/reservoir_reg[33].d} {dut/reservoir_reg[34].d} {dut/reservoir_reg[35].d} {dut/reservoir_reg[36].d} {dut/reservoir_reg[37].d} {dut/reservoir_reg[38].d} {dut/reservoir_reg[39].d} {dut/reservoir_reg[40].d} {dut/reservoir_reg[41].d} {dut/reservoir_reg[42].d} {dut/reservoir_reg[43].d} {dut/reservoir_reg[44].d} {dut/reservoir_reg[45].d} {dut/reservoir_reg[46].d} {dut/reservoir_reg[47].d} {dut/reservoir_reg[48].d} {dut/reservoir_reg[49].d} {dut/reservoir_reg[50].d} {dut/reservoir_reg[51].d} {dut/reservoir_reg[52].d} {dut/reservoir_reg[53].d} {dut/reservoir_reg[54].d} {dut/reservoir_reg[55].d} {dut/reservoir_reg[56].d} {dut/reservoir_reg[57].d} {dut/reservoir_reg[58].d} {dut/reservoir_reg[59].d} {dut/reservoir_reg[60].d} {dut/reservoir_reg[61].d} {dut/reservoir_reg[62].d} {dut/reservoir_reg[63].d} -ep_num 4 -path_num 1 -file queue_to_reservoir_d.timing"
+RUN-1002 : start command "report_timing_path -from {fmt_count_q[1]} -to {dut/reservoir_reg[0].ce} {dut/reservoir_reg[1].ce} {dut/reservoir_reg[2].ce} {dut/reservoir_reg[3].ce} {dut/reservoir_reg[4].ce} {dut/reservoir_reg[5].ce} {dut/reservoir_reg[6].ce} {dut/reservoir_reg[7].ce} {dut/reservoir_reg[8].ce} {dut/reservoir_reg[9].ce} {dut/reservoir_reg[10].ce} {dut/reservoir_reg[11].ce} {dut/reservoir_reg[12].ce} {dut/reservoir_reg[13].ce} {dut/reservoir_reg[14].ce} {dut/reservoir_reg[15].ce} {dut/reservoir_reg[16].ce} {dut/reservoir_reg[17].ce} {dut/reservoir_reg[18].ce} {dut/reservoir_reg[19].ce} {dut/reservoir_reg[20].ce} {dut/reservoir_reg[21].ce} {dut/reservoir_reg[22].ce} {dut/reservoir_reg[23].ce} {dut/reservoir_reg[24].ce} {dut/reservoir_reg[25].ce} {dut/reservoir_reg[26].ce} {dut/reservoir_reg[27].ce} {dut/reservoir_reg[28].ce} {dut/reservoir_reg[29].ce} {dut/reservoir_reg[30].ce} {dut/reservoir_reg[31].ce} {dut/reservoir_reg[32].ce} {dut/reservoir_reg[33].ce} {dut/reservoir_reg[34].ce} {dut/reservoir_reg[35].ce} {dut/reservoir_reg[36].ce} {dut/reservoir_reg[37].ce} {dut/reservoir_reg[38].ce} {dut/reservoir_reg[39].ce} {dut/reservoir_reg[40].ce} {dut/reservoir_reg[41].ce} {dut/reservoir_reg[42].ce} {dut/reservoir_reg[43].ce} {dut/reservoir_reg[44].ce} {dut/reservoir_reg[45].ce} {dut/reservoir_reg[46].ce} {dut/reservoir_reg[47].ce} {dut/reservoir_reg[48].ce} {dut/reservoir_reg[49].ce} {dut/reservoir_reg[50].ce} {dut/reservoir_reg[51].ce} {dut/reservoir_reg[52].ce} {dut/reservoir_reg[53].ce} {dut/reservoir_reg[54].ce} {dut/reservoir_reg[55].ce} {dut/reservoir_reg[56].ce} {dut/reservoir_reg[57].ce} {dut/reservoir_reg[58].ce} {dut/reservoir_reg[59].ce} {dut/reservoir_reg[60].ce} {dut/reservoir_reg[61].ce} {dut/reservoir_reg[62].ce} {dut/reservoir_reg[63].ce} -ep_num 4 -path_num 1 -file queue_to_reservoir_ce.timing"
+TMR-6526 WARNING: Failed to find any valid -to targets.
+RUN-1002 : start command "report_timing_path -from {encoder_state_q[2]} {encoder_state_q[1]} {encoder_state_q[0]} -to {dut/reservoir_reg[0].d} {dut/reservoir_reg[1].d} {dut/reservoir_reg[2].d} {dut/reservoir_reg[3].d} {dut/reservoir_reg[4].d} {dut/reservoir_reg[5].d} {dut/reservoir_reg[6].d} {dut/reservoir_reg[7].d} {dut/reservoir_reg[8].d} {dut/reservoir_reg[9].d} {dut/reservoir_reg[10].d} {dut/reservoir_reg[11].d} {dut/reservoir_reg[12].d} {dut/reservoir_reg[13].d} {dut/reservoir_reg[14].d} {dut/reservoir_reg[15].d} {dut/reservoir_reg[16].d} {dut/reservoir_reg[17].d} {dut/reservoir_reg[18].d} {dut/reservoir_reg[19].d} {dut/reservoir_reg[20].d} {dut/reservoir_reg[21].d} {dut/reservoir_reg[22].d} {dut/reservoir_reg[23].d} {dut/reservoir_reg[24].d} {dut/reservoir_reg[25].d} {dut/reservoir_reg[26].d} {dut/reservoir_reg[27].d} {dut/reservoir_reg[28].d} {dut/reservoir_reg[29].d} {dut/reservoir_reg[30].d} {dut/reservoir_reg[31].d} {dut/reservoir_reg[32].d} {dut/reservoir_reg[33].d} {dut/reservoir_reg[34].d} {dut/reservoir_reg[35].d} {dut/reservoir_reg[36].d} {dut/reservoir_reg[37].d} {dut/reservoir_reg[38].d} {dut/reservoir_reg[39].d} {dut/reservoir_reg[40].d} {dut/reservoir_reg[41].d} {dut/reservoir_reg[42].d} {dut/reservoir_reg[43].d} {dut/reservoir_reg[44].d} {dut/reservoir_reg[45].d} {dut/reservoir_reg[46].d} {dut/reservoir_reg[47].d} {dut/reservoir_reg[48].d} {dut/reservoir_reg[49].d} {dut/reservoir_reg[50].d} {dut/reservoir_reg[51].d} {dut/reservoir_reg[52].d} {dut/reservoir_reg[53].d} {dut/reservoir_reg[54].d} {dut/reservoir_reg[55].d} {dut/reservoir_reg[56].d} {dut/reservoir_reg[57].d} {dut/reservoir_reg[58].d} {dut/reservoir_reg[59].d} {dut/reservoir_reg[60].d} {dut/reservoir_reg[61].d} {dut/reservoir_reg[62].d} {dut/reservoir_reg[63].d} -ep_num 4 -path_num 1 -file encoder_to_reservoir_d.timing"
+RUN-1002 : start command "report_timing_path -from {encoder_state_q[2]} {encoder_state_q[1]} {encoder_state_q[0]} -to {dut/reservoir_reg[0].ce} {dut/reservoir_reg[1].ce} {dut/reservoir_reg[2].ce} {dut/reservoir_reg[3].ce} {dut/reservoir_reg[4].ce} {dut/reservoir_reg[5].ce} {dut/reservoir_reg[6].ce} {dut/reservoir_reg[7].ce} {dut/reservoir_reg[8].ce} {dut/reservoir_reg[9].ce} {dut/reservoir_reg[10].ce} {dut/reservoir_reg[11].ce} {dut/reservoir_reg[12].ce} {dut/reservoir_reg[13].ce} {dut/reservoir_reg[14].ce} {dut/reservoir_reg[15].ce} {dut/reservoir_reg[16].ce} {dut/reservoir_reg[17].ce} {dut/reservoir_reg[18].ce} {dut/reservoir_reg[19].ce} {dut/reservoir_reg[20].ce} {dut/reservoir_reg[21].ce} {dut/reservoir_reg[22].ce} {dut/reservoir_reg[23].ce} {dut/reservoir_reg[24].ce} {dut/reservoir_reg[25].ce} {dut/reservoir_reg[26].ce} {dut/reservoir_reg[27].ce} {dut/reservoir_reg[28].ce} {dut/reservoir_reg[29].ce} {dut/reservoir_reg[30].ce} {dut/reservoir_reg[31].ce} {dut/reservoir_reg[32].ce} {dut/reservoir_reg[33].ce} {dut/reservoir_reg[34].ce} {dut/reservoir_reg[35].ce} {dut/reservoir_reg[36].ce} {dut/reservoir_reg[37].ce} {dut/reservoir_reg[38].ce} {dut/reservoir_reg[39].ce} {dut/reservoir_reg[40].ce} {dut/reservoir_reg[41].ce} {dut/reservoir_reg[42].ce} {dut/reservoir_reg[43].ce} {dut/reservoir_reg[44].ce} {dut/reservoir_reg[45].ce} {dut/reservoir_reg[46].ce} {dut/reservoir_reg[47].ce} {dut/reservoir_reg[48].ce} {dut/reservoir_reg[49].ce} {dut/reservoir_reg[50].ce} {dut/reservoir_reg[51].ce} {dut/reservoir_reg[52].ce} {dut/reservoir_reg[53].ce} {dut/reservoir_reg[54].ce} {dut/reservoir_reg[55].ce} {dut/reservoir_reg[56].ce} {dut/reservoir_reg[57].ce} {dut/reservoir_reg[58].ce} {dut/reservoir_reg[59].ce} {dut/reservoir_reg[60].ce} {dut/reservoir_reg[61].ce} {dut/reservoir_reg[62].ce} {dut/reservoir_reg[63].ce} -ep_num 4 -path_num 1 -file encoder_to_reservoir_ce.timing"
+TMR-6526 WARNING: Failed to find any valid -to targets.
+RUN-1002 : start command "report_timing_path -from abort_released_q -to {dut/reservoir_reg[0].d} {dut/reservoir_reg[1].d} {dut/reservoir_reg[2].d} {dut/reservoir_reg[3].d} {dut/reservoir_reg[4].d} {dut/reservoir_reg[5].d} {dut/reservoir_reg[6].d} {dut/reservoir_reg[7].d} {dut/reservoir_reg[8].d} {dut/reservoir_reg[9].d} {dut/reservoir_reg[10].d} {dut/reservoir_reg[11].d} {dut/reservoir_reg[12].d} {dut/reservoir_reg[13].d} {dut/reservoir_reg[14].d} {dut/reservoir_reg[15].d} {dut/reservoir_reg[16].d} {dut/reservoir_reg[17].d} {dut/reservoir_reg[18].d} {dut/reservoir_reg[19].d} {dut/reservoir_reg[20].d} {dut/reservoir_reg[21].d} {dut/reservoir_reg[22].d} {dut/reservoir_reg[23].d} {dut/reservoir_reg[24].d} {dut/reservoir_reg[25].d} {dut/reservoir_reg[26].d} {dut/reservoir_reg[27].d} {dut/reservoir_reg[28].d} {dut/reservoir_reg[29].d} {dut/reservoir_reg[30].d} {dut/reservoir_reg[31].d} {dut/reservoir_reg[32].d} {dut/reservoir_reg[33].d} {dut/reservoir_reg[34].d} {dut/reservoir_reg[35].d} {dut/reservoir_reg[36].d} {dut/reservoir_reg[37].d} {dut/reservoir_reg[38].d} {dut/reservoir_reg[39].d} {dut/reservoir_reg[40].d} {dut/reservoir_reg[41].d} {dut/reservoir_reg[42].d} {dut/reservoir_reg[43].d} {dut/reservoir_reg[44].d} {dut/reservoir_reg[45].d} {dut/reservoir_reg[46].d} {dut/reservoir_reg[47].d} {dut/reservoir_reg[48].d} {dut/reservoir_reg[49].d} {dut/reservoir_reg[50].d} {dut/reservoir_reg[51].d} {dut/reservoir_reg[52].d} {dut/reservoir_reg[53].d} {dut/reservoir_reg[54].d} {dut/reservoir_reg[55].d} {dut/reservoir_reg[56].d} {dut/reservoir_reg[57].d} {dut/reservoir_reg[58].d} {dut/reservoir_reg[59].d} {dut/reservoir_reg[60].d} {dut/reservoir_reg[61].d} {dut/reservoir_reg[62].d} {dut/reservoir_reg[63].d} -ep_num 4 -path_num 1 -file abort_release_to_reservoir_d.timing"
+RUN-1002 : start command "report_timing_path -from abort_released_q -to {dut/reservoir_reg[0].ce} {dut/reservoir_reg[1].ce} {dut/reservoir_reg[2].ce} {dut/reservoir_reg[3].ce} {dut/reservoir_reg[4].ce} {dut/reservoir_reg[5].ce} {dut/reservoir_reg[6].ce} {dut/reservoir_reg[7].ce} {dut/reservoir_reg[8].ce} {dut/reservoir_reg[9].ce} {dut/reservoir_reg[10].ce} {dut/reservoir_reg[11].ce} {dut/reservoir_reg[12].ce} {dut/reservoir_reg[13].ce} {dut/reservoir_reg[14].ce} {dut/reservoir_reg[15].ce} {dut/reservoir_reg[16].ce} {dut/reservoir_reg[17].ce} {dut/reservoir_reg[18].ce} {dut/reservoir_reg[19].ce} {dut/reservoir_reg[20].ce} {dut/reservoir_reg[21].ce} {dut/reservoir_reg[22].ce} {dut/reservoir_reg[23].ce} {dut/reservoir_reg[24].ce} {dut/reservoir_reg[25].ce} {dut/reservoir_reg[26].ce} {dut/reservoir_reg[27].ce} {dut/reservoir_reg[28].ce} {dut/reservoir_reg[29].ce} {dut/reservoir_reg[30].ce} {dut/reservoir_reg[31].ce} {dut/reservoir_reg[32].ce} {dut/reservoir_reg[33].ce} {dut/reservoir_reg[34].ce} {dut/reservoir_reg[35].ce} {dut/reservoir_reg[36].ce} {dut/reservoir_reg[37].ce} {dut/reservoir_reg[38].ce} {dut/reservoir_reg[39].ce} {dut/reservoir_reg[40].ce} {dut/reservoir_reg[41].ce} {dut/reservoir_reg[42].ce} {dut/reservoir_reg[43].ce} {dut/reservoir_reg[44].ce} {dut/reservoir_reg[45].ce} {dut/reservoir_reg[46].ce} {dut/reservoir_reg[47].ce} {dut/reservoir_reg[48].ce} {dut/reservoir_reg[49].ce} {dut/reservoir_reg[50].ce} {dut/reservoir_reg[51].ce} {dut/reservoir_reg[52].ce} {dut/reservoir_reg[53].ce} {dut/reservoir_reg[54].ce} {dut/reservoir_reg[55].ce} {dut/reservoir_reg[56].ce} {dut/reservoir_reg[57].ce} {dut/reservoir_reg[58].ce} {dut/reservoir_reg[59].ce} {dut/reservoir_reg[60].ce} {dut/reservoir_reg[61].ce} {dut/reservoir_reg[62].ce} {dut/reservoir_reg[63].ce} -ep_num 4 -path_num 1 -file abort_release_to_reservoir_ce.timing"
+TMR-6526 WARNING: Failed to find any valid -to targets.
+RUN-1002 : start command "close_project"
+UHD_PROBE_NATIVE_REOPENED

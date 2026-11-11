@@ -1,0 +1,73 @@
+{
+  "result": "PASS",
+  "scope": "Independent public-port functional simulation of the CAMERA_RAW_R2 BAR, CDC and configuration service",
+  "production_reference": {
+    "revision_with_identical_candidate_rtl_and_ip": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+    "working_tree_head_when_evidence_was_checked": "c50188a76a86322421f3c51d2ac37bab89aaa751",
+    "source_model_and_include_hashes": "Recorded and rechecked across compilation in the passing run manifest"
+  },
+  "tool": {
+    "modelsim": "ModelSim SE-64 2020.4 (2020.10 Oct 13 2020)",
+    "td_root": "D:/App/TD_Release_2026.2.210.850",
+    "python": "python"
+  },
+  "inputs": {
+    "tb_sha256": "2bf5904d0d496314819118a8e4c864a498b6dff5f7ef8e15a5ed5beb52be8621",
+    "runner_sha256": "73baf153004bc4ea97843309e09c4b8faadba0d4f69c2b2b3b825ca40b86d5b7",
+    "public_contract_sha256": "5898bf753c96d945e5de225681a5bbb2aa67858b98da91b7a576786092d85c5a",
+    "protocol_json_sha256": "4d01e8a855b0b46e0776aa3bac54a13b8bb1e0e38554cf048ad3e347880a81ad"
+  },
+  "evidence_root_relative_to_repository": "refactor/camera_raw_r2/tmp/parameters_20261110/rtl_bb",
+  "passing_run": {
+    "run_id": "cfg_003_negotiated",
+    "raw_manifest": "cfg_003_negotiated/VALIDATION.json",
+    "raw_manifest_sha256": "ab5c53505c2d13dc0da7efaa21780450dcf31a08e5034f4355370c67263dfb14",
+    "wall_seconds": 14.73,
+    "wall_limit_seconds": 60,
+    "simulation_limit_ns_per_case": 1000000,
+    "elaboration_warnings_per_case": [
+      {
+        "diagnostic": "vopt-2241",
+        "count": 2,
+        "source": "Frozen ram40_sdp_fixed IP",
+        "detail": "ECC injection port connection width for ecc_sbiterrinj and ecc_dbiterrinj"
+      },
+      {
+        "diagnostic": "vopt-2697",
+        "count": 8,
+        "source": "TD 2026.2 ph1_logic_eram.v",
+        "detail": "INIT_FILE range"
+      }
+    ],
+    "cases": {
+      "mono": {"result": "PASS", "simulation_ns": 31320, "applied": 4},
+      "dual": {"result": "PASS", "simulation_ns": 24120, "applied": 3},
+      "reject_basic": {"result": "PASS", "simulation_ns": 46061, "invalid": 8},
+      "reject_hdr": {"result": "PASS", "simulation_ns": 59037, "invalid": 8, "unsupported": 1},
+      "fault_recovery": {"result": "PASS", "simulation_ns": 19470, "reset_error": 1, "applied": 1}
+    },
+    "stale_ack_then_applied_while_pipeline_idle_zero": 3
+  },
+  "preserved_original_runs": [
+    {
+      "run_id": "cfg_001_first_compile",
+      "result": "BLOCKED",
+      "classification": "Tool invocation",
+      "observation": "ModelSim could not open the explicit -modelsimini path. Production and testbench compilation succeeded. No simulation testcase started."
+    },
+    {
+      "run_id": "cfg_002_local_ini",
+      "result": "FAIL",
+      "classification": "Incomplete public contract and resulting fixture omission",
+      "observation": "The original fixture omitted mandatory FRAME_APPLIED capability negotiation. The apparent PREPARE failures and apparent parameter-rejection passes do not qualify parameter handling. The passing run includes a separate no-negotiation control."
+    }
+  ],
+  "separate_validation": {
+    "synthesis": "NOT_RUN",
+    "place_and_route": "NOT_RUN",
+    "physical_timing": "NOT_RUN",
+    "bitgen": "NOT_RUN",
+    "board": "NOT_RUN"
+  },
+  "modeled_endpoints": "Remote whole-configuration owner and qualified frame boundary through public ports. Pixel algorithms, camera, DDR and full-frame throughput are outside this simulation."
+}

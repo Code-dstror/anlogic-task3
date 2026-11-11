@@ -1,0 +1,533 @@
+{
+  "status": "ACCEPTED",
+  "receipt": {
+    "action": "build",
+    "id": "camera-fusion-r1-20261110-syn4-20s4t",
+    "jobs": [
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s1",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s2",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s3",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s4",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s5",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s6",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s7",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s8",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s9",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s10",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s11",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s12",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s13",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s14",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s15",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s16",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s17",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s18",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s19",
+      "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s20"
+    ],
+    "state": "ACCEPTED",
+    "synthesis_job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+    "time": 1794311968.1798644
+  },
+  "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "design_sha256": "ef8a2c66d1f14d6a39b4cc2fde76a5ce4d3a97e5c2ca8d85f63eb9187ab70628",
+  "command_commit": "4c9538ceacd5af730dcd065e5c12d2090bf77e81",
+  "request": {
+    "action": "build",
+    "commit": "eade457d7477110605f90eb5abc08420d8936642",
+    "id": "camera-fusion-r1-20261110-syn4-20s4t",
+    "project": "camera_fusion_r1",
+    "schema": 1,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "synth_threads": 4,
+    "target": "full",
+    "threads": 4
+  },
+  "synthesis": "RUNNING",
+  "physical": "QUEUED",
+  "bitgen": "NOT_RUN",
+  "board": "NOT_RUN",
+  "status_generated_at": 1794312095.111574,
+  "status_beijing": "2026-11-10T20:01:35.111574+08:00",
+  "controller_version": "2026.11.10-measured-admission-v6.6",
+  "jobs": [
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+      "seed": 1,
+      "threads": 4,
+      "state": "RUNNING",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": null,
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "RUNNING"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s1",
+      "seed": 1,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s2",
+      "seed": 2,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s3",
+      "seed": 3,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s4",
+      "seed": 4,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s5",
+      "seed": 5,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s6",
+      "seed": 6,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s7",
+      "seed": 7,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s8",
+      "seed": 8,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s9",
+      "seed": 9,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s10",
+      "seed": 10,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s11",
+      "seed": 11,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s12",
+      "seed": 12,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s13",
+      "seed": 13,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s14",
+      "seed": 14,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s15",
+      "seed": 15,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s16",
+      "seed": 16,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s17",
+      "seed": 17,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s18",
+      "seed": 18,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s19",
+      "seed": 19,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    },
+    {
+      "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s20",
+      "seed": 20,
+      "threads": 4,
+      "state": "QUEUED",
+      "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+      "resume": {
+        "checkpoint_level": 1,
+        "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+        "rollback_steps": 0,
+        "synthesis_threads": 4
+      },
+      "stages": {
+        "bitgen": "NOT_RUN",
+        "placement": "NOT_RUN",
+        "reopen": "NOT_RUN",
+        "reports": "NOT_RUN",
+        "routing": "NOT_RUN",
+        "synthesis": "NOT_RUN"
+      },
+      "error": null
+    }
+  ]
+}

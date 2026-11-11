@@ -1,0 +1,78 @@
+{
+  "scope": "Independent public-port SOURCE and real cleanup, direct 8x2, four RGB groups per frame",
+  "baseline_commit": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+  "modelsim": {
+    "bin": "D:/App/modelsim/win64",
+    "version": "Model Technology ModelSim SE-64 vsim 2020.4 Simulator 2020.10 Oct 13 2020"
+  },
+  "td_root": "D:/App/TD_Release_2026.2.210.850",
+  "vendor_models": [],
+  "parameters": {
+    "private_rgb_source_borrow4": {
+      "MAX_WIDTH": 1920,
+      "MAX_HEIGHT": 1080,
+      "NR_ENABLE": 0,
+      "NEUTRAL_STATS_ENABLE": 0,
+      "DEHAZE_ENABLE": 0
+    },
+    "hdr_pair_product_abort_drain4": {
+      "SYNC_CLEAR_ENABLE": 1,
+      "SEPARATE_DATA_RESET": 1,
+      "FALLING_INPUT_RESET": 1
+    }
+  },
+  "watchdogs": {"wall_seconds_per_variant": 55, "simulation_ns_per_case": 20000},
+  "shared_input_sha256": {
+    "source_reset_tb.sv": "2b48fc54c7dae77ffd0a9110d9379bf83c18fff50397827f2b995e1c63f62e4b",
+    "run_blackbox.py": "bc5c65693429f2127eb26e6c7a8689930381e2ccea58b07d6ea1be9478924afe",
+    "OPAQUE_SOURCES.json": "535f2b382f97e0fd70da61dba8905e55dfb8b16b880a88154142cd6c0c6840db",
+    "SOURCE_RESET_PUBLIC.md": "079feb1c50ea93cb7bc59a99f07684d4f510ebf987eeff468e13fd061eae748c",
+    "SOURCE_PORTS.txt": "c94ad8f241125a4f82780cb4b1cbf65559e1ccc42e041148a4a06b5861243bf5",
+    "CLEANUP_PORTS.txt": "f1272e5023ccac37b2d08def35a848e56214d30eaa3154a70ca6e721da3466cb",
+    "reset_release_sync.v": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14",
+    "reset_release_sync_data.v": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7",
+    "hdr_pair_product_abort_drain4.v": "1a93737302dd57ba29f7080feab0e20ed5bafb008c97cee1eacae96a6fa555e3",
+    "camera_rgb_native_fixed1080_borrow4.v": "129cca5bb8cb2be65ed64664c03e675af52a8b042d4c7c59dd298bf8b20bfdde",
+    "private_raw_isp_borrow4.v": "a46cd8a999ac360b4c530bc7034070e9305a2f20fadb3906e67b0fc6079f7490"
+  },
+  "baseline": {
+    "state": "PASS",
+    "wall_seconds": 15.0,
+    "private_rgb_source_borrow4_sha256": "8f6f5e639bae9935b939cc1b58463dfe2db82e6013dc96a070e912bf5eca69ef",
+    "private_rgb_source_borrow4_git_blob_path_filtered": "5be0468ace544b0147179e1bfd6c1a6d14ddb302",
+    "commit_binding": "All six inputs matched their baseline Git blob IDs via git hash-object --path with the production path",
+    "result": "tmp/timing_source_20261110/blackbox/baseline_20261110T032956_064900Z/result.json"
+  },
+  "candidate": {
+    "state": "PASS",
+    "wall_seconds": 16.219,
+    "private_rgb_source_borrow4_sha256": "b193e4f1d1e4daeee924aa485b8f1ce5edcff0d8da3851c25ceeff3626f02f75",
+    "result": "tmp/timing_source_20261110/blackbox/candidate_20261110T033013_949878Z/result.json"
+  },
+  "terminals_in_both_variants": [
+    {"case": "r4_first", "state": "PASS", "frames": [1, 2], "first_context_edge": 4, "processed_source_edges": [38, 71], "error_frames": []},
+    {"case": "reassert_r3", "state": "PASS", "aborted_frame": 3, "frames": [4], "processed_source_edges": [37], "error_frames": []},
+    {"case": "reset_context", "state": "PASS", "aborted_frame": 5, "frames": [6], "processed_source_edges": [41], "error_frames": []},
+    {"case": "reset_rgb", "state": "PASS", "aborted_frame": 7, "frames": [8], "processed_source_edges": [43], "error_frames": []},
+    {"case": "reset_notice", "state": "PASS", "aborted_frame": 9, "frames": [10], "processed_source_edges": [57], "error_frames": []},
+    {"case": "reset_result", "state": "PASS", "aborted_frame": 11, "frames": [12], "processed_source_edges": [68], "error_frames": []},
+    {"case": "negative_cleanup", "state": "PASS", "frames": [13, 14], "processed_source_edges": [48, 83], "error_frames": [13], "cleanup_clear_edge": 39, "cleanup_failed_status_edge": 47}
+  ],
+  "retained_first_run": {
+    "result": "tmp/timing_source_20261110/blackbox/baseline_20261110T032832_870206Z/result.json",
+    "failure_log": "tmp/timing_source_20261110/blackbox/baseline_20261110T032832_870206Z/reset_rgb.log",
+    "case": "reset_rgb",
+    "state": "FAIL_ASSERTION",
+    "classification": "FIXTURE",
+    "reason": "Clock stop scheduled from a held DFI level could coincide with its next transition. The assertion preceded DUT reset.",
+    "correction": "Wait for the requested DFI transition, then disable the DFI clock 1 ns after that edge."
+  },
+  "stages": {
+    "functional_simulation": "PASS",
+    "synthesis": "NOT_RUN",
+    "place_and_route": "NOT_RUN",
+    "physical_timing": "NOT_RUN",
+    "bitgen": "NOT_RUN",
+    "board": "NOT_RUN"
+  }
+}

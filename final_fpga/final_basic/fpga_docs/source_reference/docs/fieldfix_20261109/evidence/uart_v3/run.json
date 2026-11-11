@@ -1,0 +1,112 @@
+{
+  "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_uart_cfg_v3_20261109\\baseline",
+  "runner_argv": [
+    "python",
+    "-I",
+    "-B",
+    "refactor/camera_raw_r2/src_fpga/simulation/blackbox_uart_cfg_v3_20261109/run.py",
+    "--modelsim-bin",
+    "D:/App/modelsim/win64",
+    "--run-name",
+    "baseline"
+  ],
+  "commands": {
+    "simulation": {
+      "version": [
+        "D:\\App\\modelsim\\win64\\vsim.exe",
+        "-version"
+      ],
+      "vlib": [
+        "D:\\App\\modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "compile": [
+        "D:\\App\\modelsim\\win64\\vlog.exe",
+        "-sv",
+        "-work",
+        "work",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\camera_field_diagnostics.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\uart_status_observer.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\uart_observer_snapshot.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\cfg_diag_snapshot.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\tb_uart_cfg_v3.sv"
+      ],
+      "simulate": [
+        "D:\\App\\modelsim\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "work.tb_uart_cfg_v3",
+        "-do",
+        "onerror {quit -code 1}; run -all; quit -code 0"
+      ]
+    },
+    "decoder": {
+      "decode": [
+        "python",
+        "-I",
+        "-B",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\check_decoder.py",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tools\\uart_observer.py"
+      ]
+    }
+  },
+  "profile": {
+    "clock_period_ns": {
+      "sys": 10,
+      "dfi": 14,
+      "pix": 22,
+      "user": 18
+    },
+    "UART_DIV": 4,
+    "REPORT_INTERVAL_CYCLES": 64,
+    "SNAPSHOT_TIMEOUT_CYCLES": 128,
+    "CFG_DIAG_ENABLE": 1,
+    "CFG_FRAME_VERSION": 3,
+    "JOB_PAGE_ENABLE": 1,
+    "JOB_SYS_CONFIG_ENABLE": 1,
+    "RX_DIAG_ENABLE": 0,
+    "RX_TRACE_ENABLE": 0
+  },
+  "wall_timeout_seconds": 60,
+  "simulation_watchdog_ns": 2000000,
+  "input_sha256_before": {
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\camera_field_diagnostics.v": "c1b99f149c3042aa8d05ff0f7d03cae8d90361573992c02b06e156759c430b00",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\uart_status_observer.v": "601cf849992568b49b9eb5e973b8c2290417a6ebb9451dc7081cb875afa56319",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\uart_observer_snapshot.v": "726091e898ee2d3ce060c5cbe901f7aa308f03d700878ed46de8b9f4e6bc4870",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\cfg_diag_snapshot.v": "e9f0e2ca67bc4da41ca060460b87ca7ad1a2c53e57e6e11b5e491119214ce848",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\tb_uart_cfg_v3.sv": "c1bf87d1cc491d8a52e3193ea584ec1bcefb37c2be3b5acdcdb44f0ad3565ebd",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tools\\uart_observer.py": "926a896f94f1bbd55077e23cb37aedd1f2a86634b570efba8c748b4cb9257b22",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\check_decoder.py": "4e09668f54b350277a36addaad53585de5b3d28505314b45696b0e2d50663607",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\run.py": "f51d1be29cdcbc34708d0d95a9ac0427d9d676f0d1ed27baa74ca5af7e5290ae",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\UART_FIELD_V3.md": "8ce66db3c879a4711afef4aa209be42e3002c54dc789d49b16f69d871cc62ee1",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\UART_PORTS.txt": "00db34912fe081596006d2bd37dd42a91ef27ecf7ad59247340cd86899ab3364",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\FIELD_PORTS.txt": "609b47592a05eec9d244c4c50fa0b83b7ae6112575a71f4ddfb405d3e56e3aec",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261108\\UART_FIELD_V2.md": "51e733a02836761ec31f929be8e20240509323e067592028dfd6544b3ee4c24a"
+  },
+  "simulation": {
+    "status": "PASS",
+    "terminal_marker": "PASS_UART_CFG_V3 phases=8 packet_pairs=9"
+  },
+  "decoder": {
+    "status": "PASS",
+    "terminal_marker": "PASS_UART_PARSER versions=1,2,3 crc_errors=1 invalid_headers=1"
+  },
+  "input_sha256_after": {
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\camera_field_diagnostics.v": "c1b99f149c3042aa8d05ff0f7d03cae8d90361573992c02b06e156759c430b00",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\uart_status_observer.v": "601cf849992568b49b9eb5e973b8c2290417a6ebb9451dc7081cb875afa56319",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\uart_observer_snapshot.v": "726091e898ee2d3ce060c5cbe901f7aa308f03d700878ed46de8b9f4e6bc4870",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\cfg_diag_snapshot.v": "e9f0e2ca67bc4da41ca060460b87ca7ad1a2c53e57e6e11b5e491119214ce848",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\tb_uart_cfg_v3.sv": "c1bf87d1cc491d8a52e3193ea584ec1bcefb37c2be3b5acdcdb44f0ad3565ebd",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tools\\uart_observer.py": "926a896f94f1bbd55077e23cb37aedd1f2a86634b570efba8c748b4cb9257b22",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\check_decoder.py": "4e09668f54b350277a36addaad53585de5b3d28505314b45696b0e2d50663607",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_uart_cfg_v3_20261109\\run.py": "f51d1be29cdcbc34708d0d95a9ac0427d9d676f0d1ed27baa74ca5af7e5290ae",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\UART_FIELD_V3.md": "8ce66db3c879a4711afef4aa209be42e3002c54dc789d49b16f69d871cc62ee1",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\UART_PORTS.txt": "00db34912fe081596006d2bd37dd42a91ef27ecf7ad59247340cd86899ab3364",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\FIELD_PORTS.txt": "609b47592a05eec9d244c4c50fa0b83b7ae6112575a71f4ddfb405d3e56e3aec",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261108\\UART_FIELD_V2.md": "51e733a02836761ec31f929be8e20240509323e067592028dfd6544b3ee4c24a"
+  },
+  "inputs_stable": true,
+  "status": "PASS",
+  "elapsed_seconds": 2.656
+}

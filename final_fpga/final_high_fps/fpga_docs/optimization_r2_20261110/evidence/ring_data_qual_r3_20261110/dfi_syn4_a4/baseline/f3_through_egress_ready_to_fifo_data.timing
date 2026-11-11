@@ -1,0 +1,211 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 22:17:04 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 91.21%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     DFI -> DFI
+Type           :     Self
+From Clock     :     DFI
+To Clock       :     DFI
+Min Period     :     6.430ns
+Fmax           :     155.521MHz
+
+Statistics:
+Max            : SWNS      0.536ns, STNS      0.000ns,         0 Viol Endpoints,         3 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.536ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_fifo_fence/fifo/read_count_reg[0].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.145ns (cell 0.950ns (30%), net 2.195ns (70%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=3  LUT5=1  LUT2=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_199.b
+LUT6                                    0.141    r     4.888       1  pin: u_ring/u_store/mux281_syn_199.o
+net (fo=4)                              0.254          5.142          net: u_ring/u_store/mux281_syn_200,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_egress/last_seen_reg_syn_8.f
+LUT6                                    0.141    r     5.283       2  pin: u_egress/last_seen_reg_syn_8.o
+net (fo=30)                             0.407          5.690          net: u_egress/last_seen_reg_syn_9,  ../../ordered_frame_egress.v(247)
+                                                                      pin: u_egress/mux2_syn_86.d
+LUT6                                    0.141    r     5.831       3  pin: u_egress/mux2_syn_86.o
+net (fo=167)                            0.537          6.368          net: u_egress/o_token_ready,  ../../ordered_frame_egress.v(20)
+                                                                      pin: u_fifo_fence/fifo/read_count_b_n_syn_1.b
+LUT2                                    0.150    f     6.518       4  pin: u_fifo_fence/fifo/read_count_b_n_syn_1.o
+net (fo=3)                              0.232          6.750          net: u_fifo_fence/fifo/read_count_b_n_syn_2,  NOFILE(0)
+                                                                      pin: u_fifo_fence/fifo/read_count_b_n1_syn_3.b
+LUT5                                    0.150    f     6.900       5  pin: u_fifo_fence/fifo/read_count_b_n1_syn_3.o
+net (fo=1)                              0.149          7.049          net: u_fifo_fence/fifo/read_count_b_n1,  NOFILE(0)
+                                                                      pin: u_fifo_fence/fifo/read_count_reg[0].d
+SEQ (reg)                               0.076    f     7.125               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.125               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_fifo_fence/fifo/read_count_reg[0].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.536               
+
+Slack               : 0.536ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_fifo_fence/fifo/read_head_reg.d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.145ns (cell 0.950ns (30%), net 2.195ns (70%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=3  LUT5=1  LUT2=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_199.b
+LUT6                                    0.141    r     4.888       1  pin: u_ring/u_store/mux281_syn_199.o
+net (fo=4)                              0.254          5.142          net: u_ring/u_store/mux281_syn_200,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_egress/last_seen_reg_syn_8.f
+LUT6                                    0.141    r     5.283       2  pin: u_egress/last_seen_reg_syn_8.o
+net (fo=30)                             0.407          5.690          net: u_egress/last_seen_reg_syn_9,  ../../ordered_frame_egress.v(247)
+                                                                      pin: u_egress/mux2_syn_86.d
+LUT6                                    0.141    r     5.831       3  pin: u_egress/mux2_syn_86.o
+net (fo=167)                            0.537          6.368          net: u_egress/o_token_ready,  ../../ordered_frame_egress.v(20)
+                                                                      pin: u_fifo_fence/fifo/read_count_b_n_syn_1.b
+LUT2                                    0.150    f     6.518       4  pin: u_fifo_fence/fifo/read_count_b_n_syn_1.o
+net (fo=3)                              0.232          6.750          net: u_fifo_fence/fifo/read_count_b_n_syn_2,  NOFILE(0)
+                                                                      pin: u_fifo_fence/fifo/read_head_reg_syn_4.c
+LUT5                                    0.150    f     6.900       5  pin: u_fifo_fence/fifo/read_head_reg_syn_4.o
+net (fo=1)                              0.149          7.049          net: u_fifo_fence/fifo/read_head_reg_syn_3,  ../../axis_frame_fifo_ip.v(87)
+                                                                      pin: u_fifo_fence/fifo/read_head_reg.d
+SEQ (reg)                               0.076    f     7.125               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.125               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_fifo_fence/fifo/read_head_reg.clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.536               
+
+Slack               : 0.545ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_fifo_fence/fifo/read_count_reg[1].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.136ns (cell 0.941ns (30%), net 2.195ns (70%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT2=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_199.b
+LUT6                                    0.141    r     4.888       1  pin: u_ring/u_store/mux281_syn_199.o
+net (fo=4)                              0.254          5.142          net: u_ring/u_store/mux281_syn_200,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_egress/last_seen_reg_syn_8.f
+LUT6                                    0.141    r     5.283       2  pin: u_egress/last_seen_reg_syn_8.o
+net (fo=30)                             0.407          5.690          net: u_egress/last_seen_reg_syn_9,  ../../ordered_frame_egress.v(247)
+                                                                      pin: u_egress/mux2_syn_86.d
+LUT6                                    0.141    r     5.831       3  pin: u_egress/mux2_syn_86.o
+net (fo=167)                            0.537          6.368          net: u_egress/o_token_ready,  ../../ordered_frame_egress.v(20)
+                                                                      pin: u_fifo_fence/fifo/read_count_b_n_syn_1.b
+LUT2                                    0.150    f     6.518       4  pin: u_fifo_fence/fifo/read_count_b_n_syn_1.o
+net (fo=3)                              0.232          6.750          net: u_fifo_fence/fifo/read_count_b_n_syn_2,  NOFILE(0)
+                                                                      pin: u_fifo_fence/fifo/read_count_b_n_syn_11.b
+LUT6                                    0.141    r     6.891       5  pin: u_fifo_fence/fifo/read_count_b_n_syn_11.o
+net (fo=1)                              0.149          7.040          net: u_fifo_fence/fifo/read_count_b_n,  NOFILE(0)
+                                                                      pin: u_fifo_fence/fifo/read_count_reg[1].d
+SEQ (reg)                               0.076    f     7.116               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.116               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_fifo_fence/fifo/read_count_reg[1].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.545               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

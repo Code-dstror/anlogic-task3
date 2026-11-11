@@ -1,0 +1,8 @@
+{
+  "reused_stages": [
+    "synthesis"
+  ],
+  "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+  "source_job": "manual-camera-fusion-r1-opt-20261110-syn4-80s4t-50a57474aae852e6-syn",
+  "synthesis_threads": 4
+}

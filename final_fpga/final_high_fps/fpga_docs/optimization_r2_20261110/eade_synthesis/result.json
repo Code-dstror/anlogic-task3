@@ -1,0 +1,66 @@
+{
+  "board": "NOT_RUN",
+  "exit_code": 0,
+  "finished": 1794313937.2739098,
+  "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+  "log_capture": {
+    "errors": [],
+    "stages": [
+      "synthesis",
+      "terminal"
+    ],
+    "state": "CAPTURED",
+    "suppression_notices": 50,
+    "visible_warning_occurrences": 43537,
+    "warning_inventory_complete": false
+  },
+  "project": {
+    "al": "fpga_prj/rfcamera_fusion_r1.al",
+    "enabled": false,
+    "id": "camera_fusion_r1",
+    "memory_gib": 16,
+    "root": "refactor/camera_fusion_r1",
+    "seeds": [
+      1
+    ],
+    "synth_threads": 4,
+    "target": "synth",
+    "threads": 4,
+    "watch": [
+      "src_fpga/rtl",
+      "src_fpga/ip",
+      "fpga_prj/constraints",
+      "fpga_prj/rfcamera_fusion_r1.al"
+    ]
+  },
+  "reports": {
+    "generated": 10,
+    "manifest": "reports.json",
+    "native_missing": [],
+    "profile": "timing-diagnostics-v2",
+    "scope_limited": [],
+    "state": "COMPLETE",
+    "unavailable": []
+  },
+  "seed": 1,
+  "simulation": "NOT_RUN",
+  "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "stages": {
+    "bitgen": "NOT_RUN",
+    "placement": "NOT_RUN",
+    "reopen": "DONE",
+    "reports": "DONE",
+    "routing": "NOT_RUN",
+    "synthesis": "DONE"
+  },
+  "started": 1794311983.0377474,
+  "state": "DONE",
+  "timing": {
+    "HTNS": 0.0,
+    "HWNS": 0.0,
+    "STNS": -360.453,
+    "SWNS": -1.435,
+    "report": "<PROJECT_ROOT>/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/syn_1/simple.timing",
+    "state": "NEGATIVE"
+  }
+}

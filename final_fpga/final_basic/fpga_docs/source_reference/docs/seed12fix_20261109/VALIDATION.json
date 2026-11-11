@@ -1,0 +1,102 @@
+{
+  "baseline_commit": "4a08ae35391e7b7ea6767260d7d1b4b182ef4bb9",
+  "design_sha256": "d7380dcde64fc33a28ce0d58bf0cfb2bc9e1c32671fbbf04f66db27e42c94a71",
+  "native_project_sha256": "46328c21e397d08058551cdc176f2e34da87aba78ae605a901b44f04081f2892",
+  "production_input_count": 405,
+  "production_changed_from_seed12": [
+    "src_fpga/rtl/real_hdr_pair_cycle_gate.v"
+  ],
+  "frozen_ip_count": 158,
+  "blackbox_author_context": "Fresh agents, public contracts only; no implementation/old test/vendor model inspection or hierarchical probing.",
+  "runs": [
+    {
+      "name": "leaf_baseline",
+      "status": "HDL_FAIL",
+      "source": null,
+      "result_path": "tmp/blackbox_hdr_startup_20261109/leaf_baseline_20261109T141349_023412Z/result.json",
+      "result_sha256": "9b70e36c2698b8d1eadaec076e518cce30b2b68497bc737cad62ac67f306423a",
+      "inputs": 6
+    },
+    {
+      "name": "leaf_candidate",
+      "status": "PASS",
+      "source": null,
+      "result_path": "tmp/blackbox_hdr_startup_20261109/leaf_candidate_20261109T141337_423279Z/result.json",
+      "result_sha256": "7262838cd9872c4a4078ca5b7d9d8ff81463ce5d9ae536cbef1f5e04f3bd298d",
+      "inputs": 6
+    },
+    {
+      "name": "chain_baseline",
+      "status": "WARMUP_LIVENESS_FAIL",
+      "source": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\seed12fix_20261109\\baseline\\real_hdr_pair_cycle_gate.v",
+      "result_path": "tmp/seed12fix_20261109/chain-baseline-v4/result.json",
+      "result_sha256": "6dda4f8f9a50a071a26a51268d0abd615b3c979a4e99bd1e44ed0dd159f9615f",
+      "inputs": 32
+    },
+    {
+      "name": "chain_candidate",
+      "status": "PASS",
+      "source": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v",
+      "result_path": "tmp/seed12fix_20261109/chain-candidate-v1/result.json",
+      "result_sha256": "5ae7c074ae8dbd14c1dfa9ee127b9b6b9aa299071d29da3645af8476bfd0d58f",
+      "inputs": 32
+    }
+  ],
+  "verified_inputs": {
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\seed12fix_20261109\\baseline\\real_hdr_pair_cycle_gate.v": "9a8aaad1b7e59827c9afb0ddfd539bcbc3f78ca39002a1a0e2861f4c789fb2ae",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\leaf_tb.sv": "69e91e2ec009905040cddb814520a91ca2d0045f96a4ec80ad46487d55f2466b",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\leaf_run.py": "bc459e7c321c2f8832a9a5a084ca46aed6dcc4bf56bfdb50a43ebaf5cfcea706",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\seed12fix_20261109\\GATE_PUBLIC.md": "f3327867563eceaa99ec246fb465f0878becb02d5242776245bef0b1a39489c8",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\seed12fix_20261109\\GATE_PORTS.txt": "55a7fefa0892902b38e4221c017547503bddb268cef50a765251df6b66ba1860",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v": "280f801799e867fb4bba438be1a6fbf05eb601066d9095c9bcc89600c2be0286",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\seed12_hdr_startup_carrier.v": "1e2c3f4e664246ac2dbd74d73977990bbdc7120e6840fdd718de724dbe3e6dc9",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\reset_release_sync.v": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\imx415_sensor_config.v": "41323a4e367b69bd7ce97bf5523f34ed537528f19cc5b01c54ee59f2a4fbcd44",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\imx415_sensor_recipe.v": "36bb7702ae19543945854634f87c51c86a08aa68025e4acda5f207fe35c1942c",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\imx415_mode_table.v": "cc577a9856c2580322a469ca8fa0be40495ab8d13cadf6929b4839bf93ac1287",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\imx415_hdr2_recipe_rom.v": "653eb04d33a17a4dedfad6a4bd7bf7d9668a4b8eec03d22132e673bbde9846e4",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\camera_i2c_write.v": "7d8d640d680c6c894e427a6d3809b5c021878a3ef2869e4c772c2d6be2e8c357",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\vendor\\anlogic_camera\\sensor\\ui_imx415_reg.v": "4a058e988125a68a129fd00645fd641dd991443ded1d2a840090ec2bdc028af3",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_event_cdc.v": "15504e2334b0d74f3d758578bee9494ed888dd1707e00cf98254ab8d30d97cd1",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\hdr_csi_boundary_adapter.v": "65c078b4b1b7123440f9b91ec43880edcb96a8a90949c4dbddc10207f904f6cb",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_csi_word_core.v": "28d731c87eaa99c806ee5486b7456f76b51e87bc09be3c0c33eaead1e1459baf",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_csi_dual_word_rx.v": "2d39de929914cf0fcd67812cbcfd8e621766efb866d256509e87b1bde0c97223",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_member_crop10.v": "d053c1fc99012f696d20de9b90e26cc7ec760f00dd8a742bded280c7f5ac2473",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\raw_capture_fifo_eram_safe.v": "f2c6e04658c3a68f0cdaff09e24df6858c1b5e92f8361b03820116dcc0b94721",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_csi_capture_stream.v": "af0bfb5a0be037d4352ec24d42e028057e37cf1bfad34f672436f183a0daf4cf",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_packet_fifo_147x512\\camera_packet_fifo_147x512.v": "6a9664a59e17ad4706d278a91e56408960dafca733f66b059de75404656b797b",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_packet_fifo_147x512\\RTL\\camera_packet_fifo_147x512_soft_fifo.v": "c4558d63ca346ce0b590f39896037c58f71968b6609c1249ca2b6fe0c48c93f6",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_packet_fifo_147x512\\RTL\\camera_packet_fifo_147x512_soft_fifo_core.v": "b727885ef819323d9e64e82a990890f3664be52d80f621eaaad41035fc81b40f",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\chain_startup_tb.sv": "223334fc21fe1b2134b51c3e70df5a5980e3e126ec0a4057c3cb8aa7a8813446",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_fifo.v": "0cea967091d4f3fd27e07289d3a19a0064e65c8abefc0427749ef61b2ce00160",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_ramfifo.v": "98fab0ec4a952cc2d384b77f7a55c3a6e912741fc33c21cd748f6d9fd214e774",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_fifoctrl.v": "fea30a6a038abec73c4e4e56b9986ad1242f043a06a7c39619979744202adddf",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\analysis_config_transport.vh": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\camera_physical_capture.vh": "63d0c535d68f333232c9d0b36f6f931e1285abd2a322d2fdbf4263e16809b3d8",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_packet_fifo_147x512\\RTL\\include\\define.v": "bef5d585b980867ea75134b549b43797e7745af61ada9e1cce757b33e5492b12",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\chain_run.py": "5f7a61b4ca8c07dee6013d2d22862bb2dd75b2a4089d27d879cf115204685167"
+  },
+  "native": {
+    "native_read_design.log": {
+      "status": "PASS",
+      "path": "tmp/seed12fix_20261109/native_read_design.log",
+      "sha256": "ea4a6223951bc7699dd36c3d9837c620e335b3b7fa725e8a021a295f0d1652c8",
+      "marker": "CAMERA_SHARED_READ_DESIGN_DONE"
+    },
+    "native_hierarchy.log": {
+      "status": "PASS",
+      "path": "tmp/seed12fix_20261109/native_hierarchy.log",
+      "sha256": "4c6adb9e0520b908bff503b23a83ad9e2d52889837683e3e3675ff0c636bc4fc",
+      "marker": "CAMERA_RAW_HDR_HIERARCHY_PASS"
+    }
+  },
+  "synthesis": "NOT_RUN",
+  "physical_timing": "NOT_RUN",
+  "board": "NOT_RUN",
+  "server_submission": "NOT_SUBMITTED_USER_REQUEST"
+}

@@ -1,0 +1,69 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -t 1ps -onfinish stop -L ph1 work.hdr_cfg_drain_tb ph1.glbl -do "onerror {quit -force -code 2}; run -all; quit -force -code 0" 
+# Start time: 18:58:38 on Nov 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.hdr_cfg_drain_tb(fast)
+# Loading ph1.PH1_PHY_GSR(fast)
+# Loading ph1.glbl(fast)
+# onerror {quit -force -code 2}
+#  Warning: onerror command for use within macro
+#  run -all
+# OBS CONFIG_ACCEPT req=0 epoch=0 t=355 ns
+# OBS CONFIG_OFFER req=0 epoch=0 stress=0 t=835 ns
+# OBS CONFIG_ACK req=0 epoch=0 held_cycles=7 t=905 ns
+# OBS CONFIG_ACCEPT req=101 epoch=1 t=925 ns
+# OBS CONFIG_OFFER req=101 epoch=1 stress=0 t=1405 ns
+# OBS CONFIG_ACK req=101 epoch=1 held_cycles=7 t=1475 ns
+# OBS HDR_TOKEN lane=0 event=7 group=20 sequence=1000 t=1505 ns
+# OBS HDR_TOKEN lane=1 event=7 group=20 sequence=9000 t=1525 ns
+# OBS HDR_TOKEN lane=0 event=0 group=20 sequence=1000 t=1545 ns
+# OBS HDR_TOKEN lane=1 event=0 group=20 sequence=9000 t=1555 ns
+# OBS CONFIG_ACCEPT req=102 epoch=2 t=1585 ns
+# OBS HDR_TOKEN lane=0 event=6 group=20 sequence=1000 t=1585 ns
+# OBS SOURCE lane=0 id=512c8a4700000001000003e8 ok=1 t=1595 ns
+# OBS HDR_TOKEN lane=1 event=6 group=20 sequence=9000 t=1595 ns
+# OBS OLD_SOURCE_HELD short_stall=21 busy=1 t=1810 ns
+# OBS SOURCE lane=1 id=512c8a470000000100002328 ok=1 t=1815 ns
+# OBS OLD_TRANSPORT_HELD enqueued=1/1 consumed=0/0 t=2220 ns
+# OBS FIRST_REJECT_TOKEN lane=0 event=7 t=2235 ns
+# OBS FIRST_REJECT_TOKEN lane=1 event=7 t=2255 ns
+# OBS OLD_WRITES_DRAINED enqueued=1/1 consumed=1/1 reject_tokens=30/29 t=2828 ns
+# OBS CONFIG_OFFER req=102 epoch=2 stress=1 t=3055 ns
+# OBS CONFIG_ACK req=102 epoch=2 held_cycles=7 t=3125 ns
+# OBS REJECT_STRESS tokens=768/768 quiet_bad=0 writer_busy_cycles=45 drained_cycles=1477 drained_quiet_bad=0 config_offer=1
+# OBS CONFIG_ACCEPT req=103 epoch=3 t=17705 ns
+# OBS CONFIG_OFFER req=103 epoch=3 stress=0 t=18175 ns
+# OBS CONFIG_ACK req=103 epoch=3 held_cycles=7 t=18245 ns
+# OBS HDR_TOKEN lane=0 event=7 group=277 sequence=1257 t=18365 ns
+# OBS HDR_TOKEN lane=1 event=7 group=277 sequence=9257 t=18385 ns
+# OBS HDR_TOKEN lane=0 event=0 group=277 sequence=1257 t=18405 ns
+# OBS HDR_TOKEN lane=1 event=0 group=277 sequence=9257 t=18415 ns
+# OBS HDR_TOKEN lane=0 event=6 group=277 sequence=1257 t=18445 ns
+# OBS SOURCE lane=0 id=512c8a4700000003000004e9 ok=1 t=18455 ns
+# OBS HDR_TOKEN lane=1 event=6 group=277 sequence=9257 t=18455 ns
+# OBS SOURCE lane=1 id=512c8a470000000300002429 ok=1 t=18465 ns
+# RESULT PASS HDR_CONFIG_DRAIN old_epoch=1 dehaze_epoch=2 new_epoch=3 source=2/2 cfg_ack=4 t=18710 ns
+# ** Note: $finish    : C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/hdr_cfg_drain_tb.sv(646)
+#    Time: 18710 ns  Iteration: 1  Instance: /hdr_cfg_drain_tb
+# Break at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/hdr_cfg_drain_tb.sv line 646
+# Stopped at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/hdr_cfg_drain_tb.sv line 646
+#  quit -force -code 0
+# End time: 18:58:39 on Nov 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

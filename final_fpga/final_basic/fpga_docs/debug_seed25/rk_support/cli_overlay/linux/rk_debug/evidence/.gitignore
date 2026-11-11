@@ -1,0 +1,3 @@
+# Only reviewed final outputs are retained here.
+!final_component_checks.log
+!assertion_checks.log

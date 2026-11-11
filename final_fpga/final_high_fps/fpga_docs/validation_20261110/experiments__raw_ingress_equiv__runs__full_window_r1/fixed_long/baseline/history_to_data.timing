@@ -1,0 +1,283 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 18:09:38 2026
+
+Top Model           : raw_pack_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 88.42%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     2.573ns
+Fmax           :     388.651MHz
+
+Statistics:
+Max            : SWNS      5.427ns, STNS      0.000ns,         0 Viol Endpoints,         4 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 5.427ns
+Begin Point         : u_leaf/raw_history_reg[125].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_leaf/axis_data_reg[109].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.503ns (cell 1.127ns (45%), net 1.376ns (55%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=4  LUT5=2 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/raw_history_reg[125].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_leaf/raw_history_reg[125].q
+net (fo=3)                              0.274          0.425          net: u_leaf/raw_history[125],  ../../shared_raw10_frame_ingress.v(106)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_3.c
+LUT3                                    0.150    f     0.575       1  pin: u_leaf/axis_data_next[125]_syn_3.o
+net (fo=2)                              0.201          0.776          net: u_leaf/axis_data_next[125]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_11.a
+LUT3                                    0.150    f     0.926       2  pin: u_leaf/axis_data_next[125]_syn_11.o
+net (fo=2)                              0.201          1.127          net: u_leaf/axis_data_next[125]_syn_12,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_3.a
+LUT3                                    0.150    f     1.277       3  pin: u_leaf/axis_data_next[117]_syn_3.o
+net (fo=2)                              0.201          1.478          net: u_leaf/axis_data_next[117]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_5.a
+LUT3                                    0.150    f     1.628       4  pin: u_leaf/axis_data_next[117]_syn_5.o
+net (fo=2)                              0.201          1.829          net: u_leaf/axis_data_next[117]_syn_6,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[109]_syn_7.b
+LUT5                                    0.150    f     1.979       5  pin: u_leaf/axis_data_next[109]_syn_7.o
+net (fo=1)                              0.149          2.128          net: u_leaf/axis_data_next[109]_syn_8,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[109]_syn_9.b
+LUT5                                    0.150    f     2.278       6  pin: u_leaf/axis_data_next[109]_syn_9.o
+net (fo=1)                              0.149          2.427          net: u_leaf/axis_data_next[109],  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_reg[109].d
+SEQ (reg)                               0.076    f     2.503               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.503               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/axis_data_reg[109].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.427               
+
+Slack               : 5.427ns
+Begin Point         : u_leaf/raw_history_reg[125].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_leaf/axis_data_reg[117].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.503ns (cell 1.127ns (45%), net 1.376ns (55%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=4  LUT5=2 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/raw_history_reg[125].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_leaf/raw_history_reg[125].q
+net (fo=3)                              0.274          0.425          net: u_leaf/raw_history[125],  ../../shared_raw10_frame_ingress.v(106)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_3.c
+LUT3                                    0.150    f     0.575       1  pin: u_leaf/axis_data_next[125]_syn_3.o
+net (fo=2)                              0.201          0.776          net: u_leaf/axis_data_next[125]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_11.a
+LUT3                                    0.150    f     0.926       2  pin: u_leaf/axis_data_next[125]_syn_11.o
+net (fo=2)                              0.201          1.127          net: u_leaf/axis_data_next[125]_syn_12,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_3.a
+LUT3                                    0.150    f     1.277       3  pin: u_leaf/axis_data_next[117]_syn_3.o
+net (fo=2)                              0.201          1.478          net: u_leaf/axis_data_next[117]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_5.a
+LUT3                                    0.150    f     1.628       4  pin: u_leaf/axis_data_next[117]_syn_5.o
+net (fo=2)                              0.201          1.829          net: u_leaf/axis_data_next[117]_syn_6,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_7.b
+LUT5                                    0.150    f     1.979       5  pin: u_leaf/axis_data_next[117]_syn_7.o
+net (fo=1)                              0.149          2.128          net: u_leaf/axis_data_next[117]_syn_8,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_9.b
+LUT5                                    0.150    f     2.278       6  pin: u_leaf/axis_data_next[117]_syn_9.o
+net (fo=1)                              0.149          2.427          net: u_leaf/axis_data_next[117],  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_reg[117].d
+SEQ (reg)                               0.076    f     2.503               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.503               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/axis_data_reg[117].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.427               
+
+Slack               : 5.427ns
+Begin Point         : u_leaf/raw_history_reg[125].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_leaf/axis_data_reg[93].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.503ns (cell 1.127ns (45%), net 1.376ns (55%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=4  LUT5=2 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/raw_history_reg[125].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_leaf/raw_history_reg[125].q
+net (fo=3)                              0.274          0.425          net: u_leaf/raw_history[125],  ../../shared_raw10_frame_ingress.v(106)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_3.c
+LUT3                                    0.150    f     0.575       1  pin: u_leaf/axis_data_next[125]_syn_3.o
+net (fo=2)                              0.201          0.776          net: u_leaf/axis_data_next[125]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_11.a
+LUT3                                    0.150    f     0.926       2  pin: u_leaf/axis_data_next[125]_syn_11.o
+net (fo=2)                              0.201          1.127          net: u_leaf/axis_data_next[125]_syn_12,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_3.a
+LUT3                                    0.150    f     1.277       3  pin: u_leaf/axis_data_next[117]_syn_3.o
+net (fo=2)                              0.201          1.478          net: u_leaf/axis_data_next[117]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[101]_syn_5.a
+LUT3                                    0.150    f     1.628       4  pin: u_leaf/axis_data_next[101]_syn_5.o
+net (fo=2)                              0.201          1.829          net: u_leaf/axis_data_next[101]_syn_6,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[93]_syn_7.b
+LUT5                                    0.150    f     1.979       5  pin: u_leaf/axis_data_next[93]_syn_7.o
+net (fo=1)                              0.149          2.128          net: u_leaf/axis_data_next[93]_syn_8,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[93]_syn_9.b
+LUT5                                    0.150    f     2.278       6  pin: u_leaf/axis_data_next[93]_syn_9.o
+net (fo=1)                              0.149          2.427          net: u_leaf/axis_data_next[93],  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_reg[93].d
+SEQ (reg)                               0.076    f     2.503               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.503               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/axis_data_reg[93].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.427               
+
+Slack               : 5.436ns
+Begin Point         : u_leaf/raw_history_reg[125].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_leaf/axis_data_reg[101].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.494ns (cell 1.118ns (44%), net 1.376ns (56%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT3=5  LUT6=1 )
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/raw_history_reg[125].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_leaf/raw_history_reg[125].q
+net (fo=3)                              0.274          0.425          net: u_leaf/raw_history[125],  ../../shared_raw10_frame_ingress.v(106)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_3.c
+LUT3                                    0.150    f     0.575       1  pin: u_leaf/axis_data_next[125]_syn_3.o
+net (fo=2)                              0.201          0.776          net: u_leaf/axis_data_next[125]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[125]_syn_11.a
+LUT3                                    0.150    f     0.926       2  pin: u_leaf/axis_data_next[125]_syn_11.o
+net (fo=2)                              0.201          1.127          net: u_leaf/axis_data_next[125]_syn_12,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[117]_syn_3.a
+LUT3                                    0.150    f     1.277       3  pin: u_leaf/axis_data_next[117]_syn_3.o
+net (fo=2)                              0.201          1.478          net: u_leaf/axis_data_next[117]_syn_4,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[101]_syn_5.a
+LUT3                                    0.150    f     1.628       4  pin: u_leaf/axis_data_next[101]_syn_5.o
+net (fo=2)                              0.201          1.829          net: u_leaf/axis_data_next[101]_syn_6,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[101]_syn_7.a
+LUT3                                    0.150    f     1.979       5  pin: u_leaf/axis_data_next[101]_syn_7.o
+net (fo=1)                              0.149          2.128          net: u_leaf/axis_data_next[101]_syn_8,  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_next[101]_syn_9.c
+LUT6                                    0.141    r     2.269       6  pin: u_leaf/axis_data_next[101]_syn_9.o
+net (fo=1)                              0.149          2.418          net: u_leaf/axis_data_next[101],  ../../shared_raw10_frame_ingress.v(121)
+                                                                      pin: u_leaf/axis_data_reg[101].d
+SEQ (reg)                               0.076    f     2.494               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.494               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: i_clk
+hierarchy                               0.000          0.000          pin: i_clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: i_clk_syn_2.di
+net (fo=951)                            0.000          0.000          net: i_clk_dup_1,  ../../raw_pack_probe.v(1)
+                                                                      pin: u_leaf/axis_data_reg[101].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.436               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

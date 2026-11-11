@@ -1,0 +1,1118 @@
+{
+  "entropy": [
+    {
+      "index": 0,
+      "name": "extrema",
+      "kind": "ok",
+      "capture": 2147549216,
+      "epoch": 270544960,
+      "session": 1620054017,
+      "camera": 0,
+      "quality": 75,
+      "token_count": 756,
+      "restart_interval": 2,
+      "reference": {
+        "length": 4097,
+        "sha256": "dd56fe1708b3a1cdbdd34f8455600153504107a707c9d9d2e25badc71afb5779",
+        "stuffed_ff": 456,
+        "restarts": [
+          [
+            401,
+            208
+          ],
+          [
+            816,
+            209
+          ],
+          [
+            1144,
+            210
+          ],
+          [
+            1560,
+            211
+          ],
+          [
+            1967,
+            212
+          ],
+          [
+            2275,
+            213
+          ],
+          [
+            2728,
+            214
+          ],
+          [
+            3142,
+            215
+          ],
+          [
+            3467,
+            208
+          ],
+          [
+            3920,
+            209
+          ]
+        ],
+        "dc_diff_extrema": [
+          -2047,
+          2047
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 126,
+        "last_bytes": "5fe8001ffbff009f"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 1,
+      "name": "dc_pos_invalid",
+      "kind": "dc",
+      "capture": 2147549217,
+      "epoch": 270544965,
+      "session": 1620054017,
+      "camera": 1,
+      "quality": 75,
+      "token_count": 18,
+      "restart_interval": 0,
+      "reference": {
+        "length": 140,
+        "sha256": "99effbe5001fa596b0a219c97e4c50ffcf996660559d6219307ff2b3984fbd45",
+        "stuffed_ff": 21,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -1024,
+          -1024
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "2ccfff0004f027e1"
+      },
+      "expected_error_code": 2
+    },
+    {
+      "index": 2,
+      "name": "recover_pos",
+      "kind": "ok",
+      "capture": 2147549218,
+      "epoch": 270544970,
+      "session": 1620054017,
+      "camera": 0,
+      "quality": 75,
+      "token_count": 36,
+      "restart_interval": 0,
+      "reference": {
+        "length": 15,
+        "sha256": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+        "stuffed_ff": 2,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -127,
+          254
+        ],
+        "ac_sizes": [
+          10
+        ],
+        "symbol_phases": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "zrl_count": 3,
+        "last_bytes": "bfafebff00d7ff00"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 3,
+      "name": "dc_neg_invalid",
+      "kind": "dc",
+      "capture": 2147549219,
+      "epoch": 270544975,
+      "session": 1620054017,
+      "camera": 1,
+      "quality": 75,
+      "token_count": 18,
+      "restart_interval": 0,
+      "reference": {
+        "length": 140,
+        "sha256": "5f50d3819ce48c705e1d8cccb596be52a871a5477eeb5170418b580849556d15",
+        "stuffed_ff": 20,
+        "restarts": [],
+        "dc_diff_extrema": [
+          1024,
+          1024
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "00da3ff06007c26a"
+      },
+      "expected_error_code": 2
+    },
+    {
+      "index": 4,
+      "name": "recover_neg",
+      "kind": "ok",
+      "capture": 2147549220,
+      "epoch": 270544980,
+      "session": 1620054017,
+      "camera": 0,
+      "quality": 75,
+      "token_count": 36,
+      "restart_interval": 0,
+      "reference": {
+        "length": 12,
+        "sha256": "b38518fca3136f2ddf5e7b24bf50ca72730d5d9a4d737cab845b1abb46764af7",
+        "stuffed_ff": 1,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -31,
+          12
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "symbol_phases": [
+          0,
+          2,
+          4,
+          5,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "ff0047adf517b87f"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 5,
+      "name": "identity_invalid",
+      "kind": "identity",
+      "capture": 2147549221,
+      "epoch": 270544985,
+      "session": 1620054017,
+      "camera": 1,
+      "quality": 75,
+      "token_count": 37,
+      "restart_interval": 0,
+      "reference": {
+        "length": 129,
+        "sha256": "323a7845d7d5d7ca4067b99e0c841fcc17c6839276dc752f97eba8f6a26d8ba1",
+        "stuffed_ff": 10,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -5,
+          6
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "fc59d3be2cc75b19"
+      },
+      "expected_error_code": 4
+    },
+    {
+      "index": 6,
+      "name": "recover_identity",
+      "kind": "ok",
+      "capture": 2147549222,
+      "epoch": 270544990,
+      "session": 1620054017,
+      "camera": 0,
+      "quality": 75,
+      "token_count": 36,
+      "restart_interval": 0,
+      "reference": {
+        "length": 15,
+        "sha256": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+        "stuffed_ff": 2,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -127,
+          254
+        ],
+        "ac_sizes": [
+          10
+        ],
+        "symbol_phases": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "zrl_count": 3,
+        "last_bytes": "bfafebff00d7ff00"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 7,
+      "name": "cancel",
+      "kind": "abort",
+      "capture": 2147549223,
+      "epoch": 270544995,
+      "session": 1620054017,
+      "camera": 1,
+      "quality": 75,
+      "token_count": 9,
+      "restart_interval": 0,
+      "reference": {
+        "length": 142,
+        "sha256": "23b6df366d401a27ed85af51e2947f844b0e0c1f9d58fa553363f88d14c905e9",
+        "stuffed_ff": 20,
+        "restarts": [],
+        "dc_diff_extrema": [
+          18,
+          18
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "ff0009bfe0ff00f9"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 8,
+      "name": "recover_cancel",
+      "kind": "ok",
+      "capture": 2147549224,
+      "epoch": 270545000,
+      "session": 1620054017,
+      "camera": 0,
+      "quality": 75,
+      "token_count": 36,
+      "restart_interval": 0,
+      "reference": {
+        "length": 12,
+        "sha256": "b38518fca3136f2ddf5e7b24bf50ca72730d5d9a4d737cab845b1abb46764af7",
+        "stuffed_ff": 1,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -31,
+          12
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "symbol_phases": [
+          0,
+          2,
+          4,
+          5,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "ff0047adf517b87f"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 9,
+      "name": "reset",
+      "kind": "reset",
+      "capture": 2147549225,
+      "epoch": 270545005,
+      "session": 1620054017,
+      "camera": 1,
+      "quality": 75,
+      "token_count": 9,
+      "restart_interval": 0,
+      "reference": {
+        "length": 124,
+        "sha256": "96cbf75713c75f4046ea54dad23414bed354cea762fe0bdba385e3d2d2ebc347",
+        "stuffed_ff": 15,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -35,
+          -35
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "dff06007fc180034"
+      },
+      "expected_error_code": 0
+    },
+    {
+      "index": 10,
+      "name": "recover_reset",
+      "kind": "ok",
+      "capture": 2147549226,
+      "epoch": 270545010,
+      "session": 1888489473,
+      "camera": 0,
+      "quality": 75,
+      "token_count": 36,
+      "restart_interval": 0,
+      "reference": {
+        "length": 15,
+        "sha256": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+        "stuffed_ff": 2,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -127,
+          254
+        ],
+        "ac_sizes": [
+          10
+        ],
+        "symbol_phases": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "zrl_count": 3,
+        "last_bytes": "bfafebff00d7ff00"
+      },
+      "expected_error_code": 0
+    }
+  ],
+  "encoder": [
+    {
+      "index": 0,
+      "name": "low_flat_status_after_tail",
+      "capture": 2685272081,
+      "epoch": 268640512,
+      "session": 1880867386,
+      "camera": 0,
+      "quality": 75,
+      "width": 1920,
+      "height": 16,
+      "restart_interval": 0,
+      "seed": 0,
+      "good": true,
+      "reference_scan": {
+        "length": 602,
+        "sha256": "e306a216b24f3d2aabb9e5cb150b5ad5183a8445bb41c04eb83ba1a1a43738a2",
+        "stuffed_ff": 0,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -82,
+          0
+        ],
+        "ac_sizes": [],
+        "symbol_phases": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "zrl_count": 0,
+        "last_bytes": "a2800a2800a2803f"
+      },
+      "golden_jpeg_length": 1211,
+      "golden_jpeg_sha256": "fb39ffc5d3d79d43a08caeb5f55758ab3ce2707f7828810eaa58e4bc594d5755"
+    },
+    {
+      "index": 1,
+      "name": "high_texture_status_before_tail",
+      "capture": 2685272084,
+      "epoch": 268640529,
+      "session": 1880867391,
+      "camera": 1,
+      "quality": 75,
+      "width": 3840,
+      "height": 32,
+      "restart_interval": 17,
+      "seed": 18218026,
+      "good": true,
+      "reference_scan": {
+        "length": 68972,
+        "sha256": "dfad998331e2951b683d2a15c1ace8db8fc5cab11ae06b679775f90a95344705",
+        "stuffed_ff": 54,
+        "restarts": [
+          [
+            1218,
+            208
+          ],
+          [
+            2428,
+            209
+          ],
+          [
+            3650,
+            210
+          ],
+          [
+            4885,
+            211
+          ],
+          [
+            6106,
+            212
+          ],
+          [
+            7321,
+            213
+          ],
+          [
+            8534,
+            214
+          ],
+          [
+            9765,
+            215
+          ],
+          [
+            10993,
+            208
+          ],
+          [
+            12212,
+            209
+          ],
+          [
+            13422,
+            210
+          ],
+          [
+            14644,
+            211
+          ],
+          [
+            15877,
+            212
+          ],
+          [
+            17100,
+            213
+          ],
+          [
+            18333,
+            214
+          ],
+          [
+            19550,
+            215
+          ],
+          [
+            20757,
+            208
+          ],
+          [
+            21979,
+            209
+          ],
+          [
+            23214,
+            210
+          ],
+          [
+            24438,
+            211
+          ],
+          [
+            25650,
+            212
+          ],
+          [
+            26866,
+            213
+          ],
+          [
+            28089,
+            214
+          ],
+          [
+            29329,
+            215
+          ],
+          [
+            30545,
+            208
+          ],
+          [
+            31758,
+            209
+          ],
+          [
+            32979,
+            210
+          ],
+          [
+            34211,
+            211
+          ],
+          [
+            35434,
+            212
+          ],
+          [
+            36669,
+            213
+          ],
+          [
+            37891,
+            214
+          ],
+          [
+            39104,
+            215
+          ],
+          [
+            40316,
+            208
+          ],
+          [
+            41544,
+            209
+          ],
+          [
+            42774,
+            210
+          ],
+          [
+            43993,
+            211
+          ],
+          [
+            45202,
+            212
+          ],
+          [
+            46422,
+            213
+          ],
+          [
+            47657,
+            214
+          ],
+          [
+            48878,
+            215
+          ],
+          [
+            50093,
+            208
+          ],
+          [
+            51306,
+            209
+          ],
+          [
+            52522,
+            210
+          ],
+          [
+            53741,
+            211
+          ],
+          [
+            54968,
+            212
+          ],
+          [
+            56201,
+            213
+          ],
+          [
+            57416,
+            214
+          ],
+          [
+            58627,
+            215
+          ],
+          [
+            59853,
+            208
+          ],
+          [
+            61087,
+            209
+          ],
+          [
+            62306,
+            210
+          ],
+          [
+            63515,
+            211
+          ],
+          [
+            64735,
+            212
+          ],
+          [
+            65961,
+            213
+          ],
+          [
+            67186,
+            214
+          ],
+          [
+            68400,
+            215
+          ]
+        ],
+        "dc_diff_extrema": [
+          -30,
+          26
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "cc41de3706c9700f"
+      },
+      "golden_jpeg_length": 69587,
+      "golden_jpeg_sha256": "cdfe57f470194be329ef07bf2a47335547fe35e225160c7829ea0e84f4088705"
+    },
+    {
+      "index": 2,
+      "name": "low_source_reject",
+      "capture": 2685272087,
+      "epoch": 268640546,
+      "session": 1880867396,
+      "camera": 0,
+      "quality": 75,
+      "width": 1920,
+      "height": 16,
+      "restart_interval": 5,
+      "seed": 31895012,
+      "good": false,
+      "reference_scan": {
+        "length": 17222,
+        "sha256": "5dc5048725727ceab419ea5306cae385eebfbe244b933779be628138b84ce027",
+        "stuffed_ff": 21,
+        "restarts": [
+          [
+            360,
+            208
+          ],
+          [
+            718,
+            209
+          ],
+          [
+            1072,
+            210
+          ],
+          [
+            1432,
+            211
+          ],
+          [
+            1790,
+            212
+          ],
+          [
+            2147,
+            213
+          ],
+          [
+            2509,
+            214
+          ],
+          [
+            2866,
+            215
+          ],
+          [
+            3222,
+            208
+          ],
+          [
+            3586,
+            209
+          ],
+          [
+            3945,
+            210
+          ],
+          [
+            4302,
+            211
+          ],
+          [
+            4666,
+            212
+          ],
+          [
+            5026,
+            213
+          ],
+          [
+            5381,
+            214
+          ],
+          [
+            5745,
+            215
+          ],
+          [
+            6099,
+            208
+          ],
+          [
+            6453,
+            209
+          ],
+          [
+            6816,
+            210
+          ],
+          [
+            7170,
+            211
+          ],
+          [
+            7528,
+            212
+          ],
+          [
+            7891,
+            213
+          ],
+          [
+            8247,
+            214
+          ],
+          [
+            8607,
+            215
+          ],
+          [
+            8965,
+            208
+          ],
+          [
+            9325,
+            209
+          ],
+          [
+            9687,
+            210
+          ],
+          [
+            10041,
+            211
+          ],
+          [
+            10402,
+            212
+          ],
+          [
+            10761,
+            213
+          ],
+          [
+            11117,
+            214
+          ],
+          [
+            11475,
+            215
+          ],
+          [
+            11834,
+            208
+          ],
+          [
+            12194,
+            209
+          ],
+          [
+            12555,
+            210
+          ],
+          [
+            12912,
+            211
+          ],
+          [
+            13271,
+            212
+          ],
+          [
+            13634,
+            213
+          ],
+          [
+            13995,
+            214
+          ],
+          [
+            14352,
+            215
+          ],
+          [
+            14715,
+            208
+          ],
+          [
+            15075,
+            209
+          ],
+          [
+            15429,
+            210
+          ],
+          [
+            15792,
+            211
+          ],
+          [
+            16150,
+            212
+          ],
+          [
+            16504,
+            213
+          ],
+          [
+            16865,
+            214
+          ]
+        ],
+        "dc_diff_extrema": [
+          -23,
+          26
+        ],
+        "ac_sizes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "63a6e56c6d24807f"
+      },
+      "golden_jpeg_length": 17837,
+      "golden_jpeg_sha256": "c9b76f8a8c08d2f2d2afb0922d20652fc547b46cf5fda84b3fce373f4a7119ce"
+    },
+    {
+      "index": 3,
+      "name": "low_ramp_recovery",
+      "capture": 2685272090,
+      "epoch": 268640563,
+      "session": 1880867401,
+      "camera": 1,
+      "quality": 75,
+      "width": 1920,
+      "height": 16,
+      "restart_interval": 0,
+      "seed": 0,
+      "good": true,
+      "reference_scan": {
+        "length": 4502,
+        "sha256": "d5b2d5491379bcd2dbfdf7f247830619b7b58ad11b6702107f8c1c8ffc0dfb40",
+        "stuffed_ff": 375,
+        "restarts": [],
+        "dc_diff_extrema": [
+          -61,
+          12
+        ],
+        "ac_sizes": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "symbol_phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "zrl_count": 0,
+        "last_bytes": "8c6aa1e17fe0a00f"
+      },
+      "golden_jpeg_length": 5111,
+      "golden_jpeg_sha256": "fb9f62899680ecbf065c09c66e1d71165863b7e92825811af76bbf80dd6288bf"
+    }
+  ],
+  "inputs_sha256": {
+    "encoder.config": "c38cbbd21897b9803450db224b9e3b37d0ae17c1f7f64ede61d3542f78875a42",
+    "encoder_0.expected.jpg": "fb39ffc5d3d79d43a08caeb5f55758ab3ce2707f7828810eaa58e4bc594d5755",
+    "encoder_0.pixels": "c12953b4add3e3d1e1417d39f7d4df5249e5a5d10a4b85e1446b3d8f9a988daa",
+    "encoder_0.y": "b19531b75ce83df956b5021c43855919d5426bf8d7013729d805a93d913eff08",
+    "encoder_1.expected.jpg": "cdfe57f470194be329ef07bf2a47335547fe35e225160c7829ea0e84f4088705",
+    "encoder_1.pixels": "efb322e6f3c4d818547e9003a001fbb6d7b70706716a7e0be5b2112f236ef2dc",
+    "encoder_1.y": "b6b93d9e0b9e02b65134d45152c4036893ef65a2cc1978c6eeeb2a1ae0f63bc1",
+    "encoder_2.pixels": "b26c125025f5922d9b4e1f79d52952a05602f5cc3b37d634a1e1a217e8f49f0d",
+    "encoder_3.expected.jpg": "fb9f62899680ecbf065c09c66e1d71165863b7e92825811af76bbf80dd6288bf",
+    "encoder_3.pixels": "d9e04a0c7f4a973c8c34b696e740797168bf81cd751e5adb845f7f65f378b17f",
+    "encoder_3.y": "796282411da4cdd4dbe817851785f6ad12a0831335fea190efe7f06596b086c7",
+    "entropy.config": "1203882c3ac62d690a9909891e7a94506f73eb0a0816c42ef22b21e9646e4ed6",
+    "entropy_0.scan": "dd56fe1708b3a1cdbdd34f8455600153504107a707c9d9d2e25badc71afb5779",
+    "entropy_0.tokens": "76096493dea33635dfb17a8e85b7b9dabaf4cc68f88c60b9b46f814daba4a0e1",
+    "entropy_1.tokens": "fdda8e72574134b3c604211a6ed567fd7caf6b47aa231d77baf5df685f3c66ae",
+    "entropy_10.scan": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+    "entropy_10.tokens": "f6469d64179b68716881e03082fc03284fe5c0d842c82bd6eed2503c7203d0bb",
+    "entropy_2.scan": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+    "entropy_2.tokens": "2cf7df4f3cbc3e159303adc7543c46591dfffb966e1a04a80feb80cfa8efd981",
+    "entropy_3.tokens": "f105e65c9e728e245882ddba5b269a77116f6256bda07fb04facd00f4cab34a0",
+    "entropy_4.scan": "b38518fca3136f2ddf5e7b24bf50ca72730d5d9a4d737cab845b1abb46764af7",
+    "entropy_4.tokens": "266275cda921001399db9ff7c03afcc3b2bf986e8d0933526fd3c5e2f679def2",
+    "entropy_5.tokens": "a8d526de96133c4ed1707172a7d8cd37fe80c0ce9d37c552f2245d1c298f3484",
+    "entropy_6.scan": "931526303183463f08804c6bb4a9740ec9f9094fd9e04de9ef72a9d726a94518",
+    "entropy_6.tokens": "9ca0d1f39981ea617f5fe9fc9b20ec563506aa89a2de006030354035a58d538c",
+    "entropy_7.tokens": "2ca587a33396ad6d18adf393476044c2728e391033cfd491cf5893fcbcb14ea3",
+    "entropy_8.scan": "b38518fca3136f2ddf5e7b24bf50ca72730d5d9a4d737cab845b1abb46764af7",
+    "entropy_8.tokens": "b99b1fb3afc69b72be5201a85c0cb835b28f7d6458a28c34e4e06e3d96fd3a10",
+    "entropy_9.tokens": "fff17345fc355492635c4a694d2aa190368bff6f849b6b0e12c64c4d9613ddd7"
+  }
+}

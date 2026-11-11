@@ -1,0 +1,122 @@
+{
+  "first": {
+    "width": 480,
+    "height": 32,
+    "sampling_factors": [
+      33,
+      17,
+      17
+    ],
+    "mcu_grid": [
+      30,
+      4
+    ],
+    "mcu_count": 120,
+    "frame_sequence": 11,
+    "source_camera": 0,
+    "source_session": 1,
+    "source_epoch": 1,
+    "processing_mode": 128,
+    "jpeg_session": 1,
+    "jpeg_generation": 1,
+    "jpeg_slot": 0,
+    "quality": 73,
+    "raw_rgb10": [
+      172,
+      440,
+      858
+    ],
+    "manual_wb_q8": [
+      333,
+      178,
+      226
+    ],
+    "expected_rgb8": [
+      109,
+      139,
+      216
+    ],
+    "max_abs_error_rgb8": [
+      1,
+      0,
+      1
+    ],
+    "mean_abs_error_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "rmse_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "pixel_count": 15360,
+    "tolerance_rgb8": 4,
+    "raw_input_sha256": "507fce025e4942bd3ac3396054ec5c9a89b09e8f476fb05a96a81c8d777b060c",
+    "record_bytes": 3024,
+    "jpeg_bytes": 912,
+    "record_sha256": "dfeb133fc0bf1ff7e1802e598d2200d0bf1b10479f05a35e0baa92918cc6d1f3",
+    "jpeg_sha256": "8e2256f481b473a3c6e52a227cb2a03223f0e2be664f4048fc518eff3f6cd8e6"
+  },
+  "recovery": {
+    "width": 480,
+    "height": 32,
+    "sampling_factors": [
+      33,
+      17,
+      17
+    ],
+    "mcu_grid": [
+      30,
+      4
+    ],
+    "mcu_count": 120,
+    "frame_sequence": 13,
+    "source_camera": 0,
+    "source_session": 1,
+    "source_epoch": 1,
+    "processing_mode": 128,
+    "jpeg_session": 1,
+    "jpeg_generation": 1,
+    "jpeg_slot": 2,
+    "quality": 73,
+    "raw_rgb10": [
+      613,
+      328,
+      234
+    ],
+    "manual_wb_q8": [
+      333,
+      178,
+      226
+    ],
+    "expected_rgb8": [
+      219,
+      119,
+      110
+    ],
+    "max_abs_error_rgb8": [
+      1,
+      0,
+      1
+    ],
+    "mean_abs_error_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "rmse_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "pixel_count": 15360,
+    "tolerance_rgb8": 4,
+    "raw_input_sha256": "804f8dec3869ec6b7486a579239355643c9edab9fbe83cc479eadf65d452d63f",
+    "record_bytes": 3024,
+    "jpeg_bytes": 912,
+    "record_sha256": "6b40af79ed55fe5a695cf26836638c469e6182c9745752bac7bf4ab578614ae4",
+    "jpeg_sha256": "a4926446efad7c329631f9fd522637c2b94ba394eb57da064ede05381f9025e6"
+  }
+}

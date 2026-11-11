@@ -1,0 +1,10 @@
+{
+  "modelsim_bin": "D:\\App\\modelsim\\win64",
+  "td_root": "D:\\App\\TD_Release_2026.2.210.850",
+  "td_commands_prompt": {
+    "path": "D:\\App\\TD_Release_2026.2.210.850\\bin\\td_commands_prompt.exe",
+    "sha256": "2629e474df036a871807e564190febfbbd9780a09365f600c10463911c8c1223"
+  },
+  "wall_limit_ms": 55000,
+  "case_watchdog_edges": 200000
+}

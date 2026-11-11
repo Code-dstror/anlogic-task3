@@ -1,0 +1,10 @@
+[run_td] cwd=<PROJECT_ROOT>\refactor\camera_fusion_r1\fpga_prj\scripts
+[run_td] cmd=<TOOLS_ROOT>/TD_Release_2026.2.210.850\bin\td_commands_prompt.exe -nogui <PROJECT_ROOT>\refactor\camera_fusion_r1\fpga_prj\scripts\check_shared_hdr_owner.tcl
+
+========================================================================
+[run_td] TD exit code     : 1
+[run_td] log              : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\native_hierarchy_final\td.log
+[run_td] .error.f markers : 0 (fresh)
+[run_td] error lines      : 0
+[run_td] RESULT           : FAILED
+========================================================================

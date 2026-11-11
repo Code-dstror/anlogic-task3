@@ -1,0 +1,333 @@
+{
+  "files": [
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/bitgen/phy_1/run.log",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/bitgen/phy_1/run.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "HDL-5007": 14,
+        "HDL-5106": 10,
+        "HDL-5314": 16,
+        "HDL-5317": 5,
+        "HDL-5323": 15,
+        "SYN-5011": 10,
+        "SYN-5013": 10,
+        "SYN-5014": 10,
+        "SYN-5025": 2,
+        "SYN-5123": 20,
+        "SYN-6024": 8
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/bitgen/project/td_20261110_153828.log",
+      "suppression_notices": 10,
+      "visible_warning_lines": 120
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/bitgen/project/td_20261110_153828.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 3,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/bitgen/project/td_20261110_161549.log",
+      "suppression_notices": 1,
+      "visible_warning_lines": 26
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/bitgen/project/td_20261110_161549.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 1
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/placement/phy_1/run.log",
+      "suppression_notices": 0,
+      "visible_warning_lines": 18
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 1
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/placement/phy_1/run.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 18
+    },
+    {
+      "codes": {
+        "HDL-5007": 14,
+        "HDL-5106": 10,
+        "HDL-5314": 16,
+        "HDL-5317": 5,
+        "HDL-5323": 15,
+        "SYN-5011": 10,
+        "SYN-5013": 10,
+        "SYN-5014": 10,
+        "SYN-5025": 2,
+        "SYN-5123": 20,
+        "SYN-6024": 8
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/placement/project/td_20261110_153828.log",
+      "suppression_notices": 10,
+      "visible_warning_lines": 120
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/placement/project/td_20261110_153828.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 1
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/placement/project/td_20261110_161549.log",
+      "suppression_notices": 0,
+      "visible_warning_lines": 18
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/placement/project/td_20261110_161549.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "TMST-7700": 2,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/routing/phy_1/run.log",
+      "suppression_notices": 1,
+      "visible_warning_lines": 8
+    },
+    {
+      "codes": {
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "TMST-7700": 2,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/routing/phy_1/run.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 8
+    },
+    {
+      "codes": {
+        "HDL-5007": 14,
+        "HDL-5106": 10,
+        "HDL-5314": 16,
+        "HDL-5317": 5,
+        "HDL-5323": 15,
+        "SYN-5011": 10,
+        "SYN-5013": 10,
+        "SYN-5014": 10,
+        "SYN-5025": 2,
+        "SYN-5123": 20,
+        "SYN-6024": 8
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/routing/project/td_20261110_153828.log",
+      "suppression_notices": 10,
+      "visible_warning_lines": 120
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/routing/project/td_20261110_153828.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 3,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/routing/project/td_20261110_161549.log",
+      "suppression_notices": 1,
+      "visible_warning_lines": 26
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/routing/project/td_20261110_161549.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/phy_1/run.log",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/phy_1/run.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "HDL-5007": 14,
+        "HDL-5106": 10,
+        "HDL-5314": 16,
+        "HDL-5317": 5,
+        "HDL-5323": 15,
+        "SYN-5011": 10,
+        "SYN-5013": 10,
+        "SYN-5014": 10,
+        "SYN-5025": 2,
+        "SYN-5123": 20,
+        "SYN-6024": 8
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/project/td_20261110_153828.log",
+      "suppression_notices": 10,
+      "visible_warning_lines": 120
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/project/td_20261110_153828.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 3,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/project/td_20261110_161549.log",
+      "suppression_notices": 1,
+      "visible_warning_lines": 26
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/project/td_20261110_161549.logw",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 3,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/td.log",
+      "suppression_notices": 1,
+      "visible_warning_lines": 26
+    },
+    {
+      "codes": {},
+      "indexed_as_text": true,
+      "path": "stage-logs/terminal/worker.log",
+      "suppression_notices": 0,
+      "visible_warning_lines": 0
+    },
+    {
+      "codes": {
+        "CLKST-5093": 1,
+        "PHY-5010": 8,
+        "PHY-5031": 1,
+        "PHY-5050": 3,
+        "PHY-5054": 1,
+        "PHY-5060": 2,
+        "PHY-7022": 5,
+        "TMST-7700": 3,
+        "USR-6144": 2
+      },
+      "indexed_as_text": true,
+      "path": "td.log",
+      "suppression_notices": 1,
+      "visible_warning_lines": 26
+    }
+  ],
+  "generated_at": 1794304395.7226727,
+  "notes": [
+    "Counts are emitted log occurrences, not unique issues or GUI message totals.",
+    "Stage/terminal/console copies may contain the same warning more than once.",
+    "Inspect raw .logw companions for warnings suppressed in run.log.",
+    "Messages TD never wrote to any file and overwritten pre-upgrade logs cannot be reconstructed."
+  ],
+  "schema": 1,
+  "suppression_notices": 46,
+  "visible_warning_occurrences": 680,
+  "warning_inventory_complete": false
+}

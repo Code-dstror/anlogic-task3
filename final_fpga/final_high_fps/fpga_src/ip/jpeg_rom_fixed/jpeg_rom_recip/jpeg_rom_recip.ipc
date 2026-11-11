@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<BramConfig>
+    <AL006>
+        <A_ASYNC>SYNC</A_ASYNC>
+        <A_OREGSET>SET</A_OREGSET>
+        <A_OSRMODE>ASYNC</A_OSRMODE>
+        <B_ASYNC>SYNC</B_ASYNC>
+        <B_OREGSET>SET</B_OREGSET>
+        <B_OSRMODE>ASYNC</B_OSRMODE>
+        <CLK_MODE>SYNC</CLK_MODE>
+        <ECC>DISABLE</ECC>
+        <ECC_D>DISABLE</ECC_D>
+        <ECC_DBITERRINJ>DISABLE</ECC_DBITERRINJ>
+        <ECC_SBITERRINJ>DISABLE</ECC_SBITERRINJ>
+        <SSROVERCE>DISABLE</SSROVERCE>
+    </AL006>
+    <FillMemoryInitValues>
+        <fill_all>NONE</fill_all>
+    </FillMemoryInitValues>
+    <GeneralConfig>
+        <Device>PH1A90SEG324</Device>
+        <IP_ID>27</IP_ID>
+        <Type>PH1_LOGIC_ERAM</Type>
+        <Version>1.0</Version>
+        <create_VHDL>true</create_VHDL>
+        <inst>jpeg_rom_recip</inst>
+    </GeneralConfig>
+    <GeneralOption>
+        <byte_write>none</byte_write>
+        <debug_enable>NO</debug_enable>
+        <pack_enable>NO</pack_enable>
+    </GeneralOption>
+    <ImplementOption>
+        <imp_type>20K</imp_type>
+    </ImplementOption>
+    <MemoryInitialization>
+        <init_file>../../../rtl/jpeg/quant_data/reciprocal.mif</init_file>
+    </MemoryInitialization>
+    <MemoryType>
+        <mem_type>PDPW</mem_type>
+    </MemoryType>
+    <PortAOption>
+        <depth_a>512</depth_a>
+        <enable_a>enable</enable_a>
+        <enable_wea>disable</enable_wea>
+        <mode_a>NORMAL</mode_a>
+        <register_a>None</register_a>
+        <width_a>40</width_a>
+    </PortAOption>
+    <PortBOption>
+        <depth_b>512</depth_b>
+        <enable_b>enable</enable_b>
+        <mode_b>NORMAL</mode_b>
+        <register_b>None</register_b>
+        <width_b>40</width_b>
+    </PortBOption>
+    <GeneratedFiles>
+        <VHDL Enable="false">jpeg_rom_recip.vhd</VHDL>
+        <Verilog Enable="true">jpeg_rom_recip.v</Verilog>
+    </GeneratedFiles>
+</BramConfig>

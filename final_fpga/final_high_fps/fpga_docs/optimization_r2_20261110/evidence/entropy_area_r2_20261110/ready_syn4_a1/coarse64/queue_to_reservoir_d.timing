@@ -1,0 +1,307 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 21:06:41 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 93.28%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     3.967ns
+Fmax           :     252.080MHz
+
+Statistics:
+Max            : SWNS      4.033ns, STNS      0.000ns,         0 Viol Endpoints,         4 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 4.033ns
+Begin Point         : fmt_count_q_reg[1].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/reservoir_reg[8].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.897ns (cell 1.409ns (36%), net 2.488ns (64%))
+Clock Skew          : 0.000ns
+Logic Level         : 8 ( LUT6=2  LUT5=2  LUT3=2  LUT4=1  LUT2=1 )
+Max Fanout          : 85
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: fmt_count_q_reg[1].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: fmt_count_q_reg[1].q
+net (fo=2)                              0.250          0.401          net: fmt_count_q[1],  ../../uhd_probe.v(23)
+                                                                      pin: dut/mux334_syn_160.a
+LUT2                                    0.150    f     0.551       1  pin: dut/mux334_syn_160.o
+net (fo=2)                              0.201          0.752          net: dut/mux334_syn_161,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_162.d
+LUT6                                    0.141    r     0.893       2  pin: dut/mux334_syn_162.o
+net (fo=85)                             0.486          1.379          net: dut/mux334_syn_163,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_164.b
+LUT5                                    0.150    f     1.529       3  pin: dut/mux334_syn_164.o
+net (fo=1)                              0.149          1.678          net: dut/mux334_syn_165,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_172.a
+LUT3                                    0.150    f     1.828       4  pin: dut/mux334_syn_172.o
+net (fo=6)                              0.285          2.113          net: dut/mux334_syn_173,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/bits_work[58]_syn_228.a
+LUT6                                    0.141    r     2.254       5  pin: dut/bits_work[58]_syn_228.o
+net (fo=48)                             0.443          2.697          net: dut/bits_work[58]_syn_229,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[15]_syn_8.b
+LUT4                                    0.150    f     2.847       6  pin: dut/bits_work[15]_syn_8.o
+net (fo=20)                             0.376          3.223          net: dut/bits_work[15]_syn_9,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[8]_syn_6.a
+LUT5                                    0.150    f     3.373       7  pin: dut/bits_work[8]_syn_6.o
+net (fo=1)                              0.149          3.522          net: dut/bits_work[8]_syn_7,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[8]_syn_8.a
+LUT3                                    0.150    f     3.672       8  pin: dut/bits_work[8]_syn_8.o
+net (fo=1)                              0.149          3.821          net: dut/bits_work[8],  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/reservoir_reg[8].d
+SEQ (reg)                               0.076    f     3.897               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.897               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/reservoir_reg[8].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.033               
+
+Slack               : 4.033ns
+Begin Point         : fmt_count_q_reg[1].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/reservoir_reg[11].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.897ns (cell 1.409ns (36%), net 2.488ns (64%))
+Clock Skew          : 0.000ns
+Logic Level         : 8 ( LUT6=2  LUT5=2  LUT3=2  LUT4=1  LUT2=1 )
+Max Fanout          : 85
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: fmt_count_q_reg[1].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: fmt_count_q_reg[1].q
+net (fo=2)                              0.250          0.401          net: fmt_count_q[1],  ../../uhd_probe.v(23)
+                                                                      pin: dut/mux334_syn_160.a
+LUT2                                    0.150    f     0.551       1  pin: dut/mux334_syn_160.o
+net (fo=2)                              0.201          0.752          net: dut/mux334_syn_161,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_162.d
+LUT6                                    0.141    r     0.893       2  pin: dut/mux334_syn_162.o
+net (fo=85)                             0.486          1.379          net: dut/mux334_syn_163,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_164.b
+LUT5                                    0.150    f     1.529       3  pin: dut/mux334_syn_164.o
+net (fo=1)                              0.149          1.678          net: dut/mux334_syn_165,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_172.a
+LUT3                                    0.150    f     1.828       4  pin: dut/mux334_syn_172.o
+net (fo=6)                              0.285          2.113          net: dut/mux334_syn_173,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/bits_work[58]_syn_228.a
+LUT6                                    0.141    r     2.254       5  pin: dut/bits_work[58]_syn_228.o
+net (fo=48)                             0.443          2.697          net: dut/bits_work[58]_syn_229,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[15]_syn_8.b
+LUT4                                    0.150    f     2.847       6  pin: dut/bits_work[15]_syn_8.o
+net (fo=20)                             0.376          3.223          net: dut/bits_work[15]_syn_9,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[11]_syn_4.a
+LUT5                                    0.150    f     3.373       7  pin: dut/bits_work[11]_syn_4.o
+net (fo=1)                              0.149          3.522          net: dut/bits_work[11]_syn_5,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[11]_syn_6.a
+LUT3                                    0.150    f     3.672       8  pin: dut/bits_work[11]_syn_6.o
+net (fo=1)                              0.149          3.821          net: dut/bits_work[11],  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/reservoir_reg[11].d
+SEQ (reg)                               0.076    f     3.897               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.897               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/reservoir_reg[11].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.033               
+
+Slack               : 4.033ns
+Begin Point         : fmt_count_q_reg[1].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/reservoir_reg[12].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.897ns (cell 1.409ns (36%), net 2.488ns (64%))
+Clock Skew          : 0.000ns
+Logic Level         : 8 ( LUT6=2  LUT5=2  LUT3=2  LUT4=1  LUT2=1 )
+Max Fanout          : 85
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: fmt_count_q_reg[1].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: fmt_count_q_reg[1].q
+net (fo=2)                              0.250          0.401          net: fmt_count_q[1],  ../../uhd_probe.v(23)
+                                                                      pin: dut/mux334_syn_160.a
+LUT2                                    0.150    f     0.551       1  pin: dut/mux334_syn_160.o
+net (fo=2)                              0.201          0.752          net: dut/mux334_syn_161,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_162.d
+LUT6                                    0.141    r     0.893       2  pin: dut/mux334_syn_162.o
+net (fo=85)                             0.486          1.379          net: dut/mux334_syn_163,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_164.b
+LUT5                                    0.150    f     1.529       3  pin: dut/mux334_syn_164.o
+net (fo=1)                              0.149          1.678          net: dut/mux334_syn_165,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_172.a
+LUT3                                    0.150    f     1.828       4  pin: dut/mux334_syn_172.o
+net (fo=6)                              0.285          2.113          net: dut/mux334_syn_173,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/bits_work[58]_syn_228.a
+LUT6                                    0.141    r     2.254       5  pin: dut/bits_work[58]_syn_228.o
+net (fo=48)                             0.443          2.697          net: dut/bits_work[58]_syn_229,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[15]_syn_8.b
+LUT4                                    0.150    f     2.847       6  pin: dut/bits_work[15]_syn_8.o
+net (fo=20)                             0.376          3.223          net: dut/bits_work[15]_syn_9,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[12]_syn_4.a
+LUT5                                    0.150    f     3.373       7  pin: dut/bits_work[12]_syn_4.o
+net (fo=1)                              0.149          3.522          net: dut/bits_work[12]_syn_5,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[12]_syn_6.a
+LUT3                                    0.150    f     3.672       8  pin: dut/bits_work[12]_syn_6.o
+net (fo=1)                              0.149          3.821          net: dut/bits_work[12],  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/reservoir_reg[12].d
+SEQ (reg)                               0.076    f     3.897               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.897               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/reservoir_reg[12].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.033               
+
+Slack               : 4.033ns
+Begin Point         : fmt_count_q_reg[1].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/reservoir_reg[13].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 3.897ns (cell 1.409ns (36%), net 2.488ns (64%))
+Clock Skew          : 0.000ns
+Logic Level         : 8 ( LUT6=2  LUT5=2  LUT3=2  LUT4=1  LUT2=1 )
+Max Fanout          : 85
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: fmt_count_q_reg[1].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: fmt_count_q_reg[1].q
+net (fo=2)                              0.250          0.401          net: fmt_count_q[1],  ../../uhd_probe.v(23)
+                                                                      pin: dut/mux334_syn_160.a
+LUT2                                    0.150    f     0.551       1  pin: dut/mux334_syn_160.o
+net (fo=2)                              0.201          0.752          net: dut/mux334_syn_161,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_162.d
+LUT6                                    0.141    r     0.893       2  pin: dut/mux334_syn_162.o
+net (fo=85)                             0.486          1.379          net: dut/mux334_syn_163,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_164.b
+LUT5                                    0.150    f     1.529       3  pin: dut/mux334_syn_164.o
+net (fo=1)                              0.149          1.678          net: dut/mux334_syn_165,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/mux334_syn_172.a
+LUT3                                    0.150    f     1.828       4  pin: dut/mux334_syn_172.o
+net (fo=6)                              0.285          2.113          net: dut/mux334_syn_173,  ../../jpeg_entropy.v(611)
+                                                                      pin: dut/bits_work[58]_syn_228.a
+LUT6                                    0.141    r     2.254       5  pin: dut/bits_work[58]_syn_228.o
+net (fo=48)                             0.443          2.697          net: dut/bits_work[58]_syn_229,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[15]_syn_8.b
+LUT4                                    0.150    f     2.847       6  pin: dut/bits_work[15]_syn_8.o
+net (fo=20)                             0.376          3.223          net: dut/bits_work[15]_syn_9,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[13]_syn_4.a
+LUT5                                    0.150    f     3.373       7  pin: dut/bits_work[13]_syn_4.o
+net (fo=1)                              0.149          3.522          net: dut/bits_work[13]_syn_5,  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/bits_work[13]_syn_6.a
+LUT3                                    0.150    f     3.672       8  pin: dut/bits_work[13]_syn_6.o
+net (fo=1)                              0.149          3.821          net: dut/bits_work[13],  ../../jpeg_entropy.v(160)
+                                                                      pin: dut/reservoir_reg[13].d
+SEQ (reg)                               0.076    f     3.897               
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.897               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1213)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: dut/reservoir_reg[13].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.033               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

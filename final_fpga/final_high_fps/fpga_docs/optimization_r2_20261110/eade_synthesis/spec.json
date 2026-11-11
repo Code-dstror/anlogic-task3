@@ -1,0 +1,25 @@
+{
+  "id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+  "project": {
+    "al": "fpga_prj/rfcamera_fusion_r1.al",
+    "enabled": false,
+    "id": "camera_fusion_r1",
+    "memory_gib": 16,
+    "root": "refactor/camera_fusion_r1",
+    "seeds": [
+      1
+    ],
+    "synth_threads": 4,
+    "target": "synth",
+    "threads": 4,
+    "watch": [
+      "src_fpga/rtl",
+      "src_fpga/ip",
+      "fpga_prj/constraints",
+      "fpga_prj/rfcamera_fusion_r1.al"
+    ]
+  },
+  "seed": 1,
+  "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "trigger": "camera-fusion-r1-20261110-syn4-20s4t:synthesis"
+}

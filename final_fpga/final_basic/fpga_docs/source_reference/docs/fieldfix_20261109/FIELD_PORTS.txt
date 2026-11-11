@@ -1,0 +1,18 @@
+`timescale 1ns/1ps
+`default_nettype none
+// Read-only local-domain counters. These pages feed only the UART snapshot;
+// there is no output to a business reset, READY, owner or admission decision.
+module camera_field_diagnostics (
+    input wire dfi_clk,dfi_rst_n,dfi_run,
+    input wire [31:0] dfi_session,dfi_epoch,
+    input wire job_fire,job_camera,input wire [31:0] job_sequence,
+    input wire [1:0] begin_reject,pair_expire,bad_finish,
+    input wire [7:0] bank_states,dfi_flags,
+    input wire pixel_clk,pixel_rst_n,pixel_run,
+    input wire [31:0] pixel_epoch,
+    input wire [31:0] cfg_applied_epoch,
+    input wire [15:0] cfg_flags,
+    input wire [3:0] capture_admit,
+    input wire [15:0] pixel_flags,
+    output wire [223:0] dfi_page,pixel_page
+);

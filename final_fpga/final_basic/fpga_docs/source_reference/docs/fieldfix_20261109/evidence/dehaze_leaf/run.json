@@ -1,0 +1,60 @@
+{
+  "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_dehaze_transition_20261109\\baseline",
+  "runner_argv": [
+    "python",
+    "refactor/camera_raw_r2/src_fpga/simulation/blackbox_dehaze_transition_20261109/run.py",
+    "--modelsim-bin",
+    "D:/App/modelsim/win64",
+    "--run-name",
+    "baseline"
+  ],
+  "commands": {
+    "version": [
+      "D:\\App\\modelsim\\win64\\vsim.exe",
+      "-version"
+    ],
+    "vlib": [
+      "D:\\App\\modelsim\\win64\\vlib.exe",
+      "work"
+    ],
+    "compile": [
+      "D:\\App\\modelsim\\win64\\vlog.exe",
+      "-sv",
+      "-work",
+      "work",
+      "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\dehaze_dcp_restore4.v",
+      "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_dehaze_transition_20261109\\tb_dehaze_transition.sv"
+    ],
+    "simulate": [
+      "D:\\App\\modelsim\\win64\\vsim.exe",
+      "-c",
+      "-onfinish",
+      "stop",
+      "work.tb_dehaze_transition",
+      "-do",
+      "onerror {quit -code 1}; run -all; quit -code 0"
+    ]
+  },
+  "profile": {
+    "WIDTH": 256,
+    "HEIGHT": 128,
+    "EXTERNAL_DARK_ENABLE": 0
+  },
+  "wall_timeout_seconds": 60,
+  "simulation_watchdog_ns": 2000000,
+  "status": "PASS",
+  "input_sha256_before": {
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\dehaze_dcp_restore4.v": "a3c231735f22d03525e1454db2930872e4b7019d593354f89c4d8dd32fd6da1f",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_dehaze_transition_20261109\\tb_dehaze_transition.sv": "aee99370b0d3547f7bffde0c0334101b8bfd804952e374e8f7cb6011c730c268",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_dehaze_transition_20261109\\run.py": "6c4ee82b74f894d4063f708966cb1921f9c9752143250e4485a5509363c18cd2",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\DEHAZE_PUBLIC_CONTRACT.md": "3bcafeaac819cf9db347661dcac378d4b4d01189d8b26fe14eb831e01ba69ec4"
+  },
+  "terminal_marker": "PASS_DEHAZE_TRANSITION full_frames=9 aborted_frames=2 groups_per_frame=8192",
+  "input_sha256_after": {
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\dehaze_dcp_restore4.v": "a3c231735f22d03525e1454db2930872e4b7019d593354f89c4d8dd32fd6da1f",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_dehaze_transition_20261109\\tb_dehaze_transition.sv": "aee99370b0d3547f7bffde0c0334101b8bfd804952e374e8f7cb6011c730c268",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_dehaze_transition_20261109\\run.py": "6c4ee82b74f894d4063f708966cb1921f9c9752143250e4485a5509363c18cd2",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\DEHAZE_PUBLIC_CONTRACT.md": "3bcafeaac819cf9db347661dcac378d4b4d01189d8b26fe14eb831e01ba69ec4"
+  },
+  "elapsed_seconds": 3.563
+}

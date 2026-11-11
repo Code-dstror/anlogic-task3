@@ -1,0 +1,146 @@
+{
+  "scope": "Independent public-port simulation of ordered_frame_cdc with the production JPEG profile",
+  "status": {
+    "functional_simulation": "PASS",
+    "public_edge_comparison": "IDENTICAL",
+    "synthesis": "NOT_RUN",
+    "place_and_route": "NOT_RUN",
+    "physical_timing": "NOT_RUN",
+    "bitgen": "NOT_RUN",
+    "board": "NOT_RUN"
+  },
+  "profile": {
+    "CONTEXT_ENABLE": 1,
+    "WRITE_TAG_ENABLE": 1,
+    "RECORD_EXTENSION_ENABLE": 1,
+    "RECORD_EXTENSION_WIDTH": 16384,
+    "BORROW_EXTENSION": 1,
+    "MASK_CONTEXT_ENABLE": 0,
+    "EXTENSION_RAM_ENABLE": 1,
+    "STREAM_EXTENSION": 1
+  },
+  "source_period_ps": 8000,
+  "sink_period_ps": 7502,
+  "sim_watchdog_ps": 50000000,
+  "process_budget_seconds": 58,
+  "baseline_commit": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+  "baseline_opaque_pair": {
+    "ordered_frame_cdc.v": {
+      "sha256": "976c55d96763f8e69e9b686fc84719fc4609ccba7423778c2c8481b80ce46455",
+      "git_blob_verified": "ba29148b2ac13f9af0efb4363303498d9f6bde56"
+    },
+    "ordered_frame_ingress.v": {
+      "sha256": "8d8b0336b84c3c98118585c4e7f3e43b6fe77e0c99fcfb4f118fbe683df305b1",
+      "git_blob_verified": "ebdc1477fcba9b6ef1df0e8fc4dc3df606bd5f68"
+    }
+  },
+  "candidate_sha256": {
+    "rtl/ordered_frame_cdc.v": "32c8bf457ff45ea3b3a3eb4038fb9b968991c4038ed9d26dfa7ba4f1418de469",
+    "rtl/ordered_frame_ingress.v": "f463a2a4d601d5400f44f0b3b8cde585ffbf0711c447ce6e80e335fdc621d8c7",
+    "rtl/reset_release_sync_data.v": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+  },
+  "fixture_sha256": {
+    "tb_jpeg_reset.sv": "178241f56f17f63dea1ede365a2a03b88107b4fba3412e1d869bb622775478ce",
+    "run.py": "84bdabe447b503ff9aec81328fca0db9dbec6ca3e5dbedd39b70161a208dc337"
+  },
+  "toolchain": {
+    "modelsim_version": "ModelSim SE-64 2020.4 Simulator 2020.10 Oct 13 2020",
+    "python_version": "CPython 3.12.9",
+    "td_model_release": "2026.2 / 6.2.3.210850",
+    "executable_sha256": {
+      "vlib.exe": "12fa9f43fac4af70f9694e6055f376dcc419c39518a0e30d7aa047c37aaca576",
+      "vmap.exe": "0043766bd4ea69921769e3bb7d571de9bf2aa713a8a8d81fac02a10fae8f0d28",
+      "vlog.exe": "39e7f5cbae66a5aa65a179f5ab8faee01a0c53dc838e5e2b76510ac6c77e80a6",
+      "vsim.exe": "011f110291dc69707d7118e8f8d712b91438e0c837f9bc10ce6bf53c1d048cfd",
+      "python.exe": "805fd29612c221ebea570d372ec5ed46093c25a1033f1765de9b2f8103868886"
+    },
+    "td_model_sha256": {
+      "common/al_phy_glbl.v": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff",
+      "ph1/ph1_logic_eram.v": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8",
+      "ph1/ph1_logic_fifo.v": "0cea967091d4f3fd27e07289d3a19a0064e65c8abefc0427749ef61b2ce00160",
+      "ph1/ph1_logic_ramfifo.v": "98fab0ec4a952cc2d384b77f7a55c3a6e912741fc33c21cd748f6d9fd214e774",
+      "ph1/ph1_phy_eram.v": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c",
+      "ph1/ph1_phy_fifoctrl.v": "fea30a6a038abec73c4e4e56b9986ad1242f043a06a7c39619979744202adddf",
+      "ph1/ph1_phy_gsr.v": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed"
+    },
+    "load_diagnostics_each_case_both_sides": {
+      "vopt-2241": "Two ECC injection port width diagnostics at ram40_sdp_fixed.v:69 / ph1_logic_eram.v:52",
+      "vopt-2697": "Two INIT_FILE part-select bound diagnostics at ph1_logic_eram.v:1287"
+    }
+  },
+  "evidence": {
+    "path_root_from_repository": "refactor/camera_raw_r2/tmp/timing_jpeg_reset_20261110/blackbox",
+    "baseline": {
+      "run_record": "run01/RUN.json",
+      "record_sha256": "f5e736a048ed589f00e7b8ae512efb0cd8bac7a4039dde94bffb5c4c6e2d0698",
+      "case_directory": "run01/baseline",
+      "passed_cases": 5,
+      "compile_and_case_process_seconds": 18.578
+    },
+    "candidate_and_edge_comparison": {
+      "run_record": "run02/RUN.json",
+      "record_sha256": "c7f3a63c44833796025485d2eda58b90e4a6c068d8170d240be20579e839c700",
+      "case_directory": "run02/candidate",
+      "passed_cases": 5,
+      "run_seconds": 17.281,
+      "reused_baseline": "run01 baseline results and traces with matching design, TB, model and tool hashes"
+    },
+    "preserved_interruption": {
+      "run": "run01",
+      "classification": "TOOL_ENVIRONMENT_WALL_CLOCK_INTERRUPTION",
+      "elapsed_seconds": 2703.14,
+      "details": "All five baseline cases finished before the interruption. Candidate case 1 had a functional terminal but exceeded the wall budget. Candidate cases 2 to 5 did not complete. Run02 repeated all five candidate cases."
+    },
+    "complete_binding": "Run records carry exact argv and cwd, all 40 input SHA256 values, library map hashes and raw log paths."
+  },
+  "per_variant_totals": {
+    "good_results": 6,
+    "e2_results": 1,
+    "cancelled_before_result": 2,
+    "fence_proofs": 7,
+    "ram_words_checked": 3718,
+    "public_edge_events": 1480
+  },
+  "cases": [
+    {
+      "id": 1,
+      "scenario": "Cold release and first accepted RESULT followed by fence prove",
+      "good": 1, "e2": 0, "cancelled": 0, "proofs": 1, "ram_words": 414,
+      "finish_ps": 7105602, "identical_edge_events": 166,
+      "trace_sha256": "4db4547d3e6ca1008efd1853ebc0cc571bf0a311605ab8edfa572ebde94660a6"
+    },
+    {
+      "id": 2,
+      "scenario": "Source R3 high stretch and stopped-low release with a fresh identity",
+      "good": 2, "e2": 0, "cancelled": 0, "proofs": 2, "ram_words": 828,
+      "finish_ps": 14142478, "identical_edge_events": 336,
+      "trace_sha256": "5ca11c10ea92ccff2bb29c7fa004e216c32631380737c7e4db1665595b968864"
+    },
+    {
+      "id": 3,
+      "scenario": "Sink-only reset cancels borrowed extension with source stopped high",
+      "good": 1, "e2": 0, "cancelled": 1, "proofs": 1, "ram_words": 824,
+      "finish_ps": 13759876, "identical_edge_events": 325,
+      "trace_sha256": "51a3f007dc467c9328023bc262b2de328337f2e21ae112ade7c1646dd33053d5"
+    },
+    {
+      "id": 4,
+      "scenario": "Source-only reset cancels held E2 result with sink stopped low",
+      "good": 1, "e2": 0, "cancelled": 1, "proofs": 1, "ram_words": 824,
+      "finish_ps": 13883659, "identical_edge_events": 327,
+      "trace_sha256": "2ebc7a7c8ac01db0a77938c34e557413c70bf44acc7172fcb719316f4a552e8f"
+    },
+    {
+      "id": 5,
+      "scenario": "Consumed E2 result preserves reported length and allows same-cohort recovery",
+      "good": 1, "e2": 1, "cancelled": 0, "proofs": 2, "ram_words": 828,
+      "finish_ps": 13954928, "identical_edge_events": 326,
+      "trace_sha256": "a41214b8e9e8770149740122467d80942b3278fdd619be7feea01f9a6638bbea"
+    }
+  ],
+  "limits": [
+    "Three short transport beats per frame and one all-disabled record-v4 shape",
+    "Fixed clock frequencies, phase and stop windows in pre-synthesis digital simulation",
+    "No JPEG decoder, sustained full-frame rate, physical reset-pulse qualification, DDR/PCIe or board result"
+  ]
+}

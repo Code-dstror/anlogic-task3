@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "project_root": "refactor/camera_fusion_r1",
+  "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "dut": "jpeg_ring_reset_boundary",
+  "td_version": "6.2.3.210850",
+  "compile_mode": "Verilog",
+  "models_library": "ph1",
+  "model_sources": [
+    {
+      "path": "sim_release/common/al_phy_glbl.v",
+      "sha256": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff"
+    },
+    {
+      "path": "sim_release/ph1/ph1_logic_dram.v",
+      "sha256": "0b4ab2c3ac73aad28e16ab6a0a6af57a62ae89db2c3e58ac85605cc9e98b88cd"
+    }
+  ],
+  "td_work_sources": [
+    {
+      "path": "sim_release/ph1/ph1_phy_gsr.v",
+      "sha256": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed"
+    }
+  ],
+  "rom_initializers": [],
+  "globals": [
+    "work.PH1_PHY_GSR",
+    "ph1.glbl"
+  ],
+  "legal_profile": {
+    "CAMERA_COUNT": 2,
+    "SLOT_BYTES": 16777216,
+    "WRITE_RESULT_ENABLE": 1,
+    "WRITE_TAG_ENABLE": 1,
+    "MASK_ENABLE": 0
+  },
+  "variants": {
+    "baseline": [
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync.v",
+        "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync_data.v",
+        "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/jpeg_ring_cold_bank.v",
+        "sha256": "356b34088ff4342e09b832f427c813c0a0fc9ecfc64dde40ed4685c178ddae9e"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/td_sdp_ram.v",
+        "sha256": "148e07e6877ead65fd169157bba1fbef8e0436bb87742895bab4c69bdc543b16"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/baseline/jpeg_frame_ring.v",
+        "sha256": "5c45615f818173b96a25a1a184691f8ffcdd3ef2155fa54581804b6e567153e1"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/baseline/jpeg_ring_reset_boundary.v",
+        "sha256": "853d83f71203279c75efc425406a5a6cfe705cd6f80b4f466324e9d93993fcea"
+      }
+    ],
+    "candidate": [
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync.v",
+        "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync_data.v",
+        "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/jpeg_ring_cold_bank.v",
+        "sha256": "356b34088ff4342e09b832f427c813c0a0fc9ecfc64dde40ed4685c178ddae9e"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/common/td_sdp_ram.v",
+        "sha256": "148e07e6877ead65fd169157bba1fbef8e0436bb87742895bab4c69bdc543b16"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/candidate/jpeg_frame_ring.v",
+        "sha256": "eed3c6b1955a465ac113d7492134d298fe9a62c7727d8c88b4c64c5379248b5b"
+      },
+      {
+        "path": "tmp/ring_data_qual_r3_20261110/inputs/candidate/jpeg_ring_reset_boundary.v",
+        "sha256": "edbfec8204a35ebc67331c4a397861caaf5295d780dc2829ecd8d356a6413f97"
+      }
+    ]
+  }
+}

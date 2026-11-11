@@ -1,0 +1,32 @@
+{
+  "schema": 2,
+  "base": {
+    "mode": "COLOR",
+    "quality": 75,
+    "flags": 0,
+    "min_quality": 1,
+    "frame_budget": 0,
+    "restart_mcus": 0
+  },
+  "extension": {
+    "schema": 2,
+    "product_mode": 0,
+    "processing_enables": [
+      "GRAY",
+      "GAUSSIAN_IMAGE",
+      "HISTOGRAM",
+      "MULTISCALE",
+      "LANE"
+    ],
+    "hdr_ratio": 0,
+    "hdr_black_long": 0,
+    "hdr_black_short": 0,
+    "hdr_motion_base": 0,
+    "hdr_motion_shift": 0,
+    "hdr_qualification": 0,
+    "hdr_max_delta_ns": 0,
+    "hdr_max_wait_ns": 0,
+    "hdr_max_age_ns": 0,
+    "dehaze_lut_generation": 0
+  }
+}

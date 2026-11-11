@@ -1,0 +1,14 @@
+# 替换所有 __...__ 标记后，仅合并需要的 MCP 段；不要覆盖其他 Codex 设置。
+[mcp_servers.matlab]
+command = "__PROJECT_ROOT__/tools/technical_report/local/matlab-mcp-server.exe"
+args = ["--matlab-root=__MATLAB_ROOT__", "--initial-working-folder=__PROJECT_ROOT__/work/technical_document", "--matlab-display-mode=nodesktop", "--matlab-session-mode=new", "--disable-telemetry=true"]
+env_vars = ["WINDIR", "SYSTEMROOT", "USERPROFILE", "LOCALAPPDATA", "APPDATA", "TEMP", "TMP"]
+startup_timeout_sec = 120
+tool_timeout_sec = 240
+
+[mcp_servers.report_visio]
+command = "__VISIO_PYTHON__"
+args = ["__PROJECT_ROOT__/final_agents/MCP/visio_mcp.py"]
+env_vars = ["WINDIR", "SYSTEMROOT", "USERPROFILE", "LOCALAPPDATA", "APPDATA", "TEMP", "TMP"]
+startup_timeout_sec = 60
+tool_timeout_sec = 120

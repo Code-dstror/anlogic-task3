@@ -1,0 +1,58 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 20:55:20 on Nov 10,2026
+vlog -work work -L ph1 "+define+PH1" "+define+R8_STAGE1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_A=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_CE=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_RST=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Y=1" "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Z=1" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\02_jpeg" <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_gsr.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_encoder_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_mcu_422.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_mcu_read_align8.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_mcu_packed_plane.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_dct8x8_pipeline.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_fdct1d.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_quant_sync_fifo.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_quant_stream.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_quant_table_rom.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_quant_rom10x2048.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_quant_recip_rom40x512.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_quant_rom20x1024.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_huff_ac_rom.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\entropy_area_r2_20261110\syn16_a1\blackbox_inputs\candidate02\candidate\jpeg_entropy.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_byte_packer.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg_file_formatter.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\td_sdp_ram.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\td_sdp_ram40.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\td_dsp_mult.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\jpeg\jpeg_rgb_to_ycbcr_422.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\isp_line_ram_20x1024_ip\isp_line_ram_20x1024_ip.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_19s14s_p1\RTL\mult_19s14s_p1_multiplier.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_19s14s_p1\RTL\mult_19s14s_p1_multiplier_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_19s14s_p1\mult_19s14s_p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_25u16u_p1\RTL\mult_25u16u_p1_multiplier.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_25u16u_p1\RTL\mult_25u16u_p1_multiplier_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_25u16u_p1\mult_25u16u_p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_14u10u_p1\RTL\mult_14u10u_p1_multiplier.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_14u10u_p1\RTL\mult_14u10u_p1_multiplier_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_14u10u_p1\mult_14u10u_p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_17s9s_p1\RTL\mult_17s9s_p1_multiplier.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_17s9s_p1\RTL\mult_17s9s_p1_multiplier_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_17s9s_p1\mult_17s9s_p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_18s18s_p1\RTL\mult_18s18s_p1_multiplier.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_18s18s_p1\RTL\mult_18s18s_p1_multiplier_top.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\dsp_mult_fixed\mult_18s18s_p1\mult_18s18s_p1.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\ram40_sdp_fixed\ram40_sdp_fixed\ram40_sdp_fixed.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane0_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane1_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane2_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane3_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane4_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane5_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane6_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane7_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_recip_sim.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_huff_sim.v 
+-- Compiling module PH1_PHY_GSR
+-- Compiling module jpeg_encoder_top
+-- Compiling module jpeg_mcu_422
+-- Compiling module jpeg_mcu_read_align8
+-- Compiling module jpeg_mcu_packed_plane
+-- Compiling module jpeg_dct8x8_pipeline
+-- Compiling module jpeg_fdct1d
+-- Compiling module jpeg_quant_sync_fifo
+-- Compiling module jpeg_quant_stream
+-- Compiling module jpeg_quant_table_rom
+-- Compiling module jpeg_quant_rom10x2048
+-- Compiling module jpeg_quant_recip_rom40x512
+-- Compiling module jpeg_quant_rom20x1024
+-- Compiling module jpeg_huff_ac_rom
+-- Compiling module jpeg_entropy
+-- Compiling module jpeg_byte_packer
+-- Compiling module jpeg_file_formatter
+-- Compiling module td_sdp_ram
+-- Compiling module td_sdp_ram40
+-- Compiling module td_dsp_mult
+-- Compiling module jpeg_rgb_to_ycbcr_422
+-- Compiling module jpeg_chroma_422_pipeline
+-- Compiling module isp_line_ram_20x1024_ip
+-- Compiling module mult_19s14s_p1_multiplier
+-- Compiling module mult_19s14s_p1_multiplier_top
+-- Compiling module mult_19s14s_p1
+-- Compiling module mult_25u16u_p1_multiplier
+-- Compiling module mult_25u16u_p1_multiplier_top
+-- Compiling module mult_25u16u_p1
+-- Compiling module mult_14u10u_p1_multiplier
+-- Compiling module mult_14u10u_p1_multiplier_top
+-- Compiling module mult_14u10u_p1
+-- Compiling module mult_17s9s_p1_multiplier
+-- Compiling module mult_17s9s_p1_multiplier_top
+-- Compiling module mult_17s9s_p1
+-- Compiling module mult_18s18s_p1_multiplier
+-- Compiling module mult_18s18s_p1_multiplier_top
+-- Compiling module mult_18s18s_p1
+-- Compiling module ram40_sdp_fixed
+-- Compiling module jpeg_rom_q_lane0
+-- Compiling module jpeg_rom_q_lane1
+-- Compiling module jpeg_rom_q_lane2
+-- Compiling module jpeg_rom_q_lane3
+-- Compiling module jpeg_rom_q_lane4
+-- Compiling module jpeg_rom_q_lane5
+-- Compiling module jpeg_rom_q_lane6
+-- Compiling module jpeg_rom_q_lane7
+-- Compiling module jpeg_rom_recip
+-- Compiling module jpeg_rom_huff
+
+Top level modules:
+	PH1_PHY_GSR
+	jpeg_encoder_top
+End time: 20:55:21 on Nov 10,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

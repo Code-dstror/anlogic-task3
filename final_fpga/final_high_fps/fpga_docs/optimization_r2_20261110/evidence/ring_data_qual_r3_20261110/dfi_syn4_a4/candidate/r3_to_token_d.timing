@@ -1,0 +1,85 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 22:16:46 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 91.14%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     DFI -> DFI
+Type           :     Self
+From Clock     :     DFI
+To Clock       :     DFI
+Min Period     :     2.043ns
+Fmax           :     489.476MHz
+
+Statistics:
+Max            : SWNS      5.459ns, STNS      0.000ns,         0 Viol Endpoints,         1 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 5.459ns
+Begin Point         : u_ring/u_record_owner_reset/release_pipe_reg[2].clk (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : token_ready_q_reg.d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.502ns { DFI rising@7.731ns - DFI rising@0.229ns }
+Data Path Delay     : 1.973ns (cell 0.677ns (34%), net 1.296ns (66%))
+Clock Skew          : 0.000ns
+Logic Level         : 3 ( LUT5=3 )
+Max Fanout          : 164
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/release_pipe_reg[2].clk
+launch edge                             0.229    r     0.229               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.380          pin: u_ring/u_record_owner_reset/release_pipe_reg[2].q
+net (fo=3)                              0.274          0.654          net: u_ring/u_store/i_data_reset_n,  ../../jpeg_frame_ring.v(190)
+                                                                      pin: hdr_clear_q_n_syn_9.c
+LUT5                                    0.150    f     0.804       1  pin: hdr_clear_q_n_syn_9.o
+net (fo=4)                              0.254          1.058          net: hdr_clear_q_n_syn_10,  NOFILE(0)
+                                                                      pin: u_egress/last_seen_reg_syn_6.d
+LUT5                                    0.150    f     1.208       2  pin: u_egress/last_seen_reg_syn_6.o
+net (fo=3)                              0.232          1.440          net: u_egress/last_seen_reg_syn_7,  ../../ordered_frame_egress.v(247)
+                                                                      pin: u_egress/o_token_ready_syn_7.c
+LUT5                                    0.150    f     1.590       3  pin: u_egress/o_token_ready_syn_7.o
+net (fo=164)                            0.536          2.126          net: u_egress/o_token_ready,  ../../ordered_frame_egress.v(20)
+                                                                      pin: token_ready_q_reg.d
+SEQ (reg)                               0.076    f     2.202               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.202               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: token_ready_q_reg.clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.459               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

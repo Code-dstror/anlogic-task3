@@ -1,0 +1,597 @@
+{
+  "schema": "rk-debug-source-contract-v1",
+  "date": "2026-10-16",
+  "source_commit": "8e2eecfcfc7c956f8a7c3c88a6323a23a2360c99",
+  "project": "fpga_prj/s3p95_r3.al",
+  "top": "anlogic2026",
+  "source_identity_is_not_firmware_id": true,
+  "firmware_id": null,
+  "audit_scope": "READ_ONLY_SELECTED_SOURCE_HASH_AND_STATIC_CONNECTIVITY_NO_NEW_SIMULATION_OR_BOARD_TEST",
+  "authorities": [
+    {
+      "path": "docs/coordination/stage3-implementation-20261016.md",
+      "sha256": "b716fc3a788f0362cf86112a384b2f98c93dba6d8de78e6aee37dfe055378a62",
+      "bytes": 4650
+    },
+    {
+      "path": "fpga_prj/s3p95_r3.al",
+      "sha256": "5e6db70ca9632178094b32bd05d65e6239ab5e1cb51254cbbd0e9768b4153231",
+      "bytes": 161367
+    },
+    {
+      "path": "src_fpga/stages/r8_stage3/pending/area95_20261016/r3/SOURCE_MANIFEST.json",
+      "sha256": "5be9c0f407cdb9a32b47a237adbe981c62fc4da8ef903dfce831cd0a54874c44",
+      "bytes": 100416
+    },
+    {
+      "path": "src_fpga/stages/r8_stage3/pending/area95_20261016/validation_lz_r3/qualification.json",
+      "sha256": "5e5c32746cd7c9353d06c1b69250cedc6ee27d9a7df1d3a9ba63994e46e29a21",
+      "bytes": 100321
+    },
+    {
+      "path": "linux/dma_c2h_candidate/c2h_legacy_policy.py",
+      "sha256": "ef710832945916700ae88529f8eba34715a60998382f0737e9d248e9abf74782",
+      "bytes": 1294
+    }
+  ],
+  "definitions": [
+    "AXI4ST_BUS_EN=1",
+    "AXI4L_MBUS_EN=1",
+    "USR_IRQ_EN=1",
+    "MSI_EN=1'b1",
+    "PH1=1",
+    "R8_STAGE1=1",
+    "R8_BASIC_PREPROCESS=1",
+    "R8_HE_FIXED_CONFIG_SESSION=1",
+    "R8_LIVE_F21=1",
+    "R8_F21_FIXED_CONFIG_SESSION=1",
+    "R8_STAGE2_COMPACT_TRANSPORT=1",
+    "S08_CONFIGURED_CAPTURE=1",
+    "S04_RAW_FRAME_STORE=1",
+    "ANLOGIC_COMPILED_PROFILE=1",
+    "ANLOGIC_SOURCE_SELECT=3",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_A=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_CE=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_RST=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_Y=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_Z=1"
+  ],
+  "selected_sources": [
+    {
+      "id": "anlogic2026.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/anlogic2026.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/anlogic2026.v",
+      "sha256": "243658b0fe096226f153d81aff9ca2d6831b1c8d8a4481b151cc7768163c50b6",
+      "bytes": 315046,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_config_engine_v2.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_config_area_20261015/mono_config_engine_v2.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_config_area_20261015/mono_config_engine_v2.v",
+      "sha256": "72ac69df8bb55e40db1d05e0a176612832769ddcaceb9b1f80a04963e36fc102",
+      "bytes": 17975,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_config_service_v2.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_service_v2.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_service_v2.v",
+      "sha256": "73adcd8ceedc83a0a172b3ea3e4a55ad6924ad1c4d9c9917a48e0154f85e97a9",
+      "bytes": 6497,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_config_bar_v2.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_bar_v2.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_bar_v2.v",
+      "sha256": "4b275438451bc286b4b4a52721a92bccf7d2812950bfcc88adfd3c84df243df9",
+      "bytes": 19718,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_config_scan_v2.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_scan_v2.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_scan_v2.v",
+      "sha256": "f910dfbb3af45ad2289441beb2f4c69c0bfcbf98e98306d3315ab221e748ae27",
+      "bytes": 4713,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_config_legacy_scan_v1.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_legacy_scan_v1.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_legacy_scan_v1.v",
+      "sha256": "0156fa93b6c04692d5ac160c3847792c661f9b6286d5232572509330618fa169",
+      "bytes": 3943,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_config_transport_v2.vh",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_transport_v2.vh",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_config_transport_v2.vh",
+      "sha256": "363486024c965b2f66b1a9767a542c6c2fe74d3c1dcba81a800708591c3e7b2e",
+      "bytes": 3962,
+      "registered": false,
+      "manifest_match": true
+    },
+    {
+      "id": "legacy_stage2_config_transport.vh",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/legacy_stage2_config_transport.vh",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/legacy_stage2_config_transport.vh",
+      "sha256": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+      "bytes": 3621,
+      "registered": false,
+      "manifest_match": true
+    },
+    {
+      "id": "mono_pcie_app_regs_v2.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_pcie_app_regs_v2.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/mono_config_v2_20261015/mono_pcie_app_regs_v2.v",
+      "sha256": "fbd6001fe1dac986a100c80a140a86afbc430136f7661b7a7ad52e19b92a70f5",
+      "bytes": 22859,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "analysis_config_transport.vh",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/include/analysis_config_transport.vh",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/include/analysis_config_transport.vh",
+      "sha256": "9b1ffd7a1b49cf76d202b6d00dc35766ff089ee824646a33725535688f2df69b",
+      "bytes": 1439,
+      "registered": false,
+      "manifest_match": true
+    },
+    {
+      "id": "frame_job_config_cdc.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/frame_job_config_cdc.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/frame_job_config_cdc.v",
+      "sha256": "76198da5d775b8e91c721839e68103440b153fd26925527a56eb6aeaa9508eb5",
+      "bytes": 15502,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "frame_config_preset_owner.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/frame_config_preset_owner.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/frame_config_preset_owner.v",
+      "sha256": "8cf00f359ef047496187051df9ad818b1aab5012f38ac0ad369ec4a1cc9a7974",
+      "bytes": 3838,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "configured_dual_capture_frontend.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_analysis_20261015/rtl/configured_dual_capture_frontend.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_analysis_20261015/rtl/configured_dual_capture_frontend.v",
+      "sha256": "308536f26877b364a67819daef61652997befe5084755a7bb89082a10ae26ba2",
+      "bytes": 24600,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "full_raw_store.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/full_raw_store.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/full_raw_store.v",
+      "sha256": "a8f407932c747d862e2735f5a674b408eb52948f6202299780b5100946afbd54",
+      "bytes": 28112,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "full_raw_capture_frontend.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/full_raw_capture_frontend.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/full_raw_capture_frontend.v",
+      "sha256": "21062162fc47efaba028f3f6bffd3bde92f07635ef4c3c2ea7a6c788c0b8138e",
+      "bytes": 9902,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "shared_raw_capture_writer.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/shared_raw_capture_writer.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/shared_raw_capture_writer.v",
+      "sha256": "c807b16414e768dd7580bdbd95272cc8361a222e77755866bb5f06435699e306",
+      "bytes": 10952,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "sdr_raw_slot_owner.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/sdr_raw_slot_owner.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_frame_time_20261015/sdr_raw_slot_owner.v",
+      "sha256": "2b65242d3fdd4bb30f2da1ce8057e95e3425c5ca88dd83ae699a1426c8e54058",
+      "bytes": 8173,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "hdr_pair_bank_owner.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/raw_owner_area_20261016/hdr_pair_bank_owner.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/raw_owner_area_20261016/hdr_pair_bank_owner.v",
+      "sha256": "84f9b038a7222197c3c27c3c533af5942990471b96726062bf357adfd9c28c58",
+      "bytes": 17852,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "raw_hdr_phase_scheduler4.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/hdr_pairbank_20261014/rtl/raw_hdr_phase_scheduler4.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/hdr_pairbank_20261014/rtl/raw_hdr_phase_scheduler4.v",
+      "sha256": "9d53dd88b9bb4d9eb8f561c4aad9d429de1812afd58fc1328aad8b960cf138cc",
+      "bytes": 12897,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "raw_pair_processing_service.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/hdr_pairbank_20261014/rtl/raw_pair_processing_service.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/hdr_pairbank_20261014/rtl/raw_pair_processing_service.v",
+      "sha256": "9f38714ccb578516c3ca2aa727244aa348a5581ae9a85bb9e19e424d0cfb13c8",
+      "bytes": 18358,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "full_lz_service.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/full_lz_service.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/full_lz_service.v",
+      "sha256": "43c19f008d60f851c53c233d517449a49d4ef264db3fbccbbb2a88e1dc141645",
+      "bytes": 8480,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "lz_frame_pipeline.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_native_c2h_20261015/rtl/lz_frame_pipeline.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_native_c2h_20261015/rtl/lz_frame_pipeline.v",
+      "sha256": "7f64b014aaed44388af482200b66461eb01b64ba81e3c02d06973ea28ab367f2",
+      "bytes": 10370,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "product_record_cdc.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/record_cancel_cdc_20261015/product_record_cdc.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/record_cancel_cdc_20261015/product_record_cdc.v",
+      "sha256": "87dd77375f14f7e6cec424a79a086a77601a92bb29b54a6832e739fa4995406f",
+      "bytes": 11792,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "product_pcie_transport.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/complete_record_fault_20261015/product_pcie_transport.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/complete_record_fault_20261015/product_pcie_transport.v",
+      "sha256": "c87f735d34c63615ee72413b33c3763c983b0caf61cab2806e8571dbd6c950d0",
+      "bytes": 7624,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "c2h_product_arbiter.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/product_c2h_transport_20261015/rtl/c2h_product_arbiter.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/product_c2h_transport_20261015/rtl/c2h_product_arbiter.v",
+      "sha256": "4f28f18192de54fd00a5411eff26fed7f4673ae472e2c42006b1d21ecb21ae64",
+      "bytes": 6368,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "c2h_pcie_endpoint.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/lz_native_c2h_20261015/rtl/c2h_pcie_endpoint.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/lz_native_c2h_20261015/rtl/c2h_pcie_endpoint.v",
+      "sha256": "6d5580f3b5d633694e690ddf00f5d6051e17b38766ce699a74a9e478ceb781a1",
+      "bytes": 12430,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "c2h_link_supervisor.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/c2h_link_supervisor.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/c2h_link_supervisor.v",
+      "sha256": "59c96e53745e3f9e4208eae67071eef1dc8c47c3dd797670cb887cc34d13f29a",
+      "bytes": 2024,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "c2h_native_rx_transport.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/product_c2h_transport_20261015/rtl/c2h_native_rx_transport.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/product_c2h_transport_20261015/rtl/c2h_native_rx_transport.v",
+      "sha256": "3c1b4eb77be7c2d677e5ca46f85fbc0915d2c31c67a85afc2bf8a256ef51c6c0",
+      "bytes": 16451,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "preprocess_live_f21_service4.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/preprocess_live_f21_service4.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/preprocess_live_f21_service4.v",
+      "sha256": "cea583a0d17cf8699a9d0f315ef0d85f9558f539c59c6f5636e807a2ed62855b",
+      "bytes": 17885,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "preprocess_live_f21_pipeline4.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/preprocess_live_f21_pipeline4.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/preprocess_live_f21_pipeline4.v",
+      "sha256": "b4ca2546d345a0dce64a2e5d3188c2bfd4b199bc099f477b484a30c5b0939769",
+      "bytes": 25109,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "stage3_filter_color_analysis4.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_filter_area_20261015/stage3_filter_color_analysis4.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_filter_area_20261015/stage3_filter_color_analysis4.v",
+      "sha256": "a79baa5099dacb6817c7e0e9e77aed08f74835159052ca74b877132b378522ba",
+      "bytes": 6633,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "stage3_filter_analysis4.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/filter_analysis_integration_20261015/stage3_filter_analysis4.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/filter_analysis_integration_20261015/stage3_filter_analysis4.v",
+      "sha256": "d9af37d2fe214c1ccb53d22aade9a2fe2415f8f6e6762985136955f59ebfebf4",
+      "bytes": 6471,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "jpeg_quality_controller.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/jpeg/jpeg_quality_controller.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/jpeg/jpeg_quality_controller.v",
+      "sha256": "64849d67c4015fec871222030761bd9cb460bc5929bdb376acfadba937cf5c9b",
+      "bytes": 3077,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "record_format_bar.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/record_format_bar.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/record_format_bar.v",
+      "sha256": "d7538b95b7d5c85fd6200225d90b16819298ea794e7658d102ce1b223bea3daf",
+      "bytes": 8207,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "record_format_service.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/record_format_service.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/record_format_service.v",
+      "sha256": "f495339ce2f2cffd4ccf6d622c6c73482463e252647f3f0072ba089370d6cbe9",
+      "bytes": 7826,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "algo_lut_control_service.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/algo_lut_control_service.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/pcie/algo_lut_control_service.v",
+      "sha256": "03bd4c13a01c61e0cae3120495da5a1af44d67a563128b50382abe652178a532",
+      "bytes": 16711,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "frame_record_v3_join.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/frame/frame_record_v3_join.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/full_hdr_resource_20261014/rtl/frame/frame_record_v3_join.v",
+      "sha256": "883c2bd404ad720ef9e6f312d52bb8865b584af7a82631c662b62f35898bffe8",
+      "bytes": 4783,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "production_soft_reset_fence.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/production_soft_reset_fence.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/production_soft_reset_fence.v",
+      "sha256": "5c96012bff5482b53e034c487cad4a1572291f2e8b8b154163dd31d0d77c0e34",
+      "bytes": 3607,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "ordered_frame_cdc.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/ordered_frame_cdc.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/ordered_frame_cdc.v",
+      "sha256": "1ea6e855562c68f27cdb3052ab2708dcf2d76c9e5c7b508a3cbbdbbede169fc9",
+      "bytes": 9293,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "ordered_frame_fifo_fence.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/ordered_frame_fifo_fence.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/ordered_frame_fifo_fence.v",
+      "sha256": "d48955b8c0e3d9c87bf1389cef7c2dbef6c3354396dde5c7c4e0c1491f20a867",
+      "bytes": 4523,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "stage3_production_boot.v",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/stage3_production_boot.v",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/stage3_production_boot.v",
+      "sha256": "d12120f64d5e1f20489eb35970dd0e029b2016c8b9629be54c281090b49df1c7",
+      "bytes": 1116,
+      "registered": true,
+      "manifest_match": true
+    },
+    {
+      "id": "pcie_protocol_v1.vh",
+      "path": "src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/include/pcie_protocol_v1.vh",
+      "manifest_original_path": "src_fpga/stages/r8_stage3/pending/production_full_20261015/include/pcie_protocol_v1.vh",
+      "sha256": "2642f8d01fb40653658fca7567cac3c20308bc720c59345a16f25b4103e340cb",
+      "bytes": 40328,
+      "registered": false,
+      "manifest_match": true
+    }
+  ],
+  "selected_source_count": 42,
+  "binding_status": "ALL_SELECTED_MIRRORED_SOURCES_MATCH_MANIFEST",
+  "compiled_profile": {
+    "width": 1920,
+    "height": 1080,
+    "cameras": 1,
+    "source_select": 3,
+    "debug_uart_enable": 0,
+    "f24_mask_enable": 0,
+    "legacy_extension_supported": "0x3c",
+    "schema2_supported_modes": "0x7",
+    "schema2_supported_enables": "0x3f"
+  },
+  "claims": [
+    {
+      "id": "cfg_product_modes",
+      "classification": "runtime_guarded",
+      "evidence_source": "mono_config_scan_v2.v",
+      "statement": "Schema2 modes SDR, SDR_LZ, HDR are accepted; HDR_LZ conflict rejected. This is source connectivity, not mode-transition qualification."
+    },
+    {
+      "id": "cfg_independent_enables",
+      "classification": "runtime_guarded",
+      "evidence_source": "mono_config_transport_v2.vh",
+      "statement": "Six independent enable bits: gray/dehaze/filter/HE/multiscale/lane; lane requires multiscale; base mode must COLOR for schema2."
+    },
+    {
+      "id": "jpeg_policy",
+      "classification": "runtime",
+      "evidence_source": "jpeg_quality_controller.v",
+      "statement": "Quality1..100, min1..requested, adaptive boolean, budget0..16777216(nonzero for adaptive), restart0..65535. Feedback uses completed length, not FIFO fullness."
+    },
+    {
+      "id": "f20",
+      "classification": "connected_record_metadata",
+      "evidence_source": "preprocess_live_f21_service4.v",
+      "statement": "Pre-enhancement neutral grid observed through actual SOURCE owner; expose in selected record-v2/v3; not an arbitrary online threshold parameter."
+    },
+    {
+      "id": "f21",
+      "classification": "runtime_enable_fixed_algorithm",
+      "evidence_source": "legacy_stage2_config_transport.vh",
+      "statement": "Dehaze enabled independently in schema2; algorithm parameters fixed preset; generation-keyed LUT loader remains live and must obey lease/quiet guards."
+    },
+    {
+      "id": "f22_f23",
+      "classification": "runtime_enable_fixed_analysis",
+      "evidence_source": "stage3_filter_color_analysis4.v",
+      "statement": "Multiscale and lane taps share actual post-F21 filter; schema1 legacy paired preset, schema2 separate enable bits; numeric analysis profile fixed."
+    },
+    {
+      "id": "f24_f25",
+      "classification": "not_active_in_r3",
+      "evidence_source": "anlogic2026.v",
+      "statement": "R8_STAGE1 makes S07_PROCESSING_ENABLE false; MASK_ENABLE=0; LIVE lane branch ties F24/F25 valid and record to zero."
+    },
+    {
+      "id": "raw_lz",
+      "classification": "runtime_guarded",
+      "evidence_source": "full_raw_store.v",
+      "statement": "RAW host legacy window disabled in top; SDR_LZ uses completed captured RAW10 through16 LZ chunks; full reconstructed frame2592000 bytes. HDR and LZ ownership mutually exclusive."
+    },
+    {
+      "id": "hdr_lab",
+      "classification": "runtime_lab_only",
+      "evidence_source": "anlogic2026.v",
+      "statement": "ANLOGIC_SOURCE_SELECT=3: normal SDR takes physical camera path, HDR selects virtual LONG/SHORT producer; no physical HDR recipe/effective-frame qualification."
+    },
+    {
+      "id": "cfg_transition_drain",
+      "classification": "source_reviewed_not_board_qualified",
+      "evidence_source": "full_raw_capture_frontend.v",
+      "statement": "select_ready requires ordered produced/consumed fence, FIFO empty, writer quiet and all_policy_quiet; raw store withholds ACK until select and owner configuration actually complete."
+    },
+    {
+      "id": "old_epoch_host_tail",
+      "classification": "must_preserve",
+      "evidence_source": "product_record_cdc.v",
+      "statement": "Native SAFE/ACK can retire hardware before host reads kernel READY buffers. CFG APPLIED cannot retire/discard outstanding userspace old-epoch JPEG/LZ records."
+    },
+    {
+      "id": "soft_reset",
+      "classification": "rtl_connected_host_api_blocked",
+      "evidence_source": "production_soft_reset_fence.v",
+      "statement": "CONTROL bit1 requests DRAIN then EXECUTE then new-session/rearm wait; no timeout creates quiet. No direct pending/proven/complete CSR in app status; current driver forbids CONTROL writes."
+    },
+    {
+      "id": "diagnostic_shells",
+      "classification": "not_functional_tests",
+      "evidence_source": "anlogic2026.v",
+      "statement": "Production UART parser disabled; TEST_* outputs unconnected, H2C inputs tied zero, drop/overflow base status supplied zero. Do not advertise UART/test-trigger/H2C probes."
+    },
+    {
+      "id": "record_selection",
+      "classification": "cold_guarded",
+      "evidence_source": "record_format_service.v",
+      "statement": "JPEG record versions1/2/3 have64/192/448B headers, selection has session/request/ACK/DFI quiet guards; keep selection stable during product config transitions."
+    },
+    {
+      "id": "dma_recovery",
+      "classification": "quarantine_retained",
+      "evidence_source": "c2h_pcie_endpoint.v",
+      "statement": "Product ownership reset follows cold config boot, not APP reset/PERST/link. Link/BME loss after exposure stays quarantined; no autonomous hot recovery claim."
+    }
+  ],
+  "transitions": {
+    "path": "same-session CFG PREPARE/COMMIT with continuous receive; preserve prepared full tuple and actual APPLIED/source metadata",
+    "forbidden_shortcuts": [
+      "STOP then assume all FPGA workspaces empty",
+      "discard old-epoch assembly at CFG APPLIED",
+      "issue CONTROL soft reset through unsupported driver bypass",
+      "switch record format during a product-mode transition",
+      "infer physical HDR from SOURCE_SELECT=3 digital fixture"
+    ],
+    "completion_evidence": [
+      "request/session matched PREPARED",
+      "exact COMMIT and whole remote ACK",
+      "CFG APPLIED with expected epoch/full active tuple",
+      "new-record source identity while old completed buffers continue draining"
+    ],
+    "csr_limit": "No host-readable global raw/LZ/FIFO-drain marker; basic STATUS/STOPPED alone cannot certify full quiet",
+    "qualification": "STATIC_SOURCE_PATH_ONLY_NO_CROSS_MODE_BOARD_OR_SUSTAINED_FPS_CLAIM"
+  },
+  "existing_validation": {
+    "path": "src_fpga/stages/r8_stage3/pending/area95_20261016/validation_lz_r3/qualification.json",
+    "status": "PASS_BOUND_COMPLETE_R3_JPEG_LZ_MAIN",
+    "checks": 1149985,
+    "scope": "one synthetic physical CSI-word frame, one JPEG and16 LZ chunks; independent full pixels/F20/F22/JPEG/RAW recovery",
+    "does_not_cover": [
+      "all mode-transition scenarios",
+      "sustained SDR60 HDR30 LZ30",
+      "physical HDR recipe",
+      "P&R/final STA/bitgen/board"
+    ]
+  },
+  "host_access": {
+    "backend": "existing linux/dma_c2h_candidate single-owner UAPI",
+    "control_write_allowed": false,
+    "allowed_legacy_families": [
+      "CFG",
+      "ALGO",
+      "RECORD"
+    ],
+    "base_reads": [
+      "DEVICE_MAGIC",
+      "PROTOCOL_VERSION",
+      "CAPABILITIES",
+      "CONTROL",
+      "STATUS"
+    ],
+    "access_gaps": [
+      "most base counters and JPEG_RING CSR are not whitelisted",
+      "software reset is not a driver operation",
+      "legacy RAW host window disabled in compiled top"
+    ],
+    "no_devmem_or_secondary_owner_bypass": true
+  }
+}

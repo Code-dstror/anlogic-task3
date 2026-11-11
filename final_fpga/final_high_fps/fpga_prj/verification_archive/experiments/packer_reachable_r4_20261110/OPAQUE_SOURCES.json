@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "project_root": "refactor/camera_fusion_r1",
+  "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "dut": "jpeg_byte_packer",
+  "compile_mode": "Verilog",
+  "td_simulation_model_dependencies": [],
+  "legal_test_max_payload_bytes": [
+    17,
+    31
+  ],
+  "variants": {
+    "baseline": [
+      {
+        "path": "tmp/packer_reachable_r4_20261110/inputs/baseline/jpeg_byte_packer.v",
+        "sha256": "2a39a241c6ed1c722a4ccfaa96287789898ae6da54736614b7064e697a95446f"
+      }
+    ],
+    "candidate": [
+      {
+        "path": "tmp/packer_reachable_r4_20261110/inputs/candidate/jpeg_byte_packer.v",
+        "sha256": "8b27772b4455d2107a2fbdfeb0cac9a17ce853f003ca469e64f638094cb59354"
+      }
+    ]
+  }
+}

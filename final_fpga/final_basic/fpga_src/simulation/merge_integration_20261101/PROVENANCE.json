@@ -1,0 +1,151 @@
+{
+  "baseline_commit": "6f9c72762bd88abdc13e3a0ee31fd7dc97e4ccb7",
+  "source_kind": "LOCAL_SEALED_TREE_NOT_PUSHED",
+  "donor_qualification_inherited": false,
+  "files": [
+    {
+      "path": "c1_reference_frozen.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/c1_reference_frozen.py",
+      "donor_sha256": "3c1ba8ddd968f0f28209a6e1338e0d0888c59ac70574aa05f856d23c012ab8df",
+      "sha256": "3c1ba8ddd968f0f28209a6e1338e0d0888c59ac70574aa05f856d23c012ab8df"
+    },
+    {
+      "path": "PROTOCOL_REFERENCE.json",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/PROTOCOL_REFERENCE.json",
+      "donor_sha256": "3cc9369b266eebd75f64a673c99e4b06fb8ff54940a30eb0794cd65a166b166f",
+      "sha256": "3cc9369b266eebd75f64a673c99e4b06fb8ff54940a30eb0794cd65a166b166f"
+    },
+    {
+      "path": "sdr_he/run.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/run.py",
+      "donor_sha256": "08e33c97e87ed6e7fc1bd007d666c9b7dcd2a0712d12c993ef341c7789c19348",
+      "sha256": "3a3bf5d677f8f13870276de2375b0cbf1bb0d1261aeb46d6a20e05943b3166f9"
+    },
+    {
+      "path": "sdr_he/tb.sv",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/tb.sv",
+      "donor_sha256": "cfad0ac68cb740263bf8323b4614d24ff53581034bc739eb75dd95923145924c",
+      "sha256": "cfad0ac68cb740263bf8323b4614d24ff53581034bc739eb75dd95923145924c"
+    },
+    {
+      "path": "sdr_he/oracle.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/oracle.py",
+      "donor_sha256": "be488b34b1ee211bcf11a8a6662bd13c28e81d1276cc1123a7af9efd4d8d6a22",
+      "sha256": "efd33abf2d0a0988c9e337b56f8b4e9ac4ab262f2c9eb1e30b0aa9eef8bcea0d"
+    },
+    {
+      "path": "sdr_he/extended_uart_decode.vh",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/extended_uart_decode.vh",
+      "donor_sha256": "39b2855c9efa730105c7640ff5149ba5fd35c805ca8565457a9694928d70a446",
+      "sha256": "777e9bdd601388b93b3e1df121303c693de973a3008a131835d232ecbb6de0ab"
+    },
+    {
+      "path": "sdr_he/runtime_recovery/top_runtime.vh",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/runtime_recovery/top_runtime.vh",
+      "donor_sha256": "0dd71a903db01fc0ad080f29c161cd815b146723c07459feb773596a381a1fd9",
+      "sha256": "0dd71a903db01fc0ad080f29c161cd815b146723c07459feb773596a381a1fd9"
+    },
+    {
+      "path": "sdr_recover/oracle.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_recover/oracle.py",
+      "donor_sha256": "bd813085e8228818e893c999bf92bf41283c73ad8de0fe79c2b8c224d2d8e160",
+      "sha256": "1da866762395c5e32112b33bace8514ad0e0ea8205ea7b17d5f2f9b46578316e"
+    },
+    {
+      "path": "protocol_reference/linux/__init__.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/__init__.py",
+      "donor_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocol_reference/linux/stream_diag/__init__.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/stream_diag/__init__.py",
+      "donor_sha256": "6d47c60393a431e5b43be07dcc03dfb43ff268722dedddb8822d466da90f69d1",
+      "sha256": "6d47c60393a431e5b43be07dcc03dfb43ff268722dedddb8822d466da90f69d1"
+    },
+    {
+      "path": "protocol_reference/linux/stream_diag/records.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/stream_diag/records.py",
+      "donor_sha256": "2f964c49ef6cadb81be9e566462d502be1cef5388d485223132a0c813d5ec7c7",
+      "sha256": "2f964c49ef6cadb81be9e566462d502be1cef5388d485223132a0c813d5ec7c7"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/__init__.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/task3_pipeline/__init__.py",
+      "donor_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/pcie_protocol_v1.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/task3_pipeline/pcie_protocol_v1.py",
+      "donor_sha256": "4acdfa4b18adf8b27bf7f94e96e50e8dc450170473c3acbb9990194e9b56967e",
+      "sha256": "4acdfa4b18adf8b27bf7f94e96e50e8dc450170473c3acbb9990194e9b56967e"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_selection.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/task3_pipeline/record_selection.py",
+      "donor_sha256": "039fcc03c97bffd902c182e3f438354c0aac25b47a514e7afc23769c0eca9492",
+      "sha256": "039fcc03c97bffd902c182e3f438354c0aac25b47a514e7afc23769c0eca9492"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_v2.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/task3_pipeline/record_v2.py",
+      "donor_sha256": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f",
+      "sha256": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_v3.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/task3_pipeline/record_v3.py",
+      "donor_sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04",
+      "sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04"
+    },
+    {
+      "path": "protocol_reference/linux/task3_pipeline/record_v4.py",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/protocol_reference/linux/task3_pipeline/record_v4.py",
+      "donor_sha256": "bdc3736b1ae9a7a4b21c7fc7d4a3f6172807f9d9b71c8f38f06203a2dae058bb",
+      "sha256": "bdc3736b1ae9a7a4b21c7fc7d4a3f6172807f9d9b71c8f38f06203a2dae058bb"
+    },
+    {
+      "path": "hdr_startup/run.py",
+      "donor_path": "refactor/dual_lane_s1/src_fpga/simulation/extended_mono/hdr_startup/run.py",
+      "donor_sha256": "297402f99b4612a7c0ad69cb1874b3429935c2b191b21d5d6ed2b0619959843a",
+      "sha256": "336b63483eb755a7251429250c3b0db860f8251c3add3e75e4946f14533e280e"
+    },
+    {
+      "path": "hdr_startup/tb.sv",
+      "donor_path": "refactor/dual_lane_s1/src_fpga/simulation/extended_mono/hdr_startup/tb.sv",
+      "donor_sha256": "0b457e756b4b4ceb86b9ab2c45c0555d54ff109ba37cfc0d106af7d6bb4362fe",
+      "sha256": "1b7cd922bbd3d6dae6a8f81ad1967383fc43e7aebfd3df886acb4963e9081263"
+    },
+    {
+      "path": "hdr_startup/oracle.py",
+      "donor_path": "refactor/dual_lane_s1/src_fpga/simulation/extended_mono/hdr_startup/oracle.py",
+      "donor_sha256": "4bbbbe9fc8b9183a8ed66028c1a2e63f6966fc9ec074262d70713cca068a8604",
+      "sha256": "2afa04b81ca392605e0e51a5a5654a5020550a013e702fd1e25cd184cfc73fe8"
+    },
+    {
+      "path": "hdr_startup/extended_uart_decode.vh",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/extended_uart_decode.vh",
+      "donor_sha256": "39b2855c9efa730105c7640ff5149ba5fd35c805ca8565457a9694928d70a446",
+      "sha256": "777e9bdd601388b93b3e1df121303c693de973a3008a131835d232ecbb6de0ab"
+    },
+    {
+      "path": "hdr_startup/runtime_recovery/top_runtime.vh",
+      "donor_path": "refactor/dual_sdr_lane_r1/src_fpga/simulation/extended_sdr_20261101/sdr_he/runtime_recovery/top_runtime.vh",
+      "donor_sha256": "0dd71a903db01fc0ad080f29c161cd815b146723c07459feb773596a381a1fd9",
+      "sha256": "0dd71a903db01fc0ad080f29c161cd815b146723c07459feb773596a381a1fd9"
+    },
+    {
+      "path": "word_phy_extended.sv",
+      "donor_path": "refactor/dual_lane_s1/src_fpga/simulation/extended_mono/word_phy_extended.sv",
+      "donor_sha256": "a189102c07abd87a20f4727512a86ccaa50701da58ad23fef32ab00ad7d26407",
+      "sha256": "a189102c07abd87a20f4727512a86ccaa50701da58ad23fef32ab00ad7d26407"
+    }
+  ],
+  "adaptations": [
+    "Candidate-local source/test SHA pinning and input verification before/after each stage",
+    "First two legal cross-VC overlap groups both complete; eight good warmups precede first product SOURCE9",
+    "Updated passive OB/DJ/RX decoder, retaining zero RT frames",
+    "Candidate SDR wake delay accelerated only in the simulation fixture"
+  ]
+}

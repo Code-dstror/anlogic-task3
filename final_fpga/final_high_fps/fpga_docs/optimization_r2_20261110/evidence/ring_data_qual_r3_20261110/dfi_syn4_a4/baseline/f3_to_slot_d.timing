@@ -1,0 +1,409 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 22:15:30 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 91.21%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     DFI -> DFI
+Type           :     Self
+From Clock     :     DFI
+To Clock       :     DFI
+Min Period     :     6.476ns
+Fmax           :     154.416MHz
+
+Statistics:
+Max            : SWNS      0.513ns, STNS      0.000ns,         0 Viol Endpoints,         6 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.513ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/slot_state_reg[13].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.168ns (cell 1.118ns (35%), net 2.050ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT5=3  LUT2=2  LUT6=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_396.d
+LUT5                                    0.150    f     4.897       1  pin: u_ring/u_store/mux281_syn_396.o
+net (fo=5)                              0.271          5.168          net: u_ring/u_store/retire_fire,  ../../jpeg_frame_ring.v(523)
+                                                                      pin: u_ring/u_store/mux281_syn_489.b
+LUT6                                    0.141    r     5.309       2  pin: u_ring/u_store/mux281_syn_489.o
+net (fo=1)                              0.149          5.458          net: u_ring/u_store/mux281_syn_490,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_491.e
+LUT5                                    0.150    f     5.608       3  pin: u_ring/u_store/mux281_syn_491.o
+net (fo=7)                              0.296          5.904          net: u_ring/u_store/mux281_syn_492,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_493.b
+LUT2                                    0.150    f     6.054       4  pin: u_ring/u_store/mux281_syn_493.o
+net (fo=18)                             0.368          6.422          net: u_ring/u_store/mux281_syn_494,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[13]_syn_2.a
+LUT2                                    0.150    f     6.572       5  pin: u_ring/u_store/slot_state[0]_b[13]_syn_2.o
+net (fo=2)                              0.201          6.773          net: u_ring/u_store/slot_state[0]_b[13]_syn_3,  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[13]_syn_6.d
+LUT5                                    0.150    f     6.923       6  pin: u_ring/u_store/slot_state[0]_b[13]_syn_6.o
+net (fo=1)                              0.149          7.072          net: u_ring/u_store/slot_state[0]_b[13],  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state_reg[13].d
+SEQ (reg)                               0.076    f     7.148               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.148               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/slot_state_reg[13].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.513               
+
+Slack               : 0.513ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/slot_state_reg[16].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.168ns (cell 1.118ns (35%), net 2.050ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT5=3  LUT2=2  LUT6=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_396.d
+LUT5                                    0.150    f     4.897       1  pin: u_ring/u_store/mux281_syn_396.o
+net (fo=5)                              0.271          5.168          net: u_ring/u_store/retire_fire,  ../../jpeg_frame_ring.v(523)
+                                                                      pin: u_ring/u_store/mux281_syn_489.b
+LUT6                                    0.141    r     5.309       2  pin: u_ring/u_store/mux281_syn_489.o
+net (fo=1)                              0.149          5.458          net: u_ring/u_store/mux281_syn_490,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_491.e
+LUT5                                    0.150    f     5.608       3  pin: u_ring/u_store/mux281_syn_491.o
+net (fo=7)                              0.296          5.904          net: u_ring/u_store/mux281_syn_492,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_493.b
+LUT2                                    0.150    f     6.054       4  pin: u_ring/u_store/mux281_syn_493.o
+net (fo=18)                             0.368          6.422          net: u_ring/u_store/mux281_syn_494,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[16]_syn_2.a
+LUT2                                    0.150    f     6.572       5  pin: u_ring/u_store/slot_state[0]_b[16]_syn_2.o
+net (fo=2)                              0.201          6.773          net: u_ring/u_store/slot_state[0]_b[16]_syn_3,  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[16]_syn_6.d
+LUT5                                    0.150    f     6.923       6  pin: u_ring/u_store/slot_state[0]_b[16]_syn_6.o
+net (fo=1)                              0.149          7.072          net: u_ring/u_store/slot_state[0]_b[16],  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state_reg[16].d
+SEQ (reg)                               0.076    f     7.148               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.148               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/slot_state_reg[16].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.513               
+
+Slack               : 0.522ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/slot_state_reg[12].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.159ns (cell 1.109ns (35%), net 2.050ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT5=2  LUT2=2 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_396.d
+LUT5                                    0.150    f     4.897       1  pin: u_ring/u_store/mux281_syn_396.o
+net (fo=5)                              0.271          5.168          net: u_ring/u_store/retire_fire,  ../../jpeg_frame_ring.v(523)
+                                                                      pin: u_ring/u_store/mux281_syn_489.b
+LUT6                                    0.141    r     5.309       2  pin: u_ring/u_store/mux281_syn_489.o
+net (fo=1)                              0.149          5.458          net: u_ring/u_store/mux281_syn_490,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_491.e
+LUT5                                    0.150    f     5.608       3  pin: u_ring/u_store/mux281_syn_491.o
+net (fo=7)                              0.296          5.904          net: u_ring/u_store/mux281_syn_492,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_493.b
+LUT2                                    0.150    f     6.054       4  pin: u_ring/u_store/mux281_syn_493.o
+net (fo=18)                             0.368          6.422          net: u_ring/u_store/mux281_syn_494,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[13]_syn_2.a
+LUT2                                    0.150    f     6.572       5  pin: u_ring/u_store/slot_state[0]_b[13]_syn_2.o
+net (fo=2)                              0.201          6.773          net: u_ring/u_store/slot_state[0]_b[13]_syn_3,  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[12]_syn_3.e
+LUT6                                    0.141    r     6.914       6  pin: u_ring/u_store/slot_state[0]_b[12]_syn_3.o
+net (fo=1)                              0.149          7.063          net: u_ring/u_store/slot_state[0]_b[12],  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state_reg[12].d
+SEQ (reg)                               0.076    f     7.139               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.139               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/slot_state_reg[12].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.522               
+
+Slack               : 0.522ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/slot_state_reg[15].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.159ns (cell 1.109ns (35%), net 2.050ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT6=2  LUT5=2  LUT2=2 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_396.d
+LUT5                                    0.150    f     4.897       1  pin: u_ring/u_store/mux281_syn_396.o
+net (fo=5)                              0.271          5.168          net: u_ring/u_store/retire_fire,  ../../jpeg_frame_ring.v(523)
+                                                                      pin: u_ring/u_store/mux281_syn_489.b
+LUT6                                    0.141    r     5.309       2  pin: u_ring/u_store/mux281_syn_489.o
+net (fo=1)                              0.149          5.458          net: u_ring/u_store/mux281_syn_490,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_491.e
+LUT5                                    0.150    f     5.608       3  pin: u_ring/u_store/mux281_syn_491.o
+net (fo=7)                              0.296          5.904          net: u_ring/u_store/mux281_syn_492,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_493.b
+LUT2                                    0.150    f     6.054       4  pin: u_ring/u_store/mux281_syn_493.o
+net (fo=18)                             0.368          6.422          net: u_ring/u_store/mux281_syn_494,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[16]_syn_2.a
+LUT2                                    0.150    f     6.572       5  pin: u_ring/u_store/slot_state[0]_b[16]_syn_2.o
+net (fo=2)                              0.201          6.773          net: u_ring/u_store/slot_state[0]_b[16]_syn_3,  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[15]_syn_3.e
+LUT6                                    0.141    r     6.914       6  pin: u_ring/u_store/slot_state[0]_b[15]_syn_3.o
+net (fo=1)                              0.149          7.063          net: u_ring/u_store/slot_state[0]_b[15],  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state_reg[15].d
+SEQ (reg)                               0.076    f     7.139               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.139               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/slot_state_reg[15].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.522               
+
+Slack               : 0.565ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/slot_state_reg[7].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.116ns (cell 1.118ns (35%), net 1.998ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT5=3  LUT6=1  LUT4=1  LUT2=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_396.d
+LUT5                                    0.150    f     4.897       1  pin: u_ring/u_store/mux281_syn_396.o
+net (fo=5)                              0.271          5.168          net: u_ring/u_store/retire_fire,  ../../jpeg_frame_ring.v(523)
+                                                                      pin: u_ring/u_store/mux281_syn_489.b
+LUT6                                    0.141    r     5.309       2  pin: u_ring/u_store/mux281_syn_489.o
+net (fo=1)                              0.149          5.458          net: u_ring/u_store/mux281_syn_490,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_491.e
+LUT5                                    0.150    f     5.608       3  pin: u_ring/u_store/mux281_syn_491.o
+net (fo=7)                              0.296          5.904          net: u_ring/u_store/mux281_syn_492,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_493.b
+LUT2                                    0.150    f     6.054       4  pin: u_ring/u_store/mux281_syn_493.o
+net (fo=18)                             0.368          6.422          net: u_ring/u_store/mux281_syn_494,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[7]_syn_1.c
+LUT5                                    0.150    f     6.572       5  pin: u_ring/u_store/slot_state[0]_b[7]_syn_1.o
+net (fo=1)                              0.149          6.721          net: u_ring/u_store/slot_state[0]_b[7]_syn_2,  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[7]_syn_3.d
+LUT4                                    0.150    f     6.871       6  pin: u_ring/u_store/slot_state[0]_b[7]_syn_3.o
+net (fo=1)                              0.149          7.020          net: u_ring/u_store/slot_state[0]_b[7],  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state_reg[7].d
+SEQ (reg)                               0.076    f     7.096               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.096               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/slot_state_reg[7].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.565               
+
+Slack               : 0.565ns
+Begin Point         : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_store/slot_state_reg[9].d (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : setup
+Process             : slow
+Budget              : 3.751ns { DFI rising@7.731ns - DFI falling@3.980ns }
+Data Path Delay     : 3.116ns (cell 1.118ns (35%), net 1.998ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 6 ( LUT5=3  LUT6=1  LUT4=1  LUT2=1 )
+Max Fanout          : 980
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+launch edge                             3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.131          pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.q
+net (fo=980)                            0.616          4.747          net: u_ring/u_store/i_rst_n,  ../../jpeg_frame_ring.v(18)
+                                                                      pin: u_ring/u_store/mux281_syn_396.d
+LUT5                                    0.150    f     4.897       1  pin: u_ring/u_store/mux281_syn_396.o
+net (fo=5)                              0.271          5.168          net: u_ring/u_store/retire_fire,  ../../jpeg_frame_ring.v(523)
+                                                                      pin: u_ring/u_store/mux281_syn_489.b
+LUT6                                    0.141    r     5.309       2  pin: u_ring/u_store/mux281_syn_489.o
+net (fo=1)                              0.149          5.458          net: u_ring/u_store/mux281_syn_490,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_491.e
+LUT5                                    0.150    f     5.608       3  pin: u_ring/u_store/mux281_syn_491.o
+net (fo=7)                              0.296          5.904          net: u_ring/u_store/mux281_syn_492,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/mux281_syn_493.b
+LUT2                                    0.150    f     6.054       4  pin: u_ring/u_store/mux281_syn_493.o
+net (fo=18)                             0.368          6.422          net: u_ring/u_store/mux281_syn_494,  ../../jpeg_frame_ring.v(864)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[9]_syn_3.c
+LUT5                                    0.150    f     6.572       5  pin: u_ring/u_store/slot_state[0]_b[9]_syn_3.o
+net (fo=1)                              0.149          6.721          net: u_ring/u_store/slot_state[0]_b[9]_syn_4,  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state[0]_b[9]_syn_5.d
+LUT4                                    0.150    f     6.871       6  pin: u_ring/u_store/slot_state[0]_b[9]_syn_5.o
+net (fo=1)                              0.149          7.020          net: u_ring/u_store/slot_state[0]_b[9],  NOFILE(0)
+                                                                      pin: u_ring/u_store/slot_state_reg[9].d
+SEQ (reg)                               0.076    f     7.096               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.096               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_store/slot_state_reg[9].clk
+capture edge                            7.731    r     7.731               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.661               
+clock uncertainty                       0.000          7.661               
+clock pessimism                         0.000          7.661               
+--------------------------------------------------------------------  ---------------
+Required                                               7.661               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.565               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

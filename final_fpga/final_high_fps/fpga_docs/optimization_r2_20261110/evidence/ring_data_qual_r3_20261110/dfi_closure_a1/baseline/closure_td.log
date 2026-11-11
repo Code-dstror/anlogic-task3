@@ -1,0 +1,378 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/td_commands_prompt.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 22:13:42 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  7.884318s wall, 6.578125s user + 0.531250s system = 7.109375s CPU (90.2%)
+
+RUN-1004 : used memory is 1255 MB, reserved memory is 1284 MB, peak memory is 1288 MB
+RUN-1002 : start command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2"
+PRJ-1005 : Command create_project success.
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324" in  6.980924s wall, 5.218750s user + 0.515625s system = 5.734375s CPU (82.1%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1290 MB, peak memory is 1292 MB
+RUN-1002 : start command "open_project uhd_probe.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+WARNING: could not find top-level module/unit; aborting hierarchy tree creation (HIER-1013)
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-1401 : Successfully analyzed 0 source files.
+RUN-1003 : finish command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2" in  6.992437s wall, 5.218750s user + 0.515625s system = 5.734375s CPU (82.0%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1290 MB, peak memory is 1292 MB
+RUN-1002 : start command "add_files reset_release_sync.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files reset_release_sync_data.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_ring_cold_bank.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files td_sdp_ram.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_frame_ring.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_ring_reset_boundary.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ordered_frame_fifo_fence.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files axis_frame_fifo_ip.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ordered_frame_egress.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ddr_extension_staging_ram.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files lane_sparse_extension_checker.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files td_sdp_ram40.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files uhd_probe.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files clock.sdc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_include_dir include"
+RUN-1002 : start command "top_module uhd_probe"
+PRJ-1501 : Current top model is uhd_probe.
+RUN-1002 : start command "set_param -run syn_1 flow thread 4"
+PRJ-1105 : Update param syn_1 flow::thread::4 succeed.
+RUN-1002 : start command "launch_runs -step read_design syn_1"
+PRJ-1403 : syn_1 is launched.
+PRJ-1404 : Run log file is <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_closure_a1/baseline/uhd_probe_Runs/syn_1/run.log.
+RUN-1002 : start command "wait_run syn_1"
+PRJ-1405 : Waiting for run syn_1 to finish.
+PRJ-1411 : launch_runs syn_1 -step read_design.
+PRJ-1412 : reset_run phy_1.
+                                                            Waiting for run syn_1 to finish ......PRJ-1009 : If you need the best result of runs copied into "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_closure_a1/baseline/uhd_probe_Runs/best_result" , please execute "save_best_bits" in the Tcl console after all runs complete, or add "save_best_bits" in tcl script after "wait_run" command.
+
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/run.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 22:13:58 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "source_tcl ./settings.cfg"
+PRJ-1001 : Finish executing settings.cfg
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  4.606160s wall, 2.828125s user + 0.156250s system = 2.984375s CPU (64.8%)
+
+RUN-1004 : used memory is 1084 MB, reserved memory is 1085 MB, peak memory is 1084 MB
+RUN-1002 : start command "open_project uhd_probe.prj"
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v
+HDL-1007 : analyze verilog file ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : back to file '../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v' in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(1)
+HDL-1007 : analyze verilog file ../../ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v
+HDL-1007 : analyze verilog file ../../ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v
+HDL-1007 : analyze verilog file ../../reset_release_sync.v
+HDL-1007 : analyze verilog file ../../reset_release_sync_data.v
+HDL-1007 : analyze verilog file ../../jpeg_ring_cold_bank.v
+HDL-1007 : analyze verilog file ../../td_sdp_ram.v
+HDL-1007 : analyze verilog file ../../jpeg_frame_ring.v
+HDL-1007 : analyze verilog file ../../jpeg_ring_reset_boundary.v
+HDL-1007 : analyze verilog file ../../ordered_frame_fifo_fence.v
+HDL-1007 : analyze verilog file ../../axis_frame_fifo_ip.v
+HDL-1007 : analyze verilog file ../../ordered_frame_egress.v
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_closure_a1/baseline/include/pcie_protocol_v1.vh in ../../ordered_frame_egress.v(2)
+HDL-1007 : back to file '../../ordered_frame_egress.v' in ../../ordered_frame_egress.v(2)
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_closure_a1/baseline/include/pcie_record_v3_validate.vh in ../../ordered_frame_egress.v(79)
+HDL-1007 : back to file '../../ordered_frame_egress.v' in ../../ordered_frame_egress.v(79)
+HDL-1007 : analyze verilog file ../../ddr_extension_staging_ram.v
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_closure_a1/baseline/include/pcie_protocol_v1.vh in ../../ddr_extension_staging_ram.v(2)
+HDL-1007 : back to file '../../ddr_extension_staging_ram.v' in ../../ddr_extension_staging_ram.v(2)
+HDL-1007 : analyze verilog file ../../lane_sparse_extension_checker.v
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_closure_a1/baseline/include/pcie_protocol_v1.vh in ../../lane_sparse_extension_checker.v(2)
+HDL-1007 : back to file '../../lane_sparse_extension_checker.v' in ../../lane_sparse_extension_checker.v(2)
+HDL-1007 : analyze verilog file ../../td_sdp_ram40.v
+HDL-1007 : analyze verilog file ../../uhd_probe.v
+PRJ-1401 : Successfully analyzed 17 source files.
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top uhd_probe -params "
+HDL-1007 : port 'o_drop_pulse' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_read_done_pulse' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_error_code' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_state' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_wr_burst_count' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rd_burst_count' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_berr_count' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rerr_count' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_drop_count' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_last_error_addr' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_axi_awid' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_axi_awsize' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_axi_awburst' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_axi_arid' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_axi_arsize' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_axi_arburst' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_slot' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_session' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_epoch' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_capture_id' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_camera' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_quality' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_width' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_height' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_payload_length' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_pinned' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_state' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_allocation_valid' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_allocation_slot' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_allocation_generation' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_allocation_base' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_allocation_bytes' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_result_ready' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_mask_read_lease_active' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_read_authorized' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_mask_present' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_mask_pinned' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : port 'o_rsp_mask_tail_base' remains unconnected for this instance in ../../uhd_probe.v(95)
+HDL-1007 : elaborate module uhd_probe in ../../uhd_probe.v(1)
+HDL-1007 : elaborate module reset_release_sync in ../../reset_release_sync.v(4)
+HDL-1007 : elaborate module ordered_frame_fifo_fence in ../../ordered_frame_fifo_fence.v(6)
+HDL-1007 : elaborate module axis_frame_fifo_ip in ../../axis_frame_fifo_ip.v(4)
+HDL-1007 : extracting RAM for identifier 'read_buffer' in ../../axis_frame_fifo_ip.v(52)
+HDL-1007 : elaborate module camera_packet_fifo_147x512 in ../../ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v(11)
+HDL-1007 : elaborate module camera_packet_fifo_147x512_soft_fifo(DATA_WIDTH_W=147,ADDR_WIDTH_W=9,DATA_WIDTH_R=147,ADDR_WIDTH_R=9,DOUT_INITVAL=147'b0,AL_FULL_NUM=504,AL_EMPTY_NUM=2,RDUSEDW_WIDTH=10,WRUSEDW_WIDTH=10,ASYNC_RST_SYNC_RELS=0) in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v(2)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(2)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(682)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(867)
+HDL-1007 : extracting RAM for identifier '**' in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(971)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(415)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(1650)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(1558)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(1356)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(1282)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(2464)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(2256)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(2768)
+HDL-1007 : elaborate module ** in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(2397)
+HDL-1007 : elaborate module ordered_frame_egress(CONTEXT_ENABLE=1,WRITE_TAG_ENABLE=1,RECORD_EXTENSION_ENABLE=1,RECORD_EXTENSION_WIDTH=16384,EXTENSION_RAM_ENABLE=1) in ../../ordered_frame_egress.v(5)
+HDL-1007 : elaborate module ddr_extension_staging_ram(RECORD_EXTENSION_WIDTH=16384,FIRST_FLIT_PRECHECKED=1) in ../../ddr_extension_staging_ram.v(5)
+HDL-1007 : elaborate module lane_sparse_extension_checker in ../../lane_sparse_extension_checker.v(6)
+HDL-1007 : elaborate module td_sdp_ram40 in ../../td_sdp_ram40.v(4)
+HDL-1007 : elaborate module ram40_sdp_fixed in ../../ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v(14)
+HDL-1007 : elaborate module PH1_LOGIC_ERAM(DATA_WIDTH_A=40,DATA_WIDTH_B=40,ADDR_WIDTH_A=9,ADDR_WIDTH_B=9,DATA_DEPTH_A=512,DATA_DEPTH_B=512,MODE="PDPW",SSROVERCE="DISABLE",CLKMODE="SYNC") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(22)
+HDL-1007 : elaborate module jpeg_ring_reset_boundary(WRITE_RESULT_ENABLE=1,WRITE_TAG_ENABLE=1) in ../../jpeg_ring_reset_boundary.v(2)
+HDL-1007 : elaborate module reset_release_sync(FALLING_RELEASE=1) in ../../reset_release_sync.v(4)
+HDL-1007 : elaborate module jpeg_frame_ring(WRITE_RESULT_ENABLE=1,WRITE_TAG_ENABLE=1) in ../../jpeg_frame_ring.v(3)
+HDL-1007 : extracting RAM for identifier 'staging_words' in ../../jpeg_frame_ring.v(546)
+HDL-1007 : elaborate module PH1_LOGIC_DRAM(DATA_WIDTH_W=64,DATA_WIDTH_R=64,ADDR_WIDTH_W=4,ADDR_WIDTH_R=4,DATA_DEPTH_W=16,DATA_DEPTH_R=16) in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(217)
+HDL-1007 : elaborate module PH1_LOGIC_DRAM(DATA_WIDTH_W=32,DATA_WIDTH_R=32,ADDR_WIDTH_W=4,ADDR_WIDTH_R=4,DATA_DEPTH_W=16,DATA_DEPTH_R=16) in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(217)
+HDL-1007 : elaborate module jpeg_ring_cold_bank(FORWARD_LIVE_WRITER=1) in ../../jpeg_ring_cold_bank.v(6)
+HDL-1007 : elaborate module td_sdp_ram(WIDTH=16,DEPTH=16,ADDR_WIDTH=4,DISTRIBUTED_ENABLE=1) in ../../td_sdp_ram.v(4)
+HDL-1007 : elaborate module PH1_LOGIC_DRAM(DATA_WIDTH_W=16,DATA_WIDTH_R=16,ADDR_WIDTH_W=4,ADDR_WIDTH_R=4,DATA_DEPTH_W=16,DATA_DEPTH_R=16,READREG="ENABLE") in <TOOLS_ROOT>/TD_Release_2026.2.210.850/arch/ph1_macro.v(217)
+HDL-1200 : Current top model is uhd_probe
+HDL-1100 : Inferred 3 RAMs.
+RUN-1003 : finish command "elaborate -top uhd_probe -params " in  1.035847s wall, 0.937500s user + 0.078125s system = 1.015625s CPU (98.0%)
+
+RUN-1004 : used memory is 1424 MB, reserved memory is 1415 MB, peak memory is 1424 MB
+RUN-1002 : start command "read_sdc -ip camera_packet_fifo_147x512 ../../ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.tcl"
+RUN-1002 : start command "export_db uhd_probe_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e read_design"
+RUN-1002 : start command "flow_profiling"
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   import_device  |    1     |  4s(100%)   |    2(100%)    |       1084        |       1084        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |       1424        |       1424        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    2     |     4s      |       2       |       1424        |       1424        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+PRJ-1406 : Run syn_1 finished.
+RUN-1003 : finish command "wait_run syn_1" in  8.066467s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+RUN-1004 : used memory is 1260 MB, reserved memory is 1290 MB, peak memory is 1292 MB
+RUN-1002 : start command "close_project"
+RUN-1002 : start command "open_project uhd_probe.al -noanalyze"
+RUN-1002 : start command "close_project"
+DFI_IP_CLOSURE_REOPENED

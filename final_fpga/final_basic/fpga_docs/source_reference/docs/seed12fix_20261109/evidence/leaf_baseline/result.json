@@ -1,0 +1,12 @@
+{
+  "verdict": "HDL_FAIL",
+  "exit_codes": {
+    "version": 0,
+    "vlib": 0,
+    "vlog": 0,
+    "sim": 0
+  },
+  "stage": "sim",
+  "marker": "LEAF_GATE_FAIL scenario=cold_short_group_zero time_ns=705 SHORT token not accepted within 64 edges: type=7 group=0 id=1 cycle=1",
+  "wall_seconds": 2.438
+}

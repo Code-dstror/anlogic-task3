@@ -1,0 +1,23 @@
+module seed12_hdr_reader_carrier #(
+    parameter integer WIDTH=68, HEIGHT=63
+) (
+    input wire i_clk,i_identity_rst_n,
+    input wire i_start_valid,i_pair_bank,i_pair_camera,output wire o_start_ready,
+    input wire [2:0] i_ratio_log2,
+    input wire [9:0] i_black_long,i_black_short,
+    input wire [13:0] i_motion_base,input wire [3:0] i_motion_shift,
+    input wire i_cancel,
+    output wire [55:0] m_raw,output wire [3:0] m_motion,
+    output wire m_valid,m_sof,m_eol,m_eof,output wire [31:0] m_index,
+    input wire m_ready,
+    output wire o_result_valid,o_result_ok,input wire i_result_ready,
+    output wire o_read_quiet,o_protocol_fault,
+    output wire [9:0] o_long_occupancy,o_short_occupancy,
+    output wire [3:0] m_axi_arid,output wire [27:0] m_axi_araddr,
+    output wire [7:0] m_axi_arlen,output wire [2:0] m_axi_arsize,
+    output wire [1:0] m_axi_arburst,output wire m_axi_arvalid,
+    input wire m_axi_arready,
+    input wire [3:0] m_axi_rid,input wire [127:0] m_axi_rdata,
+    input wire [1:0] m_axi_rresp,input wire m_axi_rlast,m_axi_rvalid,
+    output wire m_axi_rready
+);

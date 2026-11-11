@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "compile": "PASS",
+  "cases": {
+    "normal": {
+      "hdl": "PASS",
+      "numerical": "PASS",
+      "rom_unchanged": true,
+      "pillow_version": "12.2.0"
+    },
+    "stopped": {
+      "hdl": "PASS",
+      "numerical": "PASS",
+      "rom_unchanged": true,
+      "pillow_version": "12.2.0"
+    },
+    "deadline": {
+      "hdl": "PASS",
+      "numerical": "PASS",
+      "rom_unchanged": true,
+      "pillow_version": "12.2.0"
+    },
+    "timeout": {
+      "hdl": "PASS",
+      "numerical": "PASS",
+      "fault_and_drain": {
+        "hdl": "PASS",
+        "rom_unchanged": true
+      },
+      "recovery_scope": "fresh simulator process modeling full configuration/power-on",
+      "rom_unchanged": true,
+      "pillow_version": "12.2.0"
+    }
+  },
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "python_exe": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "td_root": "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+  "td_model_release": "2026.2.210.850",
+  "wall_seconds": 180,
+  "case_wall_seconds": 60,
+  "case_pixel_cycles": 200000,
+  "inputs_unchanged": true,
+  "elapsed_seconds": 35.5
+}

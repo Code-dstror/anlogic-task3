@@ -1,0 +1,21 @@
+{
+  "schema": 2,
+  "base": {
+    "mode": 0,
+    "quality": 75
+  },
+  "extension": {
+    "product_mode": 2,
+    "processing_enables": 0,
+    "hdr_ratio": 4,
+    "hdr_black_long": 50,
+    "hdr_black_short": 50,
+    "hdr_motion_base": 64,
+    "hdr_motion_shift": 3,
+    "hdr_qualification": 15,
+    "hdr_max_delta_ns": 50000000,
+    "hdr_max_wait_ns": 100000000,
+    "hdr_max_age_ns": 1000000000,
+    "dehaze_lut_generation": 0
+  }
+}

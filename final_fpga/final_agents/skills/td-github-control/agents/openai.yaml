@@ -1,0 +1,4 @@
+interface:
+  display_name: "TD GitHub 服务器控制"
+  short_description: "各对话共用server3入口，远程编译、接续并取回完整日志和比特流"
+  default_prompt: "使用 $td-github-control 通过本项目共享入口查看server3状态，并按我的要求提交或接续工程、取回日志、警告、报告和比特流。"

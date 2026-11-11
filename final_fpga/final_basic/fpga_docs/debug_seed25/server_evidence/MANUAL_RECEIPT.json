@@ -1,0 +1,109 @@
+{
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "job": "manual-camera-r2-hdr-rate-20261110-syn16-48s4t-8e64f48baa674f98-s25",
+  "seed": 25,
+  "archive": "camera_raw_r2_1a5603c1_seed25_manual_reports_20261110_185017.tar.gz",
+  "archive_sha256": "0a8681e342b691c55c7be5ec3abaf62ea020ee605c609977e80feb808d1ce19c",
+  "sidecar_sha256": "b34c6000c092bbd9ddb252b050ee3d82e6552653f7394adf405f2ca47c6063ac",
+  "members": [
+    {
+      "member": "phy_1/rfcamera_raw_r2.bit",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2.bit",
+      "bytes": 4850315,
+      "sha256": "eee7eff50323a8a5c7ddc850d3873e1dda13473debbfe8a690bcb6bab17ac362",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "phy_1/final_timing.rpt",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/final_timing.rpt",
+      "bytes": 9625999,
+      "sha256": "07ca2991aa6b94e4365dc3dc62bbe95b8d4fc9dc20e3261148ff55b52b6c2e6d",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "phy_1/simple.timing",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/simple.timing",
+      "bytes": 9625999,
+      "sha256": "24d0a8466cae268f01498273316f6736d651caf4726a878aeefe8e3bd0616275",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "phy_1/rfcamera_raw_r2_pr.timing",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_pr.timing",
+      "bytes": 9625999,
+      "sha256": "483c9c530173e24edfff1639e975e1eb4d76c1dd7aa5d6d88a7cb8b7359e16f6",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "phy_1/rfcamera_raw_r2_exception.timing",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_exception.timing",
+      "bytes": 5711390,
+      "sha256": "ed5bd751d6e1cff5a3527bbd12d60fff56ab9391699c98c786e732de2d96d384",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "phy_1/controller-reports/timing_detail.rpt",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/timing_detail.rpt",
+      "bytes": 43629313,
+      "sha256": "0e74ce041555ff181583cf59a515fa4d9d2e7afea2f896541ee27afbc937a361",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": true
+    },
+    {
+      "member": "phy_1/controller-reports/timing_exception.rpt",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/timing_exception.rpt",
+      "bytes": 12641498,
+      "sha256": "1e4beb46bb7987d1591331ce386f1d5686590d363e1d5ed3bc4d65a61b45dc0c",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": true
+    },
+    {
+      "member": "phy_1/controller-reports/clock_tree.txt",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/clock_tree.txt",
+      "bytes": 17406743,
+      "sha256": "6873edf064cbe5fe87e5df3f58611cc37dd09e99641be78bfdac77ed5976f48f",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": true
+    },
+    {
+      "member": "syn_1/run.logw",
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/run.logw",
+      "bytes": 17825115,
+      "sha256": "491859156c53db94ce8f7784b8209aba4addb160dcf5a807b92994667b06d34f",
+      "matched_published_sha": false,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "spec.json",
+      "path": "spec.json",
+      "bytes": 1286,
+      "sha256": "3e3dc86161dd7fbea413b676c35c41db40798a9fee3099121725112fe550ee12",
+      "matched_published_sha": true,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "result.json",
+      "path": "result.json",
+      "bytes": 2321,
+      "sha256": "46d6ae3837815eb0b16cdc0b73a4a532ede6c9b34a6e1024550a9ecc2c0aac6f",
+      "matched_published_sha": true,
+      "matched_report_manifest_sha": false
+    },
+    {
+      "member": "reports.json",
+      "path": "reports.json",
+      "bytes": 7467,
+      "sha256": "8296d958253328f188990f5c85a464c42010877db910bb52abff00d631df4f6f",
+      "matched_published_sha": true,
+      "matched_report_manifest_sha": false
+    }
+  ],
+  "original_github_index": "ARTIFACT_INDEX.json",
+  "manual_transfer": "User copied directly from server job; archive SHA and report-manifest SHA checked. Original GitHub pending flags preserved.",
+  "verified_files": 149
+}

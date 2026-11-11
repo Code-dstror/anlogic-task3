@@ -1,0 +1,130 @@
+{
+  "scope": "STEREO_STARTUP_FIX_CANDIDATE_LOCAL",
+  "status": "PASS_FOCUSED_STEREO_STARTUP",
+  "fixed_baseline_commit": "e081883222a7cd342d6d1ffcc5836a443334fe11",
+  "leaf": {
+    "status": "PASS",
+    "elapsed_seconds": 10.359,
+    "warning_count": 0,
+    "input_hash_recheck": "PASS",
+    "metrics": [
+      "RESULT: PASS PHY_FS_RACE checks=11 good=1",
+      "RESULT: PASS SOURCE_QUIET candidate=1 checks=153 good=3 bad=1",
+      "RESULT: PASS STEREO_SOURCE checks=1289 good=5/3 bad=5/0 captures=58/24",
+      "RESULT: PASS SOF_PHASE combo=1 total=231 ok=231 user_busy=0 dfi_busy=0 ack_busy=0 checks=27122"
+    ],
+    "qualification_path": "refactor/dual_hdr_stereo_fix_r1/tmp/stereo_startup_fix_r1/leaf_r2/qualification.json",
+    "qualification_sha256": "5f30092d9da79de4b905a2a161d0f2bb86c4945d3dc07db03a26e584897ea017"
+  },
+  "rtl": {
+    "path": "refactor/dual_hdr_stereo_fix_r1/src_fpga/rtl/stereo_capture_source4.v",
+    "sha256": "cbbe4f15f0cde9a1412439e4d697ace13b04aefc5ccf8bce0b0c5d01b4a4c80b"
+  },
+  "synthesis": "NOT_RUN",
+  "place_route": "NOT_RUN",
+  "timing": "NOT_RUN",
+  "board": "NOT_RUN",
+  "jpeg_host": "NOT_RUN",
+  "control": {
+    "status": "PASS_COLD_SELECT_APP_BUSY",
+    "elapsed_seconds": 76.125,
+    "owned_warning_count": 0,
+    "vendor_warning_count": 296,
+    "input_hash_recheck": "PASS",
+    "metrics": [
+      "# RESULT: PASS ROUND2_COMBO_COLD_AND_APP_BUSY checks=12 app_active_error=2"
+    ],
+    "evidence": [
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/control_r1/qualification.json",
+        "sha256": "5c7f579917dd5ac5360ece7b57ef42b492943d337dd56786bac620f8520ef2d7"
+      },
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/control_r1/source_identity.json",
+        "sha256": "39dc551c18963670fdbc636cf3389b341f04f7348b095c839096b307fe9893a9"
+      },
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/control_r1/run.log",
+        "sha256": "1fbd6ef8a9dc3fdba0493bd8f57ba1bbbd6bf98835bc572af157b6d0f6068b0d"
+      }
+    ]
+  },
+  "start": {
+    "status": "PASS_START_BOTH_RAW_SOURCES",
+    "elapsed_seconds": 306.734,
+    "owned_warning_count": 0,
+    "vendor_warning_count": 296,
+    "input_hash_recheck": "PASS",
+    "metrics": [
+      "# ROUND2_NARROW_CLEAN_SELECT PASS time=2692800000000",
+      "# ROUND2_OWNER_BUSY PASS error=2 time=2695160000000",
+      "# ROUND2_RAW_SOURCE camera=0 session=1 sequence=1 time=14519340000000",
+      "# ROUND2_RAW_COMMIT camera=0 aw=20249 b=20249 time=14519524000000",
+      "# ROUND2_RAW_SOURCE camera=1 session=1 sequence=1 time=14519668000000",
+      "# ROUND2_RAW_COMMIT camera=1 aw=20250 b=20250 time=14519846000000",
+      "# RESULT: PASS ROUND2_CLEAN_START_BOTH_RAW_SOURCES checks=1803451 raw_sources=11 raw_finishes=11 aw=20250 b=20250 processing_starts=0 owner_busy_tested=1"
+    ],
+    "evidence": [
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/start_r1/qualification.json",
+        "sha256": "06676227b18386764f59c7e181a72e4e167cec75ca0692c762c01e8f3a739496"
+      },
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/start_r1/source_identity.json",
+        "sha256": "6cb94ec8c1fdd821161dba5ec3eb84f91f275f0d21ab49e5824cce2b4c886722"
+      },
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/start_r1/run.log",
+        "sha256": "bca8473d10e69af9772fe4985134a6b4631b9da53f6c56142e1e85e8d741633f"
+      }
+    ],
+    "source_scope": "TOP idle and SDR wait integrated; prior to later HDR-only per-packet adapter; SDR RAW path unaffected by adapter"
+  },
+  "final_control": {
+    "status": "PASS_COLD_SELECT_APP_BUSY",
+    "elapsed_seconds": 44.047,
+    "owned_warning_count": 0,
+    "vendor_warning_count": 296,
+    "input_hash_recheck": "PASS",
+    "metrics": [
+      "# RESULT: PASS ROUND2_COMBO_COLD_AND_APP_BUSY checks=12 app_active_error=2"
+    ],
+    "evidence": [
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/control_r2/qualification.json",
+        "sha256": "c90d548d676e9d25ff3dc8917358d1a5d50c6224c37d4f83e61a1b9e2f6a0248"
+      },
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/control_r2/source_identity.json",
+        "sha256": "5ad7026b727fe92156f2533bfdce7c52af1d2fc6f89a7f9f6a3f9733b5d7fffb"
+      },
+      {
+        "path": "refactor/dual_hdr_stereo_fix_r1/docs/validation/stereo_startup_r1/control_r2/run.log",
+        "sha256": "15e63ec7bb397c29d2cbb99c6220cf1e07ed4d7738dbd66874ce2430adea8178"
+      }
+    ],
+    "production_rtl_delta_from_start_r1": [
+      {
+        "path": "C:/fpga_workspace/anlogic-task3/refactor/dual_hdr_stereo_fix_r1/src_fpga/rtl/real_hdr_csi_capture_stream.v",
+        "start_r1_sha256": "a213267e9b683c1523d25754e57cb26e4d1e1c06d1d0b430309369fda24e28f2",
+        "final_control_r2_sha256": "afbd679132f9061415a8a73731e4a85d62808f3a10a360a2e4a2993cc29c80c3"
+      },
+      {
+        "path": "C:/fpga_workspace/anlogic-task3/refactor/dual_hdr_stereo_fix_r1/src_fpga/rtl/real_hdr_csi_dual_word_rx.v",
+        "start_r1_sha256": "43d38cdafec769191716790a325b37f771cd994f431fb2b4b9333081ea973f09",
+        "final_control_r2_sha256": "4694177712a0ead31585204fd40fbec16ce36fe88d7093470bea8ab066cd2e00"
+      },
+      {
+        "path": "C:/fpga_workspace/anlogic-task3/refactor/dual_hdr_stereo_fix_r1/src_fpga/rtl/real_hdr_csi_word_core.v",
+        "start_r1_sha256": "8a48d2a7622fc4a6ebd3cca08ae184ea83584543485582a6113902276abd5a78",
+        "final_control_r2_sha256": "d652b2288d7f3906699fbc9cae9e879e87412e777797d26722129ec891b2a3fc"
+      },
+      {
+        "path": "C:/fpga_workspace/anlogic-task3/refactor/dual_hdr_stereo_fix_r1/src_fpga/rtl/real_hdr_physical_csi_rx.v",
+        "start_r1_sha256": "2139a375b38243978fcaeec615fbf756e458c1d4f60abf4042ba8a0d878c902a",
+        "final_control_r2_sha256": "34f74e6771094046b588fb3517119216e079e66d10463212edb72a2b7fff0780"
+      }
+    ]
+  },
+  "server": "NOT_RUN/USER_HOLD"
+}

@@ -1,0 +1,48 @@
+--- a/ph1a_c2h.c
++++ b/ph1a_c2h.c
+@@ -417,6 +417,18 @@
+ 				ret = -EPERM;
+ 				goto out;
+ 			}
++			if (op->write && op->offset == 0xfa8U) {
++				if (op->value != 0U && op->value != 1U) {
++					ret = -EPERM;
++					goto out;
++				}
++				if ((reg_read(d, C2H_LEGACY_BASE + C2H_LEGACY_CONTROL) & C2H_LEGACY_APP_ENABLE) ||
++				    (reg_read(d, C2H_LEGACY_BASE + 0x1cU) & 0x9cU) ||
++				    (reg_read(d, C2H_LEGACY_BASE + 0xf94U) & (1U << 2))) {
++					ret = -EBUSY;
++					goto out;
++				}
++			}
+ 			if (op->write && c2h_legacy_record_write(op->offset) &&
+ 			    (d->running || d->active >= 0)) {
+ 				ret = -EBUSY;
+--- a/c2h_legacy_policy.h
++++ b/c2h_legacy_policy.h
+@@ -9,6 +9,8 @@
+ static inline bool c2h_legacy_readable(u32 offset)
+ {
+ 	switch (offset) {
++	case 0xfa8U:
++	case 0xfacU:
+ 	case 0xf8cU:
+ 	case 0xfa0U:
+ 	case 0xf80U:
+@@ -167,6 +169,7 @@
+ static inline bool c2h_legacy_writable(u32 offset)
+ {
+ 	switch (offset) {
++	case 0xfa8U:
+ 	case 0xf8cU:
+ 	case 0xf90U:
+ 	case 0xfa0U:
+@@ -231,6 +234,7 @@
+ static inline bool c2h_legacy_record_write(u32 offset)
+ {
+ 	switch (offset) {
++	case 0xfa8U:
+ 	case 0xf8cU:
+ 	case 0xf90U:
+ 	case 0xfa0U:

@@ -1,0 +1,233 @@
+{
+  "run_dir": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01",
+  "process_timeout_seconds": 55,
+  "suite_timeout_seconds": 158,
+  "inputs": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_raw_source_r2\\run.py": "592240e561447a26f57e9b03355e2ac136b39c7950d7ba7297a4b53028729471",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_raw_source_r2\\tb_raw_source.sv": "d037000fd0fef6c93270d6762a28bcf02fa367ceb9838e952870cb4138b4e0de",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\reset_data_qual_r2_20261110\\PUBLIC_CONTRACT.md": "6320b4509e8abc9ebfb9c172326d18540c170e09b0c7c389db3d0dac2bd722ce",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\reset_data_qual_r2_20261110\\PORTS.vh": "9d04eab1f4eb9f9bbc158f078fb18b8985c757413813de18fc032ccd974600d5",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\reset_data_qual_r2_20261110\\OPAQUE_SOURCES.json": "b865762d844172cf53612e1b1307a541462ba46e666d555e12ab02c1bb866e73"
+  },
+  "opaque_sources": {
+    "schema": 1,
+    "project_root": "refactor/camera_fusion_r1",
+    "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+    "top": "private_raw_isp_borrow4",
+    "compile_mode": "Verilog",
+    "td_simulation_model_dependencies": [],
+    "legal_profile": {
+      "EXTERNAL_ISP_ENABLE": 1,
+      "ORIGINAL_SYNC_CLEAR_ENABLE": 1,
+      "RAW_SAMPLE_BITS": 14,
+      "BASE_WIDTH": 16,
+      "BASE_HEIGHT": 4,
+      "MAX_WIDTH": 32,
+      "MAX_HEIGHT": 8
+    },
+    "variants": {
+      "baseline": [
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/reset_release_sync.v",
+          "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/reset_release_sync_data.v",
+          "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/hdr_pair_product_abort_drain4.v",
+          "sha256": "1a93737302dd57ba29f7080feab0e20ed5bafb008c97cee1eacae96a6fa555e3"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/camera_rgb_native_fixed1080_borrow4.v",
+          "sha256": "ba2be526cf8c44b65f02a0e6fc38b46fc7ad38daa33679e0de1d6ae7e331fca6"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/baseline/private_raw_isp_borrow4.v",
+          "sha256": "782e4b6bd3f9845c61a1fe26308f763b50c68b6a461ff09401f5299c733fcf8b"
+        }
+      ],
+      "candidate": [
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/reset_release_sync.v",
+          "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/reset_release_sync_data.v",
+          "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/hdr_pair_product_abort_drain4.v",
+          "sha256": "1a93737302dd57ba29f7080feab0e20ed5bafb008c97cee1eacae96a6fa555e3"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/common/camera_rgb_native_fixed1080_borrow4.v",
+          "sha256": "ba2be526cf8c44b65f02a0e6fc38b46fc7ad38daa33679e0de1d6ae7e331fca6"
+        },
+        {
+          "path": "tmp/reset_data_qual_r2_20261110/inputs/candidate/private_raw_isp_borrow4.v",
+          "sha256": "7a1ef673db77bc3f5b961f717e208c9180aa742d0a6dd51c851ab8cf875228ba"
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-version"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\version.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.109
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline\\vlib.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\reset_release_sync.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\reset_release_sync_data.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\hdr_pair_product_abort_drain4.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\camera_rgb_native_fixed1080_borrow4.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\baseline\\private_raw_isp_borrow4.v"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline\\vlog_opaque.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.094
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-sv",
+        "-work",
+        "work",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_raw_source_r2\\tb_raw_source.sv"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline\\vlog_bench.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.094
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-lib",
+        "work",
+        "-onfinish",
+        "stop",
+        "-gEXTERNAL_ISP_ENABLE=1",
+        "-gORIGINAL_SYNC_CLEAR_ENABLE=1",
+        "-gRAW_SAMPLE_BITS=14",
+        "-gBASE_WIDTH=16",
+        "-gBASE_HEIGHT=4",
+        "-gMAX_WIDTH=32",
+        "-gMAX_HEIGHT=8",
+        "tb_raw_source",
+        "-do",
+        "run.do"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_baseline\\vsim.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.469
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate\\vlib.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.046
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\reset_release_sync.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\reset_release_sync_data.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\hdr_pair_product_abort_drain4.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\common\\camera_rgb_native_fixed1080_borrow4.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\reset_data_qual_r2_20261110\\inputs\\candidate\\private_raw_isp_borrow4.v"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate\\vlog_opaque.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.094
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-sv",
+        "-work",
+        "work",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_raw_source_r2\\tb_raw_source.sv"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate\\vlog_bench.log",
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-lib",
+        "work",
+        "-onfinish",
+        "stop",
+        "-gEXTERNAL_ISP_ENABLE=1",
+        "-gORIGINAL_SYNC_CLEAR_ENABLE=1",
+        "-gRAW_SAMPLE_BITS=14",
+        "-gBASE_WIDTH=16",
+        "-gBASE_HEIGHT=4",
+        "-gMAX_WIDTH=32",
+        "-gMAX_HEIGHT=8",
+        "tb_raw_source",
+        "-do",
+        "run.do"
+      ],
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\raw_source_r2_blackbox_20261110_r01\\raw14_candidate\\vsim.log",
+      "returncode": 0,
+      "elapsed_seconds": 2.266
+    }
+  ],
+  "results": {
+    "raw14": {
+      "baseline": {
+        "status": "PASS",
+        "marker": "RAW_SOURCE_GATE_PASS raw_bits=14 success=5 canceled=1 reset_discards=2 stale=6",
+        "trace_lines": 1583,
+        "trace_sha256": "bbc9e70d5748320206fcbdc0cd98ee07c984d84dc99371830d0de0e958177def"
+      },
+      "candidate": {
+        "status": "PASS",
+        "marker": "RAW_SOURCE_GATE_PASS raw_bits=14 success=5 canceled=1 reset_discards=2 stale=6",
+        "trace_lines": 1583,
+        "trace_sha256": "bbc9e70d5748320206fcbdc0cd98ee07c984d84dc99371830d0de0e958177def"
+      },
+      "comparison": {
+        "status": "PASS"
+      }
+    }
+  },
+  "status": "PASS"
+}

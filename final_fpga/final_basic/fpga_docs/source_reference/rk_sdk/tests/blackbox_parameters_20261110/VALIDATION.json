@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "git_head": "c50188a76a86322421f3c51d2ac37bab89aaa751",
+  "runtime": "CPython 3.12.9 amd64",
+  "working_directory": "refactor/camera_raw_r2/rk_sdk/tests/blackbox_parameters_20261110",
+  "pythonpath": ["refactor/camera_raw_r2/rk_sdk", "."],
+  "argv": ["-X", "utf8", "-B", "-m", "unittest", "-v", "test_parameters"],
+  "watchdog_seconds": 30,
+  "unittest_count": 6,
+  "illegal_parameter_cases": 29,
+  "successful_transactions": 6,
+  "unittest_elapsed_seconds": 0.027,
+  "exit_code": 0,
+  "run_directory": "refactor/camera_raw_r2/tmp/parameters_20261110/sdk_bb/20261110_111056_426",
+  "inputs_sha256": {
+    "refactor/camera_raw_r2/rk_sdk/tests/blackbox_parameters_20261110/test_parameters.py": "019eae7b8340c6a19540ed41b9e4ded317dac4a2085290593e93cb8a5a008fb4",
+    "docs/pcie_protocol_v1.json": "4d01e8a855b0b46e0776aa3bac54a13b8bb1e0e38554cf048ad3e347880a81ad",
+    "refactor/camera_raw_r2/docs/parameter_timing_20261110/CFG_PARAMETERS_PUBLIC.md": "a815542f76c7d463cefdc7d90bb251ccc4d44ce2fb008e95041ec720add65773",
+    "refactor/camera_raw_r2/rk_sdk/dual_host/debug_modes.py": "36f292694162b814f621ea25601d69fa9e55d35f9283ab622d8ba9e59caa8af8",
+    "refactor/camera_raw_r2/rk_sdk/dual_host/camera_shared.py": "c6646c7893732c0ff8f50bbf6295ea0c9b1ee201608010f71b2ba1b4379867ca",
+    "linux/task3_pipeline/config_transaction.py": "c72072a4911a2d2b54b63355544bb1946db43b6a6409d69dbc502f0664404cfb",
+    "linux/task3_pipeline/mono_config_v2.py": "b27ee408ca21b45003ebf8c7e09c7d5498ac3cfb1a940d34124f06d06fc856f2"
+  },
+  "prior_fixture_failures": [
+    {
+      "run_id": "20261110_110829_285",
+      "reason": "The BAR model omitted the public DEVICE_MAGIC register."
+    },
+    {
+      "run_id": "20261110_110929_286",
+      "reason": "The test called read_active during READY/BUSY, when the SDK rejects reads with an in-flight CFG owner."
+    }
+  ],
+  "scope": "Public Python SDK exercised against a register-level BAR model",
+  "additional_status": {
+    "shell_and_session": "NOT_RUN",
+    "rtl": "NOT_RUN",
+    "board": "NOT_RUN"
+  }
+}

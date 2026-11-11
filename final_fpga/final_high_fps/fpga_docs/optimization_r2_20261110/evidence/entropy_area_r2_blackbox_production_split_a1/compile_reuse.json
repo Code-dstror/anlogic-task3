@@ -1,0 +1,11 @@
+{
+  "reused": [
+    "work",
+    "ph1",
+    "rom_init",
+    "modelsim.ini",
+    "compile_inputs.json"
+  ],
+  "source_run": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_production_a1",
+  "compile_inputs_sha256": "5697e5f1885510012982e317749c909f13f3e6661c5fe5e5ba1fc04c06093ef6"
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "provenance/pcie_protocol_v1.base.json",
+  "feature_register": "CFG_FEATURES",
+  "feature_name": "HDR_QUALITY_V1",
+  "feature_bit": 6,
+  "version": 1,
+  "schema": 2,
+  "fields": [
+    {"name": "ISP_WB_R", "offset": 32, "width": 10},
+    {"name": "ISP_WB_G", "offset": 42, "width": 10},
+    {"name": "ISP_WB_B", "offset": 52, "width": 10},
+    {"name": "ISP_WB_ENABLE", "offset": 62, "width": 1},
+    {"name": "HDR_TONE_PRESET", "offset": 384, "width": 2},
+    {"name": "HDR_FUSION_PRESET", "offset": 386, "width": 2},
+    {"name": "QUALITY_VERSION", "offset": 388, "width": 4}
+  ],
+  "isp_wb": {"fractional_bits": 8, "minimum": 1, "maximum": 1023},
+  "tone_presets": {"DEFAULT": 0, "LEGACY": 1, "BRIGHT": 2, "HIGHLIGHT": 3},
+  "fusion_presets": {"BALANCED": 0, "LEGACY": 1}
+}

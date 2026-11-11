@@ -1,0 +1,156 @@
+{
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "td_root": "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+  "modelsim_bin": "<TOOLS_ROOT>/modelsim\\win64",
+  "inputs_before": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\docs\\pcie_protocol_v1.json": "74bb1d80a6112a716357814cb62459f8f8baa03553134d4ba122b3f13dc6fe46",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\docs\\UART_FIELD_V4.md": "260f6d4d9f80c27dbee186078156e1ae14cbb53c57b35fc116bea6bd143d74d1",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\camera_field_diagnostics.v": "08bf6ec5c9243e96e3f9f5bdf8165373a0827e63d84eddc26c7a7ad415b2d6fb",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\cfg_diag_snapshot.v": "e9f0e2ca67bc4da41ca060460b87ca7ad1a2c53e57e6e11b5e491119214ce848",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\geometry_control_v1.vh": "dcae7cd3a4ff9ee60201af3bf1ffe2331082bd2ad625165f358b1a08168ba072",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\mono_config_transport_v2.vh": "af9a0c94a0e6402d93504f6216f87d21f37ac3bf029218298722f2d52c6e604c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\quality_control_v1.vh": "2b08e2053700e9b621401ef3c02e688e2fb10d24825532bffc138c97e375b8c4",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\rate_control_v1.vh": "8147b84a5b8a5e5cd8f857f3533eed6d222a43825dfb15277c7d281eb29f270a",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\raw_video_v1.vh": "b6a8048ddbe5e0d8c9db216dea8ceb45f2b2612f304a74a49bc1d9b1c3b65d12",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\stereo_control_v1.vh": "571573b50b2ad3f7d3eefda2657fcb4bc168d092c24456f126f4e5caef957023",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\c2h_test_fixture.vh": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\c2h_transport_limits.vh": "242ae42c7fc63b7fdc1710263f8aa49a35533f411e27956c6df2d3e3882acb8c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\f21_config_transport.vh": "4f7cb45f459afeb0a0b8af9daf1a0d985d57fa566d4fbf5ce2f63b85a0151605",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\pcie_feature_defines.vh": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\pcie_record_v3_validate.vh": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\03_mono_config_v2_20261015\\legacy_stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include\\analysis_config_transport.vh": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include\\camera_physical_capture.vh": "dd17ac0d48f7bec1c4f85a8840917e576128719ebdfb6ed30630636c3790f1db",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include\\pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\uart_observer_snapshot.v": "726091e898ee2d3ce060c5cbe901f7aa308f03d700878ed46de8b9f4e6bc4870",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\uart_status_observer.v": "f9305994d13aff37a61e19d08a7a59c20aea736a01cb48c804815dce76867b3c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_config\\run_blackbox.py": "8a1b9cdd2cd88a6ee35c47da8be5cb5be4d3cbc83f1cc3fc8d184442d4a66c97",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_uart\\check_uart.py": "e84dd8a1636131eb3ec09fc21d195c8e9338cbeaefc262b1d959ce557097bccb",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_uart\\tb_fusion_uart.sv": "480715bd0ce01a3ffe3e03e86b0e4ea666c9eed28ba3a2016d9ddd1b6ff33c55",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tools\\uart_observer.py": "6f685b5d93981f71cbc155dcf443b5932283251cdb4a3b62f9a80172b64dfb7e",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\verification_reference\\UART_FIELD_V4_PORTS.vh": "acc3eabd2c1033644243d18fc311a9dc8568f22878668e3fbc3e719034d6bc95"
+  },
+  "inputs_after": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\docs\\pcie_protocol_v1.json": "74bb1d80a6112a716357814cb62459f8f8baa03553134d4ba122b3f13dc6fe46",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\docs\\UART_FIELD_V4.md": "260f6d4d9f80c27dbee186078156e1ae14cbb53c57b35fc116bea6bd143d74d1",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\camera_field_diagnostics.v": "08bf6ec5c9243e96e3f9f5bdf8165373a0827e63d84eddc26c7a7ad415b2d6fb",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\cfg_diag_snapshot.v": "e9f0e2ca67bc4da41ca060460b87ca7ad1a2c53e57e6e11b5e491119214ce848",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\geometry_control_v1.vh": "dcae7cd3a4ff9ee60201af3bf1ffe2331082bd2ad625165f358b1a08168ba072",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\mono_config_transport_v2.vh": "af9a0c94a0e6402d93504f6216f87d21f37ac3bf029218298722f2d52c6e604c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\quality_control_v1.vh": "2b08e2053700e9b621401ef3c02e688e2fb10d24825532bffc138c97e375b8c4",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\rate_control_v1.vh": "8147b84a5b8a5e5cd8f857f3533eed6d222a43825dfb15277c7d281eb29f270a",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\raw_video_v1.vh": "b6a8048ddbe5e0d8c9db216dea8ceb45f2b2612f304a74a49bc1d9b1c3b65d12",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl\\stereo_control_v1.vh": "571573b50b2ad3f7d3eefda2657fcb4bc168d092c24456f126f4e5caef957023",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\c2h_test_fixture.vh": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\c2h_transport_limits.vh": "242ae42c7fc63b7fdc1710263f8aa49a35533f411e27956c6df2d3e3882acb8c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\f21_config_transport.vh": "4f7cb45f459afeb0a0b8af9daf1a0d985d57fa566d4fbf5ce2f63b85a0151605",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\pcie_feature_defines.vh": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\pcie_record_v3_validate.vh": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include\\stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\03_mono_config_v2_20261015\\legacy_stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include\\analysis_config_transport.vh": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include\\camera_physical_capture.vh": "dd17ac0d48f7bec1c4f85a8840917e576128719ebdfb6ed30630636c3790f1db",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include\\pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\uart_observer_snapshot.v": "726091e898ee2d3ce060c5cbe901f7aa308f03d700878ed46de8b9f4e6bc4870",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\uart_status_observer.v": "f9305994d13aff37a61e19d08a7a59c20aea736a01cb48c804815dce76867b3c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_config\\run_blackbox.py": "8a1b9cdd2cd88a6ee35c47da8be5cb5be4d3cbc83f1cc3fc8d184442d4a66c97",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_uart\\check_uart.py": "e84dd8a1636131eb3ec09fc21d195c8e9338cbeaefc262b1d959ce557097bccb",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_uart\\tb_fusion_uart.sv": "480715bd0ce01a3ffe3e03e86b0e4ea666c9eed28ba3a2016d9ddd1b6ff33c55",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tools\\uart_observer.py": "6f685b5d93981f71cbc155dcf443b5932283251cdb4a3b62f9a80172b64dfb7e",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\verification_reference\\UART_FIELD_V4_PORTS.vh": "acc3eabd2c1033644243d18fc311a9dc8568f22878668e3fbc3e719034d6bc95"
+  },
+  "outputs": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01\\uart_model\\uart_capture.bin": "13d719eb808e943b81e6a6efedbd4e323616f7265c1ece0b21a196c4d05e924e"
+  },
+  "commands": [
+    {
+      "name": "modelsim_version",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-version"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01",
+      "log": "modelsim_version.log",
+      "returncode": 0,
+      "seconds": 0.141
+    },
+    {
+      "name": "uart_vlib",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01\\uart_model",
+      "log": "uart_vlib.log",
+      "returncode": 0,
+      "seconds": 0.062
+    },
+    {
+      "name": "uart_compile",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "-sv",
+        "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\00_rtl",
+        "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\01_include",
+        "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\03_mono_config_v2_20261015",
+        "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\include\\04_include",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\uart_status_observer.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\camera_field_diagnostics.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\uart_observer_snapshot.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\cfg_diag_snapshot.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_uart\\tb_fusion_uart.sv"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01\\uart_model",
+      "log": "uart_compile.log",
+      "returncode": 0,
+      "seconds": 0.109
+    },
+    {
+      "name": "uart_serial",
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-l",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01\\uart_serial.transcript",
+        "work.tb_fusion_uart",
+        "+CAPTURE=uart_capture.bin",
+        "-do",
+        "run -all; quit -f"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01\\uart_model",
+      "log": "uart_serial.log",
+      "returncode": 0,
+      "seconds": 2.422,
+      "marker": "FUSION_UART_SERIAL_PASS octets=525 rounds=5"
+    },
+    {
+      "name": "uart",
+      "argv": [
+        "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-u",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_uart\\check_uart.py",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01\\uart_model\\uart_capture.bin"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_uart_01",
+      "log": "uart.log",
+      "returncode": 0,
+      "seconds": 0.125,
+      "marker": "FUSION_UART_PASS rounds=5 octets=525"
+    }
+  ],
+  "outcomes": {
+    "modelsim_version": "PASS",
+    "uart_vlib": "PASS",
+    "uart_compile": "PASS",
+    "uart_serial": "PASS",
+    "uart": "PASS"
+  },
+  "stable": true
+}

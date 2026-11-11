@@ -1,0 +1,42 @@
+[
+  {
+    "file": "entropy.trace",
+    "baseline": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_production_a1/entropy.trace",
+    "candidate": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/entropy.trace",
+    "baseline_sha256": "c108dedcc103840e0bb7dc0e6a721a3a3e8e3e31b656b36f182d29094ef4a19f",
+    "candidate_sha256": "c108dedcc103840e0bb7dc0e6a721a3a3e8e3e31b656b36f182d29094ef4a19f",
+    "identical": true
+  },
+  {
+    "file": "encoder_success.trace",
+    "baseline": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_production_split_a1/encoder_success.trace",
+    "candidate": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/encoder_success.trace",
+    "baseline_sha256": "b3940290abf84be742ad121de882218f39ec45adf3c30001ddf252f960e40fef",
+    "candidate_sha256": "b3940290abf84be742ad121de882218f39ec45adf3c30001ddf252f960e40fef",
+    "identical": true
+  },
+  {
+    "file": "encoder_recover.trace",
+    "baseline": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_production_split_a1/encoder_recover.trace",
+    "candidate": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/encoder_recover.trace",
+    "baseline_sha256": "82556ca775eeccf4c12fe4485faf169446e96a975bc491fa6f424fa7ec05c2ad",
+    "candidate_sha256": "82556ca775eeccf4c12fe4485faf169446e96a975bc491fa6f424fa7ec05c2ad",
+    "identical": true
+  },
+  {
+    "file": "encoder.trace",
+    "baseline": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_production_split_a1/encoder.trace",
+    "candidate": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/encoder.trace",
+    "baseline_sha256": "7a2436e77f589a16ffa9022d27d7226c12bab3944d4ea699d0cbcdbc0809f30e",
+    "candidate_sha256": "7a2436e77f589a16ffa9022d27d7226c12bab3944d4ea699d0cbcdbc0809f30e",
+    "identical": true
+  },
+  {
+    "file": "fixtures.json",
+    "baseline": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_production_split_a1/fixtures.json",
+    "candidate": "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/fixtures.json",
+    "baseline_sha256": "ab7a22dfa6045e72ffcc26304dc36d1391e24fe964da46c251539d802a8e7d6a",
+    "candidate_sha256": "ab7a22dfa6045e72ffcc26304dc36d1391e24fe964da46c251539d802a8e7d6a",
+    "identical": true
+  }
+]

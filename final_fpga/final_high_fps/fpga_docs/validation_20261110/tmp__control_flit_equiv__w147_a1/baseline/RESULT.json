@@ -1,0 +1,39 @@
+{
+  "arm": "baseline",
+  "width": 147,
+  "status": "PASS",
+  "elapsed_s": 32.969,
+  "timeout": false,
+  "exit": 0,
+  "command": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "<PROJECT_ROOT>\\tools\\run_td.py",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\control_flit_equiv\\w147_a1\\baseline\\synth.tcl",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--workdir",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\control_flit_equiv\\w147_a1\\baseline",
+    "--log",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\control_flit_equiv\\w147_a1\\baseline\\td.log"
+  ],
+  "inputs": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\control_flit_equiv\\baseline\\control_message_fifo_ip.v": "ed45556e04d39fa3148ce015c90a74a32774016073129d2e4ec4511beaf51c29",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\control_fifo_40x512.v": "f03e2bd2b794592b45a298c8a9724831cfc766ceb1ba97aafd697679bb60f291",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\camera_control_fifo_40x512.xml": "94088be714339606a56d4a77fcdab28964b9b67f5bb6051c14c2f4ad2cfb4477",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\control_flit_equiv\\w147_a1\\baseline\\control_flit_probe.v": "c34c5ed420928ec115766618d2a376a4d4b013d198ab9ae77bec6b253537f522",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\.m_params_camera_control_fifo_40x512.txt": "a1308a7eec4aa4f73ec269ca0f83b9171f243b1aab9d0a487990904354e7f148",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\.params_camera_control_fifo_40x512.txt": "001dd8c271de5cb8b5675f41d9821c786e5233e01f1d5d2d1c672d5528b5fe51",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\.ports_camera_control_fifo_40x512.txt": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\camera_control_fifo_40x512.tcl": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\camera_control_fifo_40x512.v": "abdc8c7a0db30b9fd1188adea12cdeb446a679295335c753a3646c2861470768",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\Design.xml": "c4e489e57e3acf34e3bedfa4a41f567d66e20d1b1481ed8341e7e0081a757e0c",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\DesignConfiguration.xml": "6e36816da046399c8d53186184f87aa99552fef8fbea210f646fd9cb9c3853a1",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\camera_control_fifo_40x512_soft_fifo.v": "26a5a934d62487bf44a9b56eaab6c30f86d794c4049cde76679878840ff4928d",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\camera_control_fifo_40x512_soft_fifo_core.v": "bc5f2b65c88855891c086647df9a2a8d1d155c3b8deb48cf402a7b0235e8346a",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\include\\define.v": "89eb5e07e6f2e6bde745a19834c61950ba588501df9aaaf531fa8b8b94f3cc11",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\control_flit_equiv\\w147_a1\\baseline\\synth.tcl": "27c9c424aada2fabc25e4439ee92e66ac6b121eda644161444c5c58e44f21fb7",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\control_flit_equiv\\w147_a1\\baseline\\clock.sdc": "6e5d3e294b81594e6eb38a700a13814dfdabc27fac01a1b3f3ba0b1c872cb37e",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\control_flit_equiv\\run_ab.py": "d00d8e26d8f8d31fb2a3ec9e7e76cc1ec043a7fe230972b16aa3cfd299ada80d"
+  }
+}

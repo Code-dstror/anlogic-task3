@@ -1,0 +1,4 @@
+DONE_UART_PARSER decode DJ/v1
+DONE_UART_PARSER decode DJ/v2
+DONE_UART_PARSER decode DJ/v3
+PASS_UART_PARSER versions=1,2,3 crc_errors=1 invalid_headers=1

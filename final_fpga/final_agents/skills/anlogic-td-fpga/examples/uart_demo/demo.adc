@@ -1,0 +1,9 @@
+#-----------------------------------------------------------------------------
+# Pin constraints for PH1A60GEG324 demo (bank 11, LVCMOS33)
+# Format follows TD ADC syntax: set_pin_assignment { <port> } { LOCATION = ...; IOSTANDARD = ...; }
+#-----------------------------------------------------------------------------
+set_pin_assignment	{ i_clk       }	{ LOCATION = A10; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ i_rst_n     }	{ LOCATION = B11; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ o_uart_tx   }	{ LOCATION = A13; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ o_uart_busy }	{ LOCATION = A14; IOSTANDARD = LVCMOS33; }
+set_pin_assignment	{ o_led       }	{ LOCATION = A15; IOSTANDARD = LVCMOS33; }

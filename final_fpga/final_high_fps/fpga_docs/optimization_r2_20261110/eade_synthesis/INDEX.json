@@ -1,0 +1,41 @@
+{
+  "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "job_id": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+  "synthesis_threads": 4,
+  "finished_utc": "2026-11-10T12:32:17.273910+00:00",
+  "source_bound_client_sha_verified": true,
+  "artifacts": [
+    {
+      "source": "server/td/local/download/camera-fusion-eade-syn-20261110/result.json",
+      "retained": "result.json",
+      "sha256": "a4556a38bbcada8c4469556850f2fb3b361da6bf74b5fb2dbe6f0264cb5d196c"
+    },
+    {
+      "source": "server/td/local/download/camera-fusion-eade-syn-20261110/spec.json",
+      "retained": "spec.json",
+      "sha256": "2ab47a19122c33c90f9d3a5d5b8b7154135bcc6d3d24e0eea97d981f1c6a6415"
+    },
+    {
+      "source": "server/td/local/download/camera-fusion-eade-syn-20261110/thread-syn_1.params",
+      "retained": "thread-syn_1.params",
+      "sha256": "2fbd02ea1853b394f5aadd534794816024490e4611ec1562dcf805542cb2e6ac"
+    },
+    {
+      "source": "server/td/local/download/camera-fusion-eade-syn-20261110/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/syn_1/rfcamera_fusion_r1_gate.area",
+      "retained": "rfcamera_fusion_r1_gate.area",
+      "sha256": "dc17c9bac48e7c826df86cd41864db7427788f4ff284f6e9d949df1a7fd824cf"
+    },
+    {
+      "source": "server/td/local/download/camera-fusion-eade-syn-20261110/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/syn_1/simple.area",
+      "retained": "simple.area",
+      "sha256": "f47f37a99b405cedcab54f9a5e9aefcbea8f6ca968fc493a15d812e872464393"
+    },
+    {
+      "source": "server/td/local/download/camera-fusion-eade-syn-20261110/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/syn_1/simple.timing",
+      "retained": "simple.timing",
+      "sha256": "ae2038fe0fc7314a072b99e00d941ec77b7db0c6bec50c46fa81793cfa4cd35d"
+    }
+  ],
+  "physical_sta": "NOT_RUN",
+  "delivery_hash_scope": "Historical hashes identify original bytes; this is a privacy-redacted delivery. Current file hashes: fpga_docs/DELIVERY_FILES.json."
+}

@@ -1,0 +1,36 @@
+{
+  "generators": [
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\tmp\\calfix_adversarial_20261029\\parser\\run_parser.py",
+      "sha256": "7892920c05022ecca6647bfafcecfc63999aaa097661e1f8dc46964738ba66b0",
+      "purpose": "independent ECC/CRC/RAW10 constant vector generator; original fixed b68 adversarial audit"
+    },
+    {
+      "path": "C:/fpga_workspace/anlogic-task3\\tmp\\calfix_adversarial_20261029\\parser\\run_closedloop.py",
+      "sha256": "ca6367f827feef164aa938f526edab1f1f7cee270ad581faade3c2ac2e2a4fa3",
+      "purpose": "independent ECC/CRC/RAW10 constant vector generator; original fixed b68 adversarial audit"
+    }
+  ],
+  "files": [
+    {
+      "path": "vectors\\leaf.json",
+      "sha256": "b27a0e6e5f6ca768dab0d20869a5dfa699c6c7ccef298b2e0f5200dc3b046be4"
+    },
+    {
+      "path": "vectors\\closedloop.json",
+      "sha256": "f84c4a477cc6b8f9d0b235a131875a142e73c60205e3b8b0b99b9d76484158cf"
+    },
+    {
+      "path": "templates\\leaf.sv",
+      "sha256": "6d8e434c0e241f94629121cfa44e727f4a049bd4d2b53faac709efb5e0a4095d"
+    },
+    {
+      "path": "templates\\closedloop.sv",
+      "sha256": "eea45477232046afd330123b023c6899d09c88a31ecee29fb07e82c3147f4990"
+    },
+    {
+      "path": "vectors\\board_raw40.json",
+      "sha256": "bc6aaa0fd56271c3afead2efb5afaf40fe50b4ed34ae51f27d5b4493989b8f69"
+    }
+  ]
+}

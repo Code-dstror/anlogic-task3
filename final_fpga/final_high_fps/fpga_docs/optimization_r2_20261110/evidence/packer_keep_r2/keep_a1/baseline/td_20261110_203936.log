@@ -1,0 +1,787 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/td_commands_prompt.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 20:39:36 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  8.936503s wall, 7.671875s user + 0.515625s system = 8.187500s CPU (91.6%)
+
+RUN-1004 : used memory is 1255 MB, reserved memory is 1284 MB, peak memory is 1288 MB
+RUN-1002 : start command "create_project packer_probe . -family ph1 -device PH1A90SEG324 -speed -2"
+PRJ-1005 : Command create_project success.
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324" in  12.151916s wall, 10.953125s user + 0.640625s system = 11.593750s CPU (95.4%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "open_project packer_probe.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-1401 : Successfully analyzed 0 source files.
+RUN-1003 : finish command "create_project packer_probe . -family ph1 -device PH1A90SEG324 -speed -2" in  12.169121s wall, 10.984375s user + 0.640625s system = 11.625000s CPU (95.5%)
+
+RUN-1004 : used memory is 1260 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "add_files jpeg_byte_packer.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files packer_probe.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files clock.sdc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "top_module packer_probe"
+PRJ-1501 : Current top model is packer_probe.
+RUN-1002 : start command "set_param -run syn_1 flow thread 4"
+PRJ-1105 : Update param syn_1 flow::thread::4 succeed.
+RUN-1002 : start command "set_param -run syn_1 rtl min_control_set 2"
+PRJ-1105 : Update param syn_1 rtl::min_control_set::2 succeed.
+RUN-1002 : start command "set_param -run syn_1 gate map_mode area_prior"
+PRJ-1105 : Update param syn_1 gate::map_mode::area_prior succeed.
+RUN-1002 : start command "set_param -run syn_1 gate multi_thread_mapping partition"
+PRJ-1105 : Update param syn_1 gate::multi_thread_mapping::partition succeed.
+RUN-1002 : start command "set_param -run syn_1 gate add_map_lut_struct on"
+PRJ-1105 : Update param syn_1 gate::add_map_lut_struct::on succeed.
+RUN-1002 : start command "launch_runs -step opt_gate syn_1"
+PRJ-1403 : syn_1 is launched.
+PRJ-1404 : Run log file is <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/packer_keep_r2/keep_a1/baseline/packer_probe_Runs/syn_1/run.log.
+RUN-1002 : start command "wait_run syn_1"
+PRJ-1405 : Waiting for run syn_1 to finish.
+PRJ-1411 : launch_runs syn_1 -step opt_gate.
+PRJ-1412 : reset_run phy_1.
+PRJ-1009 : If you need the best result of runs copied into "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/packer_keep_r2/keep_a1/baseline/packer_probe_Runs/best_result" , please execute "save_best_bits" in the Tcl console after all runs complete, or add "save_best_bits" in tcl script after "wait_run" command.
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/run.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 20:39:59 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "source_tcl ./settings.cfg"
+PRJ-1001 : Finish executing settings.cfg
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  5.390997s wall, 3.859375s user + 0.515625s system = 4.375000s CPU (81.2%)
+
+RUN-1004 : used memory is 1089 MB, reserved memory is 1085 MB, peak memory is 1089 MB
+RUN-1002 : start command "open_project packer_probe.prj"
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../jpeg_byte_packer.v
+HDL-1007 : analyze verilog file ../../packer_probe.v
+PRJ-1401 : Successfully analyzed 2 source files.
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top packer_probe -params "
+HDL-1007 : elaborate module packer_probe in ../../packer_probe.v(1)
+HDL-1007 : elaborate module jpeg_byte_packer in ../../jpeg_byte_packer.v(4)
+HDL-1200 : Current top model is packer_probe
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "export_db packer_probe_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step rtl"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1002 : start command "set_param rtl min_control_set 2"
+RUN-1001 : Print Rtl Property
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :         Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :        fix_undriven       |     0      |        0         |        
+RUN-1001 :   gated_clock_conversion  |    off     |       off        |        
+RUN-1001 :         infer_fsm         |    auto    |       auto       |        
+RUN-1001 :         infer_rom         |     on     |        on        |        
+RUN-1001 :       infer_shifter       |     on     |        on        |        
+RUN-1001 :       keep_hierarchy      |    auto    |       auto       |        
+RUN-1001 :        merge_equal        |     on     |        on        |        
+RUN-1001 :      min_control_set      |     2      |        8         |   *    
+RUN-1001 :       min_ripple_len      |    auto    |       auto       |        
+RUN-1001 :          seq_syn          |     on     |        on        |        
+RUN-1001 :       tcl_afterstep       |            |                  |        
+RUN-1001 :       tcl_beforestep      |            |                  |        
+RUN-1001 : -------------------------------------------------------------------
+RUN-1002 : start command "read_sdc ../../clock.sdc"
+RUN-1002 : start command "insert_debugger"
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file <TOOLS_ROOT>/TD_Release_2026.2.210.850/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.004108s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (380.3%); Memory(MB): used = 1095, reserved = 1197, peak = 1095;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 1410, Total nets: 4330.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.014171s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (110.3%); Memory(MB): used = 1095, reserved = 1197, peak = 1095;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 310, Total nets: 3192.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model packer_probe
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.016362s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (95.5%); Memory(MB): used = 1096, reserved = 1197, peak = 1096;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 309, Total nets: 3028.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.007484s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1096, reserved = 1197, peak = 1096;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 306, Total nets: 3025.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1032 : 2897/128 useful/useless nets, 305/0 useful/useless insts
+SYN-1021 : Optimized 1 onehot mux instances.
+SYN-1016 : Merged 5 instances.
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-1016 : Merged 2 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 0.447537s wall, 0.484375s user + 0.015625s system = 0.500000s CPU (111.7%); Memory(MB): used = 1092, reserved = 1196, peak = 1099;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 874, Total nets: 931.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1014 : Optimize round 1
+SYN-1020 : Optimized 18 distributor mux.
+SYN-1016 : Merged 147 instances.
+SYN-1015 : Optimize round 1, 429 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 2 inv instances.
+SYN-1015 : Optimize round 2, 2 better
+SYN-3010 : Optimized 1 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1020 : Optimized 4 distributor mux.
+SYN-1016 : Merged 7 instances.
+SYN-1015 : Optimize round 1, 11 better
+SYN-1014 : Optimize round 2
+SYN-1015 : Optimize round 2, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 0.289388s wall, 0.281250s user + 0.015625s system = 0.296875s CPU (102.6%); Memory(MB): used = 1077, reserved = 1190, peak = 1099;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 519, Total nets: 576.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.000144s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1077, reserved = 1190, peak = 1099;
+
+SYN-1079 : finish stage Check Design. Total instances: 519, Total nets: 576.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 0.779954s wall, 0.812500s user + 0.031250s system = 0.843750s CPU (108.2%); Memory(MB): used = 1077, reserved = 1190, peak = 1099;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 519, Total nets: 576.
+
+RUN-1002 : start command "report_area -file packer_probe_rtl.area"
+RUN-1001 : standard
+***Report Model: packer_probe Device: PH1A90SEG324***
+
+IO Statistics
+#IO                        43
+  #input                   14
+  #output                  29
+  #inout                    0
+
+Gate Statistics
+#Basic gates              458
+  #and                     16
+  #nand                     0
+  #or                      19
+  #nor                      0
+  #xor                    120
+  #xnor                     0
+  #buf                      0
+  #not                     18
+  #bufif1                   0
+  #MX21                    81
+  #FADD                     0
+  #DFF                    204
+  #LATCH                    0
+#MACRO_ADD                  3
+#MACRO_EQ                  15
+#MACRO_MUX                 40
+
+RUN-1002 : start command "export_db packer_probe_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step gate"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1002 : start command "set_param gate add_map_lut_struct on"
+RUN-1002 : start command "set_param gate map_mode area_prior"
+RUN-1002 : start command "set_param gate opt_area high"
+RUN-1002 : start command "set_param gate multi_thread_mapping partition"
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :       Parameters       |   Settings   |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :   eram_cascade_height  |     auto     |       auto       |        
+RUN-1001 :        map_mode        |  area_prior  |       auto       |   *    
+RUN-1001 :      map_strategy      |      1       |        1         |        
+RUN-1001 :       pack_effort      |    medium    |      medium      |        
+RUN-1001 :     pack_seq_in_io     |     auto     |       auto       |        
+RUN-1001 :         report         |   standard   |     standard     |        
+RUN-1001 :      tcl_afterstep     |              |                  |        
+RUN-1001 :     tcl_beforestep     |              |                  |        
+RUN-1001 : ------------------------------------------------------------------
+RUN-1002 : start command "optimize_gate -packarea packer_probe_gate.area"
+RUN-1001 : Open license file <TOOLS_ROOT>/TD_Release_2026.2.210.850/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.002423s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1082, reserved = 1275, peak = 1099;
+
+SYN-1079 : finish stage Map Reg. Total instances: 519, Total nets: 576.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2001 : Map 43 IOs to PADs of model 'packer_probe'
+SYN-6021 CRITICAL-WARNING: 43 out of 43 logical ports has no user assigned specific location constraint.
+                           This may affect performance or in some cases cause damage to the device!
+                           Bitgen will abort. If insist on bitgen with risk, please 'set_param bitgen unconstr_io on' to avoid bitgen error.
+                           No ADC ports: abort, clk, data[7:0], last, observe[28:0], ready, rst_n, valid.
+                           No ADC ports will be assigned to random location as below:
+                           abort:U16, clk:T13, data[7]:P18, data[6]:P14, data[5]:N10, data[4]:N15, data[3]:M18, data[2]:M14, data[1]:M16, data[0]:K18, 
+                           last:J18, observe[28]:J13, observe[27]:K15, observe[26]:H16, observe[25]:J14, observe[24]:F15, observe[23]:G16, observe[22]:F13, observe[21]:E15, observe[20]:D18, 
+                           observe[19]:B14, observe[18]:A15, observe[17]:B18, observe[16]:D17, observe[15]:C16, observe[14]:U8, observe[13]:T8, observe[12]:T10, observe[11]:P10, observe[10]:U6, 
+                           observe[9]:V2, observe[8]:U3, observe[7]:V5, observe[6]:P1, observe[5]:T4, observe[4]:R2, observe[3]:P3, observe[2]:R5, observe[1]:M6, observe[0]:N7, 
+                           ready:N8, rst_n:U18, valid:R16.
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.010571s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (147.8%); Memory(MB): used = 1082, reserved = 1275, peak = 1099;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module packer_probe"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Optimize during map_dsp, 0 better
+SYN-1001 : Throwback 9 control mux instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 56 instances.
+SYN-2501 : Optimize round 1, 131 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-2501 : Optimize round 1, 0 better
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-2501 : Map 3 macro adder(s)
+SYN-1016 : Merged 78 instances.
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 0.286999s wall, 0.265625s user + 0.000000s system = 0.265625s CPU (92.6%); Memory(MB): used = 1093, reserved = 1275, peak = 1099;
+
+SYN-1079 : finish stage Map Macro. Total instances: 653, Total nets: 694.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-3001 : Start LUT mapping ...
+SYN-3001 : Note: currently parameter "cec_check" does not support "multi_thread_mapping partition", and will be ignored.
+SYN-3001 : multi-thread mapping mode: partition
+SYN-3001 : [partition 0 (thread 0)] Collect 14 PIs, 64 POs (0 timing unconstrained), 259 logic instances for mapping process
+SYN-3001 : [partition 1 (thread 1)] Collect 128 PIs, 8 POs (0 timing unconstrained), 120 logic instances for mapping process
+SYN-3001 : [combined] Collect 142 PIs, 74 POs (0 timing unconstrained POs), 379 logic instances for mapping process
+
+SYN-3001 : [thread 0] Start high effort area and logic-level optimization ...
+SYN-3001 : [thread 1] Start high effort area and logic-level optimization ...
+SYN-3001 : [thread 0] End high effort area and logic-level optimization;  2.041970s wall, 4.015625s user + 0.015625s system = 4.031250s CPU (197.4%)
+
+SYN-3001 : [thread 1] End high effort area and logic-level optimization;  2.206001s wall, 3.390625s user + 0.000000s system = 3.390625s CPU (153.7%)
+
+SYN-2581 : [partition 0 (thread 0)] Mapping with K=6, #lut = 73 (4.23), #lev = 5 (3.05), #crit_level = 0, #edge = 309 
+SYN-2581 : [partition 1 (thread 1)] Mapping with K=6, #lut = 24 (6.00), #lev = 3 (3.00), #crit_level = 0, #edge = 144 
+SYN-2581 : [combined] Mapping with K=6, #lut = 97 (4.67), #lev = 5 (3.04), #crit_level = 0, #edge = 453 
+SYN-3001 : End LUT mapping;  12.089738s wall, 21.906250s user + 0.328125s system = 22.234375s CPU (183.9%)
+
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 12.090480s wall, 21.906250s user + 0.328125s system = 22.234375s CPU (183.9%); Memory(MB): used = 1287, reserved = 1385, peak = 1287;
+
+SYN-1001 : Start remapping carry-chain in over-quota path...
+OPT-1001 : Start re-synthesis-xmap optimization ...
+OPT-1001 : Run flow with mode 1.
+OPT-1001 : Update timing in basic mode
+RUN-1002 : start command "start_timer"
+OPT-1001 : End timing update;  0.033403s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (93.6%)
+
+OPT-1001 : SWNS 5036 STNS 0 NUM_FEPS 0 Over-Quota 0 (0)
+OPT-1001 : Total improved wns 0 tns 0, area incr 0 final over-quota 0 (0)
+OPT-1001 : End re-synthesis optimization;  0.062763s wall, 0.109375s user + 0.046875s system = 0.156250s CPU (249.0%)
+
+OPT-1001 : End physical optimization;  0.062895s wall, 0.109375s user + 0.046875s system = 0.156250s CPU (248.4%)
+
+SYN-1001 : End remapping carry-chain in over-quota path...
+SYN-1001 : Packing model "packer_probe" ...
+SYN-1001 : Stage 2.5 | Pack Gate
+SYN-4010 : Pack lib has 83 rtl pack models with 53 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 204 DFF/LATCH to SEQ ...
+SYN-1001 : Remove 1 carry adders
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+SYN-4009 : Pack 1 carry chain into lslice
+SYN-1001 : End Stage 2.5 | Pack Gate; Time: 0.129967s wall, 0.125000s user + 0.046875s system = 0.171875s CPU (132.2%); Memory(MB): used = 1287, reserved = 1385, peak = 1287;
+
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-1042 : Timing analysis accelerates with 4 threads.
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |         5036                |
+|     Setup TNS             |            0                |
+|     Num of violated S-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |          204                |
+|     #luts                 |           97                |
+|     #lut1                 |            0                |
+|     #lut1(~A)             |            0                |
+|     #slices               |           25                |
+|     slices percentage     |        0.04%                |
+|     #RAMs                 |            0                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |            1                |
+|     #insts in MACRO       |           25                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |            0                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |            0                |
+-----------------------------------------------------------
+| Top 1% datanet fanout#    |        24.33                |
+| dff(single fanout)->dff   |            1                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     Total Number          |            0                |
+|     Total Level Slack     |            0                |
+|     Worst Level Slack     |            4                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Logic Level Distribution
+-------------------------------------------------------------------------
+  Clock  |  Period            |  0    |  1  |  2   |  3    |  4    |  5
+-------------------------------------------------------------------------
+  PIX    |  8.000ns (125MHz)  |  130  |  7  |  59  |  144  |  159  |  6
+-------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(505 paths analyzed)
+
+Hierarchical Rent Exponent Report
++--------------------------------------------------------+
+|Inst     |Model  |Rent     |Cell     |Pin     |Term     |
++--------------------------------------------------------+
++--------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+RUN-0008 : Do critical warning check and 0 issue(s) found.
+RUN-0008 : Do timing check and 0 issue(s) found.
+RUN-0008 : Do area check and 0 issue(s) found.
+RUN-1002 : start command "report_area -file packer_probe_gate.area"
+SYN-4034 : The count of slices with lut is 0.
+SYN-4035 : The count of slices with lut+ripple is 25.
+RUN-1001 : standard
+***Report Model: packer_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        43   out of    148   29.05%
+  #input                   14
+  #output                  29
+  #inout                    0
+#lut                      122
+  #lut1                     0
+  #lut2                     7
+  #lut3                    12
+  #lut4                    16
+  #lut5                    33
+  #lut6                    54
+#reg                      204
+  #slice reg              204   out of 128640    0.16%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                   117   out of  64320    0.18%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic             117
+    #with luts*            65
+    #with adder            25
+    #reg only*             27
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       0   out of    272    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       43   out of    148   29.05%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 12.752301s wall, 22.593750s user + 0.468750s system = 23.062500s CPU (180.8%); Memory(MB): used = 1288, reserved = 1385, peak = 1288;
+
+RUN-1003 : finish command "optimize_gate -packarea packer_probe_gate.area" in  12.772019s wall, 22.609375s user + 0.468750s system = 23.078125s CPU (180.7%)
+
+RUN-1004 : used memory is 1288 MB, reserved memory is 1385 MB, peak memory is 1288 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model packer_probe
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.003645s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 1288, reserved = 1385, peak = 1288;
+
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1002 : start command "report_timing_status -file packer_probe_gate.ts"
+RUN-1002 : start command "report_timing_summary -file packer_probe_gate.timing"
+RUN-1002 : start command "flow_status -file flow.status"
+Location         : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\packer_keep_r2\keep_a1\baseline\packer_probe_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : packer_probe
+Device           : PH1A90SEG324
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  5036ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  12s(70%)   |    22(88%)    |       1288        |       1288        
+RUN-1001 :   import_device  |    1     |   5s(29%)   |    3(12%)     |       1089        |       1089        
+RUN-1001 :   optimize_rtl   |    1     |   0s(0%)    |     0(0%)     |       1077        |       1099        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |       1095        |       1095        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |     17s     |      25       |       1288        |       1288        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1002 : start command "export_db packer_probe_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e opt_gate"
+RUN-1002 : start command "flow_status"
+
+Location         : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\packer_keep_r2\keep_a1\baseline\packer_probe_Runs\syn_1
+Running with     : Tang Dynasty Release_2026.2
+                   Copyright (c) 2012-2026 Anlogic Inc.
+Top Model        : packer_probe
+Device           : PH1A90SEG324
+Speed            : 2
+
+Timing Mode      : basic
+Setup            : WNS  5036ps  TNS        0ps  NUM_FEPS     0
+Hold             : WNS 2147483647ps  TNS        0ps  NUM_FEPS     0
+
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |  12s(70%)   |    22(88%)    |       1288        |       1288        
+RUN-1001 :   import_device  |    1     |   5s(29%)   |    3(12%)     |       1089        |       1089        
+RUN-1001 :   optimize_rtl   |    1     |   0s(0%)    |     0(0%)     |       1077        |       1099        
+RUN-1001 :     read_sdc     |    1     |   0s(0%)    |     0(0%)     |       1095        |       1095        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    4     |     17s     |      25       |       1288        |       1288        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+PRJ-1406 : Run syn_1 finished.
+RUN-1003 : finish command "wait_run syn_1" in  21.172076s wall, 0.046875s user + 0.046875s system = 0.093750s CPU (0.4%)
+
+RUN-1004 : used memory is 1261 MB, reserved memory is 1291 MB, peak memory is 1293 MB
+RUN-1002 : start command "close_project"
+RUN-1002 : start command "open_project packer_probe.al -noanalyze"
+RUN-1002 : start command "open_run syn_1"
+RUN-1002 : start command "import_db <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/packer_keep_r2/keep_a1/baseline/packer_probe_Runs/syn_1/packer_probe_gate.db"
+RUN-1001 : Database version number 46207
+RUN-1001 : Importing database generated by Tang Dynasty, V6.2.3.210850.
+RUN-1002 : start command "set_param gate opt_area high"
+RUN-1001 : Import flow parameters
+RUN-1001 : Import netlist
+RUN-1001 : Import timing constraints
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import ChipWatcher
+RUN-1001 : Import design success TD_VERSION=Release_2026.2 , DB_VERSION=46207
+PRJ-1408 : Open run syn_1 finished.
+RUN-1002 : start command "report_area -file reopened.area"
+SYN-4034 : The count of slices with lut is 0.
+SYN-4035 : The count of slices with lut+ripple is 25.
+RUN-1001 : standard
+***Report Model: packer_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        43   out of    148   29.05%
+  #input                   14
+  #output                  29
+  #inout                    0
+#lut                      122
+  #lut1                     0
+  #lut2                     7
+  #lut3                    12
+  #lut4                    16
+  #lut5                    33
+  #lut6                    54
+#reg                      204
+  #slice reg              204   out of 128640    0.16%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                   117   out of  64320    0.18%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic             117
+    #with luts*            65
+    #with adder            25
+    #reg only*             27
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       0   out of    272    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       43   out of    148   29.05%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+RUN-1002 : start command "report_run_param syn_1 -file effective.params"
+RUN-1002 : start command "read_sdc <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/packer_keep_r2/keep_a1/baseline/clock.sdc"
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+TMR-1041 : Net delay calculation accelerates with 4 threads.
+TMR-2502 : Net delay update with mode: Synthesized
+TMR-1042 : Timing analysis accelerates with 4 threads.
+RUN-1002 : start command "check_timing -file checked.timing"
+RUN-1002 : start command "report_timing_summary -ep_num 12 -path_num 2 -file reopened.timing"
+RUN-1002 : start command "get_regs -nowarn dut/byte_count*"
+RUN-1002 : start command "report_timing_path -from  -ep_num 12 -path_num 2 -file count.timing"
+RUN-1002 : start command "get_regs -nowarn stimulus*"
+RUN-1002 : start command "get_regs -nowarn dut/*"
+RUN-1002 : start command "report_timing_path -from  -to  -ep_num 12 -path_num 2 -file input.timing"
+RUN-1002 : start command "close_project"

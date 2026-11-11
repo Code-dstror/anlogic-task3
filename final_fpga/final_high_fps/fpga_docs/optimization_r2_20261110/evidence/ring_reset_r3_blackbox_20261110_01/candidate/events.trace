@@ -1,0 +1,2696 @@
+0:1 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:2 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:3 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:4 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:4 START 101 cam=0 slot=0 gen=1
+0:5 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:5 DATA e8c39e79542f0ae5c09b76512c07e2bd ffff 0
+0:6 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:6 DATA 4520fbd6b18c67421df8d3ae89643f1a ffff 0
+0:7 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:7 DATA a27d58330ee9c49f7a55300be6c19c77 ffff 0
+0:8 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:8 DATA ffdab5906b4621fcd7b28d68431ef9d4 ffff 0
+0:9 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:9 DATA 5c3712edc8a37e59340feac5a07b5631 ffff 0
+0:10 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:10 DATA b9946f4a2500dbb6916c4722fdd8b38e ffff 0
+0:11 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:11 DATA 16f1cca7825d3813eec9a47f5a3510eb ffff 0
+0:12 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:12 DATA 734e2904dfba95704b2601dcb7926d48 ffff 0
+0:13 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:13 DATA d0ab86613c17f2cda8835e3914efcaa5 ffff 0
+0:14 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:14 DATA 2d08e3be99744f2a05e0bb96714c2702 ffff 0
+0:15 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:15 DATA 8a65401bf6d1ac87623d18f3cea9845f ffff 0
+0:16 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:16 DATA e7c29d78532e09e4bf9a75502b06e1bc ffff 0
+0:17 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:17 DATA 441ffad5b08b66411cf7d2ad88633e19 ffff 0
+0:18 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:18 DATA a17c57320de8c39e79542f0ae5c09b76 ffff 0
+0:19 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:19 DATA fed9b48f6a4520fbd6b18c67421df8d3 ffff 0
+0:20 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:20 DATA 5b3611ecc7a27d58330ee9c49f7a5530 ffff 0
+0:21 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:21 DATA b8936e4924ffdab5906b4621fcd7b28d ffff 0
+0:22 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:23 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:24 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:25 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:26 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:26 AW 0000000001f1
+0:27 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:28 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:29 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:30 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:31 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:32 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:33 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:34 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:35 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:36 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:37 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:38 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:39 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:40 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:40 W e8c39e79542f0ae5c09b76512c07e2bd ffff 0
+0:41 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:41 W 4520fbd6b18c67421df8d3ae89643f1a ffff 0
+0:42 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:42 W a27d58330ee9c49f7a55300be6c19c77 ffff 0
+0:43 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:43 W ffdab5906b4621fcd7b28d68431ef9d4 ffff 0
+0:44 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:44 W 5c3712edc8a37e59340feac5a07b5631 ffff 0
+0:45 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:46 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:47 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:48 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:48 W b9946f4a2500dbb6916c4722fdd8b38e ffff 0
+0:49 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:49 W 16f1cca7825d3813eec9a47f5a3510eb ffff 0
+0:50 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:50 W 734e2904dfba95704b2601dcb7926d48 ffff 0
+0:51 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:51 W d0ab86613c17f2cda8835e3914efcaa5 ffff 0
+0:52 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:52 W 2d08e3be99744f2a05e0bb96714c2702 ffff 0
+0:53 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:53 W 8a65401bf6d1ac87623d18f3cea9845f ffff 0
+0:54 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:54 W e7c29d78532e09e4bf9a75502b06e1bc ffff 0
+0:55 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:55 W 441ffad5b08b66411cf7d2ad88633e19 ffff 0
+0:56 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:57 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:58 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:59 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:59 W a17c57320de8c39e79542f0ae5c09b76 ffff 0
+0:60 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:60 W fed9b48f6a4520fbd6b18c67421df8d3 ffff 0
+0:61 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:61 W 5b3611ecc7a27d58330ee9c49f7a5530 ffff 1
+0:62 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:62 B 00
+0:63 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:63 DATA 15f0cba6815c3712edc8a37e59340fea ffff 0
+0:64 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:64 DATA 724d2803deb9946f4a2500dbb6916c47 ffff 0
+0:65 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:65 DATA cfaa85603b16f1cca7825d3813eec9a4 ffff 0
+0:66 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:66 DATA 2c07e2bd98734e2904dfba95704b2601 ffff 0
+0:67 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:67 DATA 89643f1af5d0ab86613c17f2cda8835e ffff 0
+0:68 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:68 DATA e6c19c77522d08e3be99744f2a05e0bb ffff 0
+0:69 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:69 DATA 431ef9d4af8a65401bf6d1ac87623d18 ffff 0
+0:70 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:70 DATA a07b56310ce7c29d78532e09e4bf9a75 ffff 0
+0:71 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:71 DATA fdd8b38e69441ffad5b08b66411cf7d2 ffff 0
+0:72 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:72 DATA 5a3510ebc6a17c57320de8c39e79542f ffff 0
+0:73 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:73 DATA b7926d4823fed9b48f6a4520fbd6b18c ffff 0
+0:74 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:74 DATA 14efcaa5805b3611ecc7a27d58330ee9 ffff 0
+0:75 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:75 DATA 714c2702ddb8936e4924ffdab5906b46 ffff 0
+0:76 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:76 DATA cea9845f3a15f0cba6815c3712edc8a3 ffff 0
+0:77 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:77 DATA 2b06e1bc97724d2803deb9946f4a2500 ffff 0
+0:78 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:78 DATA 88633e19f4cfaa85603b16f1cca7825d ffff 0
+0:79 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:79 AW 0000020001f1
+0:80 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:81 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:81 W b8936e4924ffdab5906b4621fcd7b28d ffff 0
+0:82 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:82 W 15f0cba6815c3712edc8a37e59340fea ffff 0
+0:83 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:83 W 724d2803deb9946f4a2500dbb6916c47 ffff 0
+0:84 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:84 W cfaa85603b16f1cca7825d3813eec9a4 ffff 0
+0:85 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:85 W 2c07e2bd98734e2904dfba95704b2601 ffff 0
+0:86 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:86 W 89643f1af5d0ab86613c17f2cda8835e ffff 0
+0:87 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:87 W e6c19c77522d08e3be99744f2a05e0bb ffff 0
+0:88 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:88 W 431ef9d4af8a65401bf6d1ac87623d18 ffff 0
+0:89 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:90 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:91 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:92 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:92 W a07b56310ce7c29d78532e09e4bf9a75 ffff 0
+0:93 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:93 W fdd8b38e69441ffad5b08b66411cf7d2 ffff 0
+0:94 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:94 W 5a3510ebc6a17c57320de8c39e79542f ffff 0
+0:95 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:95 W b7926d4823fed9b48f6a4520fbd6b18c ffff 0
+0:96 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:96 W 14efcaa5805b3611ecc7a27d58330ee9 ffff 0
+0:97 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:97 W 714c2702ddb8936e4924ffdab5906b46 ffff 0
+0:98 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:98 W cea9845f3a15f0cba6815c3712edc8a3 ffff 0
+0:99 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:99 W 2b06e1bc97724d2803deb9946f4a2500 ffff 1
+0:100 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:100 B 00
+0:101 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:101 DATA e5c09b76512c07e2bd98734e2904dfba ffff 0
+0:102 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:102 DATA 421df8d3ae89643f1af5d0ab86613c17 ffff 0
+0:103 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:103 DATA 9f7a55300be6c19c77522d08e3be9974 ffff 0
+0:104 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:104 DATA fcd7b28d68431ef9d4af8a65401bf6d1 ffff 0
+0:105 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:105 DATA 59340feac5a07b56310ce7c29d78532e ffff 0
+0:106 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:106 DATA b6916c4722fdd8b38e69441ffad5b08b ffff 0
+0:107 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:107 DATA 13eec9a47f5a3510ebc6a17c57320de8 ffff 0
+0:108 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:108 DATA 704b2601dcb7926d4823fed9b48f6a45 ffff 0
+0:109 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:109 DATA cda8835e3914efcaa5805b3611ecc7a2 ffff 0
+0:110 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:110 DATA 2a05e0bb96714c2702ddb8936e4924ff ffff 0
+0:111 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:111 DATA 87623d18f3cea9845f3a15f0cba6815c ffff 0
+0:112 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:112 DATA e4bf9a75502b06e1bc97724d2803deb9 ffff 0
+0:113 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:113 DATA 411cf7d2ad88633e19f4cfaa85603b16 ffff 0
+0:114 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:114 DATA 9e79542f0ae5c09b76512c07e2bd9873 ffff 0
+0:115 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:115 DATA fbd6b18c67421df8d3ae89643f1af5d0 ffff 0
+0:116 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:116 DATA 58330ee9c49f7a55300be6c19c77522d ffff 0
+0:117 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:117 AW 0000040001f1
+0:118 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:118 W 88633e19f4cfaa85603b16f1cca7825d ffff 0
+0:119 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:119 W e5c09b76512c07e2bd98734e2904dfba ffff 0
+0:120 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:120 W 421df8d3ae89643f1af5d0ab86613c17 ffff 0
+0:121 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:121 W 9f7a55300be6c19c77522d08e3be9974 ffff 0
+0:122 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:123 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:124 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:125 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:125 W fcd7b28d68431ef9d4af8a65401bf6d1 ffff 0
+0:126 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:126 W 59340feac5a07b56310ce7c29d78532e ffff 0
+0:127 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:127 W b6916c4722fdd8b38e69441ffad5b08b ffff 0
+0:128 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:128 W 13eec9a47f5a3510ebc6a17c57320de8 ffff 0
+0:129 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:129 W 704b2601dcb7926d4823fed9b48f6a45 ffff 0
+0:130 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:130 W cda8835e3914efcaa5805b3611ecc7a2 ffff 0
+0:131 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:131 W 2a05e0bb96714c2702ddb8936e4924ff ffff 0
+0:132 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:132 W 87623d18f3cea9845f3a15f0cba6815c ffff 0
+0:133 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:134 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:135 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:136 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:136 W e4bf9a75502b06e1bc97724d2803deb9 ffff 0
+0:137 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:137 W 411cf7d2ad88633e19f4cfaa85603b16 ffff 0
+0:138 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:138 W 9e79542f0ae5c09b76512c07e2bd9873 ffff 0
+0:139 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:139 W fbd6b18c67421df8d3ae89643f1af5d0 ffff 1
+0:140 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:140 B 00
+0:141 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:141 DATA b5906b4621fcd7b28d68431ef9d4af8a ffff 0
+0:142 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:142 DATA 12edc8a37e59340feac5a07b56310ce7 ffff 0
+0:143 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:143 DATA 6f4a2500dbb6916c4722fdd8b38e6944 ffff 0
+0:144 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:144 DATA cca7825d3813eec9a47f5a3510ebc6a1 ffff 0
+0:145 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:145 DATA 2904dfba95704b2601dcb7926d4823fe ffff 0
+0:146 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:146 DATA 86613c17f2cda8835e3914efcaa5805b ffff 0
+0:147 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:147 DATA e3be99744f2a05e0bb96714c2702ddb8 ffff 0
+0:148 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:148 DATA 401bf6d1ac87623d18f3cea9845f3a15 ffff 0
+0:149 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:149 DATA 9d78532e09e4bf9a75502b06e1bc9772 ffff 0
+0:150 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:150 DATA fad5b08b66411cf7d2ad88633e19f4cf ffff 0
+0:151 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:151 DATA 57320de8c39e79542f0ae5c09b76512c ffff 0
+0:152 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:152 DATA b48f6a4520fbd6b18c67421df8d3ae89 ffff 0
+0:153 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:153 DATA 11ecc7a27d58330ee9c49f7a55300be6 ffff 0
+0:154 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:154 DATA 6e4924ffdab5906b4621fcd7b28d6843 ffff 0
+0:155 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:155 DATA cba6815c3712edc8a37e59340feac5a0 ffff 0
+0:156 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:156 DATA 2803deb9946f4a2500dbb6916c4722fd ffff 0
+0:157 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:157 AW 0000060001f1
+0:158 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:158 W 58330ee9c49f7a55300be6c19c77522d ffff 0
+0:159 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:159 W b5906b4621fcd7b28d68431ef9d4af8a ffff 0
+0:160 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:160 W 12edc8a37e59340feac5a07b56310ce7 ffff 0
+0:161 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:161 W 6f4a2500dbb6916c4722fdd8b38e6944 ffff 0
+0:162 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:162 W cca7825d3813eec9a47f5a3510ebc6a1 ffff 0
+0:163 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:163 W 2904dfba95704b2601dcb7926d4823fe ffff 0
+0:164 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:164 W 86613c17f2cda8835e3914efcaa5805b ffff 0
+0:165 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:165 W e3be99744f2a05e0bb96714c2702ddb8 ffff 0
+0:166 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:167 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:168 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:169 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:169 W 401bf6d1ac87623d18f3cea9845f3a15 ffff 0
+0:170 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:170 W 9d78532e09e4bf9a75502b06e1bc9772 ffff 0
+0:171 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:171 W fad5b08b66411cf7d2ad88633e19f4cf ffff 0
+0:172 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:172 W 57320de8c39e79542f0ae5c09b76512c ffff 0
+0:173 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:173 W b48f6a4520fbd6b18c67421df8d3ae89 ffff 0
+0:174 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:174 W 11ecc7a27d58330ee9c49f7a55300be6 ffff 0
+0:175 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:175 W 6e4924ffdab5906b4621fcd7b28d6843 ffff 0
+0:176 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:176 W cba6815c3712edc8a37e59340feac5a0 ffff 1
+0:177 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:177 B 00
+0:178 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:178 DATA 85603b16f1cca7825d3813eec9a47f5a ffff 0
+0:179 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:179 DATA e2bd98734e2904dfba95704b2601dcb7 ffff 0
+0:180 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:180 DATA 3f1af5d0ab86613c17f2cda8835e3914 ffff 0
+0:181 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:181 DATA 9c77522d08e3be99744f2a05e0bb9671 ffff 0
+0:182 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:182 DATA f9d4af8a65401bf6d1ac87623d18f3ce ffff 0
+0:183 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:183 DATA 56310ce7c29d78532e09e4bf9a75502b ffff 0
+0:184 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:184 DATA b38e69441ffad5b08b66411cf7d2ad88 ffff 0
+0:185 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:185 DATA 10ebc6a17c57320de8c39e79542f0ae5 ffff 0
+0:186 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:186 DATA 6d4823fed9b48f6a4520fbd6b18c6742 ffff 0
+0:187 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:187 DATA caa5805b3611ecc7a27d58330ee9c49f ffff 0
+0:188 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:188 DATA 2702ddb8936e4924ffdab5906b4621fc ffff 0
+0:189 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:189 DATA 845f3a15f0cba6815c3712edc8a37e59 ffff 0
+0:190 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:190 DATA e1bc97724d2803deb9946f4a2500dbb6 ffff 0
+0:191 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:191 DATA 3e19f4cfaa85603b16f1cca7825d3813 ffff 0
+0:192 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:192 DATA 9b76512c07e2bd98734e2904dfba9570 ffff 0
+0:193 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:193 DATA f8d3ae89643f1af5d0ab86613c17f2cd ffff 0
+0:194 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:194 AW 0000080001f1
+0:195 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:195 W 2803deb9946f4a2500dbb6916c4722fd ffff 0
+0:196 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:196 W 85603b16f1cca7825d3813eec9a47f5a ffff 0
+0:197 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:197 W e2bd98734e2904dfba95704b2601dcb7 ffff 0
+0:198 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:198 W 3f1af5d0ab86613c17f2cda8835e3914 ffff 0
+0:199 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:200 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:201 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:202 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:202 W 9c77522d08e3be99744f2a05e0bb9671 ffff 0
+0:203 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:203 W f9d4af8a65401bf6d1ac87623d18f3ce ffff 0
+0:204 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:204 W 56310ce7c29d78532e09e4bf9a75502b ffff 0
+0:205 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:205 W b38e69441ffad5b08b66411cf7d2ad88 ffff 0
+0:206 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:206 W 10ebc6a17c57320de8c39e79542f0ae5 ffff 0
+0:207 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:207 W 6d4823fed9b48f6a4520fbd6b18c6742 ffff 0
+0:208 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:208 W caa5805b3611ecc7a27d58330ee9c49f ffff 0
+0:209 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:209 W 2702ddb8936e4924ffdab5906b4621fc ffff 0
+0:210 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:211 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:212 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:213 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:213 W 845f3a15f0cba6815c3712edc8a37e59 ffff 0
+0:214 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:214 W e1bc97724d2803deb9946f4a2500dbb6 ffff 0
+0:215 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:215 W 3e19f4cfaa85603b16f1cca7825d3813 ffff 0
+0:216 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:216 W 9b76512c07e2bd98734e2904dfba9570 ffff 1
+0:217 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:217 B 00
+0:218 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:218 DATA 55300be6c19c77522d08e3be99744f2a ffff 0
+0:219 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:219 DATA b28d68431ef9d4af8a65401bf6d1ac87 ffff 0
+0:220 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:220 DATA 0feac5a07b56310ce7c29d78532e09e4 ffff 0
+0:221 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:221 DATA 6c4722fdd8b38e69441ffad5b08b6641 ffff 0
+0:222 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:222 DATA c9a47f5a3510ebc6a17c57320de8c39e ffff 0
+0:223 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:223 DATA 2601dcb7926d4823fed9b48f6a4520fb ffff 0
+0:224 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:224 DATA 835e3914efcaa5805b3611ecc7a27d58 ffff 0
+0:225 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:225 DATA e0bb96714c2702ddb8936e4924ffdab5 ffff 0
+0:226 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:226 DATA 3d18f3cea9845f3a15f0cba6815c3712 ffff 0
+0:227 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:227 DATA 9a75502b06e1bc97724d2803deb9946f ffff 0
+0:228 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:228 DATA f7d2ad88633e19f4cfaa85603b16f1cc ffff 0
+0:229 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:229 DATA 542f0ae5c09b76512c07e2bd98734e29 ffff 0
+0:230 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:230 DATA b18c67421df8d3ae89643f1af5d0ab86 ffff 0
+0:231 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:231 DATA 0ee9c49f7a55300be6c19c77522d08e3 ffff 0
+0:232 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:232 DATA 6b4621fcd7b28d68431ef9d4af8a6540 ffff 0
+0:233 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:233 DATA c8a37e59340feac5a07b56310ce7c29d ffff 0
+0:234 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:234 AW 00000a0001f1
+0:235 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:235 W f8d3ae89643f1af5d0ab86613c17f2cd ffff 0
+0:236 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:236 W 55300be6c19c77522d08e3be99744f2a ffff 0
+0:237 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:237 W b28d68431ef9d4af8a65401bf6d1ac87 ffff 0
+0:238 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:238 W 0feac5a07b56310ce7c29d78532e09e4 ffff 0
+0:239 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:239 W 6c4722fdd8b38e69441ffad5b08b6641 ffff 0
+0:240 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:240 W c9a47f5a3510ebc6a17c57320de8c39e ffff 0
+0:241 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:241 W 2601dcb7926d4823fed9b48f6a4520fb ffff 0
+0:242 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:242 W 835e3914efcaa5805b3611ecc7a27d58 ffff 0
+0:243 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:244 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:245 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:246 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:246 W e0bb96714c2702ddb8936e4924ffdab5 ffff 0
+0:247 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:247 W 3d18f3cea9845f3a15f0cba6815c3712 ffff 0
+0:248 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:248 W 9a75502b06e1bc97724d2803deb9946f ffff 0
+0:249 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:249 W f7d2ad88633e19f4cfaa85603b16f1cc ffff 0
+0:250 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:250 W 542f0ae5c09b76512c07e2bd98734e29 ffff 0
+0:251 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:251 W b18c67421df8d3ae89643f1af5d0ab86 ffff 0
+0:252 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:252 W 0ee9c49f7a55300be6c19c77522d08e3 ffff 0
+0:253 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:253 W 6b4621fcd7b28d68431ef9d4af8a6540 ffff 1
+0:254 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:254 B 00
+0:255 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:255 DATA 2500dbb6916c4722fdd8b38e69441ffa ffff 0
+0:256 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:256 DATA 825d3813eec9a47f5a3510ebc6a17c57 ffff 0
+0:257 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:257 DATA dfba95704b2601dcb7926d4823fed9b4 ffff 0
+0:258 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:258 DATA 3c17f2cda8835e3914efcaa5805b3611 ffff 0
+0:259 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:259 DATA 99744f2a05e0bb96714c2702ddb8936e ffff 0
+0:260 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:260 DATA f6d1ac87623d18f3cea9845f3a15f0cb ffff 0
+0:261 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:261 DATA 532e09e4bf9a75502b06e1bc97724d28 ffff 0
+0:262 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:262 DATA b08b66411cf7d2ad88633e19f4cfaa85 ffff 0
+0:263 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:263 DATA 0de8c39e79542f0ae5c09b76512c07e2 ffff 0
+0:264 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:264 DATA 6a4520fbd6b18c67421df8d3ae89643f ffff 0
+0:265 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:265 DATA c7a27d58330ee9c49f7a55300be6c19c ffff 0
+0:266 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:266 DATA 24ffdab5906b4621fcd7b28d68431ef9 ffff 0
+0:267 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:267 DATA 815c3712edc8a37e59340feac5a07b56 ffff 0
+0:268 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:268 DATA deb9946f4a2500dbb6916c4722fdd8b3 ffff 0
+0:269 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:269 DATA 3b16f1cca7825d3813eec9a47f5a3510 ffff 0
+0:270 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:270 DATA 98734e2904dfba95704b2601dcb7926d ffff 0
+0:271 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:271 AW 00000c0001f1
+0:272 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:272 W c8a37e59340feac5a07b56310ce7c29d ffff 0
+0:273 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:273 W 2500dbb6916c4722fdd8b38e69441ffa ffff 0
+0:274 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:274 W 825d3813eec9a47f5a3510ebc6a17c57 ffff 0
+0:275 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:275 W dfba95704b2601dcb7926d4823fed9b4 ffff 0
+0:276 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:277 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:278 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:279 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:279 W 3c17f2cda8835e3914efcaa5805b3611 ffff 0
+0:280 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:280 W 99744f2a05e0bb96714c2702ddb8936e ffff 0
+0:281 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:281 W f6d1ac87623d18f3cea9845f3a15f0cb ffff 0
+0:282 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:282 W 532e09e4bf9a75502b06e1bc97724d28 ffff 0
+0:283 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:283 W b08b66411cf7d2ad88633e19f4cfaa85 ffff 0
+0:284 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:284 W 0de8c39e79542f0ae5c09b76512c07e2 ffff 0
+0:285 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:285 W 6a4520fbd6b18c67421df8d3ae89643f ffff 0
+0:286 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:286 W c7a27d58330ee9c49f7a55300be6c19c ffff 0
+0:287 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:288 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:289 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:290 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:290 W 24ffdab5906b4621fcd7b28d68431ef9 ffff 0
+0:291 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:291 W 815c3712edc8a37e59340feac5a07b56 ffff 0
+0:292 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:292 W deb9946f4a2500dbb6916c4722fdd8b3 ffff 0
+0:293 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:293 W 3b16f1cca7825d3813eec9a47f5a3510 ffff 1
+0:294 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:294 B 00
+0:295 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:295 DATA f5d0ab86613c17f2cda8835e3914efca ffff 0
+0:296 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:296 DATA 522d08e3be99744f2a05e0bb96714c27 ffff 0
+0:297 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:297 DATA af8a65401bf6d1ac87623d18f3cea984 ffff 0
+0:298 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:298 DATA 0ce7c29d78532e09e4bf9a75502b06e1 ffff 0
+0:299 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:299 DATA 69441ffad5b08b66411cf7d2ad88633e ffff 0
+0:300 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:300 DATA c6a17c57320de8c39e79542f0ae5c09b ffff 0
+0:301 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:301 DATA 23fed9b48f6a4520fbd6b18c67421df8 ffff 0
+0:302 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:302 DATA 805b3611ecc7a27d58330ee9c49f7a55 ffff 0
+0:303 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:303 DATA ddb8936e4924ffdab5906b4621fcd7b2 ffff 0
+0:304 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:304 DATA 3a15f0cba6815c3712edc8a37e59340f ffff 0
+0:305 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:305 DATA 97724d2803deb9946f4a2500dbb6916c ffff 0
+0:306 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:306 DATA f4cfaa85603b16f1cca7825d3813eec9 ffff 0
+0:307 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:307 DATA 512c07e2bd98734e2904dfba95704b26 ffff 0
+0:308 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:308 DATA ae89643f1af5d0ab86613c17f2cda883 ffff 0
+0:309 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:309 DATA 0be6c19c77522d08e3be99744f2a05e0 ffff 0
+0:310 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:310 DATA 68431ef9d4af8a65401bf6d1ac87623d ffff 0
+0:311 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:311 AW 00000e0001f1
+0:312 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:312 W 98734e2904dfba95704b2601dcb7926d ffff 0
+0:313 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:313 W f5d0ab86613c17f2cda8835e3914efca ffff 0
+0:314 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:314 W 522d08e3be99744f2a05e0bb96714c27 ffff 0
+0:315 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:315 W af8a65401bf6d1ac87623d18f3cea984 ffff 0
+0:316 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:316 W 0ce7c29d78532e09e4bf9a75502b06e1 ffff 0
+0:317 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:317 W 69441ffad5b08b66411cf7d2ad88633e ffff 0
+0:318 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:318 W c6a17c57320de8c39e79542f0ae5c09b ffff 0
+0:319 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:319 W 23fed9b48f6a4520fbd6b18c67421df8 ffff 0
+0:320 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:321 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:322 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:323 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:323 W 805b3611ecc7a27d58330ee9c49f7a55 ffff 0
+0:324 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:324 W ddb8936e4924ffdab5906b4621fcd7b2 ffff 0
+0:325 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:325 W 3a15f0cba6815c3712edc8a37e59340f ffff 0
+0:326 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:326 W 97724d2803deb9946f4a2500dbb6916c ffff 0
+0:327 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:327 W f4cfaa85603b16f1cca7825d3813eec9 ffff 0
+0:328 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:328 W 512c07e2bd98734e2904dfba95704b26 ffff 0
+0:329 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:329 W ae89643f1af5d0ab86613c17f2cda883 ffff 0
+0:330 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:330 W 0be6c19c77522d08e3be99744f2a05e0 ffff 1
+0:331 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:331 B 00
+0:332 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:332 DATA c5a07b56310ce7c29d78532e09e4bf9a ffff 0
+0:333 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:333 DATA 22fdd8b38e69441ffad5b08b66411cf7 ffff 0
+0:334 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:334 DATA 7f5a3510ebc6a17c57320de8c39e7954 ffff 0
+0:335 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:335 DATA dcb7926d4823fed9b48f6a4520fbd6b1 ffff 0
+0:336 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:336 DATA 3914efcaa5805b3611ecc7a27d58330e ffff 0
+0:337 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:337 DATA 96714c2702ddb8936e4924ffdab5906b ffff 0
+0:338 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:338 DATA f3cea9845f3a15f0cba6815c3712edc8 ffff 0
+0:339 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:339 DATA 502b06e1bc97724d2803deb9946f4a25 ffff 0
+0:340 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:340 DATA ad88633e19f4cfaa85603b16f1cca782 ffff 0
+0:341 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:341 DATA 0ae5c09b76512c07e2bd98734e2904df ffff 0
+0:342 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:342 DATA 67421df8d3ae89643f1af5d0ab86613c ffff 0
+0:343 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:343 DATA c49f7a55300be6c19c77522d08e3be99 ffff 0
+0:344 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:344 DATA 21fcd7b28d68431ef9d4af8a65401bf6 ffff 0
+0:345 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:345 DATA 7e59340feac5a07b56310ce7c29d7853 ffff 0
+0:346 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:346 DATA dbb6916c4722fdd8b38e69441ffad5b0 ffff 0
+0:347 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:347 DATA 3813eec9a47f5a3510ebc6a17c57320d ffff 0
+0:348 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:348 AW 0000100001f1
+0:349 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:349 W 68431ef9d4af8a65401bf6d1ac87623d ffff 0
+0:350 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:350 W c5a07b56310ce7c29d78532e09e4bf9a ffff 0
+0:351 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:351 W 22fdd8b38e69441ffad5b08b66411cf7 ffff 0
+0:352 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:352 W 7f5a3510ebc6a17c57320de8c39e7954 ffff 0
+0:353 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:354 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:355 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:356 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:356 W dcb7926d4823fed9b48f6a4520fbd6b1 ffff 0
+0:357 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:357 W 3914efcaa5805b3611ecc7a27d58330e ffff 0
+0:358 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:358 W 96714c2702ddb8936e4924ffdab5906b ffff 0
+0:359 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:359 W f3cea9845f3a15f0cba6815c3712edc8 ffff 0
+0:360 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:360 W 502b06e1bc97724d2803deb9946f4a25 ffff 0
+0:361 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:361 W ad88633e19f4cfaa85603b16f1cca782 ffff 0
+0:362 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:362 W 0ae5c09b76512c07e2bd98734e2904df ffff 0
+0:363 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:363 W 67421df8d3ae89643f1af5d0ab86613c ffff 0
+0:364 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:365 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:366 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:367 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:367 W c49f7a55300be6c19c77522d08e3be99 ffff 0
+0:368 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:368 W 21fcd7b28d68431ef9d4af8a65401bf6 ffff 0
+0:369 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:369 W 7e59340feac5a07b56310ce7c29d7853 ffff 0
+0:370 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:370 W dbb6916c4722fdd8b38e69441ffad5b0 ffff 1
+0:371 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:371 B 00
+0:372 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:372 DATA 95704b2601dcb7926d4823fed9b48f6a ffff 0
+0:373 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:373 DATA f2cda8835e3914efcaa5805b3611ecc7 ffff 0
+0:374 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:374 DATA 4f2a05e0bb96714c2702ddb8936e4924 ffff 0
+0:375 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:375 DATA ac87623d18f3cea9845f3a15f0cba681 ffff 0
+0:376 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:376 DATA 09e4bf9a75502b06e1bc97724d2803de ffff 0
+0:377 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:377 DATA 66411cf7d2ad88633e19f4cfaa85603b ffff 0
+0:378 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:378 DATA c39e79542f0ae5c09b76512c07e2bd98 ffff 0
+0:379 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:379 DATA 20fbd6b18c67421df8d3ae89643f1af5 ffff 0
+0:380 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:380 DATA 7d58330ee9c49f7a55300be6c19c7752 ffff 0
+0:381 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:381 DATA dab5906b4621fcd7b28d68431ef9d4af ffff 0
+0:382 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:382 DATA 3712edc8a37e59340feac5a07b56310c ffff 0
+0:383 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:383 DATA 946f4a2500dbb6916c4722fdd8b38e69 ffff 0
+0:384 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:384 DATA f1cca7825d3813eec9a47f5a3510ebc6 ffff 0
+0:385 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:385 DATA 4e2904dfba95704b2601dcb7926d4823 ffff 0
+0:386 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:386 DATA ab86613c17f2cda8835e3914efcaa580 ffff 0
+0:387 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:387 DATA 08e3be99744f2a05e0bb96714c2702dd ffff 0
+0:388 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:388 AW 0000120001f1
+0:389 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:389 W 3813eec9a47f5a3510ebc6a17c57320d ffff 0
+0:390 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:390 W 95704b2601dcb7926d4823fed9b48f6a ffff 0
+0:391 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:391 W f2cda8835e3914efcaa5805b3611ecc7 ffff 0
+0:392 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:392 W 4f2a05e0bb96714c2702ddb8936e4924 ffff 0
+0:393 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:393 W ac87623d18f3cea9845f3a15f0cba681 ffff 0
+0:394 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:394 W 09e4bf9a75502b06e1bc97724d2803de ffff 0
+0:395 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:395 W 66411cf7d2ad88633e19f4cfaa85603b ffff 0
+0:396 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:396 W c39e79542f0ae5c09b76512c07e2bd98 ffff 0
+0:397 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:398 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:399 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:400 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:400 W 20fbd6b18c67421df8d3ae89643f1af5 ffff 0
+0:401 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:401 W 7d58330ee9c49f7a55300be6c19c7752 ffff 0
+0:402 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:402 W dab5906b4621fcd7b28d68431ef9d4af ffff 0
+0:403 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:403 W 3712edc8a37e59340feac5a07b56310c ffff 0
+0:404 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:404 W 946f4a2500dbb6916c4722fdd8b38e69 ffff 0
+0:405 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:405 W f1cca7825d3813eec9a47f5a3510ebc6 ffff 0
+0:406 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:406 W 4e2904dfba95704b2601dcb7926d4823 ffff 0
+0:407 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:407 W ab86613c17f2cda8835e3914efcaa580 ffff 1
+0:408 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:408 B 00
+0:409 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:409 DATA 65401bf6d1ac87623d18f3cea9845f3a ffff 0
+0:410 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:410 DATA c29d78532e09e4bf9a75502b06e1bc97 ffff 0
+0:411 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:411 DATA 1ffad5b08b66411cf7d2ad88633e19f4 ffff 0
+0:412 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:412 DATA 7c57320de8c39e79542f0ae5c09b7651 ffff 0
+0:413 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:413 DATA d9b48f6a4520fbd6b18c67421df8d3ae ffff 0
+0:414 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:414 DATA 3611ecc7a27d58330ee9c49f7a55300b ffff 0
+0:415 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:415 DATA 936e4924ffdab5906b4621fcd7b28d68 ffff 0
+0:416 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:416 DATA f0cba6815c3712edc8a37e59340feac5 ffff 0
+0:417 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:417 DATA 4d2803deb9946f4a2500dbb6916c4722 ffff 0
+0:418 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:418 DATA aa85603b16f1cca7825d3813eec9a47f ffff 0
+0:419 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:419 DATA 07e2bd98734e2904dfba95704b2601dc ffff 0
+0:420 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:420 DATA 643f1af5d0ab86613c17f2cda8835e39 ffff 0
+0:421 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:421 DATA c19c77522d08e3be99744f2a05e0bb96 ffff 0
+0:422 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:422 DATA 1ef9d4af8a65401bf6d1ac87623d18f3 ffff 0
+0:423 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:423 DATA 7b56310ce7c29d78532e09e4bf9a7550 ffff 0
+0:424 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:424 DATA d8b38e69441ffad5b08b66411cf7d2ad ffff 0
+0:425 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:425 AW 0000140001f1
+0:426 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:426 W 08e3be99744f2a05e0bb96714c2702dd ffff 0
+0:427 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:427 W 65401bf6d1ac87623d18f3cea9845f3a ffff 0
+0:428 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:428 W c29d78532e09e4bf9a75502b06e1bc97 ffff 0
+0:429 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:429 W 1ffad5b08b66411cf7d2ad88633e19f4 ffff 0
+0:430 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:431 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:432 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:433 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:433 W 7c57320de8c39e79542f0ae5c09b7651 ffff 0
+0:434 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:434 W d9b48f6a4520fbd6b18c67421df8d3ae ffff 0
+0:435 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:435 W 3611ecc7a27d58330ee9c49f7a55300b ffff 0
+0:436 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:436 W 936e4924ffdab5906b4621fcd7b28d68 ffff 0
+0:437 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:437 W f0cba6815c3712edc8a37e59340feac5 ffff 0
+0:438 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:438 W 4d2803deb9946f4a2500dbb6916c4722 ffff 0
+0:439 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:439 W aa85603b16f1cca7825d3813eec9a47f ffff 0
+0:440 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:440 W 07e2bd98734e2904dfba95704b2601dc ffff 0
+0:441 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:442 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:443 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:444 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:444 W 643f1af5d0ab86613c17f2cda8835e39 ffff 0
+0:445 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:445 W c19c77522d08e3be99744f2a05e0bb96 ffff 0
+0:446 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:446 W 1ef9d4af8a65401bf6d1ac87623d18f3 ffff 0
+0:447 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:447 W 7b56310ce7c29d78532e09e4bf9a7550 ffff 1
+0:448 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:448 B 00
+0:449 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:449 DATA 3510ebc6a17c57320de8c39e79542f0a ffff 0
+0:450 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:450 DATA 926d4823fed9b48f6a4520fbd6b18c67 ffff 0
+0:451 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:451 DATA efcaa5805b3611ecc7a27d58330ee9c4 ffff 0
+0:452 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:452 DATA 4c2702ddb8936e4924ffdab5906b4621 ffff 0
+0:453 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:453 DATA a9845f3a15f0cba6815c3712edc8a37e ffff 0
+0:454 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:454 DATA 06e1bc97724d2803deb9946f4a2500db ffff 0
+0:455 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:455 DATA 633e19f4cfaa85603b16f1cca7825d38 ffff 0
+0:456 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:456 DATA c09b76512c07e2bd98734e2904dfba95 ffff 0
+0:457 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:457 DATA 1df8d3ae89643f1af5d0ab86613c17f2 ffff 0
+0:458 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:458 DATA 7a55300be6c19c77522d08e3be99744f ffff 0
+0:459 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:459 DATA d7b28d68431ef9d4af8a65401bf6d1ac ffff 0
+0:460 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:460 DATA 340feac5a07b56310ce7c29d78532e09 ffff 0
+0:461 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:461 DATA 916c4722fdd8b38e69441ffad5b08b66 ffff 0
+0:462 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:462 DATA eec9a47f5a3510ebc6a17c57320de8c3 ffff 0
+0:463 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:463 DATA 4b2601dcb7926d4823fed9b48f6a4520 ffff 0
+0:464 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:464 DATA a8835e3914efcaa5805b3611ecc7a27d ffff 0
+0:465 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:465 AW 0000160001f1
+0:466 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:466 W d8b38e69441ffad5b08b66411cf7d2ad ffff 0
+0:467 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:467 W 3510ebc6a17c57320de8c39e79542f0a ffff 0
+0:468 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:468 W 926d4823fed9b48f6a4520fbd6b18c67 ffff 0
+0:469 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:469 W efcaa5805b3611ecc7a27d58330ee9c4 ffff 0
+0:470 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:470 W 4c2702ddb8936e4924ffdab5906b4621 ffff 0
+0:471 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:471 W a9845f3a15f0cba6815c3712edc8a37e ffff 0
+0:472 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:472 W 06e1bc97724d2803deb9946f4a2500db ffff 0
+0:473 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:473 W 633e19f4cfaa85603b16f1cca7825d38 ffff 0
+0:474 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:475 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:476 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:477 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:477 W c09b76512c07e2bd98734e2904dfba95 ffff 0
+0:478 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:478 W 1df8d3ae89643f1af5d0ab86613c17f2 ffff 0
+0:479 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:479 W 7a55300be6c19c77522d08e3be99744f ffff 0
+0:480 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:480 W d7b28d68431ef9d4af8a65401bf6d1ac ffff 0
+0:481 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:481 W 340feac5a07b56310ce7c29d78532e09 ffff 0
+0:482 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:482 W 916c4722fdd8b38e69441ffad5b08b66 ffff 0
+0:483 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:483 W eec9a47f5a3510ebc6a17c57320de8c3 ffff 0
+0:484 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:484 W 4b2601dcb7926d4823fed9b48f6a4520 ffff 1
+0:485 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:485 B 00
+0:486 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:486 DATA 05e0bb96714c2702ddb8936e4924ffda ffff 0
+0:487 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:487 DATA 623d18f3cea9845f3a15f0cba6815c37 ffff 0
+0:488 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:488 DATA bf9a75502b06e1bc97724d2803deb994 ffff 0
+0:489 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:489 DATA 1cf7d2ad88633e19f4cfaa85603b16f1 ffff 0
+0:490 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:490 DATA 79542f0ae5c09b76512c07e2bd98734e ffff 0
+0:491 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:491 DATA d6b18c67421df8d3ae89643f1af5d0ab ffff 0
+0:492 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:492 DATA 330ee9c49f7a55300be6c19c77522d08 ffff 0
+0:493 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:493 DATA 906b4621fcd7b28d68431ef9d4af8a65 ffff 0
+0:494 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:494 DATA edc8a37e59340feac5a07b56310ce7c2 ffff 0
+0:495 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:495 DATA 4a2500dbb6916c4722fdd8b38e69441f ffff 0
+0:496 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:496 DATA a7825d3813eec9a47f5a3510ebc6a17c ffff 0
+0:497 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:497 DATA 04dfba95704b2601dcb7926d4823fed9 ffff 0
+0:498 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:498 DATA 613c17f2cda8835e3914efcaa5805b36 ffff 0
+0:499 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:499 DATA be99744f2a05e0bb96714c2702ddb893 ffff 0
+0:500 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:500 DATA 1bf6d1ac87623d18f3cea9845f3a15f0 ffff 0
+0:501 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:501 DATA 78532e09e4bf9a75502b06e1bc97724d ffff 0
+0:502 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:502 AW 0000180001f1
+0:503 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:503 W a8835e3914efcaa5805b3611ecc7a27d ffff 0
+0:504 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:504 W 05e0bb96714c2702ddb8936e4924ffda ffff 0
+0:505 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:505 W 623d18f3cea9845f3a15f0cba6815c37 ffff 0
+0:506 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:506 W bf9a75502b06e1bc97724d2803deb994 ffff 0
+0:507 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:508 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:509 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:510 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:510 W 1cf7d2ad88633e19f4cfaa85603b16f1 ffff 0
+0:511 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:511 W 79542f0ae5c09b76512c07e2bd98734e ffff 0
+0:512 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:512 W d6b18c67421df8d3ae89643f1af5d0ab ffff 0
+0:513 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:513 W 330ee9c49f7a55300be6c19c77522d08 ffff 0
+0:514 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:514 W 906b4621fcd7b28d68431ef9d4af8a65 ffff 0
+0:515 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:515 W edc8a37e59340feac5a07b56310ce7c2 ffff 0
+0:516 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:516 W 4a2500dbb6916c4722fdd8b38e69441f ffff 0
+0:517 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:517 W a7825d3813eec9a47f5a3510ebc6a17c ffff 0
+0:518 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:519 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:520 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:521 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:521 W 04dfba95704b2601dcb7926d4823fed9 ffff 0
+0:522 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:522 W 613c17f2cda8835e3914efcaa5805b36 ffff 0
+0:523 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:523 W be99744f2a05e0bb96714c2702ddb893 ffff 0
+0:524 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:524 W 1bf6d1ac87623d18f3cea9845f3a15f0 ffff 1
+0:525 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:525 B 00
+0:526 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:526 DATA d5b08b66411cf7d2ad88633e19f4cfaa ffff 0
+0:527 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:527 DATA 320de8c39e79542f0ae5c09b76512c07 ffff 0
+0:528 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:528 DATA 8f6a4520fbd6b18c67421df8d3ae8964 ffff 0
+0:529 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:529 DATA ecc7a27d58330ee9c49f7a55300be6c1 ffff 0
+0:530 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:530 DATA 4924ffdab5906b4621fcd7b28d68431e ffff 0
+0:531 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:531 DATA a6815c3712edc8a37e59340feac5a07b ffff 0
+0:532 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:532 DATA 03deb9946f4a2500dbb6916c4722fdd8 ffff 0
+0:533 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:533 DATA 603b16f1cca7825d3813eec9a47f5a35 ffff 0
+0:534 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:534 DATA bd98734e2904dfba95704b2601dcb792 ffff 0
+0:535 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:535 DATA 1af5d0ab86613c17f2cda8835e3914ef ffff 0
+0:536 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:536 DATA 77522d08e3be99744f2a05e0bb96714c ffff 0
+0:537 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:537 DATA d4af8a65401bf6d1ac87623d18f3cea9 ffff 0
+0:538 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:538 DATA 310ce7c29d78532e09e4bf9a75502b06 ffff 0
+0:539 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:539 DATA 8e69441ffad5b08b66411cf7d2ad8863 ffff 0
+0:540 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:540 DATA ebc6a17c57320de8c39e79542f0ae5c0 ffff 0
+0:541 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:541 DATA 4823fed9b48f6a4520fbd6b18c67421d ffff 0
+0:542 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:542 AW 00001a0001f1
+0:543 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:543 W 78532e09e4bf9a75502b06e1bc97724d ffff 0
+0:544 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:544 W d5b08b66411cf7d2ad88633e19f4cfaa ffff 0
+0:545 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:545 W 320de8c39e79542f0ae5c09b76512c07 ffff 0
+0:546 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:546 W 8f6a4520fbd6b18c67421df8d3ae8964 ffff 0
+0:547 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:547 W ecc7a27d58330ee9c49f7a55300be6c1 ffff 0
+0:548 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:548 W 4924ffdab5906b4621fcd7b28d68431e ffff 0
+0:549 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:549 W a6815c3712edc8a37e59340feac5a07b ffff 0
+0:550 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:550 W 03deb9946f4a2500dbb6916c4722fdd8 ffff 0
+0:551 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:552 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:553 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:554 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:554 W 603b16f1cca7825d3813eec9a47f5a35 ffff 0
+0:555 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:555 W bd98734e2904dfba95704b2601dcb792 ffff 0
+0:556 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:556 W 1af5d0ab86613c17f2cda8835e3914ef ffff 0
+0:557 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:557 W 77522d08e3be99744f2a05e0bb96714c ffff 0
+0:558 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:558 W d4af8a65401bf6d1ac87623d18f3cea9 ffff 0
+0:559 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:559 W 310ce7c29d78532e09e4bf9a75502b06 ffff 0
+0:560 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:560 W 8e69441ffad5b08b66411cf7d2ad8863 ffff 0
+0:561 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:561 W ebc6a17c57320de8c39e79542f0ae5c0 ffff 1
+0:562 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:562 B 00
+0:563 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:563 DATA a5805b3611ecc7a27d58330ee9c49f7a ffff 0
+0:564 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:564 DATA 02ddb8936e4924ffdab5906b4621fcd7 ffff 0
+0:565 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:565 DATA 5f3a15f0cba6815c3712edc8a37e5934 ffff 0
+0:566 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:566 DATA bc97724d2803deb9946f4a2500dbb691 ffff 0
+0:567 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:567 DATA 19f4cfaa85603b16f1cca7825d3813ee ffff 0
+0:568 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:568 DATA 76512c07e2bd98734e2904dfba95704b ffff 0
+0:569 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:569 DATA d3ae89643f1af5d0ab86613c17f2cda8 ffff 0
+0:570 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:570 DATA 300be6c19c77522d08e3be99744f2a05 ffff 0
+0:571 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:571 DATA 8d68431ef9d4af8a65401bf6d1ac8762 ffff 0
+0:572 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:572 DATA eac5a07b56310ce7c29d78532e09e4bf ffff 0
+0:573 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:573 DATA 4722fdd8b38e69441ffad5b08b66411c ffff 0
+0:574 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:574 DATA a47f5a3510ebc6a17c57320de8c39e79 ffff 0
+0:575 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:575 DATA 01dcb7926d4823fed9b48f6a4520fbd6 ffff 0
+0:576 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:576 DATA 5e3914efcaa5805b3611ecc7a27d5833 ffff 0
+0:577 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:577 DATA bb96714c2702ddb8936e4924ffdab590 ffff 0
+0:578 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:578 DATA 18f3cea9845f3a15f0cba6815c3712ed ffff 0
+0:579 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:579 AW 00001c0001f1
+0:580 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:580 W 4823fed9b48f6a4520fbd6b18c67421d ffff 0
+0:581 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:581 W a5805b3611ecc7a27d58330ee9c49f7a ffff 0
+0:582 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:582 W 02ddb8936e4924ffdab5906b4621fcd7 ffff 0
+0:583 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:583 W 5f3a15f0cba6815c3712edc8a37e5934 ffff 0
+0:584 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:585 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:586 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:587 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:587 W bc97724d2803deb9946f4a2500dbb691 ffff 0
+0:588 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:588 W 19f4cfaa85603b16f1cca7825d3813ee ffff 0
+0:589 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:589 W 76512c07e2bd98734e2904dfba95704b ffff 0
+0:590 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:590 W d3ae89643f1af5d0ab86613c17f2cda8 ffff 0
+0:591 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:591 W 300be6c19c77522d08e3be99744f2a05 ffff 0
+0:592 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:592 W 8d68431ef9d4af8a65401bf6d1ac8762 ffff 0
+0:593 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:593 W eac5a07b56310ce7c29d78532e09e4bf ffff 0
+0:594 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:594 W 4722fdd8b38e69441ffad5b08b66411c ffff 0
+0:595 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:596 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:597 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:598 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:598 W a47f5a3510ebc6a17c57320de8c39e79 ffff 0
+0:599 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:599 W 01dcb7926d4823fed9b48f6a4520fbd6 ffff 0
+0:600 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:600 W 5e3914efcaa5805b3611ecc7a27d5833 ffff 0
+0:601 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:601 W bb96714c2702ddb8936e4924ffdab590 ffff 1
+0:602 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:602 B 00
+0:603 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:603 DATA 75502b06e1bc97724d2803deb9946f4a ffff 0
+0:604 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:604 DATA d2ad88633e19f4cfaa85603b16f1cca7 ffff 0
+0:605 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:605 DATA 2f0ae5c09b76512c07e2bd98734e2904 ffff 0
+0:606 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:606 DATA 8c67421df8d3ae89643f1af5d0ab8661 ffff 0
+0:607 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:607 DATA e9c49f7a55300be6c19c77522d08e3be ffff 0
+0:608 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:608 DATA 4621fcd7b28d68431ef9d4af8a65401b ffff 0
+0:609 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:609 DATA a37e59340feac5a07b56310ce7c29d78 ffff 0
+0:610 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:610 DATA 00dbb6916c4722fdd8b38e69441ffad5 ffff 0
+0:611 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:611 DATA 5d3813eec9a47f5a3510ebc6a17c5732 ffff 0
+0:612 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:612 DATA ba95704b2601dcb7926d4823fed9b48f ffff 0
+0:613 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:613 DATA 17f2cda8835e3914efcaa5805b3611ec ffff 0
+0:614 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:614 DATA 744f2a05e0bb96714c2702ddb8936e49 ffff 0
+0:615 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:615 DATA d1ac87623d18f3cea9845f3a15f0cba6 ffff 0
+0:616 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:616 DATA 2e09e4bf9a75502b06e1bc97724d2803 ffff 0
+0:617 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:617 DATA 8b66411cf7d2ad88633e19f4cfaa8560 ffff 0
+0:618 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:618 DATA e8c39e79542f0ae5c09b76512c07e2bd ffff 0
+0:619 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:619 AW 00001e0001f1
+0:620 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:620 W 18f3cea9845f3a15f0cba6815c3712ed ffff 0
+0:621 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:621 W 75502b06e1bc97724d2803deb9946f4a ffff 0
+0:622 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:622 W d2ad88633e19f4cfaa85603b16f1cca7 ffff 0
+0:623 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:623 W 2f0ae5c09b76512c07e2bd98734e2904 ffff 0
+0:624 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:624 W 8c67421df8d3ae89643f1af5d0ab8661 ffff 0
+0:625 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:625 W e9c49f7a55300be6c19c77522d08e3be ffff 0
+0:626 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:626 W 4621fcd7b28d68431ef9d4af8a65401b ffff 0
+0:627 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:627 W a37e59340feac5a07b56310ce7c29d78 ffff 0
+0:628 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:629 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:630 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:631 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:631 W 00dbb6916c4722fdd8b38e69441ffad5 ffff 0
+0:632 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:632 W 5d3813eec9a47f5a3510ebc6a17c5732 ffff 0
+0:633 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:633 W ba95704b2601dcb7926d4823fed9b48f ffff 0
+0:634 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:634 W 17f2cda8835e3914efcaa5805b3611ec ffff 0
+0:635 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:635 W 744f2a05e0bb96714c2702ddb8936e49 ffff 0
+0:636 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:636 W d1ac87623d18f3cea9845f3a15f0cba6 ffff 0
+0:637 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:637 W 2e09e4bf9a75502b06e1bc97724d2803 ffff 0
+0:638 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:638 W 8b66411cf7d2ad88633e19f4cfaa8560 ffff 1
+0:639 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:639 B 00
+0:640 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:640 DATA 4520fbd6b18c67421df8d3ae89643f1a ffff 0
+0:641 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:641 DATA a27d58330ee9c49f7a55300be6c19c77 ffff 0
+0:642 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:642 DATA ffdab5906b4621fcd7b28d68431ef9d4 ffff 0
+0:643 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:643 DATA 5c3712edc8a37e59340feac5a07b5631 007f 1
+0:644 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:644 RESULT 101 bytes=4167 epoch=20001065 quality=71
+0:645 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:645 AW 000020000091
+0:646 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:646 W e8c39e79542f0ae5c09b76512c07e2bd ffff 0
+0:647 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:647 W 4520fbd6b18c67421df8d3ae89643f1a ffff 0
+0:648 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:648 W a27d58330ee9c49f7a55300be6c19c77 ffff 0
+0:649 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:649 W ffdab5906b4621fcd7b28d68431ef9d4 ffff 0
+0:650 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:651 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:652 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:653 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:653 W 0000000000000000000feac5a07b5631 007f 1
+0:654 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:655 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:656 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:657 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:658 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:659 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:660 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:661 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:662 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:663 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:663 B 00
+0:664 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:665 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:666 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:667 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:668 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:669 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:670 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:671 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:671 ACK 40000000194640081948000419400000000000200104771008065
+0:672 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:672 START 201 cam=1 slot=3 gen=1
+0:673 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:673 DATA 20fbd6b18c67421df8d3ae89643f1af5 ffff 0
+0:674 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:674 DATA 7d58330ee9c49f7a55300be6c19c7752 ffff 0
+0:675 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:675 DATA dab5906b4621fcd7b28d68431ef9d4af 007f 1
+0:676 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:676 RESULT 201 bytes=39 epoch=200010c9 quality=71
+0:677 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:677 AW 180000000051
+0:678 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:678 W 20fbd6b18c67421df8d3ae89643f1af5 ffff 0
+0:679 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:679 W 7d58330ee9c49f7a55300be6c19c7752 ffff 0
+0:680 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:680 W 0000000000000000008d68431ef9d4af 007f 1
+0:681 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:682 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:683 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:684 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:685 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:685 READY 00000019400208e0f00087000362587fe0130ca000000000002320040ca400020ca47
+0:686 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:687 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:687 RETIRE slot=0 session=19002065 gen=1 safe=0
+0:688 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:689 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:690 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:691 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:692 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:692 RETIRE_RSP 3
+0:693 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:693 AR 0000000001f1
+0:694 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:694 R 7461cf3caa178572e04dbb289603f15e80
+0:694 PAYLOAD e8c39e79542f0ae5c09b76512c07e2bd ffff 0
+0:695 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:695 R 22907deb58c633a10efc69d744b21f8d00
+0:695 PAYLOAD 4520fbd6b18c67421df8d3ae89643f1a ffff 0
+0:696 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:696 R 513eac198774e24fbd2a9805f360ce3b80
+0:696 PAYLOAD a27d58330ee9c49f7a55300be6c19c77 ffff 0
+0:697 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:698 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:698 R 7fed5ac835a310fe6bd946b4218f7cea00
+0:698 PAYLOAD ffdab5906b4621fcd7b28d68431ef9d4 ffff 0
+0:699 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:699 R 2e1b8976e451bf2c9a07f562d03dab1880
+0:699 PAYLOAD 5c3712edc8a37e59340feac5a07b5631 ffff 0
+0:700 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:700 R 5cca37a512806ddb48b623917eec59c700
+0:700 PAYLOAD b9946f4a2500dbb6916c4722fdd8b38e ffff 0
+0:701 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:701 R 0b78e653c12e9c09f764d23fad1a887580
+0:701 PAYLOAD 16f1cca7825d3813eec9a47f5a3510eb ffff 0
+0:702 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:702 R 39a714826fdd4ab8259300ee5bc936a400
+0:702 PAYLOAD 734e2904dfba95704b2601dcb7926d48 ffff 0
+0:703 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:703 R 6855c3309e0bf966d441af1c8a77e55280
+0:703 PAYLOAD d0ab86613c17f2cda8835e3914efcaa5 ffff 0
+0:704 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:705 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:705 R 168471df4cba279502f05dcb38a6138100
+0:705 PAYLOAD 2d08e3be99744f2a05e0bb96714c2702 ffff 0
+0:706 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:706 R 4532a00dfb68d643b11e8c79e754c22f80
+0:706 PAYLOAD 8a65401bf6d1ac87623d18f3cea9845f ffff 0
+0:707 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:707 R 73e14ebc299704f25fcd3aa8158370de00
+0:707 PAYLOAD e7c29d78532e09e4bf9a75502b06e1bc ffff 0
+0:708 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:708 R 220ffd6ad845b3208e7be956c4319f0c80
+0:708 PAYLOAD 441ffad5b08b66411cf7d2ad88633e19 ffff 0
+0:709 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:709 R 50be2b9906f461cf3caa178572e04dbb00
+0:709 PAYLOAD a17c57320de8c39e79542f0ae5c09b76 ffff 0
+0:710 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:710 R 7f6cda47b522907deb58c633a10efc6980
+0:710 PAYLOAD fed9b48f6a4520fbd6b18c67421df8d3 ffff 0
+0:711 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:712 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:712 R 2d9b08f663d13eac198774e24fbd2a9801
+0:712 PAYLOAD 5b3611ecc7a27d58330ee9c49f7a5530 ffff 0
+0:713 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:714 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:715 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:715 AR 0000020001f1
+0:716 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:716 R 5c49b724927fed5ac835a310fe6bd94680
+0:716 PAYLOAD b8936e4924ffdab5906b4621fcd7b28d ffff 0
+0:717 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:717 R 0af865d340ae1b8976e451bf2c9a07f500
+0:717 PAYLOAD 15f0cba6815c3712edc8a37e59340fea ffff 0
+0:718 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:719 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:719 R 39269401ef5cca37a512806ddb48b62380
+0:719 PAYLOAD 724d2803deb9946f4a2500dbb6916c47 ffff 0
+0:720 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:720 R 67d542b01d8b78e653c12e9c09f764d200
+0:720 PAYLOAD cfaa85603b16f1cca7825d3813eec9a4 ffff 0
+0:721 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:721 R 1603f15ecc39a714826fdd4ab825930080
+0:721 PAYLOAD 2c07e2bd98734e2904dfba95704b2601 ffff 0
+0:722 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:722 R 44b21f8d7ae855c3309e0bf966d441af00
+0:722 PAYLOAD 89643f1af5d0ab86613c17f2cda8835e ffff 0
+0:723 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:723 R 7360ce3ba9168471df4cba279502f05d80
+0:723 PAYLOAD e6c19c77522d08e3be99744f2a05e0bb ffff 0
+0:724 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:724 R 218f7cea57c532a00dfb68d643b11e8c00
+0:724 PAYLOAD 431ef9d4af8a65401bf6d1ac87623d18 ffff 0
+0:725 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:726 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:726 R 503dab188673e14ebc299704f25fcd3a80
+0:726 PAYLOAD a07b56310ce7c29d78532e09e4bf9a75 ffff 0
+0:727 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:727 R 7eec59c734a20ffd6ad845b3208e7be900
+0:727 PAYLOAD fdd8b38e69441ffad5b08b66411cf7d2 ffff 0
+0:728 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:728 R 2d1a8875e350be2b9906f461cf3caa1780
+0:728 PAYLOAD 5a3510ebc6a17c57320de8c39e79542f ffff 0
+0:729 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:729 R 5bc936a411ff6cda47b522907deb58c600
+0:729 PAYLOAD b7926d4823fed9b48f6a4520fbd6b18c ffff 0
+0:730 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:730 R 0a77e552c02d9b08f663d13eac19877480
+0:730 PAYLOAD 14efcaa5805b3611ecc7a27d58330ee9 ffff 0
+0:731 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:731 R 38a613816edc49b724927fed5ac835a300
+0:731 PAYLOAD 714c2702ddb8936e4924ffdab5906b46 ffff 0
+0:732 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:733 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:733 R 6754c22f9d0af865d340ae1b8976e45180
+0:733 PAYLOAD cea9845f3a15f0cba6815c3712edc8a3 ffff 0
+0:734 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:734 R 158370de4bb9269401ef5cca37a5128001
+0:734 PAYLOAD 2b06e1bc97724d2803deb9946f4a2500 ffff 0
+0:735 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:736 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:737 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:737 AR 0000040001f1
+0:738 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:738 R 44319f0cfa67d542b01d8b78e653c12e80
+0:738 PAYLOAD 88633e19f4cfaa85603b16f1cca7825d ffff 0
+0:739 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:740 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:740 R 72e04dbb289603f15ecc39a714826fdd00
+0:740 PAYLOAD e5c09b76512c07e2bd98734e2904dfba ffff 0
+0:741 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:741 R 210efc69d744b21f8d7ae855c3309e0b80
+0:741 PAYLOAD 421df8d3ae89643f1af5d0ab86613c17 ffff 0
+0:742 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:742 R 4fbd2a9805f360ce3ba9168471df4cba00
+0:742 PAYLOAD 9f7a55300be6c19c77522d08e3be9974 ffff 0
+0:743 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:743 R 7e6bd946b4218f7cea57c532a00dfb6880
+0:743 PAYLOAD fcd7b28d68431ef9d4af8a65401bf6d1 ffff 0
+0:744 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:744 R 2c9a07f562d03dab188673e14ebc299700
+0:744 PAYLOAD 59340feac5a07b56310ce7c29d78532e ffff 0
+0:745 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:745 R 5b48b623917eec59c734a20ffd6ad84580
+0:745 PAYLOAD b6916c4722fdd8b38e69441ffad5b08b ffff 0
+0:746 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:747 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:747 R 09f764d23fad1a8875e350be2b9906f400
+0:747 PAYLOAD 13eec9a47f5a3510ebc6a17c57320de8 ffff 0
+0:748 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:748 R 38259300ee5bc936a411ff6cda47b52280
+0:748 PAYLOAD 704b2601dcb7926d4823fed9b48f6a45 ffff 0
+0:749 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:749 R 66d441af1c8a77e552c02d9b08f663d100
+0:749 PAYLOAD cda8835e3914efcaa5805b3611ecc7a2 ffff 0
+0:750 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:750 R 1502f05dcb38a613816edc49b724927f80
+0:750 PAYLOAD 2a05e0bb96714c2702ddb8936e4924ff ffff 0
+0:751 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:751 R 43b11e8c79e754c22f9d0af865d340ae00
+0:751 PAYLOAD 87623d18f3cea9845f3a15f0cba6815c ffff 0
+0:752 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:752 R 725fcd3aa8158370de4bb9269401ef5c80
+0:752 PAYLOAD e4bf9a75502b06e1bc97724d2803deb9 ffff 0
+0:753 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:754 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:754 R 208e7be956c4319f0cfa67d542b01d8b00
+0:754 PAYLOAD 411cf7d2ad88633e19f4cfaa85603b16 ffff 0
+0:755 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:755 R 4f3caa178572e04dbb289603f15ecc3980
+0:755 PAYLOAD 9e79542f0ae5c09b76512c07e2bd9873 ffff 0
+0:756 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:756 R 7deb58c633a10efc69d744b21f8d7ae801
+0:756 PAYLOAD fbd6b18c67421df8d3ae89643f1af5d0 ffff 0
+0:757 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:758 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:759 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:759 AR 0000060001f1
+0:760 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:761 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:761 R 2c198774e24fbd2a9805f360ce3ba91680
+0:761 PAYLOAD 58330ee9c49f7a55300be6c19c77522d ffff 0
+0:762 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:762 R 5ac835a310fe6bd946b4218f7cea57c500
+0:762 PAYLOAD b5906b4621fcd7b28d68431ef9d4af8a ffff 0
+0:763 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:763 R 0976e451bf2c9a07f562d03dab18867380
+0:763 PAYLOAD 12edc8a37e59340feac5a07b56310ce7 ffff 0
+0:764 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:764 R 37a512806ddb48b623917eec59c734a200
+0:764 PAYLOAD 6f4a2500dbb6916c4722fdd8b38e6944 ffff 0
+0:765 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:765 R 6653c12e9c09f764d23fad1a8875e35080
+0:765 PAYLOAD cca7825d3813eec9a47f5a3510ebc6a1 ffff 0
+0:766 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:766 R 14826fdd4ab8259300ee5bc936a411ff00
+0:766 PAYLOAD 2904dfba95704b2601dcb7926d4823fe ffff 0
+0:767 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:768 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:768 R 43309e0bf966d441af1c8a77e552c02d80
+0:768 PAYLOAD 86613c17f2cda8835e3914efcaa5805b ffff 0
+0:769 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:769 R 71df4cba279502f05dcb38a613816edc00
+0:769 PAYLOAD e3be99744f2a05e0bb96714c2702ddb8 ffff 0
+0:770 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:770 R 200dfb68d643b11e8c79e754c22f9d0a80
+0:770 PAYLOAD 401bf6d1ac87623d18f3cea9845f3a15 ffff 0
+0:771 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:771 R 4ebc299704f25fcd3aa8158370de4bb900
+0:771 PAYLOAD 9d78532e09e4bf9a75502b06e1bc9772 ffff 0
+0:772 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:772 R 7d6ad845b3208e7be956c4319f0cfa6780
+0:772 PAYLOAD fad5b08b66411cf7d2ad88633e19f4cf ffff 0
+0:773 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:773 R 2b9906f461cf3caa178572e04dbb289600
+0:773 PAYLOAD 57320de8c39e79542f0ae5c09b76512c ffff 0
+0:774 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:775 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:775 R 5a47b522907deb58c633a10efc69d74480
+0:775 PAYLOAD b48f6a4520fbd6b18c67421df8d3ae89 ffff 0
+0:776 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:776 R 08f663d13eac198774e24fbd2a9805f300
+0:776 PAYLOAD 11ecc7a27d58330ee9c49f7a55300be6 ffff 0
+0:777 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:777 R 3724927fed5ac835a310fe6bd946b42180
+0:777 PAYLOAD 6e4924ffdab5906b4621fcd7b28d6843 ffff 0
+0:778 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:778 R 65d340ae1b8976e451bf2c9a07f562d001
+0:778 PAYLOAD cba6815c3712edc8a37e59340feac5a0 ffff 0
+0:779 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:780 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:781 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:781 AR 0000080001f1
+0:782 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:782 R 1401ef5cca37a512806ddb48b623917e80
+0:782 PAYLOAD 2803deb9946f4a2500dbb6916c4722fd ffff 0
+0:783 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:783 R 42b01d8b78e653c12e9c09f764d23fad00
+0:783 PAYLOAD 85603b16f1cca7825d3813eec9a47f5a ffff 0
+0:784 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:784 R 715ecc39a714826fdd4ab8259300ee5b80
+0:784 PAYLOAD e2bd98734e2904dfba95704b2601dcb7 ffff 0
+0:785 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:785 R 1f8d7ae855c3309e0bf966d441af1c8a00
+0:785 PAYLOAD 3f1af5d0ab86613c17f2cda8835e3914 ffff 0
+0:786 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:786 R 4e3ba9168471df4cba279502f05dcb3880
+0:786 PAYLOAD 9c77522d08e3be99744f2a05e0bb9671 ffff 0
+0:787 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:787 R 7cea57c532a00dfb68d643b11e8c79e700
+0:787 PAYLOAD f9d4af8a65401bf6d1ac87623d18f3ce ffff 0
+0:788 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:789 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:789 R 2b188673e14ebc299704f25fcd3aa81580
+0:789 PAYLOAD 56310ce7c29d78532e09e4bf9a75502b ffff 0
+0:790 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:790 R 59c734a20ffd6ad845b3208e7be956c400
+0:790 PAYLOAD b38e69441ffad5b08b66411cf7d2ad88 ffff 0
+0:791 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:791 R 0875e350be2b9906f461cf3caa17857280
+0:791 PAYLOAD 10ebc6a17c57320de8c39e79542f0ae5 ffff 0
+0:792 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:792 R 36a411ff6cda47b522907deb58c633a100
+0:792 PAYLOAD 6d4823fed9b48f6a4520fbd6b18c6742 ffff 0
+0:793 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:793 R 6552c02d9b08f663d13eac198774e24f80
+0:793 PAYLOAD caa5805b3611ecc7a27d58330ee9c49f ffff 0
+0:794 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:794 R 13816edc49b724927fed5ac835a310fe00
+0:794 PAYLOAD 2702ddb8936e4924ffdab5906b4621fc ffff 0
+0:795 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:796 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:796 R 422f9d0af865d340ae1b8976e451bf2c80
+0:796 PAYLOAD 845f3a15f0cba6815c3712edc8a37e59 ffff 0
+0:797 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:797 R 70de4bb9269401ef5cca37a512806ddb00
+0:797 PAYLOAD e1bc97724d2803deb9946f4a2500dbb6 ffff 0
+0:798 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:798 R 1f0cfa67d542b01d8b78e653c12e9c0980
+0:798 PAYLOAD 3e19f4cfaa85603b16f1cca7825d3813 ffff 0
+0:799 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:799 R 4dbb289603f15ecc39a714826fdd4ab801
+0:799 PAYLOAD 9b76512c07e2bd98734e2904dfba9570 ffff 0
+0:800 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:801 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:802 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:802 AR 00000a0001f1
+0:803 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:803 R 7c69d744b21f8d7ae855c3309e0bf96680
+0:803 PAYLOAD f8d3ae89643f1af5d0ab86613c17f2cd ffff 0
+0:804 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:804 R 2a9805f360ce3ba9168471df4cba279500
+0:804 PAYLOAD 55300be6c19c77522d08e3be99744f2a ffff 0
+0:805 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:805 R 5946b4218f7cea57c532a00dfb68d64380
+0:805 PAYLOAD b28d68431ef9d4af8a65401bf6d1ac87 ffff 0
+0:806 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:806 R 07f562d03dab188673e14ebc299704f200
+0:806 PAYLOAD 0feac5a07b56310ce7c29d78532e09e4 ffff 0
+0:807 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:807 R 3623917eec59c734a20ffd6ad845b32080
+0:807 PAYLOAD 6c4722fdd8b38e69441ffad5b08b6641 ffff 0
+0:808 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:808 R 64d23fad1a8875e350be2b9906f461cf00
+0:808 PAYLOAD c9a47f5a3510ebc6a17c57320de8c39e ffff 0
+0:809 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:810 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:810 R 1300ee5bc936a411ff6cda47b522907d80
+0:810 PAYLOAD 2601dcb7926d4823fed9b48f6a4520fb ffff 0
+0:811 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:811 R 41af1c8a77e552c02d9b08f663d13eac00
+0:811 PAYLOAD 835e3914efcaa5805b3611ecc7a27d58 ffff 0
+0:812 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:812 R 705dcb38a613816edc49b724927fed5a80
+0:812 PAYLOAD e0bb96714c2702ddb8936e4924ffdab5 ffff 0
+0:813 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:813 R 1e8c79e754c22f9d0af865d340ae1b8900
+0:813 PAYLOAD 3d18f3cea9845f3a15f0cba6815c3712 ffff 0
+0:814 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:814 R 4d3aa8158370de4bb9269401ef5cca3780
+0:814 PAYLOAD 9a75502b06e1bc97724d2803deb9946f ffff 0
+0:815 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:815 R 7be956c4319f0cfa67d542b01d8b78e600
+0:815 PAYLOAD f7d2ad88633e19f4cfaa85603b16f1cc ffff 0
+0:816 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:817 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:817 R 2a178572e04dbb289603f15ecc39a71480
+0:817 PAYLOAD 542f0ae5c09b76512c07e2bd98734e29 ffff 0
+0:818 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:818 R 58c633a10efc69d744b21f8d7ae855c300
+0:818 PAYLOAD b18c67421df8d3ae89643f1af5d0ab86 ffff 0
+0:819 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:819 R 0774e24fbd2a9805f360ce3ba916847180
+0:819 PAYLOAD 0ee9c49f7a55300be6c19c77522d08e3 ffff 0
+0:820 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:820 R 35a310fe6bd946b4218f7cea57c532a001
+0:820 PAYLOAD 6b4621fcd7b28d68431ef9d4af8a6540 ffff 0
+0:821 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:822 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:823 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:823 AR 00000c0001f1
+0:824 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:824 R 6451bf2c9a07f562d03dab188673e14e80
+0:824 PAYLOAD c8a37e59340feac5a07b56310ce7c29d ffff 0
+0:825 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:825 R 12806ddb48b623917eec59c734a20ffd00
+0:825 PAYLOAD 2500dbb6916c4722fdd8b38e69441ffa ffff 0
+0:826 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:826 R 412e9c09f764d23fad1a8875e350be2b80
+0:826 PAYLOAD 825d3813eec9a47f5a3510ebc6a17c57 ffff 0
+0:827 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:827 R 6fdd4ab8259300ee5bc936a411ff6cda00
+0:827 PAYLOAD dfba95704b2601dcb7926d4823fed9b4 ffff 0
+0:828 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:828 R 1e0bf966d441af1c8a77e552c02d9b0880
+0:828 PAYLOAD 3c17f2cda8835e3914efcaa5805b3611 ffff 0
+0:829 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:829 R 4cba279502f05dcb38a613816edc49b700
+0:829 PAYLOAD 99744f2a05e0bb96714c2702ddb8936e ffff 0
+0:830 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:831 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:831 R 7b68d643b11e8c79e754c22f9d0af86580
+0:831 PAYLOAD f6d1ac87623d18f3cea9845f3a15f0cb ffff 0
+0:832 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:832 R 299704f25fcd3aa8158370de4bb9269400
+0:832 PAYLOAD 532e09e4bf9a75502b06e1bc97724d28 ffff 0
+0:833 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:833 R 5845b3208e7be956c4319f0cfa67d54280
+0:833 PAYLOAD b08b66411cf7d2ad88633e19f4cfaa85 ffff 0
+0:834 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:834 R 06f461cf3caa178572e04dbb289603f100
+0:834 PAYLOAD 0de8c39e79542f0ae5c09b76512c07e2 ffff 0
+0:835 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:835 R 3522907deb58c633a10efc69d744b21f80
+0:835 PAYLOAD 6a4520fbd6b18c67421df8d3ae89643f ffff 0
+0:836 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:836 R 63d13eac198774e24fbd2a9805f360ce00
+0:836 PAYLOAD c7a27d58330ee9c49f7a55300be6c19c ffff 0
+0:837 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:838 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:838 R 127fed5ac835a310fe6bd946b4218f7c80
+0:838 PAYLOAD 24ffdab5906b4621fcd7b28d68431ef9 ffff 0
+0:839 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:839 R 40ae1b8976e451bf2c9a07f562d03dab00
+0:839 PAYLOAD 815c3712edc8a37e59340feac5a07b56 ffff 0
+0:840 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:840 R 6f5cca37a512806ddb48b623917eec5980
+0:840 PAYLOAD deb9946f4a2500dbb6916c4722fdd8b3 ffff 0
+0:841 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:841 R 1d8b78e653c12e9c09f764d23fad1a8801
+0:841 PAYLOAD 3b16f1cca7825d3813eec9a47f5a3510 ffff 0
+0:842 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:843 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:844 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:844 AR 00000e0001f1
+0:845 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:845 R 4c39a714826fdd4ab8259300ee5bc93680
+0:845 PAYLOAD 98734e2904dfba95704b2601dcb7926d ffff 0
+0:846 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:846 R 7ae855c3309e0bf966d441af1c8a77e500
+0:846 PAYLOAD f5d0ab86613c17f2cda8835e3914efca ffff 0
+0:847 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:847 R 29168471df4cba279502f05dcb38a61380
+0:847 PAYLOAD 522d08e3be99744f2a05e0bb96714c27 ffff 0
+0:848 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:848 R 57c532a00dfb68d643b11e8c79e754c200
+0:848 PAYLOAD af8a65401bf6d1ac87623d18f3cea984 ffff 0
+0:849 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:849 R 0673e14ebc299704f25fcd3aa815837080
+0:849 PAYLOAD 0ce7c29d78532e09e4bf9a75502b06e1 ffff 0
+0:850 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:850 R 34a20ffd6ad845b3208e7be956c4319f00
+0:850 PAYLOAD 69441ffad5b08b66411cf7d2ad88633e ffff 0
+0:851 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:852 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:852 R 6350be2b9906f461cf3caa178572e04d80
+0:852 PAYLOAD c6a17c57320de8c39e79542f0ae5c09b ffff 0
+0:853 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:853 R 11ff6cda47b522907deb58c633a10efc00
+0:853 PAYLOAD 23fed9b48f6a4520fbd6b18c67421df8 ffff 0
+0:854 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:854 R 402d9b08f663d13eac198774e24fbd2a80
+0:854 PAYLOAD 805b3611ecc7a27d58330ee9c49f7a55 ffff 0
+0:855 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:855 R 6edc49b724927fed5ac835a310fe6bd900
+0:855 PAYLOAD ddb8936e4924ffdab5906b4621fcd7b2 ffff 0
+0:856 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:856 R 1d0af865d340ae1b8976e451bf2c9a0780
+0:856 PAYLOAD 3a15f0cba6815c3712edc8a37e59340f ffff 0
+0:857 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:857 R 4bb9269401ef5cca37a512806ddb48b600
+0:857 PAYLOAD 97724d2803deb9946f4a2500dbb6916c ffff 0
+0:858 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:859 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:859 R 7a67d542b01d8b78e653c12e9c09f76480
+0:859 PAYLOAD f4cfaa85603b16f1cca7825d3813eec9 ffff 0
+0:860 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:860 R 289603f15ecc39a714826fdd4ab8259300
+0:860 PAYLOAD 512c07e2bd98734e2904dfba95704b26 ffff 0
+0:861 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:861 R 5744b21f8d7ae855c3309e0bf966d44180
+0:861 PAYLOAD ae89643f1af5d0ab86613c17f2cda883 ffff 0
+0:862 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:862 R 05f360ce3ba9168471df4cba279502f001
+0:862 PAYLOAD 0be6c19c77522d08e3be99744f2a05e0 ffff 0
+0:863 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:864 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:865 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:865 AR 0000100001f1
+0:866 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:866 R 34218f7cea57c532a00dfb68d643b11e80
+0:866 PAYLOAD 68431ef9d4af8a65401bf6d1ac87623d ffff 0
+0:867 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:867 R 62d03dab188673e14ebc299704f25fcd00
+0:867 PAYLOAD c5a07b56310ce7c29d78532e09e4bf9a ffff 0
+0:868 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:868 R 117eec59c734a20ffd6ad845b3208e7b80
+0:868 PAYLOAD 22fdd8b38e69441ffad5b08b66411cf7 ffff 0
+0:869 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:869 R 3fad1a8875e350be2b9906f461cf3caa00
+0:869 PAYLOAD 7f5a3510ebc6a17c57320de8c39e7954 ffff 0
+0:870 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:870 R 6e5bc936a411ff6cda47b522907deb5880
+0:870 PAYLOAD dcb7926d4823fed9b48f6a4520fbd6b1 ffff 0
+0:871 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:871 R 1c8a77e552c02d9b08f663d13eac198700
+0:871 PAYLOAD 3914efcaa5805b3611ecc7a27d58330e ffff 0
+0:872 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:873 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:873 R 4b38a613816edc49b724927fed5ac83580
+0:873 PAYLOAD 96714c2702ddb8936e4924ffdab5906b ffff 0
+0:874 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:874 R 79e754c22f9d0af865d340ae1b8976e400
+0:874 PAYLOAD f3cea9845f3a15f0cba6815c3712edc8 ffff 0
+0:875 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:875 R 28158370de4bb9269401ef5cca37a51280
+0:875 PAYLOAD 502b06e1bc97724d2803deb9946f4a25 ffff 0
+0:876 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:876 R 56c4319f0cfa67d542b01d8b78e653c100
+0:876 PAYLOAD ad88633e19f4cfaa85603b16f1cca782 ffff 0
+0:877 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:877 R 0572e04dbb289603f15ecc39a714826f80
+0:877 PAYLOAD 0ae5c09b76512c07e2bd98734e2904df ffff 0
+0:878 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:878 R 33a10efc69d744b21f8d7ae855c3309e00
+0:878 PAYLOAD 67421df8d3ae89643f1af5d0ab86613c ffff 0
+0:879 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:880 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:880 R 624fbd2a9805f360ce3ba9168471df4c80
+0:880 PAYLOAD c49f7a55300be6c19c77522d08e3be99 ffff 0
+0:881 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:881 R 10fe6bd946b4218f7cea57c532a00dfb00
+0:881 PAYLOAD 21fcd7b28d68431ef9d4af8a65401bf6 ffff 0
+0:882 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:882 R 3f2c9a07f562d03dab188673e14ebc2980
+0:882 PAYLOAD 7e59340feac5a07b56310ce7c29d7853 ffff 0
+0:883 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:883 R 6ddb48b623917eec59c734a20ffd6ad801
+0:883 PAYLOAD dbb6916c4722fdd8b38e69441ffad5b0 ffff 0
+0:884 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:885 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:886 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:886 AR 0000120001f1
+0:887 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:887 R 1c09f764d23fad1a8875e350be2b990680
+0:887 PAYLOAD 3813eec9a47f5a3510ebc6a17c57320d ffff 0
+0:888 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:888 R 4ab8259300ee5bc936a411ff6cda47b500
+0:888 PAYLOAD 95704b2601dcb7926d4823fed9b48f6a ffff 0
+0:889 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:889 R 7966d441af1c8a77e552c02d9b08f66380
+0:889 PAYLOAD f2cda8835e3914efcaa5805b3611ecc7 ffff 0
+0:890 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:890 R 279502f05dcb38a613816edc49b7249200
+0:890 PAYLOAD 4f2a05e0bb96714c2702ddb8936e4924 ffff 0
+0:891 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:891 R 5643b11e8c79e754c22f9d0af865d34080
+0:891 PAYLOAD ac87623d18f3cea9845f3a15f0cba681 ffff 0
+0:892 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:892 R 04f25fcd3aa8158370de4bb9269401ef00
+0:892 PAYLOAD 09e4bf9a75502b06e1bc97724d2803de ffff 0
+0:893 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:894 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:894 R 33208e7be956c4319f0cfa67d542b01d80
+0:894 PAYLOAD 66411cf7d2ad88633e19f4cfaa85603b ffff 0
+0:895 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:895 R 61cf3caa178572e04dbb289603f15ecc00
+0:895 PAYLOAD c39e79542f0ae5c09b76512c07e2bd98 ffff 0
+0:896 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:896 R 107deb58c633a10efc69d744b21f8d7a80
+0:896 PAYLOAD 20fbd6b18c67421df8d3ae89643f1af5 ffff 0
+0:897 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:897 R 3eac198774e24fbd2a9805f360ce3ba900
+0:897 PAYLOAD 7d58330ee9c49f7a55300be6c19c7752 ffff 0
+0:898 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:898 R 6d5ac835a310fe6bd946b4218f7cea5780
+0:898 PAYLOAD dab5906b4621fcd7b28d68431ef9d4af ffff 0
+0:899 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:899 R 1b8976e451bf2c9a07f562d03dab188600
+0:899 PAYLOAD 3712edc8a37e59340feac5a07b56310c ffff 0
+0:900 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:901 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:901 R 4a37a512806ddb48b623917eec59c73480
+0:901 PAYLOAD 946f4a2500dbb6916c4722fdd8b38e69 ffff 0
+0:902 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:902 R 78e653c12e9c09f764d23fad1a8875e300
+0:902 PAYLOAD f1cca7825d3813eec9a47f5a3510ebc6 ffff 0
+0:903 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:903 R 2714826fdd4ab8259300ee5bc936a41180
+0:903 PAYLOAD 4e2904dfba95704b2601dcb7926d4823 ffff 0
+0:904 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:904 R 55c3309e0bf966d441af1c8a77e552c001
+0:904 PAYLOAD ab86613c17f2cda8835e3914efcaa580 ffff 0
+0:905 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:906 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:907 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:907 AR 0000140001f1
+0:908 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:908 R 0471df4cba279502f05dcb38a613816e80
+0:908 PAYLOAD 08e3be99744f2a05e0bb96714c2702dd ffff 0
+0:909 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:909 R 32a00dfb68d643b11e8c79e754c22f9d00
+0:909 PAYLOAD 65401bf6d1ac87623d18f3cea9845f3a ffff 0
+0:910 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:910 R 614ebc299704f25fcd3aa8158370de4b80
+0:910 PAYLOAD c29d78532e09e4bf9a75502b06e1bc97 ffff 0
+0:911 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:911 R 0ffd6ad845b3208e7be956c4319f0cfa00
+0:911 PAYLOAD 1ffad5b08b66411cf7d2ad88633e19f4 ffff 0
+0:912 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:912 R 3e2b9906f461cf3caa178572e04dbb2880
+0:912 PAYLOAD 7c57320de8c39e79542f0ae5c09b7651 ffff 0
+0:913 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:913 R 6cda47b522907deb58c633a10efc69d700
+0:913 PAYLOAD d9b48f6a4520fbd6b18c67421df8d3ae ffff 0
+0:914 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:915 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:915 R 1b08f663d13eac198774e24fbd2a980580
+0:915 PAYLOAD 3611ecc7a27d58330ee9c49f7a55300b ffff 0
+0:916 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:916 R 49b724927fed5ac835a310fe6bd946b400
+0:916 PAYLOAD 936e4924ffdab5906b4621fcd7b28d68 ffff 0
+0:917 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:917 R 7865d340ae1b8976e451bf2c9a07f56280
+0:917 PAYLOAD f0cba6815c3712edc8a37e59340feac5 ffff 0
+0:918 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:918 R 269401ef5cca37a512806ddb48b6239100
+0:918 PAYLOAD 4d2803deb9946f4a2500dbb6916c4722 ffff 0
+0:919 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:919 R 5542b01d8b78e653c12e9c09f764d23f80
+0:919 PAYLOAD aa85603b16f1cca7825d3813eec9a47f ffff 0
+0:920 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:920 R 03f15ecc39a714826fdd4ab8259300ee00
+0:920 PAYLOAD 07e2bd98734e2904dfba95704b2601dc ffff 0
+0:921 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:922 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:922 R 321f8d7ae855c3309e0bf966d441af1c80
+0:922 PAYLOAD 643f1af5d0ab86613c17f2cda8835e39 ffff 0
+0:923 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:923 R 60ce3ba9168471df4cba279502f05dcb00
+0:923 PAYLOAD c19c77522d08e3be99744f2a05e0bb96 ffff 0
+0:924 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:924 R 0f7cea57c532a00dfb68d643b11e8c7980
+0:924 PAYLOAD 1ef9d4af8a65401bf6d1ac87623d18f3 ffff 0
+0:925 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:925 R 3dab188673e14ebc299704f25fcd3aa801
+0:925 PAYLOAD 7b56310ce7c29d78532e09e4bf9a7550 ffff 0
+0:926 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:927 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:928 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:928 AR 0000160001f1
+0:929 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:929 R 6c59c734a20ffd6ad845b3208e7be95680
+0:929 PAYLOAD d8b38e69441ffad5b08b66411cf7d2ad ffff 0
+0:930 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:930 R 1a8875e350be2b9906f461cf3caa178500
+0:930 PAYLOAD 3510ebc6a17c57320de8c39e79542f0a ffff 0
+0:931 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:931 R 4936a411ff6cda47b522907deb58c63380
+0:931 PAYLOAD 926d4823fed9b48f6a4520fbd6b18c67 ffff 0
+0:932 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:932 R 77e552c02d9b08f663d13eac198774e200
+0:932 PAYLOAD efcaa5805b3611ecc7a27d58330ee9c4 ffff 0
+0:933 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:933 R 2613816edc49b724927fed5ac835a31080
+0:933 PAYLOAD 4c2702ddb8936e4924ffdab5906b4621 ffff 0
+0:934 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:934 R 54c22f9d0af865d340ae1b8976e451bf00
+0:934 PAYLOAD a9845f3a15f0cba6815c3712edc8a37e ffff 0
+0:935 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:936 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:936 R 0370de4bb9269401ef5cca37a512806d80
+0:936 PAYLOAD 06e1bc97724d2803deb9946f4a2500db ffff 0
+0:937 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:937 R 319f0cfa67d542b01d8b78e653c12e9c00
+0:937 PAYLOAD 633e19f4cfaa85603b16f1cca7825d38 ffff 0
+0:938 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:938 R 604dbb289603f15ecc39a714826fdd4a80
+0:938 PAYLOAD c09b76512c07e2bd98734e2904dfba95 ffff 0
+0:939 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:939 R 0efc69d744b21f8d7ae855c3309e0bf900
+0:939 PAYLOAD 1df8d3ae89643f1af5d0ab86613c17f2 ffff 0
+0:940 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:940 R 3d2a9805f360ce3ba9168471df4cba2780
+0:940 PAYLOAD 7a55300be6c19c77522d08e3be99744f ffff 0
+0:941 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:941 R 6bd946b4218f7cea57c532a00dfb68d600
+0:941 PAYLOAD d7b28d68431ef9d4af8a65401bf6d1ac ffff 0
+0:942 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:943 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:943 R 1a07f562d03dab188673e14ebc29970480
+0:943 PAYLOAD 340feac5a07b56310ce7c29d78532e09 ffff 0
+0:944 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:944 R 48b623917eec59c734a20ffd6ad845b300
+0:944 PAYLOAD 916c4722fdd8b38e69441ffad5b08b66 ffff 0
+0:945 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:945 R 7764d23fad1a8875e350be2b9906f46180
+0:945 PAYLOAD eec9a47f5a3510ebc6a17c57320de8c3 ffff 0
+0:946 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:946 R 259300ee5bc936a411ff6cda47b5229001
+0:946 PAYLOAD 4b2601dcb7926d4823fed9b48f6a4520 ffff 0
+0:947 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:948 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:949 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:949 AR 0000180001f1
+0:950 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:950 R 5441af1c8a77e552c02d9b08f663d13e80
+0:950 PAYLOAD a8835e3914efcaa5805b3611ecc7a27d ffff 0
+0:951 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:951 R 02f05dcb38a613816edc49b724927fed00
+0:951 PAYLOAD 05e0bb96714c2702ddb8936e4924ffda ffff 0
+0:952 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:952 R 311e8c79e754c22f9d0af865d340ae1b80
+0:952 PAYLOAD 623d18f3cea9845f3a15f0cba6815c37 ffff 0
+0:953 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:953 R 5fcd3aa8158370de4bb9269401ef5cca00
+0:953 PAYLOAD bf9a75502b06e1bc97724d2803deb994 ffff 0
+0:954 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:954 R 0e7be956c4319f0cfa67d542b01d8b7880
+0:954 PAYLOAD 1cf7d2ad88633e19f4cfaa85603b16f1 ffff 0
+0:955 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:955 R 3caa178572e04dbb289603f15ecc39a700
+0:955 PAYLOAD 79542f0ae5c09b76512c07e2bd98734e ffff 0
+0:956 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:957 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:957 R 6b58c633a10efc69d744b21f8d7ae85580
+0:957 PAYLOAD d6b18c67421df8d3ae89643f1af5d0ab ffff 0
+0:958 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:958 R 198774e24fbd2a9805f360ce3ba9168400
+0:958 PAYLOAD 330ee9c49f7a55300be6c19c77522d08 ffff 0
+0:959 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:959 R 4835a310fe6bd946b4218f7cea57c53280
+0:959 PAYLOAD 906b4621fcd7b28d68431ef9d4af8a65 ffff 0
+0:960 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:960 R 76e451bf2c9a07f562d03dab188673e100
+0:960 PAYLOAD edc8a37e59340feac5a07b56310ce7c2 ffff 0
+0:961 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:961 R 2512806ddb48b623917eec59c734a20f80
+0:961 PAYLOAD 4a2500dbb6916c4722fdd8b38e69441f ffff 0
+0:962 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:962 R 53c12e9c09f764d23fad1a8875e350be00
+0:962 PAYLOAD a7825d3813eec9a47f5a3510ebc6a17c ffff 0
+0:963 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:964 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:964 R 026fdd4ab8259300ee5bc936a411ff6c80
+0:964 PAYLOAD 04dfba95704b2601dcb7926d4823fed9 ffff 0
+0:965 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:965 R 309e0bf966d441af1c8a77e552c02d9b00
+0:965 PAYLOAD 613c17f2cda8835e3914efcaa5805b36 ffff 0
+0:966 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:966 R 5f4cba279502f05dcb38a613816edc4980
+0:966 PAYLOAD be99744f2a05e0bb96714c2702ddb893 ffff 0
+0:967 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:967 R 0dfb68d643b11e8c79e754c22f9d0af801
+0:967 PAYLOAD 1bf6d1ac87623d18f3cea9845f3a15f0 ffff 0
+0:968 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:969 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:970 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:970 AR 00001a0001f1
+0:971 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:971 R 3c299704f25fcd3aa8158370de4bb92680
+0:971 PAYLOAD 78532e09e4bf9a75502b06e1bc97724d ffff 0
+0:972 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:972 R 6ad845b3208e7be956c4319f0cfa67d500
+0:972 PAYLOAD d5b08b66411cf7d2ad88633e19f4cfaa ffff 0
+0:973 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:973 R 1906f461cf3caa178572e04dbb28960380
+0:973 PAYLOAD 320de8c39e79542f0ae5c09b76512c07 ffff 0
+0:974 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:974 R 47b522907deb58c633a10efc69d744b200
+0:974 PAYLOAD 8f6a4520fbd6b18c67421df8d3ae8964 ffff 0
+0:975 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:975 R 7663d13eac198774e24fbd2a9805f36080
+0:975 PAYLOAD ecc7a27d58330ee9c49f7a55300be6c1 ffff 0
+0:976 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:976 R 24927fed5ac835a310fe6bd946b4218f00
+0:976 PAYLOAD 4924ffdab5906b4621fcd7b28d68431e ffff 0
+0:977 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:978 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:978 R 5340ae1b8976e451bf2c9a07f562d03d80
+0:978 PAYLOAD a6815c3712edc8a37e59340feac5a07b ffff 0
+0:979 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:979 R 01ef5cca37a512806ddb48b623917eec00
+0:979 PAYLOAD 03deb9946f4a2500dbb6916c4722fdd8 ffff 0
+0:980 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:980 R 301d8b78e653c12e9c09f764d23fad1a80
+0:980 PAYLOAD 603b16f1cca7825d3813eec9a47f5a35 ffff 0
+0:981 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:981 R 5ecc39a714826fdd4ab8259300ee5bc900
+0:981 PAYLOAD bd98734e2904dfba95704b2601dcb792 ffff 0
+0:982 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:982 R 0d7ae855c3309e0bf966d441af1c8a7780
+0:982 PAYLOAD 1af5d0ab86613c17f2cda8835e3914ef ffff 0
+0:983 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:983 R 3ba9168471df4cba279502f05dcb38a600
+0:983 PAYLOAD 77522d08e3be99744f2a05e0bb96714c ffff 0
+0:984 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:985 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:985 R 6a57c532a00dfb68d643b11e8c79e75480
+0:985 PAYLOAD d4af8a65401bf6d1ac87623d18f3cea9 ffff 0
+0:986 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:986 R 188673e14ebc299704f25fcd3aa8158300
+0:986 PAYLOAD 310ce7c29d78532e09e4bf9a75502b06 ffff 0
+0:987 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:987 R 4734a20ffd6ad845b3208e7be956c43180
+0:987 PAYLOAD 8e69441ffad5b08b66411cf7d2ad8863 ffff 0
+0:988 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:988 R 75e350be2b9906f461cf3caa178572e001
+0:988 PAYLOAD ebc6a17c57320de8c39e79542f0ae5c0 ffff 0
+0:989 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:990 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:991 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:991 AR 00001c0001f1
+0:992 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:992 R 2411ff6cda47b522907deb58c633a10e80
+0:992 PAYLOAD 4823fed9b48f6a4520fbd6b18c67421d ffff 0
+0:993 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:993 R 52c02d9b08f663d13eac198774e24fbd00
+0:993 PAYLOAD a5805b3611ecc7a27d58330ee9c49f7a ffff 0
+0:994 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:994 R 016edc49b724927fed5ac835a310fe6b80
+0:994 PAYLOAD 02ddb8936e4924ffdab5906b4621fcd7 ffff 0
+0:995 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:995 R 2f9d0af865d340ae1b8976e451bf2c9a00
+0:995 PAYLOAD 5f3a15f0cba6815c3712edc8a37e5934 ffff 0
+0:996 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:996 R 5e4bb9269401ef5cca37a512806ddb4880
+0:996 PAYLOAD bc97724d2803deb9946f4a2500dbb691 ffff 0
+0:997 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:997 R 0cfa67d542b01d8b78e653c12e9c09f700
+0:997 PAYLOAD 19f4cfaa85603b16f1cca7825d3813ee ffff 0
+0:998 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:999 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:999 R 3b289603f15ecc39a714826fdd4ab82580
+0:999 PAYLOAD 76512c07e2bd98734e2904dfba95704b ffff 0
+0:1000 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1000 R 69d744b21f8d7ae855c3309e0bf966d400
+0:1000 PAYLOAD d3ae89643f1af5d0ab86613c17f2cda8 ffff 0
+0:1001 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1001 R 1805f360ce3ba9168471df4cba27950280
+0:1001 PAYLOAD 300be6c19c77522d08e3be99744f2a05 ffff 0
+0:1002 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1002 R 46b4218f7cea57c532a00dfb68d643b100
+0:1002 PAYLOAD 8d68431ef9d4af8a65401bf6d1ac8762 ffff 0
+0:1003 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1003 R 7562d03dab188673e14ebc299704f25f80
+0:1003 PAYLOAD eac5a07b56310ce7c29d78532e09e4bf ffff 0
+0:1004 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1004 R 23917eec59c734a20ffd6ad845b3208e00
+0:1004 PAYLOAD 4722fdd8b38e69441ffad5b08b66411c ffff 0
+0:1005 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1006 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1006 R 523fad1a8875e350be2b9906f461cf3c80
+0:1006 PAYLOAD a47f5a3510ebc6a17c57320de8c39e79 ffff 0
+0:1007 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1007 R 00ee5bc936a411ff6cda47b522907deb00
+0:1007 PAYLOAD 01dcb7926d4823fed9b48f6a4520fbd6 ffff 0
+0:1008 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1008 R 2f1c8a77e552c02d9b08f663d13eac1980
+0:1008 PAYLOAD 5e3914efcaa5805b3611ecc7a27d5833 ffff 0
+0:1009 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1009 R 5dcb38a613816edc49b724927fed5ac801
+0:1009 PAYLOAD bb96714c2702ddb8936e4924ffdab590 ffff 0
+0:1010 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1011 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1012 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1012 AR 00001e0001f1
+0:1013 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1013 R 0c79e754c22f9d0af865d340ae1b897680
+0:1013 PAYLOAD 18f3cea9845f3a15f0cba6815c3712ed ffff 0
+0:1014 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1014 R 3aa8158370de4bb9269401ef5cca37a500
+0:1014 PAYLOAD 75502b06e1bc97724d2803deb9946f4a ffff 0
+0:1015 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1015 R 6956c4319f0cfa67d542b01d8b78e65380
+0:1015 PAYLOAD d2ad88633e19f4cfaa85603b16f1cca7 ffff 0
+0:1016 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1016 R 178572e04dbb289603f15ecc39a7148200
+0:1016 PAYLOAD 2f0ae5c09b76512c07e2bd98734e2904 ffff 0
+0:1017 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1017 R 4633a10efc69d744b21f8d7ae855c33080
+0:1017 PAYLOAD 8c67421df8d3ae89643f1af5d0ab8661 ffff 0
+0:1018 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1018 R 74e24fbd2a9805f360ce3ba9168471df00
+0:1018 PAYLOAD e9c49f7a55300be6c19c77522d08e3be ffff 0
+0:1019 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1020 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1020 R 2310fe6bd946b4218f7cea57c532a00d80
+0:1020 PAYLOAD 4621fcd7b28d68431ef9d4af8a65401b ffff 0
+0:1021 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1021 R 51bf2c9a07f562d03dab188673e14ebc00
+0:1021 PAYLOAD a37e59340feac5a07b56310ce7c29d78 ffff 0
+0:1022 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1022 R 006ddb48b623917eec59c734a20ffd6a80
+0:1022 PAYLOAD 00dbb6916c4722fdd8b38e69441ffad5 ffff 0
+0:1023 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1023 R 2e9c09f764d23fad1a8875e350be2b9900
+0:1023 PAYLOAD 5d3813eec9a47f5a3510ebc6a17c5732 ffff 0
+0:1024 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1024 R 5d4ab8259300ee5bc936a411ff6cda4780
+0:1024 PAYLOAD ba95704b2601dcb7926d4823fed9b48f ffff 0
+0:1025 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1025 R 0bf966d441af1c8a77e552c02d9b08f600
+0:1025 PAYLOAD 17f2cda8835e3914efcaa5805b3611ec ffff 0
+0:1026 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1027 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1027 R 3a279502f05dcb38a613816edc49b72480
+0:1027 PAYLOAD 744f2a05e0bb96714c2702ddb8936e49 ffff 0
+0:1028 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1028 R 68d643b11e8c79e754c22f9d0af865d300
+0:1028 PAYLOAD d1ac87623d18f3cea9845f3a15f0cba6 ffff 0
+0:1029 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1029 R 1704f25fcd3aa8158370de4bb926940180
+0:1029 PAYLOAD 2e09e4bf9a75502b06e1bc97724d2803 ffff 0
+0:1030 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1030 R 45b3208e7be956c4319f0cfa67d542b001
+0:1030 PAYLOAD 8b66411cf7d2ad88633e19f4cfaa8560 ffff 0
+0:1031 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1032 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1033 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1033 AR 000020000091
+0:1034 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1034 R 7461cf3caa178572e04dbb289603f15e80
+0:1034 PAYLOAD e8c39e79542f0ae5c09b76512c07e2bd ffff 0
+0:1035 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1035 R 22907deb58c633a10efc69d744b21f8d00
+0:1035 PAYLOAD 4520fbd6b18c67421df8d3ae89643f1a ffff 0
+0:1036 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1036 R 513eac198774e24fbd2a9805f360ce3b80
+0:1036 PAYLOAD a27d58330ee9c49f7a55300be6c19c77 ffff 0
+0:1037 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1037 R 7fed5ac835a310fe6bd946b4218f7cea00
+0:1037 PAYLOAD ffdab5906b4621fcd7b28d68431ef9d4 ffff 0
+0:1038 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1039 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1040 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1041 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1042 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1043 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1044 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1044 R 52d2d2d2d2d2d2d2d287f562d03dab1881
+0:1044 PAYLOAD 0000000000000000000feac5a07b5631 007f 1
+0:1045 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1045 READ_DONE_PULSE
+0:1045 READ_COMPLETE
+0:1046 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1047 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1047 MODELED_HOST_SAFE 101
+0:1048 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1048 RETIRE slot=0 session=19002065 gen=2 safe=1
+0:1049 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1050 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1051 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1052 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1053 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1053 RETIRE_RSP 2
+0:1054 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1055 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1055 RETIRE slot=0 session=19002065 gen=1 safe=1
+0:1056 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1057 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1058 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1059 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1060 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1060 RETIRE_RSP 0
+0:1061 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1062 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1062 B 00
+0:1063 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1064 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1064 ACK 400000003246400832480004326000600000002000027710080c9
+0:1065 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1066 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1067 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1068 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1069 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1070 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1071 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1072 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1073 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1074 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1075 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1075 READY 00000032400004e0a0005a000362587fe013192000600000002320041924000219347
+0:1076 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1077 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1078 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1079 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1079 AR 180000000051
+0:1080 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1080 R 107deb58c633a10efc69d744b21f8d7a80
+0:1080 PAYLOAD 20fbd6b18c67421df8d3ae89643f1af5 ffff 0
+0:1081 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1081 R 3eac198774e24fbd2a9805f360ce3ba900
+0:1081 PAYLOAD 7d58330ee9c49f7a55300be6c19c7752 ffff 0
+0:1082 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1083 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1084 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1085 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1086 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1087 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1088 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1089 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1090 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1090 R 52d2d2d2d2d2d2d2d2c6b4218f7cea5781
+0:1090 PAYLOAD 0000000000000000008d68431ef9d4af 007f 1
+0:1091 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1091 READ_DONE_PULSE
+0:1091 READ_COMPLETE
+0:1092 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1093 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1093 MODELED_HOST_SAFE 201
+0:1094 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+0:1094 RETIRE slot=3 session=190020c9 gen=1 safe=1
+0:1095 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1096 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1097 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1098 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1099 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1099 RETIRE_RSP 0
+0:1100 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1101 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1102 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1103 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:1103 START 102 cam=0 slot=1 gen=1
+0:1104 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1104 DATA 2702ddb8936e4924ffdab5906b4621fc ffff 0
+0:1105 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1105 DATA 845f3a15f0cba6815c3712edc8a37e59 ffff 0
+0:1106 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1106 DATA e1bc97724d2803deb9946f4a2500dbb6 ffff 0
+0:1107 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1107 DATA 3e19f4cfaa85603b16f1cca7825d3813 007f 1
+0:1108 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1108 RESULT 102 bytes=55 epoch=20001066 quality=72
+0:1109 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1109 AW 140000000071
+0:1110 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1110 W 2702ddb8936e4924ffdab5906b4621fc ffff 0
+0:1111 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1111 W 845f3a15f0cba6815c3712edc8a37e59 ffff 0
+0:1112 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1113 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1114 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1115 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1115 W e1bc97724d2803deb9946f4a2500dbb6 ffff 0
+0:1116 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1116 W 000000000000000000f1cca7825d3813 007f 1
+0:1117 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1118 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1119 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1119 B 02
+0:1120 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1121 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1121 DROP_PULSE
+0:1121 ACK 00c00000198640081988000419800020000000200000071008066
+0:1122 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1123 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1124 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1125 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:1125 START 103 cam=0 slot=2 gen=1
+0:1126 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1126 DATA 66411cf7d2ad88633e19f4cfaa85603b ffff 0
+0:1127 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1127 DATA c39e79542f0ae5c09b76512c07e2bd98 1fff 1
+0:1128 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1129 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1129 AW 160000000031
+0:1130 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1130 W 66411cf7d2ad88633e19f4cfaa85603b ffff 0
+0:1131 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1131 W 000000542f0ae5c09b76512c07e2bd98 1fff 1
+0:1132 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1132 RESULT 103 bytes=29 epoch=20001067 quality=73
+0:1132 B 00
+0:1133 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1134 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1134 ACK 4000000019c6400819c8000419c00040000000200001d71008067
+0:1135 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1136 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:1136 START 104 cam=0 slot=0 gen=2
+0:1137 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1137 DATA a5805b3611ecc7a27d58330ee9c49f7a ffff 0
+0:1138 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1138 DATA 02ddb8936e4924ffdab5906b4621fcd7 01ff 1
+0:1139 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1139 RESULT 104 bytes=25 epoch=20001068 quality=74
+0:1140 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1140 AW 000000000031
+0:1141 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1141 W a5805b3611ecc7a27d58330ee9c49f7a ffff 0
+0:1142 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1142 W 00000000000000ffdab5906b4621fcd7 01ff 1
+0:1143 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1144 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1145 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1145 B 00
+0:1146 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1147 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1147 ACK 400000001a0640081a0800041a000000000000400001971008068
+0:1148 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1149 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1149 READY 00000019c00003a0f00087000362587fe0130ce000400000002320040ce400020ce49
+0:1150 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1151 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1152 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1153 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1153 AR 160000000031
+0:1154 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1154 R 33208e7be956c4319f0cfa67d542b01d80
+0:1154 PAYLOAD 66411cf7d2ad88633e19f4cfaa85603b ffff 0
+0:1155 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1156 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1157 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1158 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1159 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1160 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1161 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1161 R 52d2d2aa178572e04dbb289603f15ecc01
+0:1161 PAYLOAD 000000542f0ae5c09b76512c07e2bd98 1fff 1
+0:1162 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1162 READ_DONE_PULSE
+0:1162 READ_COMPLETE
+0:1163 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1164 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1164 MODELED_HOST_SAFE 103
+0:1165 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+0:1165 RETIRE slot=2 session=19002067 gen=1 safe=1
+0:1166 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1167 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1168 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1169 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1170 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1170 RETIRE_RSP 0
+0:1171 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1172 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1173 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1174 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1174 READY 0000001a00000320f00087000362587fe0130d0000000000004320040d0400020d04a
+0:1175 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1176 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1177 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1178 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1178 AR 000000000031
+0:1179 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1179 R 52c02d9b08f663d13eac198774e24fbd00
+0:1179 PAYLOAD a5805b3611ecc7a27d58330ee9c49f7a ffff 0
+0:1180 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1181 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1182 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1183 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1184 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1185 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1186 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1187 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1188 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1188 R 22907deb58c633ffed5ac835a310fe6b81
+0:1188 PAYLOAD 00000000000000ffdab5906b4621fcd7 01ff 1
+0:1189 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1189 READ_DONE_PULSE
+0:1189 READ_COMPLETE
+0:1190 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1191 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1191 MODELED_HOST_SAFE 104
+0:1192 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+0:1192 RETIRE slot=0 session=19002068 gen=2 safe=1
+0:1193 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1194 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1195 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1196 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1197 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1197 RETIRE_RSP 0
+0:1198 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1199 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1200 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1201 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:1201 START 202 cam=1 slot=4 gen=1
+0:1202 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1202 DATA 5f3a15f0cba6815c3712edc8a37e5934 ffff 0
+0:1203 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1203 DATA bc97724d2803deb9946f4a2500dbb691 ffff 0
+0:1204 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1204 DATA 19f4cfaa85603b16f1cca7825d3813ee 0007 1
+0:1205 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1205 RESULT 202 bytes=35 epoch=200010ca quality=72
+0:1206 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1206 AW 1a0000000051
+0:1207 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1207 W 5f3a15f0cba6815c3712edc8a37e5934 ffff 0
+0:1208 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1208 W bc97724d2803deb9946f4a2500dbb691 ffff 0
+0:1209 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1209 W 000000000000000000000000003813ee 0007 1
+0:1210 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1211 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1212 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1212 B 00
+0:1213 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1214 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1214 ACK 40000000328640083288000432a000800000002000023710080ca
+0:1215 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1216 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:1216 START 203 cam=1 slot=5 gen=1
+0:1217 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1217 DATA 9e79542f0ae5c09b76512c07e2bd9873 ffff 0
+0:1218 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1218 DATA fbd6b18c67421df8d3ae89643f1af5d0 007f 1
+0:1219 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1219 RESULT 203 bytes=23 epoch=200010cb quality=73
+0:1220 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1220 AW 1c0000000031
+0:1221 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1221 W 9e79542f0ae5c09b76512c07e2bd9873 ffff 0
+0:1222 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1223 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1224 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1225 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1225 W 000000000000000000ae89643f1af5d0 007f 1
+0:1226 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1227 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1228 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1228 B 00
+0:1229 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1230 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=1
+0:1230 ACK 4000000032c6400832c8000432e000a00000002000017710080cb
+0:1231 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1232 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1232 READY 0000003280000460a0005a000362587fe013194000800000002320041944000219548
+0:1233 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1234 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1235 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1236 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1236 AR 1a0000000051
+0:1237 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1237 R 2f9d0af865d340ae1b8976e451bf2c9a00
+0:1237 PAYLOAD 5f3a15f0cba6815c3712edc8a37e5934 ffff 0
+0:1238 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1238 R 5e4bb9269401ef5cca37a512806ddb4880
+0:1238 PAYLOAD bc97724d2803deb9946f4a2500dbb691 ffff 0
+0:1239 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1240 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1241 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1242 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1243 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1244 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1245 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1245 R 52d2d2d2d2d2d2d2d2d2d2d2d29c09f701
+0:1245 PAYLOAD 000000000000000000000000003813ee 0007 1
+0:1246 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1246 READ_DONE_PULSE
+0:1246 READ_COMPLETE
+0:1247 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1248 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1248 MODELED_HOST_SAFE 202
+0:1249 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+0:1249 RETIRE slot=4 session=190020ca gen=1 safe=1
+0:1250 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1251 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1252 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1253 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1254 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1254 RETIRE_RSP 0
+0:1255 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1256 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1257 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1258 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1258 READY 00000032c00002e0a0005a000362587fe013196000a00000002320041964000219749
+0:1259 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1260 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1261 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1262 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1262 AR 1c0000000031
+0:1263 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1263 R 4f3caa178572e04dbb289603f15ecc3980
+0:1263 PAYLOAD 9e79542f0ae5c09b76512c07e2bd9873 ffff 0
+0:1264 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1265 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1266 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1267 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1268 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1269 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1270 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1271 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1272 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1272 R 52d2d2d2d2d2d2d2d2d744b21f8d7ae801
+0:1272 PAYLOAD 000000000000000000ae89643f1af5d0 007f 1
+0:1273 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1273 READ_DONE_PULSE
+0:1273 READ_COMPLETE
+0:1274 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1275 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1275 MODELED_HOST_SAFE 203
+0:1276 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+0:1276 RETIRE slot=5 session=190020cb gen=1 safe=1
+0:1277 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1278 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1279 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1280 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1281 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1281 RETIRE_RSP 0
+0:1282 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+0:1283 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+0:1283 START 204 cam=1 slot=3 gen=2
+0:1284 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1284 DATA ddb8936e4924ffdab5906b4621fcd7b2 ffff 0
+0:1285 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1285 DATA 3a15f0cba6815c3712edc8a37e59340f ffff 0
+0:1286 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1286 DATA 97724d2803deb9946f4a2500dbb6916c 03ff 1
+0:1287 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1287 RESULT 204 bytes=42 epoch=200010cc quality=74
+0:1288 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1288 AW 180000000051
+0:1289 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1290 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1291 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1291 W ddb8936e4924ffdab5906b4621fcd7b2 ffff 0
+0:1292 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1292 W 3a15f0cba6815c3712edc8a37e59340f ffff 0
+0:1293 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1293 W 000000000000b9946f4a2500dbb6916c 03ff 1
+0:1294 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1295 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1296 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1296 B 00
+0:1297 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1298 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+0:1298 ACK 40000000330640083308000433200060000000400002a710080cc
+0:1299 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1300 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1301 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1302 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1303 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1304 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1305 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+0:1306 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1307 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+0:1308 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+1:1 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:2 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:3 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:4 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+1:4 START 301 cam=1 slot=3 gen=1
+1:5 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:5 DATA 58330ee9c49f7a55300be6c19c77522d ffff 0
+1:6 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:6 DATA b5906b4621fcd7b28d68431ef9d4af8a 7fff 1
+1:7 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:7 RESULT 301 bytes=31 epoch=2000112d quality=71
+1:8 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:8 AW 180000000031
+1:9 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:9 W 58330ee9c49f7a55300be6c19c77522d ffff 0
+1:10 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:10 W 00906b4621fcd7b28d68431ef9d4af8a 7fff 1
+1:11 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:12 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:13 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:14 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:14 B 00
+1:15 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:16 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+1:16 ACK 400000004b4640084b4800044b600060000000200001f7100812d
+1:17 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:18 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:19 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:20 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:21 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:22 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:23 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:24 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+1:24 READY 0000004b400003e0a0005a000362587fe01325a0006000000023200425a4000225b47
+1:25 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:26 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:27 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:28 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:28 AR 180000000031
+1:29 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:29 R 2c198774e24fbd2a9805f360ce3ba91680
+1:29 PAYLOAD 58330ee9c49f7a55300be6c19c77522d ffff 0
+1:30 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:31 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:32 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:33 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:34 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:35 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:36 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:36 R 52c835a310fe6bd946b4218f7cea57c501
+1:36 PAYLOAD 00906b4621fcd7b28d68431ef9d4af8a 7fff 1
+1:37 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:37 READ_DONE_PULSE
+1:37 READ_COMPLETE
+1:38 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:39 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:39 MODELED_HOST_SAFE 301
+1:40 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+1:40 RETIRE slot=3 session=1900212d gen=1 safe=1
+1:41 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:42 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:43 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:44 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:45 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+1:45 RETIRE_RSP 0
+1:46 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+1:47 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+1:48 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+1:49 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+2:1 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:2 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:3 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:4 SAMPLE start_ready=1 write_quiet=0 record_quiet=0 ready=0
+2:4 START 302 cam=0 slot=0 gen=1
+2:5 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:5 DATA 97724d2803deb9946f4a2500dbb6916c ffff 0
+2:6 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:6 DATA f4cfaa85603b16f1cca7825d3813eec9 ffff 0
+2:7 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:7 DATA 512c07e2bd98734e2904dfba95704b26 0003 1
+2:8 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:8 RESULT 302 bytes=34 epoch=2000112e quality=72
+2:9 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:9 AW 000000000051
+2:10 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:10 W 97724d2803deb9946f4a2500dbb6916c ffff 0
+2:11 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:11 W f4cfaa85603b16f1cca7825d3813eec9 ffff 0
+2:12 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:13 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:14 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:15 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:15 W 00000000000000000000000000004b26 0003 1
+2:16 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:17 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:18 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:19 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:19 B 00
+2:20 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:21 SAMPLE start_ready=0 write_quiet=0 record_quiet=0 ready=0
+2:21 ACK 400000004b8640084b8800044b80000000000020000227100812e
+2:22 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:23 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:24 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:25 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:26 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:27 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:28 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:29 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=1
+2:29 READY 0000004b80000440f00087000362587fe01325c0000000000023200425c4000225c48
+2:30 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:31 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:32 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:33 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:33 AR 000000000051
+2:34 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:34 R 4bb9269401ef5cca37a512806ddb48b600
+2:34 PAYLOAD 97724d2803deb9946f4a2500dbb6916c ffff 0
+2:35 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:35 R 7a67d542b01d8b78e653c12e9c09f76480
+2:35 PAYLOAD f4cfaa85603b16f1cca7825d3813eec9 ffff 0
+2:36 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:37 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:38 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:39 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:40 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:41 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:42 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:42 R 52d2d2d2d2d2d2d2d2d2d2d2d2d2a59301
+2:42 PAYLOAD 00000000000000000000000000004b26 0003 1
+2:43 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:43 READ_DONE_PULSE
+2:43 READ_COMPLETE
+2:44 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:45 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:45 MODELED_HOST_SAFE 302
+2:46 SAMPLE start_ready=0 write_quiet=1 record_quiet=0 ready=0
+2:46 RETIRE slot=0 session=1900212e gen=1 safe=1
+2:47 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:48 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:49 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:50 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:51 SAMPLE start_ready=1 write_quiet=1 record_quiet=0 ready=0
+2:51 RETIRE_RSP 0
+2:52 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+2:53 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0
+2:54 SAMPLE start_ready=1 write_quiet=1 record_quiet=1 ready=0

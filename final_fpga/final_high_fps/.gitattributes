@@ -1,0 +1,4 @@
+# Preserve source/IP/bit/evidence bytes on Windows checkouts.
+* -text
+fpga_docs/** -whitespace
+fpga_prj/verification_archive/** -whitespace

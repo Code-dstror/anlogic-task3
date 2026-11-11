@@ -1,0 +1,42 @@
+`timescale 1ns/1ps
+`default_nettype none
+
+// TX-only independent diagnostic sink. All outward signals stay inside this
+// observer except o_uart_tx. There is deliberately no UART RX or business ACK.
+// Packed domain order: PIX=0, DFI=1, USER=2. Business resets are observed only.
+module uart_status_observer #(
+    parameter integer UART_DIV=217,
+    parameter integer REPORT_INTERVAL_CYCLES=25000000,
+    parameter integer SNAPSHOT_TIMEOUT_CYCLES=25000,
+    parameter integer CFG_DIAG_ENABLE=0,
+    parameter integer CFG_FRAME_VERSION=1,
+    parameter integer JOB_PAGE_ENABLE=0,
+    parameter integer JOB_SYS_CONFIG_ENABLE=0,
+    parameter integer RX_DIAG_ENABLE=0,
+    parameter integer RX_TRACE_ENABLE=0
+) (
+    input wire i_sys_clk,
+    input wire i_sys_rst_n,
+    input wire i_pixel_clk,
+    input wire i_dfi_clk,
+    input wire i_user_clk,
+    input wire [2:0] i_domain_observer_rst_n,
+    input wire [2:0] i_domain_reset_n,
+    input wire [15:0] i_sys_status,
+    input wire [35:0] i_domain_flags,
+    input wire [11:0] i_domain_faults,
+    input wire [5:0] i_domain_progress,
+    input wire [447:0] i_cfg_domains,
+    input wire [1:0] i_cfg_domain_reset_n,
+    input wire [63:0] i_job_sys_config,
+    input wire i_rx_word_clk,
+    input wire [383:0] i_rx_domains,
+    input wire [2:0] i_rx_reset_n,
+    // SYS-domain four-phase endpoint. The leaf owns ACK synchronization and
+    // holds this entire bank until request returns low; it has no business ACK.
+    output reg o_trace_request,
+    output reg [5:0] o_trace_index,
+    input wire i_trace_ack,
+    input wire [319:0] i_trace_data,
+    output wire o_uart_tx
+);

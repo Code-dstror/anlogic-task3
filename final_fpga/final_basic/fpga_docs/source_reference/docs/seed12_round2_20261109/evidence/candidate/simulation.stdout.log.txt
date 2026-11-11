@@ -1,0 +1,58 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -t 1ps -onfinish stop -L ph1 work.hdr_reader_bb ph1.glbl -do "onerror {quit -f -code 1}; run -all; quit -f -code 0" 
+# Start time: 22:51:35 on Nov 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\ip\ram40_sdp_fixed\ram40_sdp_fixed\ram40_sdp_fixed.v(69): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: D:\App\TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\ip\ram40_sdp_fixed\ram40_sdp_fixed\ram40_sdp_fixed.v(69): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: D:\App\TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: D:\App\TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:\App\TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.hdr_reader_bb(fast)
+# Loading ph1.PH1_PHY_GSR(fast)
+# Loading ph1.PH1_LOGIC_ERAM(fast)
+# Loading ph1.glbl(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ecc_sbiterrinj'. The port definition is at: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(52).
+#    Time: 0 ps  Iteration: 0  Instance: /hdr_reader_bb/dut/reader/u_long_fifo/u_configured_ip/inst File: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ecc_dbiterrinj'. The port definition is at: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(52).
+#    Time: 0 ps  Iteration: 0  Instance: /hdr_reader_bb/dut/reader/u_long_fifo/u_configured_ip/inst File: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ecc_sbiterrinj'. The port definition is at: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(52).
+#    Time: 0 ps  Iteration: 0  Instance: /hdr_reader_bb/dut/reader/u_short_fifo/u_configured_ip/inst File: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ecc_dbiterrinj'. The port definition is at: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(52).
+#    Time: 0 ps  Iteration: 0  Instance: /hdr_reader_bb/dut/reader/u_short_fifo/u_configured_ip/inst File: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v Line: 69
+# onerror {quit -f -code 1}
+#  Warning: onerror command for use within macro
+#  run -all
+# BB_START case=first edge=15 camera=0 bank=0 pattern=5 latency_min=32
+# BB_RESULT case=first ok=1 start_edge=15 result_edge=3404 cycles=3389 ar=42 ar_long=21 ar_short=21 r_beats=670 groups=1071 moving=214 peak_long=512 peak_short=1 page_splits=11 tails=11 r_latency_min=32 r_latency_max=32 output_stall=0 result_stall=0 ar_stall=0 quiet=1 fault=0
+# BB_START case=full edge=3418 camera=1 bank=1 pattern=17 latency_min=1
+# BB_RESULT case=full ok=1 start_edge=3418 result_edge=9185 cycles=5767 ar=42 ar_long=21 ar_short=21 r_beats=670 groups=1071 moving=214 peak_long=512 peak_short=504 page_splits=11 tails=11 r_latency_min=1 r_latency_max=1 output_stall=3579 result_stall=9 ar_stall=0 quiet=1 fault=0
+# BB_START case=cancel edge=9199 camera=0 bank=1 pattern=37 latency_min=32
+# BB_CANCEL case=cancel edge=9206 held_addr=0x4000000 held_beats=16
+# BB_RESULT case=cancel ok=0 start_edge=9199 result_edge=9259 cycles=60 ar=1 ar_long=1 ar_short=0 r_beats=16 groups=0 moving=0 peak_long=0 peak_short=0 page_splits=00 tails=00 r_latency_min=32 r_latency_max=32 output_stall=0 result_stall=0 ar_stall=7 quiet=1 fault=0
+# BB_START case=recovery edge=9273 camera=1 bank=0 pattern=53 latency_min=32
+# BB_RESULT case=recovery ok=1 start_edge=9273 result_edge=12662 cycles=3389 ar=42 ar_long=21 ar_short=21 r_beats=670 groups=1071 moving=214 peak_long=512 peak_short=1 page_splits=11 tails=11 r_latency_min=32 r_latency_max=32 output_stall=0 result_stall=0 ar_stall=0 quiet=1 fault=0
+# BB_PASS cases=4 geometry=68x63 watchdog_edges_per_case=200000
+# ** Note: $finish    : C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_reader_round2_20261109/hdr_reader_bb.sv(284)
+#    Time: 126741 ns  Iteration: 0  Instance: /hdr_reader_bb
+# Break at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_reader_round2_20261109/hdr_reader_bb.sv line 284
+# Stopped at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_reader_round2_20261109/hdr_reader_bb.sv line 284
+#  quit -f -code 0
+# End time: 22:51:36 on Nov 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8

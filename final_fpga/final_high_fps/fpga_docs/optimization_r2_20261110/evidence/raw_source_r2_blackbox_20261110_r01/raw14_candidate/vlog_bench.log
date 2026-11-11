@@ -1,0 +1,9 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 21:30:13 on Nov 10,2026
+vlog -sv -work work <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_raw_source_r2\tb_raw_source.sv 
+-- Compiling module tb_raw_source
+
+Top level modules:
+	tb_raw_source
+End time: 21:30:13 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,584 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "project": "camera_fusion_r1",
+  "source_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "results_commit": "6298a331867fd6bdd818c7ef70c79032b4b768c4",
+  "source_design_sha256": "ef8a2c66d1f14d6a39b4cc2fde76a5ce4d3a97e5c2ca8d85f63eb9187ab70628",
+  "td_release": "2026.2",
+  "td_build": "6.2.3.210850",
+  "device": "PH1A90SEG324-2",
+  "source_request": "camera-fusion-r1-20261110-syn4-20s4t",
+  "checkpoint": {
+    "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-syn",
+    "synthesis_threads": 4,
+    "reused": true
+  },
+  "stage": {
+    "confidence": "Placed",
+    "native_area_stage": "Placed",
+    "delay_model": "manhattan",
+    "placement": "DONE",
+    "setup_at_placement": "FAIL",
+    "hold_and_removal": "NOT_REPORTED",
+    "routed_sta_bitgen_and_board": "OUT_OF_SCOPE_OF_SNAPSHOT",
+    "per_group_endpoints": 10,
+    "paths_per_endpoint": 1
+  },
+  "area_capacity": {
+    "slice": 64320,
+    "lut6": 64320,
+    "ff": 128640,
+    "eram": 272,
+    "dsp": 240
+  },
+  "evidence": {
+    "directory": "server/td/local/download/camera-fusion-eade-placed-20261110",
+    "phy_1_relative_directory": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1",
+    "verified_file_count": 35,
+    "verified_bytes": 33583726,
+    "source_receipt": "spec.json",
+    "source_command": "command.json",
+    "artifact_receipt": "DOWNLOAD.json",
+    "index": "ARTIFACT_INDEX.json",
+    "area": "rfcamera_fusion_r1_phy.area",
+    "timing": "rfcamera_fusion_r1_place.timing",
+    "qor": "place.qor",
+    "place_log": "stage-logs/placement/phy_1/run.log",
+    "place_warnings": "stage-logs/placement/phy_1/run.logw"
+  },
+  "seeds": [
+    {
+      "seed": 1,
+      "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s1",
+      "generated": "Tue Nov 10 21:00:19 2026",
+      "placement_threads": 4,
+      "place_wall_seconds": 1613.53,
+      "reports": {
+        "directory": "server/td/local/download/camera-fusion-eade-placed-20261110/s1",
+        "verified_file_count": 7,
+        "verified_bytes": 6759613,
+        "index_sha256": "44a14cdb7380b81533d5c35ce5fdec0bd68943ce72fc0eee7e9da7f9c80e48d4",
+        "timing_sha256": "0f84667f8c797ce1a707ffa47cd4bc5924440cfc281acd2c7097e99d1ff10529",
+        "area_sha256": "1b662e5104138d3a968ee86bf7d0b0f4f37598efd7a3f9cccf1e53157e6ae59d"
+      },
+      "area": {
+        "slice": 62024,
+        "lut6": 57846,
+        "ff": 71871,
+        "eram": 265,
+        "dsp": 149
+      },
+      "timing": {
+        "setup_wns_ns": -2.024,
+        "setup_tns_ns": -285.21,
+        "setup_violated_endpoints": 573,
+        "min_summary_wns_ns": 0,
+        "min_summary_tns_ns": 0,
+        "hold_min_ns": null,
+        "removal_min_ns": null,
+        "coverage_percent": 99.85,
+        "path_counts": {
+          "recovery": 26,
+          "setup": 717
+        },
+        "recovery": {
+          "slack_ns": 4.074,
+          "report_line": 12987,
+          "check": "recovery",
+          "corner": "slow",
+          "begin": "g_production$u_boot/por_done_reg_syn_9.clk",
+          "end": "u_debug_pixel_reset/release_pipe_reg[2]_syn_15.asr",
+          "launch_clock": "sys_clk_25m",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 8,
+          "data_delay_ns": 3.9,
+          "cell_delay_ns": 0.181,
+          "net_delay_ns": 3.719,
+          "logic_levels": 0
+        },
+        "pix_reset_to_data": {
+          "slack_ns": -2.024,
+          "report_line": 119,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "g_private_processing$u_original_source/u_pixel_reset/g_falling_release$released_n_reg_syn_20.clk",
+          "end": "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/axis_data_reg[127]_syn_2.imb",
+          "launch_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 4,
+          "data_delay_ns": 5.766,
+          "cell_delay_ns": 1.628,
+          "net_delay_ns": 4.138,
+          "logic_levels": 8
+        },
+        "dfi_ring_reset_to_data": {
+          "slack_ns": -0.327,
+          "report_line": 1879,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "u_ddr_store/g_ring_store$u_record_owner_reset/g_falling_release$released_n_reg_syn_5.clk",
+          "end": "u_jpeg_to_ddr/u_token_fifo/fifo/read_buffer_syn_98.ceb",
+          "launch_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "capture_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "budget_ns": 3.751,
+          "data_delay_ns": 3.829,
+          "cell_delay_ns": 0.503,
+          "net_delay_ns": 3.326,
+          "logic_levels": 3
+        }
+      },
+      "congestion": {
+        "estimated_wire_length": 16324418,
+        "over_100_percent_tiles": 272,
+        "regions": 21
+      },
+      "warning_summary": {
+        "severe_timing_constraints": 4,
+        "critical_high_fanout_qor": false
+      },
+      "entropy_path_inventory": {
+        "packed_entropy_setup_entries": 5,
+        "minimum_named_or_attributed_ns": 6.487,
+        "confirmed_ready_or_reservoir_setup_entries": 0
+      }
+    },
+    {
+      "seed": 2,
+      "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s2",
+      "generated": "Tue Nov 10 21:01:41 2026",
+      "placement_threads": 4,
+      "place_wall_seconds": 1665.19,
+      "reports": {
+        "directory": "server/td/local/download/camera-fusion-eade-placed-20261110/s2",
+        "verified_file_count": 7,
+        "verified_bytes": 6641602,
+        "index_sha256": "c2f15e0743d78bbe4fc4b31f92edb4bed2b0cb525ebef3da04d145b22e9daecb",
+        "timing_sha256": "404182ca93294790fe120633203f8efcc03a5befd69e7e7b15293e1b52adc7b5",
+        "area_sha256": "158ac296e33f65087fb3a611ffeb96f6222d1f37e80a7de8f00d51c08ee64349"
+      },
+      "area": {
+        "slice": 62124,
+        "lut6": 57876,
+        "ff": 71885,
+        "eram": 265,
+        "dsp": 149
+      },
+      "timing": {
+        "setup_wns_ns": -1.418,
+        "setup_tns_ns": -131.432,
+        "setup_violated_endpoints": 231,
+        "min_summary_wns_ns": 0,
+        "min_summary_tns_ns": 0,
+        "hold_min_ns": null,
+        "removal_min_ns": null,
+        "coverage_percent": 99.85,
+        "path_counts": {
+          "recovery": 33,
+          "setup": 700
+        },
+        "recovery": {
+          "slack_ns": 1.154,
+          "report_line": 2273,
+          "check": "recovery",
+          "corner": "slow",
+          "begin": "u_ddr_store/g_ring_store$u_store/add14_syn_213.clk",
+          "end": "u_user_reset/release_pipe_reg[0]_syn_2.asr",
+          "launch_clock": "u_pcie/endpoint/bridge/u_controller/pcie_user_clk",
+          "capture_clock": "u_pcie/endpoint/bridge/u_controller/pcie_user_clk",
+          "budget_ns": 8,
+          "data_delay_ns": 6.82,
+          "cell_delay_ns": 0.888,
+          "net_delay_ns": 5.932,
+          "logic_levels": 4
+        },
+        "pix_reset_to_data": {
+          "slack_ns": -1.418,
+          "report_line": 119,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "g_private_processing$u_original_source/u_pixel_reset/g_falling_release$released_n_reg_syn_19.clk",
+          "end": "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/axis_data_reg[114]_syn_2.imb",
+          "launch_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 4,
+          "data_delay_ns": 5.16,
+          "cell_delay_ns": 1.506,
+          "net_delay_ns": 3.654,
+          "logic_levels": 8
+        },
+        "dfi_ring_reset_to_data": {
+          "slack_ns": -0.293,
+          "report_line": 1102,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "u_ddr_store/g_ring_store$u_record_owner_reset/g_falling_release$released_n_reg_syn_5.clk",
+          "end": "g_s04$u_raw_service/g_cam1_hdr$shared_owner/clear_slots_reg[0]_syn_2.imb",
+          "launch_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "capture_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "budget_ns": 3.751,
+          "data_delay_ns": 3.786,
+          "cell_delay_ns": 1.661,
+          "net_delay_ns": 2.125,
+          "logic_levels": 7
+        }
+      },
+      "congestion": {
+        "estimated_wire_length": 15838931,
+        "over_100_percent_tiles": 115,
+        "regions": 22
+      },
+      "warning_summary": {
+        "severe_timing_constraints": 4,
+        "critical_high_fanout_qor": true
+      },
+      "entropy_path_inventory": {
+        "packed_entropy_setup_entries": 4,
+        "minimum_named_or_attributed_ns": 6.606,
+        "confirmed_ready_or_reservoir_setup_entries": 0
+      }
+    },
+    {
+      "seed": 3,
+      "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s3",
+      "generated": "Tue Nov 10 21:01:12 2026",
+      "placement_threads": 4,
+      "place_wall_seconds": 1605.1,
+      "reports": {
+        "directory": "server/td/local/download/camera-fusion-eade-placed-20261110/s3",
+        "verified_file_count": 7,
+        "verified_bytes": 6662452,
+        "index_sha256": "2c5961e354d866e1565ff81bedd0dca55f9a91fa7ada185ad7594158cf178d86",
+        "timing_sha256": "020b6023dc4a5d76626cc08db9505ac5473386400c7da06f1be0c65aafa961f6",
+        "area_sha256": "623c4b13b4f607c78cd122f1561a0d20604cff8b2f0ae7a17b938e9ae10ef32e"
+      },
+      "area": {
+        "slice": 62175,
+        "lut6": 57808,
+        "ff": 71871,
+        "eram": 265,
+        "dsp": 149
+      },
+      "timing": {
+        "setup_wns_ns": -1.208,
+        "setup_tns_ns": -98.105,
+        "setup_violated_endpoints": 305,
+        "min_summary_wns_ns": 0,
+        "min_summary_tns_ns": 0,
+        "hold_min_ns": null,
+        "removal_min_ns": null,
+        "coverage_percent": 99.85,
+        "path_counts": {
+          "recovery": 25,
+          "setup": 710
+        },
+        "recovery": {
+          "slack_ns": 3.606,
+          "report_line": 12885,
+          "check": "recovery",
+          "corner": "slow",
+          "begin": "g_production$u_boot/por_done_reg_syn_9.clk",
+          "end": "u_debug_pixel_reset/release_pipe_reg[2]_syn_16.asr",
+          "launch_clock": "sys_clk_25m",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 8,
+          "data_delay_ns": 4.368,
+          "cell_delay_ns": 0.181,
+          "net_delay_ns": 4.187,
+          "logic_levels": 0
+        },
+        "pix_reset_to_data": {
+          "slack_ns": -1.208,
+          "report_line": 119,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "g_private_processing$u_original_source/u_pixel_reset/g_falling_release$released_n_reg_syn_18.clk",
+          "end": "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/axis_data_reg[10]_syn_2.imb",
+          "launch_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 4,
+          "data_delay_ns": 4.95,
+          "cell_delay_ns": 1.74,
+          "net_delay_ns": 3.21,
+          "logic_levels": 8
+        },
+        "dfi_ring_reset_to_data": {
+          "slack_ns": -0.604,
+          "report_line": 1123,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "u_ddr_store/g_ring_store$u_record_owner_reset/g_falling_release$released_n_reg_syn_5.clk",
+          "end": "g_s04$u_raw_service/g_cam1_hdr$shared_owner/clear_slots_reg[6]_syn_2.ima",
+          "launch_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "capture_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "budget_ns": 3.751,
+          "data_delay_ns": 4.097,
+          "cell_delay_ns": 1.851,
+          "net_delay_ns": 2.246,
+          "logic_levels": 7
+        }
+      },
+      "congestion": {
+        "estimated_wire_length": 16332427,
+        "over_100_percent_tiles": 293,
+        "regions": 19
+      },
+      "warning_summary": {
+        "severe_timing_constraints": 4,
+        "critical_high_fanout_qor": false
+      },
+      "entropy_path_inventory": {
+        "packed_entropy_setup_entries": 6,
+        "minimum_named_or_attributed_ns": 6.492,
+        "confirmed_ready_or_reservoir_setup_entries": 0
+      }
+    },
+    {
+      "seed": 4,
+      "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s4",
+      "generated": "Tue Nov 10 21:01:11 2026",
+      "placement_threads": 4,
+      "place_wall_seconds": 1574.01,
+      "reports": {
+        "directory": "server/td/local/download/camera-fusion-eade-placed-20261110/s4",
+        "verified_file_count": 7,
+        "verified_bytes": 6763572,
+        "index_sha256": "1b0085e252a431b2ab54e5e458ad16258cb8533d9bab1da843a4413cb666a711",
+        "timing_sha256": "3e77a8a9733dec17a9358d7dcca7454a56cf60d2490c9c3a7e2c97445aa9e6d9",
+        "area_sha256": "8b6618c83271764fbd7805fe25d336e52a37a96079f38387d6cbaf0ed1520ab8"
+      },
+      "area": {
+        "slice": 62111,
+        "lut6": 57830,
+        "ff": 71895,
+        "eram": 265,
+        "dsp": 149
+      },
+      "timing": {
+        "setup_wns_ns": -1.808,
+        "setup_tns_ns": -175.447,
+        "setup_violated_endpoints": 257,
+        "min_summary_wns_ns": 0,
+        "min_summary_tns_ns": 0,
+        "hold_min_ns": null,
+        "removal_min_ns": null,
+        "coverage_percent": 99.85,
+        "path_counts": {
+          "recovery": 20,
+          "setup": 723
+        },
+        "recovery": {
+          "slack_ns": 1.39,
+          "report_line": 2468,
+          "check": "recovery",
+          "corner": "slow",
+          "begin": "u_pcie/endpoint/bridge/u_controller/u_camera_pcie_ep_ph1_clock_ctrl/user_link_reg_syn_5.clk",
+          "end": "u_pcie/endpoint/bridge/u_controller/u_camera_pcie_ep_ph1_pcie_basic_top/u_camera_pcie_ep_msi_pipeline/ven_msi_grant_nege_reg_syn_3.asr",
+          "launch_clock": "u_pcie/endpoint/bridge/u_controller/pcie_user_clk",
+          "capture_clock": "u_pcie/endpoint/bridge/u_controller/pcie_user_clk",
+          "budget_ns": 2,
+          "data_delay_ns": 0.584,
+          "cell_delay_ns": 0.175,
+          "net_delay_ns": 0.409,
+          "logic_levels": 0
+        },
+        "pix_reset_to_data": {
+          "slack_ns": -1.808,
+          "report_line": 119,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "g_private_processing$u_original_source/u_pixel_reset/g_falling_release$released_n_reg_syn_20.clk",
+          "end": "g_physical_source$u_fence/context_q_reg[289]_syn_2.imb",
+          "launch_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 4,
+          "data_delay_ns": 5.55,
+          "cell_delay_ns": 1.422,
+          "net_delay_ns": 4.128,
+          "logic_levels": 10
+        },
+        "dfi_ring_reset_to_data": {
+          "slack_ns": -0.071,
+          "report_line": 1123,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "u_ddr_store/g_ring_store$u_record_owner_reset/g_falling_release$released_n_reg_syn_4.clk",
+          "end": "g_private_processing$u_processing/u_job_service/u_scheduler/g_normal_replay$u_normal/state_reg[0]_syn_2.imf",
+          "launch_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "capture_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "budget_ns": 3.751,
+          "data_delay_ns": 3.564,
+          "cell_delay_ns": 1.665,
+          "net_delay_ns": 1.899,
+          "logic_levels": 7
+        }
+      },
+      "congestion": {
+        "estimated_wire_length": 16571429,
+        "over_100_percent_tiles": 343,
+        "regions": 19
+      },
+      "warning_summary": {
+        "severe_timing_constraints": 4,
+        "critical_high_fanout_qor": false
+      },
+      "entropy_path_inventory": {
+        "packed_entropy_setup_entries": 5,
+        "minimum_named_or_attributed_ns": 6.487,
+        "confirmed_ready_or_reservoir_setup_entries": 0
+      }
+    },
+    {
+      "seed": 5,
+      "job": "manual-camera-fusion-r1-20261110-syn4-20s4t-caed505cb11ebaab-s5",
+      "generated": "Tue Nov 10 21:02:59 2026",
+      "placement_threads": 4,
+      "place_wall_seconds": 1651.58,
+      "reports": {
+        "directory": "server/td/local/download/camera-fusion-eade-placed-20261110/s5",
+        "verified_file_count": 7,
+        "verified_bytes": 6756487,
+        "index_sha256": "c014583cbb463a6d1151566d4bbd2e1b795ca517fe9ce9cf47bbb4be41753d56",
+        "timing_sha256": "ad4bdd8fcd09ea4a69f9c4e6057f96a36b80df0f26fe599be47eab1fdabb7d92",
+        "area_sha256": "85fa22a059ea8f0bd927cca58b391f9982fdafe5c5acde1f59dc2e24a59ac3f8"
+      },
+      "area": {
+        "slice": 62099,
+        "lut6": 57874,
+        "ff": 71851,
+        "eram": 265,
+        "dsp": 149
+      },
+      "timing": {
+        "setup_wns_ns": -1.552,
+        "setup_tns_ns": -175.273,
+        "setup_violated_endpoints": 270,
+        "min_summary_wns_ns": 0,
+        "min_summary_tns_ns": 0,
+        "hold_min_ns": null,
+        "removal_min_ns": null,
+        "coverage_percent": 99.85,
+        "path_counts": {
+          "recovery": 27,
+          "setup": 716
+        },
+        "recovery": {
+          "slack_ns": 1.374,
+          "report_line": 2732,
+          "check": "recovery",
+          "corner": "slow",
+          "begin": "g_config$u_config/u_bar/lt12_syn_164.clk",
+          "end": "g_config$u_config/u_bar/state_reset_n_reg_syn_14.asr",
+          "launch_clock": "u_pcie/endpoint/bridge/u_controller/pcie_user_clk",
+          "capture_clock": "u_pcie/endpoint/bridge/u_controller/pcie_user_clk",
+          "budget_ns": 2,
+          "data_delay_ns": 0.6,
+          "cell_delay_ns": 0.181,
+          "net_delay_ns": 0.419,
+          "logic_levels": 0
+        },
+        "pix_reset_to_data": {
+          "slack_ns": -1.552,
+          "report_line": 119,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "g_private_processing$u_original_source/u_pixel_reset/g_falling_release$released_n_reg_syn_19.clk",
+          "end": "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/axis_data_reg[19]_syn_2.ima",
+          "launch_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "capture_clock": "u_pixel_pll/pll_inst.clkc[0]",
+          "budget_ns": 4,
+          "data_delay_ns": 5.294,
+          "cell_delay_ns": 1.367,
+          "net_delay_ns": 3.927,
+          "logic_levels": 8
+        },
+        "dfi_ring_reset_to_data": {
+          "slack_ns": -0.11,
+          "report_line": 1126,
+          "check": "setup",
+          "corner": "slow",
+          "begin": "u_ddr_store/g_ring_store$u_record_owner_reset/g_falling_release$released_n_reg_syn_4.clk",
+          "end": "u_jpeg_to_ddr/u_token_fifo/fifo/read_buffer_syn_134.cea",
+          "launch_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "capture_clock": "u_ddr_store/u_ddr/dfi_clk",
+          "budget_ns": 3.751,
+          "data_delay_ns": 3.612,
+          "cell_delay_ns": 0.674,
+          "net_delay_ns": 2.938,
+          "logic_levels": 4
+        }
+      },
+      "congestion": {
+        "estimated_wire_length": 16287470,
+        "over_100_percent_tiles": 268,
+        "regions": 19
+      },
+      "warning_summary": {
+        "severe_timing_constraints": 4,
+        "critical_high_fanout_qor": true
+      },
+      "entropy_path_inventory": {
+        "packed_entropy_setup_entries": 17,
+        "minimum_named_or_attributed_ns": 6.487,
+        "confirmed_ready_or_reservoir_setup_entries": 0
+      }
+    }
+  ],
+  "path_notes": {
+    "pix": {
+      "launch": "private_raw_isp_borrow4 original source local F3 ASR release",
+      "endpoints": "CAM0 RAW payload/history or actual physical SOURCE-fence result data. Seed 4's packed context_q name is an alias for o_raw_source_error[2].",
+      "seed1_net_chain": [
+        "g_private_processing$u_original_source/u_original_cleanup/rst_n_dup_1552 [hdr_pair_product_abort_drain4.v:9]",
+        "u_stereo_capture0/u_fence/failure_code_b[1]_syn_330 [NOFILE]",
+        "g_config$u_config/u_engine/frame_sequence[7]_syn_10 [mono_config_engine_v2.v:20]",
+        "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/mux42_syn_388 [shared_raw10_frame_ingress.v:349]",
+        "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member0/ingress/axis_data_next[127] [shared_raw10_frame_ingress.v:123]"
+      ],
+      "cut": "Evaluate R3 data qualification for replay START/ready and drain-side masks while preserving F3 ASR, applied_clear and first legal R4 handshake."
+    },
+    "dfi": {
+      "launch": "ddr3_jpeg_store JPEG ring owner F3 ASR release",
+      "endpoints": "JPEG token RAM CE or read buffer (seeds 1,5), HDR bank clear (2,3), normal replay scheduler (4).",
+      "seed3_net_chain": [
+        "u_ddr_store/g_ring_store$u_store/i_rst_n_dup_6692 [jpeg_frame_ring.v:18]",
+        "g_s04$u_raw_service/i_pair_product_quiet [full_raw_store.v:98]",
+        "g_s04$u_raw_service/g_cam1_hdr$shared_owner/g_directory[1]$directory/i_clear[2] [hdr_pair_directory.v:10]"
+      ],
+      "seed2_low_positive_ce_ns": [
+        0.019,
+        0.037
+      ],
+      "cut": "Evaluate the ring's existing local release stage for data/CE qualification. Preserve actual final B, RESULT, read and writer quiet, exact identity, slot-local and global STOP/CFG/fault proof."
+    },
+    "historical_fixes": "Distinct from the retained RAW R2 R3/F3 SOURCE/JPEG ingress and DFI arbiter fixes. No placement path attribution to whole-ACK equality, late SHORT, prefetch cursor or Tone in the expanded families. Absence from selected paths carries no qualification."
+  },
+  "warnings": {
+    "common": [
+      "PHY-7022 estimated Slice utilization exceeds 95%",
+      "PHY-5054 sys_clk_dup_1 mixed clock fanout",
+      "PHY-5060 cam_mclk and cam1_mclk output candidates",
+      "CLKST-5093 DDR IP GCLK cascade",
+      "PHY-5010 skipped nets without a driver or load",
+      "TMST-7700 four severe constraint issues per seed",
+      "QOR-1201/QOR-4001/QOR-4004 timing and congestion"
+    ],
+    "gap": "check_timing details and complete routed exceptions/ignored/hold/removal are not in the snapshot used here."
+  },
+  "coarse64_local_reference": {
+    "file_sha256": "c6f2e10a8208e500c98154d3e7647f2d4d11a8ed3e7df9fd1f94a09b488a77c7",
+    "local_return_cone_synthesis_threads": 4,
+    "reopened_slice_delta": -242,
+    "global_setup_estimate_ns": [
+      2.356,
+      2.384
+    ],
+    "ready_return_worst_estimate_ns": [
+      4.054,
+      3.967
+    ],
+    "standalone_entropy_blackbox_scenarios": 11,
+    "encoder_blackbox_scenarios": 4,
+    "scope": "Local A/B only. Separate from eade placed baseline."
+  }
+}

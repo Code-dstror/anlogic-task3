@@ -1,0 +1,20 @@
+{
+  "organized_on": "2026-11-11",
+  "upstream_controller_version": "2026.11.10-measured-admission-v6.6",
+  "controller_version": "2026.11.10-measured-admission-v6.6-sanitized",
+  "upstream_archive_sha256": "7d3551b2ae45e0f1e8cd7d4ec178a63676016b890dec4342b71b2c97af74beb2",
+  "configuration_required": [
+    "Git repository in common.py REMOTE and client.py allowed origins",
+    "TD_ROOT and TD_SEED_REPO for apply_update.sh",
+    "network.py PORTAL and response-host check, plus install.py portal check when optional portal login is used"
+  ],
+  "identity_scope": "Based on v6.6. SHA256SUMS and td-simple-update-manifest.json describe this source release.",
+  "validation": {
+    "python_syntax_files": 29,
+    "affected_existing_tests": 30,
+    "affected_existing_tests_result": "PASS",
+    "shell_line_endings": "LF",
+    "release_manifest": "CURRENT_FILES"
+  },
+  "distribution": "source_release"
+}

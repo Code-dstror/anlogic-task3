@@ -1,0 +1,193 @@
+{
+  "frozen_rtl": "06a122ee70:refactor/dual_hdr_merge_r1/src_fpga",
+  "date": "2026-11-05",
+  "status": "PASS",
+  "td": "2026.2.210.850",
+  "record_result_inputs_sha256": "f29c0a694c15db3b1cc996b12884ad74b0c391d5633903466eb30781f3c8b32f",
+  "source_files": {
+    "run.py": "3d6f3559c39c1c86cfbf9b832a4a3af829ffb9c1263b0f8cd8aa84518b5a1d3b",
+    "monitor.svh": "796b5a157f985cd07895c177558954c14a85c23c50e8eacbc88fe56807b16c4f",
+    "tb_sparse_transport.sv": "473e256b9c1f9866e29894bc60a23c7bfd6b26d353c4fb6367f013fd789dd69a",
+    "records.py": "2f964c49ef6cadb81be9e566462d502be1cef5388d485223132a0c813d5ec7c7",
+    "record_v2.py": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f",
+    "record_v4.py": "bdc3736b1ae9a7a4b21c7fc7d4a3f6172807f9d9b71c8f38f06203a2dae058bb",
+    "pcie_protocol_v1.py": "4acdfa4b18adf8b27bf7f94e96e50e8dc450170473c3acbb9990194e9b56967e",
+    "dual_r3_stereo.py": "7275383bf8ee86488e2d1b617c5ff7f671264a46541e9f0dcaa4b2d81926edb0",
+    "al_phy_glbl.v": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff",
+    "ph1_logic_eram.v": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8",
+    "ph1_phy_eram.v": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c",
+    "ph1_logic_dram.v": "0b4ab2c3ac73aad28e16ab6a0a6af57a62ae89db2c3e58ac85605cc9e98b88cd"
+  },
+  "rtl_variants": {
+    "current": {
+      "aborts": 4,
+      "inputs": {
+        "ram40_sdp_fixed.v": "53854efce3b3a1d47749d0aa10627750fa9ac8927aa0dcf6e066a9358b7cd108",
+        "td_sdp_ram40.v": "f120c365061daac7b401201a5b3661dd01d794ff77622de24686f3c58d0a3e58",
+        "lane_sparse_extension_checker.v": "65cd2537353d4cc0d5f9c3fe7b1e4ab3ab8e1c483837160427fd7472061a0388",
+        "ddr_extension_staging_ram.v": "e13c30c7229574f7d1a5c03049173fb89c885f677fd19ef88bc10065fdf58ce0",
+        "jpeg_metadata_append5.v": "51dbec9d7e06dc36ec6a5e4f9b892fb9474ee6578431fc9943c1a95a9c177894",
+        "jpeg_record_metadata_store.v": "bbd9de897124f7a0050e6716b30d4de72d997ff957484fd67a8f6ca258d737b5",
+        "frame_record_extension_builder.v": "da144d2aab760bb2587ed7af7575352da088baa1405cb0395f1e57d24a6f59f5",
+        "c2h_frame_tx.v": "48e6d9d5afe88676af096976b78b2433242b4980a3dab3ec010a557932ba36d9",
+        "pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+        "pcie_record_v3_validate.vh": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8"
+      },
+      "transport_result": "RESULT: PASS SPARSE_TRANSPORT checks=69621 stalls=4207 stream_beats=768",
+      "records": [
+        {
+          "slot": 0,
+          "bytes": 29069,
+          "sha256": "cfdf5d399852092495b2cdaa31ba072256485ea008414598f90cbd9cf9fa4546",
+          "legacy_color_policy": true,
+          "enable_mask": 0,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 1,
+          "bytes": 29069,
+          "sha256": "a13d3b7ba446d58b03272b15994a186bebdf8511119c739011ddd60a59e816ac",
+          "legacy_color_policy": false,
+          "enable_mask": 48,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 303
+        },
+        {
+          "slot": 2,
+          "bytes": 29069,
+          "sha256": "94c55c85e63c6f508c19784e62fe5237705905c88c979e2a7694cbab40153572",
+          "legacy_color_policy": false,
+          "enable_mask": 0,
+          "hdr": true,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 3,
+          "bytes": 29069,
+          "sha256": "da3cb37a54f3c1aeb6e355452497044bbf02e73dcf49dd2885034a7496f8d389",
+          "legacy_color_policy": true,
+          "enable_mask": 0,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 4,
+          "bytes": 29069,
+          "sha256": "fe26322657f2a5056c4ccd343d266bf7501093b4f06be737dbc7df502e7bf4fd",
+          "legacy_color_policy": false,
+          "enable_mask": 15,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 5,
+          "bytes": 29069,
+          "sha256": "fed1d440923f23bee81431de67dee6c97391a52faa1253aab96046f0a130ea82",
+          "legacy_color_policy": false,
+          "enable_mask": 15,
+          "hdr": true,
+          "dehaze_used": true,
+          "points": 0
+        }
+      ],
+      "output_handshakes_sha256": "60f13c88c13d2338380ba40e9a8766127b87f555119b4c7420a8d5fadb2d688d",
+      "native_simulation_log_sha256": "321ca508c8eda54a8fbc8360200d356ee157c086a9d4bb9b4de2ece392256dbd"
+    },
+    "seed1": {
+      "aborts": 4,
+      "inputs": {
+        "ram40_sdp_fixed.v": "53854efce3b3a1d47749d0aa10627750fa9ac8927aa0dcf6e066a9358b7cd108",
+        "td_sdp_ram40.v": "f120c365061daac7b401201a5b3661dd01d794ff77622de24686f3c58d0a3e58",
+        "lane_sparse_extension_checker.v": "65cd2537353d4cc0d5f9c3fe7b1e4ab3ab8e1c483837160427fd7472061a0388",
+        "ddr_extension_staging_ram.v": "e16f88c43b6a7f03801f5648f4a1020081dc7a3b0201c674949803f7a13d5cce",
+        "jpeg_metadata_append5.v": "51dbec9d7e06dc36ec6a5e4f9b892fb9474ee6578431fc9943c1a95a9c177894",
+        "jpeg_record_metadata_store.v": "3f5c45d565c7ef0ee7ea74b660e3624b06f1bc6a1d2c8792045fb5bf42f97247",
+        "frame_record_extension_builder.v": "da144d2aab760bb2587ed7af7575352da088baa1405cb0395f1e57d24a6f59f5",
+        "c2h_frame_tx.v": "48e6d9d5afe88676af096976b78b2433242b4980a3dab3ec010a557932ba36d9",
+        "pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+        "pcie_record_v3_validate.vh": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8"
+      },
+      "transport_result": "RESULT: PASS SPARSE_TRANSPORT checks=69621 stalls=4207 stream_beats=768",
+      "records": [
+        {
+          "slot": 0,
+          "bytes": 29069,
+          "sha256": "cfdf5d399852092495b2cdaa31ba072256485ea008414598f90cbd9cf9fa4546",
+          "legacy_color_policy": true,
+          "enable_mask": 0,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 1,
+          "bytes": 29069,
+          "sha256": "a13d3b7ba446d58b03272b15994a186bebdf8511119c739011ddd60a59e816ac",
+          "legacy_color_policy": false,
+          "enable_mask": 48,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 303
+        },
+        {
+          "slot": 2,
+          "bytes": 29069,
+          "sha256": "94c55c85e63c6f508c19784e62fe5237705905c88c979e2a7694cbab40153572",
+          "legacy_color_policy": false,
+          "enable_mask": 0,
+          "hdr": true,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 3,
+          "bytes": 29069,
+          "sha256": "da3cb37a54f3c1aeb6e355452497044bbf02e73dcf49dd2885034a7496f8d389",
+          "legacy_color_policy": true,
+          "enable_mask": 0,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 4,
+          "bytes": 29069,
+          "sha256": "fe26322657f2a5056c4ccd343d266bf7501093b4f06be737dbc7df502e7bf4fd",
+          "legacy_color_policy": false,
+          "enable_mask": 15,
+          "hdr": false,
+          "dehaze_used": false,
+          "points": 0
+        },
+        {
+          "slot": 5,
+          "bytes": 29069,
+          "sha256": "fed1d440923f23bee81431de67dee6c97391a52faa1253aab96046f0a130ea82",
+          "legacy_color_policy": false,
+          "enable_mask": 15,
+          "hdr": true,
+          "dehaze_used": true,
+          "points": 0
+        }
+      ],
+      "output_handshakes_sha256": "60f13c88c13d2338380ba40e9a8766127b87f555119b4c7420a8d5fadb2d688d",
+      "native_simulation_log_sha256": "dd868b96075c4dacf61ce5ea3563fc3b1fab0b6eb2a6b7defe1dd3860982fbc7"
+    }
+  },
+  "cfg": {
+    "status": "PASS",
+    "metrics": [
+      "RESULT: PASS STEREO_CONFIG_ELIGIBILITY checks=15068 callbacks=18"
+    ],
+    "input_result_sha256": "c14f67362df63fb5f239e813cae26fe6d66774afc82111014f6200d12fa68c95",
+    "log_sha256": "9a88b19bc01877548b0b468d194180e4b7b15f85f55edad14441f3460eda0b4f"
+  },
+  "pnr": "NOT_RUN",
+  "board": "NOT_RUN"
+}

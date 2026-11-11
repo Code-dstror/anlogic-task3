@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "skill_id_source": "pyproject.toml:project.name",
+  "version_source": "VERSION",
+  "release_receipt_filename": "RELEASE_RECEIPT.json",
+  "install_receipt_filename": "INSTALL_RECEIPT.json",
+  "catalog_relative_path": "config/installer/platform-catalog.json",
+  "projection_relative_path": "assets/installer/platforms.json",
+  "manifest_relative_path": "config/installer/installer-manifest.json",
+  "manifest_env_relative_path": "installer.manifest.env",
+  "manifest_projection_relative_path": "assets/installer/manifest.projection.json",
+  "backend_relative_path": "scripts/python/installation/cli.py",
+  "backend_module": "scripts.python.installation.cli",
+  "projection_builder_relative_path": "scripts/python/installation/projection.py",
+  "verification_cases_relative_path": "config/installer/verification-cases.json",
+  "entrypoints": [
+    "install.ps1",
+    "install.sh",
+    "install.bat"
+  ],
+  "python_candidates": [
+    "python3",
+    "python"
+  ],
+  "shell_runtime_candidates": [
+    "bash",
+    "sh"
+  ],
+  "powershell_candidates": [
+    "pwsh",
+    "powershell"
+  ],
+  "powershell_entry_relative": "install.ps1",
+  "os_home_environment_names": [
+    "HOME",
+    "USERPROFILE"
+  ],
+  "host_os_map": {
+    "nt": "windows",
+    "posix": "posix"
+  },
+  "transaction": {
+    "lock_file_name": ".installer.lock",
+    "staging_prefix": ".installer-staging-",
+    "backup_directory_name": ".installer-backups",
+    "quarantine_directory_name": ".installer-quarantine",
+    "backup_name_template": "{skill_id}-{transaction_id}",
+    "quarantine_name_template": "{skill_id}-{transaction_id}",
+    "receipt_temp_suffix": ".receipt.tmp",
+    "preserve_mode": "all_unlisted_target_files",
+    "same_volume_required": true,
+    "preserve_failure_evidence": true
+  },
+  "path_templates": {
+    "target": "{platform_root}/{skill_install_dir}/{skill_id}",
+    "lock": "{target_parent}/{target_name}{lock_file_name}",
+    "backup_parent": "{target_parent}/{backup_directory_name}",
+    "quarantine_parent": "{target_parent}/{quarantine_directory_name}"
+  },
+  "source_policy": {
+    "receipt_must_exist": true,
+    "allow_extra_paths": [
+      "RELEASE_RECEIPT.json"
+    ],
+    "forbidden_names": [
+      ".tmp-tests",
+      ".agents",
+      "__pycache__"
+    ],
+    "reject_symlinks": true,
+    "reject_paths_outside_source": true
+  },
+  "status_values": {
+    "success": "SUCCESS",
+    "dry_run": "DRY_RUN",
+    "installed": "INSTALLED",
+    "failed": "FAILED",
+    "input_error": "INPUT_ERROR",
+    "integrity_error": "INTEGRITY_ERROR",
+    "rolled_back": "ROLLED_BACK",
+    "recovery_required": "RECOVERY_REQUIRED",
+    "projection_built": "PROJECTION_BUILT"
+  },
+  "bootstrap_failure_status_key": "integrity_error",
+  "verification": {
+    "source_directory_name": "rvg-validation-source",
+    "target_directory_name": "rvg-validation-targets"
+  },
+  "output": {
+    "human_prefix": {
+      "info": "> INFO: [Python]",
+      "warning": "> WARNING: [Python]",
+      "error": "> ERR: [Python]"
+    },
+    "json_protocol": "single_object"
+  },
+  "exit_codes": {
+    "SUCCESS": 0,
+    "INPUT_ERROR": 2,
+    "INTEGRITY_ERROR": 3,
+    "ROLLED_BACK": 4,
+    "RECOVERY_REQUIRED": 5
+  }
+}

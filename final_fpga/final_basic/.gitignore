@@ -1,0 +1,19 @@
+# Rebuildable native runs and simulation output; retain source and selected bit.
+fpga_prj/al/*_Runs/
+fpga_prj/al/td_*.log
+fpga_prj/al/td_*.logw
+fpga_prj/al/*.user
+fpga_prj/al/*.bak
+**/__pycache__/
+**/*.pyc
+**/*.wlf
+**/*.vcd
+!fpga_prj/bit/*.bit
+!fpga_src/ip/**/*.dath
+!fpga_src/ip/**/*.mif
+!fpga_src/ip/**/*.mem
+!fpga_docs/debug_seed25/server_evidence/**/
+!fpga_docs/debug_seed25/server_evidence/**/*.log
+!fpga_docs/debug_seed25/server_evidence/**/*.logw
+!fpga_docs/relocation_evidence/*.log
+!fpga_docs/relocation_evidence/*.logw

@@ -1,0 +1,63 @@
+--- a/tb_stereo_hdr_top.sv
++++ b/tb_stereo_hdr_top.sv
+@@ -10,7 +10,8 @@
+ `define DUAL_RAW dut.g_s04.u_raw_service
+ module tb_stereo_hdr_top #(
+     parameter ROM_ROOT="../../../src_fpga/simulation/assets/rom_init",
+-    parameter integer JPEG_QUALITY=75, JPEG_RESTART=0, THROUGHPUT_FRAMES=4, STARTUP_ONLY=0, EYE_PHASE_NS=329
++    parameter integer JPEG_QUALITY=75, JPEG_RESTART=0, THROUGHPUT_FRAMES=4, STARTUP_ONLY=0, EYE_PHASE_NS=329,
++    parameter integer DEHAZE_HE_SHORT=1
+ );
+     localparam integer WIDTH=1920,HEIGHT=1080;
+     localparam integer CAPTURE_DIVISOR=2;
+@@ -94,6 +95,14 @@
+         reg [1023:0] extension;
+         begin
+             extension=0;extension[7:0]=2;extension[9:8]=`PCIE_CFG_V2_MODES_MONO_HDR;
++            if(DEHAZE_HE_SHORT)begin
++                extension[`PCIE_CFG_V2_OFFSET_PROCESSING_ENABLES+:6]=
++                    `PCIE_CFG_V2_ENABLES_DEHAZE | `PCIE_CFG_V2_ENABLES_HISTOGRAM;
++                // Mirror the RK auto selector. Generation zero remains zero on the wire.
++                extension[`PCIE_CFG_V2_OFFSET_DEHAZE_LUT_GENERATION+:32]=0;
++                read_bar(`PCIE_REG_CFG_EXT_V2_ENABLES,value);
++                check((value & 32'h0a)==32'h0a,"active DUAL profile advertises both requested filters");
++            end
+             extension[`PCIE_CFG_V2_OFFSET_HDR_RATIO+:3]=4;
+             extension[`PCIE_CFG_V2_OFFSET_HDR_BLACK_LONG+:10]=50;
+             extension[`PCIE_CFG_V2_OFFSET_HDR_BLACK_SHORT+:10]=50;
+@@ -109,6 +118,12 @@
+             write_bar(`PCIE_REG_CFG_REQUEST_MIN_QUALITY,1);write_bar(`PCIE_REG_CFG_REQUEST_FLAGS,0);
+             write_bar(`PCIE_REG_CFG_REQUEST_RESTART_MCUS,0);write_bar(`PCIE_REG_CFG_REQUEST_FRAME_BUDGET,0);
+             for(integer w=0;w<32;w++)write_bar(`PCIE_REG_CFG_EXT_SHADOW_BASE+4*w,extension[32*w+:32]);
++            if(DEHAZE_HE_SHORT)begin
++                for(integer w=0;w<32;w++)begin
++                    read_bar(`PCIE_REG_CFG_EXT_SHADOW_BASE+4*w,value);
++                    check(value===extension[32*w+:32],"RK BAR shadow readback of complete requested snapshot");
++                end
++            end
+             write_bar(`PCIE_REG_CFG_COMMAND,`PCIE_CFG_COMMAND_PREPARE_EXT);
+             guard=0;do begin read_bar(`PCIE_REG_CFG_STATUS,value);guard++;
+                 if(value[`PCIE_CFG_STATUS_ERROR])begin read_bar(`PCIE_REG_CFG_ERROR,value);$fatal(1,"PREPARE error=%h",value);end
+@@ -194,6 +209,22 @@
+         check(!dut.camera_config_error&&!dut.camera1_config_error,"both I2C configurations");
+         if(STARTUP_ONLY==0)$display("HDR_TOP trusted four physical FS, starting real warmup");
+         if(STARTUP_ONLY!=0)begin
++            if(DEHAZE_HE_SHORT)begin
++                check(dut.capture0_active_config[175:160]===16'h2a02 &&
++                      dut.dfi_active_config[175:160]===16'h2a02,"HDR/HE/dehaze at PIX and DFI owners");
++                check(dut.capture0_active_config[543:512]===32'd0 &&
++                      dut.dfi_active_config[543:512]===32'd0,"raw auto generation retained in both snapshots");
++                check(`DUAL_F21.cfg_filter_dehaze===1'b1,"physical preprocess owner receives dehaze request");
++                check(dut.live_history_used===1'b0 && !dut.camera_hdr_stable && !dut.cam1_hdr_stable,
++                      "first physical FS cannot claim a processed image or valid restoration history");
++                read_bar(`PCIE_REG_CFG_STATUS,value);
++                check(!value[`PCIE_CFG_STATUS_APPLIED]&&!value[`PCIE_CFG_STATUS_ERROR],
++                      "pre-warmup FS cannot acknowledge a real admitted frame");
++                read_bar(`PCIE_REG_CFG_MODE_EPOCH,value);check(value==0,"RK retains BOOT epoch until actual application");
++                read_bar(`PCIE_REG_CFG_EXT_ACTIVE_BASE,value);check(value==0,"RK active extension remains BOOT before APPLIED");
++                $display("RESULT: PASS STEREO_HDR_TOP_STARTUP HDR_DEHAZE_HE checks=%0d shadow=2a02 pixel=2a02 dfi=2a02 VC_FS=4 APPLIED=0 restored=0",checks);
++                $finish;
++            end
+             $display("RESULT: PASS STEREO_HDR_TOP_STARTUP checks=%0d four trusted physical FS, both I2C recipes, pre-warmup",checks);$finish;
+         end
+         fork source0.finish_pair(10);source1.finish_pair(10); join

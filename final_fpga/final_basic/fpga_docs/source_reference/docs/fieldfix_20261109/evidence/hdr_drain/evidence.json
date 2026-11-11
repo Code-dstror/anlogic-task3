@@ -1,0 +1,181 @@
+{
+  "result": "PASS",
+  "variant": "candidate",
+  "wall_watchdog_ms": 55000,
+  "sim_watchdog_us": 100,
+  "modelsim_bin": "D:/App/modelsim/win64",
+  "td_root": "D:/App/TD_Release_2026.2.210.850",
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_cfg_transition_20261109\\hdr_cfg_drain_run.ps1",
+    "-Variant",
+    "candidate",
+    "-ModelSimBin",
+    "D:/App/modelsim/win64",
+    "-TdRoot",
+    "D:/App/TD_Release_2026.2.210.850",
+    "-RunId",
+    "r4"
+  ],
+  "work_directory": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4",
+  "commands": [
+    {
+      "stage": "version",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vsim.exe",
+        "-version"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\version.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "init_map",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vmap.exe",
+        "-c"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\init_map.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "create_ph1",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlib.exe",
+        "ph1"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\create_ph1.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "create_work",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\create_work.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "map_ph1",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vmap.exe",
+        "ph1",
+        "ph1"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\map_ph1.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "map_work",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vmap.exe",
+        "work",
+        "work"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\map_work.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "compile_ph1",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlog.exe",
+        "-work",
+        "ph1",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_fifo.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_ramfifo.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_fifoctrl.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\compile_ph1.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "compile_work",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vlog.exe",
+        "-sv",
+        "-work",
+        "work",
+        "-L",
+        "ph1",
+        "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\00_rtl",
+        "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\03_mono_config_v2_20261015",
+        "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include",
+        "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\include",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_cfg_transition_20261109\\hdr_cfg_drain_carrier.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\physical_pair_config_owner.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\frame_config_preset_owner.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\paired_raw_capture_drain_cdc.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\reset_release_sync.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\control_message_fifo_ip.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\control_fifo_40x512.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\camera_control_fifo_40x512.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\camera_control_fifo_40x512_soft_fifo.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\camera_control_fifo_40x512_soft_fifo_core.v",
+        "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v",
+        "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_cfg_transition_20261109\\hdr_cfg_drain_tb.sv"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\compile_work.log",
+      "exit_code": 0
+    },
+    {
+      "stage": "simulate",
+      "argv": [
+        "D:\\App\\modelsim\\win64\\vsim.exe",
+        "-c",
+        "-t",
+        "1ps",
+        "-onfinish",
+        "stop",
+        "-L",
+        "ph1",
+        "work.hdr_cfg_drain_tb",
+        "ph1.glbl",
+        "-do",
+        "onerror {quit -force -code 2}; run -all; quit -force -code 0"
+      ],
+      "log": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_cfg_drain_20261109\\candidate-r4\\simulate.log",
+      "exit_code": 0
+    }
+  ],
+  "input_sha256": {
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v": "216e8c8dc77b4e9318d2b0182c6e93ec866a3535a8acad0462a02e6eef05d0c8",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_fifo.v": "0cea967091d4f3fd27e07289d3a19a0064e65c8abefc0427749ef61b2ce00160",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_ramfifo.v": "98fab0ec4a952cc2d384b77f7a55c3a6e912741fc33c21cd748f6d9fd214e774",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v": "9da1c478ad7c87676b5e89ad6312ee51d8ddc3d033d15a5ad06112a30bf1e85c",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_fifoctrl.v": "fea30a6a038abec73c4e4e56b9986ad1242f043a06a7c39619979744202adddf",
+    "D:\\App\\TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_cfg_transition_20261109\\hdr_cfg_drain_carrier.v": "fa68aa7993fd9949aad908dc282a07e72d60bd56985f493cad17968adabeb3bd",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v": "9a8aaad1b7e59827c9afb0ddfd539bcbc3f78ca39002a1a0e2861f4c789fb2ae",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\physical_pair_config_owner.v": "dc68ce2cdd3776583acd47a047cda1e710c045d7e36b3abcb16ab51d2f989b18",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\frame_config_preset_owner.v": "153dfb73e5db7d2b8c63d55f37f4396a6d01c3cce237731b4a8cb48c1e843d0f",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\paired_raw_capture_drain_cdc.v": "65e6613a7a1ed242e79846a47270ce3fc3f554a0787c125e94dff91bcca30c63",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\reset_release_sync.v": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\control_message_fifo_ip.v": "ed45556e04d39fa3148ce015c90a74a32774016073129d2e4ec4511beaf51c29",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\control_fifo_40x512.v": "f03e2bd2b794592b45a298c8a9724831cfc766ceb1ba97aafd697679bb60f291",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\camera_control_fifo_40x512.v": "abdc8c7a0db30b9fd1188adea12cdeb446a679295335c753a3646c2861470768",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\camera_control_fifo_40x512_soft_fifo.v": "26a5a934d62487bf44a9b56eaab6c30f86d794c4049cde76679878840ff4928d",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\camera_control_fifo_40x512_soft_fifo_core.v": "bc5f2b65c88855891c086647df9a2a8d1d155c3b8deb48cf402a7b0235e8346a",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_cfg_transition_20261109\\hdr_cfg_drain_tb.sv": "0da526d9c6cd724468f12c348d573e727fede3f249beb9192adc307f49026df9",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\00_rtl\\mono_config_transport_v2.vh": "5555cc4297277b88def3e274d640cc8408ab45481d535013883c4baca6a5d4dc",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\00_rtl\\raw_video_v1.vh": "b6a8048ddbe5e0d8c9db216dea8ceb45f2b2612f304a74a49bc1d9b1c3b65d12",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\00_rtl\\stereo_control_v1.vh": "571573b50b2ad3f7d3eefda2657fcb4bc168d092c24456f126f4e5caef957023",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\03_mono_config_v2_20261015\\legacy_stage2_config_transport.vh": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\analysis_config_transport.vh": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\camera_physical_capture.vh": "63d0c535d68f333232c9d0b36f6f931e1285abd2a322d2fdbf4263e16809b3d8",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\ip\\camera_control_fifo_40x512\\RTL\\include\\define.v": "89eb5e07e6f2e6bde745a19834c61950ba588501df9aaaf531fa8b8b94f3cc11",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\fieldfix_20261109\\HDR_DRAIN_PUBLIC.md": "584c7291b7e2e4987b2a42235f8a72ac49e457cd46eb61c47b59b34aae6807e7",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_cfg_transition_20261109\\hdr_cfg_drain_run.ps1": "2bb9c1520a70b44c3ea7c38494a2f2da1fce9d39e1bb22dfcb8a43cf325b52aa"
+  },
+  "wall_ms": 4610,
+  "modelsim_version": "Model Technology ModelSim SE-64 vsim 2020.4 Simulator 2020.10 Oct 13 2020",
+  "terminal": "HDR_CONFIG_DRAIN old_epoch=1 dehaze_epoch=2 new_epoch=3 source=2/2 cfg_ack=4 t=18710 ns"
+}

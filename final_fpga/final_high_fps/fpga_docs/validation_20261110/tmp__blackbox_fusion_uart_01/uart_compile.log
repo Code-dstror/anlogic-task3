@@ -1,0 +1,13 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:27:03 on Nov 10,2026
+vlog -work work -sv "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\00_rtl" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\01_include" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\03_mono_config_v2_20261015" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\04_include" <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\uart_status_observer.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\camera_field_diagnostics.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\uart_observer_snapshot.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\cfg_diag_snapshot.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_uart\tb_fusion_uart.sv 
+-- Compiling module uart_status_observer
+-- Compiling module camera_field_diagnostics
+-- Compiling module uart_observer_snapshot
+-- Compiling module cfg_diag_snapshot
+-- Compiling module tb_fusion_uart
+
+Top level modules:
+	tb_fusion_uart
+End time: 18:27:03 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

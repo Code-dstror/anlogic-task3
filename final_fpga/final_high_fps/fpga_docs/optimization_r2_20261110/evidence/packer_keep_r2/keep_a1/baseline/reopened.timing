@@ -1,0 +1,780 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 20:40:20 2026
+
+Top Model           : packer_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 98.06%
+Constraint File     : <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/packer_keep_r2/keep_a1/baseline/clock.sdc;
+Confidence          : Synthesized
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 12 end point(s) per path group, 2 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+
+Timing Status
+--------------------
+	SWNS: 5.036ns, STNS: 0.000ns
+	HWNS: 0.000ns, HTNS: 0.000ns
+	Period Check WNS: 0.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:      125.000          204   PIX
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0           local            0.000      4.000                 8.000         125.000                 2.964         337.382            5.036      0.000            0.000      0.000            0.000              204                5             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.
+
+Intra clock domain timing
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     2.964ns
+Fmax           :     337.382MHz
+
+Statistics:
+Max            : SWNS      5.036ns, STNS      0.000ns,         0 Viol Endpoints,       505 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 5.036ns
+Begin Point         : dut/abort_drain_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_count_reg[4].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.894ns (cell 0.968ns (33%), net 1.926ns (67%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT5=2  LUT6=1  LUT4=1  LUT3=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/abort_drain_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/abort_drain_reg.q
+net (fo=8)                              0.332          0.483          net: dut/abort_drain,  ../../jpeg_byte_packer.v(40)
+                                                                      pin: dut/mux51_syn_451.a
+LUT4                                    0.150    f     0.633       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          1.001          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.142       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.581          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.731       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.054          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.204       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.519          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_count_reg[4]_syn_5.a
+LUT3                                    0.150    f     2.669       5  pin: dut/byte_count_reg[4]_syn_5.o
+net (fo=1)                              0.149          2.818          net: dut/byte_count_reg[4]_syn_4,  ../../jpeg_byte_packer.v(120)
+                                                                      pin: dut/byte_count_reg[4].d
+SEQ (reg)                               0.076    f     2.894               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.894               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_count_reg[4].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.036               
+
+Slack               : 5.053ns
+Begin Point         : dut/drop_frame_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_count_reg[4].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.877ns (cell 0.968ns (33%), net 1.909ns (67%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT5=2  LUT6=1  LUT4=1  LUT3=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/drop_frame_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/drop_frame_reg.q
+net (fo=6)                              0.315          0.466          net: dut/drop_frame,  ../../jpeg_byte_packer.v(38)
+                                                                      pin: dut/mux51_syn_451.c
+LUT4                                    0.150    f     0.616       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          0.984          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.125       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.564          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.714       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.037          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.187       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.502          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_count_reg[4]_syn_5.a
+LUT3                                    0.150    f     2.652       5  pin: dut/byte_count_reg[4]_syn_5.o
+net (fo=1)                              0.149          2.801          net: dut/byte_count_reg[4]_syn_4,  ../../jpeg_byte_packer.v(120)
+                                                                      pin: dut/byte_count_reg[4].d
+SEQ (reg)                               0.076    f     2.877               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.877               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_count_reg[4].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.053               
+
+Slack               : 5.044ns
+Begin Point         : dut/abort_drain_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/end_pending_reg.d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.886ns (cell 0.968ns (33%), net 1.918ns (67%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT5=2  LUT4=2  LUT6=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/abort_drain_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/abort_drain_reg.q
+net (fo=8)                              0.332          0.483          net: dut/abort_drain,  ../../jpeg_byte_packer.v(40)
+                                                                      pin: dut/mux51_syn_451.a
+LUT4                                    0.150    f     0.633       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          1.001          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.142       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.581          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_459.a
+LUT5                                    0.150    f     1.731       3  pin: dut/mux51_syn_459.o
+net (fo=9)                              0.315          2.046          net: dut/mux4_syn_131[88],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_485.a
+LUT5                                    0.150    f     2.196       4  pin: dut/mux51_syn_485.o
+net (fo=9)                              0.315          2.511          net: dut/mux51_syn_434,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/end_pending_reg_syn_6.a
+LUT4                                    0.150    f     2.661       5  pin: dut/end_pending_reg_syn_6.o
+net (fo=1)                              0.149          2.810          net: dut/end_pending_reg_syn_5,  ../../jpeg_byte_packer.v(120)
+                                                                      pin: dut/end_pending_reg.d
+SEQ (reg)                               0.076    f     2.886               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.886               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/end_pending_reg.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.044               
+
+Slack               : 5.061ns
+Begin Point         : dut/drop_frame_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/end_pending_reg.d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.869ns (cell 0.968ns (33%), net 1.901ns (67%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT5=2  LUT4=2  LUT6=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/drop_frame_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/drop_frame_reg.q
+net (fo=6)                              0.315          0.466          net: dut/drop_frame,  ../../jpeg_byte_packer.v(38)
+                                                                      pin: dut/mux51_syn_451.c
+LUT4                                    0.150    f     0.616       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          0.984          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.125       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.564          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_459.a
+LUT5                                    0.150    f     1.714       3  pin: dut/mux51_syn_459.o
+net (fo=9)                              0.315          2.029          net: dut/mux4_syn_131[88],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_485.a
+LUT5                                    0.150    f     2.179       4  pin: dut/mux51_syn_485.o
+net (fo=9)                              0.315          2.494          net: dut/mux51_syn_434,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/end_pending_reg_syn_6.a
+LUT4                                    0.150    f     2.644       5  pin: dut/end_pending_reg_syn_6.o
+net (fo=1)                              0.149          2.793          net: dut/end_pending_reg_syn_5,  ../../jpeg_byte_packer.v(120)
+                                                                      pin: dut/end_pending_reg.d
+SEQ (reg)                               0.076    f     2.869               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.869               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/end_pending_reg.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.061               
+
+Slack               : 5.145ns
+Begin Point         : dut/abort_drain_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[120].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.618ns (cell 0.841ns (32%), net 1.777ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/abort_drain_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/abort_drain_reg.q
+net (fo=8)                              0.332          0.483          net: dut/abort_drain,  ../../jpeg_byte_packer.v(40)
+                                                                      pin: dut/mux51_syn_451.a
+LUT4                                    0.150    f     0.633       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          1.001          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.142       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.581          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.731       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.054          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.204       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.519          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[120].sr
+SEQ (reg)                               0.099    r     2.618               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.618               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[120].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.145               
+
+Slack               : 5.162ns
+Begin Point         : dut/drop_frame_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[120].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.601ns (cell 0.841ns (32%), net 1.760ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/drop_frame_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/drop_frame_reg.q
+net (fo=6)                              0.315          0.466          net: dut/drop_frame,  ../../jpeg_byte_packer.v(38)
+                                                                      pin: dut/mux51_syn_451.c
+LUT4                                    0.150    f     0.616       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          0.984          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.125       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.564          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.714       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.037          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.187       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.502          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[120].sr
+SEQ (reg)                               0.099    r     2.601               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.601               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[120].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.162               
+
+Slack               : 5.145ns
+Begin Point         : dut/abort_drain_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[121].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.618ns (cell 0.841ns (32%), net 1.777ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/abort_drain_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/abort_drain_reg.q
+net (fo=8)                              0.332          0.483          net: dut/abort_drain,  ../../jpeg_byte_packer.v(40)
+                                                                      pin: dut/mux51_syn_451.a
+LUT4                                    0.150    f     0.633       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          1.001          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.142       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.581          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.731       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.054          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.204       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.519          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[121].sr
+SEQ (reg)                               0.099    r     2.618               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.618               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[121].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.145               
+
+Slack               : 5.162ns
+Begin Point         : dut/drop_frame_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[121].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.601ns (cell 0.841ns (32%), net 1.760ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/drop_frame_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/drop_frame_reg.q
+net (fo=6)                              0.315          0.466          net: dut/drop_frame,  ../../jpeg_byte_packer.v(38)
+                                                                      pin: dut/mux51_syn_451.c
+LUT4                                    0.150    f     0.616       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          0.984          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.125       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.564          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.714       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.037          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.187       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.502          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[121].sr
+SEQ (reg)                               0.099    r     2.601               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.601               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[121].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.162               
+
+Slack               : 5.145ns
+Begin Point         : dut/abort_drain_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[122].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.618ns (cell 0.841ns (32%), net 1.777ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/abort_drain_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/abort_drain_reg.q
+net (fo=8)                              0.332          0.483          net: dut/abort_drain,  ../../jpeg_byte_packer.v(40)
+                                                                      pin: dut/mux51_syn_451.a
+LUT4                                    0.150    f     0.633       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          1.001          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.142       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.581          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.731       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.054          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.204       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.519          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[122].sr
+SEQ (reg)                               0.099    r     2.618               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.618               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[122].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.145               
+
+Slack               : 5.162ns
+Begin Point         : dut/drop_frame_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[122].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.601ns (cell 0.841ns (32%), net 1.760ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/drop_frame_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/drop_frame_reg.q
+net (fo=6)                              0.315          0.466          net: dut/drop_frame,  ../../jpeg_byte_packer.v(38)
+                                                                      pin: dut/mux51_syn_451.c
+LUT4                                    0.150    f     0.616       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          0.984          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.125       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.564          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.714       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.037          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.187       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.502          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[122].sr
+SEQ (reg)                               0.099    r     2.601               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.601               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[122].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.162               
+
+Slack               : 5.145ns
+Begin Point         : dut/abort_drain_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[123].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.618ns (cell 0.841ns (32%), net 1.777ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/abort_drain_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/abort_drain_reg.q
+net (fo=8)                              0.332          0.483          net: dut/abort_drain,  ../../jpeg_byte_packer.v(40)
+                                                                      pin: dut/mux51_syn_451.a
+LUT4                                    0.150    f     0.633       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          1.001          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.142       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.581          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.731       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.054          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.204       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.519          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[123].sr
+SEQ (reg)                               0.099    r     2.618               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.618               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[123].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.145               
+
+Slack               : 5.162ns
+Begin Point         : dut/drop_frame_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : dut/byte_data_reg[123].sr (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.601ns (cell 0.841ns (32%), net 1.760ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT5=2  LUT6=1  LUT4=1 )
+Max Fanout          : 46
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/drop_frame_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: dut/drop_frame_reg.q
+net (fo=6)                              0.315          0.466          net: dut/drop_frame,  ../../jpeg_byte_packer.v(38)
+                                                                      pin: dut/mux51_syn_451.c
+LUT4                                    0.150    f     0.616       1  pin: dut/mux51_syn_451.o
+net (fo=18)                             0.368          0.984          net: dut/mux51_syn_452,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/mux51_syn_453.a
+LUT6                                    0.141    r     1.125       2  pin: dut/mux51_syn_453.o
+net (fo=46)                             0.439          1.564          net: dut/append_index_n,  NOFILE(0)
+                                                                      pin: dut/mux51_syn_473.a
+LUT5                                    0.150    f     1.714       3  pin: dut/mux51_syn_473.o
+net (fo=10)                             0.323          2.037          net: dut/mux4_syn_131[120],  ../../jpeg_byte_packer.v(112)
+                                                                      pin: dut/mux51_syn_484.a
+LUT5                                    0.150    f     2.187       4  pin: dut/mux51_syn_484.o
+net (fo=9)                              0.315          2.502          net: dut/mux51_syn_450,  ../../jpeg_byte_packer.v(121)
+                                                                      pin: dut/byte_data_reg[123].sr
+SEQ (reg)                               0.099    r     2.601               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.601               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=204)                            0.000          0.000          net: clk_dup_1,  ../../packer_probe.v(1)
+                                                                      pin: dut/byte_data_reg[123].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.237          7.763               
+clock uncertainty                       0.000          7.763               
+clock pessimism                         0.000          7.763               
+--------------------------------------------------------------------  ---------------
+Required                                               7.763               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.162               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+Inter clock domain timing
+--------------------------------------------------
+
+IP timing
+--------------------------------------------------

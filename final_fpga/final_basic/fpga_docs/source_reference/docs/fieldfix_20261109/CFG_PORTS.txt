@@ -1,0 +1,39 @@
+// Sparse candidate profile: legacy four-ROI analysis requests are unsupported.
+`timescale 1ns/1ps
+// Stage3 FULL/HDR-only replacement, with the unchanged public service API.
+// Dedicated words use the two existing official 40x512 FIFO instances.
+module mono_config_service_v2 #(
+    parameter integer PROFILE=1,MAX_WIDTH=1920,MAX_HEIGHT=1080,
+    parameter integer REMOTE_CONFIG_ENABLE=1,EXT_WIDTH=1024,EXT_STRIPS=4,
+    parameter [31:0] EXT_COMBINATIONS=0,parameter [7:0] EXT_SUPPORTED=0,
+    parameter [2:0] V2_SUPPORTED_MODES=0,parameter [5:0] V2_SUPPORTED_ENABLES=0,
+    parameter integer LIVE_GRAY_FIXED_ENABLE=0,LIVE_BASIC_MODES_ENABLE=1,
+    parameter integer COMPACT_EMPTY_EXTENSION_ENABLE=0,COMPACT_STAGE2_EXTENSION_ENABLE=1,
+    parameter integer LANE_GAUSSIAN_ONLY=1,CFG_DIAG_ENABLE=0,STEREO_CAPABLE=0,
+    parameter integer APPLY_SOURCE_FAULT_ENABLE=0
+) (
+    input wire user_clk,user_rst_n,pixel_clk,pixel_rst_n,
+    input wire i_stereo_mode,output wire o_user_transaction_idle,output wire o_user_stereo_compatible,
+    input wire write_valid,input wire [11:0] write_offset,input wire [31:0] write_data,input wire [3:0] write_strobes,
+    output wire [1:0] write_response,input wire read_valid,input wire [11:0] read_offset,
+    output wire read_response_valid,output wire [31:0] read_data,output wire [1:0] read_response,
+    input wire pipeline_idle,frame_accept,input wire [31:0] frame_sequence,
+    output wire source_ready,pause_new_jobs,output wire [1:0] active_mode,
+    output wire [7:0] active_quality,output wire adaptive_quality,output wire [7:0] minimum_quality,
+    output wire [24:0] frame_budget,output wire [15:0] restart_mcus,
+    output wire [31:0] source_session,mode_epoch,user_session,output wire user_initialized,pixel_initialized,
+    output wire [159+EXT_WIDTH:0] m_config_data,output wire m_config_valid,input wire m_config_ready,
+    input wire [159+EXT_WIDTH:0] s_config_ack_data,input wire s_config_ack_valid,s_config_ack_ok,
+    output wire s_config_ack_ready,config_fault,output wire [31:0] config_stale_ack_count,
+    output wire [159+EXT_WIDTH:0] active_config,
+    output wire active_schema2,active_legacy_gaussian,
+    output wire [1:0] active_product_mode,
+    output wire [5:0] active_processing_enables,
+    input wire [1:0] diag_observer_rst_n,
+    input wire diag_source_fs,
+    input wire [15:0] diag_source_gates,
+    output wire [447:0] diag_domains,
+    output wire [1:0] diag_domain_reset_n,
+    input wire i_apply_source_fault,
+    output wire [11:0] o_apply_diagnostics
+);

@@ -1,0 +1,76 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 22:10:10 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 91.14%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     DFI -> DFI
+Type           :     Self
+From Clock     :     DFI
+To Clock       :     DFI
+Min Period     :     1.000ns
+Fmax           :     1000.000MHz
+
+Statistics:
+Max            : SWNS      3.286ns, STNS      0.000ns,         0 Viol Endpoints,         1 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 3.286ns
+Begin Point         : u_ring/u_record_owner_reset/release_pipe_reg[2].clk (rising edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+End Point           : u_ring/u_record_owner_reset/g_falling_release$released_n_reg.sr (falling edge triggered by clock DFI  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })
+Check Type          : recovery
+Process             : slow
+Budget              : 3.751ns { DFI falling@3.980ns - DFI rising@0.229ns }
+Data Path Delay     : 0.529ns (cell 0.255ns (48%), net 0.274ns (52%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/release_pipe_reg[2].clk
+launch edge                             0.229    r     0.229               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.380          pin: u_ring/u_record_owner_reset/release_pipe_reg[2].q
+net (fo=3)                              0.274          0.654          net: u_ring/u_store/i_data_reset_n,  ../../jpeg_frame_ring.v(190)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.sr
+SEQ (reg)                               0.104    r     0.758               
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.758               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=2751)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ring/u_record_owner_reset/g_falling_release$released_n_reg.clk
+capture edge                            3.980    f     3.980               
+--------------------------------------------------------------------  ---------------
+recovery                                0.064          4.044               
+clock uncertainty                       0.000          4.044               
+clock pessimism                         0.000          4.044               
+--------------------------------------------------------------------  ---------------
+Required                                               4.044               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.286               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

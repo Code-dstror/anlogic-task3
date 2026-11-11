@@ -1,0 +1,73 @@
+// Independent production candidate; external contract matches the4PPC leaf.
+// Source events remain passive: FIFO overflow degrades only the lane result.
+// F22 completion is held until all queued samples drain. SOURCE error aborts
+// queue processing and retains the original negative-terminal ownership.
+module lane_sparse_serial4(
+    input wire clk,rst_n,cancel,start,
+    input wire [159:0] start_context,
+    input wire event_valid,event_bad,
+    input wire [8:0] event_x,event_y,
+    input wire [43:0] event_gx,event_gy,
+    input wire [31:0] event_center_y,
+    input wire [7:0] event_hint,
+    input wire hint_valid,hint_error,
+    input wire frame_complete,frame_error,
+    input wire [159:0] terminal_context,
+    output wire record_valid,input wire record_ready,
+    output wire [176:0] record_data,
+    input wire read_enable,input wire [8:0] read_index,
+    output wire [39:0] read_data,output wire read_valid,
+    output wire [31:0] frames_started,frames_finished,frames_failed,record_drop_count,
+    output wire terminal_valid,terminal_error,
+    output wire [159:0] terminal_identity
+);
+    reg active,local_bad,source_bad,finish_seen;
+    wire start_accept=start&&(!record_valid||record_ready);
+    wire queue_ready,queue_empty,queue_overflow;
+    wire [8:0] queue_resident;
+    wire queue_valid,queue_bad;
+    wire [31:0] queue_sample;
+    wire [8:0] queue_x,queue_y;
+    wire [127:0] packed_samples;
+    genvar lane;
+    generate for(lane=0;lane<4;lane=lane+1)begin:g_pack
+        assign packed_samples[lane*32+:32]={event_hint[lane*2+:2],event_center_y[lane*8+:8],
+            event_gy[lane*11+:11],event_gx[lane*11+:11]};
+    end endgenerate
+    wire enqueue=active&&!local_bad&&!source_bad&&event_valid;
+    // Registered local_bad clears the queue one clock after overflow, avoiding
+    // ready/clear feedback. FIFO ready includes a simultaneous full-word pop,
+    // so full+pop+push remains a legal capacity-preserving transfer.
+    wire queue_clear=cancel||start_accept||frame_error||local_bad;
+    wire overflow_detect=enqueue&&!frame_error&&!cancel&&!start_accept&&!queue_ready;
+    // SOURCE/local failure or START/CANCEL owns every queue clear. An old
+    // held head may be seen on that edge, but no new group is accepted and
+    // the worker must discard/replace the corresponding frame before publish.
+    lane_quarter_fifo4_to1 #(.CLEAR_SUPPRESS_VALID(0)) fifo(
+        .clk(clk),.rst_n(rst_n),.clear(queue_clear),.s_valid(enqueue),.s_ready(queue_ready),
+        .s_data({event_bad||!hint_valid||hint_error,event_y,event_x,packed_samples}),
+        .m_valid(queue_valid),.m_ready(1'b1),.m_sample(queue_sample),.m_x(queue_x),.m_y(queue_y),
+        .m_bad(queue_bad),.empty(queue_empty),.resident(queue_resident),.overflow(queue_overflow));
+    lane_ridge_candidates1_lutram worker(
+        .clk(clk),.rst_n(rst_n),.cancel(cancel),.start(start),.start_context(start_context),
+        .event_valid(queue_valid),.event_bad(queue_bad),.event_x(queue_x),.event_y(queue_y),
+        .event_sample(queue_sample),.local_error(local_bad||overflow_detect),
+        .frame_complete(finish_seen&&queue_empty),.frame_error(frame_error),.terminal_context(terminal_context),
+        .record_valid(record_valid),.record_ready(record_ready),.record_data(record_data),
+        .read_enable(read_enable),.read_index(read_index),.read_data(read_data),.read_valid(read_valid),
+        .frames_started(frames_started),.frames_finished(frames_finished),.frames_failed(frames_failed),
+        .record_drop_count(record_drop_count),.terminal_valid(terminal_valid),.terminal_error(terminal_error),
+        .terminal_identity(terminal_identity));
+    always @(posedge clk)begin
+        if(!rst_n||cancel)begin active<=0;local_bad<=0;source_bad<=0;finish_seen<=0;end
+        else if(start_accept)begin active<=1;local_bad<=0;source_bad<=0;finish_seen<=0;end
+        else begin
+            if(terminal_valid)active<=0;
+            if(active)begin
+                if(overflow_detect)local_bad<=1;
+                if(frame_error)source_bad<=1;
+                if(frame_complete)finish_seen<=1;
+            end
+        end
+    end
+endmodule

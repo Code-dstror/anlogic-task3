@@ -1,0 +1,16 @@
+{
+  "files": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\tb_raw_ingress.sv": "e9cd901652169a8f76c2a6c5adfd6a4ebf31a7cf2720fba699fdbaa785524e6b",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\run_raw_ingress.py": "730dda0f0f40fa84b47bc00673933222724d2843f2774f5c845ca7765473e5ef",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\sim_runner.py": "19bd66bade0f9a78cc93a5a94f9ab1182b240e57c4e760382afad0346e2e1832",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\OPAQUE_SOURCES.json": "c651dca82f36b6057ce23e05820b60c09821d852a7db8df22f91f38020c8d8b9",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\PUBLIC_CONTRACT.md": "3ac0ae5a8723127aa6351c516eff2e3907cd2ee6ca45b76c8cf2cda533421f7a",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\PORTS.vh": "53c16ec62784ec289f20d8a53a2ef8923205918b0c4745d6e6e96e787870ee41",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\baseline\\shared_raw10_frame_ingress.v": "787acfaef657a6cf709f2e808bfdaaa2e750546d0dd89ed0b8800f3f227e7ccd",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\candidate\\shared_raw10_frame_ingress.v": "8569d76989de58b9940cfa9090f8f3fd3ecd6c3eddea75b34fa31e01743381c3"
+  },
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "td_root": "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+  "td_models_used": false,
+  "overall_seconds": 160
+}

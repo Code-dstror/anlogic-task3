@@ -1,0 +1,252 @@
+{
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "results_commit": "0a6ce37ac5dab18599beb5d8c91801d7e1557ca4",
+  "job": "manual-camera-r2-hdr-rate-20261110-syn16-48s4t-8e64f48baa674f98-s25",
+  "seed": 25,
+  "board": "NOT_RUN",
+  "reports": {
+    "final_timing.rpt": {
+      "sha256": "07ca2991aa6b94e4365dc3dc62bbe95b8d4fc9dc20e3261148ff55b52b6c2e6d",
+      "confidence": "Routed",
+      "corners": "Both",
+      "coverage": "99.85%",
+      "kinds": {
+        "hold": {
+          "count": 209,
+          "worst": {
+            "slack": 0.007,
+            "slack_text": "0.007",
+            "begin": "g_preprocess$g_live_f21$u_live/u_pipeline/g_full_preprocess$u_filter/lane/worker/frame_context_reg[33]_syn_2.clk (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "end": "g_preprocess$g_live_f21$u_live/u_pipeline/g_full_preprocess$u_filter/pyramid/result_store/g_bank[0]$storage/u_configured_ip/inst_syn_133.dia[6] (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "kind": "hold",
+            "corner": "fast",
+            "line": 1515
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "recovery": {
+          "count": 16,
+          "worst": {
+            "slack": 2.838,
+            "slack_text": "2.838",
+            "begin": "g_production$u_boot/por_done_reg_syn_9.clk (rising edge triggered by clock sys_clk_25m  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })",
+            "end": "u_debug_user_reset/release_pipe_reg[1]_syn_2.asr (rising edge triggered by clock u_pcie/endpoint/bridge/u_controller/pcie_user_clk  { rise@0.000000ns  fall@2.000000ns  period=8.000000 })",
+            "kind": "recovery",
+            "corner": "slow",
+            "line": 25759
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "removal": {
+          "count": 67,
+          "worst": {
+            "slack": 0.002,
+            "slack_text": "0.002",
+            "begin": "g_configured_capture$u_frontend/g_joint_config_owner$u_joint/u_pair_drain/u_source_reset/release_pipe_reg[2]_syn_2.clk (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "end": "g_configured_capture$u_frontend/g_joint_config_owner$u_joint/u_pair_drain/add2_syn_414.asr (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "kind": "removal",
+            "corner": "fast",
+            "line": 1215
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "setup": {
+          "count": 730,
+          "worst": {
+            "slack": 0.001,
+            "slack_text": "0.001",
+            "begin": "g_configured_capture$u_frontend/g_joint_config_owner$u_joint/u_owner/active_storage_reg[194]_syn_2.clk (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "end": "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member1/ingress/axis_keep_reg[6]_syn_2.imb (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "kind": "setup",
+            "corner": "slow",
+            "line": 119
+          },
+          "negative": 0,
+          "negative_zero": 0
+        }
+      },
+      "nonzero_violation_groups": []
+    },
+    "controller-reports/timing_detail.rpt": {
+      "sha256": "0e74ce041555ff181583cf59a515fa4d9d2e7afea2f896541ee27afbc937a361",
+      "confidence": "Routed",
+      "corners": "Both",
+      "coverage": "99.85%",
+      "kinds": {
+        "hold": {
+          "count": 1652,
+          "worst": {
+            "slack": 0.007,
+            "slack_text": "0.007",
+            "begin": "g_preprocess$g_live_f21$u_live/u_pipeline/g_full_preprocess$u_filter/lane/worker/frame_context_reg[33]_syn_2.clk (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "end": "g_preprocess$g_live_f21$u_live/u_pipeline/g_full_preprocess$u_filter/pyramid/result_store/g_bank[0]$storage/u_configured_ip/inst_syn_133.dia[6] (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "kind": "hold",
+            "corner": "fast",
+            "line": 10287
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "recovery": {
+          "count": 40,
+          "worst": {
+            "slack": 2.838,
+            "slack_text": "2.838",
+            "begin": "g_production$u_boot/por_done_reg_syn_9.clk (rising edge triggered by clock sys_clk_25m  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })",
+            "end": "u_debug_user_reset/release_pipe_reg[1]_syn_2.asr (rising edge triggered by clock u_pcie/endpoint/bridge/u_controller/pcie_user_clk  { rise@0.000000ns  fall@2.000000ns  period=8.000000 })",
+            "kind": "recovery",
+            "corner": "slow",
+            "line": 188573
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "removal": {
+          "count": 358,
+          "worst": {
+            "slack": 0.002,
+            "slack_text": "0.002",
+            "begin": "g_configured_capture$u_frontend/g_joint_config_owner$u_joint/u_pair_drain/u_source_reset/release_pipe_reg[2]_syn_2.clk (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "end": "g_configured_capture$u_frontend/g_joint_config_owner$u_joint/u_pair_drain/add2_syn_414.asr (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "kind": "removal",
+            "corner": "fast",
+            "line": 9987
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "setup": {
+          "count": 2510,
+          "worst": {
+            "slack": 0.001,
+            "slack_text": "0.001",
+            "begin": "g_configured_capture$u_frontend/g_joint_config_owner$u_joint/u_owner/active_storage_reg[194]_syn_2.clk (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "end": "g_s04$u_raw_service/g_dol2_capture$u_capture/u_member1/ingress/axis_keep_reg[6]_syn_2.imb (rising edge triggered by clock u_pixel_pll/pll_inst.clkc[0]  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })",
+            "kind": "setup",
+            "corner": "slow",
+            "line": 119
+          },
+          "negative": 0,
+          "negative_zero": 0
+        }
+      },
+      "nonzero_violation_groups": []
+    },
+    "controller-reports/timing_exception.rpt": {
+      "sha256": "1e4beb46bb7987d1591331ce386f1d5686590d363e1d5ed3bc4d65a61b45dc0c",
+      "confidence": "Routed",
+      "corners": "Both",
+      "coverage": "99.85%",
+      "kinds": {
+        "hold": {
+          "count": 128,
+          "worst": {
+            "slack": 0.022,
+            "slack_text": "0.022",
+            "begin": "u_ddr_store/u_ddr/u_ddrmc_top/u_ddr_phy/u_ddrphy_dfi_glue/ppc_dfi_wrdata_reg[145]_syn_2.clk (rising edge triggered by clock u_ddr_store/u_ddr/dfi_clk  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })",
+            "end": "u_ddr_store/u_ddr/u_ddrmc_top/u_ddr_phy/u_ddrphy_top/u_ddrphy_ppc/u_ddrppc.dfi_wrdata[145] (rising edge triggered by clock u_ddr_store/u_ddr/dfi_clk  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })",
+            "kind": "hold",
+            "corner": "fast",
+            "line": 43374
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "recovery": {
+          "count": 49,
+          "worst": {
+            "slack": 30.13,
+            "slack_text": "30.130",
+            "begin": "g_production$u_boot/por_done_reg_syn_9.clk (rising edge triggered by clock sys_clk_25m  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })",
+            "end": "u_stereo_capture1/u_router/sub0_syn_197.asr (rising edge triggered by clock sys_clk_25m  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })",
+            "kind": "recovery",
+            "corner": "slow",
+            "line": 14385
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "setup": {
+          "count": 1170,
+          "worst": {
+            "slack": 0.541,
+            "slack_text": "0.541",
+            "begin": "u_jpeg_to_ddr/u_egress/token_is_result_reg_syn_3.clk (rising edge triggered by clock u_ddr_store/u_ddr/dfi_clk  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })",
+            "end": "record_idle_user_reg[0]_syn_2.imb (rising edge triggered by clock u_pcie/endpoint/bridge/u_controller/pcie_user_clk  { rise@0.000000ns  fall@2.000000ns  period=8.000000 })",
+            "kind": "setup",
+            "corner": "slow",
+            "line": 62036
+          },
+          "negative": 0,
+          "negative_zero": 0
+        }
+      },
+      "nonzero_violation_groups": []
+    },
+    "rfcamera_raw_r2_exception.timing": {
+      "sha256": "ed5bd751d6e1cff5a3527bbd12d60fff56ab9391699c98c786e732de2d96d384",
+      "confidence": "Routed",
+      "corners": "Both",
+      "coverage": "99.85%",
+      "kinds": {
+        "hold": {
+          "count": 128,
+          "worst": {
+            "slack": 0.022,
+            "slack_text": "0.022",
+            "begin": "u_ddr_store/u_ddr/u_ddrmc_top/u_ddr_phy/u_ddrphy_dfi_glue/ppc_dfi_wrdata_reg[145]_syn_2.clk (rising edge triggered by clock u_ddr_store/u_ddr/dfi_clk  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })",
+            "end": "u_ddr_store/u_ddr/u_ddrmc_top/u_ddr_phy/u_ddrphy_top/u_ddrphy_ppc/u_ddrppc.dfi_wrdata[145] (rising edge triggered by clock u_ddr_store/u_ddr/dfi_clk  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })",
+            "kind": "hold",
+            "corner": "fast",
+            "line": 14157
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "recovery": {
+          "count": 5,
+          "worst": {
+            "slack": 30.591,
+            "slack_text": "30.591",
+            "begin": "g_production$u_boot/por_done_reg_syn_9.clk (rising edge triggered by clock sys_clk_25m  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })",
+            "end": "u_stereo_capture1/add3_syn_223.asr (rising edge triggered by clock sys_clk_25m  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })",
+            "kind": "recovery",
+            "corner": "slow",
+            "line": 5004
+          },
+          "negative": 0,
+          "negative_zero": 0
+        },
+        "setup": {
+          "count": 409,
+          "worst": {
+            "slack": 0.556,
+            "slack_text": "0.556",
+            "begin": "u_ddr_store/g_ring_store$u_store/slot_state_reg[5]_syn_2.clk (rising edge triggered by clock u_ddr_store/u_ddr/dfi_clk  { rise@0.229000ns  fall@3.980000ns  period=7.502000 })",
+            "end": "record_idle_user_reg[0]_syn_2.imb (rising edge triggered by clock u_pcie/endpoint/bridge/u_controller/pcie_user_clk  { rise@0.000000ns  fall@2.000000ns  period=8.000000 })",
+            "kind": "setup",
+            "corner": "slow",
+            "line": 30161
+          },
+          "negative": 0,
+          "negative_zero": 0
+        }
+      },
+      "nonzero_violation_groups": []
+    }
+  },
+  "summary": {
+    "HTNS": 0.0,
+    "HWNS": 0.002,
+    "STNS": 0.0,
+    "SWNS": 0.001,
+    "report": "/home/fpga_user/fpga_projects/builds/manual-camera-r2-hdr-rate-20261110-syn16-48s4t-8e64f48baa674f98-s25/checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/simple.timing",
+    "state": "NONNEGATIVE_REPORTED"
+  },
+  "bit_sha256": "eee7eff50323a8a5c7ddc850d3873e1dda13473debbfe8a690bcb6bab17ac362",
+  "manual_receipt": "MANUAL_RECEIPT.json",
+  "pending": []
+}

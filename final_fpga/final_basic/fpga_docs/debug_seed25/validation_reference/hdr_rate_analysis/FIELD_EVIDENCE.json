@@ -1,0 +1,6789 @@
+{
+  "identity": {
+    "field_manifest_entries": 50,
+    "startup_index_entries": 31,
+    "source_archive_present_at_delivery_root": false,
+    "source_archive_reported_sha256": "d402551c3c51a0fbfc5cc578a80b70fb4619224723949ac1d92fa9bd5d7b073f",
+    "source_commit": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+    "seed": 56,
+    "bit": {
+      "path": "bitstream/camera_raw_r2_41cb5991_seed56.bit",
+      "bytes": 4850315,
+      "sha256": "4030fabe8fb3c323932d501c086363d89feb20b4277ec37aae90f17e56e7be74"
+    },
+    "release_archive_sha256": "6a5e4850933c67edb0b5fdb257a307dcae7fc435d62fae2cc891cfdead3538f3",
+    "verification_basis": "USER_SELECTED_FILE_AND_SHA_NOT_INDEPENDENT_SRAM_READBACK",
+    "boot": "5e95ef3c-aa39-4686-82d8-bd90c9e15052",
+    "owner_pid": 2697,
+    "run_id": "95e742a8d92f6531784c96d9ba827c4a",
+    "bdf": "0000:21:00.0",
+    "device": "/dev/ph1a_c2h_0000:21:00.0",
+    "runtime_index_sha256": "fb5e6e8a3d44d86ccac6c87fb4bec8512534f45ea3668a84c3fd84d04f4a7038",
+    "control_index_sha256": "7aef5bd05961561c8cecf59fe6012c0a429b92d5ae5a8dc4074397f1e88f6b20",
+    "same_reported_library_hashes_as_seed12": {
+      "hud_sha256": "2ee3d941c0c08800f650cd07db41e70554bc317a096bb448ccdc2ab4fc1eed36",
+      "record_library_sha256": "1163c498f66f33e5aebf70ddc9c69891eeef1f336b9152eecba0ccd8306e7e1b",
+      "lane_sha256": "63a21cd68f5ac126c5365e041afa02ae2625d3dd5b3c9220511c6d1397e0b2aa",
+      "lane_sampler_sha256": "4e5d0321728f88b3a82e6eafc529d728106c0fdd8889674fad3a5a2b6e78115b"
+    },
+    "driver_artifact": {
+      "sha256": "61e2aa53f3c4a574744793c633292fcfd5ac83c1e372761e7372acd7c78766ec",
+      "build_id": "db2c5b1de225ec72596863cd70de845e3e6d59c7",
+      "identity": "stereo-n2"
+    },
+    "hdr_policy": {
+      "hdr_ratio": 4,
+      "hdr_black_long": 50,
+      "hdr_black_short": 50,
+      "hdr_motion_base": 64,
+      "hdr_motion_shift": 3,
+      "hdr_qualification": 15,
+      "hdr_max_delta_ns": 50000000,
+      "hdr_max_wait_ns": 100000000,
+      "hdr_max_age_ns": 1000000000
+    }
+  },
+  "UART_replay": {
+    "frames": 2653,
+    "discarded_bytes": 22,
+    "crc_errors": 0,
+    "invalid_headers": 0,
+    "ob_frames": 1326,
+    "ob_crc_errors": 0,
+    "ob_invalid_headers": 0,
+    "cfg_frames": 0,
+    "cfg_crc_errors": 0,
+    "cfg_invalid_headers": 0,
+    "rx_frames": 0,
+    "rx_crc_errors": 0,
+    "rx_invalid_headers": 0,
+    "trace_frames": 0,
+    "trace_crc_errors": 0,
+    "trace_invalid_headers": 0,
+    "job_frames": 1327,
+    "job_crc_errors": 0,
+    "job_invalid_headers": 0,
+    "trailing_bytes": 0
+  },
+  "epoch37_DJ": {
+    "epoch": 37,
+    "session": 1,
+    "seconds": 540.000454644,
+    "first_read": {
+      "index": 4022,
+      "offset": 76317,
+      "bytes": 15,
+      "host_read_begin_monotonic_ns": 54995809379247,
+      "host_read_end_monotonic_ns": 54995809384827,
+      "host_read_end_unix_ns": 1794283981254739260
+    },
+    "last_read": {
+      "index": 6840,
+      "offset": 128708,
+      "bytes": 4,
+      "host_read_begin_monotonic_ns": 55535809832638,
+      "host_read_end_monotonic_ns": 55535809839471,
+      "host_read_end_unix_ns": 1794284521255193793
+    },
+    "sequences": [
+      837,
+      1377
+    ],
+    "samples": 541,
+    "counters": {
+      "capture_admit": {
+        "bits": 16,
+        "first": [
+          5607,
+          5598,
+          2453,
+          2453
+        ],
+        "last": [
+          21972,
+          21963,
+          18818,
+          18818
+        ],
+        "delta": [
+          16365,
+          16365,
+          16365,
+          16365
+        ],
+        "rate_per_s": [
+          30.30553004031963,
+          30.30553004031963,
+          30.30553004031963,
+          30.30553004031963
+        ],
+        "wraps": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(30, 30, 30, 30)": 351,
+          "(30, 31, 30, 31)": 24,
+          "(31, 30, 31, 30)": 24,
+          "(31, 31, 31, 31)": 141
+        }
+      },
+      "jobs": {
+        "bits": 16,
+        "first": [
+          5054,
+          5251
+        ],
+        "last": [
+          21419,
+          16161
+        ],
+        "delta": [
+          16365,
+          10910
+        ],
+        "rate_per_s": [
+          30.30553004031963,
+          20.20368669354642
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(30, 20)": 265,
+          "(30, 21)": 110,
+          "(31, 20)": 165
+        }
+      },
+      "begin_reject": {
+        "bits": 8,
+        "first": [
+          242,
+          108
+        ],
+        "last": [
+          242,
+          10
+        ],
+        "delta": [
+          0,
+          10910
+        ],
+        "rate_per_s": [
+          0.0,
+          20.20368669354642
+        ],
+        "wraps": [
+          0,
+          43
+        ],
+        "adjacent_deltas": {
+          "(0, 20)": 477,
+          "(0, 21)": 16,
+          "(0, 22)": 47
+        }
+      },
+      "pair_expire": {
+        "bits": 8,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 540
+        }
+      },
+      "bad_finish": {
+        "bits": 8,
+        "first": [
+          38,
+          35
+        ],
+        "last": [
+          38,
+          35
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 540
+        }
+      },
+      "last_source_span": {
+        "bits": 32,
+        "first": [
+          18,
+          17
+        ],
+        "last": [
+          16383,
+          16382
+        ],
+        "delta": [
+          16365,
+          16365
+        ],
+        "rate_per_s": [
+          30.30553004031963,
+          30.30553004031963
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(30, 30)": 265,
+          "(30, 31)": 55,
+          "(30, 32)": 55,
+          "(31, 30)": 165
+        }
+      }
+    },
+    "both_cameras_job_rate_per_s": 50.50921673386605,
+    "last_source_endpoints": [
+      [
+        18,
+        17
+      ],
+      [
+        16383,
+        16382
+      ]
+    ],
+    "last_source_ambiguous_backward_steps": [],
+    "bank_states_0123": {
+      "0101": 40,
+      "0113": 45,
+      "0130": 44,
+      "0223": 1,
+      "0302": 1,
+      "1001": 43,
+      "1013": 43,
+      "1030": 44,
+      "1231": 2,
+      "1301": 46,
+      "1312": 45,
+      "1320": 46,
+      "2023": 1,
+      "2030": 1,
+      "2123": 1,
+      "2131": 2,
+      "3002": 1,
+      "3101": 45,
+      "3112": 46,
+      "3120": 44
+    },
+    "bank_by_camera_unordered_pair": [
+      {
+        "01": 259,
+        "02": 3,
+        "03": 2,
+        "12": 5,
+        "13": 272
+      },
+      {
+        "01": 174,
+        "02": 92,
+        "03": 89,
+        "12": 91,
+        "13": 92,
+        "23": 3
+      }
+    ],
+    "dfi_flags": {
+      "6": 453,
+      "70": 88
+    },
+    "pixel_flags": {
+      "1011": 541
+    },
+    "sensor_sys_stable_pair": {
+      "(True, True)": 541
+    }
+  },
+  "epoch37_OB": {
+    "seconds": 540.000372221,
+    "samples": 541,
+    "counters": {
+      "frame_admission": {
+        "bits": 16,
+        "first": [
+          10305
+        ],
+        "last": [
+          37580
+        ],
+        "delta": [
+          27275
+        ],
+        "rate_per_s": [
+          50.50922444334439
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 265,
+          "(51,)": 275
+        }
+      },
+      "jpeg_result_handshake": {
+        "bits": 16,
+        "first": [
+          10304
+        ],
+        "last": [
+          37579
+        ],
+        "delta": [
+          27275
+        ],
+        "rate_per_s": [
+          50.50922444334439
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 265,
+          "(51,)": 275
+        }
+      },
+      "writer_ack_handshake": {
+        "bits": 16,
+        "first": [
+          10304
+        ],
+        "last": [
+          37579
+        ],
+        "delta": [
+          27275
+        ],
+        "rate_per_s": [
+          50.50922444334439
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 265,
+          "(51,)": 275
+        }
+      },
+      "store_ready_claim": {
+        "bits": 16,
+        "first": [
+          10286
+        ],
+        "last": [
+          37561
+        ],
+        "delta": [
+          27275
+        ],
+        "rate_per_s": [
+          50.50922444334439
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 265,
+          "(51,)": 275
+        }
+      },
+      "native_descriptor_accept": {
+        "bits": 16,
+        "first": [
+          10287
+        ],
+        "last": [
+          37562
+        ],
+        "delta": [
+          27275
+        ],
+        "rate_per_s": [
+          50.50922444334439
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 265,
+          "(51,)": 275
+        }
+      },
+      "jpeg_retire_handshake": {
+        "bits": 16,
+        "first": [
+          10286
+        ],
+        "last": [
+          37561
+        ],
+        "delta": [
+          27275
+        ],
+        "rate_per_s": [
+          50.50922444334439
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 265,
+          "(51,)": 275
+        }
+      }
+    },
+    "sticky_fault_values": {
+      "pixel": {
+        "14": 541
+      },
+      "dfi": {
+        "12": 541
+      },
+      "user": {
+        "0": 541
+      }
+    },
+    "level_true_sample_counts": {
+      "pixel": {
+        "pixel_reset_n": 541,
+        "config_initialized": 541,
+        "camera0_config_done": 541,
+        "camera0_phy_ready": 541,
+        "camera0_config_error": 0,
+        "camera1_config_done": 541,
+        "camera1_phy_ready": 541,
+        "frame_active": 458,
+        "jpeg_idle": 83,
+        "raw_processing_idle": 0,
+        "native_pipeline_idle": 0,
+        "camera1_config_error": 0
+      },
+      "dfi": {
+        "dfi_reset_n": 541,
+        "ddr_cal_done": 541,
+        "ddr_app_ready": 541,
+        "ddr_phy_reset_n": 541,
+        "bridge_fault": 0,
+        "store_recovery": 0,
+        "writer_ack_valid": 0,
+        "store_ready_valid": 1,
+        "credit_reserved": 83,
+        "hdr_writer_quiescent": 83,
+        "hdr_owner_empty": 0,
+        "hdr_scheduler_busy": 458
+      },
+      "user": {
+        "pcie_user_reset_n": 541,
+        "pcie_user_link_up": 541,
+        "config_initialized": 541,
+        "raw_pci_bme": 541,
+        "pcie_supervisor_ready": 541,
+        "product_buffer_armed": 408,
+        "phase_bit0": 414,
+        "phase_bit1": 132,
+        "phase_bit2": 126,
+        "transport_recovery": 0,
+        "memory_owner_ready": 541,
+        "reset_pending": 0
+      }
+    },
+    "DFI_tuple_field_order": [
+      "hdr_scheduler_busy",
+      "credit_reserved",
+      "hdr_owner_empty",
+      "hdr_writer_quiescent"
+    ],
+    "DFI_tuple_and_DJ_banks_same_sequence_only": {
+      "(0, 1, 0, 1)": {
+        "samples": 83,
+        "OB_USER_phase_nearby": {
+          "RESULT": 30,
+          "WAIT_RECORD": 53
+        },
+        "DJ_bank_combinations_same_sequence_only": {
+          "0101": 40,
+          "1001": 43
+        },
+        "DJ_bank_pairs_by_camera_same_sequence_only": [
+          {
+            "01": 83
+          },
+          {
+            "01": 83
+          }
+        ]
+      },
+      "(1, 0, 0, 0)": {
+        "samples": 458,
+        "OB_USER_phase_nearby": {
+          "IDLE": 1,
+          "RESULT": 96,
+          "RUN": 6,
+          "WAIT_RECORD": 355
+        },
+        "DJ_bank_combinations_same_sequence_only": {
+          "0113": 45,
+          "0130": 44,
+          "0223": 1,
+          "0302": 1,
+          "1013": 43,
+          "1030": 44,
+          "1231": 2,
+          "1301": 46,
+          "1312": 45,
+          "1320": 46,
+          "2023": 1,
+          "2030": 1,
+          "2123": 1,
+          "2131": 2,
+          "3002": 1,
+          "3101": 45,
+          "3112": 46,
+          "3120": 44
+        },
+        "DJ_bank_pairs_by_camera_same_sequence_only": [
+          {
+            "01": 176,
+            "02": 3,
+            "03": 2,
+            "12": 5,
+            "13": 272
+          },
+          {
+            "01": 91,
+            "02": 92,
+            "03": 89,
+            "12": 91,
+            "13": 92,
+            "23": 3
+          }
+        ]
+      }
+    },
+    "transport_phases": {
+      "IDLE": 1,
+      "RESULT": 126,
+      "RUN": 6,
+      "WAIT_RECORD": 408
+    },
+    "DJ_and_OB_adjacent_deltas_order": [
+      "sum_jobs",
+      "frame_admission",
+      "jpeg_result_handshake",
+      "writer_ack_handshake",
+      "store_ready_claim",
+      "native_descriptor_accept",
+      "jpeg_retire_handshake"
+    ],
+    "DJ_and_OB_adjacent_deltas": {
+      "(50, 50, 50, 50, 50, 50, 50)": 90,
+      "(50, 50, 50, 50, 50, 50, 51)": 1,
+      "(50, 50, 50, 50, 50, 51, 51)": 118,
+      "(50, 50, 50, 50, 51, 51, 51)": 1,
+      "(50, 50, 51, 51, 50, 51, 51)": 1,
+      "(50, 50, 51, 51, 51, 50, 50)": 27,
+      "(50, 50, 51, 51, 51, 51, 51)": 27,
+      "(51, 51, 50, 50, 50, 50, 50)": 47,
+      "(51, 51, 50, 50, 50, 51, 51)": 8,
+      "(51, 51, 51, 51, 51, 50, 50)": 100,
+      "(51, 51, 51, 51, 51, 51, 50)": 1,
+      "(51, 51, 51, 51, 51, 51, 51)": 119
+    },
+    "DJ_read_end_minus_OB_read_end_ms": [
+      3.482109,
+      7.640479
+    ]
+  },
+  "epoch37_60s_blocks": [
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 59.99990043,
+      "first_read": {
+        "index": 4022,
+        "offset": 76317,
+        "bytes": 15,
+        "host_read_begin_monotonic_ns": 54995809379247,
+        "host_read_end_monotonic_ns": 54995809384827,
+        "host_read_end_unix_ns": 1794283981254739260
+      },
+      "last_read": {
+        "index": 4336,
+        "offset": 82136,
+        "bytes": 16,
+        "host_read_begin_monotonic_ns": 55055809277983,
+        "host_read_end_monotonic_ns": 55055809285257,
+        "host_read_end_unix_ns": 1794284041254639650
+      },
+      "sequences": [
+        837,
+        897
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            5607,
+            5598,
+            2453,
+            2453
+          ],
+          "last": [
+            7426,
+            7417,
+            4272,
+            4272
+          ],
+          "delta": [
+            1819,
+            1819,
+            1819,
+            1819
+          ],
+          "rate_per_s": [
+            30.31671697725849,
+            30.31671697725849,
+            30.31671697725849,
+            30.31671697725849
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 38,
+            "(30, 31, 30, 31)": 3,
+            "(31, 30, 31, 30)": 3,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            5054,
+            5251
+          ],
+          "last": [
+            6873,
+            6463
+          ],
+          "delta": [
+            1819,
+            1212
+          ],
+          "rate_per_s": [
+            30.31671697725849,
+            20.200033521955632
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 29,
+            "(30, 21)": 12,
+            "(31, 20)": 19
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            108
+          ],
+          "last": [
+            242,
+            40
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.200033521955632
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 53,
+            "(0, 21)": 2,
+            "(0, 22)": 5
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            18,
+            17
+          ],
+          "last": [
+            1837,
+            1835
+          ],
+          "delta": [
+            1819,
+            1818
+          ],
+          "rate_per_s": [
+            30.31671697725849,
+            30.300050282933448
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 29,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 19
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.516750499214126,
+      "last_source_endpoints": [
+        [
+          18,
+          17
+        ],
+        [
+          1837,
+          1835
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 5,
+        "0113": 5,
+        "0130": 5,
+        "1001": 4,
+        "1013": 5,
+        "1030": 5,
+        "1231": 1,
+        "1301": 6,
+        "1312": 5,
+        "1320": 5,
+        "3101": 5,
+        "3112": 5,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 29,
+          "12": 1,
+          "13": 31
+        },
+        {
+          "01": 20,
+          "02": 10,
+          "03": 10,
+          "12": 10,
+          "13": 11
+        }
+      ],
+      "dfi_flags": {
+        "6": 52,
+        "70": 9
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 59.999819282,
+      "first_read": {
+        "index": 4336,
+        "offset": 82136,
+        "bytes": 16,
+        "host_read_begin_monotonic_ns": 55055809277983,
+        "host_read_end_monotonic_ns": 55055809285257,
+        "host_read_end_unix_ns": 1794284041254639650
+      },
+      "last_read": {
+        "index": 4651,
+        "offset": 87956,
+        "bytes": 16,
+        "host_read_begin_monotonic_ns": 55115809096144,
+        "host_read_end_monotonic_ns": 55115809104539,
+        "host_read_end_unix_ns": 1794284101254459203
+      },
+      "sequences": [
+        897,
+        957
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            7426,
+            7417,
+            4272,
+            4272
+          ],
+          "last": [
+            9244,
+            9235,
+            6090,
+            6090
+          ],
+          "delta": [
+            1818,
+            1818,
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.300091262864882,
+            30.300091262864882,
+            30.300091262864882,
+            30.300091262864882
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 40,
+            "(30, 31, 30, 31)": 2,
+            "(31, 30, 31, 30)": 2,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            6873,
+            6463
+          ],
+          "last": [
+            8691,
+            7675
+          ],
+          "delta": [
+            1818,
+            1212
+          ],
+          "rate_per_s": [
+            30.300091262864882,
+            20.20006084190992
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 30,
+            "(30, 21)": 12,
+            "(31, 20)": 18
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            40
+          ],
+          "last": [
+            242,
+            228
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.20006084190992
+          ],
+          "wraps": [
+            0,
+            4
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 54,
+            "(0, 22)": 6
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            1837,
+            1835
+          ],
+          "last": [
+            3655,
+            3653
+          ],
+          "delta": [
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.300091262864882,
+            30.300091262864882
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 30,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 18
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.500152104774806,
+      "last_source_endpoints": [
+        [
+          1837,
+          1835
+        ],
+        [
+          3655,
+          3653
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 4,
+        "0113": 5,
+        "0130": 5,
+        "0302": 1,
+        "1001": 5,
+        "1013": 4,
+        "1030": 5,
+        "1301": 7,
+        "1312": 5,
+        "1320": 5,
+        "2023": 1,
+        "3101": 5,
+        "3112": 5,
+        "3120": 4
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 28,
+          "02": 1,
+          "03": 1,
+          "13": 31
+        },
+        {
+          "01": 21,
+          "02": 10,
+          "03": 10,
+          "12": 10,
+          "13": 9,
+          "23": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 51,
+        "70": 10
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 59.999668076,
+      "first_read": {
+        "index": 4651,
+        "offset": 87956,
+        "bytes": 16,
+        "host_read_begin_monotonic_ns": 55115809096144,
+        "host_read_end_monotonic_ns": 55115809104539,
+        "host_read_end_unix_ns": 1794284101254459203
+      },
+      "last_read": {
+        "index": 4965,
+        "offset": 93775,
+        "bytes": 17,
+        "host_read_begin_monotonic_ns": 55175808764129,
+        "host_read_end_monotonic_ns": 55175808772615,
+        "host_read_end_unix_ns": 1794284161254127319
+      },
+      "sequences": [
+        957,
+        1017
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            9244,
+            9235,
+            6090,
+            6090
+          ],
+          "last": [
+            11062,
+            11053,
+            7908,
+            7908
+          ],
+          "delta": [
+            1818,
+            1818,
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.3001676225473,
+            30.3001676225473,
+            30.3001676225473,
+            30.3001676225473
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 40,
+            "(30, 31, 30, 31)": 2,
+            "(31, 30, 31, 30)": 2,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            8691,
+            7675
+          ],
+          "last": [
+            10509,
+            8887
+          ],
+          "delta": [
+            1818,
+            1212
+          ],
+          "rate_per_s": [
+            30.3001676225473,
+            20.200111748364865
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 30,
+            "(30, 21)": 12,
+            "(31, 20)": 18
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            228
+          ],
+          "last": [
+            242,
+            160
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.200111748364865
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 53,
+            "(0, 21)": 2,
+            "(0, 22)": 5
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            3655,
+            3653
+          ],
+          "last": [
+            5473,
+            5471
+          ],
+          "delta": [
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.3001676225473,
+            30.3001676225473
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 30,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 18
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.50027937091217,
+      "last_source_endpoints": [
+        [
+          3655,
+          3653
+        ],
+        [
+          5473,
+          5471
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 4,
+        "0113": 5,
+        "0130": 5,
+        "1001": 6,
+        "1013": 5,
+        "1030": 4,
+        "1301": 6,
+        "1312": 5,
+        "1320": 5,
+        "2030": 1,
+        "3101": 5,
+        "3112": 5,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 29,
+          "02": 1,
+          "13": 31
+        },
+        {
+          "01": 21,
+          "02": 10,
+          "03": 10,
+          "12": 10,
+          "13": 10
+        }
+      ],
+      "dfi_flags": {
+        "6": 51,
+        "70": 10
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 60.000118637,
+      "first_read": {
+        "index": 4965,
+        "offset": 93775,
+        "bytes": 17,
+        "host_read_begin_monotonic_ns": 55175808764129,
+        "host_read_end_monotonic_ns": 55175808772615,
+        "host_read_end_unix_ns": 1794284161254127319
+      },
+      "last_read": {
+        "index": 5278,
+        "offset": 99594,
+        "bytes": 18,
+        "host_read_begin_monotonic_ns": 55235808862227,
+        "host_read_end_monotonic_ns": 55235808891252,
+        "host_read_end_unix_ns": 1794284221254254401
+      },
+      "sequences": [
+        1017,
+        1077
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            11062,
+            11053,
+            7908,
+            7908
+          ],
+          "last": [
+            12881,
+            12872,
+            9727,
+            9727
+          ],
+          "delta": [
+            1819,
+            1819,
+            1819,
+            1819
+          ],
+          "rate_per_s": [
+            30.316606722145472,
+            30.316606722145472,
+            30.316606722145472,
+            30.316606722145472
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 38,
+            "(30, 31, 30, 31)": 3,
+            "(31, 30, 31, 30)": 3,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            10509,
+            8887
+          ],
+          "last": [
+            12328,
+            10099
+          ],
+          "delta": [
+            1819,
+            1212
+          ],
+          "rate_per_s": [
+            30.316606722145472,
+            20.199960058955643
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 29,
+            "(30, 21)": 12,
+            "(31, 20)": 19
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            160
+          ],
+          "last": [
+            242,
+            92
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.199960058955643
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 53,
+            "(0, 21)": 2,
+            "(0, 22)": 5
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            5473,
+            5471
+          ],
+          "last": [
+            7292,
+            7289
+          ],
+          "delta": [
+            1819,
+            1818
+          ],
+          "rate_per_s": [
+            30.316606722145472,
+            30.299940088433463
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 29,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 19
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.51656678110111,
+      "last_source_endpoints": [
+        [
+          5473,
+          5471
+        ],
+        [
+          7292,
+          7289
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 4,
+        "0113": 5,
+        "0130": 5,
+        "1001": 6,
+        "1013": 5,
+        "1030": 5,
+        "1301": 5,
+        "1312": 5,
+        "1320": 4,
+        "2131": 1,
+        "3101": 5,
+        "3112": 6,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 30,
+          "12": 1,
+          "13": 30
+        },
+        {
+          "01": 20,
+          "02": 9,
+          "03": 10,
+          "12": 11,
+          "13": 11
+        }
+      ],
+      "dfi_flags": {
+        "6": 50,
+        "70": 11
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 60.001195105,
+      "first_read": {
+        "index": 5278,
+        "offset": 99594,
+        "bytes": 18,
+        "host_read_begin_monotonic_ns": 55235808862227,
+        "host_read_end_monotonic_ns": 55235808891252,
+        "host_read_end_unix_ns": 1794284221254254401
+      },
+      "last_read": {
+        "index": 5591,
+        "offset": 105431,
+        "bytes": 1,
+        "host_read_begin_monotonic_ns": 55295810079835,
+        "host_read_end_monotonic_ns": 55295810086357,
+        "host_read_end_unix_ns": 1794284281255440920
+      },
+      "sequences": [
+        1077,
+        1137
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            12881,
+            12872,
+            9727,
+            9727
+          ],
+          "last": [
+            14699,
+            14690,
+            11545,
+            11545
+          ],
+          "delta": [
+            1818,
+            1818,
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.299396483996084,
+            30.299396483996084,
+            30.299396483996084,
+            30.299396483996084
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 39,
+            "(30, 31, 30, 31)": 3,
+            "(31, 30, 31, 30)": 3,
+            "(31, 31, 31, 31)": 15
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            12328,
+            10099
+          ],
+          "last": [
+            14146,
+            11311
+          ],
+          "delta": [
+            1818,
+            1212
+          ],
+          "rate_per_s": [
+            30.299396483996084,
+            20.199597655997387
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 30,
+            "(30, 21)": 12,
+            "(31, 20)": 18
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            92
+          ],
+          "last": [
+            242,
+            24
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.199597655997387
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 53,
+            "(0, 21)": 2,
+            "(0, 22)": 5
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            7292,
+            7289
+          ],
+          "last": [
+            9110,
+            9107
+          ],
+          "delta": [
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.299396483996084,
+            30.299396483996084
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 30,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 18
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.49899413999347,
+      "last_source_endpoints": [
+        [
+          7292,
+          7289
+        ],
+        [
+          9110,
+          9107
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 5,
+        "0113": 5,
+        "0130": 5,
+        "1001": 4,
+        "1013": 5,
+        "1030": 5,
+        "1301": 5,
+        "1312": 5,
+        "1320": 5,
+        "3101": 5,
+        "3112": 7,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 29,
+          "13": 32
+        },
+        {
+          "01": 19,
+          "02": 10,
+          "03": 10,
+          "12": 12,
+          "13": 10
+        }
+      ],
+      "dfi_flags": {
+        "6": 52,
+        "70": 9
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 59.9999788,
+      "first_read": {
+        "index": 5591,
+        "offset": 105431,
+        "bytes": 1,
+        "host_read_begin_monotonic_ns": 55295810079835,
+        "host_read_end_monotonic_ns": 55295810086357,
+        "host_read_end_unix_ns": 1794284281255440920
+      },
+      "last_read": {
+        "index": 5903,
+        "offset": 111251,
+        "bytes": 1,
+        "host_read_begin_monotonic_ns": 55355810058224,
+        "host_read_end_monotonic_ns": 55355810065157,
+        "host_read_end_unix_ns": 1794284341255419410
+      },
+      "sequences": [
+        1137,
+        1197
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            14699,
+            14690,
+            11545,
+            11545
+          ],
+          "last": [
+            16517,
+            16508,
+            13363,
+            13363
+          ],
+          "delta": [
+            1818,
+            1818,
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.300010706003782,
+            30.300010706003782,
+            30.300010706003782,
+            30.300010706003782
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 38,
+            "(30, 31, 30, 31)": 4,
+            "(31, 30, 31, 30)": 4,
+            "(31, 31, 31, 31)": 14
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            14146,
+            11311
+          ],
+          "last": [
+            15964,
+            12524
+          ],
+          "delta": [
+            1818,
+            1213
+          ],
+          "rate_per_s": [
+            30.300010706003782,
+            20.21667380989141
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 29,
+            "(30, 21)": 13,
+            "(31, 20)": 18
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            24
+          ],
+          "last": [
+            242,
+            212
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.200007137335856
+          ],
+          "wraps": [
+            0,
+            4
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 52,
+            "(0, 21)": 4,
+            "(0, 22)": 4
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            9110,
+            9107
+          ],
+          "last": [
+            10928,
+            10927
+          ],
+          "delta": [
+            1818,
+            1820
+          ],
+          "rate_per_s": [
+            30.300010706003782,
+            30.3333440511149
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 29,
+            "(30, 31)": 6,
+            "(30, 32)": 7,
+            "(31, 30)": 18
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.51668451589519,
+      "last_source_endpoints": [
+        [
+          9110,
+          9107
+        ],
+        [
+          10928,
+          10927
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 5,
+        "0113": 6,
+        "0130": 4,
+        "1001": 5,
+        "1013": 4,
+        "1030": 5,
+        "1231": 1,
+        "1301": 4,
+        "1312": 5,
+        "1320": 5,
+        "2123": 1,
+        "3101": 5,
+        "3112": 6,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 29,
+          "12": 2,
+          "13": 30
+        },
+        {
+          "01": 19,
+          "02": 10,
+          "03": 9,
+          "12": 11,
+          "13": 11,
+          "23": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 50,
+        "70": 11
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 60.000143401,
+      "first_read": {
+        "index": 5903,
+        "offset": 111251,
+        "bytes": 1,
+        "host_read_begin_monotonic_ns": 55355810058224,
+        "host_read_end_monotonic_ns": 55355810065157,
+        "host_read_end_unix_ns": 1794284341255419410
+      },
+      "last_read": {
+        "index": 6216,
+        "offset": 117070,
+        "bytes": 2,
+        "host_read_begin_monotonic_ns": 55415810199992,
+        "host_read_end_monotonic_ns": 55415810208558,
+        "host_read_end_unix_ns": 1794284401255563352
+      },
+      "sequences": [
+        1197,
+        1257
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            16517,
+            16508,
+            13363,
+            13363
+          ],
+          "last": [
+            18336,
+            18327,
+            15182,
+            15182
+          ],
+          "delta": [
+            1819,
+            1819,
+            1819,
+            1819
+          ],
+          "rate_per_s": [
+            30.31659420950123,
+            30.31659420950123,
+            30.31659420950123,
+            30.31659420950123
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 38,
+            "(30, 31, 30, 31)": 3,
+            "(31, 30, 31, 30)": 3,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            15964,
+            12524
+          ],
+          "last": [
+            17783,
+            13736
+          ],
+          "delta": [
+            1819,
+            1212
+          ],
+          "rate_per_s": [
+            30.31659420950123,
+            20.199951721778717
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 29,
+            "(30, 21)": 12,
+            "(31, 20)": 19
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            212
+          ],
+          "last": [
+            242,
+            146
+          ],
+          "delta": [
+            0,
+            1214
+          ],
+          "rate_per_s": [
+            0.0,
+            20.23328497544502
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 52,
+            "(0, 21)": 2,
+            "(0, 22)": 6
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            10928,
+            10927
+          ],
+          "last": [
+            12747,
+            12745
+          ],
+          "delta": [
+            1819,
+            1818
+          ],
+          "rate_per_s": [
+            30.31659420950123,
+            30.299927582668076
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 29,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 19
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.51654593127995,
+      "last_source_endpoints": [
+        [
+          10928,
+          10927
+        ],
+        [
+          12747,
+          12745
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 4,
+        "0113": 6,
+        "0130": 5,
+        "1001": 5,
+        "1013": 5,
+        "1030": 5,
+        "1301": 5,
+        "1312": 5,
+        "1320": 6,
+        "3101": 5,
+        "3112": 5,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 30,
+          "13": 31
+        },
+        {
+          "01": 19,
+          "02": 11,
+          "03": 10,
+          "12": 10,
+          "13": 11
+        }
+      ],
+      "dfi_flags": {
+        "6": 52,
+        "70": 9
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 59.998912704,
+      "first_read": {
+        "index": 6216,
+        "offset": 117070,
+        "bytes": 2,
+        "host_read_begin_monotonic_ns": 55415810199992,
+        "host_read_end_monotonic_ns": 55415810208558,
+        "host_read_end_unix_ns": 1794284401255563352
+      },
+      "last_read": {
+        "index": 6526,
+        "offset": 122878,
+        "bytes": 14,
+        "host_read_begin_monotonic_ns": 55475809113136,
+        "host_read_end_monotonic_ns": 55475809121262,
+        "host_read_end_unix_ns": 1794284461254475725
+      },
+      "sequences": [
+        1257,
+        1317
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            18336,
+            18327,
+            15182,
+            15182
+          ],
+          "last": [
+            20154,
+            20145,
+            17000,
+            17000
+          ],
+          "delta": [
+            1818,
+            1818,
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.30054909443047,
+            30.30054909443047,
+            30.30054909443047,
+            30.30054909443047
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 40,
+            "(30, 31, 30, 31)": 2,
+            "(31, 30, 31, 30)": 2,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            17783,
+            13736
+          ],
+          "last": [
+            19601,
+            14948
+          ],
+          "delta": [
+            1818,
+            1212
+          ],
+          "rate_per_s": [
+            30.30054909443047,
+            20.20036606295365
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 30,
+            "(30, 21)": 12,
+            "(31, 20)": 18
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            146
+          ],
+          "last": [
+            242,
+            78
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.20036606295365
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 54,
+            "(0, 22)": 6
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            12747,
+            12745
+          ],
+          "last": [
+            14565,
+            14563
+          ],
+          "delta": [
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.30054909443047,
+            30.30054909443047
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 30,
+            "(30, 31)": 6,
+            "(30, 32)": 6,
+            "(31, 30)": 18
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.500915157384114,
+      "last_source_endpoints": [
+        [
+          12747,
+          12745
+        ],
+        [
+          14565,
+          14563
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 4,
+        "0113": 4,
+        "0130": 5,
+        "0223": 1,
+        "1001": 5,
+        "1013": 5,
+        "1030": 4,
+        "1301": 5,
+        "1312": 5,
+        "1320": 7,
+        "2131": 1,
+        "3101": 5,
+        "3112": 5,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 27,
+          "02": 1,
+          "12": 1,
+          "13": 32
+        },
+        {
+          "01": 19,
+          "02": 12,
+          "03": 9,
+          "12": 10,
+          "13": 10,
+          "23": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 50,
+        "70": 11
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 60.000718209,
+      "first_read": {
+        "index": 6526,
+        "offset": 122878,
+        "bytes": 14,
+        "host_read_begin_monotonic_ns": 55475809113136,
+        "host_read_end_monotonic_ns": 55475809121262,
+        "host_read_end_unix_ns": 1794284461254475725
+      },
+      "last_read": {
+        "index": 6840,
+        "offset": 128708,
+        "bytes": 4,
+        "host_read_begin_monotonic_ns": 55535809832638,
+        "host_read_end_monotonic_ns": 55535809839471,
+        "host_read_end_unix_ns": 1794284521255193793
+      },
+      "sequences": [
+        1317,
+        1377
+      ],
+      "samples": 61,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            20154,
+            20145,
+            17000,
+            17000
+          ],
+          "last": [
+            21972,
+            21963,
+            18818,
+            18818
+          ],
+          "delta": [
+            1818,
+            1818,
+            1818,
+            1818
+          ],
+          "rate_per_s": [
+            30.29963730879647,
+            30.29963730879647,
+            30.29963730879647,
+            30.29963730879647
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 40,
+            "(30, 31, 30, 31)": 2,
+            "(31, 30, 31, 30)": 2,
+            "(31, 31, 31, 31)": 16
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            19601,
+            14948
+          ],
+          "last": [
+            21419,
+            16161
+          ],
+          "delta": [
+            1818,
+            1213
+          ],
+          "rate_per_s": [
+            30.29963730879647,
+            20.21642467303087
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 29,
+            "(30, 21)": 13,
+            "(31, 20)": 18
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            78
+          ],
+          "last": [
+            242,
+            10
+          ],
+          "delta": [
+            0,
+            1212
+          ],
+          "rate_per_s": [
+            0.0,
+            20.199758205864313
+          ],
+          "wraps": [
+            0,
+            5
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 53,
+            "(0, 21)": 2,
+            "(0, 22)": 5
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 60
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            14565,
+            14563
+          ],
+          "last": [
+            16383,
+            16382
+          ],
+          "delta": [
+            1818,
+            1819
+          ],
+          "rate_per_s": [
+            30.29963730879647,
+            30.316303775963025
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 29,
+            "(30, 31)": 7,
+            "(30, 32)": 6,
+            "(31, 30)": 18
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.516061981827335,
+      "last_source_endpoints": [
+        [
+          14565,
+          14563
+        ],
+        [
+          16383,
+          16382
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 5,
+        "0113": 5,
+        "0130": 5,
+        "1001": 4,
+        "1013": 5,
+        "1030": 6,
+        "1301": 5,
+        "1312": 5,
+        "1320": 6,
+        "3002": 1,
+        "3101": 5,
+        "3112": 4,
+        "3120": 5
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 30,
+          "03": 1,
+          "13": 30
+        },
+        {
+          "01": 19,
+          "02": 12,
+          "03": 11,
+          "12": 9,
+          "13": 10
+        }
+      ],
+      "dfi_flags": {
+        "6": 52,
+        "70": 9
+      },
+      "pixel_flags": {
+        "1011": 61
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 61
+      }
+    }
+  ],
+  "all_HDR_contiguous_windows": [
+    {
+      "epoch": 5,
+      "session": 1,
+      "seconds": 9.000784925,
+      "first_read": {
+        "index": 3198,
+        "offset": 60886,
+        "bytes": 23,
+        "host_read_begin_monotonic_ns": 54836809374165,
+        "host_read_end_monotonic_ns": 54836809382080,
+        "host_read_end_unix_ns": 1794283822254737535
+      },
+      "last_read": {
+        "index": 3243,
+        "offset": 61769,
+        "bytes": 13,
+        "host_read_begin_monotonic_ns": 54845810153459,
+        "host_read_end_monotonic_ns": 54845810167005,
+        "host_read_end_unix_ns": 1794283831255524383
+      },
+      "sequences": [
+        678,
+        687
+      ],
+      "samples": 10,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            1039,
+            1039,
+            2,
+            2
+          ],
+          "last": [
+            1312,
+            1312,
+            275,
+            275
+          ],
+          "delta": [
+            273,
+            273,
+            273,
+            273
+          ],
+          "rate_per_s": [
+            30.330688076073546,
+            30.330688076073546,
+            30.330688076073546,
+            30.330688076073546
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 5,
+            "(30, 31, 30, 31)": 1,
+            "(31, 30, 31, 30)": 1,
+            "(31, 31, 31, 31)": 2
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            1030,
+            1033
+          ],
+          "last": [
+            1303,
+            1214
+          ],
+          "delta": [
+            273,
+            181
+          ],
+          "rate_per_s": [
+            30.330688076073546,
+            20.109357295858285
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 5,
+            "(30, 21)": 1,
+            "(31, 20)": 3
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            182
+          ],
+          "delta": [
+            0,
+            182
+          ],
+          "rate_per_s": [
+            0.0,
+            20.220458717382364
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 7,
+            "(0, 21)": 2
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 9
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            5,
+            5
+          ],
+          "last": [
+            5,
+            5
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 9
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            10,
+            13
+          ],
+          "last": [
+            283,
+            284
+          ],
+          "delta": [
+            273,
+            271
+          ],
+          "rate_per_s": [
+            30.330688076073546,
+            30.108485233025387
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 5,
+            "(30, 31)": 1,
+            "(31, 30)": 3
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.44004537193183,
+      "last_source_endpoints": [
+        [
+          10,
+          13
+        ],
+        [
+          283,
+          284
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0110": 2,
+        "0131": 1,
+        "1003": 2,
+        "1302": 2,
+        "1321": 2,
+        "3110": 1
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 5,
+          "13": 5
+        },
+        {
+          "01": 3,
+          "02": 2,
+          "03": 2,
+          "12": 2,
+          "13": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 8,
+        "70": 2
+      },
+      "pixel_flags": {
+        "1011": 10
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 10
+      }
+    },
+    {
+      "epoch": 13,
+      "session": 1,
+      "seconds": 1.999275484,
+      "first_read": {
+        "index": 3301,
+        "offset": 62840,
+        "bytes": 9,
+        "host_read_begin_monotonic_ns": 54856810654989,
+        "host_read_end_monotonic_ns": 54856810663194,
+        "host_read_end_unix_ns": 1794283842256017737
+      },
+      "last_read": {
+        "index": 3312,
+        "offset": 63027,
+        "bytes": 16,
+        "host_read_begin_monotonic_ns": 54858809930402,
+        "host_read_end_monotonic_ns": 54858809938678,
+        "host_read_end_unix_ns": 1794283844255293281
+      },
+      "sequences": [
+        698,
+        700
+      ],
+      "samples": 3,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            1611,
+            1610,
+            311,
+            311
+          ],
+          "last": [
+            1672,
+            1671,
+            372,
+            372
+          ],
+          "delta": [
+            61,
+            61,
+            61,
+            61
+          ],
+          "rate_per_s": [
+            30.511052872991666,
+            30.511052872991666,
+            30.511052872991666,
+            30.511052872991666
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 1,
+            "(31, 31, 31, 31)": 1
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            1593,
+            1493
+          ],
+          "last": [
+            1654,
+            1533
+          ],
+          "delta": [
+            61,
+            40
+          ],
+          "rate_per_s": [
+            30.511052872991666,
+            20.007247785568303
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 1,
+            "(31, 20)": 1
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            0,
+            206
+          ],
+          "last": [
+            0,
+            248
+          ],
+          "delta": [
+            0,
+            42
+          ],
+          "rate_per_s": [
+            0.0,
+            21.007610174846718
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 1,
+            "(0, 22)": 1
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            13,
+            12
+          ],
+          "last": [
+            13,
+            12
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            19,
+            22
+          ],
+          "last": [
+            80,
+            82
+          ],
+          "delta": [
+            61,
+            60
+          ],
+          "rate_per_s": [
+            30.511052872991666,
+            30.01087167835246
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 1,
+            "(31, 30)": 1
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.518300658559966,
+      "last_source_endpoints": [
+        [
+          19,
+          22
+        ],
+        [
+          80,
+          82
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0131": 1,
+        "1302": 2
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 1,
+          "13": 2
+        },
+        {
+          "02": 2,
+          "13": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 3
+      },
+      "pixel_flags": {
+        "1011": 3
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 3
+      }
+    },
+    {
+      "epoch": 15,
+      "session": 1,
+      "seconds": 1.999323766,
+      "first_read": {
+        "index": 3332,
+        "offset": 63425,
+        "bytes": 6,
+        "host_read_begin_monotonic_ns": 54862810957372,
+        "host_read_end_monotonic_ns": 54862810965558,
+        "host_read_end_unix_ns": 1794283848256320141
+      },
+      "last_read": {
+        "index": 3342,
+        "offset": 63613,
+        "bytes": 12,
+        "host_read_begin_monotonic_ns": 54864810280928,
+        "host_read_end_monotonic_ns": 54864810289324,
+        "host_read_end_unix_ns": 1794283850255643907
+      },
+      "sequences": [
+        704,
+        706
+      ],
+      "samples": 3,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            1769,
+            1767,
+            398,
+            398
+          ],
+          "last": [
+            1830,
+            1828,
+            459,
+            459
+          ],
+          "delta": [
+            61,
+            61,
+            61,
+            61
+          ],
+          "rate_per_s": [
+            30.510316056534087,
+            30.510316056534087,
+            30.510316056534087,
+            30.510316056534087
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 1,
+            "(31, 31, 31, 31)": 1
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            1747,
+            1620
+          ],
+          "last": [
+            1787,
+            1681
+          ],
+          "delta": [
+            40,
+            61
+          ],
+          "rate_per_s": [
+            20.006764627235466,
+            30.510316056534087
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 30)": 1,
+            "(20, 31)": 1
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            4,
+            4
+          ],
+          "last": [
+            44,
+            4
+          ],
+          "delta": [
+            40,
+            0
+          ],
+          "rate_per_s": [
+            20.006764627235466,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 0)": 2
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            15,
+            14
+          ],
+          "last": [
+            15,
+            14
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            14,
+            16
+          ],
+          "last": [
+            74,
+            77
+          ],
+          "delta": [
+            60,
+            61
+          ],
+          "rate_per_s": [
+            30.0101469408532,
+            30.510316056534087
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 1,
+            "(30, 31)": 1
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.51708068376955,
+      "last_source_endpoints": [
+        [
+          14,
+          16
+        ],
+        [
+          74,
+          77
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0110": 2,
+        "1231": 1
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 2,
+          "12": 1
+        },
+        {
+          "01": 2,
+          "13": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 1,
+        "70": 2
+      },
+      "pixel_flags": {
+        "1011": 3
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 3
+      }
+    },
+    {
+      "epoch": 17,
+      "session": 1,
+      "seconds": 21.999757595,
+      "first_read": {
+        "index": 3364,
+        "offset": 64011,
+        "bytes": 2,
+        "host_read_begin_monotonic_ns": 54868811044014,
+        "host_read_end_monotonic_ns": 54868811050567,
+        "host_read_end_unix_ns": 1794283854256404719
+      },
+      "last_read": {
+        "index": 3477,
+        "offset": 66143,
+        "bytes": 4,
+        "host_read_begin_monotonic_ns": 54890810799245,
+        "host_read_end_monotonic_ns": 54890810808162,
+        "host_read_end_unix_ns": 1794283876256162835
+      },
+      "sequences": [
+        710,
+        732
+      ],
+      "samples": 23,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            1928,
+            1925,
+            477,
+            477
+          ],
+          "last": [
+            2595,
+            2592,
+            1144,
+            1144
+          ],
+          "delta": [
+            667,
+            667,
+            667,
+            667
+          ],
+          "rate_per_s": [
+            30.318515879992816,
+            30.318515879992816,
+            30.318515879992816,
+            30.318515879992816
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 15,
+            "(31, 31, 31, 31)": 7
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            1878,
+            1776
+          ],
+          "last": [
+            2433,
+            2332
+          ],
+          "delta": [
+            555,
+            556
+          ],
+          "rate_per_s": [
+            25.227550694746647,
+            25.273005741043487
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(25, 25)": 11,
+            "(25, 26)": 6,
+            "(26, 25)": 5
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            56,
+            4
+          ],
+          "last": [
+            22,
+            226
+          ],
+          "delta": [
+            222,
+            222
+          ],
+          "rate_per_s": [
+            10.091020277898659,
+            10.091020277898659
+          ],
+          "wraps": [
+            1,
+            0
+          ],
+          "adjacent_deltas": {
+            "(10, 10)": 20,
+            "(10, 12)": 1,
+            "(12, 10)": 1
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 22
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            17,
+            16
+          ],
+          "last": [
+            17,
+            16
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 22
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.50055643579013,
+      "last_source_endpoints": [
+        [
+          79,
+          79
+        ],
+        [
+          675,
+          677
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [
+        [
+          710,
+          711,
+          [
+            79,
+            79
+          ],
+          [
+            38,
+            40
+          ]
+        ]
+      ],
+      "bank_states_0123": {
+        "0101": 1,
+        "0103": 1,
+        "0110": 3,
+        "0113": 1,
+        "0130": 1,
+        "1001": 1,
+        "1003": 1,
+        "1031": 1,
+        "1213": 1,
+        "1301": 1,
+        "1310": 2,
+        "1320": 1,
+        "2030": 1,
+        "2113": 1,
+        "3101": 2,
+        "3102": 1,
+        "3110": 1,
+        "3112": 1,
+        "3120": 1
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 10,
+          "02": 1,
+          "12": 2,
+          "13": 10
+        },
+        {
+          "01": 11,
+          "02": 3,
+          "03": 4,
+          "12": 1,
+          "13": 4
+        }
+      ],
+      "dfi_flags": {
+        "6": 18,
+        "70": 5
+      },
+      "pixel_flags": {
+        "1011": 23
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 23
+      }
+    },
+    {
+      "epoch": 27,
+      "session": 1,
+      "seconds": 9.000399934,
+      "first_read": {
+        "index": 3699,
+        "offset": 70306,
+        "bytes": 12,
+        "host_read_begin_monotonic_ns": 54933809830558,
+        "host_read_end_monotonic_ns": 54933809843122,
+        "host_read_end_unix_ns": 1794283919255199088
+      },
+      "last_read": {
+        "index": 3747,
+        "offset": 71184,
+        "bytes": 7,
+        "host_read_begin_monotonic_ns": 54942810236844,
+        "host_read_end_monotonic_ns": 54942810243056,
+        "host_read_end_unix_ns": 1794283928255597338
+      },
+      "sequences": [
+        775,
+        784
+      ],
+      "samples": 10,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            3852,
+            3848,
+            1185,
+            1185
+          ],
+          "last": [
+            4124,
+            4120,
+            1457,
+            1457
+          ],
+          "delta": [
+            272,
+            272,
+            272,
+            272
+          ],
+          "rate_per_s": [
+            30.220879293651173,
+            30.220879293651173,
+            30.220879293651173,
+            30.220879293651173
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 6,
+            "(30, 31, 30, 31)": 1,
+            "(31, 30, 31, 30)": 1,
+            "(31, 31, 31, 31)": 1
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            3668,
+            3575
+          ],
+          "last": [
+            3850,
+            3847
+          ],
+          "delta": [
+            182,
+            272
+          ],
+          "rate_per_s": [
+            20.221323645016593,
+            30.220879293651173
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 30)": 5,
+            "(20, 31)": 2,
+            "(21, 30)": 2
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            40,
+            236
+          ],
+          "last": [
+            222,
+            236
+          ],
+          "delta": [
+            182,
+            0
+          ],
+          "rate_per_s": [
+            20.221323645016593,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 0)": 7,
+            "(21, 0)": 2
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 9
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            26,
+            24
+          ],
+          "last": [
+            26,
+            24
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 9
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            20,
+            23
+          ],
+          "last": [
+            293,
+            295
+          ],
+          "delta": [
+            273,
+            272
+          ],
+          "rate_per_s": [
+            30.33198546752489,
+            30.220879293651173
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 5,
+            "(30, 31)": 2,
+            "(31, 30)": 1,
+            "(32, 30)": 1
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.44220293866776,
+      "last_source_endpoints": [
+        [
+          20,
+          23
+        ],
+        [
+          293,
+          295
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0213": 2,
+        "0310": 2,
+        "1010": 1,
+        "1013": 2,
+        "2131": 2,
+        "3101": 1
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 3,
+          "02": 2,
+          "03": 2,
+          "12": 2,
+          "13": 1
+        },
+        {
+          "01": 4,
+          "13": 6
+        }
+      ],
+      "dfi_flags": {
+        "6": 9,
+        "70": 1
+      },
+      "pixel_flags": {
+        "1011": 10
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 10
+      }
+    },
+    {
+      "epoch": 29,
+      "session": 1,
+      "seconds": 5.998623407,
+      "first_read": {
+        "index": 3778,
+        "offset": 71769,
+        "bytes": 4,
+        "host_read_begin_monotonic_ns": 54948810605372,
+        "host_read_end_monotonic_ns": 54948810612165,
+        "host_read_end_unix_ns": 1794283934255966648
+      },
+      "last_read": {
+        "index": 3810,
+        "offset": 72337,
+        "bytes": 18,
+        "host_read_begin_monotonic_ns": 54954809229802,
+        "host_read_end_monotonic_ns": 54954809235572,
+        "host_read_end_unix_ns": 1794283940254589655
+      },
+      "sequences": [
+        790,
+        796
+      ],
+      "samples": 7,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            4281,
+            4276,
+            1491,
+            1491
+          ],
+          "last": [
+            4463,
+            4458,
+            1673,
+            1673
+          ],
+          "delta": [
+            182,
+            182,
+            182,
+            182
+          ],
+          "rate_per_s": [
+            30.34029437280859,
+            30.34029437280859,
+            30.34029437280859,
+            30.34029437280859
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 4,
+            "(31, 31, 31, 31)": 2
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            3993,
+            4001
+          ],
+          "last": [
+            4115,
+            4183
+          ],
+          "delta": [
+            122,
+            182
+          ],
+          "rate_per_s": [
+            20.337999524629936,
+            30.34029437280859
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 30)": 2,
+            "(20, 31)": 2,
+            "(21, 30)": 2
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            236
+          ],
+          "last": [
+            108,
+            236
+          ],
+          "delta": [
+            122,
+            0
+          ],
+          "rate_per_s": [
+            20.337999524629936,
+            0.0
+          ],
+          "wraps": [
+            1,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 0)": 5,
+            "(22, 0)": 1
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 6
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            28,
+            26
+          ],
+          "last": [
+            28,
+            26
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 6
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            11,
+            14
+          ],
+          "last": [
+            194,
+            196
+          ],
+          "delta": [
+            183,
+            182
+          ],
+          "rate_per_s": [
+            30.5069992869449,
+            30.34029437280859
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 2,
+            "(30, 31)": 2,
+            "(31, 30)": 1,
+            "(32, 30)": 1
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.67829389743852,
+      "last_source_endpoints": [
+        [
+          11,
+          14
+        ],
+        [
+          194,
+          196
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0131": 1,
+        "1231": 1,
+        "1301": 2,
+        "2013": 2,
+        "3010": 1
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 1,
+          "02": 2,
+          "03": 1,
+          "12": 1,
+          "13": 2
+        },
+        {
+          "01": 3,
+          "13": 4
+        }
+      ],
+      "dfi_flags": {
+        "6": 7
+      },
+      "pixel_flags": {
+        "1011": 7
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 7
+      }
+    },
+    {
+      "epoch": 31,
+      "session": 1,
+      "seconds": 17.999137325,
+      "first_read": {
+        "index": 3831,
+        "offset": 72735,
+        "bytes": 8,
+        "host_read_begin_monotonic_ns": 54958810215343,
+        "host_read_end_monotonic_ns": 54958810222216,
+        "host_read_end_unix_ns": 1794283944255576609
+      },
+      "last_read": {
+        "index": 3924,
+        "offset": 74473,
+        "bytes": 16,
+        "host_read_begin_monotonic_ns": 54976809354071,
+        "host_read_end_monotonic_ns": 54976809359541,
+        "host_read_end_unix_ns": 1794283962254714174
+      },
+      "sequences": [
+        800,
+        818
+      ],
+      "samples": 19,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            4560,
+            4554,
+            1693,
+            1693
+          ],
+          "last": [
+            5105,
+            5099,
+            2238,
+            2238
+          ],
+          "delta": [
+            545,
+            545,
+            545,
+            545
+          ],
+          "rate_per_s": [
+            30.279228951879784,
+            30.279228951879784,
+            30.279228951879784,
+            30.279228951879784
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 13,
+            "(31, 31, 31, 31)": 5
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            4203,
+            4277
+          ],
+          "last": [
+            4567,
+            4822
+          ],
+          "delta": [
+            364,
+            545
+          ],
+          "rate_per_s": [
+            20.223191446760076,
+            30.279228951879784
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 30)": 9,
+            "(20, 31)": 5,
+            "(21, 30)": 4
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            120,
+            236
+          ],
+          "last": [
+            228,
+            236
+          ],
+          "delta": [
+            364,
+            0
+          ],
+          "rate_per_s": [
+            20.223191446760076,
+            0.0
+          ],
+          "wraps": [
+            1,
+            0
+          ],
+          "adjacent_deltas": {
+            "(20, 0)": 16,
+            "(22, 0)": 2
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 18
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            31,
+            29
+          ],
+          "last": [
+            31,
+            29
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 18
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            26,
+            28
+          ],
+          "last": [
+            572,
+            573
+          ],
+          "delta": [
+            546,
+            545
+          ],
+          "rate_per_s": [
+            30.33478717014011,
+            30.279228951879784
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 9,
+            "(30, 31)": 5,
+            "(31, 30)": 2,
+            "(32, 30)": 2
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.502420398639856,
+      "last_source_endpoints": [
+        [
+          26,
+          28
+        ],
+        [
+          572,
+          573
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 2,
+        "0110": 2,
+        "0113": 1,
+        "0131": 1,
+        "1213": 1,
+        "1231": 2,
+        "1301": 1,
+        "1310": 2,
+        "2013": 2,
+        "2031": 2,
+        "3001": 1,
+        "3010": 2
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 6,
+          "02": 4,
+          "03": 3,
+          "12": 3,
+          "13": 3
+        },
+        {
+          "01": 10,
+          "13": 9
+        }
+      ],
+      "dfi_flags": {
+        "6": 15,
+        "70": 4
+      },
+      "pixel_flags": {
+        "1011": 19
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 19
+      }
+    },
+    {
+      "epoch": 33,
+      "session": 1,
+      "seconds": 1.999540135,
+      "first_read": {
+        "index": 3950,
+        "offset": 74959,
+        "bytes": 15,
+        "host_read_begin_monotonic_ns": 54981809363810,
+        "host_read_end_monotonic_ns": 54981809369200,
+        "host_read_end_unix_ns": 1794283967254733882
+      },
+      "last_read": {
+        "index": 3960,
+        "offset": 75146,
+        "bytes": 22,
+        "host_read_begin_monotonic_ns": 54983808896651,
+        "host_read_end_monotonic_ns": 54983808909335,
+        "host_read_end_unix_ns": 1794283969254266052
+      },
+      "sequences": [
+        823,
+        825
+      ],
+      "samples": 3,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            5232,
+            5225,
+            2276,
+            2276
+          ],
+          "last": [
+            5292,
+            5285,
+            2336,
+            2336
+          ],
+          "delta": [
+            60,
+            60,
+            60,
+            60
+          ],
+          "rate_per_s": [
+            30.00689956143341,
+            30.00689956143341,
+            30.00689956143341,
+            30.00689956143341
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 2
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            4683,
+            4941
+          ],
+          "last": [
+            4743,
+            4981
+          ],
+          "delta": [
+            60,
+            40
+          ],
+          "rate_per_s": [
+            30.00689956143341,
+            20.004599707622273
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 2
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            246
+          ],
+          "last": [
+            242,
+            30
+          ],
+          "delta": [
+            0,
+            40
+          ],
+          "rate_per_s": [
+            0.0,
+            20.004599707622273
+          ],
+          "wraps": [
+            0,
+            1
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 2
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            33,
+            31
+          ],
+          "last": [
+            33,
+            31
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            24,
+            25
+          ],
+          "last": [
+            84,
+            85
+          ],
+          "delta": [
+            60,
+            60
+          ],
+          "rate_per_s": [
+            30.00689956143341,
+            30.00689956143341
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 2
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.01149926905568,
+      "last_source_endpoints": [
+        [
+          24,
+          25
+        ],
+        [
+          84,
+          85
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "1001": 1,
+        "1301": 2
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 1,
+          "13": 2
+        },
+        {
+          "01": 3
+        }
+      ],
+      "dfi_flags": {
+        "6": 2,
+        "70": 1
+      },
+      "pixel_flags": {
+        "1011": 3
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 3
+      }
+    },
+    {
+      "epoch": 35,
+      "session": 1,
+      "seconds": 1.999495655,
+      "first_read": {
+        "index": 3986,
+        "offset": 75649,
+        "bytes": 4,
+        "host_read_begin_monotonic_ns": 54988810379234,
+        "host_read_end_monotonic_ns": 54988810387570,
+        "host_read_end_unix_ns": 1794283974255742394
+      },
+      "last_read": {
+        "index": 3996,
+        "offset": 75837,
+        "bytes": 10,
+        "host_read_begin_monotonic_ns": 54990809874739,
+        "host_read_end_monotonic_ns": 54990809883225,
+        "host_read_end_unix_ns": 1794283976255237838
+      },
+      "sequences": [
+        830,
+        832
+      ],
+      "samples": 3,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            5417,
+            5409,
+            2364,
+            2364
+          ],
+          "last": [
+            5478,
+            5470,
+            2425,
+            2425
+          ],
+          "delta": [
+            61,
+            61,
+            61,
+            61
+          ],
+          "rate_per_s": [
+            30.507693201263795,
+            30.507693201263795,
+            30.507693201263795,
+            30.507693201263795
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 1,
+            "(31, 31, 31, 31)": 1
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            4866,
+            5094
+          ],
+          "last": [
+            4927,
+            5135
+          ],
+          "delta": [
+            61,
+            41
+          ],
+          "rate_per_s": [
+            30.507693201263795,
+            20.5051708401937
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 21)": 1,
+            "(31, 20)": 1
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            48
+          ],
+          "last": [
+            242,
+            90
+          ],
+          "delta": [
+            0,
+            42
+          ],
+          "rate_per_s": [
+            0.0,
+            21.005296958247204
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 1,
+            "(0, 22)": 1
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            35,
+            32
+          ],
+          "last": [
+            35,
+            32
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 2
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            34,
+            38
+          ],
+          "last": [
+            95,
+            99
+          ],
+          "delta": [
+            61,
+            61
+          ],
+          "rate_per_s": [
+            30.507693201263795,
+            30.507693201263795
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 31)": 1,
+            "(31, 30)": 1
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 51.01286404145749,
+      "last_source_endpoints": [
+        [
+          34,
+          38
+        ],
+        [
+          95,
+          99
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0113": 1,
+        "1030": 1,
+        "1320": 1
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 2,
+          "13": 1
+        },
+        {
+          "02": 1,
+          "03": 1,
+          "13": 1
+        }
+      ],
+      "dfi_flags": {
+        "6": 3
+      },
+      "pixel_flags": {
+        "1011": 3
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 3
+      }
+    },
+    {
+      "epoch": 37,
+      "session": 1,
+      "seconds": 540.000454644,
+      "first_read": {
+        "index": 4022,
+        "offset": 76317,
+        "bytes": 15,
+        "host_read_begin_monotonic_ns": 54995809379247,
+        "host_read_end_monotonic_ns": 54995809384827,
+        "host_read_end_unix_ns": 1794283981254739260
+      },
+      "last_read": {
+        "index": 6840,
+        "offset": 128708,
+        "bytes": 4,
+        "host_read_begin_monotonic_ns": 55535809832638,
+        "host_read_end_monotonic_ns": 55535809839471,
+        "host_read_end_unix_ns": 1794284521255193793
+      },
+      "sequences": [
+        837,
+        1377
+      ],
+      "samples": 541,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            5607,
+            5598,
+            2453,
+            2453
+          ],
+          "last": [
+            21972,
+            21963,
+            18818,
+            18818
+          ],
+          "delta": [
+            16365,
+            16365,
+            16365,
+            16365
+          ],
+          "rate_per_s": [
+            30.30553004031963,
+            30.30553004031963,
+            30.30553004031963,
+            30.30553004031963
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 30, 30)": 351,
+            "(30, 31, 30, 31)": 24,
+            "(31, 30, 31, 30)": 24,
+            "(31, 31, 31, 31)": 141
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            5054,
+            5251
+          ],
+          "last": [
+            21419,
+            16161
+          ],
+          "delta": [
+            16365,
+            10910
+          ],
+          "rate_per_s": [
+            30.30553004031963,
+            20.20368669354642
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 20)": 265,
+            "(30, 21)": 110,
+            "(31, 20)": 165
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            242,
+            108
+          ],
+          "last": [
+            242,
+            10
+          ],
+          "delta": [
+            0,
+            10910
+          ],
+          "rate_per_s": [
+            0.0,
+            20.20368669354642
+          ],
+          "wraps": [
+            0,
+            43
+          ],
+          "adjacent_deltas": {
+            "(0, 20)": 477,
+            "(0, 21)": 16,
+            "(0, 22)": 47
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 540
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            38,
+            35
+          ],
+          "last": [
+            38,
+            35
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 540
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            18,
+            17
+          ],
+          "last": [
+            16383,
+            16382
+          ],
+          "delta": [
+            16365,
+            16365
+          ],
+          "rate_per_s": [
+            30.30553004031963,
+            30.30553004031963
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 265,
+            "(30, 31)": 55,
+            "(30, 32)": 55,
+            "(31, 30)": 165
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 50.50921673386605,
+      "last_source_endpoints": [
+        [
+          18,
+          17
+        ],
+        [
+          16383,
+          16382
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0101": 40,
+        "0113": 45,
+        "0130": 44,
+        "0223": 1,
+        "0302": 1,
+        "1001": 43,
+        "1013": 43,
+        "1030": 44,
+        "1231": 2,
+        "1301": 46,
+        "1312": 45,
+        "1320": 46,
+        "2023": 1,
+        "2030": 1,
+        "2123": 1,
+        "2131": 2,
+        "3002": 1,
+        "3101": 45,
+        "3112": 46,
+        "3120": 44
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "01": 259,
+          "02": 3,
+          "03": 2,
+          "12": 5,
+          "13": 272
+        },
+        {
+          "01": 174,
+          "02": 92,
+          "03": 89,
+          "12": 91,
+          "13": 92,
+          "23": 3
+        }
+      ],
+      "dfi_flags": {
+        "6": 453,
+        "70": 88
+      },
+      "pixel_flags": {
+        "1011": 541
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 541
+      }
+    }
+  ],
+  "same_session_SDR_epoch22": {
+    "DJ": {
+      "epoch": 22,
+      "session": 1,
+      "seconds": 14.000397361,
+      "first_read": {
+        "index": 3554,
+        "offset": 67588,
+        "bytes": 14,
+        "host_read_begin_monotonic_ns": 54905809878640,
+        "host_read_end_monotonic_ns": 54905809896705,
+        "host_read_end_unix_ns": 1794283891255256758
+      },
+      "last_read": {
+        "index": 3627,
+        "offset": 68952,
+        "bytes": 8,
+        "host_read_begin_monotonic_ns": 54919810267636,
+        "host_read_end_monotonic_ns": 54919810294066,
+        "host_read_end_unix_ns": 1794283905255648779
+      },
+      "sequences": [
+        747,
+        761
+      ],
+      "samples": 15,
+      "counters": {
+        "capture_admit": {
+          "bits": 16,
+          "first": [
+            3034,
+            3030,
+            1172,
+            1172
+          ],
+          "last": [
+            3455,
+            3451,
+            1172,
+            1172
+          ],
+          "delta": [
+            421,
+            421,
+            0,
+            0
+          ],
+          "rate_per_s": [
+            30.070575080443962,
+            30.070575080443962,
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30, 0, 0)": 13,
+            "(31, 31, 0, 0)": 1
+          }
+        },
+        "jobs": {
+          "bits": 16,
+          "first": [
+            2861,
+            2761
+          ],
+          "last": [
+            3281,
+            3182
+          ],
+          "delta": [
+            420,
+            421
+          ],
+          "rate_per_s": [
+            29.999148536309892,
+            30.070575080443962
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 13,
+            "(30, 31)": 1
+          }
+        },
+        "begin_reject": {
+          "bits": 8,
+          "first": [
+            32,
+            236
+          ],
+          "last": [
+            32,
+            236
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 14
+          }
+        },
+        "pair_expire": {
+          "bits": 8,
+          "first": [
+            0,
+            0
+          ],
+          "last": [
+            0,
+            0
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 14
+          }
+        },
+        "bad_finish": {
+          "bits": 8,
+          "first": [
+            22,
+            20
+          ],
+          "last": [
+            22,
+            20
+          ],
+          "delta": [
+            0,
+            0
+          ],
+          "rate_per_s": [
+            0.0,
+            0.0
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(0, 0)": 14
+          }
+        },
+        "last_source_span": {
+          "bits": 32,
+          "first": [
+            414,
+            414
+          ],
+          "last": [
+            834,
+            835
+          ],
+          "delta": [
+            420,
+            421
+          ],
+          "rate_per_s": [
+            29.999148536309892,
+            30.070575080443962
+          ],
+          "wraps": [
+            0,
+            0
+          ],
+          "adjacent_deltas": {
+            "(30, 30)": 13,
+            "(30, 31)": 1
+          }
+        }
+      },
+      "both_cameras_job_rate_per_s": 60.069723616753855,
+      "last_source_endpoints": [
+        [
+          414,
+          414
+        ],
+        [
+          834,
+          835
+        ]
+      ],
+      "last_source_ambiguous_backward_steps": [],
+      "bank_states_0123": {
+        "0000": 15
+      },
+      "bank_by_camera_unordered_pair": [
+        {
+          "00": 15
+        },
+        {
+          "00": 15
+        }
+      ],
+      "dfi_flags": {
+        "4": 11,
+        "68": 4
+      },
+      "pixel_flags": {
+        "818": 15
+      },
+      "sensor_sys_stable_pair": {
+        "(True, True)": 15
+      }
+    },
+    "OB": {
+      "seconds": 14.000540431,
+      "samples": 15,
+      "counters": {
+        "frame_admission": {
+          "bits": 16,
+          "first": [
+            5622
+          ],
+          "last": [
+            6463
+          ],
+          "delta": [
+            841
+          ],
+          "rate_per_s": [
+            60.06910977078125
+          ],
+          "wraps": [
+            0
+          ],
+          "adjacent_deltas": {
+            "(60,)": 13,
+            "(61,)": 1
+          }
+        },
+        "jpeg_result_handshake": {
+          "bits": 16,
+          "first": [
+            5622
+          ],
+          "last": [
+            6462
+          ],
+          "delta": [
+            840
+          ],
+          "rate_per_s": [
+            59.99768395654726
+          ],
+          "wraps": [
+            0
+          ],
+          "adjacent_deltas": {
+            "(60,)": 14
+          }
+        },
+        "writer_ack_handshake": {
+          "bits": 16,
+          "first": [
+            5622
+          ],
+          "last": [
+            6462
+          ],
+          "delta": [
+            840
+          ],
+          "rate_per_s": [
+            59.99768395654726
+          ],
+          "wraps": [
+            0
+          ],
+          "adjacent_deltas": {
+            "(60,)": 14
+          }
+        },
+        "store_ready_claim": {
+          "bits": 16,
+          "first": [
+            5611
+          ],
+          "last": [
+            6451
+          ],
+          "delta": [
+            840
+          ],
+          "rate_per_s": [
+            59.99768395654726
+          ],
+          "wraps": [
+            0
+          ],
+          "adjacent_deltas": {
+            "(60,)": 14
+          }
+        },
+        "native_descriptor_accept": {
+          "bits": 16,
+          "first": [
+            5612
+          ],
+          "last": [
+            6452
+          ],
+          "delta": [
+            840
+          ],
+          "rate_per_s": [
+            59.99768395654726
+          ],
+          "wraps": [
+            0
+          ],
+          "adjacent_deltas": {
+            "(60,)": 14
+          }
+        },
+        "jpeg_retire_handshake": {
+          "bits": 16,
+          "first": [
+            5611
+          ],
+          "last": [
+            6451
+          ],
+          "delta": [
+            840
+          ],
+          "rate_per_s": [
+            59.99768395654726
+          ],
+          "wraps": [
+            0
+          ],
+          "adjacent_deltas": {
+            "(60,)": 14
+          }
+        }
+      },
+      "sticky_fault_values": {
+        "pixel": {
+          "14": 15
+        },
+        "dfi": {
+          "12": 15
+        },
+        "user": {
+          "0": 15
+        }
+      },
+      "level_true_sample_counts": {
+        "pixel": {
+          "pixel_reset_n": 15,
+          "config_initialized": 15,
+          "camera0_config_done": 15,
+          "camera0_phy_ready": 15,
+          "camera0_config_error": 0,
+          "camera1_config_done": 15,
+          "camera1_phy_ready": 15,
+          "frame_active": 11,
+          "jpeg_idle": 4,
+          "raw_processing_idle": 0,
+          "native_pipeline_idle": 0,
+          "camera1_config_error": 0
+        },
+        "dfi": {
+          "dfi_reset_n": 15,
+          "ddr_cal_done": 15,
+          "ddr_app_ready": 15,
+          "ddr_phy_reset_n": 15,
+          "bridge_fault": 0,
+          "store_recovery": 0,
+          "writer_ack_valid": 0,
+          "store_ready_valid": 0,
+          "credit_reserved": 4,
+          "hdr_writer_quiescent": 4,
+          "hdr_owner_empty": 0,
+          "hdr_scheduler_busy": 11
+        },
+        "user": {
+          "pcie_user_reset_n": 15,
+          "pcie_user_link_up": 15,
+          "config_initialized": 15,
+          "raw_pci_bme": 15,
+          "pcie_supervisor_ready": 15,
+          "product_buffer_armed": 15,
+          "phase_bit0": 15,
+          "phase_bit1": 0,
+          "phase_bit2": 0,
+          "transport_recovery": 0,
+          "memory_owner_ready": 15,
+          "reset_pending": 0
+        }
+      },
+      "DFI_tuple_field_order": [
+        "hdr_scheduler_busy",
+        "credit_reserved",
+        "hdr_owner_empty",
+        "hdr_writer_quiescent"
+      ],
+      "DFI_tuple_and_DJ_banks_same_sequence_only": {
+        "(0, 1, 0, 1)": {
+          "samples": 4,
+          "OB_USER_phase_nearby": {
+            "WAIT_RECORD": 4
+          },
+          "DJ_bank_combinations_same_sequence_only": {
+            "0000": 4
+          },
+          "DJ_bank_pairs_by_camera_same_sequence_only": [
+            {
+              "00": 4
+            },
+            {
+              "00": 4
+            }
+          ]
+        },
+        "(1, 0, 0, 0)": {
+          "samples": 11,
+          "OB_USER_phase_nearby": {
+            "WAIT_RECORD": 11
+          },
+          "DJ_bank_combinations_same_sequence_only": {
+            "0000": 11
+          },
+          "DJ_bank_pairs_by_camera_same_sequence_only": [
+            {
+              "00": 11
+            },
+            {
+              "00": 11
+            }
+          ]
+        }
+      },
+      "transport_phases": {
+        "WAIT_RECORD": 15
+      },
+      "DJ_and_OB_adjacent_deltas_order": [
+        "sum_jobs",
+        "frame_admission",
+        "jpeg_result_handshake",
+        "writer_ack_handshake",
+        "store_ready_claim",
+        "native_descriptor_accept",
+        "jpeg_retire_handshake"
+      ],
+      "DJ_and_OB_adjacent_deltas": {
+        "(60, 60, 60, 60, 60, 60, 60)": 13,
+        "(61, 61, 60, 60, 60, 60, 60)": 1
+      },
+      "DJ_read_end_minus_OB_read_end_ms": [
+        3.993194,
+        6.115609
+      ]
+    }
+  },
+  "seed12_published_windows": [
+    {
+      "epoch": 1,
+      "samples": 9,
+      "seconds": 7.999997967,
+      "sequences": [
+        369,
+        377
+      ],
+      "jobs": {
+        "bits": 16,
+        "first": [
+          915,
+          915
+        ],
+        "last": [
+          1115,
+          1118
+        ],
+        "delta": [
+          200,
+          203
+        ],
+        "rate_per_s": [
+          25.000006353126615,
+          25.375006448423516
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(23, 27)": 1,
+          "(25, 25)": 4,
+          "(25, 26)": 1,
+          "(26, 25)": 2
+        }
+      },
+      "begin_reject": {
+        "bits": 8,
+        "first": [
+          8,
+          10
+        ],
+        "last": [
+          92,
+          86
+        ],
+        "delta": [
+          84,
+          76
+        ],
+        "rate_per_s": [
+          10.50000266831318,
+          9.500002414188113
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(10, 10)": 7,
+          "(14, 6)": 1
+        }
+      },
+      "pair_expire": {
+        "bits": 8,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 8
+        }
+      },
+      "bad_finish": {
+        "bits": 8,
+        "first": [
+          1,
+          1
+        ],
+        "last": [
+          1,
+          1
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 8
+        }
+      },
+      "user_retire": {
+        "bits": 16,
+        "first": [
+          1827
+        ],
+        "last": [
+          2231
+        ],
+        "delta": [
+          404
+        ],
+        "rate_per_s": [
+          50.49978395561176
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 4,
+          "(51,)": 4
+        }
+      },
+      "OB_idle_samples": 1
+    },
+    {
+      "epoch": 3,
+      "samples": 4,
+      "seconds": 3.000102053,
+      "sequences": [
+        380,
+        383
+      ],
+      "jobs": {
+        "bits": 16,
+        "first": [
+          1179,
+          1182
+        ],
+        "last": [
+          1270,
+          1242
+        ],
+        "delta": [
+          91,
+          60
+        ],
+        "rate_per_s": [
+          30.3323014992117,
+          19.999319669809914
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(30, 20)": 2,
+          "(31, 20)": 1
+        }
+      },
+      "begin_reject": {
+        "bits": 8,
+        "first": [
+          94,
+          90
+        ],
+        "last": [
+          94,
+          150
+        ],
+        "delta": [
+          0,
+          60
+        ],
+        "rate_per_s": [
+          0.0,
+          19.999319669809914
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 20)": 3
+        }
+      },
+      "pair_expire": {
+        "bits": 8,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 3
+        }
+      },
+      "bad_finish": {
+        "bits": 8,
+        "first": [
+          4,
+          2
+        ],
+        "last": [
+          4,
+          2
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 3
+        }
+      },
+      "user_retire": {
+        "bits": 16,
+        "first": [
+          2358
+        ],
+        "last": [
+          2510
+        ],
+        "delta": [
+          152
+        ],
+        "rate_per_s": [
+          50.66002508671777
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 1,
+          "(51,)": 2
+        }
+      },
+      "OB_idle_samples": 2
+    },
+    {
+      "epoch": 8,
+      "samples": 8,
+      "seconds": 6.999571885,
+      "sequences": [
+        411,
+        418
+      ],
+      "jobs": {
+        "bits": 16,
+        "first": [
+          2078,
+          2041
+        ],
+        "last": [
+          2219,
+          2253
+        ],
+        "delta": [
+          141,
+          212
+        ],
+        "rate_per_s": [
+          20.144089140960368,
+          30.287566651656725
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(20, 30)": 4,
+          "(20, 31)": 2,
+          "(21, 30)": 1
+        }
+      },
+      "begin_reject": {
+        "bits": 8,
+        "first": [
+          98,
+          166
+        ],
+        "last": [
+          238,
+          166
+        ],
+        "delta": [
+          140,
+          0
+        ],
+        "rate_per_s": [
+          20.001223260528025,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(20, 0)": 7
+        }
+      },
+      "pair_expire": {
+        "bits": 8,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 7
+        }
+      },
+      "bad_finish": {
+        "bits": 8,
+        "first": [
+          9,
+          7
+        ],
+        "last": [
+          9,
+          7
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 7
+        }
+      },
+      "user_retire": {
+        "bits": 16,
+        "first": [
+          4115
+        ],
+        "last": [
+          4468
+        ],
+        "delta": [
+          353
+        ],
+        "rate_per_s": [
+          50.432010517050905
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 4,
+          "(51,)": 3
+        }
+      },
+      "OB_idle_samples": 2
+    },
+    {
+      "epoch": 19,
+      "samples": 8,
+      "seconds": 7.000928772,
+      "sequences": [
+        441,
+        448
+      ],
+      "jobs": {
+        "bits": 16,
+        "first": [
+          2859,
+          2892
+        ],
+        "last": [
+          3071,
+          3034
+        ],
+        "delta": [
+          212,
+          142
+        ],
+        "rate_per_s": [
+          30.281696458316716,
+          20.283023099438555
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(30, 20)": 3,
+          "(30, 21)": 2,
+          "(31, 20)": 2
+        }
+      },
+      "begin_reject": {
+        "bits": 8,
+        "first": [
+          250,
+          180
+        ],
+        "last": [
+          250,
+          66
+        ],
+        "delta": [
+          0,
+          142
+        ],
+        "rate_per_s": [
+          0.0,
+          20.283023099438555
+        ],
+        "wraps": [
+          0,
+          1
+        ],
+        "adjacent_deltas": {
+          "(0, 20)": 5,
+          "(0, 21)": 2
+        }
+      },
+      "pair_expire": {
+        "bits": 8,
+        "first": [
+          0,
+          0
+        ],
+        "last": [
+          0,
+          0
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 7
+        }
+      },
+      "bad_finish": {
+        "bits": 8,
+        "first": [
+          19,
+          18
+        ],
+        "last": [
+          19,
+          18
+        ],
+        "delta": [
+          0,
+          0
+        ],
+        "rate_per_s": [
+          0.0,
+          0.0
+        ],
+        "wraps": [
+          0,
+          0
+        ],
+        "adjacent_deltas": {
+          "(0, 0)": 7
+        }
+      },
+      "user_retire": {
+        "bits": 16,
+        "first": [
+          5742
+        ],
+        "last": [
+          6096
+        ],
+        "delta": [
+          354
+        ],
+        "rate_per_s": [
+          50.579444625807554
+        ],
+        "wraps": [
+          0
+        ],
+        "adjacent_deltas": {
+          "(50,)": 3,
+          "(51,)": 4
+        }
+      },
+      "OB_idle_samples": 1
+    }
+  ],
+  "RK": {
+    "samples": 9,
+    "first_ns": 1228098206226,
+    "last_ns": 1388098295702,
+    "seconds": 160.000089476,
+    "counters": {
+      "received": {
+        "first": [
+          13229,
+          10693
+        ],
+        "last": [
+          18073,
+          13921
+        ],
+        "delta": [
+          4844,
+          3228
+        ],
+        "rate_per_s": [
+          30.274983069472594,
+          20.174988717641934
+        ]
+      },
+      "submitted": {
+        "first": [
+          13228,
+          10692
+        ],
+        "last": [
+          18070,
+          13921
+        ],
+        "delta": [
+          4842,
+          3229
+        ],
+        "rate_per_s": [
+          30.262483076462903,
+          20.18123871414678
+        ]
+      },
+      "dropped": {
+        "first": [
+          1,
+          0
+        ],
+        "last": [
+          2,
+          0
+        ],
+        "delta": [
+          1,
+          0
+        ],
+        "rate_per_s": [
+          0.006249996504845705,
+          0.0
+        ]
+      },
+      "registered": {
+        "first": [
+          13228,
+          10692
+        ],
+        "last": [
+          18070,
+          13921
+        ],
+        "delta": [
+          4842,
+          3229
+        ],
+        "rate_per_s": [
+          30.262483076462903,
+          20.18123871414678
+        ]
+      },
+      "decoded": {
+        "first": [
+          13228,
+          10692
+        ],
+        "last": [
+          18070,
+          13921
+        ],
+        "delta": [
+          4842,
+          3229
+        ],
+        "rate_per_s": [
+          30.262483076462903,
+          20.18123871414678
+        ]
+      },
+      "visible_new_SOURCE": {
+        "first": [
+          12210,
+          8640
+        ],
+        "last": [
+          17003,
+          11869
+        ],
+        "delta": [
+          4793,
+          3229
+        ],
+        "rate_per_s": [
+          29.95623324772546,
+          20.18123871414678
+        ]
+      },
+      "complete_host_products": {
+        "first": [
+          13229,
+          10693
+        ],
+        "last": [
+          18073,
+          13921
+        ],
+        "delta": [
+          4844,
+          3228
+        ],
+        "rate_per_s": [
+          30.274983069472594,
+          20.174988717641934
+        ]
+      }
+    },
+    "endpoints_latest_complete_SOURCE": [
+      [
+        8199,
+        8198
+      ],
+      [
+        13043,
+        13040
+      ]
+    ],
+    "backlogs": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "process_CPU_one_core_percent": 328.41856634012726,
+    "max_thread_CPU_one_core_percent": 31.54998235646112,
+    "owner_CPU_one_core_percent": 14.156242083475522,
+    "owner_scheduler_wait_percent": 0.9265982980730667,
+    "system_busy_excluding_iowait_percent": {
+      "cpu": 42.498980676830584,
+      "cpu0": 53.69766698625759,
+      "cpu1": 52.531927060169004,
+      "cpu2": 51.496361910787726,
+      "cpu3": 50.90564846954875,
+      "cpu4": 31.312805977840764,
+      "cpu5": 32.19032941629744,
+      "cpu6": 32.80020637172707,
+      "cpu7": 34.46847080150201
+    },
+    "recording": {
+      "status": {
+        "RECORDING": 9
+      },
+      "errors": {
+        "None": 9
+      },
+      "native_errors": {
+        "0": 9
+      },
+      "native_queued": {
+        "0": 9
+      },
+      "closed": [
+        143,
+        193
+      ],
+      "native_common_fps": 29.96248324423031,
+      "retention_error": {
+        "ordinary bounded single-link retention file required": 9
+      }
+    },
+    "owner_events": {
+      "COLD_SELECTION_ACK": 1,
+      "START_CALL": 1,
+      "START_RETURN": 1,
+      "MODE_REQUEST": 37,
+      "MODE_APPLIED": 37,
+      "MODE_VIDEO_CONFIRMED": 37,
+      "LAYOUT_REQUEST": 2
+    },
+    "HDR_confirmed_epochs": [
+      5,
+      13,
+      15,
+      17,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37
+    ],
+    "raw_preview_epoch37": {
+      "rows": 429,
+      "seconds": 429.276553948,
+      "counters": {
+        "registered": {
+          "delta": [
+            13009,
+            8673
+          ],
+          "rate_per_s": [
+            30.3044736088145,
+            20.203758906084108
+          ]
+        },
+        "decoded": {
+          "delta": [
+            13009,
+            8673
+          ],
+          "rate_per_s": [
+            30.3044736088145,
+            20.203758906084108
+          ]
+        },
+        "visible_new_SOURCE": {
+          "delta": [
+            12877,
+            8674
+          ],
+          "rate_per_s": [
+            29.996979526535807,
+            20.20608840670743
+          ]
+        }
+      },
+      "host_ns": [
+        957973285286,
+        1387249839234
+      ]
+    },
+    "raw_preview_SDR_epoch22": {
+      "rows": 7,
+      "seconds": 6.018282549,
+      "counters": {
+        "registered": {
+          "delta": [
+            181,
+            181
+          ],
+          "rate_per_s": [
+            30.075025312674132,
+            30.075025312674132
+          ]
+        },
+        "decoded": {
+          "delta": [
+            181,
+            181
+          ],
+          "rate_per_s": [
+            30.075025312674132,
+            30.075025312674132
+          ]
+        },
+        "visible_new_SOURCE": {
+          "delta": [
+            181,
+            180
+          ],
+          "rate_per_s": [
+            30.075025312674132,
+            29.908864951830626
+          ]
+        }
+      },
+      "host_ns": [
+        875754642810,
+        881772925359
+      ]
+    }
+  },
+  "RK_FPGA_nearby_SOURCE_window": {
+    "epoch": 37,
+    "session": 1,
+    "RK_SOURCE_endpoints": [
+      [
+        8199,
+        8198
+      ],
+      [
+        13043,
+        13040
+      ]
+    ],
+    "DJ_SOURCE_endpoints": [
+      [
+        8201,
+        8198
+      ],
+      [
+        13050,
+        13048
+      ]
+    ],
+    "DJ_report_sequences": [
+      1107,
+      1267
+    ],
+    "DJ_seconds": 160.001717849,
+    "RK_seconds": 160.000089476,
+    "DJ_jobs": {
+      "bits": 16,
+      "first": [
+        13237,
+        10705
+      ],
+      "last": [
+        18086,
+        13938
+      ],
+      "delta": [
+        4849,
+        3233
+      ],
+      "rate_per_s": [
+        30.305924618735624,
+        20.206033056789497
+      ],
+      "wraps": [
+        0,
+        0
+      ],
+      "adjacent_deltas": {
+        "(30, 20)": 78,
+        "(30, 21)": 33,
+        "(31, 20)": 49
+      }
+    },
+    "RK_complete_products": {
+      "first": [
+        13229,
+        10693
+      ],
+      "last": [
+        18073,
+        13921
+      ],
+      "delta": [
+        4844,
+        3228
+      ],
+      "rate_per_s": [
+        30.274983069472594,
+        20.174988717641934
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "state": "READY_FOR_BOARD_DEBUG",
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "seed": 25,
+  "bit": "HASH_VERIFIED",
+  "timing": "PASS_CURRENT_EFFECTIVE_CONSTRAINTS",
+  "checks_ns": {
+    "hold": 0.007,
+    "recovery": 2.838,
+    "removal": 0.002,
+    "setup": 0.001
+  },
+  "summary_hw_ns": 0.002,
+  "local_missing": [],
+  "board": "NOT_RUN",
+  "manual_receipt": "server_evidence/MANUAL_RECEIPT.json"
+}

@@ -1,0 +1,373 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 21:26:30 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 83.03%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     2.300ns
+Fmax           :     434.783MHz
+
+Statistics:
+Max            : SWNS      5.700ns, STNS      0.000ns,         0 Viol Endpoints,         6 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 5.700ns
+Begin Point         : u_original/u_pixel_reset/release_pipe_reg[2].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/stale_raw_source_count_reg[22].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.241ns (cell 0.733ns (32%), net 1.508ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT4=2 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/release_pipe_reg[2].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_original/u_pixel_reset/release_pipe_reg[2].q
+net (fo=5)                              0.304          0.455          net: u_original/pixel_data_reset_n,  ../../private_raw_isp_borrow4.v(50)
+                                                                      pin: u_original/mux19_syn_73.e
+LUT6                                    0.141    r     0.596       1  pin: u_original/mux19_syn_73.o
+net (fo=12)                             0.337          0.933          net: u_original/mux19_syn_74,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_75.c
+LUT6                                    0.141    r     1.074       2  pin: u_original/mux19_syn_75.o
+net (fo=2)                              0.201          1.275          net: u_original/mux19_syn_76,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_111.a
+LUT4                                    0.150    f     1.425       3  pin: u_original/mux19_syn_111.o
+net (fo=4)                              0.254          1.679          net: u_original/mux19_syn_112,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_128.a
+LUT4                                    0.150    f     1.829       4  pin: u_original/mux19_syn_128.o
+net (fo=32)                             0.412          2.241          net: u_original/mux19_syn_2[31],  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/stale_raw_source_count_reg[22].ce
+SEQ (reg)                               0.000    f     2.241               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.241               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/stale_raw_source_count_reg[22].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.700               
+
+Slack               : 5.700ns
+Begin Point         : u_original/u_pixel_reset/release_pipe_reg[2].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/stale_raw_source_count_reg[23].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.241ns (cell 0.733ns (32%), net 1.508ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT4=2 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/release_pipe_reg[2].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_original/u_pixel_reset/release_pipe_reg[2].q
+net (fo=5)                              0.304          0.455          net: u_original/pixel_data_reset_n,  ../../private_raw_isp_borrow4.v(50)
+                                                                      pin: u_original/mux19_syn_73.e
+LUT6                                    0.141    r     0.596       1  pin: u_original/mux19_syn_73.o
+net (fo=12)                             0.337          0.933          net: u_original/mux19_syn_74,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_75.c
+LUT6                                    0.141    r     1.074       2  pin: u_original/mux19_syn_75.o
+net (fo=2)                              0.201          1.275          net: u_original/mux19_syn_76,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_111.a
+LUT4                                    0.150    f     1.425       3  pin: u_original/mux19_syn_111.o
+net (fo=4)                              0.254          1.679          net: u_original/mux19_syn_112,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_128.a
+LUT4                                    0.150    f     1.829       4  pin: u_original/mux19_syn_128.o
+net (fo=32)                             0.412          2.241          net: u_original/mux19_syn_2[31],  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/stale_raw_source_count_reg[23].ce
+SEQ (reg)                               0.000    f     2.241               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.241               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/stale_raw_source_count_reg[23].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.700               
+
+Slack               : 5.700ns
+Begin Point         : u_original/u_pixel_reset/release_pipe_reg[2].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/stale_raw_source_count_reg[24].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.241ns (cell 0.733ns (32%), net 1.508ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT4=2 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/release_pipe_reg[2].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_original/u_pixel_reset/release_pipe_reg[2].q
+net (fo=5)                              0.304          0.455          net: u_original/pixel_data_reset_n,  ../../private_raw_isp_borrow4.v(50)
+                                                                      pin: u_original/mux19_syn_73.e
+LUT6                                    0.141    r     0.596       1  pin: u_original/mux19_syn_73.o
+net (fo=12)                             0.337          0.933          net: u_original/mux19_syn_74,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_75.c
+LUT6                                    0.141    r     1.074       2  pin: u_original/mux19_syn_75.o
+net (fo=2)                              0.201          1.275          net: u_original/mux19_syn_76,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_111.a
+LUT4                                    0.150    f     1.425       3  pin: u_original/mux19_syn_111.o
+net (fo=4)                              0.254          1.679          net: u_original/mux19_syn_112,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_128.a
+LUT4                                    0.150    f     1.829       4  pin: u_original/mux19_syn_128.o
+net (fo=32)                             0.412          2.241          net: u_original/mux19_syn_2[31],  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/stale_raw_source_count_reg[24].ce
+SEQ (reg)                               0.000    f     2.241               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.241               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/stale_raw_source_count_reg[24].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.700               
+
+Slack               : 5.700ns
+Begin Point         : u_original/u_pixel_reset/release_pipe_reg[2].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/stale_raw_source_count_reg[25].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.241ns (cell 0.733ns (32%), net 1.508ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT4=2 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/release_pipe_reg[2].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_original/u_pixel_reset/release_pipe_reg[2].q
+net (fo=5)                              0.304          0.455          net: u_original/pixel_data_reset_n,  ../../private_raw_isp_borrow4.v(50)
+                                                                      pin: u_original/mux19_syn_73.e
+LUT6                                    0.141    r     0.596       1  pin: u_original/mux19_syn_73.o
+net (fo=12)                             0.337          0.933          net: u_original/mux19_syn_74,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_75.c
+LUT6                                    0.141    r     1.074       2  pin: u_original/mux19_syn_75.o
+net (fo=2)                              0.201          1.275          net: u_original/mux19_syn_76,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_111.a
+LUT4                                    0.150    f     1.425       3  pin: u_original/mux19_syn_111.o
+net (fo=4)                              0.254          1.679          net: u_original/mux19_syn_112,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_128.a
+LUT4                                    0.150    f     1.829       4  pin: u_original/mux19_syn_128.o
+net (fo=32)                             0.412          2.241          net: u_original/mux19_syn_2[31],  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/stale_raw_source_count_reg[25].ce
+SEQ (reg)                               0.000    f     2.241               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.241               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/stale_raw_source_count_reg[25].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.700               
+
+Slack               : 5.700ns
+Begin Point         : u_original/u_pixel_reset/release_pipe_reg[2].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/stale_raw_source_count_reg[26].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.241ns (cell 0.733ns (32%), net 1.508ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT4=2 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/release_pipe_reg[2].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_original/u_pixel_reset/release_pipe_reg[2].q
+net (fo=5)                              0.304          0.455          net: u_original/pixel_data_reset_n,  ../../private_raw_isp_borrow4.v(50)
+                                                                      pin: u_original/mux19_syn_73.e
+LUT6                                    0.141    r     0.596       1  pin: u_original/mux19_syn_73.o
+net (fo=12)                             0.337          0.933          net: u_original/mux19_syn_74,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_75.c
+LUT6                                    0.141    r     1.074       2  pin: u_original/mux19_syn_75.o
+net (fo=2)                              0.201          1.275          net: u_original/mux19_syn_76,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_111.a
+LUT4                                    0.150    f     1.425       3  pin: u_original/mux19_syn_111.o
+net (fo=4)                              0.254          1.679          net: u_original/mux19_syn_112,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_128.a
+LUT4                                    0.150    f     1.829       4  pin: u_original/mux19_syn_128.o
+net (fo=32)                             0.412          2.241          net: u_original/mux19_syn_2[31],  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/stale_raw_source_count_reg[26].ce
+SEQ (reg)                               0.000    f     2.241               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.241               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/stale_raw_source_count_reg[26].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.700               
+
+Slack               : 5.700ns
+Begin Point         : u_original/u_pixel_reset/release_pipe_reg[2].clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_original/stale_raw_source_count_reg[27].ce (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.241ns (cell 0.733ns (32%), net 1.508ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 4 ( LUT6=2  LUT4=2 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/release_pipe_reg[2].clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_original/u_pixel_reset/release_pipe_reg[2].q
+net (fo=5)                              0.304          0.455          net: u_original/pixel_data_reset_n,  ../../private_raw_isp_borrow4.v(50)
+                                                                      pin: u_original/mux19_syn_73.e
+LUT6                                    0.141    r     0.596       1  pin: u_original/mux19_syn_73.o
+net (fo=12)                             0.337          0.933          net: u_original/mux19_syn_74,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_75.c
+LUT6                                    0.141    r     1.074       2  pin: u_original/mux19_syn_75.o
+net (fo=2)                              0.201          1.275          net: u_original/mux19_syn_76,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_111.a
+LUT4                                    0.150    f     1.425       3  pin: u_original/mux19_syn_111.o
+net (fo=4)                              0.254          1.679          net: u_original/mux19_syn_112,  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/mux19_syn_128.a
+LUT4                                    0.150    f     1.829       4  pin: u_original/mux19_syn_128.o
+net (fo=32)                             0.412          2.241          net: u_original/mux19_syn_2[31],  ../../private_raw_isp_borrow4.v(240)
+                                                                      pin: u_original/stale_raw_source_count_reg[27].ce
+SEQ (reg)                               0.000    f     2.241               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.241               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/stale_raw_source_count_reg[27].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.059          7.941               
+clock uncertainty                       0.000          7.941               
+clock pessimism                         0.000          7.941               
+--------------------------------------------------------------------  ---------------
+Required                                               7.941               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.700               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,59 @@
+{
+  "target": "entropy_area",
+  "variant": "baseline",
+  "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "runner_sha256": "4a60a5797edda11bdfa098a02e0010156b85a7ac5ad0cc053e884b0fc34a8334",
+  "native_runner_sha256": "6c0b2f2a3166a25655925a85ea38727bb187f0d873984810c433d259597b5056",
+  "functional_simulation": "NOT_RUN",
+  "whole_design_synthesis": "NOT_RUN",
+  "place_route": "NOT_RUN",
+  "physical_sta": "NOT_RUN",
+  "bitgen": "NOT_RUN",
+  "board": "NOT_RUN",
+  "ready_return_logic_sha256": {
+    "rtl/jpeg_encoder_top.v": "c91e6ac4c9b671c309c3d4a2ff18ec7beb36bcb808dd438c88a1ce3117471c8f",
+    "rtl/jpeg_file_formatter.v": "8203758e4a4bd1e5adaa5eb44383c0b5d6a2012bae919ba719af9d865acba518"
+  },
+  "command": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "<PROJECT_ROOT>\\tools\\run_td.py",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_20261110\\ready_syn16_a1\\baseline\\synth.tcl",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--workdir",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_20261110\\ready_syn16_a1\\baseline",
+    "--log",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_20261110\\ready_syn16_a1\\baseline\\td.log"
+  ],
+  "wall_budget_seconds": 170,
+  "input_sha256": {
+    "clock.sdc": "80fedffe95fea368fd783155fddfda37b222e3299dd3def420ef3ff0cf52005c",
+    "ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.ipc": "efad90302a5408eee4ae7c04cb065a9ee1062c536e8f492087da42d24a71b67f",
+    "ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.v": "7b2edfe2c8e173d717938d26e607c66c5923d426120a171021b8ccb68d315b83",
+    "ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.vhd": "dba7d7096b76cb62a749fc1bb3ba26f7cc1c5595748433aca7e2b4d9b00b2666",
+    "ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.ipc": "b623b27e43fd1a28249176a6a37ca4374aee2dcb3f89f918906d74e131488605",
+    "ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.v": "00e43d82c4c9463b35f9fed388ae217a79a7852c944ceaae2fcf26ea224b8a8c",
+    "ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.vhd": "cc3bdccb6fbb40659b24171b71557e5ba7d23172d9a56aa061a513a8ea501374",
+    "jpeg_entropy.v": "baf534007844b006331b0f0095079fbcc1a698ad74ef6003454010c5592c9663",
+    "report_paths.tcl": "ddfac13ecc6ce6ffbed86b537c90b01081d8a40d56325f9fa134ef2ba00ebbc4",
+    "rtl/include/02_jpeg/jpeg_huff_rom.vh": "7424bd2c51a157c2c3284ca002ca440a43a3d4ec53488cc89e6950c1de18ed9e",
+    "rtl/include/02_jpeg/jpeg_quant_config.vh": "d744f97553975ee94e07c89bf9e0cc97c42e01c48ed628ca1606a4bd57b9d81e",
+    "rtl/jpeg/quant_data/ac_huffman.mif": "12170efd204fb4ff49c1d3e3eb4ab8ff1cf7d2f235bc1a752cf570860fd74cab",
+    "rtl/jpeg_huff_ac_rom.v": "ea735ee8f2db354a779481a986d9c76c28af14fb98bf7f9808d15ab5f2d6b0fe",
+    "rtl/jpeg_quant_rom20x1024.v": "9f609ac5f75159c569f75ef99b3ad5aab506e9ad2cbb552845dc78aa1deb9050",
+    "rtl/td_sdp_ram.v": "148e07e6877ead65fd169157bba1fbef8e0436bb87742895bab4c69bdc543b16",
+    "sources.lst": "8dc93d662443b4c36d70e5a485acaf0a12a8e59377aa2d691ea99c23a41c19b6",
+    "synth.tcl": "34a50c06342bbe0db79e28d3a0bd0c07b70d681e77c79a2c550e325257d163df",
+    "uhd_probe.v": "f75ea4f45c989983a0bad5fe5d67427e89a9efffabc17111e39bc9731561e322"
+  },
+  "status": "TIMEOUT",
+  "returncode": 1,
+  "elapsed_seconds": 170.625,
+  "artifact_sha256": {
+    "uhd_probe.al": "f6001f4adcebabd159b9a0471286b9304fb40f834df53c52c264d4d95bb48d78",
+    "uhd_probe_Runs/syn_1/run.log": "d7b54bad06ad8eba752fed5eee08a5168c39b591a09f64271607d8500f95db75",
+    "td.log": "92628800565b00cab7526565a0792dc728ca91ef899cd0832d790f34bfde0c96",
+    "launcher.log": "b94b9fcb02fd62bbe9a4f46a62a891e305098f9acc67160c8998a03d5e4966be"
+  }
+}

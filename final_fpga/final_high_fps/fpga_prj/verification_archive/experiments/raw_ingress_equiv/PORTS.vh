@@ -1,0 +1,55 @@
+`timescale 1ns / 1ps
+
+// Passively capture accepted native RAW10 groups into ordered frame tokens.
+module shared_raw10_frame_ingress #(
+    parameter integer WIDTH = 1920,
+    parameter integer HEIGHT = 1080,
+    parameter integer CONTEXT_ENABLE = 0,
+    parameter integer EXTERNAL_SEQUENCE_ENABLE = 0,
+    parameter integer PAIR_METADATA_ENABLE = 0,
+    parameter integer SOURCE_TERMINAL_ENABLE = 0, FIXED_HDR_ROLE=0, COMPACT_CAPTURE_HEADER=0,
+    parameter integer UHD_WIDTH=0, UHD_HEIGHT=0
+) (
+    input  wire         i_clk,
+    input  wire         i_rst_n,
+    input  wire         i_enable,
+    input  wire [39:0]  i_data,
+    input  wire         i_valid,
+    input  wire         i_accept,
+    input  wire         i_sof,
+    input  wire         i_eol,
+    input  wire         i_abort,
+    input  wire         i_camera,
+    input  wire [31:0]  i_epoch,
+    input  wire [31:0]  i_external_sequence, i_session_id,
+    input wire i_sdr_profile,i_bayer_valid,i_time_valid,
+    input wire [1:0] i_bayer_pattern,
+    input  wire         i_metadata_valid,
+    input  wire [63:0]  i_timestamp,
+    input  wire [31:0]  i_actual_exposure,
+    input  wire [31:0]  i_gain,
+    input  wire [31:0]  i_calibration_id,
+    input  wire         i_source_kind,
+    input  wire [1:0]   i_exposure_role,
+    input  wire [31:0]  i_exposure_group,
+    input  wire         i_source_qualified,
+    // Same-domain terminal from a true sensor-frame owner, not geometric EOF.
+    input  wire         i_source_valid,
+    output wire         o_source_ready,
+    input  wire [31:0]  i_source_session, i_source_epoch, i_source_sequence,
+    input  wire         i_source_camera, i_source_ok,
+    input  wire [7:0]   i_source_error,
+    output wire [31:0]  o_source_stale_count,
+    output wire [127:0] o_axis_tdata,
+    output wire [15:0]  o_axis_tkeep,
+    output wire         o_axis_tvalid,
+    input  wire         i_axis_tready,
+    output wire         o_axis_tlast,
+    output wire [1:0]   o_axis_tuser,
+    output wire         o_capture_idle,
+    output wire         o_frame_accept,
+    output wire [31:0]  o_drop_count,
+    output wire [31:0]  o_error_count,
+    input  wire         i_uhd
+);
+endmodule

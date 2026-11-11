@@ -1,0 +1,20 @@
+{
+  "build": "candidate",
+  "scenario": "liveness",
+  "status": "PASS",
+  "simulator_exit": 0,
+  "elapsed_ms": 6323,
+  "markers": [
+    "# CFG_EVIDENCE BOOT session=00000001 epoch=0 quality=75 time=2485000",
+    "# CFG_EVIDENCE READY_AND_REMOTE seq=00000101 old_epoch=0 new_epoch=1 quality=78 schema_word=00002002 time=9469000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000341 pipeline_idle=1 source_fault=0 time=10186000",
+    "# CFG_EVIDENCE APPLIED seq=00000101 epoch=1 first_cam0_seq=00000341 quality=78 schema_word=00002002 time=12685000",
+    "# CFG_EVIDENCE READY_AND_REMOTE seq=00000102 old_epoch=1 new_epoch=2 quality=80 schema_word=00000802 time=19669000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000480 pipeline_idle=0 source_fault=0 time=20386000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000481 pipeline_idle=0 source_fault=0 time=20546000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000482 pipeline_idle=0 source_fault=0 time=20706000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000483 pipeline_idle=0 source_fault=0 time=20866000",
+    "# CFG_EVIDENCE APPLIED seq=00000102 epoch=2 first_cam0_seq=00000480 quality=80 schema_word=00000802 time=22885000",
+    "# CFG_EVIDENCE PASS case=liveness final_epoch=2 time=22885000"
+  ]
+}

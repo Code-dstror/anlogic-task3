@@ -1,0 +1,6 @@
+interface:
+  display_name: "Anlogic TD FPGA"
+  short_description: "Drive native TD 2026.2 builds and checkpoint reuse"
+  default_prompt: "Use $anlogic-td-fpga to run or diagnose this Anlogic TD FPGA workflow with evidence-backed results."
+policy:
+  allow_implicit_invocation: true

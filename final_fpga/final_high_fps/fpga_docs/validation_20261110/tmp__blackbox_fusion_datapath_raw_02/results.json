@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "status": "PASS",
+    "markers": [
+      "RAW_PROFILE_PASS profile=1 good=2 aborted=1 stall=0 tail_stall=0",
+      "RAW_PROFILE_PASS profile=2 good=2 aborted=1 stall=0 tail_stall=0",
+      "RAW_PROFILE_PASS profile=3 good=2 aborted=0 stall=6 tail_stall=6",
+      "RAW_PROFILE_PASS profile=0 good=9 aborted=5 stall=54 tail_stall=22",
+      "RAW_INGRESS_PASS profiles=4"
+    ]
+  },
+  "candidate": {
+    "status": "PASS",
+    "markers": [
+      "RAW_PROFILE_PASS profile=1 good=2 aborted=1 stall=0 tail_stall=0",
+      "RAW_PROFILE_PASS profile=2 good=2 aborted=1 stall=0 tail_stall=0",
+      "RAW_PROFILE_PASS profile=3 good=2 aborted=0 stall=6 tail_stall=6",
+      "RAW_PROFILE_PASS profile=0 good=9 aborted=5 stall=54 tail_stall=22",
+      "RAW_INGRESS_PASS profiles=4"
+    ]
+  },
+  "equivalence": {
+    "status": "PASS",
+    "differences": []
+  },
+  "input_identity": {
+    "status": "PASS"
+  }
+}

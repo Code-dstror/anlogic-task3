@@ -1,0 +1,16 @@
+# Include the delivered artifacts even when root rules ignore generated suffixes.
+!fpga_src/
+!fpga_src/**/
+!fpga_src/**
+!fpga_docs/
+!fpga_docs/**/
+!fpga_docs/**
+!fpga_prj/
+!fpga_prj/**/
+!fpga_prj/**
+/fpga_prj/al/*_Runs/
+/fpga_prj/al/td_*.log*
+/fpga_prj/tmp/
+__pycache__/
+*.pyc
+*.wlf

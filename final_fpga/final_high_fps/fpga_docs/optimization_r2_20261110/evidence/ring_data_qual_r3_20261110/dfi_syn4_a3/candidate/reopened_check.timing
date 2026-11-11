@@ -1,0 +1,231 @@
+Table of Contents
+-----------------
+1. checking no clock(0) (HIGH)
+2. checking clock definition(0) (HIGH)
+3. checking dummy node(2) (HIGH)
+4. checking invalid constraint(0) (HIGH)
+5. checking pll clock constraints(0) (HIGH)
+6. checking combinational loops(0) (HIGH)
+7. checking soft fifo timing exception constraints(0) (HIGH)
+8. checking no path constraints(0) (MEDIUM)
+9. checking shadowed/ignored timing exception constraints(0) (MEDIUM)
+10. checking no input delay(80) (MEDIUM)
+11. checking no output delay(36) (MEDIUM)
+12. checking partial input delay(0) (MEDIUM)
+13. checking partial output delay(0) (MEDIUM)
+14. checking abnormal input delay(0) (MEDIUM)
+
+
+1. checking nets with no clock driven. (HIGH)
+---------------------------------------------
+2. checking clock definition problems. (HIGH)
+---------------------------------------------
+2.1 There are 0 leaf clock pins driven by multiple clocks. (HIGH)
+
+
+2.2 There are 0 clocks created on internal clock network. (HIGH)
+
+
+2.3 There are 0 unexpandable clock sets. (HIGH)
+
+
+2.4 There are 0 local clocks. (HIGH)
+
+
+2.5 There are 0 generated clocks that are not connected to their master clocks. (HIGH)
+
+
+3. checking dummy nodes. (HIGH)
+---------------------------------------------
+There are 2 nodes are dangling. (HIGH)
+
+DummyNode in Model: AL_MAP_LUT1
+	_al_n1_syn_286.o
+
+DummyNode in Model: PH1_PHY_ERAM
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_136.orstb
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_13.orsta
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_13.orstb
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_54.orsta
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_54.orstb
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_95.orsta
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_95.orstb
+	u_fifo_fence/fifo/u_pcie_axis_async_fifo/soft_fifo_Inst/soft_fifo_core_inst/al_soft_fifo_ktZv2ExW/al_soft_fifo_S8GQVwdk/camera_packet_fifo_147x512_al_soft_fifo_CMEB9ZlH_syn_136.orsta
+
+4. checking invalid constraints. (HIGH)
+---------------------------------------------
+There are 0 invalid constraints. (HIGH)
+
+
+5. checking PLL clocks. (HIGH)
+---------------------------------------------
+6. checking combinational loops. (HIGH)
+---------------------------------------------
+There are 0 combinational loops. (HIGH)
+
+
+7. checking soft fifo set_max_delay constraints. (HIGH)
+---------------------------------------------
+There are 0 max-delay datapath-only paths that are part of the provided async clock paths, whereas the timing between other registers is not relaxed or ignored. (HIGH)
+
+
+8. checking no path constraints. (MEDIUM)
+---------------------------------------------
+There are 0 constraints that have no timing paths. (MEDIUM)
+
+
+9. checking path exception constraints shadowed/ignored by other constraints. (MEDIUM)
+---------------------------------------------
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+10. checking no input delay (MEDIUM)
+--------------------------
+There are 80 input ports that with no input delay specified. (MEDIUM)
+
+	cold_rst_n
+	observe_word[4]
+	observe_word[3]
+	observe_word[2]
+	observe_word[1]
+	observe_word[0]
+	pixel_stimulus_word[31]
+	pixel_stimulus_word[30]
+	pixel_stimulus_word[29]
+	pixel_stimulus_word[28]
+	pixel_stimulus_word[27]
+	pixel_stimulus_word[26]
+	pixel_stimulus_word[25]
+	pixel_stimulus_word[24]
+	pixel_stimulus_word[23]
+	pixel_stimulus_word[22]
+	pixel_stimulus_word[21]
+	pixel_stimulus_word[20]
+	pixel_stimulus_word[19]
+	pixel_stimulus_word[18]
+	pixel_stimulus_word[17]
+	pixel_stimulus_word[16]
+	pixel_stimulus_word[15]
+	pixel_stimulus_word[14]
+	pixel_stimulus_word[13]
+	pixel_stimulus_word[12]
+	pixel_stimulus_word[11]
+	pixel_stimulus_word[10]
+	pixel_stimulus_word[9]
+	pixel_stimulus_word[8]
+	pixel_stimulus_word[7]
+	pixel_stimulus_word[6]
+	pixel_stimulus_word[5]
+	pixel_stimulus_word[4]
+	pixel_stimulus_word[3]
+	pixel_stimulus_word[2]
+	pixel_stimulus_word[1]
+	pixel_stimulus_word[0]
+	pixel_word_index[2]
+	pixel_word_index[1]
+	pixel_word_index[0]
+	pixel_write_word
+	stimulus_word[31]
+	stimulus_word[30]
+	stimulus_word[29]
+	stimulus_word[28]
+	stimulus_word[27]
+	stimulus_word[26]
+	stimulus_word[25]
+	stimulus_word[24]
+	stimulus_word[23]
+	stimulus_word[22]
+	stimulus_word[21]
+	stimulus_word[20]
+	stimulus_word[19]
+	stimulus_word[18]
+	stimulus_word[17]
+	stimulus_word[16]
+	stimulus_word[15]
+	stimulus_word[14]
+	stimulus_word[13]
+	stimulus_word[12]
+	stimulus_word[11]
+	stimulus_word[10]
+	stimulus_word[9]
+	stimulus_word[8]
+	stimulus_word[7]
+	stimulus_word[6]
+	stimulus_word[5]
+	stimulus_word[4]
+	stimulus_word[3]
+	stimulus_word[2]
+	stimulus_word[1]
+	stimulus_word[0]
+	word_index[4]
+	word_index[3]
+	word_index[2]
+	word_index[1]
+	word_index[0]
+	write_word
+
+11. checking no output delay (MEDIUM)
+--------------------------
+There are 36 output ports that with no output delay specified. (MEDIUM)
+
+	feedback[3]
+	feedback[2]
+	feedback[1]
+	feedback[0]
+	observe[31]
+	observe[30]
+	observe[29]
+	observe[28]
+	observe[27]
+	observe[26]
+	observe[25]
+	observe[24]
+	observe[23]
+	observe[22]
+	observe[21]
+	observe[20]
+	observe[19]
+	observe[18]
+	observe[17]
+	observe[16]
+	observe[15]
+	observe[14]
+	observe[13]
+	observe[12]
+	observe[11]
+	observe[10]
+	observe[9]
+	observe[8]
+	observe[7]
+	observe[6]
+	observe[5]
+	observe[4]
+	observe[3]
+	observe[2]
+	observe[1]
+	observe[0]
+
+12. checking partial input delay (MEDIUM)
+--------------------------
+There are 0 input ports with partial input delay specified. (MEDIUM)
+
+
+13. checking partial output delay (MEDIUM)
+--------------------------
+There are 0 output ports with partial output delay specified. (MEDIUM)
+
+
+14. checking abnormal set_input_delay constraints. (MEDIUM)
+---------------------------------------------
+There are 0 abnormal set_input_delay constraints. (MEDIUM)
+
+

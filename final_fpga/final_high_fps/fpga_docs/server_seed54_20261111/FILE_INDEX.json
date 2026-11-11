@@ -1,0 +1,270 @@
+{
+  "results_commit": "425edaaaf327235a64349c7149b568bb3de651f4",
+  "files": [
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1.al",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1.al.source.txt",
+      "bytes": 99261,
+      "sha256": "6117180cba4374b2e3f4a8dd15c71623f3bceaa16be299b25d81b308e3431466",
+      "original_sha256": "fd7864e71845c37472224ca5127bbcaf115eb867f9ccd82ea4f4214553806a9c",
+      "original_bytes": 99355
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/place.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/place.params",
+      "bytes": 823,
+      "sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_bytes": 823
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/rfcamera_fusion_r1.bit",
+      "path": "fpga_prj/bit/camera_fusion_r1_43dbc3f1_seed54.bit",
+      "bytes": 4850315,
+      "sha256": "9dbee9e9aab5b9fc8052639e46745fa59568a0e8d0d2ca5177b8e17ebb897508",
+      "original_sha256": "9dbee9e9aab5b9fc8052639e46745fa59568a0e8d0d2ca5177b8e17ebb897508",
+      "original_bytes": 4850315
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/rfcamera_fusion_r1.prj",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/rfcamera_fusion_r1.prj",
+      "bytes": 99256,
+      "sha256": "fd3f7c19a83df52413c809038b9f42c79f9d7209797c2f472c196679350890a9",
+      "original_sha256": "fd3f7c19a83df52413c809038b9f42c79f9d7209797c2f472c196679350890a9",
+      "original_bytes": 99256
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/rfcamera_fusion_r1_phy.area",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/rfcamera_fusion_r1_phy.area",
+      "bytes": 357325,
+      "sha256": "15303202a55f780c475ba76c6743b1de544abf0c9729c34686993ca4d081d7d9",
+      "original_sha256": "15303202a55f780c475ba76c6743b1de544abf0c9729c34686993ca4d081d7d9",
+      "original_bytes": 357325
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/route.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/route.params",
+      "bytes": 415,
+      "sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_bytes": 415
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/settings.cfg",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/settings.cfg",
+      "bytes": 1396,
+      "sha256": "573d5782038b4ab5939ca6d6839ee6444ff450ba65a6caa44eccc2eda1d8dade",
+      "original_sha256": "573d5782038b4ab5939ca6d6839ee6444ff450ba65a6caa44eccc2eda1d8dade",
+      "original_bytes": 1396
+    },
+    {
+      "server_path": "checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/checkout/refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1_Runs/phy_1/simple.timing",
+      "bytes": 9686333,
+      "sha256": "81bb8b52191b1e48453939a6b305aa2d9c3677bc7f657ea99002dcd3c2e90676",
+      "original_sha256": "d3fe6b08abf50fffa94b9f2b216f6d09f695c2d758a2cba88b0eeb20a1aebd96",
+      "original_bytes": 9690093
+    },
+    {
+      "server_path": "reports.json",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/reports.json",
+      "bytes": 7576,
+      "sha256": "03735bdde5756d6dac1e9f94c9c7eeaa860d0b385fc7259621902dbb8ac134ba",
+      "original_sha256": "03735bdde5756d6dac1e9f94c9c7eeaa860d0b385fc7259621902dbb8ac134ba",
+      "original_bytes": 7576
+    },
+    {
+      "server_path": "result.json",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/result.json",
+      "bytes": 2554,
+      "sha256": "592fc3625730cba9981e38db1e135ad3fba0a74cdcb801615667f750432c1637",
+      "original_sha256": "4a3307dbb5bc63f9f0b6b08d671f0f13abea69b37c1fc8df89ece2a690c11794",
+      "original_bytes": 2648
+    },
+    {
+      "server_path": "reused-from.json",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/reused-from.json",
+      "bytes": 222,
+      "sha256": "b23cda7cac0ac81590da43360551fa58f0dd64c3f0208f68bb76b51cb4c62edd",
+      "original_sha256": "b23cda7cac0ac81590da43360551fa58f0dd64c3f0208f68bb76b51cb4c62edd",
+      "original_bytes": 222
+    },
+    {
+      "server_path": "spec.json",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/spec.json",
+      "bytes": 1614,
+      "sha256": "00abd01f3269869778637bbae9c88ddd4d8624f9dd7d04b166301fb63cf2596d",
+      "original_sha256": "00abd01f3269869778637bbae9c88ddd4d8624f9dd7d04b166301fb63cf2596d",
+      "original_bytes": 1614
+    },
+    {
+      "server_path": "stage-logs/bitgen/phy_1/place.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/phy_1/place.params",
+      "bytes": 823,
+      "sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_bytes": 823
+    },
+    {
+      "server_path": "stage-logs/bitgen/phy_1/rfcamera_fusion_r1.prj",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/phy_1/rfcamera_fusion_r1.prj",
+      "bytes": 99256,
+      "sha256": "fd3f7c19a83df52413c809038b9f42c79f9d7209797c2f472c196679350890a9",
+      "original_sha256": "fd3f7c19a83df52413c809038b9f42c79f9d7209797c2f472c196679350890a9",
+      "original_bytes": 99256
+    },
+    {
+      "server_path": "stage-logs/bitgen/phy_1/route.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/phy_1/route.params",
+      "bytes": 415,
+      "sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_bytes": 415
+    },
+    {
+      "server_path": "stage-logs/bitgen/phy_1/run.log",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/phy_1/run.log",
+      "bytes": 7051,
+      "sha256": "021197a5d60c76a95ef61b2bb27e42600599e074d5359fe8ccbf58603f8b8162",
+      "original_sha256": "6af77be87f922d1d11ea11065790230990908a3db8f200c747f2e69a283bdef2",
+      "original_bytes": 7033
+    },
+    {
+      "server_path": "stage-logs/bitgen/phy_1/run.logw",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/phy_1/run.logw",
+      "bytes": 422,
+      "sha256": "46e2bb2c20c81b6a2f17f9420bfd8d068d22f4e2fae464c228b2fcc4212a18e8",
+      "original_sha256": "4b5781d8a8b1bad23c8364a81040eac762057d53544a6e6d1e916983f4aceb50",
+      "original_bytes": 404
+    },
+    {
+      "server_path": "stage-logs/bitgen/phy_1/settings.cfg",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/phy_1/settings.cfg",
+      "bytes": 1396,
+      "sha256": "573d5782038b4ab5939ca6d6839ee6444ff450ba65a6caa44eccc2eda1d8dade",
+      "original_sha256": "573d5782038b4ab5939ca6d6839ee6444ff450ba65a6caa44eccc2eda1d8dade",
+      "original_bytes": 1396
+    },
+    {
+      "server_path": "stage-logs/bitgen/project/td_20261110_224507.log",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/project/td_20261110_224507.log",
+      "bytes": 386684,
+      "sha256": "2a5a40bd4aae1605b0b7381073b581d8ca74416cc17b12b573dc702df9b0ff09",
+      "original_sha256": "e2c148d05635bf1ff8e30e0d7c85637aad8ebd5ae2126e30aef9300b4452fd57",
+      "original_bytes": 401908
+    },
+    {
+      "server_path": "stage-logs/bitgen/project/td_20261110_224507.logw",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/project/td_20261110_224507.logw",
+      "bytes": 422,
+      "sha256": "bf3c24145e45dc9b70a10ced71fe4cec8693932fcaa7e452a7a2fcf9fefff828",
+      "original_sha256": "b9c9d0c25012c7956f057a6d726a46a1be9b86d19fb2808210a3efba352aaac5",
+      "original_bytes": 404
+    },
+    {
+      "server_path": "stage-logs/bitgen/project/td_20261111_030529.log",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/project/td_20261111_030529.log",
+      "bytes": 296261,
+      "sha256": "79114231a5ec3bcdf391488adb767f889ba16b19fe382e5703f33a358a1988f8",
+      "original_sha256": "ca6237e4c937848864c4feb3b4facf2de55e31c6b7fe232288a9580f9e55475e",
+      "original_bytes": 297120
+    },
+    {
+      "server_path": "stage-logs/bitgen/project/td_20261111_030529.logw",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/bitgen/project/td_20261111_030529.logw",
+      "bytes": 422,
+      "sha256": "f3171faa0ec1c73379692ec4325623c8110e9f0e19240738b86652203660bb33",
+      "original_sha256": "aa4ad275fbdda49c389323bf9b23386d0a6f508a3d1af400e33f76b32ac33cca",
+      "original_bytes": 404
+    },
+    {
+      "server_path": "stage-logs/placement/phy_1/place.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/placement/phy_1/place.params",
+      "bytes": 823,
+      "sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_bytes": 823
+    },
+    {
+      "server_path": "stage-logs/placement/phy_1/rfcamera_fusion_r1.prj",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/placement/phy_1/rfcamera_fusion_r1.prj",
+      "bytes": 99256,
+      "sha256": "748287a500774beb301ccf89d6c0817e34ae0897599291d330cb7ee820d266e1",
+      "original_sha256": "748287a500774beb301ccf89d6c0817e34ae0897599291d330cb7ee820d266e1",
+      "original_bytes": 99256
+    },
+    {
+      "server_path": "stage-logs/placement/phy_1/settings.cfg",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/placement/phy_1/settings.cfg",
+      "bytes": 1402,
+      "sha256": "a39598d929afb9601b5e42ce02a66684729759958e512401542707181a6e1518",
+      "original_sha256": "a39598d929afb9601b5e42ce02a66684729759958e512401542707181a6e1518",
+      "original_bytes": 1402
+    },
+    {
+      "server_path": "stage-logs/routing/phy_1/place.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/routing/phy_1/place.params",
+      "bytes": 823,
+      "sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_bytes": 823
+    },
+    {
+      "server_path": "stage-logs/routing/phy_1/rfcamera_fusion_r1.prj",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/routing/phy_1/rfcamera_fusion_r1.prj",
+      "bytes": 99256,
+      "sha256": "12e5f1a57a72ba82bd083648cc6ac596339a99ecfde45d5c62b0001dca39ab61",
+      "original_sha256": "12e5f1a57a72ba82bd083648cc6ac596339a99ecfde45d5c62b0001dca39ab61",
+      "original_bytes": 99256
+    },
+    {
+      "server_path": "stage-logs/routing/phy_1/route.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/routing/phy_1/route.params",
+      "bytes": 415,
+      "sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_bytes": 415
+    },
+    {
+      "server_path": "stage-logs/routing/phy_1/settings.cfg",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/routing/phy_1/settings.cfg",
+      "bytes": 1402,
+      "sha256": "ce4e7660ae154227ea3658d2fcdfcc61527d4310b0494b1d3d7d385035d2b450",
+      "original_sha256": "ce4e7660ae154227ea3658d2fcdfcc61527d4310b0494b1d3d7d385035d2b450",
+      "original_bytes": 1402
+    },
+    {
+      "server_path": "stage-logs/terminal/phy_1/place.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/terminal/phy_1/place.params",
+      "bytes": 823,
+      "sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_sha256": "a20a13941fee53f9ac596515370fbc502852d8abf9939f2c991681615452827b",
+      "original_bytes": 823
+    },
+    {
+      "server_path": "stage-logs/terminal/phy_1/rfcamera_fusion_r1.prj",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/terminal/phy_1/rfcamera_fusion_r1.prj",
+      "bytes": 99256,
+      "sha256": "fd3f7c19a83df52413c809038b9f42c79f9d7209797c2f472c196679350890a9",
+      "original_sha256": "fd3f7c19a83df52413c809038b9f42c79f9d7209797c2f472c196679350890a9",
+      "original_bytes": 99256
+    },
+    {
+      "server_path": "stage-logs/terminal/phy_1/route.params",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/terminal/phy_1/route.params",
+      "bytes": 415,
+      "sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_sha256": "71fcdb6adb4f6602190254de817a14449b7666334354ebb9ed1d7f4b244a1091",
+      "original_bytes": 415
+    },
+    {
+      "server_path": "stage-logs/terminal/phy_1/settings.cfg",
+      "path": "fpga_docs/server_seed54_20261111/artifacts/stage-logs/terminal/phy_1/settings.cfg",
+      "bytes": 1396,
+      "sha256": "573d5782038b4ab5939ca6d6839ee6444ff450ba65a6caa44eccc2eda1d8dade",
+      "original_sha256": "573d5782038b4ab5939ca6d6839ee6444ff450ba65a6caa44eccc2eda1d8dade",
+      "original_bytes": 1396
+    }
+  ],
+  "evidence_form": "Privacy-redacted copies. Original downloads were chunk/file SHA verified before redaction."
+}

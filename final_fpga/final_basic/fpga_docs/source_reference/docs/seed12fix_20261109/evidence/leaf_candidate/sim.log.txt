@@ -1,0 +1,67 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -onfinish stop work.leaf_tb -do "onerror {quit -code 2}; run -all; quit -code 0" 
+# Start time: 22:13:38 on Nov 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 56, found 49.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_not_admitted_pairs'.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_bad_pairs'.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_good_pairs'.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_diag_counts'.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_diag_pair'.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_metadata1'.
+# ** Warning: C:/fpga_workspace/anlogic-task3\refactor\camera_raw_r2\src_fpga\simulation\blackbox_hdr_startup_20261109\leaf_tb.sv(29): (vopt-2718) [TFMPC] - Missing connection for port 'o_metadata0'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=8.
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.leaf_tb(fast)
+# onerror {quit -code 2}
+#  Warning: onerror command for use within macro
+#  run -all
+# LEAF_GATE_CASE cold_short_group_zero
+# LEAF_GATE_STATS cold_short_group_zero input=0/3 raw=0/0 source=0/0 pair_good=0 pair_bad=0
+# LEAF_GATE_CASE trusted_warmup
+# LEAF_GATE_STATS trusted_warmup input=3/3 raw=0/0 source=0/0 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE first_admitted_source_backpressure
+# LEAF_GATE_STATS first_admitted_source_backpressure input=3/3 raw=1/1 source=1/1 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE short_identity_invalid
+# LEAF_GATE_STATS short_identity_invalid input=0/3 raw=0/0 source=0/0 pair_good=0 pair_bad=0
+# LEAF_GATE_CASE after_invalid_identity
+# LEAF_GATE_STATS after_invalid_identity input=3/3 raw=1/1 source=1/1 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE short_cycle_invalid
+# LEAF_GATE_STATS short_cycle_invalid input=0/3 raw=0/0 source=0/0 pair_good=0 pair_bad=0
+# LEAF_GATE_CASE after_invalid_cycle
+# LEAF_GATE_STATS after_invalid_cycle input=3/3 raw=1/1 source=1/1 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE trustworthy_future_short_waits
+# LEAF_GATE_STATS trustworthy_future_short_waits input=3/3 raw=1/1 source=1/1 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE matched_short_bad_fs
+# LEAF_GATE_STATS matched_short_bad_fs input=3/3 raw=1/0 source=1/0 pair_good=0 pair_bad=1
+# LEAF_GATE_CASE warmup_after_matched_cancel
+# LEAF_GATE_STATS warmup_after_matched_cancel input=3/3 raw=0/0 source=0/0 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE stop_drains_matched_group
+# LEAF_GATE_STATS stop_drains_matched_group input=3/3 raw=1/1 source=1/1 pair_good=1 pair_bad=0
+# LEAF_GATE_CASE reset_clears_held_sources
+# LEAF_GATE_CASE first_pair_after_reset_new_cohort
+# LEAF_GATE_STATS first_pair_after_reset_new_cohort input=3/3 raw=1/1 source=1/1 pair_good=1 pair_bad=0
+# LEAF_GATE_PASS
+# ** Note: $finish    : C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_startup_20261109/leaf_tb.sv(391)
+#    Time: 2126 ns  Iteration: 0  Instance: /leaf_tb
+# Break at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_startup_20261109/leaf_tb.sv line 391
+# Stopped at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_startup_20261109/leaf_tb.sv line 391
+#  quit -code 0
+# End time: 22:13:39 on Nov 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8

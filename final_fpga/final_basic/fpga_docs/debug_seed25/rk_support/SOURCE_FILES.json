@@ -1,0 +1,397 @@
+{
+  "rk_support/rk_sdk/README.md": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/README.md",
+    "sha256": "6063e89cba931c74046b905a0c6cc8a3ee083ec621bda8d223928352a304bd92"
+  },
+  "rk_support/rk_sdk/dual_host/camera_shared.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/dual_host/camera_shared.py",
+    "sha256": "c6646c7893732c0ff8f50bbf6295ea0c9b1ee201608010f71b2ba1b4379867ca"
+  },
+  "rk_support/rk_sdk/dual_host/debug_modes.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/dual_host/debug_modes.py",
+    "sha256": "36f292694162b814f621ea25601d69fa9e55d35f9283ab622d8ba9e59caa8af8"
+  },
+  "rk_support/rk_sdk/dual_host/dual_records.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/dual_host/dual_records.py",
+    "sha256": "2368a672ffa403f42e48909738c0ee9577415232092024f83c0bdf80b5b3743e"
+  },
+  "rk_support/rk_sdk/dual_host/pcie_protocol_v1.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/dual_host/pcie_protocol_v1.py",
+    "sha256": "eee61997bb855d66205f33e39372dafbe2b59b8e4a8239e62c38cd56d82f4c9d"
+  },
+  "rk_support/rk_sdk/dual_host/stereo_control.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/dual_host/stereo_control.py",
+    "sha256": "77640a6aa205d4b649c6b7411ceae5d8064d73f94fed3d9436787e0e2c128098"
+  },
+  "rk_support/rk_sdk/dual_host/stereo_control_v1.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/dual_host/stereo_control_v1.py",
+    "sha256": "1eb2365024857cf5ae3c823fa4bc36c4c8ff4d9535f55da29eafda8938a63dae"
+  },
+  "rk_support/rk_sdk/linux/__init__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/__init__.py",
+    "sha256": "6184d0bf8118f85d55a08d30a9b6b2637f2192c7c7a377cabaa182b5d3bc7e13"
+  },
+  "rk_support/rk_sdk/linux/dma_c2h_candidate/__init__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/dma_c2h_candidate/__init__.py",
+    "sha256": "df789e6c53e314494c39647a84f390c48581fa21521ff98ed081977203cc020b"
+  },
+  "rk_support/rk_sdk/linux/dma_c2h_candidate/c2h_abi.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/dma_c2h_candidate/c2h_abi.py",
+    "sha256": "9ebcb2ad9319490934368f2369f0a0914dec0639f5f5a8ce0db159b69e99c02b"
+  },
+  "rk_support/rk_sdk/linux/dma_c2h_candidate/c2h_legacy_policy.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/dma_c2h_candidate/c2h_legacy_policy.py",
+    "sha256": "c561609a270bd57e4be341b1e7425544002e5e4ef162f600f5743ddcb8b83779"
+  },
+  "rk_support/rk_sdk/linux/stream_diag/__init__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/stream_diag/__init__.py",
+    "sha256": "3db12176069bcd2fe6062314049ee31c62291018690d183233c3e7bcbcfcb12b"
+  },
+  "rk_support/rk_sdk/linux/stream_diag/records.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/stream_diag/records.py",
+    "sha256": "2f964c49ef6cadb81be9e566462d502be1cef5388d485223132a0c813d5ec7c7"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/__init__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/__init__.py",
+    "sha256": "df789e6c53e314494c39647a84f390c48581fa21521ff98ed081977203cc020b"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/advanced_config.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/advanced_config.py",
+    "sha256": "1cfca299d1400ffac9312993436474dfa88750efbe400711dbd8355b715ee636"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/config_transaction.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/config_transaction.py",
+    "sha256": "c72072a4911a2d2b54b63355544bb1946db43b6a6409d69dbc502f0664404cfb"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/jpeg_frame_ring.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/jpeg_frame_ring.py",
+    "sha256": "92800d3eb5a14fcc14b632656a3cc8e1308445cfa2d024fd8f0547fabb10c238"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/mono_config_v2.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/mono_config_v2.py",
+    "sha256": "776b0ea222e71d37d7d374aa569f12dc4d00ea01907057c863222b34f75df24e"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/pcie_protocol_v1.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/pcie_protocol_v1.py",
+    "sha256": "4acdfa4b18adf8b27bf7f94e96e50e8dc450170473c3acbb9990194e9b56967e"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/raw_frame_store.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/raw_frame_store.py",
+    "sha256": "d6f84570bf5ba3aca70d5c6001dd925bab78f5a1cfba026d638bd567268c6788"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/record_selection.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/record_selection.py",
+    "sha256": "039fcc03c97bffd902c182e3f438354c0aac25b47a514e7afc23769c0eca9492"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/record_v2.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/record_v2.py",
+    "sha256": "68170f8000d10c5d0e4da4fa1d243a664536749d5234b9c8c83be06e8d3e8b77"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/record_v3.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/record_v3.py",
+    "sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/record_v4.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/record_v4.py",
+    "sha256": "bdc3736b1ae9a7a4b21c7fc7d4a3f6172807f9d9b71c8f38f06203a2dae058bb"
+  },
+  "rk_support/rk_sdk/linux/task3_pipeline/session_rearm.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/linux/task3_pipeline/session_rearm.py",
+    "sha256": "2cf1768e9c637266bc50850e619369445f376b7b2670ddc5872a45b4ca84e74b"
+  },
+  "rk_support/rk_sdk/raw_control.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/raw_control.py",
+    "sha256": "47155c0fa30e8da2b2b295825745a489c4da511297241f5f9507a4a4b8ad2e4e"
+  },
+  "rk_support/rk_sdk/raw_driver/guard_test.c": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/raw_driver/guard_test.c",
+    "sha256": "36c2da1ec59a76337fec4c59e5bd15fc3af6f01528858a2698ab8220c46fdc67"
+  },
+  "rk_support/rk_sdk/raw_driver/prepare.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/raw_driver/prepare.py",
+    "sha256": "ea941927789f8ac430d35b461981e82c3bf8dffdc7d14d5f0b2953ef59b026a4"
+  },
+  "rk_support/rk_sdk/raw_video.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/raw_video.py",
+    "sha256": "830a3195d6f6ba11dcf011a622264e1aa4549225847cdd7523795d37f097bcd8"
+  },
+  "rk_support/rk_sdk/raw_video_constants.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/rk_sdk/raw_video_constants.py",
+    "sha256": "1d3ece5f834ab560e2f293520624130ca236cd2bcfbaf7d0e1eab9c6a30f6862"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/.gitattributes": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/.gitattributes",
+    "sha256": "89c07d76994c6e263b977c14874439f99f78b9b148cf0a318de84513cd930e92"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/FEATURE_MATRIX.md": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/FEATURE_MATRIX.md",
+    "sha256": "a32648a8155000c2642c2dc7e9dc173709471668b47344ae3a09b74baf16ad59"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/README.md": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/README.md",
+    "sha256": "ee920d3fd63f9072e1b24a84cd92b1a53cdb0ebe0d58978089dcd73fd30b232d"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/VALIDATION.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/VALIDATION.json",
+    "sha256": "5a96b9fb8f7ecbe6292de353e1376801fd2034207ce5b778c38f80c0816b2f05"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/__init__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/__init__.py",
+    "sha256": "0b6193e85fa2971015cbf5a846af99431bf4361c48d0bcb623ece1a9c5dd8670"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/__main__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/__main__.py",
+    "sha256": "2817c9e0fbfff425ffecd72e60cca4d2179e46c5da34e909cf731926fdcc3d74"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/catalog.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/catalog.py",
+    "sha256": "26f8ef04adc01eb3d3e70d0618e48cac150b5ea54baff3239cf4d8e79bce2a57"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/cli.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/cli.py",
+    "sha256": "1cf2d635ea7e4160acac647135a7fb2603812dc7d3a11af3fa62f3d7612916eb"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/consumers.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/consumers.py",
+    "sha256": "d10cc247f34c2a3fc9ecbef922cf35d553441f0cb0a94f55bd8a2fdb9624f341"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/controls.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/controls.py",
+    "sha256": "3301214b491bc8af7168e3832d7d05ebcd2d1e068ece3874648cc901094f6998"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/display_info.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/display_info.py",
+    "sha256": "b845d40a13ecaac16e74c2319651d39fe10f391bf4c0056aa096925a10d8b827"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/DERIVATION.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/DERIVATION.json",
+    "sha256": "2e0111fa2efd0e7d9a880a4d394c16d9bb681f2777fda1225e5c2579d00a879a"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/Makefile": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/Makefile",
+    "sha256": "3d195ff3fa25ac4d821f90444a0781bb4a47d547f33e89aaad92aceec312adfa"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/README.md": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/README.md",
+    "sha256": "199db274b6c4e0213f0890033d47748301fe150d8e53ea913baec3a46e5ff084"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/__init__.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/__init__.py",
+    "sha256": "aec4258eb46952fc01c18b415a4dd5e52e77c6ddf4a2b1944a249dc1d9562836"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/c2h_debug_uapi.h": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/c2h_debug_uapi.h",
+    "sha256": "43964c569746c6066fe4b368d3f39bf577faf7ccd4f20eb15e7661e12249e68d"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/debug_abi.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/debug_abi.py",
+    "sha256": "075e82b7980b6b6fcfd69a9dcfbf8a59ee288335bcf1b5e9cffa1490714e8262"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/debug_constants.h": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/debug_constants.h",
+    "sha256": "1bc6f6c0156cc60df4b3364a659c0bef400f35ca31b28b031dbb1c4a1c5bab16"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/debug_driver_hooks.h": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/debug_driver_hooks.h",
+    "sha256": "32c23a7fa15c9b422eac2f299eb9f23afde1a7b2e86e88fad7dfb58297a96a65"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/debug_reset_guard.h": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/debug_reset_guard.h",
+    "sha256": "c5c0bf41764673bb92e81d4dd0e009be543787bb485f16c164f5e329cb0968d7"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/derive.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/derive.py",
+    "sha256": "efd59bda34247b0c1beb4d7b3bfbe692ec6ffe6838a87b6b47484d114295fef3"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/ph1a_c2h_debug.c": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/ph1a_c2h_debug.c",
+    "sha256": "dbc5e25edf3c80e3ecc9607ed7410f240dde40bc782ba47a862388bec91fb5e6"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver/ph1a_c2h_debug.patch": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver/ph1a_c2h_debug.patch",
+    "sha256": "350b6431104d1ff8342f0ddf2b5b16f0f5059880cf66f0775bfa3313716b4268"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/driver_api.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/driver_api.py",
+    "sha256": "e648ae4e1b06c623ba801b9481e37d28c670e0fd6cb60b074f179f5bf1c53ffe"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/evidence/.gitignore": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/evidence/.gitignore",
+    "sha256": "90087c413b4a5af3935b4ac8fbda1168fba1928fa345342b93644cf00f7264d0"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/evidence/README.md": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/evidence/README.md",
+    "sha256": "1f9ddb4341a11f3066536acc57df8344c821e3b4226d00c0892883b3c6002b00"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/evidence/assertion_checks.log": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/evidence/assertion_checks.log",
+    "sha256": "39cfb9ff7a7a99858dbdba15029ac37a88aa197dcae6f2a6f5812ec163778bb8"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/evidence/final_component_checks.log": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/evidence/final_component_checks.log",
+    "sha256": "c540eb0a08e8041806161bd20f9b20359f581ebc7ea91b4043bd50d061687ab0"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/jpeg_budget.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/jpeg_budget.json",
+    "sha256": "2280d04547c72f5bfcccd61317490d9bfda7d9ff8941040cd4f7aecaa6241fca"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/mono_hdr_lab_template.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/mono_hdr_lab_template.json",
+    "sha256": "2a07fa55c5307042401d81f65732263a47b3174e685a083e29ce7026e7c8a571"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/mono_processing.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/mono_processing.json",
+    "sha256": "82b3c262442a5d944dcc7b30b0788fcff49ed13fd5073f70bad0989e3253c9b4"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/mono_sdr.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/mono_sdr.json",
+    "sha256": "2c8882406e29c0172926f3e39fb1381fb88a398501d9f4849a3b7dbf712eb256"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/mono_sdr_lz.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/mono_sdr_lz.json",
+    "sha256": "345225e4c710f6a2c1391104ae4de0e8602e9c21428b1965015b522cd9576518"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/scenario_dehaze_generation1.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/scenario_dehaze_generation1.json",
+    "sha256": "306560e5c2b513fd2abfb86095623b1ff292c420fb7e61e52635458711796bc8"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/scenario_hdr_lab_template.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/scenario_hdr_lab_template.json",
+    "sha256": "27d2b933080b47c069e9b84d445d190baa35058e4c268f3929e0fe0af4a7c792"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/scenario_lz.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/scenario_lz.json",
+    "sha256": "46c82050d11dd6a1fd86adb274f0810a3e17384660edb3610468cf4a27c9af03"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/examples/scenario_processing.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/examples/scenario_processing.json",
+    "sha256": "b633649c9ee0d519ded1c84f29f4abb60c5ed46e52ebbb4de10842f1bf5b35f9"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/fixtures/c2/README.md": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/fixtures/c2/README.md",
+    "sha256": "bcfecc06705294eea092b955de2e780956f77fc2e1f78a3f0989539eb395b626"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/fixtures/c2/manifest.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/fixtures/c2/manifest.json",
+    "sha256": "be0d5889b57f688645545256ebe046c740d0b62db44d425e1340ed4a2ea7efc3"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/fixtures/c2/mixed_records.bin": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/fixtures/c2/mixed_records.bin",
+    "sha256": "6204b05b0f4c3551ea7a9b8cf2dc52f7d1e3913eaf611f3936388cae8df7e470"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/journal.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/journal.py",
+    "sha256": "392d9db6a28f39b0aa5373761c3c0ce8d4f8d01538c747e18aa3e93b06e57bc1"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/offline.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/offline.py",
+    "sha256": "03b18683643a875e80d61b415fdee74611a9402dff185f1c578312013e9228a9"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/products.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/products.py",
+    "sha256": "4bfdeca6660b5f5c867e1a8619e7eb81b7845bd2ca83a45b1011bb4a480281f9"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/session.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/session.py",
+    "sha256": "f3ee3d293ce74fe188593deafe16b9466c6558715252175b0c164b1092cfa2df"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/source_contract.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/source_contract.json",
+    "sha256": "3ae32e8f4ea1863cb1e8c80536a5db398a6c4b31fd08e4555e7ad47aff01b258"
+  },
+  "rk_support/cli_overlay/linux/rk_debug/transport.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "linux/rk_debug/transport.py",
+    "sha256": "30aab3fe622c8129cbe1bbdf2a5248eb469c957515bf4d62dfd3b11f23ba6c11"
+  },
+  "rk_support/tools/uart_observer.py": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/tools/uart_observer.py",
+    "sha256": "926a896f94f1bbd55077e23cb37aedd1f2a86634b570efba8c748b4cb9257b22"
+  },
+  "rk_support/protocol/pcie_protocol_v1.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/docs/pcie_protocol_v1.json",
+    "sha256": "74bb1d80a6112a716357814cb62459f8f8baa03553134d4ba122b3f13dc6fe46"
+  },
+  "rk_support/protocol/raw_video_v1.json": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "source": "refactor/camera_raw_r2/docs/raw_video_v1.json",
+    "sha256": "8e53b0509fc1f2fb353b2ce26db26a9661d27564782cf269a519fbcd1e470471"
+  }
+}

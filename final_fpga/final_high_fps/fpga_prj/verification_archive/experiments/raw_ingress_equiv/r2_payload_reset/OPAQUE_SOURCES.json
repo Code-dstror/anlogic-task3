@@ -1,0 +1,15 @@
+{
+  "top": "shared_raw10_frame_ingress",
+  "root": "refactor/camera_fusion_r1/experiments/raw_ingress_equiv/r2_payload_reset",
+  "baseline": {
+    "files": ["baseline/shared_raw10_frame_ingress.v"],
+    "sha256": "8569d76989de58b9940cfa9090f8f3fd3ecd6c3eddea75b34fa31e01743381c3"
+  },
+  "candidate": {
+    "files": ["candidate/shared_raw10_frame_ingress.v"],
+    "sha256": "5cff40f6142a1b8f78d85ad0970061846128d8838f2e13d8fabef1c6a5d67ca4"
+  },
+  "ports": "../PORTS.vh",
+  "behavior_contract": "../PUBLIC_CONTRACT.md",
+  "td_model_required": false
+}

@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "scope": "Source relocation only. Simulation evidence applies to the historical commands and input hashes.",
+  "path_base": "repository root",
+  "historical_simulation_receipt": "refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/blackbox_run.json",
+  "historical_simulation_receipt_sha256": "8361aae5fda2eaf40b0bed60ca750b19fc4c7b2188432c4c64d00bf69b9a50ef",
+  "files": [
+    {
+      "old_path": "src_fpga/simulation/blackbox_entropy_area_r2/oracle.py",
+      "old_sha256": "d53870dc3ecee58e48449aa925a4c407164dd35c918044922b433c57be6ffcdb",
+      "new_path": "refactor/camera_fusion_r1/src_fpga/simulation/blackbox_entropy_area_r2/oracle.py",
+      "new_sha256": "732f0115bc6e4abb5942c00defdb8134d4fb3ad7de9a6fa9cc537cfe914101a6",
+      "snapshot_path": "refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/inputs_snapshot/oracle.py",
+      "matched_simulation_receipt": true,
+      "byte_identical": false,
+      "change": "Repository-root path depth only"
+    },
+    {
+      "old_path": "src_fpga/simulation/blackbox_entropy_area_r2/run.py",
+      "old_sha256": "30c5b39e6df1a45ff2686ff15d12829ba52ae833ee5ec2f10d21c262f7db2bab",
+      "new_path": "refactor/camera_fusion_r1/src_fpga/simulation/blackbox_entropy_area_r2/run.py",
+      "new_sha256": "30c5b39e6df1a45ff2686ff15d12829ba52ae833ee5ec2f10d21c262f7db2bab",
+      "snapshot_path": "refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/inputs_snapshot/run.py",
+      "matched_simulation_receipt": true,
+      "byte_identical": true,
+      "change": "Move only"
+    },
+    {
+      "old_path": "src_fpga/simulation/blackbox_entropy_area_r2/tb_encoder.sv",
+      "old_sha256": "d2f09c88d7bd634ade625e2770ca51c7ee027c3d66d9682f3e1f0f94b51d542a",
+      "new_path": "refactor/camera_fusion_r1/src_fpga/simulation/blackbox_entropy_area_r2/tb_encoder.sv",
+      "new_sha256": "d2f09c88d7bd634ade625e2770ca51c7ee027c3d66d9682f3e1f0f94b51d542a",
+      "snapshot_path": "refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/inputs_snapshot/tb_encoder.sv",
+      "matched_simulation_receipt": true,
+      "byte_identical": true,
+      "change": "Move only"
+    },
+    {
+      "old_path": "src_fpga/simulation/blackbox_entropy_area_r2/tb_entropy.sv",
+      "old_sha256": "c8ae2512b43683a842a1f7a2d6fa497ef7d894707f6d9bbaf067fccf999a3903",
+      "new_path": "refactor/camera_fusion_r1/src_fpga/simulation/blackbox_entropy_area_r2/tb_entropy.sv",
+      "new_sha256": "c8ae2512b43683a842a1f7a2d6fa497ef7d894707f6d9bbaf067fccf999a3903",
+      "snapshot_path": "refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/inputs_snapshot/tb_entropy.sv",
+      "matched_simulation_receipt": true,
+      "byte_identical": true,
+      "change": "Move only"
+    },
+    {
+      "old_path": "docs/optimization_r2_20261110/BLACKBOX.md",
+      "old_sha256": "cb23142e299cad19cac378dff01ec15922bd28a0caba40dbf2918fcb69390de2",
+      "new_path": "refactor/camera_fusion_r1/docs/optimization_r2_20261110/BLACKBOX.md",
+      "new_sha256": "4862d5c746072c9de088388ac44d17e6eae8379360079193f5b3e78d31103799",
+      "snapshot_path": "refactor/camera_fusion_r1/tmp/entropy_area_r2_blackbox_candidate02_split_a1/inputs_snapshot/BLACKBOX.md",
+      "matched_simulation_receipt": false,
+      "byte_identical": false,
+      "change": "Relocation note, report links and replay paths"
+    }
+  ]
+}

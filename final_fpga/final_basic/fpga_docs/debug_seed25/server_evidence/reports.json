@@ -1,0 +1,192 @@
+{
+  "collected_at": 1794304395.4534316,
+  "endpoints_per_group": 100,
+  "files": [
+    {
+      "bytes": 43629313,
+      "command": "report_timing_summary -report_type max_min -ep_num 100 -path_num 3 -include_ignored",
+      "generated_is_analysis_pass": false,
+      "id": "timing_detail",
+      "inherited_from": null,
+      "mtime": 1794304313.3976142,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/timing_detail.rpt",
+      "run": "phy_1",
+      "sha256": "0e74ce041555ff181583cf59a515fa4d9d2e7afea2f896541ee27afbc937a361",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 34695,
+      "command": "report_clock_intersection -delay_type max_min",
+      "generated_is_analysis_pass": false,
+      "id": "clock_intersection",
+      "inherited_from": null,
+      "mtime": 1794304317.6076467,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/clock_intersection.txt",
+      "run": "phy_1",
+      "sha256": "b140f8f50532238349a4bd818a29c4c72606db2d95309e72743f9320efdabb60",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 17406743,
+      "clock_nodes": 23,
+      "command": "report_clock_summary -clocks [get_clocks *] -levels 1000000 -expand_buckets",
+      "declared_endpoints": 46525,
+      "expanded_load_pins": 44349,
+      "generated_is_analysis_pass": false,
+      "id": "clock_tree",
+      "inherited_from": null,
+      "latency_nodes": 44349,
+      "max_pin_depth": 18,
+      "missing_groups": [],
+      "mtime": 1794304321.9066796,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/clock_tree.txt",
+      "pin_nodes": 44808,
+      "requested_levels": 1000000,
+      "run": "phy_1",
+      "scope": "FULL_TOPOLOGY",
+      "sha256": "6873edf064cbe5fe87e5df3f58611cc37dd09e99641be78bfdac77ed5976f48f",
+      "state": "GENERATED",
+      "unexpanded_buckets": 0
+    },
+    {
+      "bytes": 2575386,
+      "command": "report_path_skew -delay_type max_min -ep_num 100 -path_num 3",
+      "generated_is_analysis_pass": false,
+      "id": "path_skew",
+      "inherited_from": null,
+      "mtime": 1794304322.0606809,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/path_skew.rpt",
+      "run": "phy_1",
+      "sha256": "dd8c10ee7a3d9b5b6df468ec83348ec650f7bf22a20dcf34f7106d4b70a1a682",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 933,
+      "command": "report_noise -phase true",
+      "generated_is_analysis_pass": false,
+      "id": "noise",
+      "inherited_from": null,
+      "mtime": 1794304322.0616808,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/noise.csv",
+      "run": "phy_1",
+      "sha256": "2192808b4495c04ac87ca70f355579cca23c25a168f304f24c63e139840d9bad",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 685,
+      "command": "report_cfgs",
+      "generated_is_analysis_pass": false,
+      "id": "device_settings",
+      "inherited_from": null,
+      "mtime": 1794304322.063681,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/device_settings.txt",
+      "run": "phy_1",
+      "sha256": "fb56f6e7cc229508218e3fdec0dc01f14db8a09aebb3ae9aba9e4058bbe9930a",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 31880,
+      "command": "report_hfn {stage} -limit 100 -timing",
+      "generated_is_analysis_pass": false,
+      "id": "high_fanout",
+      "inherited_from": null,
+      "mtime": 1794304368.0550346,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/high_fanout.txt",
+      "run": "phy_1",
+      "sha256": "bcc233c54869f5eeb2688545bc31ff484221f915d141c02abf14b1b7e3688c3e",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 687427,
+      "command": "report_logic_level -worst_n 100",
+      "generated_is_analysis_pass": false,
+      "id": "logic_level",
+      "inherited_from": null,
+      "mtime": 1794304368.1710355,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/logic_level.rpt",
+      "run": "phy_1",
+      "sha256": "af8aff3ff7f0fb631e49ecb514f2e0992a53233c1525c2222e3ab162bfc8ac54",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 12641498,
+      "command": "report_timing_exception -ep_num 100 -path_num 3",
+      "generated_is_analysis_pass": false,
+      "id": "timing_exception",
+      "inherited_from": null,
+      "mtime": 1794304371.0700579,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/timing_exception.rpt",
+      "run": "phy_1",
+      "sha256": "1e4beb46bb7987d1591331ce386f1d5686590d363e1d5ed3bc4d65a61b45dc0c",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 521,
+      "command": "report_run_param {run}",
+      "generated_is_analysis_pass": false,
+      "id": "run_parameters",
+      "inherited_from": null,
+      "mtime": 1794304371.071058,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/run_parameters.txt",
+      "run": "phy_1",
+      "sha256": "03c63cf1e626baf7797a159b68b04391f4b860d7d6dc9336a5c10cb862ed3db0",
+      "state": "GENERATED"
+    },
+    {
+      "bytes": 2451,
+      "id": "device_settings_source",
+      "inherited_from": null,
+      "mtime": 1794304395.4502456,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/controller-reports/device_settings.json",
+      "sha256": "dffee4ef17135b7c6d7f9078744b08c8230104fd76641d09f390a11976121b14",
+      "state": "GENERATED"
+    }
+  ],
+  "native_reports": [
+    {
+      "bytes": 190820,
+      "id": "rtl_area",
+      "inherited_from": "manual-camera-r2-hdr-rate-20261110-syn16-48s4t-8e64f48baa674f98-syn",
+      "mtime": 1794296870.0474043,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2_rtl.area",
+      "sha256": "a81f161fecae84bbcbffda342d6f0d230d9cce969a9d9cf31d56f9c7e0523972",
+      "state": "INHERITED"
+    },
+    {
+      "bytes": 333693,
+      "id": "gate_area",
+      "inherited_from": "manual-camera-r2-hdr-rate-20261110-syn16-48s4t-8e64f48baa674f98-syn",
+      "mtime": 1794298147.2522054,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/syn_1/rfcamera_raw_r2_gate.area",
+      "sha256": "3498e970b1ba359d462b8b2063a07c9e91181d7868ed3d25e70e7729b313fc77",
+      "state": "INHERITED"
+    },
+    {
+      "bytes": 346515,
+      "id": "physical_area",
+      "inherited_from": null,
+      "mtime": 1794304066.011711,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_phy.area",
+      "sha256": "f9f16007d0a2976ae3636420bf0348446457c0ed12ae3379c55ae56b0f44224b",
+      "state": "AVAILABLE"
+    },
+    {
+      "bytes": 120449,
+      "id": "check_timing",
+      "inherited_from": null,
+      "mtime": 1794304132.823225,
+      "path": "checkout/refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2_Runs/phy_1/rfcamera_raw_r2_chk.timing",
+      "sha256": "e338b2c794ce93bd65581d69d9525a7f59f981cdb12d985dd1b2da7100bdfe4d",
+      "state": "AVAILABLE"
+    }
+  ],
+  "paths_per_endpoint": 3,
+  "profile": "timing-diagnostics-v2",
+  "project": "camera_raw_r2",
+  "run": "phy_1",
+  "schema": 1,
+  "seed": 25,
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "state": "COMPLETE",
+  "target": "full"
+}

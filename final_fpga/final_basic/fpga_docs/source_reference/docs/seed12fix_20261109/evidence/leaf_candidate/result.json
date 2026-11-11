@@ -1,0 +1,12 @@
+{
+  "verdict": "PASS",
+  "exit_codes": {
+    "version": 0,
+    "vlib": 0,
+    "vlog": 0,
+    "sim": 0
+  },
+  "stage": "sim",
+  "marker": "LEAF_GATE_PASS",
+  "wall_seconds": 2.453
+}

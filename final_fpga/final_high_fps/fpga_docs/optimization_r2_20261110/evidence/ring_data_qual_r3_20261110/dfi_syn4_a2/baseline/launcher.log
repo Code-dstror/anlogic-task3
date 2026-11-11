@@ -1,0 +1,15 @@
+[run_td] cwd=<PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\dfi_syn4_a2\baseline
+[run_td] cmd=<TOOLS_ROOT>/TD_Release_2026.2.210.850\bin\td_commands_prompt.exe -nogui <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\dfi_syn4_a2\baseline\synth.tcl
+
+========================================================================
+[run_td] TD exit code     : 1
+[run_td] log              : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\ring_data_qual_r3_20261110\dfi_syn4_a2\baseline\td.log
+[run_td] .error.f markers : 1 (fresh)
+           - uhd_probe_Runs\syn_1\.read_design.error.f
+[run_td] error lines      : 4
+           ! PRJ-8806 ERROR: Run syn_1 has exited unexpectedly.
+           ! PRJ-5303 WARNING: Run syn_1 failed.
+           ! CRITICAL-WARNING: Load IPC file ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml error, the IP's generated file D doesn't exist.
+           ! CRITICAL-WARNING: Load IPC file ../../ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml error, the IP's generated file D doesn't exist.
+[run_td] RESULT           : FAILED
+========================================================================

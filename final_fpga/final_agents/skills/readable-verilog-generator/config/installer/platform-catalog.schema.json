@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "required": [
+    "schema_version",
+    "platforms"
+  ],
+  "platform_required": [
+    "id",
+    "display_name",
+    "aliases",
+    "root_mode",
+    "environment_names",
+    "fallback_home_relative",
+    "skill_install_dir",
+    "detect",
+    "metadata_files"
+  ]
+}

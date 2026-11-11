@@ -1,0 +1,62 @@
+{
+  "cold_recovery": {
+    "width": 480,
+    "height": 32,
+    "sampling_factors": [
+      33,
+      17,
+      17
+    ],
+    "mcu_grid": [
+      30,
+      4
+    ],
+    "mcu_count": 120,
+    "frame_sequence": 21,
+    "source_camera": 0,
+    "source_session": 1,
+    "source_epoch": 1,
+    "processing_mode": 128,
+    "jpeg_session": 1,
+    "jpeg_generation": 1,
+    "jpeg_slot": 0,
+    "quality": 73,
+    "raw_rgb10": [
+      613,
+      328,
+      234
+    ],
+    "manual_wb_q8": [
+      333,
+      178,
+      226
+    ],
+    "expected_rgb8": [
+      219,
+      119,
+      110
+    ],
+    "max_abs_error_rgb8": [
+      1,
+      0,
+      1
+    ],
+    "mean_abs_error_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "rmse_rgb8": [
+      1.0,
+      0.0,
+      1.0
+    ],
+    "pixel_count": 15360,
+    "tolerance_rgb8": 4,
+    "raw_input_sha256": "804f8dec3869ec6b7486a579239355643c9edab9fbe83cc479eadf65d452d63f",
+    "record_bytes": 3024,
+    "jpeg_bytes": 912,
+    "record_sha256": "83d8913f9f694a661f6622a3e390c687751bcf29c17d62101b24fcf34b854bb7",
+    "jpeg_sha256": "a4926446efad7c329631f9fd522637c2b94ba394eb57da064ede05381f9025e6"
+  }
+}

@@ -1,0 +1,1469 @@
+{
+  "schema": 1,
+  "f21_profile": {
+    "name": "PER_EYE_DCP_SHARED_RESTORE",
+    "dehaze_supported": true,
+    "legacy_supported_mask": "0x34",
+    "schema2_supported_enables": "0x3f"
+  },
+  "f23_profile": {
+    "profile": "C1_SPARSE_V4",
+    "quarter_width": 480,
+    "quarter_height": 270,
+    "roi_begin": 169,
+    "roi_end": 269,
+    "selector": "12_bins_online_two_winners_row_three",
+    "count_max": 303,
+    "engine": "serial1PPC_fifo256",
+    "winner_storage": "lutram"
+  },
+  "oracle_inputs": [
+    "src_fpga/simulation/check_main.py",
+    "src_fpga/simulation/assets/preprocess_lane_candidates_reference.py"
+  ],
+  "fixture_origin": "Candidate-local R6 sparse + dual6eff; FPGA dehaze removed by user on20261031",
+  "fixture_sha256": "5eb68675aef42ed7c9ff8fd53d52a8375b73eb2dfcd276ce148113e3ab601622",
+  "groups": {
+    "mac_compile.args": [
+      {
+        "path": "src_fpga/simulation/assets/define.v"
+      },
+      {
+        "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v"
+      },
+      {
+        "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.v"
+      }
+    ],
+    "filter_compile.args": [
+      {
+        "path": "src_fpga/rtl/td_sdp_ram40.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_y_window4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_sobel4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_scale_arbiter4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_multiscale4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_gaussian4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_line_ram32x1024.v"
+      },
+      {
+        "path": "src_fpga/rtl/anlogic2026.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_filter_decoupled4.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_stream_fork2.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_rgb_delay96.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_luma_blend4.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_filter_color4.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_filter_color_analysis4.v"
+      },
+      {
+        "path": "src_fpga/rtl/full_filter_y_window4.v"
+      },
+      {
+        "path": "src_fpga/rtl/full_filter_sobel4.v"
+      },
+      {
+        "path": "src_fpga/rtl/full_filter_multiscale4.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_mark_hint4.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_candidate_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_sparse_extension_checker.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_sparse_serial4.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_quarter_fifo4_to1.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_sync_fifo.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_winner_pair_lutram.v"
+      },
+      {
+        "path": "src_fpga/rtl/lane_ridge_candidates1_lutram.v"
+      }
+    ],
+    "compile.args": [
+      {
+        "td_model": "sim_release/ph1/ph1_phy_gsr.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_event_fifo_47x512/RTL/camera_event_fifo_47x512_soft_fifo_core.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_event_fifo_47x512/RTL/camera_event_fifo_47x512_soft_fifo.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v"
+      },
+      {
+        "path": "src_fpga/rtl/control_fifo_40x512.v"
+      },
+      {
+        "path": "src_fpga/rtl/control_message_fifo_ip.v"
+      },
+      {
+        "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.v"
+      },
+      {
+        "path": "src_fpga/ip/debug_uart/uart.enc.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_control.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_isolation.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_clocks.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_probe.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_geometry_probe.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_stream_monitor.v"
+      },
+      {
+        "path": "src_fpga/rtl/pcie_stream_monitor.v"
+      },
+      {
+        "path": "src_fpga/rtl/f_camera_geometry_monitor.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_session_controller.v"
+      },
+      {
+        "path": "src_fpga/rtl/single_slot_credit_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_uart_status.v"
+      },
+      {
+        "path": "src_fpga/rtl/isp_line_ram_40x1024.v"
+      },
+      {
+        "path": "src_fpga/rtl/native_frame_descriptor.v"
+      },
+      {
+        "path": "src_fpga/rtl/td_sdp_ram.v"
+      },
+      {
+        "path": "src_fpga/rtl/td_dsp_mult.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_fdct1d.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_dct8x8_pipeline.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_stream.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_table_rom.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_rom10x2048.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_recip_rom40x512.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_rom20x1024.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quality_controller.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_pipeline4.v"
+      },
+      {
+        "path": "src_fpga/rtl/neutral_observer.v"
+      },
+      {
+        "path": "src_fpga/rtl/neutral_record_observer4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_gray4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_hist_eq4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_hist_lane.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_stream_fifo2.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_count_ram24x512.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_line_ram96x1024.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_lut_ram8x512.v"
+      },
+      {
+        "path": "src_fpga/rtl/record_format_bar.v"
+      },
+      {
+        "path": "src_fpga/rtl/record_format_service.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_record_extension_builder.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_record_metadata_gate.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_metadata_read_arbiter.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_record_metadata_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_frame_ring.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_frame_bar.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_frame_service.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_retire_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_frame_admission.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg/jpeg_rgb_to_ycbcr_422.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_mcu_packed_plane.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_mcu_422.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_dct8x8.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_quant_zigzag.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_huff_ac_rom.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_entropy.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_file_formatter.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_byte_packer.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_encoder_top.v"
+      },
+      {
+        "path": "src_fpga/rtl/axis_frame_fifo_ip.v"
+      },
+      {
+        "path": "src_fpga/rtl/ordered_frame_ingress.v"
+      },
+      {
+        "path": "src_fpga/rtl/ordered_frame_egress.v"
+      },
+      {
+        "path": "src_fpga/rtl/reset_release_sync.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_admission_qualification.v"
+      },
+      {
+        "path": "src_fpga/rtl/ordered_frame_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_ddr_frame_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr3_jpeg_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr_axi_two_client_arbiter.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_frame_tx.v"
+      },
+      {
+        "path": "src_fpga/rtl/pcie_inband_header_adapter.v"
+      },
+      {
+        "path": "src_fpga/rtl/h2c_stream_checker.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_blc.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_row_window.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_demosaic.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_isp_top.v"
+      },
+      {
+        "path": "src_fpga/rtl/gamma_lut_10to8.v"
+      },
+      {
+        "path": "src_fpga/rtl/wide_color_pipeline.v"
+      },
+      {
+        "path": "src_fpga/rtl/shared_wide_isp.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_capture_drain_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_capture_source_router.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_configured_capture_frontend.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_common_time_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_config_fanout_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_config_extension_validate.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_source_config_bootstrap.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_job_config_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_raw_crop.v"
+      },
+      {
+        "path": "src_fpga/rtl/rgb_axis_packer.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_rgb_pipeline.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_frame_source_fence.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_product_abort_drain4.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/axi_matrix_4to1_ip_axi_matrix_wrapper.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/axi_matrix_4to1_ip.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/matrix_response_fifo_147x32_soft_fifo_core.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/matrix_response_fifo_147x32_soft_fifo.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/matrix_response_fifo_147x32.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/anlogic2026_s08_boundaries.sv"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_he_color4.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_div_fixed/he_div_32u24u_l16/RTL/he_div_32u24u_l16_divider_top.sv"
+      },
+      {
+        "path": "src_fpga/ip/dsp_div_fixed/he_div_32u24u_l16/he_div_32u24u_l16.v"
+      },
+      {
+        "path": "src_fpga/rtl/source_terminal_broadcast.v"
+      },
+      {
+        "path": "src_fpga/rtl/dehaze_dcp_restore4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_live_f21_pipeline4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_live_f21_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_live_lane_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_record_v3_join.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/gamma_rom_8x1024_ip_sim.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/RTL/mult_19s14s_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/RTL/mult_19s14s_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/mult_19s14s_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/RTL/mult_25u16u_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/RTL/mult_25u16u_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/mult_25u16u_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/RTL/mult_14u10u_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/RTL/mult_14u10u_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/mult_14u10u_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_15s11s_p1/RTL/mult_15s11s_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_15s11s_p1/RTL/mult_15s11s_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_15s11s_p1/mult_15s11s_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/RTL/mult_17s9s_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/RTL/mult_17s9s_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/mult_17s9s_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_8u8u_p1/RTL/mult_8u8u_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_8u8u_p1/RTL/mult_8u8u_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_8u8u_p1/mult_8u8u_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier_top.v"
+      },
+      {
+        "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.v"
+      },
+      {
+        "path": "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/div_19s14s_q8_divider_top.sv"
+      },
+      {
+        "path": "src_fpga/simulation/assets/div_19s14s_q8.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane0_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane1_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane2_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane3_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane4_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane5_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane6_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_q_lane7_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_recip_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/jpeg_rom_huff_sim.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_block_cache3.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_lz77_decoder.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_raw10_predictor.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_raw10_gearbox.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_block_encoder.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_block_decoder.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_block_transaction.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_block_fetch.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_crc32_adapter.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/cfs_read_locator.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/cfs_div_32u16u_l28_divider_top.sv"
+      },
+      {
+        "path": "src_fpga/simulation/assets/cfs_div_32u16u_l28.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_cfs_frame_backend.v"
+      },
+      {
+        "td_model": "sim_release/common/al_map_basic.v"
+      },
+      {
+        "td_model": "sim_release/common/al_map_lut.v"
+      },
+      {
+        "path": "src_fpga/ip/cfs_crc_fixed/cfs_crc32_32/cfs_crc32_32_gate.v"
+      },
+      {
+        "path": "src_fpga/ip/cfs_crc_fixed/cfs_crc32_p1/cfs_crc32_p1_gate.v"
+      },
+      {
+        "path": "src_fpga/ip/cfs_crc_fixed/cfs_crc32_p2/cfs_crc32_p2_gate.v"
+      },
+      {
+        "path": "src_fpga/ip/cfs_crc_fixed/cfs_crc32_p3/cfs_crc32_p3_gate.v"
+      },
+      {
+        "path": "src_fpga/rtl/fpga_debug_local_stop.v"
+      },
+      {
+        "path": "src_fpga/rtl/pcie_inband_header_adapter_legacy.v"
+      },
+      {
+        "path": "src_fpga/rtl/pcie_header_extension_ram.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr_extension_staging_ram.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_config_preset_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_packet_ram.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_bar_cq.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_native_packetizer.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_native_rx_transport.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_native_fence_listener.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_rgb_native_adapter4.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr_axi_four_client_arbiter.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr_axi_three_client_arbiter.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr_response_fifo_ip.v"
+      },
+      {
+        "path": "src_fpga/rtl/frame_pair_manager.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_merge4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_canonical_read_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_ddr_read_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_job_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_native_source_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_product_terminal_join.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_raw_capture_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_raw14_pair_adapter4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_raw14_shared_transport4.v"
+      },
+      {
+        "path": "src_fpga/rtl/motion_ddr_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/motion_history_store4.v"
+      },
+      {
+        "path": "src_fpga/rtl/native_rgb4_frame_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/nr_dfi_phase_fifo_pair4.v"
+      },
+      {
+        "path": "src_fpga/rtl/nr_original_stats_cdc4.v"
+      },
+      {
+        "path": "src_fpga/rtl/nr_original_stats_source4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_binary_window4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_morphology4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_motion_projection4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_motion4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_subpixel3.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_temporal_nr_blend4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_temporal_nr4.v"
+      },
+      {
+        "path": "src_fpga/rtl/private_raw_isp_pipeline4.v"
+      },
+      {
+        "path": "src_fpga/rtl/private_rgb_nr_pipeline4.v"
+      },
+      {
+        "path": "src_fpga/rtl/r8_stage3_canonical_hdr_read.v"
+      },
+      {
+        "path": "src_fpga/rtl/r8_stage3_hdr_pair_source.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_capture_fifo_ip.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_frame_bar.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_frame_service.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_frame_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_hdr_phase_scheduler4.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_job_ticket_context_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_command_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_job_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_job_service.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_pixel_context.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_processing_context_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_processing_context_ticket.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_processing_service.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_pair_replay_scheduler.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_physical_mono_job_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_private_jpeg_event_bridge.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_private_nr_pipeline4.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_processing_source_ticket_gate.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_replay_context_boundary.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw10_frame_ingress.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw10_frame_replay.v"
+      },
+      {
+        "path": "src_fpga/rtl/rgb_product_retire_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/shared_raw10_decoder.v"
+      },
+      {
+        "path": "src_fpga/rtl/shared_raw10_decoder_masked.v"
+      },
+      {
+        "path": "src_fpga/rtl/shared_raw10_decode_service.v"
+      },
+      {
+        "path": "src_fpga/rtl/staged_motion_nr_pixel_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/staged_motion_nr_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/temporal_history_store4.v"
+      },
+      {
+        "path": "src_fpga/rtl/temporal_nr_ddr_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/temporal_nr_pixel_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/temporal_nr_staging_service4.v"
+      },
+      {
+        "path": "src_fpga/rtl/temporal_rgb_staging_store4.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_directory.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_bank_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_capture_writer.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_read_cursor.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_pixel_reader.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_context_cache.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_tone96_shared4.v"
+      },
+      {
+        "path": "src_fpga/rtl/private_raw_isp_borrow4.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_rgb_native_borrow4.v"
+      },
+      {
+        "path": "src_fpga/rtl/private_rgb_source_borrow4.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_he_div_32u24u_iter16.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/tone96_rom0_sim.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/tone96_rom1_sim.v"
+      },
+      {
+        "path": "src_fpga/rtl/stage3_production_boot.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_csi_word_core.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_csi_rx_stream.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/physical_csi_rx.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_camera_crop.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_capture_router.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_camera_rgb_pipeline.v"
+      },
+      {
+        "path": "src_fpga/rtl/physical_identity_source_fence.v"
+      },
+      {
+        "path": "src_fpga/rtl/production_source_identity_guard.v"
+      },
+      {
+        "path": "src_fpga/rtl/csi2_async_event_fifo.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_event_fifo_47x8192/RTL/camera_event_fifo_47x8192_soft_fifo.v"
+      },
+      {
+        "path": "src_fpga/ip/camera_event_fifo_47x8192/RTL/camera_event_fifo_47x8192_soft_fifo_core.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_byte_store_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_legacy_scan_v1.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_scan_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_bar_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_engine_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_service_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_config_narrow_gate_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/mono_pcie_app_regs_v2.v"
+      },
+      {
+        "path": "src_fpga/rtl/shared_raw10_frame_ingress.v"
+      },
+      {
+        "path": "src_fpga/rtl/shared_raw_capture_writer.v"
+      },
+      {
+        "path": "src_fpga/rtl/full_raw_capture_frontend.v"
+      },
+      {
+        "path": "src_fpga/rtl/full_raw_store.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfs_snapshot_cache2.v"
+      },
+      {
+        "path": "src_fpga/rtl/ordered_frame_fifo_fence.v"
+      },
+      {
+        "path": "src_fpga/rtl/production_soft_reset_fence.v"
+      },
+      {
+        "path": "src_fpga/rtl/product_pcie_transport.v"
+      },
+      {
+        "path": "src_fpga/rtl/product_record_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/lz_export_byte_append32.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_rgb_native_fixed1080_borrow4.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw10_append5.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_metadata_append5.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_mcu_read_align8.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_ring_cold_bank.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_application_stop_dfi.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_gray_pending4.v"
+      },
+      {
+        "path": "src_fpga/rtl/preprocess_stream_pending2.v"
+      },
+      {
+        "path": "src_fpga/rtl/parallel_result_eram.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/c2h_pcie_endpoint_model.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/tb_c2h_host_memory.v"
+      },
+      {
+        "path": "src_fpga/rtl/c2h_link_supervisor.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_csi_word_core.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_csi_dual_word_rx.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_member_crop10.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_csi_capture_stream.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_pair_cycle_gate.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_event_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_sensor_clock_mux.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_sensor_config.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_physical_csi_rx.v"
+      },
+      {
+        "path": "src_fpga/rtl/real_hdr_camera_observe_axis.v"
+      },
+      {
+        "path": "src_fpga/rtl/dual_raw_capture_frontend.v"
+      },
+      {
+        "path": "src_fpga/rtl/dol2_axi_write_arbiter.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_bank_owner_dual.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_eye_shared.v"
+      },
+      {
+        "path": "src_fpga/rtl/hdr_pair_bank_owner_serial.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_hdr2_config_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_hdr2_recipe_rom.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_sensor_pll_25m.v"
+      },
+      {
+        "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_align.v"
+      },
+      {
+        "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_gear_box.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_config.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_mode_table.v"
+      },
+      {
+        "path": "src_fpga/rtl/camera_i2c_write.v"
+      },
+      {
+        "path": "src_fpga/ip/vendor/anlogic_camera/sensor/ui_imx415_reg.v"
+      },
+      {
+        "path": "src_fpga/simulation/assets/word_phy_boundary.sv"
+      },
+      {
+        "path": "src_fpga/rtl/physical_pair_config_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/paired_raw_capture_drain_cdc.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_capture_fifo_eram_safe.v"
+      },
+      {
+        "path": "src_fpga/rtl/ddr_response_bank16.v"
+      },
+      {
+        "path": "src_fpga/rtl/jpeg_product_owner.v"
+      },
+      {
+        "path": "src_fpga/simulation/tb_hdr_jpeg.sv"
+      },
+      {
+        "path": "src_fpga/rtl/stream_reset_boundary2.v"
+      },
+      {
+        "path": "src_fpga/rtl/source_terminal_sync_boundary.v"
+      },
+      {
+        "path": "src_fpga/rtl/uart_observer_snapshot.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfg_diag_snapshot.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfg_diag_user.v"
+      },
+      {
+        "path": "src_fpga/rtl/cfg_diag_pixel.v"
+      },
+      {
+        "path": "src_fpga/rtl/uart_status_observer.v"
+      },
+      {
+        "path": "src_fpga/rtl/csi_rx_byte_align_observed.v"
+      },
+      {
+        "path": "src_fpga/rtl/csi_rx_word_align_observed.v"
+      },
+      {
+        "path": "src_fpga/rtl/ph1a_rx_delay_scan.v"
+      },
+      {
+        "path": "src_fpga/rtl/rx_first_loss_trace.v"
+      },
+      {
+        "path": "src_fpga/rtl/reset_release_sync_data.v"
+      },
+      {
+        "path": "src_fpga/rtl/sdr_camera_raw_frontend.v"
+      },
+      {
+        "path": "src_fpga/rtl/sdr_physical_csi_rx.v"
+      },
+      {
+        "path": "src_fpga/rtl/stereo_capture_source4.v"
+      },
+      {
+        "path": "src_fpga/rtl/stereo_cold_control.v"
+      },
+      {
+        "path": "src_fpga/rtl/stereo_raw_owner.v"
+      },
+      {
+        "path": "src_fpga/rtl/stereo_raw_reader.v"
+      },
+      {
+        "path": "src_fpga/rtl/stereo_raw_store.v"
+      },
+      {
+        "path": "src_fpga/simulation/dual_csi_word_source.sv",
+        "modes": [
+          "dual"
+        ]
+      },
+      {
+        "path": "src_fpga/simulation/tb_dual_imx415.sv",
+        "modes": [
+          "dual"
+        ]
+      },
+      {
+        "path": "src_fpga/rtl/hdr_csi_boundary_adapter.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_sensor_recipe.v"
+      },
+      {
+        "path": "src_fpga/rtl/imx415_sensor_config.v"
+      },
+      {
+        "path": "src_fpga/rtl/raw_video_record_formatter.v"
+      }
+    ]
+  },
+  "models": [
+    "sim_release/common/al_phy_glbl.v",
+    "sim_release/ph1/ph1_logic_dram.v",
+    "sim_release/ph1/ph1_logic_eram.v",
+    "sim_release/ph1/ph1_logic_fifo.v",
+    "sim_release/ph1/ph1_logic_ramfifo.v",
+    "sim_release/ph1/ph1_phy_eram.v",
+    "sim_release/ph1/ph1_phy_fifoctrl.v",
+    "sim_release/ph1/ph1_logic_mult.v",
+    "sim_release/ph1/ph1_phy_dspmult.v",
+    "sim_release/ph1/ph1_phy_dspmult_v2.v",
+    "sim_release/ph1/ph1_phy_dspsiou.v",
+    "sim_release/ph1/ph1_phy_dspadd_v2.v",
+    "sim_release/ph1/ph1_phy_dsptadd_v2.v",
+    "sim_release/ph1/ph1_phy_dsplogic_v2.v",
+    "sim_release/ph1/ph1_logic_clk.v",
+    "sim_release/ph1/ph1_phy_pll.v",
+    "sim_release/ph1/ph1_phy_gclk_v2.v"
+  ],
+  "include_dirs": [
+    "src_fpga/rtl/include/00_rtl",
+    "src_fpga/rtl/include/01_include",
+    "src_fpga/rtl/include/02_jpeg",
+    "src_fpga/rtl/include/03_mono_config_v2_20261015",
+    "src_fpga/rtl/include/04_include",
+    "src_fpga/simulation/assets",
+    "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL",
+    "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1",
+    "src_fpga/rtl",
+    "src_fpga/ip/camera_packet_fifo_147x512/RTL",
+    "src_fpga/ip/camera_packet_fifo_147x512",
+    "src_fpga/ip/camera_event_fifo_47x512/RTL",
+    "src_fpga/ip/camera_event_fifo_47x512",
+    "src_fpga/ip/camera_control_fifo_40x512/RTL",
+    "src_fpga/ip/camera_control_fifo_40x512",
+    "src_fpga/ip/isp_line_ram_20x1024_ip",
+    "src_fpga/ip/debug_uart",
+    "src_fpga/ip/dsp_div_fixed/he_div_32u24u_l16/RTL",
+    "src_fpga/ip/dsp_div_fixed/he_div_32u24u_l16",
+    "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1",
+    "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1",
+    "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1",
+    "src_fpga/ip/dsp_mult_fixed/mult_15s11s_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_15s11s_p1",
+    "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1",
+    "src_fpga/ip/dsp_mult_fixed/mult_8u8u_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_8u8u_p1",
+    "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/RTL",
+    "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1",
+    "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed",
+    "src_fpga/ip/cfs_crc_fixed/cfs_crc32_32",
+    "src_fpga/ip/cfs_crc_fixed/cfs_crc32_p1",
+    "src_fpga/ip/cfs_crc_fixed/cfs_crc32_p2",
+    "src_fpga/ip/cfs_crc_fixed/cfs_crc32_p3",
+    "src_fpga/ip/camera_event_fifo_47x8192",
+    "src_fpga/ip/camera_event_fifo_47x8192/RTL",
+    "src_fpga/ip/vendor/anlogic_camera/phy",
+    "src_fpga/ip/vendor/anlogic_camera/sensor",
+    "src_fpga/simulation"
+  ],
+  "boundary_models": [
+    "src_fpga/simulation/assets/anlogic2026_s08_boundaries.sv",
+    "src_fpga/simulation/assets/c2h_pcie_endpoint_model.v",
+    "src_fpga/simulation/assets/tb_c2h_host_memory.v",
+    "src_fpga/simulation/assets/word_phy_boundary.sv"
+  ],
+  "asset_provenance": [
+    {
+      "path": "src_fpga/simulation/assets/preprocess_lane_candidates_reference.py",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/simulation/preprocess_lane_candidates_reference.py",
+      "original_sha256": "22ee098f4a307763d1f80fd7582d639080759696eacfab7b78ff818e3fd24e06",
+      "note": "Byte-identical existing generic four-strip scalar oracle; no DUT RTL or trace is used for expected statistics."
+    },
+    {
+      "path": "src_fpga/simulation/assets/define.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/stages/r8_stage3/pending/dsp_mac_20261014/ip/fdct_mac19s14s_z33s_p34_m1p1/RTL/include/define.v",
+      "original_sha256": "1aa6bd308b466f66d04eb519b8611b848d6c70cd986a2481beda4145faa1e1da"
+    },
+    {
+      "path": "src_fpga/simulation/assets/axi_matrix_4to1_ip_axi_matrix_wrapper.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/axi_matrix_4to1/axi_matrix_4to1_ip/RTL/axi_matrix_4to1_ip_axi_matrix_wrapper.v",
+      "original_sha256": "1861425d7e0badc28a2606e2ff639393c1db4753999657b70030becb571567f4"
+    },
+    {
+      "path": "src_fpga/simulation/assets/axi_matrix_4to1_ip.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/axi_matrix_4to1/axi_matrix_4to1_ip/axi_matrix_4to1_ip.v",
+      "original_sha256": "7787ef7462b7da7457fb494a985097f178204bf81f78a8098eaec1eaf442634d"
+    },
+    {
+      "path": "src_fpga/simulation/assets/matrix_response_fifo_147x32_soft_fifo_core.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/matrix_response_fifo_147x32/RTL/matrix_response_fifo_147x32_soft_fifo_core.v",
+      "original_sha256": "d5ff80bfe33d520aaf7462569ba892fc25878ae112fabf71bedeb00d68c04a2d"
+    },
+    {
+      "path": "src_fpga/simulation/assets/matrix_response_fifo_147x32_soft_fifo.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/matrix_response_fifo_147x32/RTL/matrix_response_fifo_147x32_soft_fifo.v",
+      "original_sha256": "5b29bef48e659cf2e2e068fd31eee0fb40f74876ea6a11daecd80cda15c82208"
+    },
+    {
+      "path": "src_fpga/simulation/assets/matrix_response_fifo_147x32.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/matrix_response_fifo_147x32/matrix_response_fifo_147x32.v",
+      "original_sha256": "0244dfe59d6bfdeaeaa46591885284852f0ff04e3308f29a7d85cfb28d0bd95b"
+    },
+    {
+      "path": "src_fpga/simulation/assets/anlogic2026_s08_boundaries.sv",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/stages/r8_stage3/pending/full_opt_validation_20261015/tests/main/anlogic2026_s08_boundaries.sv",
+      "original_sha256": "43e0671724dbfd23dc32f10377c683f00e059a22f649b62b6b915cfad6aeb791"
+    },
+    {
+      "path": "src_fpga/simulation/assets/gamma_rom_8x1024_ip_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/gamma_rom_8x1024_ip_sim.v",
+      "original_sha256": "f8829c75e626fe4676190d331c8e59079b7bc5c7321f8bd521911fdc9f538e58"
+    },
+    {
+      "path": "src_fpga/simulation/assets/div_19s14s_q8_divider_top.sv",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/dsp_div_fixed/div_19s14s_q8/RTL/div_19s14s_q8_divider_top.sv",
+      "original_sha256": "132123189fe54c76c7048f57377a817dd1d45070f70bbf9df9cc95232e83baa7"
+    },
+    {
+      "path": "src_fpga/simulation/assets/div_19s14s_q8.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/dsp_div_fixed/div_19s14s_q8/div_19s14s_q8.v",
+      "original_sha256": "72a0946f6b4e902922f799ea8c6a61991eae584753536243d9f0e0ec4d6d6d25"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane0_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane0_sim.v",
+      "original_sha256": "ab2fc59419d4c0f6bc440f3d539a589f91f8c924fcb72d1c24153ad0eaa73edf"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane1_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane1_sim.v",
+      "original_sha256": "cea30a0818cd4ff921db0540701c3ecc768d685f9f29301770d2d9b9b8b8c5b2"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane2_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane2_sim.v",
+      "original_sha256": "d679f148c96538f2575982dc8ecb8fba5007b4c5240310d5757f7ff97362c955"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane3_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane3_sim.v",
+      "original_sha256": "3ec3e65b36afec5785794a4526edcd8845adcbb0948dbd60667d6b8cc7753016"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane4_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane4_sim.v",
+      "original_sha256": "8b13831e9becd695e6fdc099f6a3b183daff465bdf5c6124a43625662645efe1"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane5_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane5_sim.v",
+      "original_sha256": "0650726971e55e8eba7113ee08e4102efdaaa6e21c86875699e440f3aa7af4f9"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane6_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane6_sim.v",
+      "original_sha256": "10424adeaeb16df856b77792759b307d5769d42d3026a4ae3fed2cbccfe6ab73"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_q_lane7_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_q_lane7_sim.v",
+      "original_sha256": "c7dead9168259691666e33e98d56c763e09fb325b394b8d056108b273964d498"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_recip_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_recip_sim.v",
+      "original_sha256": "df902b574176d70a12735cea649a75337c1a28e0e1987640fc1b4bf41f14c0c2"
+    },
+    {
+      "path": "src_fpga/simulation/assets/jpeg_rom_huff_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/jpeg_rom_huff_sim.v",
+      "original_sha256": "e3011c54aaeb111218a190509a38b93fd67dc360f9551f568ddd764fe26ae5b6"
+    },
+    {
+      "path": "src_fpga/simulation/assets/cfs_read_locator.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/rtl/cfs/cfs_read_locator.v",
+      "original_sha256": "f041aa64b83ada7dbdc6641d98e175a3ebd477297afcab5a3948f81191f626e3"
+    },
+    {
+      "path": "src_fpga/simulation/assets/cfs_div_32u16u_l28_divider_top.sv",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/dsp_div_fixed/cfs_div_32u16u_l28/RTL/cfs_div_32u16u_l28_divider_top.sv",
+      "original_sha256": "af917d84acaafdd2299ff81d47d9883522ad10aece46289b27670461cb99056c"
+    },
+    {
+      "path": "src_fpga/simulation/assets/cfs_div_32u16u_l28.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/ip/dsp_div_fixed/cfs_div_32u16u_l28/cfs_div_32u16u_l28.v",
+      "original_sha256": "a00d570960849dc552d95f3d587ee2a70990b7f81f132a8044a5b549205ab6f7"
+    },
+    {
+      "path": "src_fpga/simulation/assets/tone96_rom0_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/tone96_sim/tone96_rom0_sim.v",
+      "original_sha256": "a2850c363fe60947614c0509cfa97ba35f4e833b3ef1a84f43be968527950646"
+    },
+    {
+      "path": "src_fpga/simulation/assets/tone96_rom1_sim.v",
+      "original": "C:/fpga_workspace/anlogic-task3/tmp/r8_stage3/timing_20261018/r4_lz_main/tone96_sim/tone96_rom1_sim.v",
+      "original_sha256": "43bc1ff966220e569491cdce51259ae45a46db9081743fa3fc8ee03f039b029b"
+    },
+    {
+      "path": "src_fpga/simulation/assets/physical_csi_rx.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/stages/r8_stage3/p95/r3/src_fpga/stages/r8_stage3/pending/production_full_20261015/rtl/physical_csi_rx.v",
+      "original_sha256": "2922f759f2594dbbb6a2915a2d0db16ec66158cfc22407d656de75510dcfb0de"
+    },
+    {
+      "path": "src_fpga/simulation/assets/c2h_pcie_endpoint_model.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/stages/r8_stage3/pending/full_opt_validation_20261015/tests/main/c2h_pcie_endpoint_model.v",
+      "original_sha256": "99efb723ed905358e3770d5534b102f20e56cc9542042392e57c212f68a37f2d"
+    },
+    {
+      "path": "src_fpga/simulation/assets/tb_c2h_host_memory.v",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/stages/r8_stage3/pending/full_opt_validation_20261015/tests/main/tb_c2h_host_memory.v",
+      "original_sha256": "dbd6fd4f53dae9be3853fe2516675bad113039fcc400436ad703d85988158c43"
+    },
+    {
+      "path": "src_fpga/simulation/assets/word_phy_boundary.sv",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/stages/r8_stage3/pending/real_hdr_20261018/frontend/tests/word_phy_boundary.sv",
+      "original_sha256": "3c227b7f20035bb47253f747fc6e5debda4bec5062f50ed835ec2ab8180de7dc"
+    },
+    {
+      "path": "src_fpga/simulation/assets/anlogic2026_s04_uart_tasks.vh",
+      "original": "C:/fpga_workspace/anlogic-task3/src_fpga/simulation/anlogic2026_s04_uart_tasks.vh",
+      "original_sha256": "a938b721daa263a96deb414147a9c655b44e0f02ab90dfbc118442afc644b8c8"
+    }
+  ],
+  "simulation_overrides": {
+    "HDR_WARMUP_PAIRS": 1,
+    "HDR_I2C_HALF_PERIOD": 4,
+    "SDR_WAIT_CYCLES": 4,
+    "SDR_I2C_HALF_PERIOD": 4,
+    "HDR_RESET_HOLD_CYCLES": 4,
+    "HDR_RELEASE_WAIT_CYCLES": 4,
+    "HDR_REGULATOR_WAIT_CYCLES": 4
+  },
+  "local_rom_initializers": {
+    "gamma22_10to8.mif.dath": "src_fpga/rtl/isp/color/gamma22_10to8.mif",
+    "ac_huffman.mif.dath": "src_fpga/rtl/jpeg/quant_data/ac_huffman.mif",
+    "lane0_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane0_q.mif",
+    "lane1_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane1_q.mif",
+    "lane2_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane2_q.mif",
+    "lane3_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane3_q.mif",
+    "lane4_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane4_q.mif",
+    "lane5_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane5_q.mif",
+    "lane6_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane6_q.mif",
+    "lane7_q.mif.dath": "src_fpga/rtl/jpeg/quant_data/lane7_q.mif",
+    "reciprocal.mif.dath": "src_fpga/rtl/jpeg/quant_data/reciprocal.mif",
+    "tone96_0.mif.dath": "src_fpga/ip/coefficients/tone96_0.mif",
+    "tone96_1.mif.dath": "src_fpga/ip/coefficients/tone96_1.mif"
+  },
+  "isolation_note": "Historical origin/provenance strings are metadata only. Executed groups resolve from this candidate and all ROM model inputs are regenerated from the explicit local MIF map.",
+  "mode_simulation_overrides": {
+    "dual": {
+      "STEREO_CAPTURE_DIVISOR": 1,
+      "COLOR_CONFIG_DEFAULT": "0x040",
+      "COLOR_WB_DEFAULT": "0x10040100",
+      "CAMERA0_SDR_WAIT_CYCLES": 4,
+      "CAMERA0_SDR_I2C_HALF_PERIOD": 4,
+      "CAMERA1_CONFIG_WAIT_CYCLES": 4,
+      "CAMERA1_I2C_HALF_PERIOD": 4,
+      "REQUEST_MODE": 1,
+      "REQUEST_FRAME_DIVISOR": 1,
+      "REQUEST_JPEG_QUALITY": 80,
+      "READONLY_UART_ENABLE": 1,
+      "READONLY_UART_REPORT_CYCLES": 250000
+    }
+  },
+  "test_scope": "Dual compile-only/full functional entry exists; bounded short qualification does not assert sustained FPS",
+  "removed_dehaze_compile_inputs_20261031": [
+    "src_fpga/rtl/fixed_dehaze_lut_control.v",
+    "src_fpga/rtl/preprocess_dehaze_map.v",
+    "src_fpga/rtl/native_dehaze_pipeline4.v",
+    "src_fpga/rtl/preprocess_dehaze_apply4.v",
+    "src_fpga/rtl/preprocess_dehaze4.v",
+    "src_fpga/rtl/preprocess_light_haze_stats.v",
+    "src_fpga/rtl/preprocess_light_haze_row.v",
+    "src_fpga/rtl/preprocess_light_haze_restore4.v",
+    "src_fpga/rtl/preprocess_light_haze_rgb4.v",
+    "src_fpga/rtl/algo_lut_control_service.v",
+    "src_fpga/rtl/pixel_lut_config_lease.v"
+  ]
+}

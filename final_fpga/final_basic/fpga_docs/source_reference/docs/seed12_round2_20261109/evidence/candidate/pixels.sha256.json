@@ -1,0 +1,18 @@
+[
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\tmp\\seed12_round2_20261109\\hdr_reader_bb\\run01\\candidate\\first.pixels",
+    "sha256": "3b868afea7b28ea0ee744ea0539b537afa2dd5375d14d158eb47e18cbb081c39"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\tmp\\seed12_round2_20261109\\hdr_reader_bb\\run01\\candidate\\full.pixels",
+    "sha256": "5f772acac60b1e25312d70aa00184f93d7d80dc6dc8163c317882a8ab3313bc2"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\tmp\\seed12_round2_20261109\\hdr_reader_bb\\run01\\candidate\\cancel.pixels",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "C:/fpga_workspace/anlogic-task3\\tmp\\seed12_round2_20261109\\hdr_reader_bb\\run01\\candidate\\recovery.pixels",
+    "sha256": "25530711ebebb74e3eb44bf7498412c4567b2956d5297e37daae91af02b863ed"
+  }
+]

@@ -1,0 +1,14 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 21:30:13 on Nov 10,2026
+vlog -work work <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\reset_data_qual_r2_20261110\inputs\common\reset_release_sync.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\reset_data_qual_r2_20261110\inputs\common\reset_release_sync_data.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\reset_data_qual_r2_20261110\inputs\common\hdr_pair_product_abort_drain4.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\reset_data_qual_r2_20261110\inputs\common\camera_rgb_native_fixed1080_borrow4.v <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\reset_data_qual_r2_20261110\inputs\candidate\private_raw_isp_borrow4.v 
+-- Compiling module reset_release_sync
+-- Compiling module reset_release_sync_data
+-- Compiling module hdr_pair_product_abort_drain4
+-- Compiling module camera_rgb_native_fixed1080_borrow4
+-- Compiling module private_raw_isp_borrow4
+
+Top level modules:
+	reset_release_sync
+	private_raw_isp_borrow4
+End time: 21:30:13 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,73 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -t ps -onfinish stop -L ph1 work.cfg_transition_tb ph1.glbl work.PH1_PHY_GSR "+case=stopped_reset" -do "do run.do" 
+# Start time: 18:54:53 on Nov 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v(69): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(52).
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v(69): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(52).
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 54, found 34.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'o_apply_diagnostics'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'diag_domain_reset_n'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'diag_domains'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_processing_enables'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_product_mode'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_legacy_gaussian'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_schema2'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_config'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'config_fault'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'pixel_initialized'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'user_initialized'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'user_session'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'restart_mcus'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'frame_budget'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'minimum_quality'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'adaptive_quality'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_quality'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'active_mode'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'o_user_stereo_compatible'.
+# ** Warning: C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(70): (vopt-2718) [TFMPC] - Missing connection for port 'o_user_transaction_idle'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=31.
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.cfg_transition_tb(fast)
+# Loading work.mono_config_service_v2(fast)
+# Loading ph1.glbl(fast)
+# Loading work.PH1_PHY_GSR(fast)
+# do run.do
+# CFG_EVIDENCE BOOT session=00000001 epoch=0 quality=75 time=2485000
+# CFG_EVIDENCE READY_AND_REMOTE seq=00000310 old_epoch=0 new_epoch=1 quality=78 schema_word=00002002 time=9469000
+# CFG_EVIDENCE ACCEPT_CAM0 seq=00000b80 pipeline_idle=0 source_fault=0 time=9696000
+# CFG_EVIDENCE CLOCK_STOP_RESET_INVALIDATED_PENDING_APPLY time=10651000
+# CFG_EVIDENCE BOOT session=00000001 epoch=0 quality=75 time=13133000
+# CFG_EVIDENCE READY_AND_REMOTE seq=00000311 old_epoch=0 new_epoch=1 quality=80 schema_word=00000802 time=20117000
+# CFG_EVIDENCE ACCEPT_CAM0 seq=00000ba0 pipeline_idle=1 source_fault=0 time=20836000
+# CFG_EVIDENCE APPLIED seq=00000311 epoch=1 first_cam0_seq=00000ba0 quality=80 schema_word=00000802 time=23341000
+# CFG_EVIDENCE PASS case=stopped_reset final_epoch=1 time=23341000
+# ** Note: $finish    : C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv(577)
+#    Time: 23341 ns  Iteration: 0  Instance: /cfg_transition_tb
+# Break at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv line 577
+# End time: 18:54:54 on Nov 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 31
+

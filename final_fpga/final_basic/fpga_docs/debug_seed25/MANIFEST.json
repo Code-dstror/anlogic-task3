@@ -1,0 +1,28 @@
+{
+  "project": "camera_raw_r2",
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "seed": 25,
+  "job": "manual-camera-r2-hdr-rate-20261110-syn16-48s4t-8e64f48baa674f98-s25",
+  "results_commit": "0a6ce37ac5dab18599beb5d8c91801d7e1557ca4",
+  "bit": {
+    "path": "../../fpga_prj/bit/camera_raw_r2_1a5603c1_seed25.bit",
+    "bytes": 4850315,
+    "sha256": "eee7eff50323a8a5c7ddc850d3873e1dda13473debbfe8a690bcb6bab17ac362"
+  },
+  "timing": {
+    "hold": 0.007,
+    "recovery": 2.838,
+    "removal": 0.002,
+    "setup": 0.001
+  },
+  "board": "NOT_RUN",
+  "reference": {
+    "source": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+    "seed": 56
+  },
+  "pending": [],
+  "manual_archive_sha256": "0a8681e342b691c55c7be5ec3abaf62ea020ee605c609977e80feb808d1ce19c",
+  "verification_channel": "GitHub 140 files + user manual supplement 9 files",
+  "original_verified_server_files": 149,
+  "packaging_note": "Selected evidence subset relocated from original complete debug package; see ../RELOCATION_CHECK.md"
+}

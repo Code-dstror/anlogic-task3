@@ -1,0 +1,27 @@
+{
+  "variant": "threshold",
+  "status": "PASS",
+  "exit_code": 0,
+  "elapsed_s": 40.625,
+  "wall_limit_s": 90,
+  "command": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "<PROJECT_ROOT>\\tools\\run_td.py",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold\\synth.tcl",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--workdir",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold",
+    "--log",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold\\td.log"
+  ],
+  "inputs": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\packer_keep_r2\\threshold\\jpeg_byte_packer.v": "2311b317d4cb1562ece416a14c26395644bc69d817f9e369bb6b20addb301ad2",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold\\jpeg_byte_packer.v": "2311b317d4cb1562ece416a14c26395644bc69d817f9e369bb6b20addb301ad2",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold\\packer_probe.v": "71634bf51025e5befabaf419a5f76e4b78f4b09419f6e46b1b86218fcfa1f14d",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold\\clock.sdc": "1bacfe53a23947a24148da57c84e0637d50a510a7799ae0b0c1a3242697effa6",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_keep_r2\\keep_a1\\threshold\\synth.tcl": "472906a4658e63e8a11632a22fce60d4623af60d83175279bb7de4ecc5ec24df",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\packer_keep_r2\\run_ab.py": "ce35bbe014df54ff083215406edd061ccc61e5d44859ede1f103a30f8c8fade9"
+  }
+}

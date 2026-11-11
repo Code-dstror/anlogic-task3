@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "status": "PASS_MINIMAL_SDR_INTEGRATION",
+  "candidate_root": "refactor/dual_sdr_lane_r1",
+  "baseline_commit": "5e302ae06ef4fff227e3030d31dc30e63b5dcb7e",
+  "latest_scope": "HDR hardware retained; SDR debugging only. Incomplete HDR removal withdrawn.",
+  "production_rtl_changes_by_this_test_task": [],
+  "withdrawn_hdr_work": {
+    "restored_to_baseline": [
+      "src_fpga/rtl/anlogic2026.v",
+      "src_fpga/rtl/full_raw_store.v"
+    ],
+    "never_modified": [
+      "src_fpga/rtl/raw_pair_job_service.v",
+      "src_fpga/rtl/raw_pair_processing_service.v",
+      "src_fpga/rtl/shared_wide_isp.v",
+      "src_fpga/rtl/wide_color_pipeline.v"
+    ],
+    "all_six_baseline_byte_hash_checks": "PASS",
+    "new_sdr_sink": "WITHDRAWN_FROM_RTL",
+    "hdr_functional_status": "UNRESOLVED_NOT_TESTED"
+  },
+  "tools": {
+    "td_root": "D:/App/TD_Release_2026.2.210.850",
+    "modelsim_bin": "D:/App/modelsim/win64",
+    "python": "python",
+    "execution": "Native Windows because restricted ModelSim startup failed WinError 623"
+  },
+  "frozen_reference_check": {
+    "status": "PASS",
+    "manifest": "BASELINE_INPUTS.json",
+    "verification_reference_files": 21,
+    "mismatches": []
+  },
+  "control": {
+    "status": "PASS_COLD_SELECT_APP_BUSY",
+    "command": "python -B -u src_fpga/simulation/stereo_startup_fix_r1/run_top.py --scenario control --name sdr_control_native_r1 --td-root D:/App/TD_Release_2026.2.210.850 --modelsim-bin D:/App/modelsim/win64",
+    "elapsed_seconds": 51.718,
+    "checks": 12,
+    "app_active_select_error": 2,
+    "production_rtl_warnings": 0,
+    "model_ip_warnings": 296,
+    "input_hash_recheck": "PASS",
+    "run_directory": "tmp/stereo_startup_fix_r1/sdr_control_native_r1",
+    "sha256": {
+      "qualification.json": "cf56717377b75e46b9937ff16ab37d2fa46ee412b06cc571b216cd38a5dedd98",
+      "source_identity.json": "5e7ef4d6e080e34535ba4b3dff8456a96341c60542464fe112a6b253c3fc0a9b",
+      "run.log": "b5e4ae898ddefb86b5b0c77ecb3f2531b0778afb5b31cdc7ee35db055bb9d9b0"
+    }
+  },
+  "mono_sparse_short": {
+    "status": "PASS_SDR_RUNTIME_SHORT",
+    "command": "python -B -u src_fpga/simulation/run_main.py --mode sdr --runtime-recovery short --runtime-profile sparse --name sdr_sparse_short_native_r2 --td-root D:/App/TD_Release_2026.2.210.850 --modelsim-bin D:/App/modelsim/win64",
+    "fixture_changes": [
+      "tb_hdr_jpeg.sv: SDR_WAKE_CYCLES=4 only in simulation; production default 600000 unchanged",
+      "runtime_recovery/top_runtime.vh: remove retired RT trace RAM wait/assertions; retain actual RX first-loss checks and all source/writer/history/recovery checks"
+    ],
+    "elapsed_seconds": 74.844,
+    "checks": 371,
+    "processing_enables": 48,
+    "negative_sources": 2,
+    "negative_writers": 2,
+    "ignored_boundaries": 2,
+    "recovered_sequence": 5,
+    "contexts": 3,
+    "receive_faults": 2,
+    "history_sofs": 2,
+    "history_clears": 2,
+    "busy_fault_cycles": 4916,
+    "successful_host_records": 0,
+    "production_rtl_warnings": 0,
+    "model_ip_warnings": 296,
+    "mono_fixture_unused_camera1_warnings": 7,
+    "warning_note": "The retained runner names all 303 non-production warnings vendor_warning_count. Seven are the mono fixture's existing six unconnected camera1 ports plus one too-few-ports summary.",
+    "input_hash_recheck": "PASS_BY_RUNNER_POST_RUN_CHECK",
+    "run_directory": "tmp/main/sdr_sparse_short_native_r2",
+    "sha256": {
+      "qualification.json": "781ceca7dce2c237bae276e570ba9e452a8341be9acd77c7c0dffeb73122488a",
+      "source_identity.json": "56bf4e26f6f2bc613ea04e1d4a8beb67808b2216ae55af6383c34437fec13cab",
+      "run.log": "63203e92f57856d27b451b717c1e8535689a5eaaed776b81b7b8238d72bec7f9"
+    }
+  },
+  "retained_unsuccessful_attempts": [
+    {
+      "run_directory": "tmp/stereo_startup_fix_r1/sdr_control_r1",
+      "status": "BLOCKED_TOOL_START",
+      "reason": "WinError 623 before vlib could execute in restricted Windows context"
+    },
+    {
+      "run_directory": "tmp/main/sdr_sparse_short_native_r1",
+      "status": "FAIL_TEST_FIXTURE_ELABORATION",
+      "reason": "Historical test referenced retired u_trace; corrected only in the test header before r2"
+    }
+  ],
+  "scope_limits": {
+    "full_two_eye_raw_rerun": "NOT_RUN",
+    "full_sdr_jpeg_success_and_byte_oracle": "NOT_RUN",
+    "hdr_functional": "NOT_RUN",
+    "synthesis": "NOT_RUN",
+    "place_route": "NOT_RUN",
+    "timing": "NOT_RUN",
+    "bitgen": "NOT_RUN",
+    "board": "NOT_RUN"
+  },
+  "owned_processes": "ALL_EXITED"
+}

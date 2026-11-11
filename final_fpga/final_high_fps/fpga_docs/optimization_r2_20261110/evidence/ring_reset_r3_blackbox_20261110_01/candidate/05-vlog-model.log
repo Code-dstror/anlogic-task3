@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:07:15 on Nov 10,2026
+vlog -work ph1 <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\common\al_phy_glbl.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v 
+-- Compiling module glbl
+-- Compiling module PH1_LOGIC_DRAM
+
+Top level modules:
+	glbl
+	PH1_LOGIC_DRAM
+End time: 22:07:16 on Nov 10,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

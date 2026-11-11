@@ -1,0 +1,29 @@
+{
+  "donor_commit": "6f9c72762bd88abdc13e3a0ee31fd7dc97e4ccb7",
+  "donor_qualification_inherited": false,
+  "files": [
+    {
+      "donor": "refactor\\dual_sdr_lane_r1\\src_fpga\\simulation\\extended_sdr_20261101\\dual_hd\\tb_extended_dual.sv",
+      "donor_sha256": "fd5551ee504d6d594ce0dc53f00a2f3eb6768e662031c91e14076428ffec21bc",
+      "path": "tb_unified_dual_rate.sv"
+    },
+    {
+      "donor": "refactor\\dual_sdr_lane_r1\\src_fpga\\simulation\\extended_sdr_20261101\\axi_boundaries.sv",
+      "donor_sha256": "078d6386f81a7029feeb8a5c16b5774cadebcc40b72c601857d7ee7f67abfcb2",
+      "path": "axi_boundaries.sv"
+    },
+    {
+      "donor": "refactor\\dual_sdr_lane_r1\\src_fpga\\simulation\\extended_sdr_20261101\\dual_reference.py",
+      "donor_sha256": "afe7d46a9fb5817b7d78d244cde591ad6ac7ed6e8afb94791eeb5fa03c82b8a5",
+      "path": "dual_reference.py"
+    }
+  ],
+  "changes": [
+    "Separate HD rate entry with fixed physical60/N2 deadlines",
+    "Actual v4 SELECT and actual AXI/host lifecycle",
+    "Q75 high detail, at least4 complete frames per eye",
+    "Real R/B gap counters and fixed-window output accounting",
+    "Current source/production SHA snapshot in independent runner",
+    "Old UART decoder excluded; real observer remains active"
+  ]
+}

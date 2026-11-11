@@ -1,0 +1,12 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:21:10 on Nov 10,2026
+vlog -work work -sv "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\00_rtl" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\01_include" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\03_mono_config_v2_20261015" "+incdir+<PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\include\04_include" <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\reset_release_sync.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\stereo_cold_control.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\rtl\mono_pcie_app_regs_v2.v <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_fusion_config\tb_fusion_cold.sv 
+-- Compiling module reset_release_sync
+-- Compiling module stereo_cold_control
+-- Compiling module mono_pcie_app_regs_v2
+-- Compiling module tb_fusion_cold
+
+Top level modules:
+	tb_fusion_cold
+End time: 18:21:10 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

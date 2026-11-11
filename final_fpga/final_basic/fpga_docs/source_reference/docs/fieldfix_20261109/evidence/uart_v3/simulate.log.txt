@@ -1,0 +1,41 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -onfinish stop work.tb_uart_cfg_v3 -do "onerror {quit -code 1}; run -all; quit -code 0" 
+# Start time: 18:56:35 on Nov 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_uart_cfg_v3(fast)
+# onerror {quit -code 1}
+#  Warning: onerror command for use within macro
+#  run -all
+# DONE_UART_CFG_V3 RUN events and SYS override sequence=1 fresh=11 reset_n=11
+# DONE_UART_CFG_V3 RUN down leaves counters held sequence=2 fresh=11 reset_n=11
+# DONE_UART_CFG_V3 next RUN clears and includes its first event sequence=3 fresh=11 reset_n=11
+# DONE_UART_CFG_V3 PIX stopped invalidates only PIX freshness sequence=4 fresh=01 reset_n=11
+# DONE_UART_CFG_V3 PIX stays stale with its clock stopped sequence=5 fresh=01 reset_n=11
+# DONE_UART_CFG_V3 PIX recovered with new CFG and SYS values sequence=6 fresh=11 reset_n=11
+# DONE_UART_CFG_V3 PIX business reset invalidates the page sequence=7 fresh=11 reset_n=01
+# DONE_UART_CFG_V3 PIX reset released with fresh counts sequence=8 fresh=11 reset_n=11
+# PASS_UART_CFG_V3 phases=8 packet_pairs=9
+# ** Note: $finish    : C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_uart_cfg_v3_20261109/tb_uart_cfg_v3.sv(321)
+#    Time: 361485 ns  Iteration: 1  Instance: /tb_uart_cfg_v3
+# Break at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_uart_cfg_v3_20261109/tb_uart_cfg_v3.sv line 321
+# Stopped at C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_uart_cfg_v3_20261109/tb_uart_cfg_v3.sv line 321
+#  quit -code 0
+# End time: 18:56:36 on Nov 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

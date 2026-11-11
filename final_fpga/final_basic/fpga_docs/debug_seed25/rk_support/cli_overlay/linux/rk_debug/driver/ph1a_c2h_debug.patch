@@ -1,0 +1,138 @@
+--- linux/dma_c2h_candidate/ph1a_c2h.c
++++ linux/rk_debug/driver/ph1a_c2h_debug.c
+@@ -18,11 +18,14 @@
+ #include "c2h_hw_abi.h"
+ #include "c2h_legacy_policy.h"
+ #include "c2h_lifecycle.h"
++#include "c2h_debug_uapi.h"
++#include "debug_reset_guard.h"
+ 
+ static unsigned int slots = 4, capacity = C2H_MAX_RECORD_BYTES;
+ static unsigned int poll_ms = 1, drain_ms = 2000, dma_bits = 64;
+ static bool irq_hint;
+ static char *target_bdf;
++static bool allow_source_reset;
+ module_param(slots, uint, 0444);
+ module_param(capacity, uint, 0444);
+ module_param(poll_ms, uint, 0444);
+@@ -30,6 +33,8 @@
+ module_param(dma_bits, uint, 0444);
+ module_param(irq_hint, bool, 0444);
+ module_param(target_bdf, charp, 0444);
++module_param(allow_source_reset, bool, 0444);
++MODULE_PARM_DESC(allow_source_reset, "Opt-in operator declaration of reviewed ordered-reset image; not firmware attestation");
+ MODULE_PARM_DESC(target_bdf, "Required exact canonical BDF (dddd:bb:ss.f); no implicit target");
+ MODULE_PARM_DESC(drain_ms, "Host close/remove patience only; expiry quarantines, never frees DMA");
+ MODULE_PARM_DESC(irq_hint, "Enable only with qualified frame-result MSI vector 0 image");
+@@ -60,6 +65,7 @@
+ 	bool opened, running, quarantine, dead, stopped, irq, online;
+ 	u64 polls, submitted, completed;
+ 	atomic64_t interrupts;
++	struct rkdbg_state debug_reset;
+ };
+ 
+ static u32 reg_read(struct c2h_dev *d, u32 reg)
+@@ -71,6 +77,8 @@
+ {
+ 	writel(value, d->bar + reg);
+ }
++
++#include "debug_driver_hooks.h"
+ 
+ static u32 command(struct c2h_dev *d, u32 cmd)
+ {
+@@ -354,13 +362,22 @@
+ 	struct c2h_legacy_batch legacy;
+ 	struct c2h_info info = {};
+ 	struct c2h_owner_info owner = {};
++	struct c2h_debug_cap debug_cap = {};
++	struct c2h_debug_reset debug_request;
+ 	unsigned int i, j;
+ 	long ret = 0;
++	if (cmd == C2H_SOURCE_RESET && copy_from_user(&debug_request, (void __user *)arg, sizeof(debug_request)))
++		return -EFAULT;
+ 	if (cmd == C2H_RELEASE && copy_from_user(&batch, (void __user *)arg, sizeof(batch)))
+ 		return -EFAULT;
+ 	if (cmd == C2H_LEGACY && copy_from_user(&legacy, (void __user *)arg, sizeof(legacy)))
+ 		return -EFAULT;
+ 	mutex_lock(&d->lock);
++	if (cmd == C2H_GET_DEBUG_CAP) {
++		debug_cap_locked(d, &debug_cap);
++		ret = copy_to_user((void __user *)arg, &debug_cap, sizeof(debug_cap)) ? -EFAULT : 0;
++		goto out;
++	}
+ 	if (cmd == C2H_GET_OWNER) {
+ 		/* Cached probe identity, readable even in quarantine/detached state.
+ 		 * generation is the last attempted allocation, not the next value.
+@@ -396,6 +413,9 @@
+ 		goto out;
+ 	}
+ 	switch (cmd) {
++	case C2H_SOURCE_RESET:
++		ret = debug_reset_locked(d, &debug_request);
++		break;
+ 	case C2H_LEGACY:
+ 		if (!legacy.count || legacy.count > C2H_BATCH_MAX || legacy.reserved ||
+ 		    pci_resource_len(d->pdev, C2H_BAR) < C2H_LEGACY_BASE + 4096) {
+@@ -409,6 +429,10 @@
+ 				ret = -EPERM;
+ 				goto out;
+ 			}
++			if (op->write && d->debug_reset.state == RKDBG_RESET_ISSUED) {
++				ret = -EBUSY;
++				goto out;
++			}
+ 			if (op->write && c2h_legacy_record_write(op->offset) &&
+ 			    (d->running || d->active >= 0)) {
+ 				ret = -EBUSY;
+@@ -432,6 +456,10 @@
+ 		ret = copy_to_user((void __user *)arg, &legacy, sizeof(legacy)) ? -EFAULT : 0;
+ 		break;
+ 	case C2H_START:
++		if (d->debug_reset.state == RKDBG_RESET_ISSUED) {
++			ret = -EBUSY;
++			break;
++		}
+ 		if (d->running)
+ 			break;
+ 		if (d->active >= 0) {
+@@ -617,7 +645,7 @@
+ 	ret = pci_enable_device_mem(pdev);
+ 	if (ret)
+ 		return ret;
+-	ret = pci_request_regions(pdev, "ph1a_c2h_candidate");
++	ret = pci_request_regions(pdev, "ph1a_c2h_debug");
+ 	if (ret)
+ 		goto disable;
+ 	if (!(pci_resource_flags(pdev, C2H_BAR) & IORESOURCE_MEM) ||
+@@ -690,7 +718,7 @@
+ 		ret = pci_alloc_irq_vectors(pdev, 1, 1, PCI_IRQ_MSI);
+ 		if (ret < 0)
+ 			goto unmap;
+-		ret = request_irq(pci_irq_vector(pdev, 0), c2h_irq, 0, "ph1a_c2h_candidate", d);
++		ret = request_irq(pci_irq_vector(pdev, 0), c2h_irq, 0, "ph1a_c2h_debug", d);
+ 		if (ret) {
+ 			pci_free_irq_vectors(pdev);
+ 			goto unmap;
+@@ -698,7 +726,7 @@
+ 		d->irq = true;
+ 	}
+ 	d->misc.minor = MISC_DYNAMIC_MINOR;
+-	d->misc.name = kasprintf(GFP_KERNEL, "ph1a_c2h_%s", pci_name(pdev));
++	d->misc.name = kasprintf(GFP_KERNEL, "ph1a_c2h_debug_%s", pci_name(pdev));
+ 	d->misc.fops = &c2h_fops;
+ 	d->misc.parent = &pdev->dev;
+ 	d->misc.mode = 0600;
+@@ -789,10 +817,10 @@
+ static const struct pci_device_id c2h_ids[] = { { 0 } };
+ MODULE_DEVICE_TABLE(pci, c2h_ids);
+ static struct pci_driver c2h_driver = {
+-	.name = "ph1a_c2h_candidate", .id_table = c2h_ids,
++	.name = "ph1a_c2h_debug", .id_table = c2h_ids,
+ 	.probe = c2h_probe, .remove = c2h_remove, .shutdown = c2h_remove,
+ 	.driver = { .suppress_bind_attrs = true, .pm = &c2h_pm },
+ };
+ module_pci_driver(c2h_driver);
+ MODULE_LICENSE("GPL");
+-MODULE_DESCRIPTION("Isolated PH1A frame-grant C2H candidate, private ABI v1");
++MODULE_DESCRIPTION("PH1A C2H debug derivative; guarded source reset; hardware ABI1/UAPI2 unchanged");

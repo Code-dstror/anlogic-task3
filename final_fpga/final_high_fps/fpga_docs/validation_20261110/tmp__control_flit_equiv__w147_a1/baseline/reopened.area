@@ -1,0 +1,68 @@
+standard
+***Report Model: control_flit_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        96   out of    148   64.86%
+  #input                   52
+  #output                  44
+  #inout                    0
+#lut                      181
+  #lut1                     6
+  #lut2                    44
+  #lut3                    23
+  #lut4                    44
+  #lut5                    19
+  #lut6                    45
+#reg                      525
+  #slice reg              525   out of 128640    0.41%
+  #pad reg                  0
+
+Utilization Statistics
+#slice                    248   out of  64320    0.39%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic             248
+    #with luts            152
+    #with adder             0
+    #reg only              96
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       1   out of    272    0.37%
+  #eram20k                  1
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       96   out of    148   64.86%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                            |Module                                           |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                                 |control_flit_probe                               |152       |0       |525     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  dut                               |control_message_fifo_ip                          |107       |0       |378     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    u_control_async_fifo            |control_fifo_40x512                              |61        |0       |171     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      u_configured_ip               |camera_control_fifo_40x512                       |61        |0       |171     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        soft_fifo_Inst              |camera_control_fifo_40x512_soft_fifo             |61        |0       |171     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          soft_fifo_core_inst       |camera_control_fifo_40x512_soft_fifo_core        |61        |0       |171     |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_soft_fifo_ELyPIOfr   |camera_control_fifo_40x512_al_soft_fifo_J5Dq79mN |22        |0       |22      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_NSebDz1w |camera_control_fifo_40x512_al_soft_fifo_Y9On7zYm |2         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_eSCWbQZ_ |camera_control_fifo_40x512_al_soft_fifo_KG1iurH1 |1         |0       |0       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_soft_fifo_Z4TViUmh   |camera_control_fifo_40x512_al_soft_fifo_pXuL5aOr |17        |0       |37      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_dq_Clcs1 |camera_control_fifo_40x512_al_soft_fifo_OpkF4eWF |7         |0       |36      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_paTBcRda |camera_control_fifo_40x512_al_soft_fifo_skRjTPEo |1         |0       |0       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_soft_fifo_ktZv2ExW   |camera_control_fifo_40x512_al_soft_fifo_CMEB9ZlH |2         |0       |40      |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|              al_soft_fifo_S8GQVwdk |camera_control_fifo_40x512_al_soft_fifo_4aZDqQTX |1         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            cdc$cross_inst          |camera_control_fifo_40x512_al_soft_fifo_zlzAoo5o |20        |0       |72      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

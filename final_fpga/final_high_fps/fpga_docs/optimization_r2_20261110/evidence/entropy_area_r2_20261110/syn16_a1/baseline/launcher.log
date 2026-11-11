@@ -1,0 +1,10 @@
+[run_td] cwd=<PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\entropy_area_r2_20261110\syn16_a1\baseline
+[run_td] cmd=<TOOLS_ROOT>/TD_Release_2026.2.210.850\bin\td_commands_prompt.exe -nogui <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\entropy_area_r2_20261110\syn16_a1\baseline\synth.tcl
+
+========================================================================
+[run_td] TD exit code     : 0
+[run_td] log              : <PROJECT_ROOT>\refactor\camera_fusion_r1\tmp\entropy_area_r2_20261110\syn16_a1\baseline\td.log
+[run_td] .error.f markers : 0 (fresh)
+[run_td] error lines      : 0
+[run_td] RESULT           : SUCCESS
+========================================================================

@@ -1,0 +1,32 @@
+# 相机、时钟与 UART 分配采用本地 IMX415 示例，并已与原始 02_peripheral_demo.zip 相机示例 ADC 交叉核对
+set_pin_assignment { sys_clk } { LOCATION = T16; IOSTANDARD = LVCMOS18; }
+set_pin_assignment { board_ref_clk_100m } { LOCATION = T13; IOSTANDARD = LVDS18; PULLTYPE = NONE; }
+set_pin_assignment { mipi_clk_hs_rx_p } { LOCATION = E13; IOSTANDARD = LVDS18; PULLTYPE = NONE; }
+set_pin_assignment { mipi_data_hs_p[0] } { LOCATION = C14; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi_data_hs_p[1] } { LOCATION = D14; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi_data_hs_p[2] } { LOCATION = A15; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi_data_hs_p[3] } { LOCATION = G17; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { cam_scl } { LOCATION = B14; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { cam_sda } { LOCATION = A14; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { cam_mclk } { LOCATION = A18; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam_xclr } { LOCATION = B18; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+# Camera1 uses the FMC J3 DSI connector converted to CSI RX. Verified against
+# DSI2CIS fpga_pin.adc and AFH03 schematic physical pp.4/29; see stereo_cdc.md.
+# Differential N pins are assigned by TD from the P pin: F16/G18/K17/E17/J18.
+set_pin_assignment { mipi1_clk_hs_rx_p } { LOCATION = E16; IOSTANDARD = LVDS18; PULLTYPE = NONE; }
+set_pin_assignment { mipi1_data_hs_p[0] } { LOCATION = F18; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi1_data_hs_p[1] } { LOCATION = K16; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi1_data_hs_p[2] } { LOCATION = D17; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { mipi1_data_hs_p[3] } { LOCATION = J17; IOSTANDARD = LVDS18; PULLTYPE = NONE; INDEL = 20; }
+set_pin_assignment { cam1_scl } { LOCATION = N10; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { cam1_sda } { LOCATION = N11; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { cam1_mclk } { LOCATION = J13; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { cam1_xclr } { LOCATION = K13; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { uart_rx } { LOCATION = V11; IOSTANDARD = LVCMOS18; PULLTYPE = PULLUP; }
+set_pin_assignment { uart_tx } { LOCATION = U11; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; }
+
+# PCIe PERST# 使用既有板卡映射
+set_pin_assignment { pcie_mperst } { LOCATION = U14; IOSTANDARD = LVCMOS18; PULLTYPE = PULLUP; }
+# AFC03 原理图 20251112 第 5/6 页：T13/T14 为板上唯一的 100 MHz LVDS 晶振差分对
+# 该参考时钟供 DDR 使用，相机 PLL 使用 T16 的 25 MHz 时钟
+

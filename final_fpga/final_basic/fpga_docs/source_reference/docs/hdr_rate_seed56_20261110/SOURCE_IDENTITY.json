@@ -1,0 +1,19 @@
+{
+  "baseline": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+  "design_sha256": "ce021e0b77a2f410c3d7c8d8d10b086c45b53863e80e6ff8c01b332fe1903c42",
+  "native_project_sha256": "46328c21e397d08058551cdc176f2e34da87aba78ae605a901b44f04081f2892",
+  "production_inputs": 405,
+  "frozen_ip_count": 158,
+  "changed_since_41cb": {
+    "src_fpga/rtl/hdr_pair_read_cursor.v": "b2bc668efc5e1de8dc02ce4d8bfa16cdc8dcc43bd2cefb6595c04a751338bed3",
+    "src_fpga/rtl/hdr_tone96_shared4.v": "21db78163fb014d03f0dd9f8fca3d325a4414397d9bd6ad2033d78c71c7a0442",
+    "src_fpga/rtl/ordered_frame_cdc.v": "32c8bf457ff45ea3b3a3eb4038fb9b968991c4038ed9d26dfa7ba4f1418de469",
+    "src_fpga/rtl/ordered_frame_ingress.v": "f463a2a4d601d5400f44f0b3b8cde585ffbf0711c447ce6e80e335fdc621d8c7",
+    "src_fpga/rtl/private_rgb_source_borrow4.v": "b193e4f1d1e4daeee924aa485b8f1ce5edcff0d8da3851c25ceeff3626f02f75"
+  },
+  "business_wire_protocol_changes": "None; CFG1/schema2, AJPGv4, ARAWv1 and DJv3 retained",
+  "full_synthesis": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "board": "NOT_RUN",
+  "server_submission": "NOT_REQUESTED"
+}

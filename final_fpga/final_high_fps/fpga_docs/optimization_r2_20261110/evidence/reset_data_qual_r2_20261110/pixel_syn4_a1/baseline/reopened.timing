@@ -1,0 +1,564 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 21:25:11 2026
+
+Top Model           : uhd_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 83.57%
+Constraint File     : <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/reset_data_qual_r2_20261110/pixel_syn4_a1/baseline/clock.sdc;
+Confidence          : Synthesized
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 8 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+
+Timing Status
+--------------------
+	SWNS: 0.742ns, STNS: 0.000ns
+	HWNS: 0.000ns, HTNS: 0.000ns
+	Period Check WNS: 0.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:      125.000         1551   PIX
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0           local            0.000      4.000                 8.000         125.000                 6.516         153.468            0.742      0.000            0.000      0.000            0.000             1551                5             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.
+
+Intra clock domain timing
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     6.516ns
+Fmax           :     153.468MHz
+
+Statistics:
+Max            : SWNS      0.742ns, STNS      0.000ns,         0 Viol Endpoints,      2099 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[0].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[0]_syn_9.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[0]_syn_9.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[0],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[0].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[0].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[1].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[1]_syn_9.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[1]_syn_9.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[1],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[1].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[1].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[2].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[2]_syn_7.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[2]_syn_7.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[2],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[2].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[2].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[3].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[3]_syn_7.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[3]_syn_7.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[3],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[3].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[3].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[4].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[4]_syn_9.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[4]_syn_9.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[4],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[4].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[4].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[5].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[5]_syn_9.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[5]_syn_9.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[5],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[5].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[5].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[6].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[6]_syn_9.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[6]_syn_9.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[6],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[6].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[6].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+Slack               : 0.742ns
+Begin Point         : u_original/u_pixel_reset/g_falling_release$released_n_reg.clk (falling edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_ingress/axis_data_reg[7].d (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 4.000ns { PIX rising@8.000ns - PIX falling@4.000ns }
+Data Path Delay     : 3.188ns (cell 0.941ns (29%), net 2.247ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 5 ( LUT6=4  LUT5=1 )
+Max Fanout          : 291
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.clk
+launch edge                             4.000    f     4.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     4.151          pin: u_original/u_pixel_reset/g_falling_release$released_n_reg.q
+net (fo=291)                            0.544          4.695          net: u_original/u_original_cleanup/rst_n,  ../../hdr_pair_product_abort_drain4.v(9)
+                                                                      pin: observe[8]_syn_7.a
+LUT6                                    0.141    r     4.836       1  pin: observe[8]_syn_7.o
+net (fo=4)                              0.254          5.090          net: observe[8]_syn_8,  ../../uhd_probe.v(6)
+                                                                      pin: observe[8]_syn_11.b
+LUT6                                    0.141    r     5.231       2  pin: observe[8]_syn_11.o
+net (fo=38)                             0.425          5.656          net: observe[8]_syn_12,  ../../uhd_probe.v(6)
+                                                                      pin: u_ingress/mux6_syn_18.a
+LUT6                                    0.141    r     5.797       3  pin: u_ingress/mux6_syn_18.o
+net (fo=16)                             0.359          6.156          net: u_ingress/mux6_syn_19,  ../../shared_raw10_frame_ingress.v(303)
+                                                                      pin: u_ingress/axis_data_next[126]_syn_7.a
+LUT5                                    0.150    f     6.306       4  pin: u_ingress/axis_data_next[126]_syn_7.o
+net (fo=126)                            0.516          6.822          net: u_ingress/axis_data_next[126]_syn_8,  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_next[7]_syn_9.a
+LUT6                                    0.141    r     6.963       5  pin: u_ingress/axis_data_next[7]_syn_9.o
+net (fo=1)                              0.149          7.112          net: u_ingress/axis_data_next[7],  ../../shared_raw10_frame_ingress.v(123)
+                                                                      pin: u_ingress/axis_data_reg[7].d
+SEQ (reg)                               0.076    f     7.188               
+--------------------------------------------------------------------  ---------------
+Arrival                                                7.188               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=1551)                           0.000          0.000          net: clk_dup_1,  ../../uhd_probe.v(2)
+                                                                      pin: u_ingress/axis_data_reg[7].clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.070          7.930               
+clock uncertainty                       0.000          7.930               
+clock pessimism                         0.000          7.930               
+--------------------------------------------------------------------  ---------------
+Required                                               7.930               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.742               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+Inter clock domain timing
+--------------------------------------------------
+
+IP timing
+--------------------------------------------------

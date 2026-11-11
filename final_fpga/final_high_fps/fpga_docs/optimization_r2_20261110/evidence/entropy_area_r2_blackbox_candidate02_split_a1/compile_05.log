@@ -1,0 +1,58 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 20:55:18 on Nov 10,2026
+vlog -work ph1 <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\common\al_phy_glbl.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_fifo.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_ramfifo.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_eram.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_fifoctrl.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_mult.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_dspmult.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_dspmult_v2.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_dspsiou.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_dspadd_v2.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_dsptadd_v2.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_dsplogic_v2.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_clk.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_pll.v <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_gclk_v2.v 
+-- Compiling module glbl
+-- Compiling module PH1_LOGIC_DRAM
+-- Compiling module PH1_LOGIC_ERAM
+-- Compiling module PH1_LOGIC_RAMFIFO
+-- Compiling module gray2bin
+-- Compiling module gray_count
+-- Compiling module showahead_buffer
+-- Compiling module PH1_PHY_ERAM
+-- Compiling module PH1_PHY_FIFOCTRL
+-- Compiling module PH1_PHY_FIFOCONTROLLER
+-- Compiling module AL_FIFOCTRL_fifo_sync2dff
+-- Compiling module AL_FIFOCTRL_bin2gray
+-- Compiling module AL_FIFOCTRL_gray2bin
+-- Compiling module AL_FIFOCTRL_writectrl
+-- Compiling module AL_FIFOCTRL_readctrl
+-- Compiling module PH1_LOGIC_MULT
+-- Compiling module PH1_PHY_DSPMULT
+-- Compiling module PH1_PHY_DSPMULT_V2
+-- Compiling module PH1_PHY_DSPSIOU
+-- Compiling module PH1_PHY_DSPADD_V2
+-- Compiling module PH1_PHY_DSPTADD_V2
+-- Compiling module PH1_PHY_DSPLOGIC_V2
+-- Compiling module PH1_LOGIC_BUFG
+-- Compiling module PH1_PHY_PLL
+-- Compiling module ph1_dphase_sel
+-- Compiling module prediv_mux
+-- Compiling module ph1_pll_div2
+-- Compiling module ph1_clko_premux
+-- Compiling module ph1_pll_div128
+-- Compiling module ph1_clko_ctrl
+-- Compiling module PH1_PHY_GCLK_V2
+-- Compiling module ph1_gclk_csb_sub
+-- Compiling module NAND2
+-- Compiling module NOT
+-- Compiling module NAND4
+-- Compiling module ph1_gclk_csb_stm
+
+Top level modules:
+	glbl
+	PH1_LOGIC_DRAM
+	PH1_LOGIC_RAMFIFO
+	PH1_PHY_ERAM
+	PH1_PHY_FIFOCTRL
+	PH1_LOGIC_MULT
+	PH1_PHY_DSPMULT
+	PH1_PHY_DSPMULT_V2
+	PH1_PHY_DSPSIOU
+	PH1_PHY_DSPADD_V2
+	PH1_PHY_DSPTADD_V2
+	PH1_PHY_DSPLOGIC_V2
+	PH1_LOGIC_BUFG
+	PH1_PHY_PLL
+	PH1_PHY_GCLK_V2
+End time: 20:55:20 on Nov 10,2026, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0

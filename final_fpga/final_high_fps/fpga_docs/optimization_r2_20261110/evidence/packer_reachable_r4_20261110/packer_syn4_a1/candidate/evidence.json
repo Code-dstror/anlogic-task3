@@ -1,0 +1,53 @@
+{
+  "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+  "variant": "candidate",
+  "target": "packer_reachable_count",
+  "runner_sha256": "0ffe320ef4f88dd9dd937240a1b3a1306a90e65e3af2d214adb48348187c3729",
+  "native_runner_sha256": "6c0b2f2a3166a25655925a85ea38727bb187f0d873984810c433d259597b5056",
+  "functional_simulation": "NOT_RUN",
+  "whole_design_synthesis": "NOT_RUN",
+  "physical_sta": "NOT_RUN",
+  "place_route": "NOT_RUN",
+  "bitgen": "NOT_RUN",
+  "board": "NOT_RUN",
+  "command": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "<PROJECT_ROOT>\\tools\\run_td.py",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\packer_syn4_a1\\candidate\\synth.tcl",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--workdir",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\packer_syn4_a1\\candidate",
+    "--log",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\packer_reachable_r4_20261110\\packer_syn4_a1\\candidate\\td.log"
+  ],
+  "wall_budget_seconds": 80,
+  "input_sha256": {
+    "clock.sdc": "80fedffe95fea368fd783155fddfda37b222e3299dd3def420ef3ff0cf52005c",
+    "jpeg_byte_packer.v": "8b27772b4455d2107a2fbdfeb0cac9a17ce853f003ca469e64f638094cb59354",
+    "synth.tcl": "730ca460bd30837e5f332837e1977d8f1f78e069d37b96e4afd402d6df6fce58",
+    "uhd_probe.v": "e6410e0ea1b9edae5cab1fff61fa1c84bff007ef5d003063e1cbccbdcf40b92a"
+  },
+  "status": "PASS",
+  "returncode": 0,
+  "elapsed_seconds": 24.969,
+  "artifact_sha256": {
+    "uhd_probe.al": "5df7f031c357f2243590636b4b873f5eb2d88179b96485ea3e85756be6af2092",
+    "reopened.area": "2f826a9c74d94f33a69bdfe38324dba309b63adf72c50fe863c0ff62e49685b0",
+    "effective.params": "b3cefa25b9d04acf8307bc0d0be8f424a7396a91eede1b6b600104015ac11032",
+    "uhd_probe_Runs/syn_1/uhd_probe_gate.db": "560a5f7bcf4206b398c1d1ff0ae29700de506d51bf26f9bc7a87da52b0b4a365",
+    "uhd_probe_Runs/syn_1/uhd_probe_gate.area": "2f826a9c74d94f33a69bdfe38324dba309b63adf72c50fe863c0ff62e49685b0",
+    "uhd_probe_Runs/syn_1/run.log": "58eecb4acab2d8d6bafcf02383427b3486d392f133725926d0664298c9174bb3",
+    "uhd_probe_Runs/syn_1/.opt_gate.end.f": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "td.log": "89488f13601f9597ecb17c4113beb2d0c2d6718ac8f4544a887c7b0d438fb86f",
+    "launcher.log": "2d886d7992fd77160e3aed22dfe3498383383a93d5bca9504baf0c2b6f7be214",
+    "uhd_probe_Runs/syn_1/uhd_probe_gate.timing": "ba76db2393a2eba049092d81be56d3dacc92418d0ac85a7ae273b4b0590a5659",
+    "reopened.timing": "da45807ed3b3851bffcf12876b0ab46e772cba8d952ba30116aaa688ce3d561a",
+    "objects.txt": "271b5e048bbbe3819345fef19b6f26800f4d04f00eec7739b8d212bbf6ab7fe5",
+    "input_to_data.timing": "d23a8fbc118533ab0f901a1ff9ddf7969ddc87d5e58c0baa25472ebe6c837b49",
+    "input_to_count.timing": "6de57dfeba498a6ee4e432deb558db3a80f5a6ae1173cd784b7e0bc3d5f307fa",
+    "byte_to_data.timing": "d23a8fbc118533ab0f901a1ff9ddf7969ddc87d5e58c0baa25472ebe6c837b49",
+    "count_to_count.timing": "8a3e482bf46cb84585b933d91ab783c2c9eb9f1b0691b2258d3d866fa6de8529"
+  }
+}

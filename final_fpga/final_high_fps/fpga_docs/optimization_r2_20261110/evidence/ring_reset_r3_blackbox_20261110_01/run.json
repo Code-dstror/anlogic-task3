@@ -1,0 +1,382 @@
+{
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "invocation": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "<PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_ring_reset_r3/run.py",
+    "--modelsim-bin",
+    "<TOOLS_ROOT>/modelsim/win64",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--out",
+    "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_reset_r3_blackbox_20261110_01"
+  ],
+  "modelsim_bin": "<TOOLS_ROOT>/modelsim\\win64",
+  "td_root": "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+  "sealed_manifest": {
+    "schema": 1,
+    "project_root": "refactor/camera_fusion_r1",
+    "baseline_commit": "eade457d7477110605f90eb5abc08420d8936642",
+    "dut": "jpeg_ring_reset_boundary",
+    "td_version": "6.2.3.210850",
+    "compile_mode": "Verilog",
+    "models_library": "ph1",
+    "model_sources": [
+      {
+        "path": "sim_release/common/al_phy_glbl.v",
+        "sha256": "c194f5335b54a6d707a8b633b8f4d3a171e52006337600f7433379b11fb3b2ff"
+      },
+      {
+        "path": "sim_release/ph1/ph1_logic_dram.v",
+        "sha256": "0b4ab2c3ac73aad28e16ab6a0a6af57a62ae89db2c3e58ac85605cc9e98b88cd"
+      }
+    ],
+    "td_work_sources": [
+      {
+        "path": "sim_release/ph1/ph1_phy_gsr.v",
+        "sha256": "7c8d97c4593ef132de32c2d13cae01cc77424f5f0e40137312574d47a1a964ed"
+      }
+    ],
+    "rom_initializers": [],
+    "globals": [
+      "work.PH1_PHY_GSR",
+      "ph1.glbl"
+    ],
+    "legal_profile": {
+      "CAMERA_COUNT": 2,
+      "SLOT_BYTES": 16777216,
+      "WRITE_RESULT_ENABLE": 1,
+      "WRITE_TAG_ENABLE": 1,
+      "MASK_ENABLE": 0
+    },
+    "variants": {
+      "baseline": [
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync.v",
+          "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync_data.v",
+          "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/jpeg_ring_cold_bank.v",
+          "sha256": "356b34088ff4342e09b832f427c813c0a0fc9ecfc64dde40ed4685c178ddae9e"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/td_sdp_ram.v",
+          "sha256": "148e07e6877ead65fd169157bba1fbef8e0436bb87742895bab4c69bdc543b16"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/baseline/jpeg_frame_ring.v",
+          "sha256": "5c45615f818173b96a25a1a184691f8ffcdd3ef2155fa54581804b6e567153e1"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/baseline/jpeg_ring_reset_boundary.v",
+          "sha256": "853d83f71203279c75efc425406a5a6cfe705cd6f80b4f466324e9d93993fcea"
+        }
+      ],
+      "candidate": [
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync.v",
+          "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/reset_release_sync_data.v",
+          "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/jpeg_ring_cold_bank.v",
+          "sha256": "356b34088ff4342e09b832f427c813c0a0fc9ecfc64dde40ed4685c178ddae9e"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/common/td_sdp_ram.v",
+          "sha256": "148e07e6877ead65fd169157bba1fbef8e0436bb87742895bab4c69bdc543b16"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/candidate/jpeg_frame_ring.v",
+          "sha256": "eed3c6b1955a465ac113d7492134d298fe9a62c7727d8c88b4c64c5379248b5b"
+        },
+        {
+          "path": "tmp/ring_data_qual_r3_20261110/inputs/candidate/jpeg_ring_reset_boundary.v",
+          "sha256": "edbfec8204a35ebc67331c4a397861caaf5295d780dc2829ecd8d356a6413f97"
+        }
+      ]
+    }
+  },
+  "input_hashes": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\ring_data_qual_r3_20261110\\OPAQUE_SOURCES.json": "dc2ee5a1899ba5c7d117982396ff1f39c16acd7b0258d30bea7dbe9e25a46d70",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\ring_data_qual_r3_20261110\\PUBLIC_CONTRACT.md": "96ff2bcbb6d9e83db88358b8495ce30b19c727f7d1f20de63aaf7354831d21c9",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\ring_data_qual_r3_20261110\\PORTS.vh": "ea4ce0bd4df0a224d75a20fd62f7273481e80681315bccd059e303df48b38c44",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3\\run.py": "3f9166c81b4c7a24dbf7adc970cb47183a041d6cc90cc8b8c845ab5c840979d2",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3\\tb_jpeg_ring_reset.sv": "1f6dc9c789f4d8f68b9c3fb1c897c7662ed472de134fff889a593cd779f31b00",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3\\ring_test_bfm.svh": "494686f2fc5ddd38e70bddfcac081b2cca0a32cbcc80ef4b6fe91eed75bb30d9"
+  },
+  "commands": [
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-version"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\modelsim-version.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.125
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\01-vlib-work.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "ph1"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\02-vlib-ph1.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+        "-c"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\03-vmap-local.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.062
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+        "ph1",
+        "ph1"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\04-vmap-ph1.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "ph1",
+        "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+        "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_dram.v"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\05-vlog-model.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.25
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "-L",
+        "ph1",
+        "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\reset_release_sync.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\reset_release_sync_data.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\jpeg_ring_cold_bank.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\td_sdp_ram.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\baseline\\jpeg_frame_ring.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\baseline\\jpeg_ring_reset_boundary.v"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\06-vlog-arm.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.282
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "-sv",
+        "-L",
+        "ph1",
+        "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3\\tb_jpeg_ring_reset.sv"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\07-vlog-bench.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.109
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "exit",
+        "-L",
+        "ph1",
+        "-t",
+        "1ps",
+        "work.tb_jpeg_ring_reset",
+        "work.PH1_PHY_GSR",
+        "ph1.glbl",
+        "-do",
+        "onerror {quit -f -code 2}; onbreak {quit -f -code 3}; run -all; quit -f -code 0"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\08-vsim.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 2.156
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\01-vlib-work.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+        "ph1"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\02-vlib-ph1.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.079
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+        "-c"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\03-vmap-local.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.062
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+        "ph1",
+        "ph1"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\04-vmap-ph1.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.078
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "ph1",
+        "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+        "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_dram.v"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\05-vlog-model.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.266
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "-L",
+        "ph1",
+        "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\reset_release_sync.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\reset_release_sync_data.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\jpeg_ring_cold_bank.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\common\\td_sdp_ram.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\candidate\\jpeg_frame_ring.v",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_data_qual_r3_20261110\\inputs\\candidate\\jpeg_ring_reset_boundary.v"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\06-vlog-arm.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.281
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-work",
+        "work",
+        "-sv",
+        "-L",
+        "ph1",
+        "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3",
+        "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_ring_reset_r3\\tb_jpeg_ring_reset.sv"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\07-vlog-bench.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 0.188
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "exit",
+        "-L",
+        "ph1",
+        "-t",
+        "1ps",
+        "work.tb_jpeg_ring_reset",
+        "work.PH1_PHY_GSR",
+        "ph1.glbl",
+        "-do",
+        "onerror {quit -f -code 2}; onbreak {quit -f -code 3}; run -all; quit -f -code 0"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\08-vsim.log",
+      "timeout_seconds": 50,
+      "returncode": 0,
+      "elapsed_seconds": 2.625
+    }
+  ],
+  "arms": {
+    "baseline": {
+      "status": "PASS",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\baseline\\08-vsim.log",
+      "trace_sha256": "0734779a59b3861133f4a1ea49603e55a81d608ec4941c43fa1734e22b768dd2"
+    },
+    "candidate": {
+      "status": "PASS",
+      "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\ring_reset_r3_blackbox_20261110_01\\candidate\\08-vsim.log",
+      "trace_sha256": "0734779a59b3861133f4a1ea49603e55a81d608ec4941c43fa1734e22b768dd2"
+    }
+  },
+  "modelsim_version": "Model Technology ModelSim SE-64 vsim 2020.4 Simulator 2020.10 Oct 13 2020",
+  "comparison": {
+    "status": "MATCH"
+  },
+  "inputs_reverified": true
+}

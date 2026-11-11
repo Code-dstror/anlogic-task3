@@ -1,0 +1,13 @@
+// Generated from docs/rate_control_v1.json.
+`ifndef RATE_CONTROL_V1_VH
+`define RATE_CONTROL_V1_VH
+`define PCIE_RATE_REG_CAPABILITIES 12'hfb0
+`define PCIE_RATE_REG_REQUEST 12'hfb4
+`define PCIE_RATE_REG_ACTIVE 12'hfb8
+`define PCIE_RATE_CAPABILITIES 32'h10f
+`define PCIE_RATE_CODE_LEGACY 2'h0
+`define PCIE_RATE_CODE_FPS40 2'h1
+`define PCIE_RATE_CODE_FPS45 2'h2
+`define PCIE_RATE_CODE_FPS48 2'h3
+`define RATE_SENSOR_PROFILE_LEGACY_30 3'h4
+`endif

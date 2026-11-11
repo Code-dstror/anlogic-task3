@@ -1,0 +1,179 @@
+{
+  "controller_version": "2026.11.10-measured-admission-v6.6-sanitized",
+  "base_commit": null,
+  "source": "Sanitized v6.6 source distribution; repository and network placeholders require target configuration",
+  "credentials_included": false,
+  "files": [
+    {
+      "path": "server/td/simple/apply_update.sh",
+      "bytes": 416,
+      "sha256": "29efd4a9ac8d110ea7ada59a6eb30e541d01175b8e1884125998222409c55889"
+    },
+    {
+      "path": "server/td/simple/CHECKPOINT_BUDGET_20261022.md",
+      "bytes": 6270,
+      "sha256": "dfad75c5b960077c63162c323dc0379904335f4a9ad803fb510162cecf0b48b5"
+    },
+    {
+      "path": "server/td/simple/checkpoints.py",
+      "bytes": 5617,
+      "sha256": "ec388b67c4a714f077bbbfda5548331c50fe86d814bb34cb96f3b50793021250"
+    },
+    {
+      "path": "server/td/simple/CLEANUP.md",
+      "bytes": 4516,
+      "sha256": "052d796ce550924be98ed987a9090ee110552bf983a105ad5ced4add37a369d0"
+    },
+    {
+      "path": "server/td/simple/cleanup_inventory.py",
+      "bytes": 4481,
+      "sha256": "7dc0eab2dd701b721862ecc3f51cc09dea54f393d62eeac7e74bbf499e46e119"
+    },
+    {
+      "path": "server/td/simple/client.py",
+      "bytes": 13627,
+      "sha256": "1053bdb6489d90d65c433b4f4a51ecb9c86ec9e3ce60e9c12b991bceb9b98833"
+    },
+    {
+      "path": "server/td/simple/CLOCK_TREE_V6_1_20261023.md",
+      "bytes": 4238,
+      "sha256": "47cb661c22ac53f8219e4680bdc29c123416685b3921e5b4a35d77a730a9c937"
+    },
+    {
+      "path": "server/td/simple/common.py",
+      "bytes": 16204,
+      "sha256": "be4a1e88248bda87e9b47cb1c06402fbc75487bbf41709ca4cdf9e29094ad38b"
+    },
+    {
+      "path": "server/td/simple/CONFIG_UPGRADE_20261022.md",
+      "bytes": 8759,
+      "sha256": "984c195fc95a76a3c99f8f6dc6221181292369a452c115a9886a94c9452e2303"
+    },
+    {
+      "path": "server/td/simple/CONTINUOUS_UPLOAD_V6_5_20261110.md",
+      "bytes": 3538,
+      "sha256": "a9792a950dc4618afab420d8446bd27bb7e841f4725c1d2aa7789da983e33e10"
+    },
+    {
+      "path": "server/td/simple/flow.py",
+      "bytes": 11427,
+      "sha256": "0b6b17fc9af66722ffad79752d73abd800459e190c082037abe4677f4c04253a"
+    },
+    {
+      "path": "server/td/simple/git_ssh.sh",
+      "bytes": 150,
+      "sha256": "2859472cc2f4e5897c534b0a53cd80065d215b1b967ff4a12956f6e791bd385e"
+    },
+    {
+      "path": "server/td/simple/install.py",
+      "bytes": 17050,
+      "sha256": "aaea93817d36a0576b73fc5afb4c1e2a7673a7dba5e1065749f6b8fbe47d78a4"
+    },
+    {
+      "path": "server/td/simple/logs.py",
+      "bytes": 10088,
+      "sha256": "bb833bfe0f8bb110762a9a198330edfa18479229f1257b492af088cbe270ecc0"
+    },
+    {
+      "path": "server/td/simple/make_private_bundle.py",
+      "bytes": 2569,
+      "sha256": "438b533f5d31390694d6655023187c843b7d1a810c0c975517bf4451647790f9"
+    },
+    {
+      "path": "server/td/simple/MEASURED_ADMISSION_V6_6_20261110.md",
+      "bytes": 6478,
+      "sha256": "08e5c0d89522a02529b42fed61256666dd3f400335a8a6a5392b55713ebd3f6a"
+    },
+    {
+      "path": "server/td/simple/MEMORY_BUDGET_V6_4_20261026.md",
+      "bytes": 4589,
+      "sha256": "8fcc4b0f8610e5590af27807fa5295a1f98c8823137d942f5e88b6a42f3bd335"
+    },
+    {
+      "path": "server/td/simple/network.py",
+      "bytes": 7752,
+      "sha256": "c4b5b386178472a22311afb78057c6eda67bafdde1bebe111efd0d5b192ee03f"
+    },
+    {
+      "path": "server/td/simple/process_control.py",
+      "bytes": 812,
+      "sha256": "1448e735a62edb186840adae1cf6514661a36a716e230eb32c44d09b4a9bc45b"
+    },
+    {
+      "path": "server/td/simple/projects.example.json",
+      "bytes": 294,
+      "sha256": "977d06a6068c0990d3c186508cf00c52c74d04d740bf89881e3da14cefa0fb02"
+    },
+    {
+      "path": "server/td/simple/README.md",
+      "bytes": 22858,
+      "sha256": "aaaec9d572ac69ad01d10c709ee5a4d171f7fe978773ace722c57a6093b89393"
+    },
+    {
+      "path": "server/td/simple/reports.py",
+      "bytes": 11156,
+      "sha256": "88fef3fc1f906c4b8e00d65ab6288b1806042673b28c7e9178aca280c4a60101"
+    },
+    {
+      "path": "server/td/simple/REPORTS_V6_20261023.md",
+      "bytes": 6642,
+      "sha256": "8d23f9b4431a281a2ac547d14a980150ca758b13d46ac1eb56e551ddb329bec8"
+    },
+    {
+      "path": "server/td/simple/resources.py",
+      "bytes": 20824,
+      "sha256": "bef1c801d5dfe56a517076e69f8f6575651e025d8a94849884f138b74c50e095"
+    },
+    {
+      "path": "server/td/simple/RUN_CONTROL.md",
+      "bytes": 7785,
+      "sha256": "d0ce335d18373788cb7e4808da62bfbff3474d577f3316b91e5ffc3e3d2731be"
+    },
+    {
+      "path": "server/td/simple/run_options.py",
+      "bytes": 5018,
+      "sha256": "913c5eea489b140f48b50fa2314639e73a5f88f82311dfb80ebbb7fe885dc7dd"
+    },
+    {
+      "path": "server/td/simple/service.py",
+      "bytes": 37492,
+      "sha256": "1c640a0a8dd34704f24d0bd0c1c322d70120a84ac6125e39e9e9fc02e7e412ba"
+    },
+    {
+      "path": "server/td/simple/stop_jobs.py",
+      "bytes": 2478,
+      "sha256": "de0d99a9aece4f8770cbbb121569f8f0feaba2997cba62ded65474f152546e87"
+    },
+    {
+      "path": "server/td/simple/THREAD_VALUES_V6_3_20261023.md",
+      "bytes": 3398,
+      "sha256": "1ef4ac875c6c6273cc1c048d87949eb9878f71fe88700bd853388d53b8750938"
+    },
+    {
+      "path": "server/td/simple/tools/run_td.py",
+      "bytes": 3420,
+      "sha256": "7d6844fd635bc7544525fd876d96908cb9d65244e9da78eb3e01a2be0dc16a13"
+    },
+    {
+      "path": "server/td/simple/transport.py",
+      "bytes": 10284,
+      "sha256": "2ca5a05fcc71626d3ff4f41310ea5fc26347ec6757a97a1082848bad5d0cbdd5"
+    },
+    {
+      "path": "server/td/simple/UPDATE_RECOVERY_20261023.md",
+      "bytes": 3591,
+      "sha256": "b60135f070ea7c0059a98320b750b7940c5ab463a35f4511c7fbe1b2bd102092"
+    },
+    {
+      "path": "server/td/simple/WARNING_INDEX_V6_2_20261023.md",
+      "bytes": 1472,
+      "sha256": "f6eb53e0a80789bb765a655bed400d223a9d263fa8a21566ac83af7fba177ff1"
+    },
+    {
+      "path": "server/td/simple/worker.py",
+      "bytes": 4554,
+      "sha256": "d1f69aa52889812840ac6acc89b4302e6a8fbc1f0ffde4b0254436535c36667e"
+    }
+  ],
+  "sanitized": true
+}

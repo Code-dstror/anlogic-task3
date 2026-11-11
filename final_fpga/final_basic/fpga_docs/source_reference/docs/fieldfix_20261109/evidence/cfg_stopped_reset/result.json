@@ -1,0 +1,18 @@
+{
+  "build": "candidate",
+  "scenario": "stopped_reset",
+  "status": "PASS",
+  "simulator_exit": 0,
+  "elapsed_ms": 5454,
+  "markers": [
+    "# CFG_EVIDENCE BOOT session=00000001 epoch=0 quality=75 time=2485000",
+    "# CFG_EVIDENCE READY_AND_REMOTE seq=00000310 old_epoch=0 new_epoch=1 quality=78 schema_word=00002002 time=9469000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000b80 pipeline_idle=0 source_fault=0 time=9696000",
+    "# CFG_EVIDENCE CLOCK_STOP_RESET_INVALIDATED_PENDING_APPLY time=10651000",
+    "# CFG_EVIDENCE BOOT session=00000001 epoch=0 quality=75 time=13133000",
+    "# CFG_EVIDENCE READY_AND_REMOTE seq=00000311 old_epoch=0 new_epoch=1 quality=80 schema_word=00000802 time=20117000",
+    "# CFG_EVIDENCE ACCEPT_CAM0 seq=00000ba0 pipeline_idle=1 source_fault=0 time=20836000",
+    "# CFG_EVIDENCE APPLIED seq=00000311 epoch=1 first_cam0_seq=00000ba0 quality=80 schema_word=00000802 time=23341000",
+    "# CFG_EVIDENCE PASS case=stopped_reset final_epoch=1 time=23341000"
+  ]
+}

@@ -1,0 +1,89 @@
+module reset_release_sync_data #(
+    parameter integer DATA_RESET_COPIES = 3,
+    parameter integer FALLING_RELEASE = 0
+) (
+    // 时钟与复位
+    input wire i_clk,
+    input wire i_async_rst_n,
+    output wire o_rst_n,
+    output wire [(DATA_RESET_COPIES > 0 ? DATA_RESET_COPIES : 1)-1:0] o_data_rst_n
+);
+
+module dol2_axi_write_arbiter #(
+    parameter integer SEPARATE_DATA_RESET=0
+) (
+    input wire i_clk,i_axi_rst_n,
+    input wire [7:0] s_awid,
+    input wire [55:0] s_awaddr,
+    input wire [15:0] s_awlen,
+    input wire [5:0] s_awsize,
+    input wire [3:0] s_awburst,
+    input wire [1:0] s_awvalid,
+    output wire [1:0] s_awready,
+    input wire [255:0] s_wdata,
+    input wire [31:0] s_wstrb,
+    input wire [1:0] s_wlast,s_wvalid,
+    output wire [1:0] s_wready,
+    output wire [7:0] s_bid,
+    output wire [3:0] s_bresp,
+    output wire [1:0] s_bvalid,
+    input wire [1:0] s_bready,
+    output wire [3:0] m_awid,
+    output wire [27:0] m_awaddr,
+    output wire [7:0] m_awlen,
+    output wire [2:0] m_awsize,
+    output wire [1:0] m_awburst,
+    output wire m_awvalid,
+    input wire m_awready,
+    output wire [127:0] m_wdata,
+    output wire [15:0] m_wstrb,
+    output wire m_wlast,m_wvalid,
+    input wire m_wready,
+    input wire [3:0] m_bid,
+    input wire [1:0] m_bresp,
+    input wire m_bvalid,
+    output wire m_bready,
+    output wire o_quiescent,
+    output reg o_protocol_fault,
+    input wire i_data_reset_n
+);
+
+module raw_video_record_formatter #(
+    parameter integer SEPARATE_DATA_RESET=0
+) (
+    input wire i_clk,i_rst_n,
+    input wire i_start_valid,output wire o_start_ready,
+    input wire i_abort,output wire o_drained,
+    input wire [31:0] i_payload_bytes,
+    input wire [15:0] i_width,i_height,
+    input wire [31:0] i_sequence,i_session,i_epoch,
+    input wire i_camera,input wire [1:0] i_bayer_phase,input wire i_time_valid,
+    input wire [63:0] i_capture_time_ns,i_job_id,
+    input wire [127:0] s_data,input wire [15:0] s_keep,
+    input wire s_valid,s_last,output wire s_ready,
+    output reg [127:0] m_data,output wire [15:0] m_keep,
+    output wire m_valid,m_last,input wire m_ready,
+    output wire o_done,
+    input wire i_data_reset_n
+);
+
+module product_record_cdc #(
+    parameter [31:0] MAX_RECORD_BYTES=`C2H_MAX_RECORD_BYTES
+)(
+    input wire s_clk,m_clk,s_cold_rst_n,m_cold_rst_n,
+    input wire s_record_valid,output wire s_record_ready,
+    input wire [31:0] s_record_length,input wire [127:0] s_record_identity,
+    input wire [127:0] s_axis_data,input wire [15:0] s_axis_keep,
+    input wire s_axis_valid,s_axis_last,output wire s_axis_ready,
+    input wire s_done_valid,s_done_ok,s_drained,output wire s_cancel,
+    output wire s_retire_valid,input wire s_retire_ready,
+    output wire [127:0] s_retire_identity,output reg [31:0] s_retire_status,
+    output wire m_record_valid,input wire m_record_ready,
+    output reg [31:0] m_record_length,output reg [127:0] m_record_identity,
+    output wire [127:0] m_axis_data,output wire [15:0] m_axis_keep,
+    output wire m_axis_valid,m_axis_last,input wire m_axis_ready,
+    output wire m_done_valid,m_drained,output reg m_done_ok,input wire m_cancel,
+    input wire m_retire_valid,output wire m_retire_ready,
+    input wire [127:0] m_retire_identity,input wire [31:0] m_retire_status,
+    output wire s_busy,m_busy,s_fault,m_fault,s_reset_done,m_reset_done
+);

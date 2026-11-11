@@ -1,0 +1,17 @@
+{
+  "top": "shared_raw10_frame_ingress",
+  "baseline": {
+    "files": [
+      "baseline/shared_raw10_frame_ingress.v"
+    ],
+    "sha256": "787acfaef657a6cf709f2e808bfdaaa2e750546d0dd89ed0b8800f3f227e7ccd"
+  },
+  "candidate": {
+    "files": [
+      "candidate/shared_raw10_frame_ingress.v"
+    ],
+    "sha256": "8569d76989de58b9940cfa9090f8f3fd3ecd6c3eddea75b34fa31e01743381c3"
+  },
+  "td_model_required": false,
+  "root": "refactor/camera_fusion_r1/experiments/raw_ingress_equiv"
+}

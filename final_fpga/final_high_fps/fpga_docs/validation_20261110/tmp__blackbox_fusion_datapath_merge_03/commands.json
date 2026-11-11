@@ -1,0 +1,209 @@
+[
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+      "-version"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\version.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.14099999999962165
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "-c"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\vmap_copy.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.06300000000010186
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+      "ph1"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\vlib_ph1.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.0930000000007567
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "ph1",
+      "ph1"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\vmap_ph1.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.07799999999951979
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-work",
+      "ph1",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\common\\al_phy_glbl.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_eram.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_eram.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_logic_mult.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_dspmult.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_dspmult_v2.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_dspsiou.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_dspadd_v2.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_dsptadd_v2.v",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_dsplogic_v2.v"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\vlog_ph1.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 1.5939999999991414
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "-c"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vmap_copy.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.07800000000133878
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlib.exe",
+      "work"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vlib.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.06300000000010186
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "work",
+      "work"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vmap_work.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.06199999999989814
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vmap.exe",
+      "ph1",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\ph1"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vmap_ph1.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.06300000000010186
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-work",
+      "work",
+      "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\sim_release\\ph1\\ph1_phy_gsr.v"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vlog_gsr.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.2819999999992433
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-L",
+      "ph1",
+      "-work",
+      "work",
+      "+define+PH1=1",
+      "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_A=1",
+      "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_CE=1",
+      "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A=1",
+      "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_RST=1",
+      "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Y=1",
+      "+define+fdct_mac19s14s_z33s_p34_m1p1_USE_Z=1",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\shared_wide_isp.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\raw_isp_top.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\raw_blc.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\raw_row_window.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\raw_demosaic.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\isp_line_ram_native4.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\wide_color_pipeline.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\hdr_tone96_shared4.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\gamma_lut_10to8.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\td_dsp_mult.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\rtl\\hdr_merge4.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\assets\\tone96_rom0_sim.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\assets\\tone96_rom1_sim.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\assets\\gamma_rom_8x1024_ip_sim.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\isp_line_ram_20x1024_ip\\isp_line_ram_20x1024_ip.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\dsp_mult_fixed\\mult_18s18s_p1\\mult_18s18s_p1.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\dsp_mult_fixed\\mult_18s18s_p1\\RTL\\mult_18s18s_p1_multiplier.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\dsp_mult_fixed\\mult_18s18s_p1\\RTL\\mult_18s18s_p1_multiplier_top.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\stage3\\fdct_mac19s14s_z33s_p34_m1p1\\fdct_mac19s14s_z33s_p34_m1p1.v",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\ip\\stage3\\fdct_mac19s14s_z33s_p34_m1p1\\RTL\\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vlog_dut.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.23400000000037835
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+      "-sv",
+      "-work",
+      "work",
+      "+incdir+<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\stream_checker.sv",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\tb_hdr_merge.sv",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\tb_hdr_tone.sv",
+      "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\src_fpga\\simulation\\blackbox_fusion_datapath\\tb_color_path.sv"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\vlog_tb.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 0.10900000000037835
+  },
+  {
+    "argv": [
+      "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+      "-c",
+      "-onfinish",
+      "stop",
+      "-t",
+      "1ps",
+      "-L",
+      "ph1",
+      "work.PH1_PHY_GSR",
+      "ph1.glbl",
+      "work.tb_hdr_merge",
+      "-do",
+      "onerror {quit -code 2 -f}; run -all; quit -f"
+    ],
+    "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production",
+    "log": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\blackbox_fusion_datapath_merge_03\\production\\merge.log",
+    "timeout": 60,
+    "return_code": 0,
+    "elapsed": 2.875
+  }
+]

@@ -1,0 +1,252 @@
+Table of Contents
+-----------------
+1. checking no clock(0) (HIGH)
+2. checking clock definition(0) (HIGH)
+3. checking dummy node(2) (HIGH)
+4. checking invalid constraint(0) (HIGH)
+5. checking pll clock constraints(0) (HIGH)
+6. checking combinational loops(0) (HIGH)
+7. checking soft fifo timing exception constraints(0) (HIGH)
+8. checking no path constraints(0) (MEDIUM)
+9. checking shadowed/ignored timing exception constraints(0) (MEDIUM)
+10. checking no input delay(83) (MEDIUM)
+11. checking no output delay(55) (MEDIUM)
+12. checking partial input delay(0) (MEDIUM)
+13. checking partial output delay(0) (MEDIUM)
+14. checking abnormal input delay(0) (MEDIUM)
+
+
+1. checking nets with no clock driven. (HIGH)
+---------------------------------------------
+2. checking clock definition problems. (HIGH)
+---------------------------------------------
+2.1 There are 0 leaf clock pins driven by multiple clocks. (HIGH)
+
+
+2.2 There are 0 clocks created on internal clock network. (HIGH)
+
+
+2.3 There are 0 unexpandable clock sets. (HIGH)
+
+
+2.4 There are 0 local clocks. (HIGH)
+
+
+2.5 There are 0 generated clocks that are not connected to their master clocks. (HIGH)
+
+
+3. checking dummy nodes. (HIGH)
+---------------------------------------------
+There are 2 nodes are dangling. (HIGH)
+
+DummyNode in Model: AL_MAP_LUT1
+	_al_n1_syn_337.o
+
+DummyNode in Model: PH1_PHY_PAD
+	block_ready_syn_4.opad
+	error_code[7]_syn_1.opad
+	error_code[6]_syn_1.opad
+	error_code[5]_syn_1.opad
+	error_code[4]_syn_1.opad
+	error_code[3]_syn_1.opad
+	fmt_count[0]_syn_2.ipad
+
+4. checking invalid constraints. (HIGH)
+---------------------------------------------
+There are 0 invalid constraints. (HIGH)
+
+
+5. checking PLL clocks. (HIGH)
+---------------------------------------------
+6. checking combinational loops. (HIGH)
+---------------------------------------------
+There are 0 combinational loops. (HIGH)
+
+
+7. checking soft fifo set_max_delay constraints. (HIGH)
+---------------------------------------------
+There are 0 max-delay datapath-only paths that are part of the provided async clock paths, whereas the timing between other registers is not relaxed or ignored. (HIGH)
+
+
+8. checking no path constraints. (MEDIUM)
+---------------------------------------------
+There are 0 constraints that have no timing paths. (MEDIUM)
+
+
+9. checking path exception constraints shadowed/ignored by other constraints. (MEDIUM)
+---------------------------------------------
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+10. checking no input delay (MEDIUM)
+--------------------------
+There are 83 input ports that with no input delay specified. (MEDIUM)
+
+	abort_released
+	buffer_last
+	buffer_valid
+	encoder_state[2]
+	encoder_state[1]
+	encoder_state[0]
+	fmt_count[1]
+	fmt_count[0]
+	formatter_state[2]
+	formatter_state[1]
+	formatter_state[0]
+	restart_mcus[15]
+	restart_mcus[14]
+	restart_mcus[13]
+	restart_mcus[12]
+	restart_mcus[11]
+	restart_mcus[10]
+	restart_mcus[9]
+	restart_mcus[8]
+	restart_mcus[7]
+	restart_mcus[6]
+	restart_mcus[5]
+	restart_mcus[4]
+	restart_mcus[3]
+	restart_mcus[2]
+	restart_mcus[1]
+	restart_mcus[0]
+	rst_n
+	token_keep[15]
+	token_keep[14]
+	token_keep[13]
+	token_keep[12]
+	token_keep[11]
+	token_keep[10]
+	token_keep[9]
+	token_keep[8]
+	token_keep[7]
+	token_keep[6]
+	token_keep[5]
+	token_keep[4]
+	token_keep[3]
+	token_keep[2]
+	token_keep[1]
+	token_keep[0]
+	token_last
+	token_user[1]
+	token_user[0]
+	token_valid
+	word_data[31]
+	word_data[30]
+	word_data[29]
+	word_data[28]
+	word_data[27]
+	word_data[26]
+	word_data[25]
+	word_data[24]
+	word_data[23]
+	word_data[22]
+	word_data[21]
+	word_data[20]
+	word_data[19]
+	word_data[18]
+	word_data[17]
+	word_data[16]
+	word_data[15]
+	word_data[14]
+	word_data[13]
+	word_data[12]
+	word_data[11]
+	word_data[10]
+	word_data[9]
+	word_data[8]
+	word_data[7]
+	word_data[6]
+	word_data[5]
+	word_data[4]
+	word_data[3]
+	word_data[2]
+	word_data[1]
+	word_data[0]
+	word_write
+	write_word[1]
+	write_word[0]
+
+11. checking no output delay (MEDIUM)
+--------------------------
+There are 55 output ports that with no output delay specified. (MEDIUM)
+
+	block_ready
+	byte_data[7]
+	byte_data[6]
+	byte_data[5]
+	byte_data[4]
+	byte_data[3]
+	byte_data[2]
+	byte_data[1]
+	byte_data[0]
+	byte_last
+	byte_valid
+	done
+	error_capture_id[31]
+	error_capture_id[30]
+	error_capture_id[29]
+	error_capture_id[28]
+	error_capture_id[27]
+	error_capture_id[26]
+	error_capture_id[25]
+	error_capture_id[24]
+	error_capture_id[23]
+	error_capture_id[22]
+	error_capture_id[21]
+	error_capture_id[20]
+	error_capture_id[19]
+	error_capture_id[18]
+	error_capture_id[17]
+	error_capture_id[16]
+	error_capture_id[15]
+	error_capture_id[14]
+	error_capture_id[13]
+	error_capture_id[12]
+	error_capture_id[11]
+	error_capture_id[10]
+	error_capture_id[9]
+	error_capture_id[8]
+	error_capture_id[7]
+	error_capture_id[6]
+	error_capture_id[5]
+	error_capture_id[4]
+	error_capture_id[3]
+	error_capture_id[2]
+	error_capture_id[1]
+	error_capture_id[0]
+	error_code[7]
+	error_code[6]
+	error_code[5]
+	error_code[4]
+	error_code[3]
+	error_code[2]
+	error_code[1]
+	error_code[0]
+	error_valid
+	idle
+	token_ready
+
+12. checking partial input delay (MEDIUM)
+--------------------------
+There are 0 input ports with partial input delay specified. (MEDIUM)
+
+
+13. checking partial output delay (MEDIUM)
+--------------------------
+There are 0 output ports with partial output delay specified. (MEDIUM)
+
+
+14. checking abnormal set_input_delay constraints. (MEDIUM)
+---------------------------------------------
+There are 0 abnormal set_input_delay constraints. (MEDIUM)
+
+

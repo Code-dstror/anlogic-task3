@@ -1,0 +1,27 @@
+{
+  "base_path": "linux/dma_c2h_candidate/ph1a_c2h.c",
+  "base_sha256": "210a4b5397f01522e72c224257c58e34b9e196194020990fbd1f9db0103c009b",
+  "board": "NOT_RUN",
+  "dependencies": {
+    "docs/pcie_protocol_v1.h": "0aff1930bfa5e3f32e4a0c4c8d08d29635d4a93bf4146d8898c94b0472e8e341",
+    "linux/dma_c2h_candidate/c2h_hw_abi.h": "bef673e83fc67d670e77fd91ea67b0d52ebaca640e8de10f4ac7be40495e6c49",
+    "linux/dma_c2h_candidate/c2h_legacy_policy.h": "a6501a95fa9ea10901a698299f0953d0c6bc01930987df6a11ac9cf53e9a242b",
+    "linux/dma_c2h_candidate/c2h_lifecycle.h": "20ba8a963e5942d640ef221b263ee6044901088ed2d42c412350c122c30ced8f",
+    "linux/dma_c2h_candidate/c2h_uapi.h": "163479e9b6832f303da6be288891bf424a48d0435c493c8588162de4b9b670fe"
+  },
+  "format": "rk-debug-driver-derivation-v1",
+  "generated": {
+    "debug_abi.py": "075e82b7980b6b6fcfd69a9dcfbf8a59ee288335bcf1b5e9cffa1490714e8262",
+    "ph1a_c2h_debug.c": "dbc5e25edf3c80e3ecc9607ed7410f240dde40bc782ba47a862388bec91fb5e6",
+    "ph1a_c2h_debug.patch": "350b6431104d1ff8342f0ddf2b5b16f0f5059880cf66f0775bfa3313716b4268"
+  },
+  "kernel_build": "BLOCKED_MATCHING_KDIR_REQUIRED",
+  "module_load": "NOT_RUN",
+  "owned_headers": {
+    "c2h_debug_uapi.h": "43964c569746c6066fe4b368d3f39bf577faf7ccd4f20eb15e7661e12249e68d",
+    "debug_constants.h": "1bc6f6c0156cc60df4b3364a659c0bef400f35ca31b28b031dbb1c4a1c5bab16",
+    "debug_driver_hooks.h": "32c23a7fa15c9b422eac2f299eb9f23afde1a7b2e86e88fad7dfb58297a96a65",
+    "debug_reset_guard.h": "c5c0bf41764673bb92e81d4dd0e009be543787bb485f16c164f5e329cb0968d7"
+  },
+  "source_reset_default": "DISABLED_OPERATOR_OPT_IN_NOT_FIRMWARE_ATTESTATION"
+}

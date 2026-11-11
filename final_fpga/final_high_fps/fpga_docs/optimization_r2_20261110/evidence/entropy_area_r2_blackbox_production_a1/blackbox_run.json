@@ -1,0 +1,107 @@
+{
+  "modelsim_bin": "<TOOLS_ROOT>/modelsim/win64",
+  "td_root": "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+  "commands": [
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-version"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_blackbox_production_a1",
+      "log": "modelsim_version.log",
+      "exit_code": 0,
+      "elapsed_s": 0.172
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-sv",
+        "-work",
+        "work",
+        "-L",
+        "ph1",
+        "<PROJECT_ROOT>\\src_fpga\\simulation\\blackbox_entropy_area_r2\\tb_entropy.sv"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_blackbox_production_a1",
+      "log": "entropy_vlog.log",
+      "exit_code": 0,
+      "elapsed_s": 0.109
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-t",
+        "1ps",
+        "-L",
+        "ph1",
+        "-onfinish",
+        "stop",
+        "-l",
+        "entropy.transcript",
+        "work.tb_entropy",
+        "work.PH1_PHY_GSR",
+        "ph1.glbl",
+        "-do",
+        "onerror {quit -f -code 1}; run -all; quit -f -code 0"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_blackbox_production_a1",
+      "log": "entropy_vsim.log",
+      "exit_code": 0,
+      "elapsed_s": 4.141
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vlog.exe",
+        "-sv",
+        "-work",
+        "work",
+        "-L",
+        "ph1",
+        "<PROJECT_ROOT>\\src_fpga\\simulation\\blackbox_entropy_area_r2\\tb_encoder.sv"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_blackbox_production_a1",
+      "log": "encoder_vlog.log",
+      "exit_code": 0,
+      "elapsed_s": 0.109
+    },
+    {
+      "argv": [
+        "<TOOLS_ROOT>/modelsim\\win64\\vsim.exe",
+        "-c",
+        "-t",
+        "1ps",
+        "-L",
+        "ph1",
+        "-onfinish",
+        "stop",
+        "-l",
+        "encoder.transcript",
+        "work.tb_encoder",
+        "work.PH1_PHY_GSR",
+        "ph1.glbl",
+        "-do",
+        "onerror {quit -f -code 1}; run -all; quit -f -code 0"
+      ],
+      "cwd": "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\entropy_area_r2_blackbox_production_a1",
+      "log": "encoder_vsim.log",
+      "exit_code": 0,
+      "elapsed_s": 47.203
+    }
+  ],
+  "sources_sha256": {
+    "run.py": "8497bcc934c6424053106f64f06ab5ae64503fd47f35bd33462cfe1f50d37022",
+    "oracle.py": "d53870dc3ecee58e48449aa925a4c407164dd35c918044922b433c57be6ffcdb",
+    "jpeg_ref.py": "dccc70b7515ec83e46a8f3b11368132e2bdea32a9a2aecde517fbb6a3201785d",
+    "tb_entropy.sv": "c8ae2512b43683a842a1f7a2d6fa497ef7d894707f6d9bbaf067fccf999a3903",
+    "tb_encoder.sv": "9b0e5ccc616b848e30cc2851c40cc2f1ddf700677bd1c2837c2cc11bc7b8b20c",
+    "compile_inputs.json": "5697e5f1885510012982e317749c909f13f3e6661c5fe5e5ba1fc04c06093ef6",
+    "modelsim.ini": "85b3eea304c4e4b93a8bb171c5aa4c019a9e1bc280d4a85dc7ca77d8326f5f51"
+  },
+  "target_results": {
+    "entropy": "PASS",
+    "encoder": "PASS"
+  },
+  "fixture_manifest_sha256": "ab7a22dfa6045e72ffcc26304dc36d1391e24fe964da46c251539d802a8e7d6a",
+  "modelsim_version": "Model Technology ModelSim SE-64 vsim 2020.4 Simulator 2020.10 Oct 13 2020"
+}

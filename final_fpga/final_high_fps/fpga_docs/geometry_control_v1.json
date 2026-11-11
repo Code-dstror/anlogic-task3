@@ -1,0 +1,25 @@
+{
+  "name": "camera geometry cold v1",
+  "abi_version": 1,
+  "registers": {
+    "REQUEST": 4028,
+    "ACTIVE": 4032,
+    "CAPABILITIES": 4036
+  },
+  "codes": {
+    "HD": 0,
+    "MONO_UHD15": 1,
+    "MONO_UHD20": 2
+  },
+  "sensor_profile_uhd15": 5,
+  "sensor_profile_uhd20": 6,
+  "uhd_width": 3840,
+  "uhd_height": 2160,
+  "nominal_fps": 15,
+  "nominal_fps_uhd20": 20,
+  "products": [
+    "JPEG_COLOR",
+    "RAW10"
+  ],
+  "rule": "Only fresh cold MONO with requested SDR rate legacy0; same APPLY cohort, geometry stable through all outstanding owners."
+}

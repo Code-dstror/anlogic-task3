@@ -1,0 +1,94 @@
+{
+  "source_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+  "scope": "JPEG mono/dual soft-session reconstruction design only",
+  "files": [
+    {
+      "path": "refactor/camera_raw_r2/src_fpga/rtl/stereo_cold_control.v",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "302c8dbc1bda1da415aa3659e3499b42df2b2eb54dccf5e36362606d283cf730",
+      "local_sha256": "302c8dbc1bda1da415aa3659e3499b42df2b2eb54dccf5e36362606d283cf730"
+    },
+    {
+      "path": "refactor/camera_raw_r2/src_fpga/rtl/anlogic2026.v",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "90818853656036447b06424b4937d1742387ed4ca6adc5dec990783c8e95990f",
+      "local_sha256": "90818853656036447b06424b4937d1742387ed4ca6adc5dec990783c8e95990f"
+    },
+    {
+      "path": "refactor/camera_raw_r2/src_fpga/rtl/production_soft_reset_fence.v",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "602e20e89ad8b1af4ff31806147396d20dd53ff56d041b59b2ae756385fb4c5e",
+      "local_sha256": "602e20e89ad8b1af4ff31806147396d20dd53ff56d041b59b2ae756385fb4c5e"
+    },
+    {
+      "path": "refactor/camera_raw_r2/src_fpga/rtl/frame_session_controller.v",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "c49344a13351f67e17eb2a06a40f40d5716ebef172f38ad42b3fa70b6eb7f37c",
+      "local_sha256": "c49344a13351f67e17eb2a06a40f40d5716ebef172f38ad42b3fa70b6eb7f37c"
+    },
+    {
+      "path": "refactor/camera_raw_r2/src_fpga/rtl/record_format_service.v",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "254e9a370499a13ff7fc677501da7a613c14de94029e204266d7f45fe4e69b28",
+      "local_sha256": "254e9a370499a13ff7fc677501da7a613c14de94029e204266d7f45fe4e69b28"
+    },
+    {
+      "path": "refactor/camera_raw_r2/src_fpga/rtl/record_format_bar.v",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "7548ecabb3c42166033c8d637928628d48f573e7d6dbec2864132e837ffe9c6d",
+      "local_sha256": "7548ecabb3c42166033c8d637928628d48f573e7d6dbec2864132e837ffe9c6d"
+    },
+    {
+      "path": "refactor/camera_raw_r2/rk_sdk/dual_host/debug_modes.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "36f292694162b814f621ea25601d69fa9e55d35f9283ab622d8ba9e59caa8af8",
+      "local_sha256": "36f292694162b814f621ea25601d69fa9e55d35f9283ab622d8ba9e59caa8af8"
+    },
+    {
+      "path": "refactor/camera_raw_r2/rk_sdk/dual_host/stereo_control.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "77640a6aa205d4b649c6b7411ceae5d8064d73f94fed3d9436787e0e2c128098",
+      "local_sha256": "77640a6aa205d4b649c6b7411ceae5d8064d73f94fed3d9436787e0e2c128098"
+    },
+    {
+      "path": "refactor/camera_raw_r2/rk_sdk/dual_host/pcie_protocol_v1.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "eee61997bb855d66205f33e39372dafbe2b59b8e4a8239e62c38cd56d82f4c9d",
+      "local_sha256": "eee61997bb855d66205f33e39372dafbe2b59b8e4a8239e62c38cd56d82f4c9d"
+    },
+    {
+      "path": "refactor/camera_raw_r2/rk_sdk/dual_host/stereo_control_v1.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "1eb2365024857cf5ae3c823fa4bc36c4c8ff4d9535f55da29eafda8938a63dae",
+      "local_sha256": "1eb2365024857cf5ae3c823fa4bc36c4c8ff4d9535f55da29eafda8938a63dae"
+    },
+    {
+      "path": "refactor/camera_raw_r2/rk_sdk/linux/dma_c2h_candidate/c2h_legacy_policy.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "c561609a270bd57e4be341b1e7425544002e5e4ef162f600f5743ddcb8b83779",
+      "local_sha256": "c561609a270bd57e4be341b1e7425544002e5e4ef162f600f5743ddcb8b83779"
+    },
+    {
+      "path": "linux/task3_runtime/session.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "3bf445203bdc4c15113362f973be85d30d2ff3c1a2ef99010e56f274fa0e1a64",
+      "local_sha256": "3bf445203bdc4c15113362f973be85d30d2ff3c1a2ef99010e56f274fa0e1a64"
+    },
+    {
+      "path": "linux/dma_c2h_candidate/receiver.py",
+      "git_commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+      "git_blob_sha256": "5322a44fb966fafa230c5a6a651c93842c99cdc5cbc452a3d86e331db31608c9",
+      "local_sha256": "5322a44fb966fafa230c5a6a651c93842c99cdc5cbc452a3d86e331db31608c9"
+    },
+    {
+      "path": "deliverables/CAMERA_RAW_R2_1a5603c1_seed25_Linux_Debug_20261110/rk_support/raw_driver_candidate/source/c2h_legacy_policy.h",
+      "sha256": "ed452d7cb56f51518743727f9c25d64dde99a6caeedccb8077ddb3d6c54d60c1",
+      "source": "Existing immutable seed25 delivery driver source candidate; not a newly built KO"
+    },
+    {
+      "path": "deliverables/CAMERA_RAW_R2_1a5603c1_seed25_Linux_Debug_20261110/rk_support/raw_driver_candidate/source/ph1a_c2h.c",
+      "sha256": "ec9952dd9c1633400a8225975aeb8968fcdae6331866541314ff642f3738a98b",
+      "source": "Existing immutable seed25 delivery driver source candidate; not a newly built KO"
+    }
+  ]
+}

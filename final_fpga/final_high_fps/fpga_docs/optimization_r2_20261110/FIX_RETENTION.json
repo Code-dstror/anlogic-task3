@@ -1,0 +1,738 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "static_fix_retention": "PASS",
+  "scope": "Static source and native-parameter comparison of released board-debug fixes against the pinned fusion production baseline. Coverage records are prior executions.",
+  "reference_chats_read": [
+    {
+      "host_id": "local",
+      "thread_id": "REFERENCE_CHAT",
+      "used": "Fixed RAW R2 release and preceding fixes"
+    },
+    {
+      "host_id": "local",
+      "thread_id": "REFERENCE_CHAT",
+      "used": "R5 first-read and retirement context"
+    }
+  ],
+  "raw_r2": {
+    "commit": "1a5603c1c8aa58565aa9b5facf40a7478ebcf6ba",
+    "project": "refactor/camera_raw_r2/fpga_prj/rfcamera_raw_r2.al",
+    "seal": "refactor/camera_raw_r2/docs/SOURCE_SEAL.json",
+    "design_sha256": "ce021e0b77a2f410c3d7c8d8d10b086c45b53863e80e6ff8c01b332fe1903c42",
+    "native_project_sha256": "46328c21e397d08058551cdc176f2e34da87aba78ae605a901b44f04081f2892",
+    "historical_seed25": {
+      "setup_ns": 0.001,
+      "data_hold_ns": 0.007,
+      "recovery_ns": 2.838,
+      "removal_ns": 0.002,
+      "summary_hw_ns": 0.002,
+      "tns_ns": 0,
+      "board": "NOT_RUN"
+    }
+  },
+  "fusion": {
+    "commit": "eade457d7477110605f90eb5abc08420d8936642",
+    "development_head_at_audit": "de1efb72c172f0d4666ebbe43f4efed0ace02438",
+    "project": "refactor/camera_fusion_r1/fpga_prj/rfcamera_fusion_r1.al",
+    "seal": "refactor/camera_fusion_r1/docs/SOURCE_SEAL.json",
+    "design_sha256": "ef8a2c66d1f14d6a39b4cc2fde76a5ce4d3a97e5c2ca8d85f63eb9187ab70628",
+    "native_project_sha256": "aee63fbfe97ad1b38eda23cd4f2c757db459155b6954dacb198eb0b089570a2d",
+    "archived_validation_index": "refactor/camera_fusion_r1/docs/validation_20261110/INDEX.json",
+    "stage_status_reference": "refactor/camera_fusion_r1/docs/SERVER_BUILD_20261110.md"
+  },
+  "closure": {
+    "reference_production_inputs": 405,
+    "fusion_production_inputs": 408,
+    "reference_worktree_hash_mismatches": 0,
+    "fusion_worktree_hash_mismatches": 0,
+    "common_same_sha256": 350,
+    "common_changed_sha256": 55,
+    "missing": [],
+    "added": [
+      "src_fpga/rtl/include/00_rtl/geometry_control_v1.vh",
+      "src_fpga/rtl/include/00_rtl/quality_control_v1.vh",
+      "src_fpga/rtl/include/00_rtl/rate_control_v1.vh"
+    ],
+    "changed": [
+      "fpga_prj/constraints/observer_cdc.sdc",
+      "fpga_prj/constraints/stereo_cdc.sdc",
+      "fpga_prj/constraints/stream_cdc.sdc",
+      "src_fpga/ip/coefficients/tone96_0.mif",
+      "src_fpga/ip/coefficients/tone96_1.mif",
+      "src_fpga/rtl/anlogic2026.v",
+      "src_fpga/rtl/camera_field_diagnostics.v",
+      "src_fpga/rtl/camera_rgb_native_fixed1080_borrow4.v",
+      "src_fpga/rtl/ddr3_jpeg_store.v",
+      "src_fpga/rtl/dual_raw_capture_frontend.v",
+      "src_fpga/rtl/frame_record_extension_builder.v",
+      "src_fpga/rtl/full_raw_capture_frontend.v",
+      "src_fpga/rtl/full_raw_store.v",
+      "src_fpga/rtl/hdr_merge4.v",
+      "src_fpga/rtl/hdr_pair_native_source_service4.v",
+      "src_fpga/rtl/hdr_pair_pixel_reader.v",
+      "src_fpga/rtl/hdr_raw14_shared_transport4.v",
+      "src_fpga/rtl/hdr_tone96_shared4.v",
+      "src_fpga/rtl/imx415_mode_table.v",
+      "src_fpga/rtl/imx415_sensor_config.v",
+      "src_fpga/rtl/imx415_sensor_recipe.v",
+      "src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh",
+      "src_fpga/rtl/include/04_include/camera_physical_capture.vh",
+      "src_fpga/rtl/jpeg_encoder_top.v",
+      "src_fpga/rtl/jpeg_entropy.v",
+      "src_fpga/rtl/jpeg_mcu_422.v",
+      "src_fpga/rtl/mono_config_bar_v2.v",
+      "src_fpga/rtl/mono_config_engine_v2.v",
+      "src_fpga/rtl/mono_config_scan_v2.v",
+      "src_fpga/rtl/mono_config_service_v2.v",
+      "src_fpga/rtl/mono_pcie_app_regs_v2.v",
+      "src_fpga/rtl/physical_camera_crop.v",
+      "src_fpga/rtl/physical_camera_rgb_pipeline.v",
+      "src_fpga/rtl/physical_capture_router.v",
+      "src_fpga/rtl/physical_configured_capture_frontend.v",
+      "src_fpga/rtl/preprocess_hist_eq4.v",
+      "src_fpga/rtl/preprocess_live_f21_pipeline4.v",
+      "src_fpga/rtl/preprocess_live_f21_service4.v",
+      "src_fpga/rtl/private_raw_isp_borrow4.v",
+      "src_fpga/rtl/real_hdr_camera_observe_axis.v",
+      "src_fpga/rtl/sdr_camera_raw_frontend.v",
+      "src_fpga/rtl/shared_raw10_decode_service.v",
+      "src_fpga/rtl/shared_raw10_frame_ingress.v",
+      "src_fpga/rtl/shared_raw_capture_writer.v",
+      "src_fpga/rtl/shared_wide_isp.v",
+      "src_fpga/rtl/stage3_filter_color4.v",
+      "src_fpga/rtl/stage3_filter_color_analysis4.v",
+      "src_fpga/rtl/stage3_rgb_delay96.v",
+      "src_fpga/rtl/stereo_capture_source4.v",
+      "src_fpga/rtl/stereo_cold_control.v",
+      "src_fpga/rtl/stereo_raw_owner.v",
+      "src_fpga/rtl/stereo_raw_reader.v",
+      "src_fpga/rtl/stereo_raw_store.v",
+      "src_fpga/rtl/uart_status_observer.v",
+      "src_fpga/rtl/wide_color_pipeline.v"
+    ],
+    "ordered_registrations_each": 253,
+    "registrations_definitions_include_directories_same": true,
+    "ip_unchanged": 156,
+    "tone_coefficient_replacements": [
+      "src_fpga/ip/coefficients/tone96_0.mif",
+      "src_fpga/ip/coefficients/tone96_1.mif"
+    ]
+  },
+  "constraints": {
+    "adc": "fpga_prj/constraints/anlogic2026.adc",
+    "clocks": "fpga_prj/constraints/real_hdr_clocks.sdc",
+    "adc_and_clocks_same_sha256": true,
+    "pixel_clock_mhz": 125,
+    "additional_pixel_user_hold_ns": 0.05,
+    "ddr_minimum_guard_ns": 0.35,
+    "ddr_minimum_guard_endpoints": 128,
+    "cdc_changes": "New held SDR rate/geometry tag and SYS25 handshakes replace retired one-bit SDR30 paths, retaining existing scoped business/reset/FIRST boundaries. DJ observer SDC comment updated for the wider bank. Physical endpoint matching requires same-source timing evidence.",
+    "native_hold_fix_iteration_both": 10,
+    "manifest_legacy_hold_fix_iteration_both": 5,
+    "native_fix_hold_both": "high",
+    "native_post_route_opt_both": "ultra"
+  },
+  "cases": [
+    {
+      "id": "hdr_capacity_late_short",
+      "history": [
+        "5bdca702",
+        "1a5603c1"
+      ],
+      "retention": "SOURCE_RETAINED",
+      "files": [
+        "src_fpga/rtl/hdr_eye_shared.v",
+        "src_fpga/rtl/full_raw_store.v",
+        "src_fpga/rtl/anlogic2026.v"
+      ],
+      "invariant": "Per-eye rejected-group watermark, forward half-range compare, resident-member match before new allocation, and same-eye release recheck.",
+      "fusion_coverage": "Production owner elaboration and matching source closure. Public capacity carrier available.",
+      "gap": "No recorded fusion capacity rerun for reject-LONG, release, late-SHORT and next pair, or the three phase/service comparisons.",
+      "evidence": [
+        "refactor/camera_raw_r1/docs/fieldfix_20261108/HDR_PAIR_ADMISSION.md",
+        "refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_capacity_20261110/VALIDATION.md",
+        "refactor/camera_fusion_r1/verification_reference/hdr_capacity_public/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+      ]
+    },
+    {
+      "id": "hdr_orphan_short_startup",
+      "history": [
+        "4a08ae35",
+        "492c5384",
+        "41cb5991"
+      ],
+      "retention": "SOURCE_RETAINED",
+      "files": [
+        "src_fpga/rtl/real_hdr_pair_cycle_gate.v",
+        "src_fpga/rtl/real_hdr_event_cdc.v",
+        "src_fpga/rtl/include/04_include/camera_physical_capture.vh",
+        "src_fpga/rtl/imx415_sensor_config.v",
+        "src_fpga/rtl/anlogic2026.v"
+      ],
+      "invariant": "Only a trusted unmatched SHORT with a trusted nonzero cycle may wait for LONG. Invalid orphan drains. Preserve eight consecutive good physical pairs, per-eye feedback and dual stability before RAW admission.",
+      "fusion_coverage": "Two production gates and feedback at elaboration. CFG and reader evidence start at different boundaries.",
+      "gap": "Fusion has no independent replay from I2C/CSI/TD FIFOs through both eyes reaching 8/8 and then real RAW/SOURCE. Original 8/0 versus 8/8 evidence is historical.",
+      "evidence": [
+        "refactor/camera_raw_r2/docs/seed12fix_20261109/README.md",
+        "refactor/camera_raw_r2/docs/seed12_round2_20261109/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+      ]
+    },
+    {
+      "id": "hdr_to_dehaze_drain",
+      "history": [
+        "4a08ae35"
+      ],
+      "retention": "SOURCE_RETAINED",
+      "files": [
+        "src_fpga/rtl/real_hdr_pair_cycle_gate.v",
+        "src_fpga/rtl/paired_raw_capture_drain_cdc.v",
+        "src_fpga/rtl/physical_configured_capture_frontend.v",
+        "src_fpga/rtl/full_raw_store.v",
+        "src_fpga/rtl/dehaze_dcp_restore4.v"
+      ],
+      "invariant": "Quiet uses active pair ownership and held member SOURCE. Skip-watermark maintenance preserves quiet. Real capture counts, SOURCE and DFI B debt gate drain.",
+      "fusion_coverage": "Real CFG and DFI owner with public capture debt and late-B stimuli.",
+      "gap": "Original continuous rejected-token plus real paired-drain A/B is historical. Fusion CFG carrier models capture events.",
+      "evidence": [
+        "refactor/camera_raw_r2/docs/fieldfix_20261109/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+      ]
+    },
+    {
+      "id": "he_to_dehaze_whole_ack_first_frame",
+      "history": [
+        "4a08ae35"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/anlogic2026.v",
+        "src_fpga/rtl/frame_job_config_cdc.v",
+        "src_fpga/rtl/mono_config_service_v2.v",
+        "src_fpga/rtl/mono_config_engine_v2.v",
+        "src_fpga/rtl/mono_config_bar_v2.v",
+        "src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh"
+      ],
+      "invariant": "FRAME_APPLY_REQUIRE_IDLE=0 in the actual service. Old PREPARE waits for idle. Compare all 37 x 32 ACK bits, including session/target epoch, before the real eligible frame. Source fault has priority. USER ACTIVE publishes the 32 exact words and actual sequence atomically.",
+      "fusion_coverage": "Real USER/PIX/DFI CFG owners and TD FIFOs. Reject stale ACK, match and publish despite new processing busy, compare ACTIVE and first sequence. Product gate retires a real short JPEG.",
+      "gap": "CFG test injects public first-frame and debt events. End-to-end HDR/HE to dehaze board switching remains unqualified.",
+      "evidence": [
+        "refactor/camera_raw_r2/docs/fieldfix_20261109/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+      ]
+    },
+    {
+      "id": "hdr_training_and_cfg_terminal_error",
+      "history": [
+        "5bdca702"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/include/04_include/camera_physical_capture.vh",
+        "src_fpga/rtl/real_hdr_event_cdc.v",
+        "src_fpga/rtl/imx415_sensor_config.v",
+        "src_fpga/rtl/imx415_sensor_recipe.v",
+        "src_fpga/rtl/anlogic2026.v",
+        "src_fpga/rtl/mono_config_engine_v2.v"
+      ],
+      "invariant": "Before first good pair, PHY receive pulse may retrain. Identity loss, pair CDC loss, NACK, clock loss or RX fault coincident with/after first good pair are terminal. Target-profile required-eye errors after matching ACK produce ERROR_RESET=6 and preserve prior ACTIVE.",
+      "fusion_coverage": "Source fault option checked in native hierarchy. Cold SYS25 and control paths exercised.",
+      "gap": "Fusion has no recorded physical-training/NACK injection equivalent to the RAW R1 carrier. Historical first physical trigger was not uniquely identified.",
+      "evidence": [
+        "refactor/camera_raw_r1/docs/fieldfix_20261108/CONFIG_FAILURE.md",
+        "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+      ]
+    },
+    {
+      "id": "stereo_reader_first_start",
+      "history": [
+        "5a693421",
+        "38d5c614"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/anlogic2026.v",
+        "src_fpga/rtl/stereo_cold_control.v",
+        "src_fpga/rtl/stereo_raw_reader.v",
+        "src_fpga/rtl/stereo_raw_store.v",
+        "src_fpga/rtl/shared_raw10_decode_service.v",
+        "src_fpga/rtl/shared_raw10_decoder_masked.v",
+        "src_fpga/rtl/imx415_sensor_recipe.v"
+      ],
+      "invariant": "Production external decode proves START active before first AR. Stable DFI identity reset and synchronous frame cleanup. Lost context returns failure after presented/committed traffic drains. Width and byte count are frozen at START. Physical D2 profile 4 uses HMAX=1066, SHR0=1129 and capture divisor 1.",
+      "fusion_coverage": "Cold select profile proof and legal first real RAW-read-to-JPEG retirement after stopped DFI at small geometry.",
+      "gap": "Historical missed START and lost-context injection were not repeated in fusion. Sensor electrical state and full stereo cadence remain outside these models.",
+      "evidence": [
+        "refactor/camera_raw_r1/docs/R5_RAW_LIFECYCLE.md",
+        "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md"
+      ]
+    },
+    {
+      "id": "slot_local_retire",
+      "history": [
+        "5a693421",
+        "38d5c614",
+        "5bdca702"
+      ],
+      "retention": "SOURCE_RETAINED",
+      "files": [
+        "src_fpga/rtl/full_raw_store.v",
+        "src_fpga/rtl/stereo_raw_owner.v",
+        "src_fpga/rtl/stereo_raw_store.v",
+        "src_fpga/rtl/hdr_eye_shared.v",
+        "src_fpga/rtl/jpeg_frame_ring.v"
+      ],
+      "invariant": "STEREO_SLOT_LOCAL_RETIRE_ENABLE=1 and HDR_SLOT_LOCAL_RETIRE_ENABLE=1 in production. Normal exact target release permits other-slot writes. Source/B, read and product quiet, ticket and SAFE/retire ownership retained. STOP, CFG and faults require global drain.",
+      "fusion_coverage": "Product gate shows READY stays low before final B and real native fence/SAFE/ACK/ring retirement. Error drains and subsequent legal job retire.",
+      "gap": "Specific concurrent unrelated writer with normal release covered by historical R5/RAW tests. Fusion short JPEG gate is not a full stereo concurrency test.",
+      "evidence": [
+        "refactor/camera_raw_r1/docs/R5_RAW_LIFECYCLE.md",
+        "refactor/dual_unified_r5/docs/R5_IMPLEMENTATION.md",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md"
+      ]
+    },
+    {
+      "id": "early_raw_sequence_gaps",
+      "history": [
+        "5bdca702"
+      ],
+      "retention": "OPEN_FIELD",
+      "files": [
+        "src_fpga/rtl/stereo_raw_owner.v",
+        "src_fpga/rtl/stereo_raw_store.v",
+        "src_fpga/rtl/shared_raw10_frame_ingress.v",
+        "src_fpga/rtl/shared_raw_capture_writer.v",
+        "src_fpga/rtl/raw_video_record_formatter.v"
+      ],
+      "invariant": "Preserve true SOURCE sequence, FE, SOURCE, B, descriptor and SAFE. UHD extends legal CAM0 geometry. Five-window RAW10 packing preserves non-full tail and failure boundaries.",
+      "fusion_coverage": "Four RAW A/B profiles match public events at every edge. Each arm completes 15 END and 7 ABORT.",
+      "gap": "No unique cause in historical field data. Full healthy early ARAW succession and intentional full-slot refusal were demonstrated on the earlier RAW carrier.",
+      "evidence": [
+        "refactor/camera_raw_r1/docs/fieldfix_20261108/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/datapath/README.md"
+      ]
+    },
+    {
+      "id": "dfi_pix_and_jpeg_timing_boundaries",
+      "history": [
+        "8258220f"
+      ],
+      "retention": "SOURCE_RETAINED",
+      "files": [
+        "src_fpga/rtl/anlogic2026.v",
+        "src_fpga/rtl/frame_job_config_cdc.v",
+        "src_fpga/rtl/full_raw_store.v",
+        "src_fpga/rtl/dual_raw_capture_frontend.v",
+        "src_fpga/rtl/dol2_axi_write_arbiter.v",
+        "src_fpga/rtl/raw_video_record_formatter.v",
+        "src_fpga/rtl/reset_release_sync_data.v",
+        "src_fpga/rtl/real_hdr_pair_cycle_gate.v",
+        "src_fpga/rtl/ordered_frame_ingress.v"
+      ],
+      "invariant": "Register active_hdr with successful DFI commit. Three write arbiters and ARAW use R3 data qualification with F3 reset release and first legal R4 sample. Old registered pair outcomes precede new group allocation. JPEG payload initializes before validity and ownership still resets.",
+      "fusion_coverage": "Native hierarchy and product normal, stopped-DFI, write deadline and recovery gates.",
+      "gap": "The 27 focused DFI/PIX/JPEG cases and exact R3/F3/R4 phase A/B are historical. Fusion physical timing requires its own result.",
+      "evidence": [
+        "refactor/camera_raw_r2/docs/timing_20261109/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md"
+      ]
+    },
+    {
+      "id": "jpeg_extension_hdr_fence_rgb_payload",
+      "history": [
+        "f1c7cd0f"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/ordered_frame_egress.v",
+        "src_fpga/rtl/ddr_extension_staging_ram.v",
+        "src_fpga/rtl/hdr_raw14_shared_transport4.v",
+        "src_fpga/rtl/camera_rgb_native_fixed1080_borrow4.v"
+      ],
+      "invariant": "Retain FIRST_FLIT_PRECHECKED and the physical last staging write, register HDR FENCE match before SOURCE, and load held 96-bit RGB payload before validity with control ASR.",
+      "fusion_coverage": "Native staging check and actual short product legal completion and SOURCE error drain.",
+      "gap": "Original corrupt extension flit and several reset phase negative controls are historical.",
+      "evidence": [
+        "refactor/camera_raw_r2/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md"
+      ]
+    },
+    {
+      "id": "source_jpeg_asr_and_qualification",
+      "history": [
+        "1a5603c1"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/private_rgb_source_borrow4.v",
+        "src_fpga/rtl/private_raw_isp_borrow4.v",
+        "src_fpga/rtl/hdr_pair_product_abort_drain4.v",
+        "src_fpga/rtl/ordered_frame_cdc.v",
+        "src_fpga/rtl/ordered_frame_ingress.v",
+        "src_fpga/rtl/ddr3_jpeg_store.v",
+        "src_fpga/rtl/reset_release_sync_data.v",
+        "src_fpga/rtl/anlogic2026.v"
+      ],
+      "invariant": "SOURCE borrow and JPEG ingress retain R3 data qualification, F3 ASR, R4 first sample and R3 FIFO reset. Original RAW-to-ISP owner and JPEG ring have matched local falling ASR release in fusion. Cleanup and exact debt/identity remain enforced.",
+      "fusion_coverage": "Real RAW/JPEG SOURCE, negative and legal product terminal, stopped DFI start, write B and ticket/ring retirement.",
+      "gap": "Exact stopped-PIX reset phase cases and targeted F3 endpoint timing are historical.",
+      "evidence": [
+        "refactor/camera_raw_r2/docs/hdr_rate_seed56_20261110/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md"
+      ]
+    },
+    {
+      "id": "hdr_tone_two_lane_prefetch_160",
+      "history": [
+        "41cb5991",
+        "1a5603c1"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/hdr_pair_read_cursor.v",
+        "src_fpga/rtl/hdr_pair_pixel_reader.v",
+        "src_fpga/rtl/hdr_pair_native_source_service4.v",
+        "src_fpga/rtl/ddr_response_bank16.v",
+        "src_fpga/rtl/hdr_tone96_shared4.v",
+        "src_fpga/rtl/hdr_merge4.v",
+        "src_fpga/rtl/wide_color_pipeline.v",
+        "src_fpga/rtl/shared_wide_isp.v"
+      ],
+      "invariant": "Chunk 160 x 16 bytes equals 512 RAW10 groups. Keep one outstanding burst, 16 beats, 4 KiB boundaries, final KEEP, 16-word response prefetch, and real queue/output drain. Two Tone lanes accept four pixels in two cycles. Quality presets and two Tone MIF replacements intentionally change selected mathematics.",
+      "fusion_coverage": "Native 2 lanes and 4 prefetch RAMs. Six 68x63 real read jobs, 6426 matched groups, cancel/error/debt checks, four Tone pages with 65536 gray codes and real ISP 3840x4.",
+      "gap": "Sustained full-size stereo HDR 30/30 and sensor picture quality have no fusion board qualification.",
+      "evidence": [
+        "refactor/camera_raw_r2/docs/hdr_rate_seed56_20261110/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/datapath/README.md",
+        "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+      ]
+    },
+    {
+      "id": "rk_parameters_and_uart_diagnostics",
+      "history": [
+        "5bdca702",
+        "4a08ae35",
+        "062a5431",
+        "1a5603c1"
+      ],
+      "retention": "SEMANTICS_RETAINED",
+      "files": [
+        "src_fpga/rtl/anlogic2026.v",
+        "src_fpga/rtl/camera_field_diagnostics.v",
+        "src_fpga/rtl/uart_status_observer.v",
+        "fpga_prj/constraints/observer_cdc.sdc",
+        "rk_sdk/dual_host/debug_modes.py",
+        "rk_sdk/dual_host/camera_shared.py"
+      ],
+      "invariant": "Existing JPEG and HDR motion/timer knobs remain. HDR ratio_log2=4, black levels 50/50 and qualification mask 15 remain fixed. Explicit quality capability. DJ/v4 preserves CFG and adds two physical FS counters. Read-only 224-bit DFI and 256-bit PIX held banks.",
+      "fusion_coverage": "SDK BAR model for all 32 words, old input and malformed values. Real 8N1 UART, CRC, mixed versions, stop and wrap.",
+      "gap": "4K uses the matching fusion SDK capability parser. Board and live driver integration were not exercised in the SDK model.",
+      "evidence": [
+        "refactor/camera_fusion_r1/docs/RK_PARAMETER_DISCOVERY.md",
+        "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+        "refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_uart/README.md"
+      ]
+    },
+    {
+      "id": "same_owner_mono_dual_session_switch",
+      "history": [
+        "1a5603c1"
+      ],
+      "retention": "HOST_ONLY",
+      "files": [
+        "src_fpga/rtl/stereo_cold_control.v",
+        "src_fpga/rtl/production_soft_reset_fence.v",
+        "src_fpga/rtl/frame_session_controller.v",
+        "src_fpga/rtl/record_format_service.v",
+        "rk_sdk/dual_host/debug_modes.py",
+        "rk_sdk/linux/dma_c2h_candidate/c2h_legacy_policy.py"
+      ],
+      "invariant": "Topology lock and real quiet/token drain before soft reset remain. Current C2H_LEGACY policy disallows direct CONTROL 0x018 writes and SharedDebugSession.prepare expects cold session counters and BOOT. Same-owner transition requires RK adaptation.",
+      "fusion_coverage": "Cold selector lock/cohort reset and an independent fresh product process. Historical switch probe has 3 host model cases and 15 negatives.",
+      "gap": "Same owner JPEG mono-to-dual-to-mono through soft session reconstruction has no implemented or board-verified control loop in this scope.",
+      "evidence": [
+        "docs/mono_dual_soft_switch_1a5603c1/README.md",
+        "docs/mono_dual_soft_switch_1a5603c1/VALIDATION.json",
+        "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+        "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md"
+      ]
+    }
+  ],
+  "critical_input_sha256": {
+    "fpga_prj/constraints/observer_cdc.sdc": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "d7c6af685b2489f3f269fba5b02d454add99989517e212fde4205a1f14a18cb8",
+      "fusion_sha256": "a258e6f5fd66cadbc47b7435b16b5cd0d2c4e11f1132d95ee5ad5c8570cd64a1"
+    },
+    "src_fpga/rtl/anlogic2026.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "90818853656036447b06424b4937d1742387ed4ca6adc5dec990783c8e95990f",
+      "fusion_sha256": "292440bb4248496a0862adf35ef0309a98132819f272b0d1e592ed4e21dae380"
+    },
+    "src_fpga/rtl/camera_field_diagnostics.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "c1b99f149c3042aa8d05ff0f7d03cae8d90361573992c02b06e156759c430b00",
+      "fusion_sha256": "08bf6ec5c9243e96e3f9f5bdf8165373a0827e63d84eddc26c7a7ad415b2d6fb"
+    },
+    "src_fpga/rtl/camera_rgb_native_fixed1080_borrow4.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "129cca5bb8cb2be65ed64664c03e675af52a8b042d4c7c59dd298bf8b20bfdde",
+      "fusion_sha256": "ba2be526cf8c44b65f02a0e6fc38b46fc7ad38daa33679e0de1d6ae7e331fca6"
+    },
+    "src_fpga/rtl/ddr3_jpeg_store.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "47abc39a80e74f676d8ce7ada9cde03ecd3c1c376730e3bef76c2b90c661b14a",
+      "fusion_sha256": "e60fe999ce02fa4720efcc032d9de468377291c5b58fc051ee6d2f396fd09c25"
+    },
+    "src_fpga/rtl/ddr_extension_staging_ram.v": {
+      "status": "SAME_BYTES",
+      "sha256": "d8941a24498d7ed8334f8fbb98fc334f64b44bcb3c3e04d1c0829a83fbdd33c0"
+    },
+    "src_fpga/rtl/ddr_response_bank16.v": {
+      "status": "SAME_BYTES",
+      "sha256": "da5f7c688f51670c2d3bfda375610696f8b450e0c2f8a01d02f5d4124246578c"
+    },
+    "src_fpga/rtl/dehaze_dcp_restore4.v": {
+      "status": "SAME_BYTES",
+      "sha256": "a3c231735f22d03525e1454db2930872e4b7019d593354f89c4d8dd32fd6da1f"
+    },
+    "src_fpga/rtl/dol2_axi_write_arbiter.v": {
+      "status": "SAME_BYTES",
+      "sha256": "7b12bc780aeb58509f41c3d2cd699449f892d656b944a808721f0ecc9caacfa2"
+    },
+    "src_fpga/rtl/dual_raw_capture_frontend.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "08f5f2b73b737aefe5fa1c75786c5a987c9c6e57863ce64e811bdfd227f98a62",
+      "fusion_sha256": "8d09c8df883b91b1ab08166dd514f42633e378147866dd819762d81c524e9f8a"
+    },
+    "src_fpga/rtl/frame_job_config_cdc.v": {
+      "status": "SAME_BYTES",
+      "sha256": "dd5002212f9579a3db34db527bab346a540477fb4b8a046a2977db3deb43793d"
+    },
+    "src_fpga/rtl/frame_session_controller.v": {
+      "status": "SAME_BYTES",
+      "sha256": "c49344a13351f67e17eb2a06a40f40d5716ebef172f38ad42b3fa70b6eb7f37c"
+    },
+    "src_fpga/rtl/full_raw_store.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "9d3db3c7b38f55b9ac37e3b68ebb3b5c0fa823f727be0902148d79ccd2466285",
+      "fusion_sha256": "ff94bf7dc35a8cb8ded173958fd256b61bc048c68bdbff6b8271e0d1d5479a0b"
+    },
+    "src_fpga/rtl/hdr_eye_shared.v": {
+      "status": "SAME_BYTES",
+      "sha256": "acf8c8d6c5ee648d6ebb8ea9154116357d2cf6edb8f5554b37f2229d1dd3e76f"
+    },
+    "src_fpga/rtl/hdr_merge4.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "dbb12cec640156b8d3881479a32392aee7bac6dbc9af78d31343e787965ce8b8",
+      "fusion_sha256": "5a57241ad643ff0d652d2acf643d21c1b7dcd4e95a293f234a80159d037a9887"
+    },
+    "src_fpga/rtl/hdr_pair_native_source_service4.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "33168bfe7241cfdfacba2c2943dbacbd8ecf43bacaa403fbaa1630c40b64d278",
+      "fusion_sha256": "b68dc3cec6bb32de76661cc38b4d253adf75debe18f2e752fcfc40d01d2c6908"
+    },
+    "src_fpga/rtl/hdr_pair_pixel_reader.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "ae28469c708bbc4b8feae711f49901ca8d75756f50ee1cb443c22a0d3434fecf",
+      "fusion_sha256": "4e59b95a7d9c071b16d806530eecdac77c472510c494bd27fe814d8627c20860"
+    },
+    "src_fpga/rtl/hdr_pair_product_abort_drain4.v": {
+      "status": "SAME_BYTES",
+      "sha256": "1a93737302dd57ba29f7080feab0e20ed5bafb008c97cee1eacae96a6fa555e3"
+    },
+    "src_fpga/rtl/hdr_pair_read_cursor.v": {
+      "status": "SAME_BYTES",
+      "sha256": "b2bc668efc5e1de8dc02ce4d8bfa16cdc8dcc43bd2cefb6595c04a751338bed3"
+    },
+    "src_fpga/rtl/hdr_raw14_shared_transport4.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "34963c31b7b050384663a11dd078741c229821f24445c9e80d02e9a081a1c404",
+      "fusion_sha256": "50ee57659e27b658fd9c34dc2350c4bb557098cc8a870e0d302a4b92f3d92647"
+    },
+    "src_fpga/rtl/hdr_tone96_shared4.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "21db78163fb014d03f0dd9f8fca3d325a4414397d9bd6ad2033d78c71c7a0442",
+      "fusion_sha256": "782b9d37b7c617965f9d477fb98ca60f38469fc7003fab20d34407ee880ee3fd"
+    },
+    "src_fpga/rtl/imx415_sensor_config.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "41323a4e367b69bd7ce97bf5523f34ed537528f19cc5b01c54ee59f2a4fbcd44",
+      "fusion_sha256": "e2b0ce500ec4b5d8388c394fd407c9448fa1d5e6a7b88c3a483a04dc9f8a80f7"
+    },
+    "src_fpga/rtl/imx415_sensor_recipe.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "36bb7702ae19543945854634f87c51c86a08aa68025e4acda5f207fe35c1942c",
+      "fusion_sha256": "dd6df2e14b09151ee63b1fb7c9a54b9887f61c026f4584d37207eec33b8306e3"
+    },
+    "src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "5555cc4297277b88def3e274d640cc8408ab45481d535013883c4baca6a5d4dc",
+      "fusion_sha256": "af9a0c94a0e6402d93504f6216f87d21f37ac3bf029218298722f2d52c6e604c"
+    },
+    "src_fpga/rtl/include/04_include/camera_physical_capture.vh": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "63d0c535d68f333232c9d0b36f6f931e1285abd2a322d2fdbf4263e16809b3d8",
+      "fusion_sha256": "dd17ac0d48f7bec1c4f85a8840917e576128719ebdfb6ed30630636c3790f1db"
+    },
+    "src_fpga/rtl/jpeg_frame_ring.v": {
+      "status": "SAME_BYTES",
+      "sha256": "5c45615f818173b96a25a1a184691f8ffcdd3ef2155fa54581804b6e567153e1"
+    },
+    "src_fpga/rtl/mono_config_bar_v2.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "32b9bbc753a84b5899c1fcdfa6f6c7135f172a538e70ba60c16dce377af6e225",
+      "fusion_sha256": "4ffee748b6a7abfac9043cd06db7d3d2932e31c5b47b73aaa7a4b5ccb13d4308"
+    },
+    "src_fpga/rtl/mono_config_engine_v2.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "d5ba5fefa878c0207a059b4783a81fb4ac780d86b5006e06c0b8582062a75063",
+      "fusion_sha256": "8041e8d50a50715ef64e2284b86f0874f81f0abf4f7f206f9205cbcec8315159"
+    },
+    "src_fpga/rtl/mono_config_service_v2.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "2981b4fab7ada6a4694fe2671f9b0762754e6427acc9f8f7227d6d93f2cb9ff2",
+      "fusion_sha256": "8af292514a5601a26127456a1dd3f3e71deb9356e81126d348eac97f58b2da85"
+    },
+    "src_fpga/rtl/ordered_frame_cdc.v": {
+      "status": "SAME_BYTES",
+      "sha256": "32c8bf457ff45ea3b3a3eb4038fb9b968991c4038ed9d26dfa7ba4f1418de469"
+    },
+    "src_fpga/rtl/ordered_frame_egress.v": {
+      "status": "SAME_BYTES",
+      "sha256": "eb5312ed137935d5081d7470d5973f61ae3d3ac0735559bb77cf072b34c7a81d"
+    },
+    "src_fpga/rtl/ordered_frame_ingress.v": {
+      "status": "SAME_BYTES",
+      "sha256": "f463a2a4d601d5400f44f0b3b8cde585ffbf0711c447ce6e80e335fdc621d8c7"
+    },
+    "src_fpga/rtl/paired_raw_capture_drain_cdc.v": {
+      "status": "SAME_BYTES",
+      "sha256": "65e6613a7a1ed242e79846a47270ce3fc3f554a0787c125e94dff91bcca30c63"
+    },
+    "src_fpga/rtl/physical_configured_capture_frontend.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "29e78dd4b2a85955fae7950b35babb3054a0f1ade43af43a0469e90390d44e06",
+      "fusion_sha256": "c7d546af1715be191bf30442855ad5e7d480cd5c5ee1e2232d0f5374e4c3284e"
+    },
+    "src_fpga/rtl/private_raw_isp_borrow4.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "a46cd8a999ac360b4c530bc7034070e9305a2f20fadb3906e67b0fc6079f7490",
+      "fusion_sha256": "782e4b6bd3f9845c61a1fe26308f763b50c68b6a461ff09401f5299c733fcf8b"
+    },
+    "src_fpga/rtl/private_rgb_source_borrow4.v": {
+      "status": "SAME_BYTES",
+      "sha256": "b193e4f1d1e4daeee924aa485b8f1ce5edcff0d8da3851c25ceeff3626f02f75"
+    },
+    "src_fpga/rtl/production_soft_reset_fence.v": {
+      "status": "SAME_BYTES",
+      "sha256": "602e20e89ad8b1af4ff31806147396d20dd53ff56d041b59b2ae756385fb4c5e"
+    },
+    "src_fpga/rtl/raw_video_record_formatter.v": {
+      "status": "SAME_BYTES",
+      "sha256": "1de88a584c5e8c5b7031eefcffd419433472e48eaaa11b94e3a0c5fbd84d0510"
+    },
+    "src_fpga/rtl/real_hdr_event_cdc.v": {
+      "status": "SAME_BYTES",
+      "sha256": "15504e2334b0d74f3d758578bee9494ed888dd1707e00cf98254ab8d30d97cd1"
+    },
+    "src_fpga/rtl/real_hdr_pair_cycle_gate.v": {
+      "status": "SAME_BYTES",
+      "sha256": "280f801799e867fb4bba438be1a6fbf05eb601066d9095c9bcc89600c2be0286"
+    },
+    "src_fpga/rtl/record_format_service.v": {
+      "status": "SAME_BYTES",
+      "sha256": "254e9a370499a13ff7fc677501da7a613c14de94029e204266d7f45fe4e69b28"
+    },
+    "src_fpga/rtl/reset_release_sync_data.v": {
+      "status": "SAME_BYTES",
+      "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7"
+    },
+    "src_fpga/rtl/shared_raw10_decode_service.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "f9f84584377cecd52e0eaacb3ffcb0d8f745a398060b3a690c88dab92ef12981",
+      "fusion_sha256": "ea6a5d882370bdd7f06d3b430bf9c1da845227fd3d72ea272face5c4936ea8ea"
+    },
+    "src_fpga/rtl/shared_raw10_decoder_masked.v": {
+      "status": "SAME_BYTES",
+      "sha256": "ddc64ffb36cbccfac271c2d1d968ac069eb516002aeaf47c9840a3b6f37a4a82"
+    },
+    "src_fpga/rtl/shared_raw10_frame_ingress.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "aa8a05703c5782bda13bc3d4281b785cf2b44ea8a19fd0b95c609087f2fb2e11",
+      "fusion_sha256": "8569d76989de58b9940cfa9090f8f3fd3ecd6c3eddea75b34fa31e01743381c3"
+    },
+    "src_fpga/rtl/shared_raw_capture_writer.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "ed77ab1097f987e4881589032e421ac7ca51ea4c6856dc57fa2963186955a2b4",
+      "fusion_sha256": "ec5b869b37ad9d7266637ef4961182379744bf26cb666a2347448c283ce10c54"
+    },
+    "src_fpga/rtl/shared_wide_isp.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "1b623647e195138c25b2f061e0f35d16bd70c2d562acef3f5e02acf4ee7062f6",
+      "fusion_sha256": "3ebfe8a552e93347b1f4f53ec016a14b90da10c6a345d634cea052be22da623f"
+    },
+    "src_fpga/rtl/stereo_cold_control.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "302c8dbc1bda1da415aa3659e3499b42df2b2eb54dccf5e36362606d283cf730",
+      "fusion_sha256": "d034d4e7cf0ebede15d40446bfbf705b8da784ed609b5b96ce33f58cbdfc216c"
+    },
+    "src_fpga/rtl/stereo_raw_owner.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "cd9b16c45bb626816805f0208e50a669b50e28a1d193b49486725737653b6dc3",
+      "fusion_sha256": "d3f79258cb1ecd678c934ffbd9963e7825fe5135917c8f01fdd0e0132cc95f49"
+    },
+    "src_fpga/rtl/stereo_raw_reader.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "463b15d7c84c6db08aa76e94d24f20aeb06934211f92e0674391165d05b4155d",
+      "fusion_sha256": "3265e11a3fe9c0b671132932f20f52204eacf739b258ad022ed50f9e24901672"
+    },
+    "src_fpga/rtl/stereo_raw_store.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "421ff13653b1ac7a76688c629d44d020e708eadec8c523b1dc81a8c8cec34c99",
+      "fusion_sha256": "c2dca5bcf34ee65ce147e3bef19023da566f48538b8ef2a3ad9025ade7eb1b8e"
+    },
+    "src_fpga/rtl/uart_status_observer.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "601cf849992568b49b9eb5e973b8c2290417a6ebb9451dc7081cb875afa56319",
+      "fusion_sha256": "f9305994d13aff37a61e19d08a7a59c20aea736a01cb48c804815dce76867b3c"
+    },
+    "src_fpga/rtl/wide_color_pipeline.v": {
+      "status": "DIFF_REVIEWED",
+      "raw_r2_sha256": "ba8f5a7c3834d785eeaf3dbe7b81327260dd2b5722f489851ce20e303e1322e2",
+      "fusion_sha256": "54f2c7e04a376d926c63dc16d7b18e81f3a8a221c4caf49cfb426fdd9fcc1db5"
+    }
+  },
+  "unresolved_field": [
+    "Early RAW sequence gaps did not have unique source attribution.",
+    "Sustained full-size 30/30 HDR is not proven by the short digital service models."
+  ],
+  "out_of_scope": [
+    "Same-owner RK mono/dual soft switch is a documented host adaptation, not a board-debug RTL repair."
+  ],
+  "audit_runs": {
+    "source_and_path_checks": "PASS",
+    "new_functional_simulation": "NOT_RUN",
+    "new_synthesis": "NOT_RUN",
+    "new_placement_routing": "NOT_RUN",
+    "new_physical_sta": "NOT_RUN",
+    "new_bitgen": "NOT_RUN",
+    "board": "NOT_RUN"
+  },
+  "baseline_evidence": [
+    "refactor/camera_fusion_r1/docs/QUALIFICATION.md",
+    "refactor/camera_fusion_r1/docs/blackbox/config/README.md",
+    "refactor/camera_fusion_r1/docs/blackbox/datapath/README.md",
+    "refactor/camera_fusion_r1/docs/blackbox/product/RESULTS.md",
+    "refactor/camera_fusion_r1/docs/validation_20261110/tmp__native_hierarchy_final_a2/td.log"
+  ]
+}

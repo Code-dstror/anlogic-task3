@@ -1,0 +1,248 @@
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/td_commands_prompt.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 22:02:39 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  5.575768s wall, 3.906250s user + 0.265625s system = 4.171875s CPU (74.8%)
+
+RUN-1004 : used memory is 1255 MB, reserved memory is 1284 MB, peak memory is 1288 MB
+RUN-1002 : start command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2"
+PRJ-1005 : Command create_project success.
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324"
+RUN-1001 : Using default speed grade: 2
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324" in  6.105267s wall, 4.390625s user + 0.343750s system = 4.734375s CPU (77.5%)
+
+RUN-1004 : used memory is 1258 MB, reserved memory is 1291 MB, peak memory is 1292 MB
+RUN-1002 : start command "open_project uhd_probe.al"
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |     auto     |       auto       |        
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-5007 WARNING: could not find top-level module/unit; aborting hierarchy tree creation
+PRJ-1401 : Successfully analyzed 0 source files.
+RUN-1003 : finish command "create_project uhd_probe . -family ph1 -device PH1A90SEG324 -speed -2" in  6.113810s wall, 4.406250s user + 0.359375s system = 4.765625s CPU (77.9%)
+
+RUN-1004 : used memory is 1259 MB, reserved memory is 1291 MB, peak memory is 1292 MB
+RUN-1002 : start command "add_files reset_release_sync.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files reset_release_sync_data.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_ring_cold_bank.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files td_sdp_ram.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_frame_ring.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files jpeg_ring_reset_boundary.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ordered_frame_fifo_fence.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files axis_frame_fifo_ip.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ordered_frame_egress.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ddr_extension_staging_ram.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files td_sdp_ram40.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml"
+PRJ-7002 CRITICAL-WARNING: Load IPC file ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml error, the IP's generated file D doesn't exist.
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.ipc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files uhd_probe.v"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_files clock.sdc"
+PRJ-1202 : Add files success.
+RUN-1002 : start command "add_include_dir rtl/include/01_include"
+RUN-1002 : start command "add_include_dir rtl/include/04_include"
+RUN-1002 : start command "top_module uhd_probe"
+PRJ-1501 : Current top model is uhd_probe.
+RUN-1002 : start command "set_param -run syn_1 flow thread 4"
+PRJ-1105 : Update param syn_1 flow::thread::4 succeed.
+RUN-1002 : start command "set_param -run syn_1 rtl min_control_set 2"
+PRJ-1105 : Update param syn_1 rtl::min_control_set::2 succeed.
+RUN-1002 : start command "set_param -run syn_1 gate map_mode area_prior"
+PRJ-1105 : Update param syn_1 gate::map_mode::area_prior succeed.
+RUN-1002 : start command "set_param -run syn_1 gate multi_thread_mapping partition"
+PRJ-1105 : Update param syn_1 gate::multi_thread_mapping::partition succeed.
+RUN-1002 : start command "set_param -run syn_1 gate add_map_lut_struct on"
+PRJ-1105 : Update param syn_1 gate::add_map_lut_struct::on succeed.
+RUN-1002 : start command "launch_runs -step opt_gate syn_1"
+PRJ-1403 : syn_1 is launched.
+PRJ-1404 : Run log file is <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_syn4_a1/baseline/uhd_probe_Runs/syn_1/run.log.
+RUN-1002 : start command "wait_run syn_1"
+PRJ-1405 : Waiting for run syn_1 to finish.
+PRJ-1411 : launch_runs syn_1 -step opt_gate.
+PRJ-1412 : reset_run phy_1.
+PRJ-1009 : If you need the best result of runs copied into "<PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_syn4_a1/baseline/uhd_probe_Runs/best_result" , please execute "save_best_bits" in the Tcl console after all runs complete, or add "save_best_bits" in tcl script after "wait_run" command.
+PRJ-5303 WARNING: Run syn_1 failed.
+============================================================
+   TD Release_2026.2
+   Copyright (c) 2012-2026 Anlogic Inc.
+   Executable = <TOOLS_ROOT>/TD_Release_2026.2.210.850/bin/run.exe
+   Build number = 6.2.3.210850
+   Built at =   11:35:58 Aug 19 2026
+   Run by = BUILD_USER
+   Run Date =   Tue Nov 10 22:02:52 2026
+
+   Run on =     LAPTOP-OC94AA09
+============================================================
+RUN-1002 : start command "source_tcl ./settings.cfg"
+PRJ-1001 : Finish executing settings.cfg
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SEG324 -speed 2"
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :           OPTION          |          IO           |   SETTING   
+ARC-1001 : ----------------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |        36 IOs         |    gpio    
+ARC-1001 :            jtag           |  C10/D11/A10/B11/E11  |  dedicate  
+ARC-1001 : ----------------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SEG324 -speed 2" in  4.282335s wall, 2.890625s user + 0.156250s system = 3.046875s CPU (71.1%)
+
+RUN-1004 : used memory is 1086 MB, reserved memory is 1085 MB, peak memory is 1086 MB
+RUN-1002 : start command "open_project uhd_probe.prj"
+PRJ-7002 CRITICAL-WARNING: Load IPC file ../../ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml error, the IP's generated file D doesn't exist.
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "commit_param -step design"
+RUN-1002 : start command "set_param flow thread 4"
+RUN-1001 : Print Global Property
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :     Parameters    |   Settings   |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 :    enable_seed    |     off      |       off        |        
+RUN-1001 :    hfn_to_clock   |  1000000000  |    1000000000    |        
+RUN-1001 :      message      |   standard   |     standard     |        
+RUN-1001 :    qor_monitor    |      on      |        on        |        
+RUN-1001 :   speedup_effort  |      0       |        0         |        
+RUN-1001 :    syn_ip_flow    |     off      |       off        |        
+RUN-1001 :       thread      |      4       |       auto       |   *    
+RUN-1001 : -------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 :      tcl_afterstep     |            |                  |        
+RUN-1001 :     tcl_beforestep     |            |                  |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-8007 ERROR: cannot open include file 'pcie_record_v3_validate.vh' in ../../ordered_frame_egress.v(1)
+HDL-1007 : analyze verilog file ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v
+HDL-1007 : analyze verilog file ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : back to file '../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v' in ../../ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v(1)
+HDL-1007 : analyze verilog file ../../ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v
+HDL-1007 : analyze verilog file ../../ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v
+HDL-1007 : analyze verilog file ../../reset_release_sync.v
+HDL-1007 : analyze verilog file ../../reset_release_sync_data.v
+HDL-1007 : analyze verilog file ../../jpeg_ring_cold_bank.v
+HDL-1007 : analyze verilog file ../../td_sdp_ram.v
+HDL-1007 : analyze verilog file ../../jpeg_frame_ring.v
+HDL-1007 : analyze verilog file ../../jpeg_ring_reset_boundary.v
+HDL-1007 : analyze verilog file ../../ordered_frame_fifo_fence.v
+HDL-1007 : analyze verilog file ../../axis_frame_fifo_ip.v
+HDL-1007 : analyze verilog file ../../ordered_frame_egress.v
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_syn4_a1/baseline/rtl/include/04_include/pcie_protocol_v1.vh in ../../ordered_frame_egress.v(2)
+HDL-1007 : back to file '../../ordered_frame_egress.v' in ../../ordered_frame_egress.v(2)
+HDL-8007 ERROR: cannot open include file 'pcie_record_v3_validate.vh' in ../../ordered_frame_egress.v(79)
+HDL-8007 ERROR: ignore module module due to previous errors in ../../ordered_frame_egress.v(5)
+HDL-1007 : Verilog file '../../ordered_frame_egress.v' ignored due to errors
+HDL-1007 : analyze verilog file ../../ddr_extension_staging_ram.v
+HDL-1007 : analyze included file <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/ring_data_qual_r3_20261110/dfi_syn4_a1/baseline/rtl/include/04_include/pcie_protocol_v1.vh in ../../ddr_extension_staging_ram.v(2)
+HDL-1007 : back to file '../../ddr_extension_staging_ram.v' in ../../ddr_extension_staging_ram.v(2)
+HDL-1007 : analyze verilog file ../../td_sdp_ram40.v
+HDL-1007 : analyze verilog file ../../uhd_probe.v
+PRJ-8644 ERROR: Failed to analyze source file(s).
+PRJ-8806 ERROR: Run syn_1 has exited unexpectedly.
+RUN-1003 : finish command "wait_run syn_1" in  6.043642s wall, 0.000000s user + 0.015625s system = 0.015625s CPU (0.3%)
+
+RUN-1004 : used memory is 1260 MB, reserved memory is 1291 MB, peak memory is 1292 MB

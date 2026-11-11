@@ -1,0 +1,21 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -onfinish stop -t 1ps work.tb_hdr_merge -do "onerror {quit -code 2 -f}; run -all; quit -f" 
+# Start time: 18:30:51 on Nov 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10016) Option '-L ph1' was detected by vlog for design-unit 'hdr_merge4', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L ph1' was detected by vlog for design-unit 'fdct_mac19s14s_z33s_p34_m1p1', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L ph1' was detected by vlog for design-unit 'fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0', but was not detected by vopt. The vlog option will be ignored.
+# ** Error: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): Module 'PH1_PHY_DSPSIOU' is not defined.
+# ** Error: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(517): Module 'PH1_PHY_DSPADD_V2' is not defined.
+# ** Error: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(524): Module 'PH1_PHY_DSPMULT_V2' is not defined.
+# ** Error: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(531): Module 'PH1_PHY_DSPTADD_V2' is not defined.
+# ** Error: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(544): Module 'PH1_PHY_DSPLOGIC_V2' is not defined.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=5, Warnings=3.
+# Error loading design
+Error loading design
+# End time: 18:30:52 on Nov 10,2026, Elapsed time: 0:00:01
+# Errors: 5, Warnings: 3

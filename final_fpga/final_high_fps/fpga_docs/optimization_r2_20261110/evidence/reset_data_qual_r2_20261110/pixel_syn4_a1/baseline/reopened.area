@@ -1,0 +1,60 @@
+standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        79   out of    148   53.38%
+  #input                   44
+  #output                  35
+  #inout                    0
+#lut                     1467
+  #lut1                     0
+  #lut2                   128
+  #lut3                   190
+  #lut4                   181
+  #lut5                   295
+  #lut6                   673
+#reg                     1551
+  #slice reg             1551   out of 128640    1.21%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1294   out of  64320    2.01%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            1294
+    #with luts*          1020
+    #with adder           120
+    #reg only*            154
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                       0   out of    272    0.00%
+  #eram20k                  0
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       79   out of    148   53.38%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance               |Module                              |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                    |uhd_probe                           |1020      |120     |1551    |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_ingress            |shared_raw10_frame_ingress          |600       |12      |554     |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_model_isp_reset    |reset_release_sync                  |1         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_original           |private_raw_isp_borrow4             |257       |108     |371     |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    u_adapter          |camera_rgb_native_fixed1080_borrow4 |113       |76      |236     |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    u_original_cleanup |hdr_pair_product_abort_drain4       |47        |0       |48      |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    u_pixel_reset      |reset_release_sync                  |0         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

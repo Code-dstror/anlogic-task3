@@ -1,0 +1,433 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -L ph1 work.tb_fusion_product work.PH1_PHY_GSR ph1.glbl "+CASE=normal" -onfinish stop -do "run -all; quit -f" 
+# Start time: 18:57:07 on Nov 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\ram40_sdp_fixed\ram40_sdp_fixed\ram40_sdp_fixed.v(69): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\ram40_sdp_fixed\ram40_sdp_fixed\ram40_sdp_fixed.v(69): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_huff_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_huff_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane0_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane0_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_recip_sim.v(69): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_recip_sim.v(69): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane1_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane1_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane2_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane2_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane3_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane3_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane4_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane4_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane5_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane5_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane6_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane6_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane7_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\jpeg_rom_q_lane7_sim.v(74): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\tone96_rom1_sim.v(69): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\tone96_rom1_sim.v(69): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\tone96_rom0_sim.v(69): (vopt-2241) Connection width does not match width of port 'ecc_sbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\tone96_rom0_sim.v(69): (vopt-2241) Connection width does not match width of port 'ecc_dbiterrinj'. The port definition is at: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(52).
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2685) [TFMPC] - Too few port connections for 'u_siou'.  Expected 51, found 39.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cco'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cpo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cyo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxabo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxbo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxao'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cci'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cpi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cyi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxabi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxbi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxai'.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 180287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 180216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 8383 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 8312 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 4287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 4216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 8383 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 8312 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 8383 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 8312 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 7103 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 7032 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 7103 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 7032 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 7103 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 7032 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 7103 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 7032 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 16575 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 16504 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 172095 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 172024 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\gamma_rom_8x1024_ip_sim.v(36): (vopt-2685) [TFMPC] - Too few port connections for 'inst'.  Expected 22, found 20.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\gamma_rom_8x1024_ip_sim.v(36): (vopt-2718) [TFMPC] - Missing connection for port 'ecc_dbiterr'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\assets\gamma_rom_8x1024_ip_sim.v(36): (vopt-2718) [TFMPC] - Missing connection for port 'ecc_sbiterr'.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 73791 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 73720 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) MSB 167999 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_eram.v(1287): (vopt-2697) LSB 167928 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2685) [TFMPC] - Too few port connections for 'u_siou'.  Expected 51, found 39.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cco'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cpo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cyo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxabo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxbo'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxao'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cci'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cpi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cyi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxabi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxbi'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\ip\stage3\fdct_mac19s14s_z33s_p34_m1p1\RTL\fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(466): (vopt-2718) [TFMPC] - Missing connection for port 'cxai'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=213.
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_fusion_product(fast)
+# Loading work.uhd_integration_fixture(fast)
+# Loading work.raw_capture_fifo_eram_safe(fast)
+# Loading work.isp_line_ram_native4(fast)
+# Loading work.fdct_mac19s14s_z33s_p34_m1p1(fast)
+# Loading ph1.PH1_PHY_DSPSIOU(fast)
+# Loading ph1.PH1_PHY_DSPADD_V2(fast)
+# Loading ph1.PH1_PHY_DSPMULT_V2(fast)
+# Loading ph1.PH1_PHY_DSPLOGIC_V2(fast)
+# Loading work.gamma_lut_10to8(fast)
+# Loading work.ram40_sdp_fixed(fast__2)
+# Loading work.td_sdp_ram(fast__1)
+# Loading work.jpeg_quant_recip_rom40x512(fast)
+# Loading work.td_sdp_ram40(fast__12)
+# Loading work.ddr_response_bank16(fast)
+# Loading work.PH1_PHY_GSR(fast)
+# Loading ph1.glbl(fast)
+# run -all
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# BB_BEGIN case=normal geometry=1
+# BB_RESETS_RELEASED time_ns=82248.000
+# BB_CFG_ACK session=00000001 epoch=0 time_ns=84260.000
+# BB_BOOT session=00000001 geometry=1 time_ns=84753.000
+# BB_GEOMETRY code=1 profile=5 time_ns=86073.000
+# BB_CFG_ACK session=00000001 epoch=1 time_ns=92460.000
+# BB_FRAME_INPUT seq=10 raw_rgb=172,440,858 time_ns=92513.000
+# BB_CFG_APPLIED session=00000001 epoch=1 first_sequence=10 wb=4e22c94d time_ns=123993.000
+# BB_BUFFER_ARM generation=1 identity=6b33f81733b2ba410000000100000000 time_ns=125297.000
+# BB_APP_ARM time_ns=125476.000
+# BB_FRAME_INPUT seq=11 raw_rgb=172,440,858 time_ns=125480.000
+# BB_JPEG_START seq=11 time_ns=158416.000
+# BB_STRESS_JPEG_AW id=0 addr=0000000 len=16 time_ns=162557.000
+# BB_STRESS_JPEG_WLAST id=0 bytes=256 due_dfi=14820 time_ns=162692.000
+# BB_STRESS_JPEG_B id=0 dfi_cycle=14821 time_ns=193428.000
+# BB_SOURCE seq=11 ok=0 job=8000000000000001 raw_read_beats=1120 time_ns=200948.000
+# BB_STRESS_STATE fault=1 raw_empty=0 record_quiet=0 capture_enabled=0 session_armed=1 buffer_armed=0 dfi_cycle=15823
+# BB_STRESS_TERMINALS capture=1 start=1 jpeg_source_done=0 jpeg_source_failed=0 jpeg_source_count=0 result=0 writer=0 ticket=0 raw_retire=0 record_offer=0 record_retire=0 host_bytes=0
+# BB_STRESS_RAW aw=75 w=1200 wlast=75 b=75 raw_bytes=19200 ar=70 r=1120 rlast=70 slverr=0 write_debt=0 read_debt=0
+# BB_STRESS_JPEG aw=1 w=16 wlast=1 b=1 jpeg_bytes=256 ar=0 r=0 rlast=0 write_debt=0 eoi=0
+# BB_STRESS_AXI_PIN ar=01 r=00 resp=00 rlast=1 aw=01 w=00 b=00 aw_queue=0 ar_queue=0 b_queue=0
+# ** Fatal: BB_FAIL stage=first real RAW to JPEG to host ACK time_ns=200948.000 RAW replay SOURCE polarity
+#    Time: 200948 ns  Scope: tb_fusion_product.check File: <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/blackbox_fusion_product_a10_inputs/bench/tb_fusion_product.sv Line: 129
+# ** Note: $finish    : <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/blackbox_fusion_product_a10_inputs/bench/tb_fusion_product.sv(129)
+#    Time: 200948 ns  Iteration: 1  Instance: /tb_fusion_product
+# Break at <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/blackbox_fusion_product_a10_inputs/bench/tb_fusion_product.sv line 129
+# Stopped at <PROJECT_ROOT>/refactor/camera_fusion_r1/tmp/blackbox_fusion_product_a10_inputs/bench/tb_fusion_product.sv line 129
+#  quit -f
+# End time: 18:57:14 on Nov 10,2026, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 213

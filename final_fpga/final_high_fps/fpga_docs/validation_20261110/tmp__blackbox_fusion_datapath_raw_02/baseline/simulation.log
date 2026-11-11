@@ -1,0 +1,41 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -onfinish stop work.tb_raw_ingress -do "onerror {quit -code 2 -f}; run -all; quit -f" 
+# Start time: 18:19:45 on Nov 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_raw_ingress(fast)
+# Loading work.shared_raw10_frame_ingress(fast)
+# Loading work.shared_raw10_frame_ingress(fast__1)
+# Loading work.shared_raw10_frame_ingress(fast__2)
+# Loading work.shared_raw10_frame_ingress(fast__3)
+# onerror {quit -code 2 -f}
+#  Warning: onerror command for use within macro
+#  run -all
+# RAW_PROFILE_PASS profile=1 good=2 aborted=1 stall=0 tail_stall=0
+# RAW_PROFILE_PASS profile=2 good=2 aborted=1 stall=0 tail_stall=0
+# RAW_PROFILE_PASS profile=3 good=2 aborted=0 stall=6 tail_stall=6
+# RAW_PROFILE_PASS profile=0 good=9 aborted=5 stall=54 tail_stall=22
+# RAW_INGRESS_PASS profiles=4
+# ** Note: $finish    : <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_datapath/tb_raw_ingress.sv(505)
+#    Time: 4610 ns  Iteration: 2  Instance: /tb_raw_ingress
+# Break at <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_datapath/tb_raw_ingress.sv line 505
+# Stopped at <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_fusion_datapath/tb_raw_ingress.sv line 505
+#  quit -f
+# End time: 18:19:47 on Nov 10,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

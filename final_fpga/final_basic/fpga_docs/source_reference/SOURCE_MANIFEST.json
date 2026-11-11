@@ -1,0 +1,2458 @@
+{
+  "schema": 2,
+  "name": "rfcamera_raw_r2",
+  "top": "anlogic2026",
+  "device": "PH1A90SEG324-2",
+  "td_version": "6.2.3.210850",
+  "definitions": [
+    "AXI4ST_BUS_EN=1",
+    "AXI4L_MBUS_EN=1",
+    "USR_IRQ_EN=1",
+    "MSI_EN=1'b1",
+    "PH1=1",
+    "R8_STAGE1=1",
+    "R8_BASIC_PREPROCESS=1",
+    "R8_HE_FIXED_CONFIG_SESSION=1",
+    "R8_LIVE_F21=1",
+    "R8_STAGE2_COMPACT_TRANSPORT=1",
+    "S08_CONFIGURED_CAPTURE=1",
+    "S04_RAW_FRAME_STORE=1",
+    "ANLOGIC_COMPILED_PROFILE=1",
+    "ANLOGIC_SOURCE_SELECT=0",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_A=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_CE=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_PH1A=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_RST=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_Y=1",
+    "fdct_mac19s14s_z33s_p34_m1p1_USE_Z=1",
+    "F21_AUTO_FIXED_LUT_PROFILE=0"
+  ],
+  "include_dirs": [
+    "src_fpga/rtl/include/00_rtl",
+    "src_fpga/rtl/include/01_include",
+    "src_fpga/rtl/include/02_jpeg",
+    "src_fpga/rtl/include/03_mono_config_v2_20261015",
+    "src_fpga/rtl/include/04_include"
+  ],
+  "registrations": [
+    "src_fpga/rtl/control_fifo_40x512.v",
+    "src_fpga/rtl/csi2_ph1_phy_wrapper.v",
+    "src_fpga/rtl/csi_clock_watchdog.v",
+    "src_fpga/rtl/native_frame_descriptor.v",
+    "src_fpga/rtl/camera_i2c_write.v",
+    "src_fpga/rtl/imx415_config.v",
+    "src_fpga/rtl/imx415_mode_table.v",
+    "src_fpga/rtl/td_dsp_mult.v",
+    "src_fpga/rtl/ddr_axi_two_client_arbiter.v",
+    "src_fpga/rtl/jpeg_frame_bar.v",
+    "src_fpga/rtl/jpeg_frame_service.v",
+    "src_fpga/rtl/jpeg_record_metadata_gate.v",
+    "src_fpga/rtl/ordered_frame_egress.v",
+    "src_fpga/rtl/ordered_frame_ingress.v",
+    "src_fpga/rtl/reset_release_sync.v",
+    "src_fpga/rtl/frame_admission_qualification.v",
+    "src_fpga/rtl/fpga_debug_isolation.v",
+    "src_fpga/rtl/fpga_debug_local_stop.v",
+    "src_fpga/rtl/frame_common_time_cdc.v",
+    "src_fpga/rtl/frame_record_extension_builder.v",
+    "src_fpga/rtl/frame_record_v3_join.v",
+    "src_fpga/rtl/hdr_pair_product_abort_drain4.v",
+    "src_fpga/rtl/hdr_merge4.v",
+    "src_fpga/rtl/hdr_pair_native_source_service4.v",
+    "src_fpga/rtl/hdr_product_terminal_join.v",
+    "src_fpga/rtl/raw_hdr_phase_scheduler4.v",
+    "src_fpga/rtl/raw_job_ticket_context_cdc.v",
+    "src_fpga/rtl/raw_pair_job_service.v",
+    "src_fpga/rtl/raw_pair_processing_context_ticket.v",
+    "src_fpga/rtl/raw_pair_processing_service.v",
+    "src_fpga/rtl/shared_raw10_decoder.v",
+    "src_fpga/rtl/shared_raw10_decoder_masked.v",
+    "src_fpga/rtl/shared_raw10_decode_service.v",
+    "src_fpga/rtl/gamma_lut_10to8.v",
+    "src_fpga/rtl/wide_color_pipeline.v",
+    "src_fpga/rtl/isp_line_ram_native4.v",
+    "src_fpga/rtl/raw_blc.v",
+    "src_fpga/rtl/raw_demosaic.v",
+    "src_fpga/rtl/raw_isp_top.v",
+    "src_fpga/rtl/raw_row_window.v",
+    "src_fpga/rtl/shared_wide_isp.v",
+    "src_fpga/rtl/jpeg_byte_packer.v",
+    "src_fpga/rtl/jpeg_dct8x8_pipeline.v",
+    "src_fpga/rtl/jpeg_encoder_top.v",
+    "src_fpga/rtl/jpeg_file_formatter.v",
+    "src_fpga/rtl/jpeg_frame_admission.v",
+    "src_fpga/rtl/jpeg_huff_ac_rom.v",
+    "src_fpga/rtl/jpeg_quality_controller.v",
+    "src_fpga/rtl/jpeg_quant_recip_rom40x512.v",
+    "src_fpga/rtl/jpeg_quant_rom10x2048.v",
+    "src_fpga/rtl/jpeg_quant_rom20x1024.v",
+    "src_fpga/rtl/jpeg_quant_table_rom.v",
+    "src_fpga/rtl/jpeg/jpeg_rgb_to_ycbcr_422.v",
+    "src_fpga/rtl/axis_frame_fifo_ip.v",
+    "src_fpga/rtl/c2h_bar_cq.v",
+    "src_fpga/rtl/c2h_frame_tx.v",
+    "src_fpga/rtl/c2h_link_supervisor.v",
+    "src_fpga/rtl/c2h_packet_ram.v",
+    "src_fpga/rtl/control_message_fifo_ip.v",
+    "src_fpga/rtl/frame_config_extension_validate.v",
+    "src_fpga/rtl/frame_source_config_bootstrap.v",
+    "src_fpga/rtl/h2c_stream_checker.v",
+    "src_fpga/rtl/record_format_bar.v",
+    "src_fpga/rtl/record_format_service.v",
+    "src_fpga/rtl/neutral_observer.v",
+    "src_fpga/rtl/neutral_record_observer4.v",
+    "src_fpga/rtl/preprocess_count_ram24x512.v",
+    "src_fpga/rtl/preprocess_he_color4.v",
+    "src_fpga/rtl/preprocess_hist_eq4.v",
+    "src_fpga/rtl/preprocess_hist_lane.v",
+    "src_fpga/rtl/preprocess_live_lane_owner.v",
+    "src_fpga/rtl/preprocess_lut_ram8x512.v",
+    "src_fpga/rtl/source_terminal_broadcast.v",
+    "src_fpga/rtl/frame_session_controller.v",
+    "src_fpga/rtl/single_slot_credit_cdc.v",
+    "src_fpga/rtl/hdr_pair_directory.v",
+    "src_fpga/rtl/hdr_pair_read_cursor.v",
+    "src_fpga/rtl/hdr_pair_context_cache.v",
+    "src_fpga/rtl/hdr_tone96_shared4.v",
+    "src_fpga/rtl/stage3_he_div_32u24u_iter16.v",
+    "src_fpga/rtl/mono_config_bar_v2.v",
+    "src_fpga/rtl/mono_config_service_v2.v",
+    "src_fpga/rtl/mono_config_narrow_gate_v2.v",
+    "src_fpga/rtl/mono_pcie_app_regs_v2.v",
+    "src_fpga/rtl/c2h_native_packetizer.v",
+    "src_fpga/ip/vendor/anlogic_camera/sensor/ui_imx415_reg.v",
+    "src_fpga/ip/vendor/anlogic_camera/phy/auto_delay_ctl.v",
+    "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_byte_align.v",
+    "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_hs_data_phy.v",
+    "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_align.v",
+    "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_gear_box.v",
+    "src_fpga/ip/vendor/anlogic_camera/phy/rx_clk_gen.v",
+    "src_fpga/rtl/ddr3_jpeg_store.v",
+    "src_fpga/rtl/ordered_frame_cdc.v",
+    "src_fpga/rtl/frame_job_config_cdc.v",
+    "src_fpga/rtl/physical_camera_crop.v",
+    "src_fpga/rtl/physical_camera_rgb_pipeline.v",
+    "src_fpga/rtl/physical_capture_router.v",
+    "src_fpga/rtl/physical_csi_rx_stream.v",
+    "src_fpga/rtl/physical_csi_word_core.v",
+    "src_fpga/rtl/physical_identity_source_fence.v",
+    "src_fpga/rtl/private_rgb_source_borrow4.v",
+    "src_fpga/rtl/production_source_identity_guard.v",
+    "src_fpga/rtl/stage3_production_boot.v",
+    "src_fpga/rtl/ordered_frame_fifo_fence.v",
+    "src_fpga/rtl/production_soft_reset_fence.v",
+    "src_fpga/rtl/td_sdp_ram.v",
+    "src_fpga/rtl/td_sdp_ram40.v",
+    "src_fpga/rtl/preprocess_line_ram32x1024.v",
+    "src_fpga/rtl/preprocess_gaussian4.v",
+    "src_fpga/rtl/preprocess_scale_arbiter4.v",
+    "src_fpga/rtl/stage3_stream_fork2.v",
+    "src_fpga/rtl/stage3_rgb_delay96.v",
+    "src_fpga/rtl/stage3_filter_color4.v",
+    "src_fpga/rtl/product_pcie_transport.v",
+    "src_fpga/rtl/c2h_pcie_endpoint.v",
+    "src_fpga/rtl/c2h_native_rx_transport.v",
+    "src_fpga/rtl/c2h_native_fence_listener.v",
+    "src_fpga/rtl/camera_pcie_result_msi.v",
+    "src_fpga/rtl/camera_pcie_bar_rx.v",
+    "src_fpga/rtl/camera_pcie_bar_tx.v",
+    "src_fpga/rtl/camera_pcie_hard_port.v",
+    "src_fpga/rtl/mono_config_engine_v2.v",
+    "src_fpga/rtl/full_filter_y_window4.v",
+    "src_fpga/rtl/camera_rgb_native_fixed1080_borrow4.v",
+    "src_fpga/rtl/private_raw_isp_borrow4.v",
+    "src_fpga/rtl/shared_raw_capture_writer.v",
+    "src_fpga/rtl/preprocess_gray4.v",
+    "src_fpga/rtl/full_filter_sobel4.v",
+    "src_fpga/rtl/stage3_luma_blend4.v",
+    "src_fpga/rtl/jpeg_fdct1d.v",
+    "src_fpga/rtl/raw10_append5.v",
+    "src_fpga/rtl/jpeg_entropy.v",
+    "src_fpga/rtl/jpeg_quant_stream.v",
+    "src_fpga/rtl/jpeg_record_metadata_store.v",
+    "src_fpga/rtl/ddr_extension_staging_ram.v",
+    "src_fpga/rtl/jpeg_metadata_append5.v",
+    "src_fpga/rtl/jpeg_mcu_422.v",
+    "src_fpga/rtl/jpeg_mcu_packed_plane.v",
+    "src_fpga/rtl/jpeg_mcu_read_align8.v",
+    "src_fpga/rtl/jpeg_ring_cold_bank.v",
+    "src_fpga/rtl/product_record_cdc.v",
+    "src_fpga/rtl/raw_application_stop_dfi.v",
+    "src_fpga/rtl/preprocess_gray_pending4.v",
+    "src_fpga/rtl/preprocess_stream_pending2.v",
+    "src_fpga/rtl/hdr_raw14_shared_transport4.v",
+    "src_fpga/rtl/hdr_pair_pixel_reader.v",
+    "src_fpga/rtl/parallel_result_eram.v",
+    "src_fpga/rtl/full_filter_multiscale4.v",
+    "src_fpga/rtl/stage3_filter_color_analysis4.v",
+    "src_fpga/rtl/dehaze_dcp_restore4.v",
+    "src_fpga/rtl/preprocess_live_f21_pipeline4.v",
+    "src_fpga/rtl/preprocess_live_f21_service4.v",
+    "src_fpga/rtl/shared_raw10_frame_ingress.v",
+    "src_fpga/rtl/jpeg_frame_ring.v",
+    "src_fpga/rtl/full_raw_store.v",
+    "src_fpga/rtl/hdr_pair_bank_owner.v",
+    "src_fpga/rtl/mono_config_scan_v2.v",
+    "src_fpga/rtl/mono_config_legacy_scan_v1.v",
+    "src_fpga/rtl/frame_config_preset_owner.v",
+    "src_fpga/rtl/real_hdr_physical_csi_rx.v",
+    "src_fpga/rtl/real_hdr_camera_observe_axis.v",
+    "src_fpga/rtl/imx415_sensor_pll_25m.v",
+    "src_fpga/rtl/physical_configured_capture_frontend.v",
+    "src_fpga/rtl/dual_raw_capture_frontend.v",
+    "src_fpga/rtl/dol2_axi_write_arbiter.v",
+    "src_fpga/rtl/hdr_pair_bank_owner_dual.v",
+    "src_fpga/rtl/hdr_eye_shared.v",
+    "src_fpga/rtl/real_hdr_csi_word_core.v",
+    "src_fpga/rtl/real_hdr_csi_dual_word_rx.v",
+    "src_fpga/rtl/real_hdr_member_crop10.v",
+    "src_fpga/rtl/real_hdr_pair_cycle_gate.v",
+    "src_fpga/rtl/real_hdr_event_cdc.v",
+    "src_fpga/rtl/real_hdr_sensor_config.v",
+    "src_fpga/rtl/imx415_hdr2_config_owner.v",
+    "src_fpga/rtl/imx415_hdr2_recipe_rom.v",
+    "src_fpga/rtl/physical_pair_config_owner.v",
+    "src_fpga/rtl/paired_raw_capture_drain_cdc.v",
+    "src_fpga/rtl/anlogic2026.v",
+    "src_fpga/rtl/real_hdr_sensor_clock_mux.v",
+    "src_fpga/rtl/mono_config_byte_store_v2.v",
+    "src_fpga/rtl/csi2_async_event_fifo.v",
+    "src_fpga/rtl/full_raw_capture_frontend.v",
+    "src_fpga/rtl/real_hdr_csi_capture_stream.v",
+    "src_fpga/rtl/raw_capture_fifo_eram_safe.v",
+    "src_fpga/rtl/ddr_response_bank16.v",
+    "src_fpga/rtl/jpeg_product_owner.v",
+    "src_fpga/rtl/stream_reset_boundary2.v",
+    "src_fpga/rtl/source_terminal_sync_boundary.v",
+    "src_fpga/rtl/uart_observer_snapshot.v",
+    "src_fpga/rtl/uart_status_observer.v",
+    "src_fpga/rtl/cfg_diag_user.v",
+    "src_fpga/rtl/cfg_diag_pixel.v",
+    "src_fpga/rtl/cfg_diag_snapshot.v",
+    "src_fpga/rtl/csi_rx_byte_align_observed.v",
+    "src_fpga/rtl/csi_rx_word_align_observed.v",
+    "src_fpga/rtl/ph1a_rx_delay_scan.v",
+    "src_fpga/rtl/lane_mark_hint4.v",
+    "src_fpga/rtl/lane_candidate_store.v",
+    "src_fpga/rtl/lane_sparse_extension_checker.v",
+    "src_fpga/rtl/lane_sparse_serial4.v",
+    "src_fpga/rtl/lane_quarter_fifo4_to1.v",
+    "src_fpga/rtl/jpeg_quant_sync_fifo.v",
+    "src_fpga/rtl/lane_winner_pair_lutram.v",
+    "src_fpga/rtl/lane_ridge_candidates1_lutram.v",
+    "src_fpga/rtl/sdr_camera_raw_frontend.v",
+    "src_fpga/rtl/sdr_physical_csi_rx.v",
+    "src_fpga/rtl/stereo_capture_source4.v",
+    "src_fpga/rtl/stereo_cold_control.v",
+    "src_fpga/rtl/stereo_raw_owner.v",
+    "src_fpga/rtl/stereo_raw_reader.v",
+    "src_fpga/rtl/stereo_raw_store.v",
+    "src_fpga/rtl/reset_release_sync_data.v",
+    "src_fpga/rtl/raw_pair_replay_scheduler.v",
+    "src_fpga/rtl/raw10_frame_replay.v",
+    "src_fpga/rtl/hdr_csi_boundary_adapter.v",
+    "src_fpga/rtl/imx415_sensor_recipe.v",
+    "src_fpga/rtl/imx415_sensor_config.v",
+    "src_fpga/rtl/raw_video_record_formatter.v",
+    "src_fpga/rtl/camera_field_diagnostics.v",
+    "fpga_prj/constraints/anlogic2026.adc",
+    "fpga_prj/constraints/real_hdr_clocks.sdc",
+    "fpga_prj/constraints/stereo_cdc.sdc",
+    "fpga_prj/constraints/stream_cdc.sdc",
+    "fpga_prj/constraints/observer_cdc.sdc",
+    "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml",
+    "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.ipc",
+    "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.ipc",
+    "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.ipc",
+    "src_fpga/ip/ui_ddr/ui_ddr.ipc",
+    "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.xml",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane0/jpeg_rom_q_lane0.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane1/jpeg_rom_q_lane1.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane2/jpeg_rom_q_lane2.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane3/jpeg_rom_q_lane3.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane4/jpeg_rom_q_lane4.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane5/jpeg_rom_q_lane5.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane6/jpeg_rom_q_lane6.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane7/jpeg_rom_q_lane7.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_recip/jpeg_rom_recip.ipc",
+    "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.ipc",
+    "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/mult_19s14s_p1.xml",
+    "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/mult_25u16u_p1.xml",
+    "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/mult_14u10u_p1.xml",
+    "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/mult_17s9s_p1.xml",
+    "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.ipc",
+    "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.xml",
+    "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.xml",
+    "src_fpga/ip/stage3/tone96_rom0/tone96_rom0.ipc",
+    "src_fpga/ip/stage3/tone96_rom1/tone96_rom1.ipc",
+    "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.xml",
+    "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.ipc",
+    "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.xml"
+  ],
+  "synthesis_parameters": [
+    [
+      "flow",
+      "thread",
+      "16"
+    ],
+    [
+      "rtl",
+      "min_control_set",
+      "2"
+    ],
+    [
+      "gate",
+      "mapper_lut_delay",
+      "off"
+    ],
+    [
+      "gate",
+      "multi_thread_mapping",
+      "partition"
+    ],
+    [
+      "gate",
+      "pack_effort",
+      "medium"
+    ],
+    [
+      "gate",
+      "map_mode",
+      "area_prior"
+    ],
+    [
+      "gate",
+      "add_map_lut_struct",
+      "on"
+    ]
+  ],
+  "physical_parameters": [
+    [
+      "place",
+      "effort",
+      "medium"
+    ],
+    [
+      "place",
+      "opt_timing",
+      "high"
+    ],
+    [
+      "place",
+      "hfn_opt_effort",
+      "medium"
+    ],
+    [
+      "place",
+      "max_fanout",
+      "999999"
+    ],
+    [
+      "flow",
+      "thread",
+      "4"
+    ],
+    [
+      "place",
+      "macro_performance",
+      "macro_congestion"
+    ],
+    [
+      "place",
+      "post_place_opt",
+      "high"
+    ],
+    [
+      "place",
+      "logic_level_opt",
+      "on"
+    ],
+    [
+      "route",
+      "effort",
+      "normal"
+    ],
+    [
+      "route",
+      "fix_hold",
+      "high"
+    ],
+    [
+      "route",
+      "post_route_opt",
+      "ultra"
+    ],
+    [
+      "place",
+      "aggressive_opt",
+      "20"
+    ],
+    [
+      "route",
+      "hold_fix_iteration",
+      "5"
+    ]
+  ],
+  "callbacks": [],
+  "files": [
+    {
+      "path": "fpga_prj/constraints/anlogic2026.adc",
+      "sha256": "3ca3f800e7018c4f086c784631a542f4cffd01ac0eaed73723f81503ac36563a",
+      "register": true
+    },
+    {
+      "path": "fpga_prj/constraints/observer_cdc.sdc",
+      "sha256": "d7c6af685b2489f3f269fba5b02d454add99989517e212fde4205a1f14a18cb8",
+      "register": true
+    },
+    {
+      "path": "fpga_prj/constraints/real_hdr_clocks.sdc",
+      "sha256": "0d0e2e03136e1b05f8096175f41f6bebcdffefc2112ed55af546af9f6f83550e",
+      "register": true
+    },
+    {
+      "path": "fpga_prj/constraints/stream_cdc.sdc",
+      "sha256": "08544d860916b35e7b790326bb81fcaa04a32d7c8b77a20890f61c7265f301bc",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/coefficients/tone96_0.mif",
+      "sha256": "547e3dfc95d9af8db4bb9af2aa2b21f648e3ee3d6204fe86e8c3c101bba51e24",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/coefficients/tone96_1.mif",
+      "sha256": "9a1f5d068f617f6953988cedaf0eea275e3a2491abb2c3d65ebaa4cdf3d88a8f",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/Design.xml",
+      "sha256": "d792aac93afbcb82200dd310112a2795f5d495475797503cfda2b5d18bfc5179",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/DesignConfiguration.xml",
+      "sha256": "c600c6c42069f871ea8abde4eee2387c70c733367e0d2c53f857ed8cbf2336f0",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/Other/upgrade.tcl",
+      "sha256": "d6eb927a95d9dfb3c49e596a3315e0b074d344ca61f5320c3bef38d072cd5c01",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/RTL/mult_14u10u_p1_multiplier.v",
+      "sha256": "8d76f3b9f9e18e4689db0cd7f13c211d93a75259feab46ec492d6b69c176599a",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/RTL/mult_14u10u_p1_multiplier_top.v",
+      "sha256": "1ae23db8dde53750305a5c6d4ff2824e24681ca4636e80e32637105a811bcab1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/mult_14u10u_p1.v",
+      "sha256": "a029815cb34f4d20d09b727164a28dd24ca1585e180f9f726ad4be3b796291d3",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_14u10u_p1/mult_14u10u_p1.xml",
+      "sha256": "62a0879cae981fd66b0e32067708ab0539e5df88c3c6b3ccfaa2ef2d6a7139c9",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/Design.xml",
+      "sha256": "1992c87c4db4954533f7d064a4e8efbeda22f972b78dd5b6a70d9862251f55ea",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/DesignConfiguration.xml",
+      "sha256": "7f6de182e18c2906ec22257d7a18a28d4980ae8ee8164cefa4cd6cc61aaf83df",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/Other/upgrade.tcl",
+      "sha256": "d6eb927a95d9dfb3c49e596a3315e0b074d344ca61f5320c3bef38d072cd5c01",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/RTL/mult_17s9s_p1_multiplier.v",
+      "sha256": "8ed50a43b8662dab021f763f53dd0250314396d86d924eb3b2ca257b96e65e63",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/RTL/mult_17s9s_p1_multiplier_top.v",
+      "sha256": "c3ae85c2b988a46be6e6e74c45c9d96f859bb26fde905a227e9f43e1998abad2",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/mult_17s9s_p1.v",
+      "sha256": "2b1d0b9e3fc0023e1fcec9d978395c8b0522276d559ab553c7489481ba522265",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_17s9s_p1/mult_17s9s_p1.xml",
+      "sha256": "4296aa6ca48409084f41f9991350e59ae27655633748b7aeab82455e35f5bb09",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/Design.xml",
+      "sha256": "e028b4ca8097edd1d961853e38c1ee1746f3ed8c9f1a45b772e6ad321ecd64cd",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/DesignConfiguration.xml",
+      "sha256": "be4b49baa8814e42831612ee4ac187609bfb5ed939a3254b0fa74769707dd775",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/Other/upgrade.tcl",
+      "sha256": "d6eb927a95d9dfb3c49e596a3315e0b074d344ca61f5320c3bef38d072cd5c01",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier.v",
+      "sha256": "ee36b628dd7ac6ed7392dd8b8111b53f2f07b4ec54b6be4e92eefa45c2446980",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/RTL/mult_18s18s_p1_multiplier_top.v",
+      "sha256": "a985261007dea88d76c3b02458c110b3ec65a1a5f0b10e98f4fcb87667a7b391",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.v",
+      "sha256": "972d22b62ac019dff63de9116fa32ddab5c08fa9a760120b7c62809001f15f6f",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_18s18s_p1/mult_18s18s_p1.xml",
+      "sha256": "a478cd0b42386cf3489d92342f9d13817abcf0895cbd489b3b8118e14ce464dc",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/Design.xml",
+      "sha256": "b783f1491ddf4a19bac4a737eb8f31d6497946519dd3b021f4637bb171c83141",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/DesignConfiguration.xml",
+      "sha256": "9e592885430eb977198b14cce7dd4172905d4d5e09de48f302cfe5aa8f2e2329",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/Other/upgrade.tcl",
+      "sha256": "d6eb927a95d9dfb3c49e596a3315e0b074d344ca61f5320c3bef38d072cd5c01",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/RTL/mult_19s14s_p1_multiplier.v",
+      "sha256": "dd618c3c5b32d736b9e7420f710500bcd81f41db0c3cb932f8530e3c83a1ba8f",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/RTL/mult_19s14s_p1_multiplier_top.v",
+      "sha256": "4dd561efed551acd550999ce67175e51edf9c2ad06a62289c017ddbe1b96c3c9",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/mult_19s14s_p1.v",
+      "sha256": "6aeeb9a63d95213e9db7a4e1f32a15728108a2b41b334fdd499bd23186669fd2",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_19s14s_p1/mult_19s14s_p1.xml",
+      "sha256": "0a2039ca2d2088e5291c2705ed2132f92e9b5abd4acfb081d454027e4bf325e3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/Design.xml",
+      "sha256": "a7db856ef5d3ed8f6fb6b8b779de5d63de35c32656b346ade7cfa3b001e4b9af",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/DesignConfiguration.xml",
+      "sha256": "b55047ba9653f617f028a56fbe75f410122a64ba2b584a4e1f9ab83f082c47ba",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/Other/upgrade.tcl",
+      "sha256": "d6eb927a95d9dfb3c49e596a3315e0b074d344ca61f5320c3bef38d072cd5c01",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/RTL/mult_25u16u_p1_multiplier.v",
+      "sha256": "e7fdc218fac69bd15248ee58e9ce98b14e84ed7a38cb4ad721a6699f72566d5b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/RTL/mult_25u16u_p1_multiplier_top.v",
+      "sha256": "6355a9e2be8c1a0ad036a4c5f31557931e6191139fa0a63da1e5903eb6f743ae",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/mult_25u16u_p1.v",
+      "sha256": "b080a859bfc24c2440bb4f8a33712c43e7a074ed4bb409c79dabbf3356f16b85",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/dsp_mult_fixed/mult_25u16u_p1/mult_25u16u_p1.xml",
+      "sha256": "6541af5b6d33f0b3599f405eac7775e3b57f308fba65a534f16185aacc82ccf2",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.ipc",
+      "sha256": "696c236c819e5e20c55a3a7e322b79b986945d90d5447480e5c4bfab88f5d3f1",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.v",
+      "sha256": "73f52a9007eec343943ef5510c1c7e79dcbc31476caa7428ad236bbc2e7e0c7d",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/gamma_rom_8x1024_ip/gamma_rom_8x1024_ip.vhd",
+      "sha256": "be16e9f9c24d13d3fa3f313ba779050288c33d0f81b6c05f258fefa720d18dbb",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.ipc",
+      "sha256": "efad90302a5408eee4ae7c04cb065a9ee1062c536e8f492087da42d24a71b67f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.v",
+      "sha256": "7b2edfe2c8e173d717938d26e607c66c5923d426120a171021b8ccb68d315b83",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/isp_line_ram_20x1024_ip/isp_line_ram_20x1024_ip.vhd",
+      "sha256": "dba7d7096b76cb62a749fc1bb3ba26f7cc1c5595748433aca7e2b4d9b00b2666",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.ipc",
+      "sha256": "b623b27e43fd1a28249176a6a37ca4374aee2dcb3f89f918906d74e131488605",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.v",
+      "sha256": "00e43d82c4c9463b35f9fed388ae217a79a7852c944ceaae2fcf26ea224b8a8c",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_huff/jpeg_rom_huff.vhd",
+      "sha256": "cc3bdccb6fbb40659b24171b71557e5ba7d23172d9a56aa061a513a8ea501374",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane0/jpeg_rom_q_lane0.ipc",
+      "sha256": "b74321c76ba6b181f343eb9a35915feec1e84c960d98692abe49d723697e3ec8",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane0/jpeg_rom_q_lane0.v",
+      "sha256": "1887cc2a86656eb7d76a3643457cb297b6804ec78f63dcdf9e42d47b9ea094e1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane0/jpeg_rom_q_lane0.vhd",
+      "sha256": "d5df6ab8b5bc878ee6c5d5661f018dd75af28f53065b413d1f8ad995504487e7",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane1/jpeg_rom_q_lane1.ipc",
+      "sha256": "681d1503f773d0728b15e431b35dfc17997cfd5fe3f9f2326b6ff860ca137b01",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane1/jpeg_rom_q_lane1.v",
+      "sha256": "9b1f56f1639b48e03988e70d69be8b86c9dac53a1f97a685a5391745bc53d0ac",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane1/jpeg_rom_q_lane1.vhd",
+      "sha256": "bddd23980b94e681aa2b4b26a6bb23c6bece87c30770e22a46099a57ae1153e0",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane2/jpeg_rom_q_lane2.ipc",
+      "sha256": "11b1fef4576d590cc9ef4ff36f8a2cf4e4cd6ad99b0bed7831d69c01e55af42f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane2/jpeg_rom_q_lane2.v",
+      "sha256": "c4c38128cba3e121a99250859c62fd212b84f2947acc6d2196ac930ef6a63b8e",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane2/jpeg_rom_q_lane2.vhd",
+      "sha256": "5e453e7880de13c3184747bb13fb215f70338b52983be2b45d8b7a7829a17dd5",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane3/jpeg_rom_q_lane3.ipc",
+      "sha256": "27dae2263c969e94213ebae6b5d14960b9a4842b9973632a415c8fb890b2403c",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane3/jpeg_rom_q_lane3.v",
+      "sha256": "a82cdab462da85057c5207b08bd9be86016bb6bdfe76e17253ef5edf14dd6122",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane3/jpeg_rom_q_lane3.vhd",
+      "sha256": "3edb8e080d9060ad76344aa7e76dd9d5a5582d59ce5e1353959012bc29af30ea",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane4/jpeg_rom_q_lane4.ipc",
+      "sha256": "855f530bb16c02e0cd74e85e14fff2a1e26a327743e25bce578b64f45d29505c",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane4/jpeg_rom_q_lane4.v",
+      "sha256": "5796614dd652558c4d1fdcdbce59ac8d47c76e5c834490f8c9c53eca849cc62a",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane4/jpeg_rom_q_lane4.vhd",
+      "sha256": "d9b106ea566c033a5ca015bc2d29858201ab91370a43224d084485e3fd9b4d6c",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane5/jpeg_rom_q_lane5.ipc",
+      "sha256": "bf90c21d96a8f8c0f21d5004ec302c0178d1f7ebec9954c82cc22e396309fe14",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane5/jpeg_rom_q_lane5.v",
+      "sha256": "b154d85dbb0d744af648fbd28bb4f19b701dba088ab12b291f03127c50e5facd",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane5/jpeg_rom_q_lane5.vhd",
+      "sha256": "003af9c14fb8f03dfadeca62cccbd9b4daef7432487ea85a91636fcc6b88f857",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane6/jpeg_rom_q_lane6.ipc",
+      "sha256": "39dec593ffa0e899f95e7bf3c7846c8f15c484e232118b2a0e5da8dad92e5d65",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane6/jpeg_rom_q_lane6.v",
+      "sha256": "34bc556f3ae6935134fff7227e3c6a3ed003dd68b47e5d9033c3ab58a5eddbb1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane6/jpeg_rom_q_lane6.vhd",
+      "sha256": "e735ddb0ee62a141266cc601e61b56d55f00bf1c7eb2f7d9f71c4210e85c5da4",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane7/jpeg_rom_q_lane7.ipc",
+      "sha256": "460f2f61642e1e8a02bda6569b2c9884853e0b62dd667fd45d78075115c6b038",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane7/jpeg_rom_q_lane7.v",
+      "sha256": "aa9042acfae225e92faa7c908234cfac45dc8f35f7ecd192f321fd43260d8e46",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_q_lane7/jpeg_rom_q_lane7.vhd",
+      "sha256": "1a1c739de17b0c7674caf4cd0dd77c63492a1a6492f8800fddcd5c83f72adbb5",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_recip/jpeg_rom_recip.ipc",
+      "sha256": "06353a6f7421061ae05728883848f64ce36d17638f8684b0a2e40421479a1b0e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_recip/jpeg_rom_recip.v",
+      "sha256": "2dd0f7c3f95d8ccc67122198884b3746212eeec917fe776ca4771a32156467a0",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/jpeg_rom_fixed/jpeg_rom_recip/jpeg_rom_recip.vhd",
+      "sha256": "cc13eff371d27ea7c03c0c5d5863ebafd941e74eef6a2df0f9516890fa3e69bc",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.ipc",
+      "sha256": "f9ad7471602c37dc7afb4112efc123a62660941781fc2c13a138451f03be1e99",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v",
+      "sha256": "53854efce3b3a1d47749d0aa10627750fa9ac8927aa0dcf6e066a9358b7cd108",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.vhd",
+      "sha256": "c2b4c257801a207a636b9228cf224f55eae9751e2a62648ea490407e1b9642a0",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/Design.xml",
+      "sha256": "8b735d15b12bff73a857a2b8a6e5e8797996016252b963c06b64b943ea0428a4",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/DesignConfiguration.xml",
+      "sha256": "a99f354e690ba758e0c296c7d38b01faf723fdd9d739b18fe985122eadad41bb",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v",
+      "sha256": "68eeb362dbec2d2869180d50a7f9a64befecfb8bdd19b14a25468107d1a883e8",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.v",
+      "sha256": "8a2a10346a955254aefea0811ef49044c5cbb27d652c262f487a9c06e811e573",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/fdct_mac19s14s_z33s_p34_m1p1.xml",
+      "sha256": "a52e423180909867a544a8a512b01c47cb8015430e3df10505e161851dd8148d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/stage3/tone96_rom0/tone96_rom0.ipc",
+      "sha256": "f07deca37f30bcaaf8f6536a28d1e2bbd89a2dbfecfc4d0599d4232bb2ef7bee",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/stage3/tone96_rom0/tone96_rom0.v",
+      "sha256": "d5c3d0701d8f9b2c13e4dd4bbee69eac66ec075539d1cfaf74d1bfd173884a94",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/tone96_rom0/tone96_rom0.vhd",
+      "sha256": "2e3b4c21b80f2773f2d3401347ab173b52ec79c35463d3e58c85c2d808b092da",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/tone96_rom1/tone96_rom1.ipc",
+      "sha256": "9fe5a5f58ce71b4df87c8d6359eec7bcc677caa4b525ca17e7afebff24f17e80",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/stage3/tone96_rom1/tone96_rom1.v",
+      "sha256": "24d75486d7ffb2b28b67c28ed88c2c1c356baad3f3ca97ec3464f063a89838a7",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/stage3/tone96_rom1/tone96_rom1.vhd",
+      "sha256": "fce982a7a4e227fd3132bfc0c8914ddf20e326c1433e2e862c5f9aaa873038e4",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.ipc",
+      "sha256": "ad7a3056f56def3dac2f595507523417c034d6f5f214488e2ce09bf081b14e6b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.v",
+      "sha256": "7ec4970e14533d3385346a95bf1572e3c3a91e8acad3c72c1b7f855c17b14bea",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/sys_pll_125m_25m/sys_pll_125m_25m.vhd",
+      "sha256": "bdc169e5b9c5da555e464ae5b10363ef891f70361f70a8a8ef34ef78fc0ff96b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.adc",
+      "sha256": "1d5d2886f07b0744f7505a8e77cdf25db04d9da0d7ee0103a6165b24eec7f5dd",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.ipc",
+      "sha256": "fabf71d133a4aab4000e670a9dcc9a2d2924947e90e8f63e77c40d9ea7edc14b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.sdc",
+      "sha256": "3b0689e56fb78f9bf8bf57ec941864fd75b058f269bc7b15304c946442251342",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr.sv",
+      "sha256": "4fc55966f49cd8af746f8202d1c0fb4ddf608eb11990f19a2f9c081581cf2d68",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr_cfg_rom.txt",
+      "sha256": "07d7d978421e5a56cb96e603d005500c628525ee37393e45b226879020a57392",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/ui_ddr/ui_ddr_mcu_rom.txt",
+      "sha256": "cd913458ff92970525649254b69f4f8123ff968ab9a9172018d1adbf2f73b2b7",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/auto_delay_ctl.v",
+      "sha256": "1cb7a1dbb11250cf60797ea4b73b6b09ec9f5382b81043afcc21d00e7b1643f9",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_byte_align.v",
+      "sha256": "419e5b763400db97812dd81c58c8c64179350a842379a19e9cc77e4b62f0c7ec",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_hs_data_phy.v",
+      "sha256": "ae3e15af71213a38b186a56f4f89592d4b895e08ddf8199492e3eddb138c47aa",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_align.v",
+      "sha256": "1f4e3b3b136f8fbb14de703ae7623a15c6f8ff78394418449b0d532091ca1b9d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/csi_rx_word_gear_box.v",
+      "sha256": "aa88fbade5ca2e29e245c7ba2f615a28587aea6d7d5e44fd545638dd63607d5e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/phy/rx_clk_gen.v",
+      "sha256": "86de5ed01d390c84839699519c652326d013ed041137889cf01518ff5a3fab28",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/vendor/anlogic_camera/sensor/ui_imx415_reg.v",
+      "sha256": "4a058e988125a68a129fd00645fd641dd991443ded1d2a840090ec2bdc028af3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/anlogic2026.v",
+      "sha256": "90818853656036447b06424b4937d1742387ed4ca6adc5dec990783c8e95990f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/axis_frame_fifo_ip.v",
+      "sha256": "b820c964bb7d358ca99bb190df230af4a9eb93ac15aa3a7c3b8d72ca7260e848",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_bar_cq.v",
+      "sha256": "fb567e33472f15ae913c178b837c846dbf60fde051f5957df6f1e190902f0b2f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_frame_tx.v",
+      "sha256": "2349b89dce143b9ce9c191f130978284a3c5e456d7a8c6066b59f2b84f786f62",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_link_supervisor.v",
+      "sha256": "400b9620f5d1a0e714527a4b060bc88be160b5886352cb2917326040e77a92c1",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_native_fence_listener.v",
+      "sha256": "abe20437bca7454ce622810285b2218c06b31c5d63c4bed3110c01bf34fa5b3d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_native_packetizer.v",
+      "sha256": "2bd6aee3084387ea7e6c4ce61c2afc119a1f31b92d6136c6879597aaa98bf3e5",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_native_rx_transport.v",
+      "sha256": "90db130d41c05811fc239d1ed08b2c038d07535c112d21c2a318a09d12f5cdcb",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_packet_ram.v",
+      "sha256": "7204ebdb378457208039a7c6ffbc36c5de48f741a4b4c9615da37176e4e29f46",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/c2h_pcie_endpoint.v",
+      "sha256": "59f3eac269140eef1fff6e21f6fc9ebf0a5fd87d8183cf4c384830ced551aeb3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/camera_i2c_write.v",
+      "sha256": "7d8d640d680c6c894e427a6d3809b5c021878a3ef2869e4c772c2d6be2e8c357",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/camera_rgb_native_fixed1080_borrow4.v",
+      "sha256": "129cca5bb8cb2be65ed64664c03e675af52a8b042d4c7c59dd298bf8b20bfdde",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/cfg_diag_pixel.v",
+      "sha256": "9dc9f104548a086c62cd7bc2978c6737fa5ac2b93411bd616695b2e11e2c0e17",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/cfg_diag_snapshot.v",
+      "sha256": "e9f0e2ca67bc4da41ca060460b87ca7ad1a2c53e57e6e11b5e491119214ce848",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/cfg_diag_user.v",
+      "sha256": "e42ebbcc9c7fd7d378ff4a6b4b3526ad5686864c9bea44ee02652174612dc444",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/control_fifo_40x512.v",
+      "sha256": "f03e2bd2b794592b45a298c8a9724831cfc766ceb1ba97aafd697679bb60f291",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/control_message_fifo_ip.v",
+      "sha256": "ed45556e04d39fa3148ce015c90a74a32774016073129d2e4ec4511beaf51c29",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/csi2_async_event_fifo.v",
+      "sha256": "1d044cd65cf4060e00796d582fe9b987ecb5562c52b5d6a7b6ede61016a5a611",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/csi2_ph1_phy_wrapper.v",
+      "sha256": "f7c9db1e7dd48d2e7b0c46b88cdd2944b4ca0ea8d69c691fb2cd85c9b36bef0e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/csi_clock_watchdog.v",
+      "sha256": "01640da86eb99e9b498913dd32e59218386b1ad541da194cbfc5e8329f37f0f7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/csi_rx_byte_align_observed.v",
+      "sha256": "9ca2c2a5151fd09825b1a02aeaaf14b4829750517e474564a476af6429bb6c6f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/csi_rx_word_align_observed.v",
+      "sha256": "1c79fbd1e082b71d0da0d4eff4b11278b2482d4d58f1c2439f11cf2db0d5df22",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ddr3_jpeg_store.v",
+      "sha256": "47abc39a80e74f676d8ce7ada9cde03ecd3c1c376730e3bef76c2b90c661b14a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ddr_axi_two_client_arbiter.v",
+      "sha256": "380eeec665aa03ab2c0fffb944747afcbe4399f3182ab917496d0a6dfe73b446",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ddr_extension_staging_ram.v",
+      "sha256": "d8941a24498d7ed8334f8fbb98fc334f64b44bcb3c3e04d1c0829a83fbdd33c0",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ddr_response_bank16.v",
+      "sha256": "da5f7c688f51670c2d3bfda375610696f8b450e0c2f8a01d02f5d4124246578c",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/dol2_axi_write_arbiter.v",
+      "sha256": "7b12bc780aeb58509f41c3d2cd699449f892d656b944a808721f0ecc9caacfa2",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/dual_raw_capture_frontend.v",
+      "sha256": "08f5f2b73b737aefe5fa1c75786c5a987c9c6e57863ce64e811bdfd227f98a62",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/fpga_debug_isolation.v",
+      "sha256": "31ee9c7e86afb500e03511cffb5c3e4c8752b8868a98a7164802b2c900a1d63a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/fpga_debug_local_stop.v",
+      "sha256": "caf933d96f43ad7aa1e3e6b67b6013260c2d7d019c654284426883db6f17ed2b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_admission_qualification.v",
+      "sha256": "ab48d7030587272dbea99f7be4ad10d4d6598dcccac02e4119152702b1560952",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_common_time_cdc.v",
+      "sha256": "43c1019dd4e449c1e099dc3ce3f3b1f07f89abe6f0a34be5b32de72866402782",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_config_extension_validate.v",
+      "sha256": "f05eff5ad828682f6d69ad10c42341efd71eac7ebd1a0197e667eba61039284d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_config_preset_owner.v",
+      "sha256": "153dfb73e5db7d2b8c63d55f37f4396a6d01c3cce237731b4a8cb48c1e843d0f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_job_config_cdc.v",
+      "sha256": "dd5002212f9579a3db34db527bab346a540477fb4b8a046a2977db3deb43793d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_record_extension_builder.v",
+      "sha256": "cfc87213648543be5e1f7f1a4f5876d65af6dc2571ce538223dbb19783ee9373",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_record_v3_join.v",
+      "sha256": "9100355279a52a623e6b748b7f0252edd2051f1bc7919da8bc69cdb6d3d8bc69",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_session_controller.v",
+      "sha256": "c49344a13351f67e17eb2a06a40f40d5716ebef172f38ad42b3fa70b6eb7f37c",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/frame_source_config_bootstrap.v",
+      "sha256": "93201695aa3d5fd58be63056cc85d7776053cf3bfdec89a2b959a434881e5bfd",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/full_filter_multiscale4.v",
+      "sha256": "a94d13f17d0a5d7524a98c4c69d127d92d49a6fc5bdf9d4945f250f90db754f3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/full_filter_sobel4.v",
+      "sha256": "8b9733f7a26200a2a7e4b4a4e898b7c3e3da3b080d1a793e32c608f30ed18c3d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/full_filter_y_window4.v",
+      "sha256": "d1a4bee0d780c91fbd0082356d695cf7463c70bbe68a94a077f970d54cf4e0f8",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/full_raw_capture_frontend.v",
+      "sha256": "ecd0a3b6faf4bdb2a338809651827c91bed5168ff1f620a0d00bdf47dd6f42ec",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/full_raw_store.v",
+      "sha256": "9d3db3c7b38f55b9ac37e3b68ebb3b5c0fa823f727be0902148d79ccd2466285",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/gamma_lut_10to8.v",
+      "sha256": "edd745518592b6c4c6259f8741a2d829feeec827b20ccc0c2a34152c0173d464",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/h2c_stream_checker.v",
+      "sha256": "b0d91d27e8307f4d427378d5972d726c966f103343c6e37de72feb0d605a8790",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_merge4.v",
+      "sha256": "dbb12cec640156b8d3881479a32392aee7bac6dbc9af78d31343e787965ce8b8",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_bank_owner.v",
+      "sha256": "b98fc8f624a28991459b4bb9a5e2e927dfbe9f2e468cf90c84296ee5af77c5fb",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_bank_owner_dual.v",
+      "sha256": "e555fd483a7bb63d9ca80d252812035f8879c5869394da99849a231f3675bb03",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_context_cache.v",
+      "sha256": "31f2023d960868b3e076f77ab4402c45c91937171fa0df3a8975ccb28a54bc59",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_directory.v",
+      "sha256": "076849ff8371149cae1bc6ad517ab69c90cdc37a578d9fa0f421bc5863e993f4",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_native_source_service4.v",
+      "sha256": "33168bfe7241cfdfacba2c2943dbacbd8ecf43bacaa403fbaa1630c40b64d278",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_pixel_reader.v",
+      "sha256": "ae28469c708bbc4b8feae711f49901ca8d75756f50ee1cb443c22a0d3434fecf",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_product_abort_drain4.v",
+      "sha256": "1a93737302dd57ba29f7080feab0e20ed5bafb008c97cee1eacae96a6fa555e3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_pair_read_cursor.v",
+      "sha256": "b2bc668efc5e1de8dc02ce4d8bfa16cdc8dcc43bd2cefb6595c04a751338bed3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_product_terminal_join.v",
+      "sha256": "0d7545617f58b43fd432501703f2e59e1e30bdbdb5092922fe88a65adc458330",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_raw14_shared_transport4.v",
+      "sha256": "34963c31b7b050384663a11dd078741c229821f24445c9e80d02e9a081a1c404",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_tone96_shared4.v",
+      "sha256": "21db78163fb014d03f0dd9f8fca3d325a4414397d9bd6ad2033d78c71c7a0442",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/imx415_config.v",
+      "sha256": "ab937907e640a7fa56da552fd206ea2f2596aefbeaba6adbce0e6c248b6bef7f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/imx415_hdr2_config_owner.v",
+      "sha256": "fb33804e49a696085545cb9e01333e4c3d68e36148ee8e1d23859a09abfdc44a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/imx415_hdr2_recipe_rom.v",
+      "sha256": "653eb04d33a17a4dedfad6a4bd7bf7d9668a4b8eec03d22132e673bbde9846e4",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/imx415_mode_table.v",
+      "sha256": "cc577a9856c2580322a469ca8fa0be40495ab8d13cadf6929b4839bf93ac1287",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/imx415_sensor_pll_25m.v",
+      "sha256": "860d4455d8bfaa084e8333af5c13aa2a8c5a364d7b814f5c5af29fb5d72163b0",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/include/00_rtl/mono_config_transport_v2.vh",
+      "sha256": "5555cc4297277b88def3e274d640cc8408ab45481d535013883c4baca6a5d4dc",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/01_include/c2h_test_fixture.vh",
+      "sha256": "60c9aa617f9fdb4dd19564ab4acad2ce8b9d4f9dbf84500033ce689f28ad1e10",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/01_include/c2h_transport_limits.vh",
+      "sha256": "242ae42c7fc63b7fdc1710263f8aa49a35533f411e27956c6df2d3e3882acb8c",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/01_include/f21_config_transport.vh",
+      "sha256": "4f7cb45f459afeb0a0b8af9daf1a0d985d57fa566d4fbf5ce2f63b85a0151605",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/01_include/pcie_feature_defines.vh",
+      "sha256": "4871e262c58412063109d7f6f86d426809dd914d5adfbde55830bf2bde905a20",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/01_include/pcie_record_v3_validate.vh",
+      "sha256": "23d81a91602966612a726b517f25b4da7bf038874c10484d079a4612fe187cc8",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/01_include/stage2_config_transport.vh",
+      "sha256": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/02_jpeg/jpeg_header_rom.vh",
+      "sha256": "bff8a5bdbb7760a17089042d9ecdfa969701b23c5d7305f1cd93fd1ee9aade23",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/02_jpeg/jpeg_huff_rom.vh",
+      "sha256": "7424bd2c51a157c2c3284ca002ca440a43a3d4ec53488cc89e6950c1de18ed9e",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/02_jpeg/jpeg_quant_bank_map.vh",
+      "sha256": "063c2e2ab00fc30cdd9fbfc09b2b6b15836188af36c898183d264df53e8314a6",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/02_jpeg/jpeg_quant_config.vh",
+      "sha256": "d744f97553975ee94e07c89bf9e0cc97c42e01c48ed628ca1606a4bd57b9d81e",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/02_jpeg/jpeg_quant_tables.vh",
+      "sha256": "497f3d7ba0a783bf9f1691576b97ca82f6541feea999ce9dc33ba51facf550b9",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/03_mono_config_v2_20261015/legacy_stage2_config_transport.vh",
+      "sha256": "ca8c63bb72ec9ec12df1167d53272c43a4311885e96ee4d44495e9043bade898",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/04_include/analysis_config_transport.vh",
+      "sha256": "3509667daea76db57e119d46378eda6e227115c308d69261e43e7d513815c8f1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/04_include/pcie_protocol_v1.vh",
+      "sha256": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/isp/color/gamma22_10to8.mif",
+      "sha256": "e63e58bcafbfbd5f6e0a8b54a82a9ffce2e26e56e4617c722b3326e75d1d231b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/isp_line_ram_native4.v",
+      "sha256": "60ba7555d826a5e18e0a8f4faba4a3acff2bf6a0d3d448d8f6c67e5f1b00972b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/jpeg_rgb_to_ycbcr_422.v",
+      "sha256": "6f9917f3897e2aaa2d8f69869d53f340d0d5ecc4afbb559706f746c5529a062e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/ac_huffman.mif",
+      "sha256": "12170efd204fb4ff49c1d3e3eb4ab8ff1cf7d2f235bc1a752cf570860fd74cab",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane0_q.mif",
+      "sha256": "111e423405f1f34b4c89ae9ff587917b00f19916c8298462c79261fc05b040c6",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane1_q.mif",
+      "sha256": "fe7840998823390bab0b99fba2fe3bc53fb998b688212576df65342fad00e07a",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane2_q.mif",
+      "sha256": "e2032a03015dd7ca7131f0a8e1891b87bb99f2e30732d0d9ce5398a735bf5337",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane3_q.mif",
+      "sha256": "5a51e8784deaccbdc660f1974e66ad6aab21adee7a62e3cd39613646b2a33e74",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane4_q.mif",
+      "sha256": "4d3995d671f33af39309cc0166b3d01db12bfe46f2e025039796edb9144dde80",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane5_q.mif",
+      "sha256": "f2cfa1dc750fb14c7e404ce704ad4680166b955146ee674c0d79f5efbf488385",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane6_q.mif",
+      "sha256": "d02e4464e23f90f42e39c1171a517bd6d9f76ef3bb32a187602db79fe6990e33",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/lane7_q.mif",
+      "sha256": "398bacf861dad9f80d6a72c6c04e6b355152406701ae8d0adfc241cd585e7cfd",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg/quant_data/reciprocal.mif",
+      "sha256": "21f995965a1ac3120e2436ede2114663fc562bac989ec8062a5af98bef463476",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_byte_packer.v",
+      "sha256": "2a39a241c6ed1c722a4ccfaa96287789898ae6da54736614b7064e697a95446f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_dct8x8_pipeline.v",
+      "sha256": "2c093dccb59f068a01aa3b97d04c539b4b1ac02f620abd43e4861f0cc3673aec",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_encoder_top.v",
+      "sha256": "7ba0ec5488c812f8c9b7cd0a5fc1fb1ea3e86b0612df5cfae48eb5d69c9a5b24",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_entropy.v",
+      "sha256": "55331b8a48f5f855c0454cbc8d773fcc2b48513bbe0a0fbba53f826a9a6bed2a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_fdct1d.v",
+      "sha256": "65d0361de709205fc5a74272d76b13fefe1d92f4635d9026a40f8c85680fa8b5",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_file_formatter.v",
+      "sha256": "8203758e4a4bd1e5adaa5eb44383c0b5d6a2012bae919ba719af9d865acba518",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_frame_admission.v",
+      "sha256": "32643b53bdd5431858a83d7c028ce34e2d0f2620bbf6759d3e1ec01b2afba735",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_frame_bar.v",
+      "sha256": "a0feb1039708bdac4efef37cddc795ab3da748b70b93a188872e989fac8002a8",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_frame_ring.v",
+      "sha256": "5c45615f818173b96a25a1a184691f8ffcdd3ef2155fa54581804b6e567153e1",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_frame_service.v",
+      "sha256": "76e932dc0c8ade64ef16d3933be9196f4e22db4fe172a6ec37d43b36391675cf",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_huff_ac_rom.v",
+      "sha256": "ea735ee8f2db354a779481a986d9c76c28af14fb98bf7f9808d15ab5f2d6b0fe",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_mcu_422.v",
+      "sha256": "08154b25d01231c70a600934d47c7b600c8c7771d828e8987e449b2017477ef4",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_mcu_packed_plane.v",
+      "sha256": "158de404adbf638d9e82766cd6b8809e91f00b0a3614dd46c329b7a3e0d9d57b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_mcu_read_align8.v",
+      "sha256": "b6d8cb08e70cd72465d27f539127a8c5fa5deb285417d99b7677b76f22019e6f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_metadata_append5.v",
+      "sha256": "51dbec9d7e06dc36ec6a5e4f9b892fb9474ee6578431fc9943c1a95a9c177894",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_product_owner.v",
+      "sha256": "66682104c4e2347789429c8de46fb38222f075a65a42beeb9a2c2a3858fd7658",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quality_controller.v",
+      "sha256": "64849d67c4015fec871222030761bd9cb460bc5929bdb376acfadba937cf5c9b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quant_recip_rom40x512.v",
+      "sha256": "6e398d4d9ae00003f3193ad051233ac90777041025d80f12839e4d5f9e4f74d6",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quant_rom10x2048.v",
+      "sha256": "9b889f5b4676d9397149725c10fdb4c6a1b4f2db15df148ae592ee661f48b78c",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quant_rom20x1024.v",
+      "sha256": "9f609ac5f75159c569f75ef99b3ad5aab506e9ad2cbb552845dc78aa1deb9050",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quant_stream.v",
+      "sha256": "ebd19eb44227d569c9d91ffcc03576f4e63cbcb33febd694fe12d146e103fa50",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quant_table_rom.v",
+      "sha256": "5ce4e5de9b6df0cdefacaa9a20db1cad5338fa03bfd1511e54f88bd987b3179a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_record_metadata_gate.v",
+      "sha256": "af46a77a06b3e082be0ffdc6cd55895420eb19ec51a9f5dde1d26afc96be0871",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_record_metadata_store.v",
+      "sha256": "521a28a5fd38c0f8a0ee086bc30b737add0a6d1d21dade2ffc68d4e8d039c4dd",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_ring_cold_bank.v",
+      "sha256": "356b34088ff4342e09b832f427c813c0a0fc9ecfc64dde40ed4685c178ddae9e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_bar_v2.v",
+      "sha256": "32b9bbc753a84b5899c1fcdfa6f6c7135f172a538e70ba60c16dce377af6e225",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_byte_store_v2.v",
+      "sha256": "af652c8c78ef2663e3974cdb60d470ff440499337f6298cb14b808261f2107d7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_engine_v2.v",
+      "sha256": "d5ba5fefa878c0207a059b4783a81fb4ac780d86b5006e06c0b8582062a75063",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_legacy_scan_v1.v",
+      "sha256": "bea045662d149229b52050f2dcc4718d7f4bbc9294f2d3b5584212dc313327c7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_narrow_gate_v2.v",
+      "sha256": "25efdcbb4703cc2112b2649dcd1cec5dc6756eba601062c68028b2bcdace52f9",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_scan_v2.v",
+      "sha256": "6e081d17afd16e2db5833239746d587885825eae8385609447e55d835a82b503",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_config_service_v2.v",
+      "sha256": "2981b4fab7ada6a4694fe2671f9b0762754e6427acc9f8f7227d6d93f2cb9ff2",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/mono_pcie_app_regs_v2.v",
+      "sha256": "f9d5c87a402aae58ffa16db813a3fec471090b17ec6bfbf281be208e235f8854",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/native_frame_descriptor.v",
+      "sha256": "f90633162c45bbc027af92c2ecde8e26f1df340916989f34967e8dfc7cb17374",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/neutral_observer.v",
+      "sha256": "857415eff470ef2fa22990b07634f131bbfb1e339a8a7282084ee9390e557546",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/neutral_record_observer4.v",
+      "sha256": "73f06a52222be9bd89f7d995c95d65622448b1f43ed28a3ef69adf8efa7a2b3b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ordered_frame_cdc.v",
+      "sha256": "32c8bf457ff45ea3b3a3eb4038fb9b968991c4038ed9d26dfa7ba4f1418de469",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ordered_frame_egress.v",
+      "sha256": "eb5312ed137935d5081d7470d5973f61ae3d3ac0735559bb77cf072b34c7a81d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ordered_frame_fifo_fence.v",
+      "sha256": "d48955b8c0e3d9c87bf1389cef7c2dbef6c3354396dde5c7c4e0c1491f20a867",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ordered_frame_ingress.v",
+      "sha256": "f463a2a4d601d5400f44f0b3b8cde585ffbf0711c447ce6e80e335fdc621d8c7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/paired_raw_capture_drain_cdc.v",
+      "sha256": "65e6613a7a1ed242e79846a47270ce3fc3f554a0787c125e94dff91bcca30c63",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/parallel_result_eram.v",
+      "sha256": "e581cfabc0f1def07f3bdf09d4b783f8b24a0f4457c983dddef6545abe00f260",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/ph1a_rx_delay_scan.v",
+      "sha256": "c2c10d56465e074be32ebeac5aec08e402986037670771aa7be92424364f20cb",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_camera_crop.v",
+      "sha256": "5bc6f77d5e0236b44dd0a3ba5978e5da979aea3a5d4d4bd71b494adc945bb64d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_camera_rgb_pipeline.v",
+      "sha256": "9dac0f84f293aac269c6fb086014adea2d93748adb2cbb65570e979a7feb8cfe",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_capture_router.v",
+      "sha256": "28acc83a64f83142420b13cb06e9c5a5b98a09ca710e23e71b5d218d38cba87e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_configured_capture_frontend.v",
+      "sha256": "29e78dd4b2a85955fae7950b35babb3054a0f1ade43af43a0469e90390d44e06",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_csi_rx_stream.v",
+      "sha256": "8b065f4b8683dc725a40aa19109d56539fb05cd31da28cce061ad0fb2a7f8722",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_csi_word_core.v",
+      "sha256": "1157adfcda8b5cef5fdc1217e0653f937f0d1d09506d505a049303e3caba95b5",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_identity_source_fence.v",
+      "sha256": "e6ad9a0bba6316f495787dcc95cfeeda2c1b31c838a9a6b70e906816186b1c9a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/physical_pair_config_owner.v",
+      "sha256": "dc68ce2cdd3776583acd47a047cda1e710c045d7e36b3abcb16ab51d2f989b18",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_count_ram24x512.v",
+      "sha256": "f2e414663f8e61782068961134d301aa323143f4d896f20bcf701de91e9fbef3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_gaussian4.v",
+      "sha256": "b76e26c0fb5bd47891a55905147e0d0f95f27eca84a62daede6ff53c09f2a3ac",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_gray4.v",
+      "sha256": "eb660304a33adb846745dc65a7adc06e8811e074e3109b2cb720b442a6d5292a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_gray_pending4.v",
+      "sha256": "28e8a352d40e91fe3a6a2c0bfd4bb9658a7f58514dd21c20e3fc81cd6f388c16",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_he_color4.v",
+      "sha256": "537aebc34e7b03f8fd87799927fb120ecbdc7ae87c51200ef48dc7dcdf460d9e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_hist_eq4.v",
+      "sha256": "d235f586355d4daa50cc2e49577790902cb1e0f0d5af878bdf60ff25b3feaa9d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_hist_lane.v",
+      "sha256": "dbe7eff686a7958f787f583745b2ad6e1f98ab21252f46ee1c8d552411dae490",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_line_ram32x1024.v",
+      "sha256": "32704b5550d6977b2ce156bbfc9cc55ef3d63abd8c7fda440d25509edcdedfb2",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_live_f21_pipeline4.v",
+      "sha256": "923dc6a8981f4d6b7b1cfa163fcf7991eba090d105ed46b44ce20f9ca35db067",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_live_f21_service4.v",
+      "sha256": "b40589713e74439f0aaddfc36491fc5df1433009175d643c618b983f1e25d30f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_live_lane_owner.v",
+      "sha256": "e516c5603a920ef5ead7cc82069bde14304a7e124d00995e9b3a39bc93d9ca3e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_lut_ram8x512.v",
+      "sha256": "10271344f2ef695f4bd7deb1444b0079a51af876584429fe850dcd7c487aff63",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_scale_arbiter4.v",
+      "sha256": "df83a0ae6a5ce5032b4be574dd162c5175739654470b7e884624c6f237166681",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/preprocess_stream_pending2.v",
+      "sha256": "c395dc141e43c70c9f9815b933969046ccabf2ccc4d8fc0b86b31dd2392bbb2a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/private_raw_isp_borrow4.v",
+      "sha256": "a46cd8a999ac360b4c530bc7034070e9305a2f20fadb3906e67b0fc6079f7490",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/private_rgb_source_borrow4.v",
+      "sha256": "b193e4f1d1e4daeee924aa485b8f1ce5edcff0d8da3851c25ceeff3626f02f75",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/product_pcie_transport.v",
+      "sha256": "6d7ac589186eb3c383c124f296003ee1127b90a6e93aba138180ca29fb0b4c17",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/product_record_cdc.v",
+      "sha256": "8047288aef68975c280ad2b9d800cbd3c3bcd1e36440d9179c176f2cc6afd474",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/production_soft_reset_fence.v",
+      "sha256": "602e20e89ad8b1af4ff31806147396d20dd53ff56d041b59b2ae756385fb4c5e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/production_source_identity_guard.v",
+      "sha256": "931f27ecc4e6630cd5e94e25c8b594d2ab38b5ecd0f9f84dd9242d74352ac60f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw10_append5.v",
+      "sha256": "ec02a0d6674e792a1aeb56981ade0caef42652a5acabea9cb2164962f3f11abf",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_application_stop_dfi.v",
+      "sha256": "08caaccd2936124da6c5a7731a4a44c44155577667eb8600ba4a9dbad9945497",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_blc.v",
+      "sha256": "fd1bf00f49e64dab98d29922053b36063902e31d6cb288e1e27dc8cd1cc7ba96",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_capture_fifo_eram_safe.v",
+      "sha256": "f2c6e04658c3a68f0cdaff09e24df6858c1b5e92f8361b03820116dcc0b94721",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_demosaic.v",
+      "sha256": "7a73dba83c808068d8d1d6a70c44da6f3ec7b82736d6636e6ea9660ad4accd8a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_hdr_phase_scheduler4.v",
+      "sha256": "64e075452ff2713bd1e654ad08f8fdeba9d62a219d4678180ad3dc721e545d72",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_isp_top.v",
+      "sha256": "a5c8b4e4d7a5313e96fad8cf917f3f18299f767c71fc475bbe1d9e5e73e43461",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_job_ticket_context_cdc.v",
+      "sha256": "ba0664d7729380776ecd63f04dd75ec744a973daa55c57e1abecf8f816066104",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_pair_job_service.v",
+      "sha256": "96c6ead9cb82a03db86c5aceddc341af8cd7c0df0d768ca331328fed305afb52",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_pair_processing_context_ticket.v",
+      "sha256": "e8a1081b4a46752c4fb5a6d5e6dc8bd6b31d12d650191f4b6796c777f66ccc39",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_pair_processing_service.v",
+      "sha256": "2a04c2f1c7d176f94bd22dcbf4830cc5eb1032c48210a1e2a40c1e0808403b4e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_row_window.v",
+      "sha256": "00d50ffdee96b5de173ea456513ec08576794aa9028ef0e5fd0d8bb388f6d339",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_camera_observe_axis.v",
+      "sha256": "ba78d140892f39698775fd4b6191507434cdec721ea848429bfe21970c4e5dc1",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_csi_capture_stream.v",
+      "sha256": "af0bfb5a0be037d4352ec24d42e028057e37cf1bfad34f672436f183a0daf4cf",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_csi_dual_word_rx.v",
+      "sha256": "2d39de929914cf0fcd67812cbcfd8e621766efb866d256509e87b1bde0c97223",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_csi_word_core.v",
+      "sha256": "28d731c87eaa99c806ee5486b7456f76b51e87bc09be3c0c33eaead1e1459baf",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_event_cdc.v",
+      "sha256": "15504e2334b0d74f3d758578bee9494ed888dd1707e00cf98254ab8d30d97cd1",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_member_crop10.v",
+      "sha256": "d053c1fc99012f696d20de9b90e26cc7ec760f00dd8a742bded280c7f5ac2473",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_pair_cycle_gate.v",
+      "sha256": "280f801799e867fb4bba438be1a6fbf05eb601066d9095c9bcc89600c2be0286",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_physical_csi_rx.v",
+      "sha256": "d26ce61a59f53807639c949f4824bef63b50b15c31bde35e24eb0f637228ad6a",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_sensor_clock_mux.v",
+      "sha256": "ac37995307508e5e6d34b1c6946740f447e284fc7ed88e6cc97e10c3ed2fd5e3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/real_hdr_sensor_config.v",
+      "sha256": "2403fbe75a913d156004526e6c409faf07aeaf163c751fc1e8453aa32ca2af89",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/record_format_bar.v",
+      "sha256": "7548ecabb3c42166033c8d637928628d48f573e7d6dbec2864132e837ffe9c6d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/record_format_service.v",
+      "sha256": "254e9a370499a13ff7fc677501da7a613c14de94029e204266d7f45fe4e69b28",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/reset_release_sync.v",
+      "sha256": "cb75a6cb5e6ff46266a71b4aa54bd78f3ce5bc18612c9d017e4a20cbc21e6d14",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/shared_raw10_decoder.v",
+      "sha256": "6300e989f8b60727d9b393ed537d7217a6c6bd764fad4759f5c8b4a1b388f3a3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/shared_raw10_frame_ingress.v",
+      "sha256": "aa8a05703c5782bda13bc3d4281b785cf2b44ea8a19fd0b95c609087f2fb2e11",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/shared_raw_capture_writer.v",
+      "sha256": "ed77ab1097f987e4881589032e421ac7ca51ea4c6856dc57fa2963186955a2b4",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/shared_wide_isp.v",
+      "sha256": "1b623647e195138c25b2f061e0f35d16bd70c2d562acef3f5e02acf4ee7062f6",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/single_slot_credit_cdc.v",
+      "sha256": "ecdc8da230a00466c3704be053aecb25f2b8128fe1f39a5405a878af7940c494",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/source_terminal_broadcast.v",
+      "sha256": "cfeb985ebc5769ca44dba18f7a7a11ef6f1188fb02e5b5de3d6b5730cfd36db6",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/source_terminal_sync_boundary.v",
+      "sha256": "a58b9ec9040120fb53b7374a892519e07b33087777bb2fcef80b28d495b05669",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_filter_color4.v",
+      "sha256": "8d36e77380d93fdc37f3633ae8078e856551743239e1e0b51445ae8ea5affdf7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_filter_color_analysis4.v",
+      "sha256": "57a38ebda4ca17eae2718636645a0355b9ce25854895402f9e943d06132ea6b0",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_he_div_32u24u_iter16.v",
+      "sha256": "588239cb3a33e89c4cb39d852435638eaf28cf15dc7ea8820c314d044533ded3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_luma_blend4.v",
+      "sha256": "04c5e3dd21058657fa6f7a2127312394aa829059d4dac3c733ba04023fc0010d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_production_boot.v",
+      "sha256": "d12120f64d5e1f20489eb35970dd0e029b2016c8b9629be54c281090b49df1c7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_rgb_delay96.v",
+      "sha256": "41ecd4f2de6d1e9bf802a24a78f548927964bdeea016a7abf5a3215faf53f47e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stage3_stream_fork2.v",
+      "sha256": "7a2596dfd14ac8d95864c9f68aafcad6f0754cd7015578abec7be8c7b0e4b0d1",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stream_reset_boundary2.v",
+      "sha256": "0712df31092929e8dfc43668d7480ed1d479ef19dbf169f6a332c7f12afa28c7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/td_dsp_mult.v",
+      "sha256": "5a6e50055a5fedef320a76ad43b25ca5083220a8c95e4a0ca8efe4aeeb52e7a7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/td_sdp_ram.v",
+      "sha256": "148e07e6877ead65fd169157bba1fbef8e0436bb87742895bab4c69bdc543b16",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/td_sdp_ram40.v",
+      "sha256": "f120c365061daac7b401201a5b3661dd01d794ff77622de24686f3c58d0a3e58",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/uart_observer_snapshot.v",
+      "sha256": "726091e898ee2d3ce060c5cbe901f7aa308f03d700878ed46de8b9f4e6bc4870",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/uart_status_observer.v",
+      "sha256": "601cf849992568b49b9eb5e973b8c2290417a6ebb9451dc7081cb875afa56319",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/wide_color_pipeline.v",
+      "sha256": "ba8f5a7c3834d785eeaf3dbe7b81327260dd2b5722f489851ce20e303e1322e2",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_mark_hint4.v",
+      "sha256": "d14223359f3fd283119b4124874f62c3b96cc7f1cceeff03eac239924ea1e3e7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_candidate_store.v",
+      "sha256": "9b4bcb9ccb2bb071616d497c3c2baed6cf007737ee4a47f1d2e0591692373674",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_sparse_extension_checker.v",
+      "sha256": "153ce596ab3fee9247202aeb457adf05926212be6926021390d74680d3795d31",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_sparse_serial4.v",
+      "sha256": "fe72e0612b85f7de9401378e9fffbe9ac467c9c0dd5ee3170e689abf58e4fea5",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_quarter_fifo4_to1.v",
+      "sha256": "7d1cb3e5fc68df5476d8b87c2bb4b1553071655ed4827a2999f8a1d8df857b7b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/jpeg_quant_sync_fifo.v",
+      "sha256": "aff514b88eeccbfe76a4f9a10a3ab2c1ceb121f5493272b2a4bc5f31a9bc9d09",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_winner_pair_lutram.v",
+      "sha256": "9c955c92577d636012666f665a6e5c44b87edb4296da8465bc8bdcb0c792bc8f",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/lane_ridge_candidates1_lutram.v",
+      "sha256": "abb9c42fa511a26c180eefea12011ce963781862911fa68eaee43da941137ac4",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/sdr_camera_raw_frontend.v",
+      "sha256": "52b13ed353447b3f1f10de994b7d6326b113eac1b7fdd455478b2c83b8768b55",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/sdr_physical_csi_rx.v",
+      "sha256": "a0c68312a7498dd00a276fe322bf053de0fed02b96b4055dacd0ec1c0c16c592",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stereo_capture_source4.v",
+      "sha256": "a55e2035d1a50da2683c9e9e635326dfcff12dbf8ea4fd24cf6ca5f2eaa4de68",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stereo_cold_control.v",
+      "sha256": "302c8dbc1bda1da415aa3659e3499b42df2b2eb54dccf5e36362606d283cf730",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stereo_raw_owner.v",
+      "sha256": "cd9b16c45bb626816805f0208e50a669b50e28a1d193b49486725737653b6dc3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stereo_raw_reader.v",
+      "sha256": "463b15d7c84c6db08aa76e94d24f20aeb06934211f92e0674391165d05b4155d",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/stereo_raw_store.v",
+      "sha256": "421ff13653b1ac7a76688c629d44d020e708eadec8c523b1dc81a8c8cec34c99",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/reset_release_sync_data.v",
+      "sha256": "0341f22e3b65e59f16c053557a320133111da7b8aa4c6825aa6380ed7a25cea7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/raw_pair_replay_scheduler.v",
+      "sha256": "616147c4757439d26149dea80138ee6efb37992141a6c2ca8b2991d5c60c7369",
+      "register": true
+    },
+    {
+      "path": "fpga_prj/constraints/stereo_cdc.sdc",
+      "sha256": "039be6ded911429d5c0884c9f50cdb64858548cd8ec0256f05f43db26c857f48",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/include/00_rtl/stereo_control_v1.vh",
+      "sha256": "571573b50b2ad3f7d3eefda2657fcb4bc168d092c24456f126f4e5caef957023",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/raw10_frame_replay.v",
+      "sha256": "920448cdc9cb6f7bd707a9d6bf6d6315f8b20707685d967dacda06164ab9ee1e",
+      "register": true
+    },
+    {
+      "path": "src_fpga/rtl/hdr_csi_boundary_adapter.v",
+      "sha256": "65c078b4b1b7123440f9b91ec43880edcb96a8a90949c4dbddc10207f904f6cb",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/.m_params_camera_control_fifo_40x512.txt",
+      "sha256": "a1308a7eec4aa4f73ec269ca0f83b9171f243b1aab9d0a487990904354e7f148",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/.params_camera_control_fifo_40x512.txt",
+      "sha256": "001dd8c271de5cb8b5675f41d9821c786e5233e01f1d5d2d1c672d5528b5fe51",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/.ports_camera_control_fifo_40x512.txt",
+      "sha256": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.tcl",
+      "sha256": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v",
+      "sha256": "abdc8c7a0db30b9fd1188adea12cdeb446a679295335c753a3646c2861470768",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.xml",
+      "sha256": "94088be714339606a56d4a77fcdab28964b9b67f5bb6051c14c2f4ad2cfb4477",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/Design.xml",
+      "sha256": "c4e489e57e3acf34e3bedfa4a41f567d66e20d1b1481ed8341e7e0081a757e0c",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/DesignConfiguration.xml",
+      "sha256": "6e36816da046399c8d53186184f87aa99552fef8fbea210f646fd9cb9c3853a1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v",
+      "sha256": "26a5a934d62487bf44a9b56eaab6c30f86d794c4049cde76679878840ff4928d",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v",
+      "sha256": "bc5f2b65c88855891c086647df9a2a8d1d155c3b8deb48cf402a7b0235e8346a",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_control_fifo_40x512/RTL/include/define.v",
+      "sha256": "89eb5e07e6f2e6bde745a19834c61950ba588501df9aaaf531fa8b8b94f3cc11",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/.m_params_camera_event_fifo_47x512.txt",
+      "sha256": "7b85d880bea4b3e41799bca1e4acbb5947a23f5a194aadda3f8d4d5e0f389990",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/.params_camera_event_fifo_47x512.txt",
+      "sha256": "67c55a20863917c6bd926dd6c4acf97272124d72d06b7c7ed1190ebfced4aa97",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/.ports_camera_event_fifo_47x512.txt",
+      "sha256": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.tcl",
+      "sha256": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.v",
+      "sha256": "d5db0160388e92e53461a81337012ad2eb88698005b6e20eb8868e2a38e53267",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.xml",
+      "sha256": "dc768cdc4eebd0ac0c242d97a5fc66271aadb10e330ff1f0e689bc81e53e85a7",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/Design.xml",
+      "sha256": "d89ad557bd493421be239d2563e03cca8fe4bf7ed12eee7cbbc5fe0b1c3edbac",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/DesignConfiguration.xml",
+      "sha256": "0456177acda4e890fa6ce9ff963fa393377da1002ad23f995a72d69a642720af",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/RTL/camera_event_fifo_47x512_soft_fifo.v",
+      "sha256": "16b5a27b059161440b600806d75669ede6a48b8bbe47bf9917947009d68ea2f0",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/RTL/camera_event_fifo_47x512_soft_fifo_core.v",
+      "sha256": "194782fbd5d129a060849273a02196326a0f231973bee10bf804a665031fa1d4",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x512/RTL/include/define.v",
+      "sha256": "992be76b308a3b941afa25f5a36bb5b99358a5adc749daa19f7129183674ed59",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/.m_params_camera_event_fifo_47x8192.txt",
+      "sha256": "e79b1145cf50862805e4218c197ef559c8561cadd027cd1b776ff1a7b009c717",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/.params_camera_event_fifo_47x8192.txt",
+      "sha256": "42d31df36925bd9f6851b3b2039f0d0873b76c97353eb55ec7464004d7e935e6",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/.ports_camera_event_fifo_47x8192.txt",
+      "sha256": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.tcl",
+      "sha256": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.v",
+      "sha256": "a159131936608d9cd95cc3d3365c3bbe79e999828833cea19ae71a88346a080b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.xml",
+      "sha256": "3d2e00cc5887169699c975228a5e65d51d0dd3b031f8c3e29a63c061faa807d3",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/Design.xml",
+      "sha256": "75eb03676bf3b35b80eae71faedf88becd7081d5b1333fb135be70c2d201fc8a",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/DesignConfiguration.xml",
+      "sha256": "67fed090d3712eff2e5e8c928daf7ad02f0128f4ef8642e125e99b1d3f438bcb",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/RTL/camera_event_fifo_47x8192_soft_fifo.v",
+      "sha256": "88a5425aa309a6bbdd4ee0f4c238db1de14e19dc23069dc281c952342733b390",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/RTL/camera_event_fifo_47x8192_soft_fifo_core.v",
+      "sha256": "30e0df6fa8c1c99d2fc612c88ec4a5f67a7c3816c2e552c85236ced553450f2f",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_event_fifo_47x8192/RTL/include/define.v",
+      "sha256": "41492125f92688738d14affa820434ca36b3d39fbca5b4036be64f9def55ce2b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/.m_params_camera_packet_fifo_147x512.txt",
+      "sha256": "457a28ca000732798f21a5f9be14df39bafecd787a822d229d813aa0ad3827d1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/.params_camera_packet_fifo_147x512.txt",
+      "sha256": "e6d7c4c9c2abc42f71d50d96390ca9afdce456b8b8f9de230159ba33f7c539dd",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/.ports_camera_packet_fifo_147x512.txt",
+      "sha256": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.tcl",
+      "sha256": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v",
+      "sha256": "6a9664a59e17ad4706d278a91e56408960dafca733f66b059de75404656b797b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml",
+      "sha256": "ba9f239ac6411ddaa593b51da9e11d3cf102db3c81489e4967101504e68e87bf",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/Design.xml",
+      "sha256": "f113fb8d1d0b4967606da8b143780fd415ddf43300df829625f0acb25c32a086",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/DesignConfiguration.xml",
+      "sha256": "eef4f569aa3c3242f2eaa3bb92cc61c4a60e01c4ec495303c45e87a40cc2807e",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v",
+      "sha256": "c4558d63ca346ce0b590f39896037c58f71968b6609c1249ca2b6fe0c48c93f6",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v",
+      "sha256": "b727885ef819323d9e64e82a990890f3664be52d80f621eaaad41035fc81b40f",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_packet_fifo_147x512/RTL/include/define.v",
+      "sha256": "bef5d585b980867ea75134b549b43797e7745af61ada9e1cce757b33e5492b12",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.adc",
+      "sha256": "744057cdc3970e2da93a051ecc3f0081876f3d22938550b0bd8d5f258e3b1eb1",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.dat",
+      "sha256": "cd81df86c5c25939869d182855939dd009cb78c6a2be78e558029ae4d260abb4",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.ipc",
+      "sha256": "53c0fa53d09588e0b9fd402f66217eed5a7cefef4b6f1470bfdc19138547604b",
+      "register": true
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.sdc",
+      "sha256": "e0943208e84caec7b7a6794b59f23b0c73ea4935b93d2fedba665e22e6f82e74",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.txt",
+      "sha256": "d6e047ad8f28ffa1c1ddbd87ea151898caef1600faaabb9d663d5375b19d2e5d",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.v",
+      "sha256": "2d3d3ef0caa847395dedb0b1a3d9af74189d63737724571d9fa23cf601fd293b",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_dbi_init_mux.v",
+      "sha256": "8f63b65e0fdf8cd2e507339ee8b0e721113714116b586c0a1999645503aa02e0",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_basic_top.v",
+      "sha256": "b5d302cdd3d1368ba66366b568d18be38a50a67e9a27ca51bffefdbd15cf0d50",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_cfg_rom.v",
+      "sha256": "678683cf2f8f38b7c8a182f140e5367f233fa98eed38db8c510ce2d89108e9d9",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_clock_ctrl.v",
+      "sha256": "eeb62a71060d410942470650d7a6ae0fcdafec86aaf10b65557e25e57c0e52c3",
+      "register": false
+    },
+    {
+      "path": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_core_pll.v",
+      "sha256": "ff4792134bb92fe78e34e70bf5045d9b54091a1b1b7d6ddf5efe435335e48e82",
+      "register": false
+    },
+    {
+      "path": "src_fpga/rtl/include/04_include/camera_physical_capture.vh",
+      "register": false,
+      "sha256": "63d0c535d68f333232c9d0b36f6f931e1285abd2a322d2fdbf4263e16809b3d8"
+    },
+    {
+      "path": "src_fpga/rtl/include/00_rtl/raw_video_v1.vh",
+      "register": false,
+      "sha256": "b6a8048ddbe5e0d8c9db216dea8ceb45f2b2612f304a74a49bc1d9b1c3b65d12"
+    },
+    {
+      "path": "src_fpga/rtl/camera_field_diagnostics.v",
+      "register": true,
+      "sha256": "c1b99f149c3042aa8d05ff0f7d03cae8d90361573992c02b06e156759c430b00"
+    },
+    {
+      "path": "src_fpga/rtl/raw_video_record_formatter.v",
+      "register": true,
+      "sha256": "1de88a584c5e8c5b7031eefcffd419433472e48eaaa11b94e3a0c5fbd84d0510"
+    },
+    {
+      "path": "src_fpga/rtl/imx415_sensor_recipe.v",
+      "register": true,
+      "sha256": "36bb7702ae19543945854634f87c51c86a08aa68025e4acda5f207fe35c1942c"
+    },
+    {
+      "path": "src_fpga/rtl/imx415_sensor_config.v",
+      "register": true,
+      "sha256": "41323a4e367b69bd7ce97bf5523f34ed537528f19cc5b01c54ee59f2a4fbcd44"
+    },
+    {
+      "path": "src_fpga/rtl/hdr_eye_shared.v",
+      "register": true,
+      "sha256": "acf8c8d6c5ee648d6ebb8ea9154116357d2cf6edb8f5554b37f2229d1dd3e76f"
+    },
+    {
+      "path": "src_fpga/rtl/shared_raw10_decoder_masked.v",
+      "register": true,
+      "sha256": "ddc64ffb36cbccfac271c2d1d968ac069eb516002aeaf47c9840a3b6f37a4a82"
+    },
+    {
+      "path": "src_fpga/rtl/shared_raw10_decode_service.v",
+      "register": true,
+      "sha256": "f9f84584377cecd52e0eaacb3ffcb0d8f745a398060b3a690c88dab92ef12981"
+    },
+    {
+      "path": "src_fpga/rtl/dehaze_dcp_restore4.v",
+      "register": true,
+      "sha256": "a3c231735f22d03525e1454db2930872e4b7019d593354f89c4d8dd32fd6da1f"
+    },
+    {
+      "path": "src_fpga/rtl/camera_pcie_bar_rx.v",
+      "register": true,
+      "sha256": "6d881180afc420aea22d90a7d26688376c996956b5de6b71c94d7a2dbdb9bc9c"
+    },
+    {
+      "path": "src_fpga/rtl/camera_pcie_bar_tx.v",
+      "register": true,
+      "sha256": "059d6c08b9b76b08ef14ab6c6ebf2cee28d6f973ad4d2d22bd7268924a1ddccb"
+    },
+    {
+      "path": "src_fpga/rtl/camera_pcie_result_msi.v",
+      "register": true,
+      "sha256": "db2ec2f29edc11c0c834042811781d1349b87851dab614d44a858d50ba48fe65"
+    },
+    {
+      "path": "src_fpga/rtl/camera_pcie_hard_port.v",
+      "register": true,
+      "sha256": "ae025e6f465cdae15b3463a27576b5b2fd97005ea403507998eb74080d42953d"
+    }
+  ],
+  "closure_basis": {
+    "baseline_commit": "5bdca7029b4aa9c6005ca67d89d045a92d4fc4a5",
+    "scope": "Independent copies of R1 production inputs; new qualification only"
+  },
+  "stages": {
+    "scope": "Source-only manifest; separate candidate evidence records actual stages."
+  },
+  "diagnostic_defaults": {
+    "OB": 2,
+    "DJ": 2,
+    "RX": 0,
+    "read_only": true,
+    "baud": 115200
+  },
+  "baseline_commit": "5bdca7029b4aa9c6005ca67d89d045a92d4fc4a5",
+  "resource_target": {
+    "stage": "routed",
+    "baseline_slice": 61547,
+    "planning_ceiling_slice": 61747,
+    "raw_gate": {
+      "stage": "synthesis_gate",
+      "device_slices": 64320,
+      "preferred_maximum_slices": 63676
+    },
+    "prelayout": {
+      "stage": "synthesis_reopened",
+      "device_slices": 64320,
+      "maximum_slices": 63673,
+      "maximum_display_percent": 98.99
+    }
+  },
+  "hdr_sensor_contract": "Two overlapping DOL2 groups per eye; independent FE/CRC and write responses; one shared RAW reader/merge",
+  "local_catalog_ip": "docs/LOCAL_CATALOG_IP.json",
+  "dehaze": "One shared four-pixel atmospheric recovery stage, per-eye prior-frame DCP coefficients, optional existing HE"
+}

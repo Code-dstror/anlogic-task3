@@ -1,0 +1,42 @@
+`timescale 1ns/1ps
+`default_nettype none
+`include "pcie_protocol_v1.vh"
+
+// Two PIX-domain DOL2 contexts retain SHORT(n) while LONG(n+1) starts.
+// A member SOURCE proves its own true FE/CRC/full-sensor geometry only.
+// The existing DFI bank publishes a pair after BOTH real writers succeed.
+module real_hdr_pair_cycle_gate #(
+    parameter integer TIMEOUT_CYCLES=12500000,
+    parameter [31:0] RECIPE_CALIBRATION_ID=32'h56a3d02f,
+    parameter [31:0] LONG_LINE_TICKS=3200, SHORT_LINE_TICKS=200,
+    parameter [31:0] GAIN_Q8_8=256,
+    parameter integer EXTERNAL_PHASE_ENABLE=0
+) (
+    input wire i_clk,i_reset_n,i_fault,i_stable,i_admit_enable,
+    input wire [31:0] i_session,i_epoch,
+    input wire [63:0] i_time,
+    input wire i_time_valid,
+    input wire i_capture0_idle,i_capture1_idle,
+    input wire [146:0] s0_data,s1_data,
+    input wire s0_valid,s1_valid,
+    output wire s0_ready,s1_ready,
+    output reg [39:0] m0_data,m1_data,
+    output reg m0_valid,m1_valid,m0_sof,m1_sof,m0_eol,m1_eol,m0_abort,m1_abort,
+    output reg [31:0] o_sequence0,o_sequence1,o_session,o_epoch,
+    output reg [196:0] o_metadata0,o_metadata1,
+    output reg o_source0_valid,o_source1_valid,
+    input wire i_source0_ready,i_source1_ready,
+    // Legacy shared names now name LONG only. SHORT has its own held bundle.
+    output reg [31:0] o_source_session,o_source_epoch,o_source0_sequence,o_source1_sequence,
+    output reg o_source_ok,
+    output reg [7:0] o_source_error,
+    output reg [31:0] o_source1_session,o_source1_epoch,
+    output reg o_source1_ok,
+    output reg [7:0] o_source1_error,
+    output reg o_pair_event,o_pair_ok,
+    output wire [31:0] o_diag_pair,
+    output wire [47:0] o_diag_counts,
+    output reg [31:0] o_good_pairs,o_bad_pairs,o_not_admitted_pairs,
+    output wire o_quiet,
+    input wire [31:0] i_timeout_phase
+);

@@ -1,0 +1,9 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 19:11:20 on Nov 10,2026
+vlog -work work <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_phy_gsr.v 
+-- Compiling module PH1_PHY_GSR
+
+Top level modules:
+	PH1_PHY_GSR
+End time: 19:11:20 on Nov 10,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

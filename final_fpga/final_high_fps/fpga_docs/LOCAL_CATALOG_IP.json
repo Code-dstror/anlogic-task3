@@ -1,0 +1,101 @@
+{
+  "tool": "TD Release_2026.2 6.2.3.210850",
+  "device": "PH1A90SEG324-2",
+  "source": "Local TD IP Catalog",
+  "generation_scripts": [
+    "../../camera_raw_r2/fpga_prj/scripts/generate_catalog_fifos.tcl",
+    "../../camera_raw_r2/fpga_prj/scripts/generate_camera_pcie.tcl"
+  ],
+  "cores": [
+    {
+      "name": "camera_control_fifo_40x512",
+      "catalog": "Soft_FIFO 3.0",
+      "register": "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.xml",
+      "files": {
+        "src_fpga/ip/camera_control_fifo_40x512/.m_params_camera_control_fifo_40x512.txt": "a1308a7eec4aa4f73ec269ca0f83b9171f243b1aab9d0a487990904354e7f148",
+        "src_fpga/ip/camera_control_fifo_40x512/.params_camera_control_fifo_40x512.txt": "001dd8c271de5cb8b5675f41d9821c786e5233e01f1d5d2d1c672d5528b5fe51",
+        "src_fpga/ip/camera_control_fifo_40x512/.ports_camera_control_fifo_40x512.txt": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+        "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.tcl": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+        "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v": "abdc8c7a0db30b9fd1188adea12cdeb446a679295335c753a3646c2861470768",
+        "src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.xml": "94088be714339606a56d4a77fcdab28964b9b67f5bb6051c14c2f4ad2cfb4477",
+        "src_fpga/ip/camera_control_fifo_40x512/Design.xml": "c4e489e57e3acf34e3bedfa4a41f567d66e20d1b1481ed8341e7e0081a757e0c",
+        "src_fpga/ip/camera_control_fifo_40x512/DesignConfiguration.xml": "6e36816da046399c8d53186184f87aa99552fef8fbea210f646fd9cb9c3853a1",
+        "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v": "26a5a934d62487bf44a9b56eaab6c30f86d794c4049cde76679878840ff4928d",
+        "src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v": "bc5f2b65c88855891c086647df9a2a8d1d155c3b8deb48cf402a7b0235e8346a",
+        "src_fpga/ip/camera_control_fifo_40x512/RTL/include/define.v": "89eb5e07e6f2e6bde745a19834c61950ba588501df9aaaf531fa8b8b94f3cc11"
+      }
+    },
+    {
+      "name": "camera_event_fifo_47x512",
+      "catalog": "Soft_FIFO 3.0",
+      "register": "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.xml",
+      "files": {
+        "src_fpga/ip/camera_event_fifo_47x512/.m_params_camera_event_fifo_47x512.txt": "7b85d880bea4b3e41799bca1e4acbb5947a23f5a194aadda3f8d4d5e0f389990",
+        "src_fpga/ip/camera_event_fifo_47x512/.params_camera_event_fifo_47x512.txt": "67c55a20863917c6bd926dd6c4acf97272124d72d06b7c7ed1190ebfced4aa97",
+        "src_fpga/ip/camera_event_fifo_47x512/.ports_camera_event_fifo_47x512.txt": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+        "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.tcl": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+        "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.v": "d5db0160388e92e53461a81337012ad2eb88698005b6e20eb8868e2a38e53267",
+        "src_fpga/ip/camera_event_fifo_47x512/camera_event_fifo_47x512.xml": "dc768cdc4eebd0ac0c242d97a5fc66271aadb10e330ff1f0e689bc81e53e85a7",
+        "src_fpga/ip/camera_event_fifo_47x512/Design.xml": "d89ad557bd493421be239d2563e03cca8fe4bf7ed12eee7cbbc5fe0b1c3edbac",
+        "src_fpga/ip/camera_event_fifo_47x512/DesignConfiguration.xml": "0456177acda4e890fa6ce9ff963fa393377da1002ad23f995a72d69a642720af",
+        "src_fpga/ip/camera_event_fifo_47x512/RTL/camera_event_fifo_47x512_soft_fifo.v": "16b5a27b059161440b600806d75669ede6a48b8bbe47bf9917947009d68ea2f0",
+        "src_fpga/ip/camera_event_fifo_47x512/RTL/camera_event_fifo_47x512_soft_fifo_core.v": "194782fbd5d129a060849273a02196326a0f231973bee10bf804a665031fa1d4",
+        "src_fpga/ip/camera_event_fifo_47x512/RTL/include/define.v": "992be76b308a3b941afa25f5a36bb5b99358a5adc749daa19f7129183674ed59"
+      }
+    },
+    {
+      "name": "camera_event_fifo_47x8192",
+      "catalog": "Soft_FIFO 3.0",
+      "register": "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.xml",
+      "files": {
+        "src_fpga/ip/camera_event_fifo_47x8192/.m_params_camera_event_fifo_47x8192.txt": "e79b1145cf50862805e4218c197ef559c8561cadd027cd1b776ff1a7b009c717",
+        "src_fpga/ip/camera_event_fifo_47x8192/.params_camera_event_fifo_47x8192.txt": "42d31df36925bd9f6851b3b2039f0d0873b76c97353eb55ec7464004d7e935e6",
+        "src_fpga/ip/camera_event_fifo_47x8192/.ports_camera_event_fifo_47x8192.txt": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+        "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.tcl": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+        "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.v": "a159131936608d9cd95cc3d3365c3bbe79e999828833cea19ae71a88346a080b",
+        "src_fpga/ip/camera_event_fifo_47x8192/camera_event_fifo_47x8192.xml": "3d2e00cc5887169699c975228a5e65d51d0dd3b031f8c3e29a63c061faa807d3",
+        "src_fpga/ip/camera_event_fifo_47x8192/Design.xml": "75eb03676bf3b35b80eae71faedf88becd7081d5b1333fb135be70c2d201fc8a",
+        "src_fpga/ip/camera_event_fifo_47x8192/DesignConfiguration.xml": "67fed090d3712eff2e5e8c928daf7ad02f0128f4ef8642e125e99b1d3f438bcb",
+        "src_fpga/ip/camera_event_fifo_47x8192/RTL/camera_event_fifo_47x8192_soft_fifo.v": "88a5425aa309a6bbdd4ee0f4c238db1de14e19dc23069dc281c952342733b390",
+        "src_fpga/ip/camera_event_fifo_47x8192/RTL/camera_event_fifo_47x8192_soft_fifo_core.v": "30e0df6fa8c1c99d2fc612c88ec4a5f67a7c3816c2e552c85236ced553450f2f",
+        "src_fpga/ip/camera_event_fifo_47x8192/RTL/include/define.v": "41492125f92688738d14affa820434ca36b3d39fbca5b4036be64f9def55ce2b"
+      }
+    },
+    {
+      "name": "camera_packet_fifo_147x512",
+      "catalog": "Soft_FIFO 3.0",
+      "register": "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml",
+      "files": {
+        "src_fpga/ip/camera_packet_fifo_147x512/.m_params_camera_packet_fifo_147x512.txt": "457a28ca000732798f21a5f9be14df39bafecd787a822d229d813aa0ad3827d1",
+        "src_fpga/ip/camera_packet_fifo_147x512/.params_camera_packet_fifo_147x512.txt": "e6d7c4c9c2abc42f71d50d96390ca9afdce456b8b8f9de230159ba33f7c539dd",
+        "src_fpga/ip/camera_packet_fifo_147x512/.ports_camera_packet_fifo_147x512.txt": "3bb5939eec5ac0c54dd6857309b3e5fa0d558a8d18e81aeab7d301f3e6f72f45",
+        "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.tcl": "6b05393e65201073741f1a8cb96f985b47f22184484f6b8e88e94980f6de4979",
+        "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.v": "6a9664a59e17ad4706d278a91e56408960dafca733f66b059de75404656b797b",
+        "src_fpga/ip/camera_packet_fifo_147x512/camera_packet_fifo_147x512.xml": "ba9f239ac6411ddaa593b51da9e11d3cf102db3c81489e4967101504e68e87bf",
+        "src_fpga/ip/camera_packet_fifo_147x512/Design.xml": "f113fb8d1d0b4967606da8b143780fd415ddf43300df829625f0acb25c32a086",
+        "src_fpga/ip/camera_packet_fifo_147x512/DesignConfiguration.xml": "eef4f569aa3c3242f2eaa3bb92cc61c4a60e01c4ec495303c45e87a40cc2807e",
+        "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo.v": "c4558d63ca346ce0b590f39896037c58f71968b6609c1249ca2b6fe0c48c93f6",
+        "src_fpga/ip/camera_packet_fifo_147x512/RTL/camera_packet_fifo_147x512_soft_fifo_core.v": "b727885ef819323d9e64e82a990890f3664be52d80f621eaaad41035fc81b40f",
+        "src_fpga/ip/camera_packet_fifo_147x512/RTL/include/define.v": "bef5d585b980867ea75134b549b43797e7745af61ada9e1cce757b33e5492b12"
+      }
+    },
+    {
+      "name": "camera_pcie_ep",
+      "catalog": "PCI Express 1.3",
+      "register": "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.ipc",
+      "files": {
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.adc": "744057cdc3970e2da93a051ecc3f0081876f3d22938550b0bd8d5f258e3b1eb1",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.dat": "cd81df86c5c25939869d182855939dd009cb78c6a2be78e558029ae4d260abb4",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.ipc": "53c0fa53d09588e0b9fd402f66217eed5a7cefef4b6f1470bfdc19138547604b",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.sdc": "e0943208e84caec7b7a6794b59f23b0c73ea4935b93d2fedba665e22e6f82e74",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.txt": "d6e047ad8f28ffa1c1ddbd87ea151898caef1600faaabb9d663d5375b19d2e5d",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep.v": "2d3d3ef0caa847395dedb0b1a3d9af74189d63737724571d9fa23cf601fd293b",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_dbi_init_mux.v": "8f63b65e0fdf8cd2e507339ee8b0e721113714116b586c0a1999645503aa02e0",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_basic_top.v": "b5d302cdd3d1368ba66366b568d18be38a50a67e9a27ca51bffefdbd15cf0d50",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_cfg_rom.v": "678683cf2f8f38b7c8a182f140e5367f233fa98eed38db8c510ce2d89108e9d9",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_clock_ctrl.v": "eeb62a71060d410942470650d7a6ae0fcdafec86aaf10b65557e25e57c0e52c3",
+        "src_fpga/ip/camera_pcie_ep/camera_pcie_ep_ph1_pcie_core_pll.v": "ff4792134bb92fe78e34e70bf5045d9b54091a1b1b7d6ddf5efe435335e48e82"
+      }
+    }
+  ]
+}

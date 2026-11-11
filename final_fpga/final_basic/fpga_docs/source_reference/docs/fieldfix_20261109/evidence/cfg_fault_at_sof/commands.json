@@ -1,0 +1,116 @@
+[
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vsim.exe",
+    "arguments": [
+      "-version"
+    ],
+    "log": "version.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vlib.exe",
+    "arguments": [
+      "work"
+    ],
+    "log": "create_work.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vlib.exe",
+    "arguments": [
+      "ph1"
+    ],
+    "log": "create_ph1.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vmap.exe",
+    "arguments": [
+      "-c"
+    ],
+    "log": "create_ini.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vmap.exe",
+    "arguments": [
+      "ph1",
+      "ph1"
+    ],
+    "log": "map_ph1.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vlog.exe",
+    "arguments": [
+      "-work",
+      "ph1",
+      "+define+PH1",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/common/al_phy_glbl.v",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_eram.v",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_fifo.v",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_logic_ramfifo.v",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_phy_eram.v",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_phy_fifoctrl.v"
+    ],
+    "log": "compile_td_models.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vlog.exe",
+    "arguments": [
+      "-work",
+      "work",
+      "-L",
+      "ph1",
+      "+define+PH1",
+      "+define+C15_F23_FULLHEIGHT_PROFILE=1",
+      "+incdir+C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/00_rtl",
+      "+incdir+C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/01_include",
+      "+incdir+C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/02_jpeg",
+      "+incdir+C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/03_mono_config_v2_20261015",
+      "+incdir+C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/include/04_include",
+      "+incdir+C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/RTL/include",
+      "D:/App/TD_Release_2026.2.210.850/sim_release/ph1/ph1_phy_gsr.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/td_sdp_ram40.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/reset_release_sync.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/control_fifo_40x512.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/control_message_fifo_ip.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/mono_config_byte_store_v2.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/mono_config_legacy_scan_v1.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/mono_config_scan_v2.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/mono_config_bar_v2.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/mono_config_engine_v2.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/rtl/mono_config_service_v2.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/ram40_sdp_fixed/ram40_sdp_fixed/ram40_sdp_fixed.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/camera_control_fifo_40x512.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo.v",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/ip/camera_control_fifo_40x512/RTL/camera_control_fifo_40x512_soft_fifo_core.v"
+    ],
+    "log": "compile_design.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vlog.exe",
+    "arguments": [
+      "-sv",
+      "-work",
+      "work",
+      "+incdir+.",
+      "C:/fpga_workspace/anlogic-task3/refactor/camera_raw_r2/src_fpga/simulation/blackbox_cfg_transition_20261109/cfg_transition_tb.sv"
+    ],
+    "log": "compile_bench.log"
+  },
+  {
+    "executable": "D:\\App\\modelsim\\win64\\vsim.exe",
+    "arguments": [
+      "-c",
+      "-t",
+      "ps",
+      "-onfinish",
+      "stop",
+      "-L",
+      "ph1",
+      "work.cfg_transition_tb",
+      "ph1.glbl",
+      "work.PH1_PHY_GSR",
+      "+case=fault_at_sof",
+      "-do",
+      "do run.do"
+    ],
+    "log": "simulation.log"
+  }
+]

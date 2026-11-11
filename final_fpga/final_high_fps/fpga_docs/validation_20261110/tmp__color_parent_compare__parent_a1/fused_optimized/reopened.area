@@ -1,0 +1,156 @@
+standard
+***Report Model: hdr_quality_color_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                        38   out of    148   25.68%
+  #input                   22
+  #output                  16
+  #inout                    0
+#lut                     1730
+  #lut1                     3
+  #lut2                   248
+  #lut3                   330
+  #lut4                   439
+  #lut5                   283
+  #lut6                   427
+#reg                     2560
+  #slice reg             2560   out of 128640    1.99%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1394   out of  64320    2.17%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            1394
+    #with luts*           844
+    #with adder           272
+    #reg only*            278
+#f7mux                      0   out of  32160    0.00%
+#f8mux                      0   out of  16080    0.00%
+#eram                      16   out of    272    5.88%
+  #eram20k                 16
+  #fifo20k                  0
+#dsp                       24   out of    240   10.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                       38   out of    148   25.68%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                                          |Module                                   |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                                               |hdr_quality_color_probe                  |844       |272     |2560    |16      |24      |0        |0           |0       |0       |0       |0        |0       |0       |
+|  u_color                                         |wide_color_pipeline                      |770       |272     |2141    |16      |24      |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[0]$g_identity$wb[0]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[0]$g_identity$wb[0]$u_gamma              |gamma_lut_10to8                          |6         |0       |11      |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[0]$g_identity$wb[1]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[0]$g_identity$wb[1]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[0]$g_identity$wb[2]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[0]$g_identity$wb[2]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[1]$g_identity$wb[0]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[1]$g_identity$wb[0]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[1]$g_identity$wb[1]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[1]$g_identity$wb[1]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[1]$g_identity$wb[2]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[1]$g_identity$wb[2]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[2]$g_identity$wb[0]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[2]$g_identity$wb[0]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[2]$g_identity$wb[1]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[2]$g_identity$wb[1]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[2]$g_identity$wb[2]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[2]$g_identity$wb[2]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[3]$g_identity$wb[0]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[3]$g_identity$wb[0]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[3]$g_identity$wb[1]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[3]$g_identity$wb[1]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[3]$g_identity$wb[2]$u_gain_round         |fdct_mac19s14s_z33s_p34_m1p1             |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      dsp_macro_0_Inst                            |fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0 |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    lane[3]$g_identity$wb[2]$u_gamma              |gamma_lut_10to8                          |4         |0       |8       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_generated_rom$u_gamma_memory              |gamma_rom_8x1024_ip                      |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    u_tone96                                      |hdr_tone96_shared4                       |466       |176     |1500    |4       |12      |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$g_component[0]$u_color_gain |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$g_component[1]$u_color_gain |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$g_component[2]$u_color_gain |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$u_gain_delta                |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$u_highlight_floor           |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$u_rom_high                  |tone96_rom1                              |1         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$u_rom_low                   |tone96_rom0                              |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[0]$u_tone_delta                |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$g_component[0]$u_color_gain |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$g_component[1]$u_color_gain |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$g_component[2]$u_color_gain |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$u_gain_delta                |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$u_highlight_floor           |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$u_rom_high                  |tone96_rom1                              |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$u_rom_low                   |tone96_rom0                              |0         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      g_pixel_lane[1]$u_tone_delta                |mult_18s18s_p1                           |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        multiplier_top_Inst                       |mult_18s18s_p1_multiplier_top            |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|          u_multiplier                            |mult_18s18s_p1_multiplier                |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
+|            al_multiplier_yibQJvTk                |mult_18s18s_p1_al_multiplier_xO6guiyo    |0         |0       |0       |0       |1       |0        |0           |0       |0       |0       |0        |0       |0       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

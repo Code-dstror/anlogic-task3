@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "bootstrap_base": "skill_root",
+  "roles": [
+    {
+      "name": "installer_manifest",
+      "base_kind": "skill_root",
+      "relative_path": "config/installer/release-installer-manifest.json",
+      "schema_relative_path": null,
+      "required": true,
+      "hash_mode": "canonical_json",
+      "content_sha256": "5da14cb910c681e67cbaa058b8747de8f270ae1c353a9a556b95f5717d5d0312",
+      "schema_sha256": null
+    }
+  ]
+}

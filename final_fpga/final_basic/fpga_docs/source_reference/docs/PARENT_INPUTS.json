@@ -1,0 +1,10 @@
+{
+  "source_commit": "5bdca7029b4aa9c6005ca67d89d045a92d4fc4a5",
+  "source_project": "refactor/camera_raw_r1",
+  "source_design_sha256": "13ea4a84f74f5dffae16be1931076664c0dd45fd607c0acd519003ca6cf44612",
+  "source_files": 405,
+  "frozen_ip_count": 158,
+  "copied_files": 1152,
+  "scope": "Independent Git-byte copies; all405 production inputs match parent before optimization. No Runs/DB/bit/qualification copied.",
+  "parent_native_al_sha256": "48e767a092871bbcad409650c955cd0740cac09db368693fbcb64e8d15427858"
+}

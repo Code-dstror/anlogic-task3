@@ -1,0 +1,16 @@
+{
+  "state": "HOST_MODEL_PASS",
+  "tests": 3,
+  "negative_subcases": 15,
+  "elapsed_seconds": 0.009,
+  "command": "PYTHONPATH=<fixed camera_raw_r2/rk_sdk> python -B test_switch_probe.py -v",
+  "cases": [
+    "nonzero but equal lifetime counters accepted",
+    "15 invalid reset/owner/transport boundaries blocked",
+    "collector completes using a read-only owner interface"
+  ],
+  "rtl_simulation": "NOT_RUN",
+  "driver_build": "NOT_RUN",
+  "board": "NOT_RUN",
+  "production_changes": "NONE"
+}

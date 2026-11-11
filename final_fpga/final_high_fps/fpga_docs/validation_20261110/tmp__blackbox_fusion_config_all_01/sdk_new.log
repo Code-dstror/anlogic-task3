@@ -1,0 +1,16 @@
+import dual_host.debug_modes <PROJECT_ROOT>\refactor\camera_fusion_r1\rk_sdk\dual_host\debug_modes.py
+import linux.task3_pipeline.config_transaction <PROJECT_ROOT>\refactor\camera_fusion_r1\rk_sdk\linux\task3_pipeline\config_transaction.py
+import linux.task3_pipeline.mono_config_v2 <PROJECT_ROOT>\refactor\camera_fusion_r1\rk_sdk\linux\task3_pipeline\mono_config_v2.py
+caps profile=1 features=0x3f modes=0x05 enables=0x3f quality_version=0
+caps profile=1 features=0x7f modes=0x05 enables=0x3f quality_version=1
+caps profile=2 features=0x3f modes=0x05 enables=0x0f quality_version=0
+caps profile=2 features=0x7f modes=0x05 enables=0x0f quality_version=1
+caps profile=3 features=0x0f modes=0x01 enables=0x00 quality_version=0
+caps profile=3 features=0x3f modes=0x01 enables=0x0d quality_version=0
+caps profile=3 features=0x7f modes=0x01 enables=0x0d quality_version=1
+FUSION_SDK_CASE_PASS edition=new case=capabilities
+FUSION_SDK_CASE_PASS edition=new case=legacy_on_new
+FUSION_SDK_CASE_PASS edition=new case=new_on_legacy
+FUSION_SDK_CASE_PASS edition=new case=uhd_scope
+FUSION_SDK_CASE_PASS edition=new case=wrong_active
+FUSION_SDK_PASS edition=new

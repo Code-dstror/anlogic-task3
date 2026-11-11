@@ -1,0 +1,10 @@
+# BB_START case=first edge=15 camera=0 bank=0 pattern=5 latency_min=32
+# BB_RESULT case=first ok=1 start_edge=15 result_edge=3516 cycles=3501 ar=46 ar_long=23 ar_short=23 r_beats=670 groups=1071 moving=214 peak_long=496 peak_short=1 page_splits=11 tails=11 r_latency_min=32 r_latency_max=32 output_stall=0 result_stall=0 ar_stall=0 quiet=1 fault=0
+# BB_START case=full edge=3530 camera=1 bank=1 pattern=17 latency_min=1
+# BB_RESULT case=full ok=1 start_edge=3530 result_edge=9313 cycles=5783 ar=46 ar_long=23 ar_short=23 r_beats=670 groups=1071 moving=214 peak_long=496 peak_short=488 page_splits=11 tails=11 r_latency_min=1 r_latency_max=1 output_stall=3595 result_stall=9 ar_stall=0 quiet=1 fault=0
+# BB_START case=cancel edge=9327 camera=0 bank=1 pattern=37 latency_min=32
+# BB_CANCEL case=cancel edge=9334 held_addr=0x4000000 held_beats=16
+# BB_RESULT case=cancel ok=0 start_edge=9327 result_edge=9387 cycles=60 ar=1 ar_long=1 ar_short=0 r_beats=16 groups=0 moving=0 peak_long=0 peak_short=0 page_splits=00 tails=00 r_latency_min=32 r_latency_max=32 output_stall=0 result_stall=0 ar_stall=7 quiet=1 fault=0
+# BB_START case=recovery edge=9401 camera=1 bank=0 pattern=53 latency_min=32
+# BB_RESULT case=recovery ok=1 start_edge=9401 result_edge=12902 cycles=3501 ar=46 ar_long=23 ar_short=23 r_beats=670 groups=1071 moving=214 peak_long=496 peak_short=1 page_splits=11 tails=11 r_latency_min=32 r_latency_max=32 output_stall=0 result_stall=0 ar_stall=0 quiet=1 fault=0
+# BB_PASS cases=4 geometry=68x63 watchdog_edges_per_case=200000

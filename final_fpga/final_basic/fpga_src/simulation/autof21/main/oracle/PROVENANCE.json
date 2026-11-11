@@ -1,0 +1,21 @@
+{
+  "note": "Byte-identical pre-existing independent scalar authorities. Frozen verification_reference is unmodified. New expected data never uses DUT traces.",
+  "schema": 1,
+  "files": [
+    {
+      "copy": "src_fpga/simulation/autof21/main/oracle/preprocess_dehaze_reference.py",
+      "original_sha256": "ccfaafd919c59df14dd13a538cbcf9429f56450ad82a4fa938025f219656b47c",
+      "original": "src_fpga/simulation/preprocess_dehaze_reference.py"
+    },
+    {
+      "copy": "src_fpga/simulation/autof21/main/oracle/numerics.py",
+      "original_sha256": "f5c321767012acb2fb17f7c353b569042a5278ae3fca61634f09931731e088bd",
+      "original": "guidance/Anlogic_R8_FPGA/reference/numerics.py"
+    },
+    {
+      "copy": "src_fpga/simulation/autof21/main/oracle/tables_1920.json",
+      "original_sha256": "79fdc11a02210e2955734776356e9b8d3a38e2a6072e52cee474cde21a28a2d8",
+      "original": "guidance/Anlogic_R8_FPGA/reference/tables_1920.json"
+    }
+  ]
+}

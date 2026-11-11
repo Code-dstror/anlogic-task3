@@ -1,0 +1,18 @@
+{
+  "state": "PASS",
+  "scope": "Static relocation, comment equivalence, hashes and native/IP dependency checks",
+  "source_commit": "43dbc3f1d03668898b01c29c4b89a89930b66b9d",
+  "source_design_sha256": "df8064e9bd11af7c9fcf1e2b76169547d9d61d7b9b5ed8c26204ef864e0fee7e",
+  "production_inputs": 408,
+  "frozen_ip_origin_count": 156,
+  "production_comment_adjustments": 40,
+  "registered_inputs": 253,
+  "include_dirs": 5,
+  "ip_metadata_references": 51,
+  "copied_file_hashes": 1442,
+  "server_files_verified": 33,
+  "bit_sha256": "9dbee9e9aab5b9fc8052639e46745fa59568a0e8d0d2ca5177b8e17ebb897508",
+  "native_settings": "Unchanged except source/include/constraint paths",
+  "local_simulation": "NOT_RUN (organization only)",
+  "local_TD": "NOT_RUN (organization only)"
+}

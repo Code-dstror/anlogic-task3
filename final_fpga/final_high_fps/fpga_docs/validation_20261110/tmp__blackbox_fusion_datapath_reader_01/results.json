@@ -1,0 +1,21 @@
+{
+  "reader": {
+    "status": "PASS",
+    "markers": [
+      "READER_JOB_PASS slot=0 mode=0 camera=0 bank=0 preset=0 raw_groups=1071 r_words=335/335 tail_hold=7 slverr=0 protocol_fault=0",
+      "READER_JOB_PASS slot=1 mode=0 camera=1 bank=1 preset=1 raw_groups=1071 r_words=335/335 tail_hold=8 slverr=0 protocol_fault=0",
+      "READER_JOB_PASS slot=2 mode=1 camera=0 bank=1 preset=0 raw_groups=0 r_words=16/0 tail_hold=0 slverr=1 protocol_fault=0",
+      "READER_JOB_PASS slot=3 mode=0 camera=1 bank=0 preset=1 raw_groups=1071 r_words=335/335 tail_hold=7 slverr=0 protocol_fault=0",
+      "READER_JOB_PASS slot=4 mode=2 camera=1 bank=1 preset=0 raw_groups=0 r_words=16/0 tail_hold=0 slverr=0 protocol_fault=0",
+      "READER_JOB_PASS slot=5 mode=0 camera=0 bank=1 preset=0 raw_groups=1071 r_words=335/335 tail_hold=7 slverr=0 protocol_fault=0",
+      "READER_JOB_PASS slot=6 mode=3 camera=1 bank=0 preset=1 raw_groups=6 r_words=160/16 tail_hold=0 slverr=0 protocol_fault=0",
+      "READER_JOB_PASS slot=7 mode=0 camera=0 bank=0 preset=1 raw_groups=1071 r_words=335/335 tail_hold=7 slverr=0 protocol_fault=0",
+      "READER_RESET_PASS slot=8 held_RAW_discarded=1",
+      "READER_JOB_PASS slot=9 mode=0 camera=1 bank=1 preset=0 raw_groups=1071 r_words=335/335 tail_hold=7 slverr=0 protocol_fault=0",
+      "READER_PASS geometry=68x63 good_jobs=6 failed_jobs=3 good_groups=6426 ar_stalls=163 response_gaps=1794 r_stalls=5517"
+    ]
+  },
+  "input_identity": {
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "parent_commit": "5bdca7029b4aa9c6005ca67d89d045a92d4fc4a5",
+  "goal": "PAUSED_BY_USER",
+  "stages": {
+    "simulation": "PASS_SELECTED_CASES",
+    "read_design": "PASS",
+    "module_synthesis": "PASS_SCOPED_AB",
+    "full_synthesis": "NOT_RUN",
+    "physical": "NOT_RUN",
+    "timing": "NOT_RUN",
+    "bitgen": "NOT_RUN",
+    "board": "NOT_RUN"
+  },
+  "scoped_tests": {
+    "rgb_adapter": 10,
+    "source_borrow": 5,
+    "jpeg_egress_cdc_hdr_fence_groups": 3
+  },
+  "records": [
+    {
+      "path": "tmp/blackbox_r2_adapter/20261108T133722.994145Z_adapter/result.json",
+      "sha256": "d91852265c340eeb5b604d424766b2f083f7245f160cd5c3926578f50469a86c"
+    },
+    {
+      "path": "tmp/blackbox_r2_adapter/20261108T134959.129713Z_source_borrow/result.json",
+      "sha256": "89129e63cb1da8cada7007aed0b171f49ce88b99c4bbc7cec9a98a392557c520"
+    },
+    {
+      "path": "tmp/blackbox_r2_adapter/20261108T135258.806259Z_source_borrow/result.json",
+      "sha256": "4c9b8d602cd151261d3391a300841e3e418bd6fd8b3ba47535fc4fab2266a620"
+    },
+    {
+      "path": "tmp/blackbox_r2_adapter/20261108T135438.960332Z_source_borrow/result.json",
+      "sha256": "81834a34d8cec72b22972931d68d03ef58db2402eb4ad95fd2a07a591b823883"
+    },
+    {
+      "path": "tmp/blackbox_r2_egress/20261108T135830Z-c957aec5/result.json",
+      "sha256": "b876c0dd1e3727fdd677e3477bad9c1b5ba2f23f65ba76cd4f97edbf0f658686"
+    },
+    {
+      "path": "tmp/native_read_design.log",
+      "sha256": "b13c4c222b6414c5f9512137162b31dcf28b52433b7b872a9da3a5115f91b97f"
+    }
+  ],
+  "selected_rtl": {
+    "camera_rgb_native_fixed1080_borrow4.v": "129cca5bb8cb2be65ed64664c03e675af52a8b042d4c7c59dd298bf8b20bfdde",
+    "private_raw_isp_borrow4.v": "a46cd8a999ac360b4c530bc7034070e9305a2f20fadb3906e67b0fc6079f7490",
+    "hdr_raw14_shared_transport4.v": "34963c31b7b050384663a11dd078741c229821f24445c9e80d02e9a081a1c404",
+    "ordered_frame_egress.v": "eb5312ed137935d5081d7470d5973f61ae3d3ac0735559bb77cf072b34c7a81d"
+  },
+  "not_adopted": "RAW packing candidate: partial module measurements only, no independent functional qualification",
+  "server": "No new request, registration, polling or change to R1 batch"
+}

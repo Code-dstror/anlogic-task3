@@ -1,0 +1,142 @@
+# seed56 双目 HDR 帧率修复与编译前验证
+
+基线为 `camera_raw_r2 · 41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213`，板测 bit 是 seed56。
+本轮保留已经验证的配置/复位修复，针对反复出现的 HDR 30/20 作了两处吞吐改动。
+**已消除一个确定的 HDR 算力上限，并缩短读链空档；新 bit 的实际满幅30/30仍需上板确认。**
+编译授权已更新为一次16线程共享综合、复用其结果的48个物理种子，每种子4线程，至bitgen。
+实际提交状态和固定源码见本目录 `SUBMISSION.json`（发布后填写）；不得把旧seed56的STA当作新源资格。
+
+## 现场定位
+
+原件位于仓库 `deliverables/CAMERA_RAW_R2_seed56_双目HDR帧率问题_给FPGA队友_20261110/`。
+50项包内哈希、31项启动原件、2653帧UART原始字节的分块重播均核对一致。
+
+| 同一 HDR epoch37 的540秒窗口 | CAM0 | CAM1 |
+|---|---:|---:|
+| LONG / SHORT 各路准入 | 16365 / 16365 | 16365 / 16365 |
+| DFI 实际 job | 16365（30.306/s） | 10910（20.204/s） |
+| BEGIN 负答复 | 0 | 10910 |
+| pair expire / bad FINISH 增量 | 0 / 0 | 0 / 0 |
+
+两个job合计27275，PIX产品准入、JPEG result、DFI写ACK/READY claim及USER描述符/退休六项也各增27275。
+RK完整接收、解码和合成新SOURCE沿用慢眼速率，缺口已在FPGA接job前出现。
+同一owner、同一bit的SDR彩色窗口，USER约60次/s退休，两眼约30FPS；慢眼随HDR重入交换，另有25/25窗口。
+
+83次调度器idle采样已持credit，对应同轮DJ两眼均FREE+BUILD，其中53次host仍armed。
+OB/DJ不同域独立冻结，不能把这个关联当作拒收当拍的精确trace，也不能从1Hz busy比例推算每笔服务时间。
+37笔模式请求都有APPLIED和VIDEO_CONFIRMED；本轮未再观察到旧启动卡死，但这不是所有切换永久通过的声明。
+详见[现场复算](FIELD_EVIDENCE.md)、[数值与窗口](FIELD_EVIDENCE.json)。
+
+## 确定的瓶颈和两处修改
+
+### HDR 色调映射
+
+实际共享ISP在125MHz PIX域调用 `hdr_tone96_shared4`。原实现HDR每拍处理1个RGB14像素，四像素组每4拍接收；SDR有4像素直通。
+因此1080P单笔至少16.5888ms，双眼合计理论上限60.2816帧/s，低于现场60.6111帧/s的输入。
+即使按整数60FPS目标，留给所有空拍和周转的余量也仅77.9µs/笔。
+这是已从生产电路和物理时钟确定的限制，单独增加帧槽不能消除它。
+
+新实现用两条像素算术lane共用组缓存、有效位、组标记和输出；一组两拍，理论纯计算下界8.2944ms。
+沿用原96段曲线、冻结ROM、官方乘法器、定点舍入和饱和。没有复制第二套ISP、改变图像精度、降低Q或调整传感器帧率。
+SDR直通及HDR/SDR的有序排空保持。[T96改动与局部综合](../../experiments/hdr_tone2_20261110/README.md)
+
+### HDR DDR读取与解包重叠
+
+原DDR仲裁器已为每client缓存一个完整16拍响应，但cursor按RAW10解包节奏消费，等最后一拍被消费后才请求下一burst。
+这使下一笔DDR首响应等待与旧字节解包串行发生；不是简单的“物理DDR RREADY被解包器直连拉低”。
+
+新cursor复用现有 `ddr_response_bank16`，在其内部先接收一小段响应，让下一AR的首响应等待与旧数据解包重叠。
+仍只有一笔真实AXI读取在途，保留≤16beat、4KiB边界、原地址/KEEP/LAST与512组信用。
+同一cohort的队列总数同时覆盖RAM和持有输出，START、换成员、RESULT和bus quiet都等它真正排空。
+取消保留已呈现AR和输出承诺，清偿后才返回负终态；不会提前归还仍被借用的RAW槽。
+B2版本用这个已有总数给状态数据路径提供容量资格，避免再串入FIFO的下降沿复位掩码。
+[读链改动与局部综合](../../experiments/hdr_read_prefetch_20261110/README.md)
+
+## 为什么会出现30/20及慢眼交换
+
+每眼两个pair bank，合格的两曝光写入/真实B及SOURCE完成后才能READY；共享服务一次只处理一个job，真实处理终态、写ACK、票据和RAW归还证明完成后才FREE。
+双offer按上次实际归还眼的反眼轮转，没有持续固定优先一只眼的策略。服务接近或超过半个输入周期时，有限槽位的截止条件和相位会量化成漏整组。
+
+独立短测使用**真实RAW捕获/FIFO/写者/两眼目录/owner/派发/scheduler**，将读、PIX/JPEG与票据尾部限定为外部服务时间BFM。
+每眼测量窗60组，周期3300DFI拍；两成员真实SOURCE与最后B均先于acquire，已接job最终均RELEASE。
+
+| CAM1相位 | 慢服务1947拍，CAM0/CAM1 job与RELEASE | 快服务1587拍，CAM0/CAM1 |
+|---:|---:|---:|
+| 100拍 | 60/40 | 60/60 |
+| 400拍 | 50/50 | 60/60 |
+| 3200拍 | 40/60 | 60/60 |
+
+两侧源轨迹一致，快服务连同热身的每眼90组都没有负BEGIN。
+另验证满槽拒绝LONG后，即使旧组随后释放，迟到的同组SHORT仍被拒，下一组健康恢复。
+这证明现有控制机制在足够服务余量下完整接纳；**BFM时限不是新电路的实测整机服务时间，也不是板级30/30证明**。
+详见[bank与服务预算](BANK_DIAGNOSIS.md)和[真实控制短测](../../src_fpga/simulation/blackbox_hdr_capacity_20261110/VALIDATION.md)。
+
+## 保留的时序优化
+
+- SOURCE已持有事务的数据资格使用原R3，同一首个R4合法握手保持；F3仍负责ASR及空闲准入。
+  原有半周期到adapter的路径在局部载体改为整周期，估计余量+1.100→+4.540ns。
+  cleanup下降沿的相邻路径另查，候选+2.656ns；未把全部F3路径切掉。
+- JPEG ingress的ASR在F3释放，数据资格与FIFO仍用原R3。新增一个FF，保持原首事务边界。
+  局部44个F3端点都是ASR，recovery最小+3.376ns，D/CE保持8ns预算。
+
+多种子审查区分了数据hold与removal，并包含≤50ps的正路径。
+时钟、有效检查、DDR原128条0.350ns min guard和现有IP保持，不用宽泛false path换取名义收敛。
+SOURCE/配置/RAW入口/DFI bank的其余紧路径仍须新源物理报告复核。
+[SOURCE实验](../../experiments/timing_source_20261110/README.md) · [JPEG复位实验](../../experiments/timing_jpeg_reset_20261110/README.md)
+
+## 资源预算与未采纳项
+
+基线41cb5991原始综合Slice63022/64320（97.98%），重开62484（97.15%）；seed56布线后61450（95.54%），230ERAM、146DSP。
+
+| 同载体重开比较 | Slice变化 | FF变化 | ERAM变化 | DSP变化 |
+|---|---:|---:|---:|---:|
+| HDR预取B2 | −22 | −234 | +4 | 0 |
+| T96双像素 | +341 | +451 | +2 | +5 |
+| SOURCE时序资格 | −16 | 0 | 0 | 0 |
+| JPEG ingress复位 | 0 | +1 | 0 | 0 |
+
+T96扩容局部代价小于基线原始综合的1298 Slice余量；其余已测载体未见明显Slice增长。
+新增存储/算术实例预算为6ERAM和5DSP，按现有冻结IP实例预计为236/272 ERAM、151/240 DSP，仍有余量。
+因此本轮未出现需要削功能或大规模资源回收的容量预警。
+**这些是不同载体的A/B结果，不能相加生成一个未经整机综合的Slice数或宣称新布局必然装入。**
+新增Tone控制路径扇出560→1047、reader F3→RAM读使能局部+1.687ns，均列为新P&R关注点。
+
+用户已否决黑电平开放，本轮仍锁50/50；不会为它增加电路。
+RAW token互斥简化实验虽在compact载体少7 Slice，却使固定HDR载体多43 Slice且目标路径变慢，未进入生产。
+[未采纳实验](../../experiments/timing_raw_tokens_20261110/README.md)
+
+## 独立黑盒与工程检查
+
+所有新功能短测作者均使用新上下文，只获公开IO、合法profile、数学/协议合同和不透明编译清单；禁止读取生产RTL、旧TB和内部状态。
+
+| 验证 | 实际结果与范围 |
+|---|---|
+| RK已有参数 | 6组PASS，6合法事务、29非法请求零BAR写；使用真实SDK和BAR模型 |
+| 真实CFG/CDC | 5组PASS，8APPLIED、17拒绝、1源故障及恢复；包括整体验收ACK后pipeline_idle=0仍正确发布、旧ACK不推进epoch |
+| SOURCE复位资格 | 两版各7/7，首context R4、首processed SOURCE第38沿；停钟/受压/错误SOURCE/真实cleanup及新身份恢复，公开事件一致 |
+| JPEG跨域复位 | 两版各5/5，1480条公开事件一致；各6成功、1E2、2取消、7次fence prove、3718个RAM字检查 |
+| HDR reader B2 | 基线8/8、候选8/8。真实仲裁器+共享decoder+RAM+merge，68×63/32拍首R：3515→2421拍，42AR/670R/1071组相同，数值及标记逐组一致；满队列/回绕/反压/取消债务/错误响应和另一client竞争通过 |
+| T96 | 两版各3/3，16384像素逐位匹配独立整数式；HDR 4→2拍/组、首14→12；SDR1/1，模式交接、清除和反压通过 |
+| 真实owner容量 | 8/8，合法四成员320B/4SOURCE/4OK B闭环、三个慢/快三相位对照、迟到peer拒绝及健康后继 |
+| 原生工程 | 最终read_design 48.375s通过，层次检查18.109s通过；实际双Tone lane、四预取RAM、原共享owner/ISP/UART与复位结构已核对 |
+
+没有运行多帧满幅长仿真。完整1080P持续性能、传感器电气、DDR物理、RK解码/显示以及新源最终STA各自另计。
+旧孤立SHORT启动修复、原子配置发布、分眼身份、RAW冷选和现有UART格式均保留；其源未被本轮改写。
+仿真原始失败分别为ROM初始化目录、测试台delta采样、路径调用或合同遗漏前置协商，修正夹具/合同后重新运行并保留原件；没有放宽生产校验来适配错误刺激。
+
+验证入口：[CFG](../../src_fpga/simulation/blackbox_parameters_20261110/README.md)、[SDK](../../rk_sdk/tests/blackbox_parameters_20261110/README.md)、
+[SOURCE](../../src_fpga/simulation/blackbox_source_reset_20261110/README.md)、[JPEG](../../src_fpga/simulation/blackbox_jpeg_reset_20261110/README.md)、
+[reader](../../src_fpga/simulation/blackbox_hdr_prefetch_20261110/README.md)、[Tone](../../src_fpga/simulation/blackbox_hdr_tone2_20261110/README.md)、
+[owner](../../src_fpga/simulation/blackbox_hdr_capacity_20261110/README.md)。
+
+## RK与下一轮上板
+
+业务CFG1/schema2、AJPG v4、ARAW v1、默认Q75和原传感器配方保持。
+现有已匹配的R2控制程序可用原命令启用单/双目灰度、高斯、HE、去雾、HDR，车道仍单目；RAW/JPEG仍冷选互斥。
+本轮仅完善现有参数发现，不开放新图像参数。[RK参数及示例](../parameter_timing_20261110/RK_PARAMETERS.md)
+
+UART保持只读DJ/v3与OB/v2，不新增业务反馈。先用原配方验证两眼首个真实产品，再重复彩色/HE/去雾/HDR往返并等待每个新epoch的两眼产品。
+在同一个稳定HDR epoch取至少两个独立长窗，核对四路capture_admit→分眼jobs→JPEG/writer→USER退休→RK完整接收，计数按各自模数解回卷。
+目标是两眼实际新SOURCE达到约30/s，BEGIN拒收不再系统性地吃掉一眼每三组中的一组；合成器30FPS或总量不能代替分眼统计。
+同时记录bank、credit、reader quiet、writer quiet和host armed；这些快照仍非同拍，异常时保留原始UART、记录和控制日志。
+再覆盖单目SDR60、双目SDR30及全部原算法模式，RAW独立冷轮验证首事务与原身份，不把HDR短测外推为全功能板测。

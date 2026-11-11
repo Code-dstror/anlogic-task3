@@ -1,0 +1,124 @@
+{
+  "format": "RK_DEBUG_C2_MIXED_FIXTURE_V1",
+  "provenance": "ALREADY_QUALIFIED_SYNTHETIC_CSI_MODEL_OUTPUT_NOT_BOARD_CAPTURE",
+  "qualification": "src_fpga/stages/r8_stage3/pending/timing_closure_20261016/validation_c2/qualification.json",
+  "qualification_sha256": "3ea9d7b34320579df58641fc5a803429f756df3eb790ae93b9eea1a93fa1280e",
+  "data": "mixed_records.bin",
+  "bytes": 1262152,
+  "sha256": "6204b05b0f4c3551ea7a9b8cf2dc52f7d1e3913eaf611f3936388cae8df7e470",
+  "records": [
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/actual_record_0.bin",
+      "sha256": "00ef1faa32924f0e90e17f751e6060734448757126b12dc21de27f849db5fb5d",
+      "offset": 0,
+      "bytes": 50912
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_0.bin",
+      "sha256": "eaa478405abda6610cf8ed8c80d686abe7e4b42aca3e3b0a44c371e518a7d6eb",
+      "offset": 50912,
+      "bytes": 76422
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_1.bin",
+      "sha256": "c3589c2cc1a1564368ac13deae9b6a2a83d9e5d15776706b22724032414f1ba7",
+      "offset": 127334,
+      "bytes": 76416
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_2.bin",
+      "sha256": "5ef6e3edaf9b0939af1eb30b2ecbf13f68ce720c7a89696e58965c6343dc3cc9",
+      "offset": 203750,
+      "bytes": 76416
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_3.bin",
+      "sha256": "3e3506289afb4ad255ac9dad8c82469d11bf632065e50e849a96816044cb6193",
+      "offset": 280166,
+      "bytes": 76416
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_4.bin",
+      "sha256": "93b1c7093cba267c0668ec23f80bb7362d11f62d429d4b4c384783fd597d5e9d",
+      "offset": 356582,
+      "bytes": 76422
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_5.bin",
+      "sha256": "59bbf0469de71c92a805935e7ae6ca978c94862d4d423b31d3992a847dafe4ff",
+      "offset": 433004,
+      "bytes": 76484
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_6.bin",
+      "sha256": "48208a2724b85fe4bc6baed697c93d37532c16a403de5e375d4b8f19bd025849",
+      "offset": 509488,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_7.bin",
+      "sha256": "7c19da96ee589099f4d3db728840c4681acce2c84ecdd3067721f43d52e44286",
+      "offset": 586176,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_8.bin",
+      "sha256": "777542477aceed4fbb700fff2c6a1da8844c4d150fecd8523c6248ee0f62fb04",
+      "offset": 662864,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_9.bin",
+      "sha256": "b64c634247a24319b8ad50d0cfb87c8604f32378b7c578bdebf2cde86019650b",
+      "offset": 739552,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_10.bin",
+      "sha256": "2345779654d226ce61fbdf1294c434717819182dffa84f2a9d545c21b2087e6a",
+      "offset": 816240,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_11.bin",
+      "sha256": "2b95b79be0223953b36067e66cc4cf9989a7bdf303aabd8212a76170f93452e0",
+      "offset": 892928,
+      "bytes": 76684
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_12.bin",
+      "sha256": "9b11bda1bef7fdbd9fa20c3fd035cfb77ac9af4ff6501c13779c6036f51bc32f",
+      "offset": 969612,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_13.bin",
+      "sha256": "5b0fe7f73e973057fbaa9d96d8d4545ca08c371e612cca96c8629306b90653b7",
+      "offset": 1046300,
+      "bytes": 76688
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_14.bin",
+      "sha256": "189265630998748b7288360e124e17b129bfd01339dbb4b0f789798c48777327",
+      "offset": 1122988,
+      "bytes": 76438
+    },
+    {
+      "source": "tmp/r8_stage3/timing_closure_20261016/c2_lz_main/lz_record_15.bin",
+      "sha256": "718edf716cea4c7ee2da75af1e32be55d322a91066538a8b24f85ae45153e049",
+      "offset": 1199426,
+      "bytes": 62726
+    }
+  ],
+  "expected": {
+    "jpeg_frames": 1,
+    "jpeg_bytes": 50464,
+    "raw_frames": 1,
+    "raw_bytes": 2592000,
+    "raw_sha256": "073287a8ff7f0b5607fdb64c0d320ebfdf03eaa7141ffb4a60ac6e5994a45014",
+    "jpeg_sha256": "98fae3c05d7681a620f4cf2deed161120092ce69dffb6f2ecd6d01f7527374a3",
+    "lz_chunks": 16,
+    "source_session": 1,
+    "mode_epoch": 1
+  }
+}

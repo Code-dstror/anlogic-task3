@@ -1,0 +1,13 @@
+{
+  "name": "matlab-mcp-server",
+  "provider": "MathWorks",
+  "version": "v0.15.0",
+  "repository": "https://github.com/matlab/matlab-mcp-server",
+  "platform": "windows-x64",
+  "download_url": "https://github.com/matlab/matlab-mcp-server/releases/download/v0.15.0/matlab-mcp-server-windows-x64.exe",
+  "sha256": "a1f67dd917c5731f88399e1671ebe4f6959d2fd520c78dcaa1faf3ad37ea9518",
+  "authenticode_publisher": "MathWorks",
+  "provenance": "tools/technical_report/bootstrap.ps1",
+  "binary_included": false,
+  "download_reverified_during_export": false
+}

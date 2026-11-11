@@ -1,0 +1,691 @@
+{
+  "format": "RK_DEBUG_OFFBOARD_DELIVERY_VALIDATION_V1",
+  "date": "2026-10-16",
+  "status": "SOFTWARE_IMPLEMENTATION_AND_OFFBOARD_CHECKS_PASS",
+  "objective": "Dedicated debuggable RK program covering current implemented FPGA host functions; no board connected",
+  "source_reference_commit": "8e2eecfcfc7c956f8a7c3c88a6323a23a2360c99",
+  "repository_head_at_audit": "32a9ceeee0d4c3f145855055e2c81a251dad9dbd",
+  "firmware_id": null,
+  "firmware_attestation": false,
+  "schema_sha256": "5b146cc94c4e4ce8235696fdc9ab12c5d5faa323d8b06ebde79666bc57f57356",
+  "source_files": {
+    "linux/rk_debug/.gitattributes": {
+      "bytes": 150,
+      "sha256": "89c07d76994c6e263b977c14874439f99f78b9b148cf0a318de84513cd930e92",
+      "lf_sha256": "89c07d76994c6e263b977c14874439f99f78b9b148cf0a318de84513cd930e92"
+    },
+    "linux/rk_debug/__init__.py": {
+      "bytes": 79,
+      "sha256": "0b6193e85fa2971015cbf5a846af99431bf4361c48d0bcb623ece1a9c5dd8670",
+      "lf_sha256": "0b6193e85fa2971015cbf5a846af99431bf4361c48d0bcb623ece1a9c5dd8670"
+    },
+    "linux/rk_debug/__main__.py": {
+      "bytes": 110,
+      "sha256": "2817c9e0fbfff425ffecd72e60cca4d2179e46c5da34e909cf731926fdcc3d74",
+      "lf_sha256": "2817c9e0fbfff425ffecd72e60cca4d2179e46c5da34e909cf731926fdcc3d74"
+    },
+    "linux/rk_debug/catalog.py": {
+      "bytes": 8959,
+      "sha256": "26f8ef04adc01eb3d3e70d0618e48cac150b5ea54baff3239cf4d8e79bce2a57",
+      "lf_sha256": "26f8ef04adc01eb3d3e70d0618e48cac150b5ea54baff3239cf4d8e79bce2a57"
+    },
+    "linux/rk_debug/cli.py": {
+      "bytes": 38887,
+      "sha256": "5f830572df08ff51574cd89b5a57dbabcc6876101cb4782c61dd4460b7bf5d01",
+      "lf_sha256": "5f830572df08ff51574cd89b5a57dbabcc6876101cb4782c61dd4460b7bf5d01"
+    },
+    "linux/rk_debug/consumers.py": {
+      "bytes": 18660,
+      "sha256": "cfdffc0b0f2ac7e709f38dfd7a1c2c5681ecdf3fb3bb98ded3cc20b8e928ba4f",
+      "lf_sha256": "cfdffc0b0f2ac7e709f38dfd7a1c2c5681ecdf3fb3bb98ded3cc20b8e928ba4f"
+    },
+    "linux/rk_debug/controls.py": {
+      "bytes": 21753,
+      "sha256": "16c4b0db0c88a9e41ee0451a9d78b2e8ddb24b0922cfbd1a60e19825ff9b5723",
+      "lf_sha256": "16c4b0db0c88a9e41ee0451a9d78b2e8ddb24b0922cfbd1a60e19825ff9b5723"
+    },
+    "linux/rk_debug/display_info.py": {
+      "bytes": 8632,
+      "sha256": "b845d40a13ecaac16e74c2319651d39fe10f391bf4c0056aa096925a10d8b827",
+      "lf_sha256": "b845d40a13ecaac16e74c2319651d39fe10f391bf4c0056aa096925a10d8b827"
+    },
+    "linux/rk_debug/driver/__init__.py": {
+      "bytes": 80,
+      "sha256": "aec4258eb46952fc01c18b415a4dd5e52e77c6ddf4a2b1944a249dc1d9562836",
+      "lf_sha256": "aec4258eb46952fc01c18b415a4dd5e52e77c6ddf4a2b1944a249dc1d9562836"
+    },
+    "linux/rk_debug/driver/c2h_debug_uapi.h": {
+      "bytes": 585,
+      "sha256": "43964c569746c6066fe4b368d3f39bf577faf7ccd4f20eb15e7661e12249e68d",
+      "lf_sha256": "43964c569746c6066fe4b368d3f39bf577faf7ccd4f20eb15e7661e12249e68d"
+    },
+    "linux/rk_debug/driver/debug_abi.py": {
+      "bytes": 594,
+      "sha256": "075e82b7980b6b6fcfd69a9dcfbf8a59ee288335bcf1b5e9cffa1490714e8262",
+      "lf_sha256": "075e82b7980b6b6fcfd69a9dcfbf8a59ee288335bcf1b5e9cffa1490714e8262"
+    },
+    "linux/rk_debug/driver/debug_constants.h": {
+      "bytes": 239,
+      "sha256": "1bc6f6c0156cc60df4b3364a659c0bef400f35ca31b28b031dbb1c4a1c5bab16",
+      "lf_sha256": "1bc6f6c0156cc60df4b3364a659c0bef400f35ca31b28b031dbb1c4a1c5bab16"
+    },
+    "linux/rk_debug/driver/debug_driver_hooks.h": {
+      "bytes": 2548,
+      "sha256": "32c23a7fa15c9b422eac2f299eb9f23afde1a7b2e86e88fad7dfb58297a96a65",
+      "lf_sha256": "32c23a7fa15c9b422eac2f299eb9f23afde1a7b2e86e88fad7dfb58297a96a65"
+    },
+    "linux/rk_debug/driver/debug_reset_guard.h": {
+      "bytes": 6451,
+      "sha256": "c5c0bf41764673bb92e81d4dd0e009be543787bb485f16c164f5e329cb0968d7",
+      "lf_sha256": "c5c0bf41764673bb92e81d4dd0e009be543787bb485f16c164f5e329cb0968d7"
+    },
+    "linux/rk_debug/driver/DERIVATION.json": {
+      "bytes": 1644,
+      "sha256": "2e0111fa2efd0e7d9a880a4d394c16d9bb681f2777fda1225e5c2579d00a879a",
+      "lf_sha256": "2e0111fa2efd0e7d9a880a4d394c16d9bb681f2777fda1225e5c2579d00a879a"
+    },
+    "linux/rk_debug/driver/derive.py": {
+      "bytes": 6883,
+      "sha256": "efd59bda34247b0c1beb4d7b3bfbe692ec6ffe6838a87b6b47484d114295fef3",
+      "lf_sha256": "efd59bda34247b0c1beb4d7b3bfbe692ec6ffe6838a87b6b47484d114295fef3"
+    },
+    "linux/rk_debug/driver/Makefile": {
+      "bytes": 497,
+      "sha256": "3d195ff3fa25ac4d821f90444a0781bb4a47d547f33e89aaad92aceec312adfa",
+      "lf_sha256": "3d195ff3fa25ac4d821f90444a0781bb4a47d547f33e89aaad92aceec312adfa"
+    },
+    "linux/rk_debug/driver/ph1a_c2h_debug.c": {
+      "bytes": 24772,
+      "sha256": "dbc5e25edf3c80e3ecc9607ed7410f240dde40bc782ba47a862388bec91fb5e6",
+      "lf_sha256": "dbc5e25edf3c80e3ecc9607ed7410f240dde40bc782ba47a862388bec91fb5e6"
+    },
+    "linux/rk_debug/driver/ph1a_c2h_debug.patch": {
+      "bytes": 4913,
+      "sha256": "350b6431104d1ff8342f0ddf2b5b16f0f5059880cf66f0775bfa3313716b4268",
+      "lf_sha256": "350b6431104d1ff8342f0ddf2b5b16f0f5059880cf66f0775bfa3313716b4268"
+    },
+    "linux/rk_debug/driver/README.md": {
+      "bytes": 7912,
+      "sha256": "199db274b6c4e0213f0890033d47748301fe150d8e53ea913baec3a46e5ff084",
+      "lf_sha256": "199db274b6c4e0213f0890033d47748301fe150d8e53ea913baec3a46e5ff084"
+    },
+    "linux/rk_debug/driver/tests/debug_guard.c": {
+      "bytes": 4986,
+      "sha256": "94056f028bc301889bae52be35ae62e314d50cf631c8eb360cf0dbace8596dd3",
+      "lf_sha256": "94056f028bc301889bae52be35ae62e314d50cf631c8eb360cf0dbace8596dd3"
+    },
+    "linux/rk_debug/driver/tests/test_debug_driver.py": {
+      "bytes": 6201,
+      "sha256": "b4d1cb9ba12c1b6b2a14d00450e460656e169aa230b5e5428047691e2eb8494d",
+      "lf_sha256": "b4d1cb9ba12c1b6b2a14d00450e460656e169aa230b5e5428047691e2eb8494d"
+    },
+    "linux/rk_debug/driver/tests/uapi_layout.c": {
+      "bytes": 568,
+      "sha256": "6bcc9900500551d60e8f527b339d5bae689f7a1acd123c6483e6aeb74c1c430e",
+      "lf_sha256": "6bcc9900500551d60e8f527b339d5bae689f7a1acd123c6483e6aeb74c1c430e"
+    },
+    "linux/rk_debug/driver_api.py": {
+      "bytes": 8739,
+      "sha256": "e648ae4e1b06c623ba801b9481e37d28c670e0fd6cb60b074f179f5bf1c53ffe",
+      "lf_sha256": "e648ae4e1b06c623ba801b9481e37d28c670e0fd6cb60b074f179f5bf1c53ffe"
+    },
+    "linux/rk_debug/evidence/.gitignore": {
+      "bytes": 99,
+      "sha256": "90087c413b4a5af3935b4ac8fbda1168fba1928fa345342b93644cf00f7264d0",
+      "lf_sha256": "90087c413b4a5af3935b4ac8fbda1168fba1928fa345342b93644cf00f7264d0"
+    },
+    "linux/rk_debug/evidence/assertion_checks.log": {
+      "bytes": 541,
+      "sha256": "39cfb9ff7a7a99858dbdba15029ac37a88aa197dcae6f2a6f5812ec163778bb8",
+      "lf_sha256": "b7d929bca958736ed0358a29cc0b584a1890986a59a9b0d4f22ad399af74b4b6"
+    },
+    "linux/rk_debug/evidence/final_component_checks.log": {
+      "bytes": 15462,
+      "sha256": "c540eb0a08e8041806161bd20f9b20359f581ebc7ea91b4043bd50d061687ab0",
+      "lf_sha256": "b3134ef709aa407f529d100a7c7c75b2506acb5fdc2180081ede0225a36ac604"
+    },
+    "linux/rk_debug/evidence/README.md": {
+      "bytes": 849,
+      "sha256": "1f9ddb4341a11f3066536acc57df8344c821e3b4226d00c0892883b3c6002b00",
+      "lf_sha256": "1f9ddb4341a11f3066536acc57df8344c821e3b4226d00c0892883b3c6002b00"
+    },
+    "linux/rk_debug/examples/jpeg_budget.json": {
+      "bytes": 550,
+      "sha256": "2280d04547c72f5bfcccd61317490d9bfda7d9ff8941040cd4f7aecaa6241fca",
+      "lf_sha256": "2280d04547c72f5bfcccd61317490d9bfda7d9ff8941040cd4f7aecaa6241fca"
+    },
+    "linux/rk_debug/examples/mono_hdr_lab_template.json": {
+      "bytes": 520,
+      "sha256": "2a07fa55c5307042401d81f65732263a47b3174e685a083e29ce7026e7c8a571",
+      "lf_sha256": "2a07fa55c5307042401d81f65732263a47b3174e685a083e29ce7026e7c8a571"
+    },
+    "linux/rk_debug/examples/mono_processing.json": {
+      "bytes": 606,
+      "sha256": "82b3c262442a5d944dcc7b30b0788fcff49ed13fd5073f70bad0989e3253c9b4",
+      "lf_sha256": "82b3c262442a5d944dcc7b30b0788fcff49ed13fd5073f70bad0989e3253c9b4"
+    },
+    "linux/rk_debug/examples/mono_sdr.json": {
+      "bytes": 510,
+      "sha256": "2c8882406e29c0172926f3e39fb1381fb88a398501d9f4849a3b7dbf712eb256",
+      "lf_sha256": "2c8882406e29c0172926f3e39fb1381fb88a398501d9f4849a3b7dbf712eb256"
+    },
+    "linux/rk_debug/examples/mono_sdr_lz.json": {
+      "bytes": 522,
+      "sha256": "345225e4c710f6a2c1391104ae4de0e8602e9c21428b1965015b522cd9576518",
+      "lf_sha256": "345225e4c710f6a2c1391104ae4de0e8602e9c21428b1965015b522cd9576518"
+    },
+    "linux/rk_debug/examples/scenario_dehaze_generation1.json": {
+      "bytes": 1488,
+      "sha256": "306560e5c2b513fd2abfb86095623b1ff292c420fb7e61e52635458711796bc8",
+      "lf_sha256": "306560e5c2b513fd2abfb86095623b1ff292c420fb7e61e52635458711796bc8"
+    },
+    "linux/rk_debug/examples/scenario_hdr_lab_template.json": {
+      "bytes": 1074,
+      "sha256": "27d2b933080b47c069e9b84d445d190baa35058e4c268f3929e0fe0af4a7c792",
+      "lf_sha256": "27d2b933080b47c069e9b84d445d190baa35058e4c268f3929e0fe0af4a7c792"
+    },
+    "linux/rk_debug/examples/scenario_lz.json": {
+      "bytes": 1682,
+      "sha256": "46c82050d11dd6a1fd86adb274f0810a3e17384660edb3610468cf4a27c9af03",
+      "lf_sha256": "46c82050d11dd6a1fd86adb274f0810a3e17384660edb3610468cf4a27c9af03"
+    },
+    "linux/rk_debug/examples/scenario_processing.json": {
+      "bytes": 2632,
+      "sha256": "b633649c9ee0d519ded1c84f29f4abb60c5ed46e52ebbb4de10842f1bf5b35f9",
+      "lf_sha256": "b633649c9ee0d519ded1c84f29f4abb60c5ed46e52ebbb4de10842f1bf5b35f9"
+    },
+    "linux/rk_debug/FEATURE_MATRIX.md": {
+      "bytes": 13273,
+      "sha256": "a32648a8155000c2642c2dc7e9dc173709471668b47344ae3a09b74baf16ad59",
+      "lf_sha256": "a32648a8155000c2642c2dc7e9dc173709471668b47344ae3a09b74baf16ad59"
+    },
+    "linux/rk_debug/fixtures/c2/manifest.json": {
+      "bytes": 4689,
+      "sha256": "be0d5889b57f688645545256ebe046c740d0b62db44d425e1340ed4a2ea7efc3",
+      "lf_sha256": "be0d5889b57f688645545256ebe046c740d0b62db44d425e1340ed4a2ea7efc3"
+    },
+    "linux/rk_debug/fixtures/c2/mixed_records.bin": {
+      "bytes": 1262152,
+      "sha256": "6204b05b0f4c3551ea7a9b8cf2dc52f7d1e3913eaf611f3936388cae8df7e470",
+      "lf_sha256": "7709cc902c61ef34680bcc8f493feaf9f1cc2c56178bec15b61ed533b29a5cb9"
+    },
+    "linux/rk_debug/fixtures/c2/README.md": {
+      "bytes": 1390,
+      "sha256": "bcfecc06705294eea092b955de2e780956f77fc2e1f78a3f0989539eb395b626",
+      "lf_sha256": "bcfecc06705294eea092b955de2e780956f77fc2e1f78a3f0989539eb395b626"
+    },
+    "linux/rk_debug/journal.py": {
+      "bytes": 3896,
+      "sha256": "392d9db6a28f39b0aa5373761c3c0ce8d4f8d01538c747e18aa3e93b06e57bc1",
+      "lf_sha256": "392d9db6a28f39b0aa5373761c3c0ce8d4f8d01538c747e18aa3e93b06e57bc1"
+    },
+    "linux/rk_debug/offline.py": {
+      "bytes": 13481,
+      "sha256": "03b18683643a875e80d61b415fdee74611a9402dff185f1c578312013e9228a9",
+      "lf_sha256": "03b18683643a875e80d61b415fdee74611a9402dff185f1c578312013e9228a9"
+    },
+    "linux/rk_debug/products.py": {
+      "bytes": 19823,
+      "sha256": "5fd58a446a9c66fbe14b99ac11e5c608e1723806aed3927098669826e55bdac2",
+      "lf_sha256": "5fd58a446a9c66fbe14b99ac11e5c608e1723806aed3927098669826e55bdac2"
+    },
+    "linux/rk_debug/README.md": {
+      "bytes": 23764,
+      "sha256": "ee920d3fd63f9072e1b24a84cd92b1a53cdb0ebe0d58978089dcd73fd30b232d",
+      "lf_sha256": "ee920d3fd63f9072e1b24a84cd92b1a53cdb0ebe0d58978089dcd73fd30b232d"
+    },
+    "linux/rk_debug/session.py": {
+      "bytes": 30343,
+      "sha256": "f3ee3d293ce74fe188593deafe16b9466c6558715252175b0c164b1092cfa2df",
+      "lf_sha256": "f3ee3d293ce74fe188593deafe16b9466c6558715252175b0c164b1092cfa2df"
+    },
+    "linux/rk_debug/source_contract.json": {
+      "bytes": 29772,
+      "sha256": "c3ac35b84268a86dddc5966779d611d2527c367377c779ef16f3015165ae11e5",
+      "lf_sha256": "3ae32e8f4ea1863cb1e8c80536a5db398a6c4b31fd08e4555e7ad47aff01b258"
+    },
+    "linux/rk_debug/tests/test_cli.py": {
+      "bytes": 22185,
+      "sha256": "de20500e54c868e3fb59da5a567738d6f6c213baf8c49923486f5eb1ca4fb09e",
+      "lf_sha256": "de20500e54c868e3fb59da5a567738d6f6c213baf8c49923486f5eb1ca4fb09e"
+    },
+    "linux/rk_debug/tests/test_consumers.py": {
+      "bytes": 10442,
+      "sha256": "844dd60cd3be7d82ebb396832734620e49730a7a790048ba889668b871b15326",
+      "lf_sha256": "844dd60cd3be7d82ebb396832734620e49730a7a790048ba889668b871b15326"
+    },
+    "linux/rk_debug/tests/test_controls.py": {
+      "bytes": 13699,
+      "sha256": "a7dbe38b0b50e469ee073f6ad1eaede1818ac94d53706b58bc36ebaaa5a0a1f5",
+      "lf_sha256": "a7dbe38b0b50e469ee073f6ad1eaede1818ac94d53706b58bc36ebaaa5a0a1f5"
+    },
+    "linux/rk_debug/tests/test_display_info.py": {
+      "bytes": 8989,
+      "sha256": "e5c693c11e6101c40d481b6ef2b2fd0288a7586687631639e8c0b9328515c42d",
+      "lf_sha256": "e5c693c11e6101c40d481b6ef2b2fd0288a7586687631639e8c0b9328515c42d"
+    },
+    "linux/rk_debug/tests/test_offline.py": {
+      "bytes": 5517,
+      "sha256": "587b2c4a666599941b606fdf3b40d92a7c1180e73489d2071b209fecf7eed0f9",
+      "lf_sha256": "587b2c4a666599941b606fdf3b40d92a7c1180e73489d2071b209fecf7eed0f9"
+    },
+    "linux/rk_debug/tests/test_products.py": {
+      "bytes": 8983,
+      "sha256": "e67efaf28dde174fc54792103ac205b5303bfa11e50b72584223f9e8888688de",
+      "lf_sha256": "e67efaf28dde174fc54792103ac205b5303bfa11e50b72584223f9e8888688de"
+    },
+    "linux/rk_debug/tests/test_session.py": {
+      "bytes": 19627,
+      "sha256": "1c9611f2e7935add7f0804f03003553590e5e9cb1d6e91b44440b558290de67f",
+      "lf_sha256": "1c9611f2e7935add7f0804f03003553590e5e9cb1d6e91b44440b558290de67f"
+    },
+    "linux/rk_debug/tests/test_source_reset_session.py": {
+      "bytes": 13415,
+      "sha256": "03fb5d8547f3dd2216956b0976946134012563985c3e20bc2ae1bd1106affdae",
+      "lf_sha256": "03fb5d8547f3dd2216956b0976946134012563985c3e20bc2ae1bd1106affdae"
+    },
+    "linux/rk_debug/tests/test_transport.py": {
+      "bytes": 4077,
+      "sha256": "b8a15ddd72058c16eed44ea1a82d60b3bb74e1112e837299749939f81a331313",
+      "lf_sha256": "b8a15ddd72058c16eed44ea1a82d60b3bb74e1112e837299749939f81a331313"
+    },
+    "linux/rk_debug/transport.py": {
+      "bytes": 4035,
+      "sha256": "30aab3fe622c8129cbe1bbdf2a5248eb469c957515bf4d62dfd3b11f23ba6c11",
+      "lf_sha256": "30aab3fe622c8129cbe1bbdf2a5248eb469c957515bf4d62dfd3b11f23ba6c11"
+    }
+  },
+  "dependencies": {
+    "docs/pcie_protocol_v1.json": {
+      "bytes": 47208,
+      "sha256": "774fba1bf7d2585e8eb3a01021b1768846e8d5974c6596b4d4cf89adc8636215",
+      "lf_sha256": "774fba1bf7d2585e8eb3a01021b1768846e8d5974c6596b4d4cf89adc8636215"
+    },
+    "docs/pcie_protocol_v1.h": {
+      "bytes": 40898,
+      "sha256": "0aff1930bfa5e3f32e4a0c4c8d08d29635d4a93bf4146d8898c94b0472e8e341",
+      "lf_sha256": "0aff1930bfa5e3f32e4a0c4c8d08d29635d4a93bf4146d8898c94b0472e8e341"
+    },
+    "linux/task3_pipeline/pcie_protocol_v1.py": {
+      "bytes": 46608,
+      "sha256": "6f64157721a3c56225c2db0d93a4585834012c9c9260cb36142a4bd61fa71219",
+      "lf_sha256": "6f64157721a3c56225c2db0d93a4585834012c9c9260cb36142a4bd61fa71219"
+    },
+    "linux/task3_pipeline/config_transaction.py": {
+      "bytes": 18737,
+      "sha256": "c0d6b4b6453bbeaaae8523ab68a8c1e8accdc3093ca400312bdb6c4bccd29e02",
+      "lf_sha256": "c0d6b4b6453bbeaaae8523ab68a8c1e8accdc3093ca400312bdb6c4bccd29e02"
+    },
+    "linux/task3_pipeline/advanced_config.py": {
+      "bytes": 8519,
+      "sha256": "1cfca299d1400ffac9312993436474dfa88750efbe400711dbd8355b715ee636",
+      "lf_sha256": "1cfca299d1400ffac9312993436474dfa88750efbe400711dbd8355b715ee636"
+    },
+    "linux/task3_pipeline/mono_config_v2.py": {
+      "bytes": 4237,
+      "sha256": "b27ee408ca21b45003ebf8c7e09c7d5498ac3cfb1a940d34124f06d06fc856f2",
+      "lf_sha256": "b27ee408ca21b45003ebf8c7e09c7d5498ac3cfb1a940d34124f06d06fc856f2"
+    },
+    "linux/task3_pipeline/record_selection.py": {
+      "bytes": 6392,
+      "sha256": "bbc2c5f228cd02f742ee8f0022be534269914b6723140fbee438080fc1b8d0ab",
+      "lf_sha256": "bbc2c5f228cd02f742ee8f0022be534269914b6723140fbee438080fc1b8d0ab"
+    },
+    "linux/task3_pipeline/record_v2.py": {
+      "bytes": 9787,
+      "sha256": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f",
+      "lf_sha256": "f26d53d41360d030575487a9a940276d97d9584a02e520a6e2ad155c4f9deb9f"
+    },
+    "linux/task3_pipeline/record_v3.py": {
+      "bytes": 5899,
+      "sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04",
+      "lf_sha256": "20d2b60391cf67f35036f1b05f4241ef4e9f6f86bbd097289cf7efb6c5594e04"
+    },
+    "linux/task3_pipeline/dehaze_lut.py": {
+      "bytes": 8205,
+      "sha256": "dce86dfe56515633e2145d50ddd91d8edc4b06a00b5c8c4a57d97db72af79778",
+      "lf_sha256": "dce86dfe56515633e2145d50ddd91d8edc4b06a00b5c8c4a57d97db72af79778"
+    },
+    "linux/dma_c2h_candidate/ph1a_c2h.c": {
+      "bytes": 23787,
+      "sha256": "210a4b5397f01522e72c224257c58e34b9e196194020990fbd1f9db0103c009b",
+      "lf_sha256": "210a4b5397f01522e72c224257c58e34b9e196194020990fbd1f9db0103c009b"
+    },
+    "linux/dma_c2h_candidate/receiver.py": {
+      "bytes": 15661,
+      "sha256": "5322a44fb966fafa230c5a6a651c93842c99cdc5cbc452a3d86e331db31608c9",
+      "lf_sha256": "5322a44fb966fafa230c5a6a651c93842c99cdc5cbc452a3d86e331db31608c9"
+    },
+    "linux/stream_diag/records.py": {
+      "bytes": 7804,
+      "sha256": "e8f690fd85fba724bee96600e0783037f3961b96a4ef12bab02a0b5e57942a13",
+      "lf_sha256": "e8f690fd85fba724bee96600e0783037f3961b96a4ef12bab02a0b5e57942a13"
+    },
+    "linux/stream_diag/decoder.py": {
+      "bytes": 6459,
+      "sha256": "efcbc2355204a282905b90106ee55f3b349ca34d44135ddb4f71644f9d1b3984",
+      "lf_sha256": "efcbc2355204a282905b90106ee55f3b349ca34d44135ddb4f71644f9d1b3984"
+    },
+    "linux/stream_diag/presentation.py": {
+      "bytes": 15318,
+      "sha256": "5bd43bc25e797d1a15fd6e8d8657f2f467c15244eb897ff70cacf08f07d504b5",
+      "lf_sha256": "5bd43bc25e797d1a15fd6e8d8657f2f467c15244eb897ff70cacf08f07d504b5"
+    },
+    "linux/lz_native/__init__.py": {
+      "bytes": 8797,
+      "sha256": "d9cefab10c8b3de6bc5d67735cb7d4aedc0c4371fd604c4ae6bfc2160d96e048",
+      "lf_sha256": "d9cefab10c8b3de6bc5d67735cb7d4aedc0c4371fd604c4ae6bfc2160d96e048"
+    },
+    "linux/lz_native/lz_native.c": {
+      "bytes": 16791,
+      "sha256": "3cffad688cfc44c508eadd12396d7f3c87ba4086e60d6166dab7661e8fd400a8",
+      "lf_sha256": "3cffad688cfc44c508eadd12396d7f3c87ba4086e60d6166dab7661e8fd400a8"
+    },
+    "linux/pixel_native/__init__.py": {
+      "bytes": 3963,
+      "sha256": "28356ab87083bb8f2b2ea5f377816bfad8f5fc30b2f655d0bfa97c3a7bd33c25",
+      "lf_sha256": "28356ab87083bb8f2b2ea5f377816bfad8f5fc30b2f655d0bfa97c3a7bd33c25"
+    },
+    "linux/task3_runtime/recording.py": {
+      "bytes": 21469,
+      "sha256": "482fc8cf2d56f298cc44568d28d36b8fdb79d3fc81082ed0523d270e8367e5e5",
+      "lf_sha256": "482fc8cf2d56f298cc44568d28d36b8fdb79d3fc81082ed0523d270e8367e5e5"
+    },
+    "linux/task3_runtime/raw_recording.py": {
+      "bytes": 9474,
+      "sha256": "d4a9d92c977711785b7e429e32dc597e25e9d2ec9f02279c5569d93bcc05b04a",
+      "lf_sha256": "d4a9d92c977711785b7e429e32dc597e25e9d2ec9f02279c5569d93bcc05b04a"
+    },
+    "linux/task3_runtime/preflight.py": {
+      "bytes": 7659,
+      "sha256": "dea51dae932770c8185a9797ad5bf852c27282be8d5123ef9b41bc37d906465d",
+      "lf_sha256": "dea51dae932770c8185a9797ad5bf852c27282be8d5123ef9b41bc37d906465d"
+    }
+  },
+  "test_inventory": {
+    "linux/rk_debug/driver/tests/test_debug_driver.py": [
+      "test_disabled_or_old_extension_is_unsupported_without_request",
+      "test_same_fd_request_issued_then_readonly_new_boot",
+      "test_fast_new_boot_on_first_ack_is_valid_but_wait_still_confirms_owner",
+      "test_unknown_ioctl_is_not_unsupported_or_retried",
+      "test_pending_timeout_keeps_owner_and_never_pulses_again",
+      "test_wait_without_this_instances_ack_cannot_claim_someone_elses_reset",
+      "test_host_running_or_lease_precheck_refuses_without_ioctl",
+      "test_bad_capability_layout_rejected_before_request",
+      "test_exact_derived_source_and_host_compiled_guard"
+    ],
+    "linux/rk_debug/tests/test_cli.py": [
+      "test_catalog_static_no_factory_or_device_and_exact_fixed_parameter",
+      "test_misspelled_counter_is_not_a_successful_zero_assertion",
+      "test_unknown_cli_config_and_script_fields_reject_before_any_factory",
+      "test_existing_report_rejects_without_overwrite_or_open",
+      "test_script_bound_and_malformed_observation_are_preflight_errors",
+      "test_finite_capture_prepares_consumers_before_receiver_and_normal_close",
+      "test_shell_nonterminal_config_rejection_keeps_owner_for_status_pause_resume",
+      "test_inflight_command_timeout_retains_without_close_or_retry",
+      "test_faulted_close_retains_process_owner_and_does_not_close_again",
+      "test_status_failure_and_broken_output_cannot_exit_with_native_owner",
+      "test_wait_product_rejects_old_epoch_and_accepts_actual_new_complete_counter",
+      "test_observation_timeout_normal_drains_and_cannot_report_pass",
+      "test_duration_expiry_cannot_pass_with_unexecuted_script_steps",
+      "test_explicit_counter_zero_and_active_base_assertions_are_reported",
+      "test_native_capture_has_no_mpp_requirement_and_hdmi_options_are_explicit",
+      "test_explicit_native_display_factory_wires_only_requested_resources",
+      "test_all_shipped_examples_are_bounded_valid_shapes",
+      "test_display_info_uses_only_explicit_readonly_helper_and_returns_raw_text",
+      "test_actual_display_info_rejects_windows_without_receiver_or_process",
+      "test_source_reset_optin_reaches_session_and_success_stays_stopped",
+      "test_source_reset_known_rejection_preserves_shell_and_allows_explicit_resume",
+      "test_source_reset_issued_unknown_failure_retains_without_resume",
+      "test_blocked_stdin_stop_event_normal_closes_without_enter_or_stdin_close",
+      "test_blocked_stdin_device_fault_enters_hold_without_enter_or_close"
+    ],
+    "linux/rk_debug/tests/test_consumers.py": [
+      "test_pure_packet_mode_needs_no_decoder_and_ignores_incomplete_events",
+      "test_jpeg_owned_wire_to_decoder_packer_presenter_preserves_source",
+      "test_decode_only_does_not_request_nv12_copy",
+      "test_slow_decoder_bounded_queue_timeout_retains_active_decoder",
+      "test_wrong_mpp_identity_is_fault_without_display_submission",
+      "test_uncertain_native_close_retains_owner_and_still_closes_presenter",
+      "test_hdmi_requires_explicit_plane_color_and_no_force",
+      "test_static_raw10_pgm_values_follow_canonical_le5_not_mipi_packing",
+      "test_bounded_static_preview_and_independent_real_recorders"
+    ],
+    "linux/rk_debug/tests/test_controls.py": [
+      "test_discovery_is_read_only_and_separates_live_caps_from_source_catalog",
+      "test_strict_parser_rejects_unknown_duplicates_floats_bool_and_partial_schema_change",
+      "test_full_mono_prepare_commit_actual_applied_and_request_active_views",
+      "test_schema0_explicit_clear_observes_all_zero_extension_ack",
+      "test_schema1_fixed_preset_supported_but_numeric_sliders_rejected",
+      "test_hdr_complete_uint64_policy_requires_explicit_bound_permit",
+      "test_lz_quality_change_still_requires_old_epoch_owner_retention",
+      "test_live_capability_and_invalid_hdr_lz_lane_rejected_without_writes",
+      "test_stale_and_tampered_proposals_never_prepare",
+      "test_lut_requires_confirmed_off_then_loads_all257_exact_words_and_binds_generation",
+      "test_cfg_timeout_retains_request_and_owner_without_cancel_retry",
+      "test_lut_timeout_retains_owner_and_does_not_abort_or_retry",
+      "test_control_serialization_does_not_require_receive_thread_lock"
+    ],
+    "linux/rk_debug/tests/test_display_info.py": [
+      "test_fixed_query_argv_raw_outputs_and_identity_no_modeset",
+      "test_combined_output_cap_kills_endless_helper_without_unbounded_capture",
+      "test_exact_limit_is_not_false_overflow_and_nonzero_rc_is_preserved",
+      "test_deadline_reserves_bounded_cleanup_and_reports_unreaped_helper",
+      "test_invalid_paths_driver_and_budgets_never_launch",
+      "test_launch_failure_and_windows_rejection_do_not_query_devices",
+      "test_partial_pipe_setup_failure_closes_both_captures_and_kills_owned_helper"
+    ],
+    "linux/rk_debug/tests/test_offline.py": [
+      "test_actual_r3_qualification_all_seventeen_products_and_exclusive_exports",
+      "test_concatenated_real_jpeg_and_sixteen_lz_have_same_products",
+      "test_hash_bound_missing_owner_and_no_resync",
+      "test_input_record_export_and_qualification_path_bounds"
+    ],
+    "linux/rk_debug/tests/test_products.py": [
+      "test_strict_v1_v2_and_real_r3_v3_metadata_products",
+      "test_qualified_f23_fixture_summary_keeps_every_original_bit",
+      "test_real_r3_all_sixteen_chunks_complete_exact_native_raw",
+      "test_crc_missing_chunk_negative_terminal_and_misnamed_lz_never_jpeg",
+      "test_two_authorized_epochs_keep_old_tail_until_confirmed_boundary_and_complete",
+      "test_epoch_history_is_bounded_without_a_sixty_four_transition_limit",
+      "test_summary_bounds_host_fps_and_bad_jpeg_are_observable"
+    ],
+    "linux/rk_debug/tests/test_session.py": [
+      "test_cfg_wait_for_actual_mock_applied_keeps_receive_release_running",
+      "test_sdr_enables_and_sdr_lz_lab_hdr_transitions_use_real_cfg",
+      "test_applied_preserves_actual_old_lz_tail_until_new_boundary_and_empty_queue",
+      "test_invalid_and_unguarded_lz_hdr_requests_are_zero_write_nonterminal",
+      "test_normal_pause_resume_same_nonce_never_selects_again",
+      "test_initial_active_lz_or_lab_hdr_is_rejected_before_start_without_required_input",
+      "test_close_drain_timeout_retains_receiver",
+      "test_record_budget_stops_normally_and_releases_extra_ready_records",
+      "test_release_and_consumer_close_failures_never_force_owner_close"
+    ],
+    "linux/rk_debug/tests/test_source_reset_session.py": [
+      "test_new_boot_rebinds_same_receiver_without_start_then_resume_and_close",
+      "test_preconditions_refuse_without_calling_reset_api",
+      "test_new_boot_can_close_while_stopped_without_any_automatic_restart",
+      "test_known_prewrite_unsupported_or_rejected_keeps_old_source_resumable",
+      "test_issued_uncertainty_timeout_or_new_source_mismatch_fault_without_retry",
+      "test_resume_start_ioctl_failure_is_faulted_retained_not_input_rejection"
+    ],
+    "linux/rk_debug/tests/test_transport.py": [
+      "test_owned_copy_survives_release_overwrite_and_keeps_identity",
+      "test_uncertain_release_retains_remaining_lease_and_reader_is_terminal",
+      "test_safe_cancel_is_observable_without_fabricated_frame",
+      "test_ready_and_lease_prevent_host_drain_and_quarantine_fails",
+      "test_budget_still_releases_ready_tail_without_parsing_or_poisoning"
+    ]
+  },
+  "distinct_test_methods": 93,
+  "checks": [
+    {
+      "name": "final_debug_component_integration",
+      "result": "PASS",
+      "tests": 92,
+      "skipped": 0,
+      "seconds": 3.752,
+      "log": "linux/rk_debug/evidence/final_component_checks.log",
+      "tool_chunk": "1528da",
+      "command": "python -B -c \"import sys,unittest; suites=[unittest.defaultTestLoader.discover('linux/rk_debug/tests'),unittest.TestLoader().discover('linux/rk_debug/driver/tests')]; result=unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite(suites)); print('RK_DEBUG_CHECK_COUNTS',result.testsRun,'SKIPPED',len(result.skipped)); sys.exit(not result.wasSuccessful() or bool(result.skipped))\"",
+      "environment": {
+        "RK_DEBUG_LZ_LIBRARY": "C:/fpga_workspace/anlogic-task3/linux/lz_native/build/lz_native.dll",
+        "CC": "D:/App/Xilinx/2025.1/Vivado/tps/mingw/10.0.0/win64.o/nt/bin/gcc.exe"
+      },
+      "scope": "Real Python protocol/owner code, host native LZ and production shared C guard; fake device/MMIO/MPP/DRM/reset observations"
+    },
+    {
+      "name": "counter_assertion_hardening",
+      "result": "PASS",
+      "tests": 3,
+      "new_methods": 1,
+      "seconds": 0.062,
+      "log": "linux/rk_debug/evidence/assertion_checks.log",
+      "tool_chunk": "4218c1",
+      "selection": [
+        "test_cli.CliTests.test_misspelled_counter_is_not_a_successful_zero_assertion",
+        "test_cli.CliTests.test_explicit_counter_zero_and_active_base_assertions_are_reported",
+        "test_cli.CliTests.test_all_shipped_examples_are_bounded_valid_shapes"
+      ],
+      "note": "One newly added method makes93 distinct methods. Final93 suite was not rerun; only this affected subset ran after the92-test check."
+    },
+    {
+      "name": "arm64_additive_uapi",
+      "result": "PASS",
+      "tool_chunks": [
+        "a237e9",
+        "fe124c"
+      ],
+      "artifact": "tmp/rk_debug_driver_20261016/uapi_layout.o",
+      "artifact_identity": {
+        "bytes": 2528,
+        "sha256": "214413e3dd177e9c152c1df5cebd32813ed86a02e08cf12d1a2d434fa3aa2b5c",
+        "lf_sha256": "214413e3dd177e9c152c1df5cebd32813ed86a02e08cf12d1a2d434fa3aa2b5c"
+      },
+      "compiler": "Zig0.17.0 aarch64-linux-gnu.2.17 -std=c11 -Wall -Wextra -Werror -c",
+      "scope": "ELF64 little-endian AArch64 REL/static user-layout assertions, NOT a kernel module"
+    },
+    {
+      "name": "source_and_document_inventory",
+      "result": "PASS",
+      "python_3_10_syntax": true,
+      "markdown_links": 33,
+      "source_reference_files_checked": 47,
+      "note": "This sealing script runs no functional tests."
+    }
+  ],
+  "actual_cli_file_checks": [
+    {
+      "name": "cli_r3",
+      "result": "PASS",
+      "report": "tmp/rk_debug_20261016/cli_r3_report.json",
+      "report_identity": {
+        "bytes": 39568,
+        "sha256": "3235f0fcdb1b7c549cdb8a27d2f1394117e24a39f75279409b021b48c564874d",
+        "lf_sha256": "3235f0fcdb1b7c549cdb8a27d2f1394117e24a39f75279409b021b48c564874d"
+      },
+      "records": 17,
+      "jpeg_payload_sha256": "98fae3c05d7681a620f4cf2deed161120092ce69dffb6f2ecd6d01f7527374a3",
+      "raw_sha256": "073287a8ff7f0b5607fdb64c0d320ebfdf03eaa7141ffb4a60ac6e5994a45014",
+      "qualification": {
+        "path": "C:/fpga_workspace/anlogic-task3\\src_fpga\\stages\\r8_stage3\\pending\\area95_20261016\\validation_lz_r3\\qualification.json",
+        "scope": "OUTPUT_HASH_BINDING_NOT_HARDWARE_QUALIFICATION",
+        "sha256": "5e5c32746cd7c9353d06c1b69250cedc6ee27d9a7df1d3a9ba63994e46e29a21",
+        "status": "PASS_BOUND_COMPLETE_R3_JPEG_LZ_MAIN"
+      },
+      "scope": "OFFLINE_STRICT_PARSING_NATIVE_LZ_AND_OWNED_EXPORT_NOT_DEVICE_OR_PIXEL_QUALIFICATION"
+    },
+    {
+      "name": "cli_c2",
+      "result": "PASS",
+      "report": "tmp/rk_debug_20261016/cli_c2_report.json",
+      "report_identity": {
+        "bytes": 38707,
+        "sha256": "49a96aa34f869aac3ed7659dc524056a60bc1ac9970b03211a2ec5673c57f242",
+        "lf_sha256": "49a96aa34f869aac3ed7659dc524056a60bc1ac9970b03211a2ec5673c57f242"
+      },
+      "records": 17,
+      "jpeg_payload_sha256": "98fae3c05d7681a620f4cf2deed161120092ce69dffb6f2ecd6d01f7527374a3",
+      "raw_sha256": "073287a8ff7f0b5607fdb64c0d320ebfdf03eaa7141ffb4a60ac6e5994a45014",
+      "qualification": {
+        "path": "C:/fpga_workspace/anlogic-task3\\src_fpga\\stages\\r8_stage3\\pending\\timing_closure_20261016\\validation_c2\\qualification.json",
+        "scope": "OUTPUT_HASH_BINDING_NOT_HARDWARE_QUALIFICATION",
+        "sha256": "3ea9d7b34320579df58641fc5a803429f756df3eb790ae93b9eea1a93fa1280e",
+        "status": "PASS_BOUND_COMPLETE_C2_JPEG_LZ_DRAINED_RESET_MAIN"
+      },
+      "scope": "OFFLINE_STRICT_PARSING_NATIVE_LZ_AND_OWNED_EXPORT_NOT_DEVICE_OR_PIXEL_QUALIFICATION"
+    },
+    {
+      "name": "bundled_c2",
+      "result": "PASS",
+      "report": "tmp/rk_debug_20261016/bundled_c2_report.json",
+      "report_identity": {
+        "bytes": 33040,
+        "sha256": "d7921110b7a8e5fbf75717d3f12d401fa47e3e3ca83aef06156cf5f9014db947",
+        "lf_sha256": "d7921110b7a8e5fbf75717d3f12d401fa47e3e3ca83aef06156cf5f9014db947"
+      },
+      "records": 17,
+      "jpeg_payload_sha256": "98fae3c05d7681a620f4cf2deed161120092ce69dffb6f2ecd6d01f7527374a3",
+      "raw_sha256": "073287a8ff7f0b5607fdb64c0d320ebfdf03eaa7141ffb4a60ac6e5994a45014",
+      "qualification": null,
+      "scope": "OFFLINE_STRICT_PARSING_NATIVE_LZ_AND_OWNED_EXPORT_NOT_DEVICE_OR_PIXEL_QUALIFICATION"
+    }
+  ],
+  "completion_audit": [
+    {
+      "requirement": "Read referenced FPGA chat without messaging it",
+      "evidence": "read_thread current FPGA工作-final r3/C1/C2 records; no send_message_to_thread in this goal"
+    },
+    {
+      "requirement": "Dedicated program folder",
+      "evidence": "All new sources, examples, tests and debug driver in linux/rk_debug"
+    },
+    {
+      "requirement": "JPEG stream receive",
+      "evidence": "transport.py same Receiver copy/release; strict v1/v2/v3 parsing and latest r3/C2 actual record checks"
+    },
+    {
+      "requirement": "Adjust all exposed parameters",
+      "evidence": "catalog.py/controls.py expose current writable base/schema2 and exact schema1 presets; fixed/disconnected fields refuse before writes"
+    },
+    {
+      "requirement": "Image/product mode changes",
+      "evidence": "one control worker plus continuous RX, exact CFG/APPLIED, two authorized LZ epochs, same-source observation assertions; mode/held-tail mock tests"
+    },
+    {
+      "requirement": "LZ77 RAW reception",
+      "evidence": "native stored/raw block CRC and1,013 blocks restore2,592,000B from r3 and latest C2; negative/short/epoch cases tested"
+    },
+    {
+      "requirement": "HDMI output",
+      "evidence": "explicit PersistentMppDecoder/NativePixels/GstKmsPresenter wiring, bounded consumers and source identity; injected tests only"
+    },
+    {
+      "requirement": "Practical debugging",
+      "evidence": "run/shell/steps/expect/wait-product/display-info/export/report and guarded optional source-reset; no implicit hardware restart"
+    },
+    {
+      "requirement": "Future timing variants preserve RK protocol",
+      "evidence": "current schema/capability validation plus latest compatible C2 fixture checked; no assumption that host source hash identifies live firmware"
+    }
+  ],
+  "known_corrections": [
+    "Blocking RX poll initially held inspector lock, starving CFG confirmation; poll moved outside lock, affected mode/control tests passed.",
+    "Public session snapshot is used in concurrency tests; direct concurrent native inspector access was an invalid test probe.",
+    "Explicit record budget now drains/releases extra READY tail instead of making the receiver terminal.",
+    "Unknown counter names reject instead of silently passing equals0."
+  ],
+  "limitations": {
+    "board": "NOT_RUN_NO_BOARD_CONNECTED",
+    "matched_kernel_module": "BLOCKED_MATCHING_KDIR_CONFIG_SYMVERS_REQUIRED",
+    "matched_mpp_build": "BLOCKED_MATCHING_TARGET_SDK_REQUIRED",
+    "actual_driver_load_bind_reset": "NOT_RUN",
+    "actual_mpp_hdmi_drm_query": "NOT_RUN",
+    "sustained_sdr60_lz30_hdr30": "NOT_RUN",
+    "physical_hdr": "UNQUALIFIED_LAB_DIGITAL_ONLY",
+    "sensor_latency": "UNKNOWN_UNCALIBRATED_CLOCKS",
+    "usb_4g": "EXCLUDED",
+    "ai_model": "NOT_IMPLEMENTED_OUTSIDE_SCOPE"
+  },
+  "evidence_policy": "Offboard software validation, not board qualification. Older qualifications were not overwritten; no FPGA build or device action was run by this task."
+}

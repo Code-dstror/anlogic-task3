@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "command_sources": [
+    "commands/registry.json",
+    "commands/validation.json",
+    "commands/quality.json",
+    "commands/workflow.json",
+    "commands/toolchain.json",
+    "commands/remote.json",
+    "commands/generation.json",
+    "commands/external.json"
+  ],
+  "workflow_source": "workflows/catalog.json",
+  "document_sources": [
+    "governance/config.json",
+    "documents/catalog.json",
+    "governance/reviews.json"
+  ],
+  "schema_sources": {
+    "command": "schemas/command.schema.json",
+    "workflow": "schemas/workflow.schema.json",
+    "document_catalog": "schemas/document-catalog.schema.json",
+    "governance_config": "schemas/governance-config.schema.json",
+    "governance_reviews": "schemas/governance-reviews.schema.json"
+  },
+  "generated_database": "registry.sqlite3",
+  "fts_tokenizer": "trigram",
+  "public_entrypoint_count": 47
+}

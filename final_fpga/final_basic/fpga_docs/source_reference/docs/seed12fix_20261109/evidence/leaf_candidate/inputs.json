@@ -1,0 +1,59 @@
+{
+  "variant": "candidate",
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "runner_command": [
+    "python",
+    "-I",
+    "-B",
+    "refactor/camera_raw_r2/src_fpga/simulation/blackbox_hdr_startup_20261109/leaf_run.py",
+    "candidate",
+    "--modelsim-bin",
+    "D:/App/modelsim/win64"
+  ],
+  "hdl_parameters": {
+    "TIMEOUT_CYCLES": 512,
+    "EXTERNAL_PHASE_ENABLE": 0
+  },
+  "watchdogs": {
+    "wall_seconds": 45,
+    "simulation_ns": 200000
+  },
+  "sha256": {
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v": "280f801799e867fb4bba438be1a6fbf05eb601066d9095c9bcc89600c2be0286",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\leaf_tb.sv": "69e91e2ec009905040cddb814520a91ca2d0045f96a4ec80ad46487d55f2466b",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\leaf_run.py": "bc459e7c321c2f8832a9a5a084ca46aed6dcc4bf56bfdb50a43ebaf5cfcea706",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include\\pcie_protocol_v1.vh": "7a01a59563aceeb203a6fe16c5eea6b3d99b3fdd361ab28c49b871aaa81baaa3",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\seed12fix_20261109\\GATE_PUBLIC.md": "f3327867563eceaa99ec246fb465f0878becb02d5242776245bef0b1a39489c8",
+    "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\docs\\seed12fix_20261109\\GATE_PORTS.txt": "55a7fefa0892902b38e4221c017547503bddb268cef50a765251df6b66ba1860"
+  },
+  "cwd": "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\tmp\\blackbox_hdr_startup_20261109\\leaf_candidate_20261109T141337_423279Z",
+  "commands": {
+    "version": [
+      "D:\\App\\modelsim\\win64\\vsim.exe",
+      "-version"
+    ],
+    "vlib": [
+      "D:\\App\\modelsim\\win64\\vlib.exe",
+      "work"
+    ],
+    "vlog": [
+      "D:\\App\\modelsim\\win64\\vlog.exe",
+      "-sv",
+      "-work",
+      "work",
+      "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\04_include",
+      "+incdir+C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\include\\00_rtl",
+      "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\rtl\\real_hdr_pair_cycle_gate.v",
+      "C:/fpga_workspace/anlogic-task3\\refactor\\camera_raw_r2\\src_fpga\\simulation\\blackbox_hdr_startup_20261109\\leaf_tb.sv"
+    ],
+    "sim": [
+      "D:\\App\\modelsim\\win64\\vsim.exe",
+      "-c",
+      "-onfinish",
+      "stop",
+      "work.leaf_tb",
+      "-do",
+      "onerror {quit -code 2}; run -all; quit -code 0"
+    ]
+  }
+}

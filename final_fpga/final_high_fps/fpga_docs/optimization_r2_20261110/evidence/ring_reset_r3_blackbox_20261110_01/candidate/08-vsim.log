@@ -1,0 +1,128 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -onfinish exit -L ph1 -t 1ps work.tb_jpeg_ring_reset work.PH1_PHY_GSR ph1.glbl -do "onerror {quit -f -code 2}; onbreak {quit -f -code 3}; run -all; quit -f -code 0" 
+# Start time: 22:07:17 on Nov 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 8383 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 8312 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 4287 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 4216 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 8383 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 8312 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 8383 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 8312 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) MSB 2239 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <TOOLS_ROOT>/TD_Release_2026.2.210.850\sim_release\ph1\ph1_logic_dram.v(221): (vopt-2697) LSB 2168 of part-select into 'INIT_FILE' is out of bounds.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 159, found 125.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_mask_tail_base'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_mask_pinned'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_mask_present'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_read_authorized'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_read_lease_active'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_result_ready'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_allocation_bytes'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_allocation_base'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_allocation_generation'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_allocation_slot'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_mask_allocation_valid'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_state'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_pinned'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_payload_length'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_height'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_width'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_quality'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_camera'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_capture_id'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_epoch'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_session'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_generation'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_slot'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_code'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rsp_valid'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_req_ready'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_last_error_addr'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_drop_count'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rerr_count'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_berr_count'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_rd_burst_count'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_wr_burst_count'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_state'.
+# ** Warning: <PROJECT_ROOT>\refactor\camera_fusion_r1\src_fpga\simulation\blackbox_ring_reset_r3\tb_jpeg_ring_reset.sv(77): (vopt-2718) [TFMPC] - Missing connection for port 'o_error_code'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=61.
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_jpeg_ring_reset(fast)
+# Loading work.jpeg_ring_reset_boundary(fast)
+# Loading work.PH1_PHY_GSR(fast)
+# Loading ph1.glbl(fast)
+# onerror {quit -f -code 2}
+#  Warning: onerror command for use within macro
+#  onbreak {quit -f -code 3}
+#  Warning: onbreak command for use within macro
+#  run -all
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# incase
+# 
+# RING_BLACKBOX_CASE reset=0 first START accepted at R4
+# RING_BLACKBOX_CASE burst/stream stall samples AW=4 W=89 AR=4 R=13 START=10 DATA=378 RESULT=0 ACK=6 READY=15 PAYLOAD=13
+# RING_BLACKBOX_CASE RESULT and final B accepted together at cycle 1132
+# RING_BLACKBOX_CASE reset=1 first START accepted at R4
+# RING_BLACKBOX_CASE reset=2 first START accepted at R4
+# RING_BLACKBOX_PASS good_ack=9 failed_ack=1 retired=8 slots=3f reused=2 reset_cases=3
+# ** Note: $finish    : <PROJECT_ROOT>/refactor/camera_fusion_r1/src_fpga/simulation/blackbox_ring_reset_r3/tb_jpeg_ring_reset.sv(898)
+#    Time: 11650607 ps  Iteration: 0  Instance: /tb_jpeg_ring_reset
+# End time: 22:07:19 on Nov 10,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 61

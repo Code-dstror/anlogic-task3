@@ -1,0 +1,871 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Tue Nov 10 18:20:43 2026
+
+Top Model           : hdr_quality_color_probe
+Device              : PH1A90SEG324
+Speed               : 2
+STA coverage        : 99.64%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     PIX -> PIX
+Type           :     Self
+From Clock     :     PIX
+To Clock       :     PIX
+Min Period     :     2.357ns
+Fmax           :     424.268MHz
+
+Statistics:
+Max            : SWNS      5.643ns, STNS      0.000ns,         0 Viol Endpoints,        16 Total Endpoints
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[3]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[3]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[3]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[2]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[2]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[2]$g_identity$wb[0]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[1]$g_identity$wb[2]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+Slack               : 5.643ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 2.371ns (cell 1.457ns (61%), net 0.914ns (39%))
+Clock Skew          : 0.000ns
+Logic Level         : 2 ( LUT1=1  DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.365          0.516          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/wb_round_bias[7]_syn_1.a
+LUT1                                    0.150    f     0.666       1  pin: u_color/wb_round_bias[7]_syn_1.o
+net (fo=12)                             0.549          1.215          net: u_color/wb_round_bias[7],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.z[7]
+DSPSIOU                                 0.089    r     1.304          pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[7]
+net (fo=1)                              0.000          1.304          net: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_c[7],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.c[7]
+DSPLOGIC                                1.067    f     2.371       2  pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          2.371          net: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     2.371               
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.371               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  5.643               
+
+Slack               : 6.185ns
+Begin Point         : u_color/normalize0_reg.clk (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1] (rising edge triggered by clock PIX  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 8.000ns { PIX rising@8.000ns - PIX rising@0.000ns }
+Data Path Delay     : 1.829ns (cell 1.270ns (69%), net 0.559ns (31%))
+Clock Skew          : 0.000ns
+Logic Level         : 1 ( DSPLOGIC=1 )
+Max Fanout          : 14
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/normalize0_reg.clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+SEQ (clk2q)                             0.151    f     0.151          pin: u_color/normalize0_reg.q
+net (fo=14)                             0.559          0.710          net: u_color/wb_round_bias[9],  ../../rtl/wide_color_pipeline.v(40)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.z[9]
+DSPSIOU                                 0.110    r     0.820          pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_c[9]
+net (fo=1)                              0.000          0.820          net: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_c[9],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(136)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.c[9]
+DSPLOGIC                                1.009    f     1.829       1  pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_logic.wxor[1]
+net (fo=1)                              0.000          1.829          net: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/logic_wxor[1],  ../../ip/stage3/fdct_mac19s14s_z33s_p34_m1p1/RTL/fdct_mac19s14s_z33s_p34_m1p1_dsp_macro_0.v(161)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.logic_wxor[1]
+DSPSIOU (reg)                           0.000    f     1.829               
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.829               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_2.ipad
+PAD                                     0.000          0.000          pin: clk_syn_2.di
+net (fo=3002)                           0.000          0.000          net: clk_dup_1,  ../../probe.v(4)
+                                                                      pin: u_color/lane[1]$g_identity$wb[1]$u_gain_round/dsp_macro_0_Inst/u_siou.clk
+capture edge                            8.000    r     8.000               
+--------------------------------------------------------------------  ---------------
+setup                                   0.014          8.014               
+clock uncertainty                       0.000          8.014               
+clock pessimism                         0.000          8.014               
+--------------------------------------------------------------------  ---------------
+Required                                               8.014               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.185               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+

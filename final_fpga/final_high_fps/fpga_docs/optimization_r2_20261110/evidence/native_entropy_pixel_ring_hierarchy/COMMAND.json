@@ -1,0 +1,18 @@
+{
+  "command": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "<PROJECT_ROOT>\\tools\\run_td.py",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\fpga_prj\\scripts\\check_shared_hdr_owner.tcl",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--workdir",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\fpga_prj\\scripts",
+    "--log",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\tmp\\native_entropy_pixel_ring_hierarchy\\td.log"
+  ],
+  "elapsed_s": 14.437,
+  "wall_budget_s": 120,
+  "exit_code": 0,
+  "timed_out": false
+}

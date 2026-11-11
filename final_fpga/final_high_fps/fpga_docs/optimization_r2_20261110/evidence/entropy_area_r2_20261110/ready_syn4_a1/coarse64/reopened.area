@@ -1,0 +1,74 @@
+standard
+***Report Model: uhd_probe Device: PH1A90SEG324***
+
+Design Statistics
+#IO                       139   out of    148   93.92%
+  #input                   84
+  #output                  55
+  #inout                    0
+#lut                     2232
+  #lut1                     4
+  #lut2                   255
+  #lut3                   378
+  #lut4                   354
+  #lut5                   347
+  #lut6                   894
+#reg                     1195
+  #slice reg             1195   out of 128640    0.93%
+  #pad reg                  0
+
+Utilization Statistics
+#slice*                  1738   out of  64320    2.70%
+  #used ram               128
+    #dram lut             128
+    #shifter lut            0
+  #used logic            1610
+    #with luts*          1376
+    #with adder           115
+    #reg only*            119
+#f7mux                     24   out of  32160    0.07%
+#f8mux                      0   out of  16080    0.00%
+#eram                       1   out of    272    0.37%
+  #eram20k                  1
+  #fifo20k                  0
+#dsp                        0   out of    240    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#ddr_cal                    0   out of      1    0.00%
+#ddr_bank                   0   out of      2    0.00%
+#pad                      139   out of    148   93.92%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     36    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     16    0.00%
+#ioclk                      0   out of     18    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance                                    |Module                |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |ddr     |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                                         |uhd_probe             |1376      |115     |1195    |1       |0       |128      |0           |24      |0       |0       |0        |0       |0       |
+|  dut                                       |jpeg_entropy          |1319      |115     |1057    |1       |0       |128      |0           |0       |0       |0       |0        |0       |0       |
+|    g_ac_rom$u_rom                          |jpeg_huff_ac_rom      |3         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|      u_rom                                 |jpeg_quant_rom20x1024 |3         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|        u_rom                               |jpeg_rom_huff         |3         |0       |0       |1       |0       |0        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[0]$u_read0 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[0]$u_read1 |td_sdp_ram            |1         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[1]$u_read0 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[1]$u_read1 |td_sdp_ram            |1         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[2]$u_read0 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[2]$u_read1 |td_sdp_ram            |1         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[3]$u_read0 |td_sdp_ram            |3         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[3]$u_read1 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[4]$u_read0 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[4]$u_read1 |td_sdp_ram            |1         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[5]$u_read0 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[5]$u_read1 |td_sdp_ram            |1         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[6]$u_read0 |td_sdp_ram            |2         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[6]$u_read1 |td_sdp_ram            |1         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[7]$u_read0 |td_sdp_ram            |4         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
+|    g_banked_coefficients$g_lane[7]$u_read1 |td_sdp_ram            |5         |0       |0       |0       |0       |8        |0           |0       |0       |0       |0        |0       |0       |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -1,0 +1,17 @@
+{
+  "baseline": "41cb5991a1b03cbbc7dfec60fe4dc1a9fdb91213",
+  "design_sha256": "4422aab8d3c14f129e32b4ff8c319692688f5dc92152585cc49fe6e920d67e0c",
+  "native_project_sha256": "46328c21e397d08058551cdc176f2e34da87aba78ae605a901b44f04081f2892",
+  "production_inputs": 405,
+  "frozen_ip_count": 158,
+  "changed_since_41cb": {
+    "src_fpga/rtl/ordered_frame_cdc.v": "32c8bf457ff45ea3b3a3eb4038fb9b968991c4038ed9d26dfa7ba4f1418de469",
+    "src_fpga/rtl/ordered_frame_ingress.v": "f463a2a4d601d5400f44f0b3b8cde585ffbf0711c447ce6e80e335fdc621d8c7",
+    "src_fpga/rtl/private_rgb_source_borrow4.v": "b193e4f1d1e4daeee924aa485b8f1ce5edcff0d8da3851c25ceeff3626f02f75"
+  },
+  "interface_changes": "None; existing SDK catalog only",
+  "full_synthesis": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "board": "NOT_RUN",
+  "server_submission": "NOT_REQUESTED"
+}

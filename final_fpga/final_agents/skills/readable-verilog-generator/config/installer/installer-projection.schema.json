@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "required": [
+    "schema_version",
+    "manifest_sha256",
+    "catalog_sha256",
+    "platforms"
+  ],
+  "platform_required": [
+    "id",
+    "display_name",
+    "root_mode",
+    "skill_install_dir",
+    "metadata_files"
+  ]
+}

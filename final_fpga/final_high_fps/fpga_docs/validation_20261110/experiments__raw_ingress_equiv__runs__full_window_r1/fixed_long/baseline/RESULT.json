@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "Leaf-only native opt_gate and reopen",
+  "reference_sha256": "787acfaef657a6cf709f2e808bfdaaa2e750546d0dd89ed0b8800f3f227e7ccd",
+  "profile": "fixed_long",
+  "variant": "baseline",
+  "timeout_seconds": 160,
+  "command": [
+    "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "<PROJECT_ROOT>\\tools\\run_td.py",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\synth.tcl",
+    "--td-root",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850",
+    "--workdir",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\runs\\full_window_r1\\fixed_long\\baseline",
+    "--log",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\runs\\full_window_r1\\fixed_long\\baseline\\td.log"
+  ],
+  "input_sha256": {
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\runs\\full_window_r1\\fixed_long\\baseline\\shared_raw10_frame_ingress.v": "787acfaef657a6cf709f2e808bfdaaa2e750546d0dd89ed0b8800f3f227e7ccd",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\runs\\full_window_r1\\fixed_long\\baseline\\raw_pack_probe.v": "389f911b32c422c7713445f8edec44fd8e8b88ee896c580dcb23770a35290361",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\runs\\full_window_r1\\fixed_long\\baseline\\clock.sdc": "df7a8a40a8613d49106891ac9cc9bd7e7b23d786a3882882cb3d19796fae9e56",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\synth.tcl": "49ad62417e1713391e9f22fa726d14f5f474eed3a0047331386c95fd9ffec944",
+    "<PROJECT_ROOT>\\tools\\run_td.py": "f46f32601d55bf6980753734d8c8ebccd7f37a5c04d0829ac979a73474e215ca",
+    "<PROJECT_ROOT>\\.agents\\skills\\anlogic-td-fpga\\scripts\\run_td.py": "a04321faad364aed0004afb50f3ef3a8ece9b9ca61676d8ccae278f905d90b1d",
+    "<TOOLS_ROOT>/TD_Release_2026.2.210.850\\bin\\td_commands_prompt.exe": "2629e474df036a871807e564190febfbbd9780a09365f600c10463911c8c1223",
+    "<PROJECT_ROOT>\\refactor\\camera_fusion_r1\\experiments\\raw_ingress_equiv\\run.py": "c691273d08a11401a3c879ec31338949ea5eb78428b50b5c2754942088a14e98"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 49.579,
+  "output_sha256": {
+    "raw_pack_probe.al": "45727fbcfc4ae7bf030098a72389d980b06bd3ba65debf9ab2631f7e840efa00",
+    "effective.params": "b3cefa25b9d04acf8307bc0d0be8f424a7396a91eede1b6b600104015ac11032",
+    "reopened.area": "6b33cc2c598546672964d0ff85b9b70bf0e9354d327f08497dc1d536095259fd",
+    "reopened.timing": "3356bc0281f98e0d871281fb3f562cd6d40c9bef8491cd03eeb47f00091599fe",
+    "td.log": "1eba60cb1ecf158f58abe38d34764355e7a88dbabb7637d23c453090c56d494a",
+    "raw_pack_probe_Runs\\syn_1\\raw_pack_probe_gate.db": "112d402567b3eef264d84e0084f339eeee20a0b98d3086d66a790517f056b696",
+    "raw_pack_probe_Runs\\syn_1\\raw_pack_probe_gate.area": "6b33cc2c598546672964d0ff85b9b70bf0e9354d327f08497dc1d536095259fd",
+    "raw_pack_probe_Runs\\syn_1\\.opt_gate.end.f": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "launcher.log": "f74a6c187f4f9bdd0d6504284f4253c9ed89b1c52b565e9c334e14f6be7196b5",
+    "objects.txt": "d6e5fe48c3fd662c1ded94f5fc87f6729fdb19fcb76e872c5291a81bfc449dc0",
+    "history_to_data.timing": "afa75bef342e34d1c640fcad7741133779c1bbc80d892fdb5ce7a6afb19b36b8",
+    "count_to_data.timing": "2b22947c10aa1c878224ca3c91f12430f6cf352b23a0d93f232555fa868f7d7c",
+    "raw_pack_probe_Runs\\syn_1\\run.log": "3630f9ee9a7ca82491267b7596ba1f517e47910e88393c70f44b059036bd4b7a",
+    "raw_pack_probe_Runs\\syn_1\\run.logw": "fc910e3d50df6e784b196a4e63ab57622f896f7810d4d980b998902caf9c6fed"
+  }
+}

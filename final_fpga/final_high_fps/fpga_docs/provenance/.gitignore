@@ -1,0 +1,9 @@
+/tmp/
+*_Runs/
+__pycache__/
+*.pyc
+*.wlf
+!/docs/validation/**/*.log
+!/docs/validation_uhd3/**/*.log
+!/docs/validation_20261110/**/*.log
+!/docs/optimization_r2_20261110/evidence/**/*.log
