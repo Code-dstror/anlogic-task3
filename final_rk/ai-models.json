@@ -1,0 +1,356 @@
+{
+  "base_commit": "7ec75c240d3a8188ab307241e0364fffb396aa89",
+  "fpga": "CAMERA_RAW_R2 1a5603c1 seed25",
+  "linux_revision": "670232df23f1fd89f3f19dc3b25b2569a0695f13",
+  "release": "RK V5",
+  "repro": "final-basic-seed25-repro.tar.gz",
+  "repro_sha256": "233ff54eb360ae727c31033e9a2de1524947af4eea9d2215925dc8fdf1c934bb",
+  "dependency_manifest": "control/ai_provenance/dependencies.json",
+  "class_config": "control/ai_helper/candidate/src/ai/y26_depth_app/config.json",
+  "models": {
+    "detector": {
+      "name": "YOLO26n 23 类",
+      "geometry": "RGB 640×640 等比例缩放，补边值 114",
+      "path_inside_repro": "board-assets/userdata/y26-topk-opt-20261031-01/converted/detector23/fp/model.rknn",
+      "bytes": 10477210,
+      "sha256": "2135d0a442227e906c328338546938ddbcacef836728a3c721c09b7cca2b7eee",
+      "required_for_live": true,
+      "included": true
+    },
+    "depth": {
+      "name": "NR03 guarded epoch15",
+      "geometry": "RGB 640×640 整图拉伸",
+      "path_inside_repro": "board-assets/userdata/y26-nr03-sizes-20261101-01/outputs/fp25_nosdpa/640/model.rknn",
+      "bytes": 9298422,
+      "sha256": "fd539fd0d89697ee6bcfb98c77f8be2776b87edfc7899d31045a5ec7f5b1aa75",
+      "required_for_live": true,
+      "included": true
+    }
+  },
+  "classes": [
+    {
+      "id": 0,
+      "name": "animal",
+      "group": "obstacle"
+    },
+    {
+      "id": 1,
+      "name": "human.pedestrian.adult",
+      "group": "pedestrian"
+    },
+    {
+      "id": 2,
+      "name": "human.pedestrian.child",
+      "group": "pedestrian"
+    },
+    {
+      "id": 3,
+      "name": "human.pedestrian.construction_worker",
+      "group": "pedestrian"
+    },
+    {
+      "id": 4,
+      "name": "human.pedestrian.personal_mobility",
+      "group": "pedestrian"
+    },
+    {
+      "id": 5,
+      "name": "human.pedestrian.police_officer",
+      "group": "pedestrian"
+    },
+    {
+      "id": 6,
+      "name": "human.pedestrian.stroller",
+      "group": "obstacle"
+    },
+    {
+      "id": 7,
+      "name": "human.pedestrian.wheelchair",
+      "group": "obstacle"
+    },
+    {
+      "id": 8,
+      "name": "movable_object.barrier",
+      "group": "obstacle"
+    },
+    {
+      "id": 9,
+      "name": "movable_object.debris",
+      "group": "obstacle"
+    },
+    {
+      "id": 10,
+      "name": "movable_object.pushable_pullable",
+      "group": "obstacle"
+    },
+    {
+      "id": 11,
+      "name": "movable_object.trafficcone",
+      "group": "obstacle"
+    },
+    {
+      "id": 12,
+      "name": "static_object.bicycle_rack",
+      "group": "obstacle"
+    },
+    {
+      "id": 13,
+      "name": "vehicle.bicycle",
+      "group": "two_wheeler"
+    },
+    {
+      "id": 14,
+      "name": "vehicle.bus.bendy",
+      "group": "vehicle"
+    },
+    {
+      "id": 15,
+      "name": "vehicle.bus.rigid",
+      "group": "vehicle"
+    },
+    {
+      "id": 16,
+      "name": "vehicle.car",
+      "group": "vehicle"
+    },
+    {
+      "id": 17,
+      "name": "vehicle.construction",
+      "group": "vehicle"
+    },
+    {
+      "id": 18,
+      "name": "vehicle.emergency.ambulance",
+      "group": "vehicle"
+    },
+    {
+      "id": 19,
+      "name": "vehicle.emergency.police",
+      "group": "vehicle"
+    },
+    {
+      "id": 20,
+      "name": "vehicle.motorcycle",
+      "group": "two_wheeler"
+    },
+    {
+      "id": 21,
+      "name": "vehicle.trailer",
+      "group": "vehicle"
+    },
+    {
+      "id": 22,
+      "name": "vehicle.truck",
+      "group": "vehicle"
+    }
+  ],
+  "dependencies": {
+    "LD_PRELOAD": {
+      "path_inside_repro": "board-assets/userdata/y26-resume30fps-20261031-01/private_runtime25/librknnrt.so",
+      "bytes": 8189368,
+      "sha256": "4b6cc575bedf8952b13db4b1190fa3b3d2ac213f00be774ff6ccd19d651970c0",
+      "required_for_live": true,
+      "included": true
+    },
+    "Y26_GMC_EXACT_PACK": {
+      "path_inside_repro": "board-assets/userdata/y26-exact-pack-20261101-01/candidate/libexact_cpu_pack.so",
+      "bytes": 72944,
+      "sha256": "6be425e56ca9c063482e92efd19dc8518a290265e9c604576c738eaae3250329",
+      "required_for_live": true,
+      "included": true
+    },
+    "Y26_SOURCE_GRAY_LIBRARY": {
+      "path_inside_repro": "board-assets/userdata/y26-resume30fps-20261031-01/candidate/board_libs/liby26_source_gray.so",
+      "bytes": 69256,
+      "sha256": "d3afd53d41f21c2a8bdff340bf0d07dfea8ed3968a1525555dd45a61966f8ffb",
+      "required_for_live": true,
+      "included": true
+    },
+    "Y26_TOPK_LIBRARY": {
+      "path_inside_repro": "board-assets/userdata/y26-resume30fps-20261031-01/candidate/board_libs/liby26_topk_v1.so",
+      "bytes": 71080,
+      "sha256": "84cdca3bdc41091b1fe606413481b116f8090e18bc75b2e3eb2bac2fedb8cc01",
+      "required_for_live": true,
+      "included": true
+    },
+    "depth": {
+      "path_inside_repro": "board-assets/userdata/y26-nr03-sizes-20261101-01/outputs/fp25_nosdpa/640/model.rknn",
+      "bytes": 9298422,
+      "sha256": "fd539fd0d89697ee6bcfb98c77f8be2776b87edfc7899d31045a5ec7f5b1aa75",
+      "required_for_live": true,
+      "included": true
+    },
+    "detector": {
+      "path_inside_repro": "board-assets/userdata/y26-topk-opt-20261031-01/converted/detector23/fp/model.rknn",
+      "bytes": 10477210,
+      "sha256": "2135d0a442227e906c328338546938ddbcacef836728a3c721c09b7cca2b7eee",
+      "required_for_live": true,
+      "included": true
+    },
+    "gmc_library": {
+      "path_inside_repro": "board-assets/userdata/y26-topk-opt-20261031-01/board_libs/liby26_gmc_flow.so",
+      "bytes": 71464,
+      "sha256": "a9ac8dcb25d92e418290967caa29eac860c328f2a6acb3a4fc30297a5ef6070b",
+      "required_for_live": true,
+      "included": true
+    },
+    "library": {
+      "path_inside_repro": "board-assets/userdata/y26-topk-opt-20261031-01/board_libs/liby26_rknn_vector.so",
+      "bytes": 73944,
+      "sha256": "26a16566496ea709394d5c54211784ff80d2cf8a7fb39477e36a7dca42a621fc",
+      "required_for_live": true,
+      "included": true
+    },
+    "mandatory_rga": {
+      "path_inside_repro": "control/ai_helper/board_libs/liby26_prepared_rgb2.so",
+      "bytes": 23496,
+      "sha256": "0244cf2e23c985deeb773e01f67b132ec89141505c9a1e5842ae58e57fc6c556",
+      "required_for_live": true,
+      "included": true
+    },
+    "private_mpp_library": {
+      "path_inside_repro": "board-assets/userdata/rk-dehaze-live-fixed-6e72b9ebf/libdehaze_mpp.so",
+      "bytes": 72336,
+      "sha256": "3cf56e04693cda88ee2d47bc0b9a4c6c8dd548c333127eacf8f3b311231ba329",
+      "required_for_live": true,
+      "included": true
+    },
+    "replay_library": {
+      "path_inside_repro": "board-assets/userdata/y26-nr03-sizes-20261101-01/libnr03_sizes_replay.so",
+      "bytes": 74368,
+      "sha256": "fb5fed47548ba3d771a012414346193da0c159f88b153b3ba8d9d373680229dc",
+      "required_for_live": false,
+      "included": false
+    },
+    "roi_library": {
+      "path_inside_repro": "board-assets/userdata/y26-topk-opt-20261031-01/board_libs/libroi_depth.so",
+      "bytes": 26376,
+      "sha256": "ecfee1120489bb36022bc5aeb47b3585a713aca3f48179f321f1ace522853372",
+      "required_for_live": true,
+      "included": true
+    },
+    "tracking_library": {
+      "path_inside_repro": "board-assets/userdata/y26-resume30fps-20261031-01/candidate/board_libs/liby26_tracking_batch_v1.so",
+      "bytes": 71504,
+      "sha256": "8c128333c861229a4d84d7a4c6aa537bc3f6f0b851c94ad0621d5e0d17519752",
+      "required_for_live": true,
+      "included": true
+    },
+    "video": {
+      "path_inside_repro": "board-assets/userdata/y26-topk-opt-20261031-01/media/PIE_set02_30s_bt709limited_performance.mp4",
+      "bytes": 12238839,
+      "sha256": "42a04a8b70567bbfc2aff30aa5436bab9844e7fe8474fbb8ea309525846071a1",
+      "required_for_live": false,
+      "included": false
+    }
+  },
+  "provenance": {
+    "detector": {
+      "upstream": {
+        "name": "Ultralytics YOLO26n",
+        "weight": "yolo26n.pt",
+        "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt",
+        "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+        "ultralytics_version": "8.4.183"
+      },
+      "training_dataset": {
+        "name": "nuImages CAM_FRONT 23-class subset",
+        "url": "https://www.nuscenes.org/nuimages",
+        "images": {
+          "train": 13187,
+          "val": 3249
+        }
+      },
+      "trained_checkpoint": {
+        "name": "train_end_best.pt",
+        "sha256": "8d0bb5d2198fdd888f319ff77c75599c5f72cd5b5ade7dc5e7970ac7125af4d2"
+      },
+      "deployment_onnx_sha256": "ef457e43f50917f7769220156d504be61412bdab46f80c2a0287297f5c9a64d4",
+      "rknn_toolkit": "2.3.0"
+    },
+    "depth": {
+      "upstream": {
+        "name": "Ultralytics YOLO26n Depth",
+        "weight": "yolo26n-depth.pt",
+        "url": "https://docs.ultralytics.com/tasks/depth",
+        "sha256": "befed1b8561d8b2eaa66274b070cdfc9c44853bda6d6d62a04759f9383af74e9"
+      },
+      "intermediate_checkpoint": {
+        "name": "LC64 student",
+        "sha256": "cc6532e68a6600abcd35e7f0b040d55bcc665761de73181221cc21185ab50a23"
+      },
+      "training_dataset": {
+        "name": "E_front_multicamera_20261030_02",
+        "source_urls": {
+          "PandaSet": "https://scale.com/open-datasets/pandaset",
+          "Argoverse2": "https://www.argoverse.org/av2.html",
+          "nuScenes": "https://www.nuscenes.org/"
+        },
+        "frames_by_split_and_source": {
+          "train": {
+            "PandaSet": 1440,
+            "Argoverse2": 2532,
+            "nuScenes": 0
+          },
+          "val": {
+            "PandaSet": 176,
+            "Argoverse2": 755,
+            "nuScenes": 0
+          },
+          "test": {
+            "PandaSet": 32,
+            "Argoverse2": 558,
+            "nuScenes": 404
+          }
+        }
+      },
+      "trained_checkpoint": {
+        "name": "train_end_best_guarded.pt",
+        "selected_epoch": 15,
+        "sha256": "e007496b5ed598a051bbd4a7781d4278f9044dcd1af8f0ef4bd859a5980faef0"
+      },
+      "deployment_onnx_sha256": "e60fcbaa49c378233dd44c3efb8fbfe93b8aa42cff5c50f85ca103891ae631e5"
+    },
+    "audio": {
+      "source": "https://realdubbing.com/zh/",
+      "terms": "https://realdubbing.com/zh/terms-of-service",
+      "terms_displayed_last_update": "2026-07-11",
+      "generation_plan": "free generation, reported by team member",
+      "redistribution": "PENDING_FREE_PLAN_AND_VOICE_PROVIDER_SCOPE",
+      "assets": [
+        {
+          "file": "pedestrian.wav",
+          "sha256": "786d011988840f893aea01a8ffcc090175702fd5f7469e40de86f8fea34d20d8"
+        },
+        {
+          "file": "vehicle.wav",
+          "sha256": "c355dc5d5447a4b122ab7ee7433f4e44f23e52d5a6d6e1cd290d896d9741e5cd"
+        },
+        {
+          "file": "two_wheeler.wav",
+          "sha256": "f9ae524bfc2b9e4073b95ec62883f1a76333f5d0048959c6fd0fea212900cb32"
+        },
+        {
+          "file": "obstacle.wav",
+          "sha256": "5dd6ded76dd3565e431c9a8e1efa0369e28133b2ad8963563d2c3d9156f6a582"
+        },
+        {
+          "file": "pedestrian_vehicle.wav",
+          "sha256": "4f553fe36679b4962155151e5d75fe15bb12a5c110458377ca2ef3f85928b3f6"
+        },
+        {
+          "file": "pedestrian_two_wheeler.wav",
+          "sha256": "9eb493b3161526ed11970308f66d7b58740f5ac7ecbc0a2ae671d22a74b5dddf"
+        },
+        {
+          "file": "pedestrian_obstacle.wav",
+          "sha256": "d9bba23861cf17b1aedb358fb43552c33f18161fc53c8796ac558bff22a40387"
+        },
+        {
+          "file": "vehicle_obstacle.wav",
+          "sha256": "60f2f2b9766a66d391c5a079a829acede9e1799b5009655fd6d480a8de900dd1"
+        }
+      ]
+    }
+  }
+}
