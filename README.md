@@ -84,6 +84,12 @@ FPGA 还提供独立的未压缩 RAW10 输出路径。RAW 接收核验与 JPEG �
 
 完整复现包面向原板卡与已确认 BSP，不包含操作系统镜像。更换内核、板卡、SD 卡或模型时，需要重新核对驱动构建身份、设备与存储配置、模型及原生依赖。
 
+## 子卡 DSI 改 CSI 方案
+
+[MLK-FMC_VID005_MIPI 子卡 DSI 改 CSI 修改方案](MLK-FMC_VID005_MIPI_DSI改CSI修改方案.html)记录了将 FMC 子卡原 DSI 输出接口改作 MIPI CSI 接收接口的硬件修改方案，涵盖子卡和配套底板的电阻、信号网络调整，并附原理图及修改前后实物对照。
+
+文档对应 `MLK-FMC_VID005_MIPI` 子卡 `Ver:20250530` 和 `MLK-AFH03` 底板。HTML 已内嵌图片，下载后用浏览器打开可查看完整图文说明。
+
 ## 快速复现入口
 
 1. 阅读 [FPGA 基础版说明](final_fpga/final_basic/README.md)和 [RK 软件说明](final_rk/README.md)，在 `final_rk/` 中使用 `sha256sum -c SHA256SUMS` 核对两个包。
